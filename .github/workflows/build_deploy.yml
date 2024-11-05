@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - main
-      
-permissions: write-all
+
+permissions:
+  contents: write
 
 jobs:
   build_latex:
@@ -14,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install latex deps
-      run: sudo apt-get install -y texlive-lang-italian texlive-latex-base
+      run: sudo apt-get install -y texlive-lang-italian texlive-latex-extra
     - name: Run python script
       run: python .github/workflows/build_latex.py
     - name: Push build
