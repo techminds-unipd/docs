@@ -36,6 +36,6 @@ for pdf in pdfs:
 # Compile tex files
 for source in sources_to_compile:
     output_dir = os.path.dirname(source).replace("docs", "docs/build").replace("docs/build", "docs", 1)
-    res = subprocess.run(["pdflatex", "-output-directory", output_dir, "-halt-on-error", source])
+    res = subprocess.run(["pdflatex", "-output-directory", output_dir, "-halt-on-error", source], cwd=os.path.dirname(source))
     if res.returncode != 0:
         exit(1)
