@@ -4,7 +4,7 @@ import glob
 import shutil
 
 def build_link(path):
-    link = "https://raw.githubusercontent.com/techminds-unipd/docs/refs/heads/main/{}".format(os.path.abspath(path).replace(repo_dir, ""))
+    link = os.path.abspath(path).replace(repo_dir, "").replace("/build/", "")
     name = os.path.basename(path).replace(".pdf","")
     name = name[0].upper() + name[1:]
     return "<li><a href=\"{}\" target=\"_blank\" >{}</a> <i class=\"fa-solid fa-arrow-up-right-from-square\"></i></li>\n".format(link, name)
