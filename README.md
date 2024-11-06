@@ -23,9 +23,6 @@ Questa repo contiene la documentazione del gruppo Tech Minds del progetto di SWE
     │   └── presentazione_candidatura/
     └── documenti_interni/
         └── verbali/
-            └── aaaa-mm-dd[-info]/
-                ├── aaaa-mm-dd[-info].pdf
-                ├── aaaa-mm-dd[-info].tex
-                └── [assets/]
+            └── aaaa-mm-dd[-info].tex
 ```
 Albero delle cartelle creato con [https://tree.nathanfriend.com](https://tree.nathanfriend.com)
