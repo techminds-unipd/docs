@@ -5,13 +5,13 @@
 )
 
 #let team = (
-    A: "Alessandro Bressan",
-    S: "Samuele Corradin",
-    T: "Tommaso Lazzarin",
-    L: "Leonardo Salviato",
-    M: "Matteo Squarzoni",
-    G: "Giuseppe Tutino",
-    C: "Caterina Vallotto",
+    A: "Bressan Alessandro ",
+    S: "Corradin Samuele ",
+    T: "Lazzarin Tommaso ",
+    L: "Salviato Leonardo ",
+    M: "Squarzoni Matteo ",
+    G: "Tutino Giuseppe ",
+    C: "Vallotto Caterina ",
 )
 
 #let documento(
@@ -71,6 +71,11 @@
     body
 ) = {
     documento(title: title, sommario: sommario, changelog: changelog, [])
+
+    set heading(numbering: "1.1")
+    set page(numbering: "1")
+    show link: underline
+    show link: set text(rgb("#f16610"))
 
     durata_luogo.at(0) = "Inizio: " + durata_luogo.at(0)
     durata_luogo.at(1) = "Fine: " + durata_luogo.at(1)
