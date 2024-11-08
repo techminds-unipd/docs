@@ -18,9 +18,14 @@ jobs:
     - uses: actions/checkout@v4
     - name: Install latex deps
       run: sudo apt-get install -y texlive-lang-italian texlive-latex-extra
-    - name: Run python script
-      run: python .github/workflows/build_latex.py
-    - name: Run python script
+    - name: Install typst
+      run: |
+        wget $(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep browser_download_url |grep -E "x86.*linux" | cut -d '"' -f 4)
+        tar xf typst*.tar.xz -C /tmp
+        sudo mv /tmp/typst*/typst /bin/typst
+    - name: Build sources
+      run: python .github/workflows/build_sources.py
+    - name: Build html
       run: python .github/workflows/build_html.py
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
@@ -47,6 +52,3 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build

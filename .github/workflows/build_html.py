@@ -1,7 +1,4 @@
-import re
-import os
-import glob
-import shutil
+import re, os, glob, shutil
 
 def build_link(path):
     link = os.path.abspath(path).replace(repo_dir, "").replace("/build/", "")
