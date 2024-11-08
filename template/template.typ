@@ -65,9 +65,9 @@
     durata_luogo: array,
     partecipanti: array,
     ordine_giorno: array,
-    riassunto: str,
+    riassunto: content,
     decisioni: array,
-    firma: bool,
+    firma: str,
     body
 ) = {
     documento(title: title, sommario: sommario, changelog: changelog, [])
@@ -99,8 +99,8 @@
         }
     }
 
-    if firma {
-       align(bottom + right, [*Il proponente*, Stefano Dindo] + v(2%) + line(length: 30%))
+    if firma.len() != 0 {
+       align(bottom + right, text("Il proponente, ", weight: "bold") + text(firma) + v(2%) + line(length: 30%))
     }
 
     body
