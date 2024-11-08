@@ -92,9 +92,11 @@
     [== Riassunto]
     text(riassunto)
 
-    [== Decisioni prese]
-    for value in decisioni {
-        list(value.at(0) + list(..value.slice(1)), indent: 15pt)
+    if decisioni.len() != 0 {
+        [== Decisioni prese]
+        for value in decisioni {
+            list(value.at(0) + list(..value.slice(1)), indent: 15pt)
+        }
     }
 
     if firma {
