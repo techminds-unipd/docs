@@ -68,25 +68,68 @@ Il gruppo ha fissato un colloquio informativo, sulla piattaforma Google Meet, pe
 === Conclusione
 La proposta dell’azienda Zucchetti non ci aveva colpito dopo la presentazione tenutasi in classe. Tuttavia, in seguito al colloquio di approfondimento, il gruppo ha compreso meglio la finalità del progetto, che è stato rivalutato in maniera positiva. Nonostante questo il gruppo non ritiene questo capitolato pienamente in linea con i propri interessi.
 
+#linebreak()
+#linebreak()
+
 == #text("C2 - Vimar GENIALE", rgb("#f16610"))
 
 === Descrizione generale
+Il progetto richiede di creare un applicativo dotato di un’interfaccia che permetta, grazie ad un LLM, di fare richieste in linguaggio naturale riguardanti le specifiche dei prodotti Vimar presenti nel sito web dell’azienda. Lo scopo dell'applicativo è facilitare la ricerca di informazioni da parte dei professionisti del settore e supportarli nell’installazione dei prodotti Vimar.
 
 === Funzionalità obbligatorie richieste
+L’azienda richiede di realizzare un’infrastruttura cloud-ready che contenga un applicativo web responsive per l’utente finale e un applicativo server per la gestione dei dati, con documentazione annessa.
+In particolare:
+- L'applicativo web:
+    - deve essere responsive e funzionare su smartphone, tablet e desktop via browser;
+    - deve avere un sistema di conversazione libera in lingua italiana;
+    - deve avere un sistema di feedback da parte dell’utente sulla risposta ottenuta;
+    - deve avere una seziona protetta dedicata agli amministratori.
+- L'applicativo server:
+    - deve avere un sistema di estrazione e raccolta dati dal sito web dell’azienda (obbligatori prodotti impianto Smart e Domotico);
+    - deve avere un sistema di indicizzazione dei dati raccolti;
+    - deve avere un componente di interrogazione che si interfacci con il sistema di indicizzazione e il modello AI (LLM open source).
+L'infrastruttura cloud-ready:
+    - deve avere un componente per l’applicativo web che si interfacci con l’applicativo server;
+    - deve utilizzare la tecnologia container;
+    - deve essere realizzata con il principio IaC (Infrastructure as Code).
+
+L’azienda inoltre richiede l’implementazione di test di unità, d'integrazione ed end-to-end basati sui requisiti, con una copertura almeno del 75% per i primi due e almeno dell’80% per il terzo.
 
 === Funzionalità opzionali richieste
+Per l’applicativo web è opzionale implementare un sistema di conversazione guidata, un sistema di suggerimenti per domande successive e la visione delle fonti usate per le risposte attraverso dei link di riferimento. Nell’applicativo server si possono aggiungere un controllo sull’output del componente di interrogazione e la possibilità di estendere il database con i prodotti per un impianto tradizionale.
+Una caratteristica opzionale per l’infrastruttura è la sua realizzazione su AWS.
 
 === Tecnologie da utilizzare
+- Docker per l’infrastruttura cloud;
+- Git per il versionamento del repository di lavoro;
+- LLM per il componente di interrogazione.
+
+Altri suggerimenti da parte dell’azienda:
+- Flask, Angular, VueJS (applicativo web responsive);
+- Python;
+- Scrapy, OCRmyPDF (estrazione dati sito web);
+- PostgreSQL, TimescaleDB, InfluxDB (database);
+- Llama 3.1, Mistral, Bert, Phi (LLM open source).
 
 === Aspetti positivi
+- Buona disponibilità da parte dell’azienda sia in ambito formativo sia nel controllo dell’avanzamento del progetto;
+- Capitolato chiaro ed esaustivo;
+- Possibilità di interfacciarsi con un ampio insieme di tecnologie.
 
 === Aspetti negativi e rischi
+- Tema comune ad altri capitolati proposti.
 
 === Aiuto fornito dall'azienda
+L’azienda fornisce la possibilità di organizzare molti incontri, in particolare un SAL (Stato Avanzamento Lavori) bisettimanale di un’ora, che può diventare settimanale di mezz’ora. Possono essere fissate altre riunioni per approfondire le tecnologie utilizzate nel progetto. Vengono inoltre richiesti almeno due incontri in presenza con il gruppo per la consegna dei materiali e il collaudo della soluzione.
 
 === Contatti avuti con l’azienda
+L’azienda è stata contattata via email per alcuni dubbi sulle funzionalità presentate nel capitolato, che alla fine si sono rivelati essere solamente altre funzionalità opzionali.
 
 === Conclusione
+Nonostante i vari aspetti positivi il gruppo ha preferito optare per un capitolato con un tema più ricercato.
+
+#linebreak()
+#linebreak()
 
 == #text("C3 - Automatizzare le routine digitali (Var Group)", rgb("#f16610"))
 
