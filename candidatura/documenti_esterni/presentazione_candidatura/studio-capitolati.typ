@@ -423,19 +423,36 @@ L'argomento proposto dal capitolato non è di interesse per il gruppo che, anche
 == #text("C9 - BuddyBot (Azzurrodigitale)", rgb("#f16610"))
 
 === Descrizione generale
+BuddyBot è un assistente virtuale che aggrega informazioni da GitHub, Confluence, Jira, Slack e Telegram, utilizzando tecnologie di Intelligenza Artificiale per migliorare l'efficacia e la personalizzazione del supporto.
 
 === Funzionalità obbligatorie richieste
+- Piattaforma web per interfacciarsi al bot;
+- Backend che fa uso delle API di Confluence, GitHub, Jira;
+- Database per memorizzare le chat degli utenti;
+- Test automatici con code coverage adeguata per garantire il corretto funzionamento;
+- Documentazione tecnica;
+- Sistema di bug reporting.
 
 === Funzionalità opzionali richieste
+Fonti di informazioni aggiuntive, ovvero canali di comunicazione aziendali come gruppi Slack e Telegram.
 
 === Tecnologie da utilizzare
+- OpenAI;
+- Langchain;
+- Angular;
+- Node/NestJS;
+- Spring Boot.
 
 === Aspetti positivi
+- Le figure messe a disposizione dall’azienda hanno ruoli e competenze diverse;
+- La motivazione e gli obiettivi del progetto sono chiari e ben esposti. Ciò facilita il processo di analisi dei requisiti.
 
 === Aspetti negativi e rischi
+- Il progetto non sembra molto innovativo visto che esistono già da tempo dei plugin per ChatGPT e altri LLM che permettono di integrarsi con fonti esterne;
+- L'applicativo sembra una semplice webapp che fa da wrapper ad un LLM.
 
 === Aiuto fornito dall'azienda
-
-=== Contatti avuti con l’azienda
+L’azienda mette a disposizione quattro figure di riferimento per rispondere alle esigenze del gruppo.
 
 === Conclusione
+La proposta non è stata ritenuta allo stesso livello della concorrenza visti gli aspetti negativi indicati alla sezione 2.9.6. Ciò ha portato il gruppo a concentrarsi su proposte giudicate più allettanti.
