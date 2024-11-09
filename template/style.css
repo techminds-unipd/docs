@@ -51,7 +51,7 @@ a:hover {
 
 .navbar {
     overflow: hidden;
-    background-color: #ff7300;
+    background-color: #f16610;
     color: #333;
     top: 0;
     width: 100%;
@@ -81,7 +81,7 @@ a:hover {
 }
 
 .top {
-    background-color: #ff8800;
+    background-color: #f16610;
     height: 650px;
 }
 
@@ -91,7 +91,7 @@ a:hover {
 }
 
 .nav-top {
-    border-top: 8px solid #ff8800;
+    border-top: 8px solid #f16610;
 }
 
 .row {
@@ -178,6 +178,13 @@ a:hover {
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 24px;
+    text-transform: uppercase; 
+    color: #595959;
+    margin-top: 3em;
+}
+
+#rtb {
+    margin-top: 0;
 }
 
 .right-col h2 {
@@ -196,7 +203,12 @@ a:hover {
 }
 
 .right-col a {
-    color: #0098f1;
+    color: #f16610;
+    text-decoration: underline;
+}
+
+.right-col a:visited {
+    color: #800080;
     text-decoration: underline;
 }
 
@@ -222,11 +234,11 @@ a:hover {
 }
 
 .divider {
-    width: 40px;
+    width: 24%;
     height: 4px;
-    background: #ff8800;
+    background: #f16610;
     border-radius: 30px;
-    margin: auto;
+    margin: 30px 0;
     margin-top: 8px;
     margin-bottom: 8px;
 }
