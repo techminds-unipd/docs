@@ -134,22 +134,59 @@ Nonostante i vari aspetti positivi il gruppo ha preferito optare per un capitola
 == #text("C3 - Automatizzare le routine digitali (Var Group)", rgb("#f16610"))
 
 === Descrizione generale
+Vargroup propone di costruire un software che, sfruttando l’intelligenza artificiale generativa, sia in grado di automatizzare alcune delle azioni che gli utenti compiono quotidianamente negli applicativi che saranno supportati. Un utente può creare un workflow selezionando i blocchi di interesse e collegandoli tramite un’interfaccia drag and drop. Ogni collegamento corrisponde a un'automazione descritta in linguaggio naturale che sarà interpretata dal modello.
 
 === Funzionalità obbligatorie richieste
+- Creazione di un client per disegnare i flussi di automazione su piattaforma Windows e/o Mac;
+- Tale client deve essere dotato di un’interfaccia drag and drop e di un’interfaccia conversazionale per la definizione delle automazioni;
+- Creazione di almeno tre blocchi di automazione;
+- Creazione di un’infrastruttura cloud su AWS e integrazione con il client;
+- Individuazione dei limiti e dei difetti della soluzione sviluppata;
+- Documentazione;
+- Bug reporting;
+- Implementazione di test automatici con una copertura almeno del 70%;
+- Sviluppo dell’applicativo con un’architettura modulare per consentire un’estensione futura della documentazione.
 
 === Funzionalità opzionali richieste
+Non sono richieste esplicitamente funzionalità opzionali.
 
 === Tecnologie da utilizzare
+Il proponente richiede l’utilizzo delle seguenti tecnologie:
+
+- Sviluppo del client:
+    - Python o C\# su Windows, Swift e Swift UI su MacOS;
+    - MongoDB o altro database locale;
+    - React per lo sviluppo di una webapp.
+
+- Sviluppo delle API cloud:
+    - NodeJS;
+    - Python;
+    - Typescript.
 
 === Aspetti positivi
+- Progetto interessante e che può avere un impatto positivo nelle attività lavorative e nella vita privata;
+- Utilizzo di diverse tecnologie molto diffuse;
+- Opportunità di formazione in azienda sulle tecnologie impiegate;
+- Apprendimento del design thinking tramite una sessione guidata;
+- Il progetto è la giusta combinazione fra sviluppo e innovazione;
+- Più membri del gruppo sono interessati all’apprendimento di AWS.
 
 === Aspetti negativi e rischi
+- Progetto esplorativo volto a riconoscere i limiti delle tecnologie in tale ambito;
+- L’utilizzo proficuo e consapevole di AWS richiede una buona conoscenza dello strumento.
 
 === Aiuto fornito dall'azienda
+L’azienda si è resa disponibile a concordare il piano di controllo dello stato di avanzamento del progetto. Inoltre, si è offerta di pianificare un percorso formativo sulle tecnologie più complesse.
+Vargroup ha pianificato di svolgere un’attività di design thinking con il gruppo e di fornire esempi su come creare i requisiti di business.
 
 === Contatti avuti con l’azienda
+Il gruppo ha fissato un colloquio informativo, sulla piattaforma Google Meet, per un approfondimento riguardo i temi del capitolato. Il proponente si è prontamente reso disponibile per rispondere a tutte le nostre domande. L'incontro è avvenuto il 24/10/2024 e il verbale con le domande è disponibile nell'#link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/verbali/2024-10-24-Firmato.pdf")[omonima cartella].
 
 === Conclusione
+A prima vista il progetto ha affascinato tutti i membri del gruppo ma, allo stesso tempo, ha sollevato dei dubbi circa la sua complessità. Il colloquio con Vargroup è stato fondamentale sotto questo frangente ed è riuscito a rassicurare il gruppo rispetto alla fattibilità del progetto. In particolare, il gruppo apprezza la volontà dell’azienda di proporre un progetto innovativo ed esplorativo, volto anche a individuare i limiti dell’applicativo da sviluppare.
+
+#linebreak()
+#linebreak()
 
 == #text("C4 - NearYou (Sync Lab)", rgb("#f16610"))
 
