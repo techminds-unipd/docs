@@ -378,22 +378,47 @@ La proposta risulta meno interessante rispetto agli altri capitolati che riguard
 == #text("C8 - Requirement Tracker - plugin VSCode (Bluewind)", rgb("#f16610"))
 
 === Descrizione generale
+Requirement tracker è un plugin per VS Code che attraverso l’uso di intelligenza artificiale analizza il codice, i requisiti (inclusi manuali e datasheet di componenti hardware) e automatizza il tracciamento di essi nel codice sorgente per fornire suggerimenti, migliorandone quindi la qualità.
 
 === Funzionalità obbligatorie richieste
+- Architettura estensibile;
+- Caricamento e scansione dei sorgenti per identificare i requisiti;
+- Configurabilità del sistema per lavorare con i requisiti derivati dai vari documenti;
+- Supporto ai linguaggi C/C++;
+- Visualizzazione dei risultati con la possibilità di navigare e filtrarli per nome del requisito, file o sezione del codice;
+- Integrazione con API per inviare porzioni di codice e requisiti;
+- Suggerimenti per la scrittura dei requisiti, come:
+    - Rendere i requisiti più chiari e specifici;
+    - Identificare informazioni tecniche mancanti;
+    - Riformulare i requisiti per renderli conformi alle best practice di scrittura tecnica.
 
 === Funzionalità opzionali richieste
+- Supporto per più linguaggi, ad esempio Rust;
+- Visualizzazione grafica avanzata;
+- Valutazione della compatibilità dello strumento sviluppato con le specifiche per la scrittura dei requisiti dettate dalla normativa in uso.
 
 === Tecnologie da utilizzare
+- VScode Extension API;
+- API REST;
+- Python o Node.js;
+- Modelli AI pre-addestrati (GPT e simili);
+- Ollama o simili.
 
 === Aspetti positivi
+Progetto che si distingue dalle altre proposte dato che ha l'obiettivo di creare un'estensione di Visual Studio Code.
 
 === Aspetti negativi e rischi
+- Esposizione poco chiara del capitolato;
+- Si reputa di difficile fattibilità la realizzazione del progetto.
 
 === Aiuto fornito dall'azienda
-
-=== Contatti avuti con l’azienda
+L'azienda si rende disponibile per incontri da remoto per aggiornamenti sul progresso e sessioni di consulenza. Inoltre, possono essere concordati incontri in presenza per discussioni più dettagliate, revisioni approfondite e supporto pratico.
 
 === Conclusione
+L'argomento proposto dal capitolato non è di interesse per il gruppo che, anche per i motivi elencati nella sezione 2.8.6, non ha ritenuto necessario contattare l'azienda per un colloquio di approfondimento.
+
+#linebreak()
+#linebreak()
 
 == #text("C9 - BuddyBot (Azzurrodigitale)", rgb("#f16610"))
 
