@@ -282,22 +282,45 @@ Sebbene a primo impatto il progetto abbia colto l'interesse generale dei membri,
 == #text("C6 - Sistema di gestione di un magazzino distribuito (M31)", rgb("#f16610"))
 
 === Descrizione generale
+Il progetto si propone di sviluppare un sistema di gestione distribuito per una rete di magazzini, con l'obiettivo di ottimizzare i livelli di scorte e minimizzare i tempi di risposta. L'architettura del sistema sarà basata su microservizi, garantendo operatività indipendente per ciascun magazzino e sincronizzazione in tempo reale con un sistema centrale.
 
 === Funzionalità obbligatorie richieste
+- Sincronizzazione in tempo reale dei dati di inventario tra i magazzini e il sistema centrale;
+- Gestione autonoma dei magazzini tramite microservizi;
+- Risoluzione dei conflitti negli aggiornamenti concorrenti;
+- Riassortimento predittivo basato su machine learning;
+- Monitoraggio centralizzato e reportistica;
+- Gestione delle operazioni di trasferimento tra magazzini.
 
 === Funzionalità opzionali richieste
+- Protezione dei dati e della confidenzialità delle comunicazioni;
+- Monitoraggio del sistema.
 
 === Tecnologie da utilizzare
+- Node.js, Nest.js (TypeScript) per lo sviluppo di microservizi;
+- Go per componenti ad alte prestazioni;
+- NATS o Apache Kafka per la gestione della comunicazione tra i microservizi;
+- Google Cloud Platform, Kubernetes per l'orchestrazione;
+- MongoDB per dati non strutturati, PostgreSQL per dati strutturati;
+- Redis per il caching;
+- Angular per l'interfaccia utente.
 
 === Aspetti positivi
+- Il progetto è interessante perché propone un modo innovativo di gestire un complesso di magazzini;
+- Machine learning utilizzato per un obiettivo diverso da un banale ChatBot;
+- Supporto per il riassortimento predittivo tramite machine learning.
 
 === Aspetti negativi e rischi
+- L’uso di molte tecnologie può portare ad una conoscenza superficiale di ognuna o a uno studio approfondito, con conseguente probabilità di una consegna in ritardo.
 
 === Aiuto fornito dall'azienda
-
-=== Contatti avuti con l’azienda
+M31 fornirà supporto tecnico e metterà a disposizione un esperto per guidare l'analisi e lo sviluppo delle soluzioni. L'azienda supervisionerà la fase di analisi dello stato dell'arte.
 
 === Conclusione
+Anche se questo capitolato ha suscitato l'interesse di qualche componente del team, non è stato scelto in quanto altri sono stati ritenuti migliori.
+
+#linebreak()
+#linebreak()
 
 == #text("C7 - LLM: Assistente virtuale (Ergon)", rgb("#f16610"))
 
