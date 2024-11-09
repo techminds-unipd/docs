@@ -240,22 +240,44 @@ Abbiamo apprezzato l’impegno di cui si fa carico SyncLab per formare i compone
 == #text("C5 - 3Dataviz (Sanmarco Informatica)", rgb("#f16610"))
 
 === Descrizione generale
+Il progetto chiede di realizzare un'interfaccia web per la visualizzazione in forma
+tridimensionale di dati tramite barre verticali (istogramma 3D) con i relativi dati di origine in forma tabulare.
 
 === Funzionalità obbligatorie richieste
+- Il grafico dovrà avere le funzioni classiche di un ambiente 3D (rotation, zoom, pan, auto-positioning);
+- Possibilità di selezionare un elemento del grafico (barra) o una cella della griglia e di nascondere / opacizzare le barre con i valori superiori o inferiori al valore della barra selezionata;
+- Lasciare come unici elementi visibili / non opacizzati i top X / bottom Y valori;
+- Possibilità di visualizzare il piano parallelo alla base, che rappresenta il valore medio globale e nascondere / opacizzare le barre con i valori superiori o inferiori al valore medio;
+- Visualizzare i valori corrispettivi alla barra.
 
 === Funzionalità opzionali richieste
+- Poter visualizzare il piano parallelo alla base che rappresenti il valore medio di un singolo elemento dell’asse (x o y);
 
 === Tecnologie da utilizzare
+- Three.js;
+- D3js;
+- Angular;
+- React.
 
 === Aspetti positivi
+- Tema particolare rispetto agli altri capitolati proposti;
+- Unico capitolato che tratta il 3D.
 
 === Aspetti negativi e rischi
+- Poco supporto nella fase di sviluppo da parte dell’azienda;
+- Le conoscenze da acquisire vengono considerate dal gruppo meno interessanti rispetto a quelle degli altri capitolati.
 
 === Aiuto fornito dall'azienda
+L'azienda fornirà un supporto maggiore nelle fasi di analisi dei requisiti e progettazione mentre durante la fase di implementazione sarà disponibile solo in caso di eventuali difficoltà. In generale verranno fissati degli incontri periodici per monitorare l'avanzamento del progetto.
 
 === Contatti avuti con l’azienda
+Il gruppo ha richiesto un colloquio informativo da remoto, su piattaforma Google Meet. Il verbale relativo all'incontro del 18/10/2024 è presente nell'#link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/verbali/2024-10-18-Firmato.pdf")[omonima cartella] nella repository.
 
 === Conclusione
+Sebbene a primo impatto il progetto abbia colto l'interesse generale dei membri, il gruppo ha optato per un capitolato differente in seguito ai colloqui avuti con le aziende. Tale scelta è stata dettata dal fatto che le tecnologie da utilizzare in altri capitolati sono risultate più interessanti e utili a scopo didattico.
+
+#linebreak()
+#linebreak()
 
 == #text("C6 - Sistema di gestione di un magazzino distribuito (M31)", rgb("#f16610"))
 
