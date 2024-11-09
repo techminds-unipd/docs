@@ -110,3 +110,59 @@
 
     body
 }
+
+
+#let lettera(
+    title: str,
+    sommario: str,
+    body
+) = {
+    set heading(numbering: "1.1")
+    set document(author: "Tech Minds", title: title)
+    set page(numbering: "1")
+    set align(center)
+    show link: underline
+    show link: set text(rgb("#f16610"))
+
+    parbreak()
+
+    image(g.logo, width: 80%)
+    text(20pt, title, weight: "bold")
+    parbreak()
+    text(link("mailto:"+g.mail))
+    parbreak()
+    text(10pt, "Sommario", weight: "bold")
+    linebreak()
+    text(10pt, sommario)
+
+    linebreak()
+    linebreak()
+    linebreak()
+
+    let frame(stroke) = (x, y) => (
+      left: if x > 0 { 0pt } else { stroke },
+      right: stroke,
+      top: if y < 2 { stroke } else { 0pt },
+      bottom: stroke,
+    )
+
+    text("Componenti", weight: "bold")
+    table(
+        columns: (18%,)*3,
+        align: center+horizon,
+        stroke: frame(black),
+        table.header([*Nome*],[*Cognome*],[*Matricola*]),
+        "Alessandro", "Bressan", "1224823",
+        "Samuele", "Corradin", "2068235",
+        "Tommaso", "Lazzarin", "2075529",
+        "Leonardo", "Salviato", "2068222",
+        "Matteo", "Squarzoni", "2068240",
+        "Giuseppe", "Tutino", "2075515",
+        "Caterina", "Vallotto", "2076434"
+    )
+
+    set align(left)
+    pagebreak()
+
+    body
+}
