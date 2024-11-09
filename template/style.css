@@ -178,6 +178,13 @@ a:hover {
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 24px;
+    text-transform: uppercase; 
+    color: #595959;
+    margin-top: 3em;
+}
+
+#rtb {
+    margin-top: 0;
 }
 
 .right-col h2 {
