@@ -1,0 +1,21 @@
+name: PR Build
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install typst
+      run: |
+        wget $(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep browser_download_url |grep -E "x86.*linux" | cut -d '"' -f 4)
+        tar xf typst*.tar.xz -C /tmp
+        sudo mv /tmp/typst*/typst /bin/typst
+    - name: Build sources
+      run: python .github/workflows/build_sources.py
+    - name: Build html
+      run: python .github/workflows/build_html.py
