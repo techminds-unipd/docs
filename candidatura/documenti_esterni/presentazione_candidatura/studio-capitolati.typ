@@ -325,22 +325,55 @@ Anche se questo capitolato ha suscitato l'interesse di qualche componente del te
 == #text("C7 - LLM: Assistente virtuale (Ergon)", rgb("#f16610"))
 
 === Descrizione generale
+Il progetto riguarda lo sviluppo di un Assistente Virtuale basato su LLM (Large Language Models) per assistere i clienti nella ricerca di informazioni sui prodotti aziendali. L'obiettivo è automatizzare l'interazione cliente-produttore, fornendo risposte rapide e accurate su prodotti disponibili, riducendo la necessità di contattare specialisti umani per ogni richiesta.
 
 === Funzionalità obbligatorie richieste
+- Database relazionale per la gestione dei dati;
+- Modello LLM con API per l’interrogazione;
+- Interfaccia utente per la configurazione della piattaforma;
+- Interfaccia utente per l'interazione tra IA e Utente;
+- Elementi indipendenti ma in grado di dialogare tra loro;
+- Comunicazione con il database (vedi tecnologie da utilizzare);
+- Sviluppo di un'app mobile;
+- Sviluppo del backend Web per la configurazione della piattaforma;
+- Feedback da parte dell’utente;
+- Configurazione da backend dei template relativi alle domande base degli utenti e fornire dei template di risposta;
+- Documentazione.
 
 === Funzionalità opzionali richieste
+Approfondire il feedback dell’utente con ulteriori domande.
 
 === Tecnologie da utilizzare
+- Sql Server Express, MySql o MariaDB;
+- BLOOM;
+- Falcon IA;
+- Pythia;
+- Italia by iGenius;
+- Minerva;
+- API REST;
+- Connettori standard fonte dati ODBC;
+- Middleware (JSON) per gestire comunicazione tra i componenti;
+- .NET MAUI;
+- Android.
 
 === Aspetti positivi
+- Offerta di corsi per l’introduzione a due tecnologie da utilizzare;
+- Il progetto dà una panoramica completa dello sviluppo software perchè chiede anche di gestire dati, integrare con API REST, sviluppare interfaccia utente e gestire la connessione tra tutti questi elementi.
 
 === Aspetti negativi e rischi
+- Dato che il modello richiede una fase di miglioramento continuo basata sui feedback degli utenti, c’è il rischio che non ci siano i tempi necessari per fornire un buon risultato;
+- Tema comune ad altri capitolati proposti.
 
 === Aiuto fornito dall'azienda
-
-=== Contatti avuti con l’azienda
+- Supporto da parte del team di R&D in varie fasi di sviluppo (non specificate);
+- Interazione da remoto o in presenza;
+- Due corsi online sui sistemi LLM e su .NET MAUI.
 
 === Conclusione
+La proposta risulta meno interessante rispetto agli altri capitolati che riguardano un assistente virtuale.
+
+#linebreak()
+#linebreak()
 
 == #text("C8 - Requirement Tracker - plugin VSCode (Bluewind)", rgb("#f16610"))
 
