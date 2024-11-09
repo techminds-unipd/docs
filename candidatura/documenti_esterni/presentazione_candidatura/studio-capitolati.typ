@@ -191,22 +191,51 @@ A prima vista il progetto ha affascinato tutti i membri del gruppo ma, allo stes
 == #text("C4 - NearYou (Sync Lab)", rgb("#f16610"))
 
 === Descrizione generale
+Il proponente richiede la creazione di un sistema software che si occupi della creazione di campagne pubblicitarie mirate, sfruttando un LLM. Per farlo viene chiesto di implementare una piattaforma che riesca a gestire flussi continui di dati di geolocalizzazione e comportamentali degli utenti. Lo scopo è far aumentare il valore della pubblicità percepito per gli inserzionisti, consentendo loro di avere una maggiore precisione nel targeting.
 
 === Funzionalità obbligatorie richieste
-
-=== Funzionalità opzionali richieste
+- Simulatori di dati geospaziali;
+- Configurazione del database con storicizzazione dei dati;
+- Implementazione di un tool per lo stream processing di più sorgenti;
+- Implementazione di un LLM per generare gli annunci;
+- Sviluppo di una dashboard per visualizzare i dati;
+- Web-app che simula un utente che segue un percorso e riceve gli annunci pubblicitari;
+- Test che dimostrino il corretto funzionamento dei servizi;
+- Presenza di documentazione.
 
 === Tecnologie da utilizzare
+Il proponente non ha imposto vincoli stretti sulle tecnologie da usare, ma ha solamente elencato i tipi di software che è necessario utilizzare:
+- Framework per la simulazione dei dati;
+- Broker per gestire lo stream come MQTT;
+- Strumento per lo stream processing che preleva i dati per consegnarli al LLM;
+- Strumento per processare le richieste tramite LLM;
+- Database capace di elaborare dati geospaziali;
+- Strumenti per la data visualization come Grafana;
 
 === Aspetti positivi
+- Uso di tecnologie non ancora studiate come lo stream processing e l’elaborazione di dati geospaziali;
+- Il proponente si rende disponibile a incontri, anche formativi, per guidare il gruppo.
 
 === Aspetti negativi e rischi
+- Il progetto vuole fare uso di molte tecnologie, costringendo a uno studio superficiale di tutte;
+- Il progetto ha una complessità molto alta e richiede la consegna di sette componenti. È molto probabile che non si riesca a completarlo nel tempo a disposizione;
+- L’argomento del progetto non stimola l’interesse dei componenti del gruppo.
 
 === Aiuto fornito dall'azienda
+L’azienda propone degli incontri di revisione dello stato di avanzamento. In particolare possono essere del tipo:
+- Analisi dei requisiti;
+- Formazione;
+- Verifica dello stato di avanzamento dei lavori;
+- Dimostrazione di una live demo del prodotto.
 
 === Contatti avuti con l’azienda
+L'azienda è stata contattata via email per richiedere chiarimenti sulle modalità di presentazione degli annunci, in particolare se fosse necessario sviluppare una web-app. Ci è stato risposto che il focus principale del progetto non risiede nella modalità di visualizzazione, sebbene questa sarà cruciale nel prodotto finale. In ogni caso, l'azienda propone di concordare l'utilizzo di applicativi che permettano una visualizzazione pronta all'uso.
 
 === Conclusione
+Abbiamo apprezzato l’impegno di cui si fa carico SyncLab per formare i componenti del gruppo, tuttavia riteniamo che la proposta non sia adatta a noi dati gli aspetti negativi evidenziati nella sezione 2.4.5.
+
+#linebreak()
+#linebreak()
 
 == #text("C5 - 3Dataviz (Sanmarco Informatica)", rgb("#f16610"))
 
