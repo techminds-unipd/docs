@@ -7,13 +7,9 @@ pdfs = glob.glob("{}/**/*.pdf".format(repo_dir), recursive=True)
 
 # Blacklist
 sources_to_compile = []
-blacklist = ["template", "documenti_esterni/verbali"]
+blacklist = ["template/", "/include/", "documenti_esterni/verbali"]
 for source in sources:
-    add = True
-    for string in blacklist:
-        if string in source:
-            add = False
-    if add:
+    if not any([string in source for string in blacklist]):
         sources_to_compile.append(source)
 
 # Make dirs in build
@@ -22,10 +18,9 @@ for source in sources_to_compile+pdfs:
     os.makedirs(dir, exist_ok = True)
 
 # Moves signed pdfs in build
-pdfs = [source for source in pdfs if "build" not in source]
 for pdf in pdfs:
-    pdf_output_dir = os.path.abspath(pdf).replace("docs", "docs/build").replace("docs/build", "docs", 1).replace("firmati/", "")
-    shutil.copyfile(pdf, pdf_output_dir)
+    output_dir = os.path.abspath(pdf).replace("docs", "docs/build").replace("docs/build", "docs", 1)
+    shutil.copyfile(pdf, output_dir)
 
 # Compile typst files
 for source in sources_to_compile:
