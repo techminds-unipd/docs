@@ -1,7 +1,7 @@
 #let g = (
     name: "Tech Minds",
     mail: "techminds.unipd@gmail.com",
-    logo: "../assets/logo_upscaled.png",
+    logo: "assets/logo_upscaled.png",
 )
 
 #let team = (
