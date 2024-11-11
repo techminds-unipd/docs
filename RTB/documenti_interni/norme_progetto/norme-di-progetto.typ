@@ -8,9 +8,6 @@
   )
 )
 
-#show emph: it=>{
-  text(rgb("#f16610"), it.body, style: "italic")
-}
 #include "include/introduzione.typ"
 #include "include/processi-primari.typ"
 #include "include/processi-di-supporto.typ"
