@@ -4,8 +4,14 @@
   title: "Norme di progetto",
   sommario: "",
   changelog: (
-    "1.0", "00/00/2024", "Prima versione", "Il gruppo Tech Minds", "...."
+    "0.1", "11/11/2024", "Struttura iniziale e introduzione", team.T +linebreak() +team.M, "...."
   )
 )
 
+#show emph: it=>{
+  text(rgb("#f16610"), it.body, style: "italic")
+}
 #include "include/introduzione.typ"
+#include "include/processi-primari.typ"
+#include "include/processi-di-supporto.typ"
+#include "include/processi-organizzativi.typ"
