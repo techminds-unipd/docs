@@ -31,4 +31,4 @@ f.close()
 
 # CSS and Logo
 shutil.copyfile("{}/template/style.css".format(repo_dir), "{}/build/style.css".format(repo_dir))
-shutil.copyfile("{}/assets/logo.png".format(repo_dir), "{}/build/logo.png".format(repo_dir))
+shutil.copyfile("{}/template/assets/logo.png".format(repo_dir), "{}/build/logo.png".format(repo_dir))
