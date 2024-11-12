@@ -4,7 +4,7 @@
   title: "Glossario",
   sommario: "",
   changelog: (
-    "1.0", "11/11/2024", "Prima versione", team.S + linebreak() + team.L + linebreak() + team.G, ""
+    "0.1.0", "11/11/2024", "Prima versione", team.L, ""
   )
 )
 #set heading(numbering: none)
