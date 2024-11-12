@@ -1,4 +1,4 @@
-#import "../../../../template/template.typ": glossario
+#import "/template/template.typ": glossario
 
 = Introduzione
 == Scopo del documento
