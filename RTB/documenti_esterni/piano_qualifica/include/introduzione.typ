@@ -3,12 +3,12 @@
 Un fattore di cruciale importanza per qualsiasi progetto software che vuole adeguarsi alla disciplina dell'ingegneria del software è assicurare qualità(G).
 
 Il presente documento ha infatti lo scopo di fornire una checklist minuziosa e accurata definendo così le metriche e i metodi di verifica(G) e validazione(G) che andremo ad attuare nelle varie parti del prodotto software.
-Precisando quindi gli obiettivi, le risorse e le tecniche da attuare, il piano di qualifica fornirà un "linea guida" per assicurare un elevato grado di qualità.
+Precisando quindi gli obiettivi, le risorse e le tecniche da attuare, il piano di qualifica fornirà una "linea guida" per assicurare un elevato grado di qualità.
 
 Tali parametri risulteranno utili per:
 - Verificatori: fornisce gli indicatori necessari per verificare la qualità del prodotto;
 - Sviluppatori: rappresenta un ottimo strumento per sviluppare le varie parti del prodotto a "regola d'arte(G)";
-- Utilizzatori: insieme al way of working (G), espone i parametri che hanno permesso la produzione e la verifica di qualità del prodotto finale.
+- Utilizzatori: insieme alle Norme di Progetto (METTERE IL LINK), espone i parametri che hanno permesso la produzione e la verifica di qualità del prodotto finale.
 
 == Glossario
 Per definire e chiarire le parole chiave che riteniamo particolarmente ambigue o di una certa rilevanza, ci siamo dotati di un Glossario interno (LINK AL GLOSSARIO). I termini che abbiamo definito all'interno di tale documento saranno indicati con DECIDERE COME INDICARE. 
