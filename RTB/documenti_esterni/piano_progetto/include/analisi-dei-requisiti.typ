@@ -1,4 +1,4 @@
-#import "../../../../template/style.typ": glossario
+#import "/template/style.typ": glossario
 
 = Analisi dei rischi
 

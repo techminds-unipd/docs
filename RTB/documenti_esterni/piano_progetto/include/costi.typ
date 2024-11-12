@@ -1,4 +1,4 @@
-#import "../../../../template/style.typ": glossario
+#import "/template/style.typ": glossario
 
 = Costi
 
@@ -15,3 +15,5 @@
 ==== Preventivo
 
 ==== Consuntivo
+
+== PB

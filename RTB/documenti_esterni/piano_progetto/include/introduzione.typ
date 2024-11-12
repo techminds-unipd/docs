@@ -1,4 +1,4 @@
-#import "../../../../template/style.typ": glossario
+#import "/template/style.typ": glossario
 
 = Introduzione
 == Scopo del documento
@@ -7,7 +7,7 @@ Il documento che descrive il piano di progetto nasce con l'intenzione di documen
 == Glossario
 Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
 Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la stessa base di conoscenza e per sua natura è in continuo aggiornamento.
-I termini che sono presenti all'interno del #glossario[glossario], verranno scritti in arancione e in corsivo.
+I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
 
 
 == Scopo del prodotto

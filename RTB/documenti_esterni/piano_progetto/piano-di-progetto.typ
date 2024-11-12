@@ -4,7 +4,7 @@
   title: "Piano di progetto",
   sommario: "",
   changelog: (
-    "0.1", "12/11/2024", "Struttura iniziale e introduzione", team.M + linebreak() + team.A, "...."
+    "0.1.0", "12/11/2024", "Struttura iniziale e introduzione", team.M, "...."
   )
 )
 
