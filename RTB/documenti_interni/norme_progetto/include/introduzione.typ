@@ -1,4 +1,4 @@
-#import "style.typ": glossario
+#import "../../../../template/style.typ": glossario
 
 = Introduzione
 == Scopo del documento
