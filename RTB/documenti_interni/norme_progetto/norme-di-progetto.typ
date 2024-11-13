@@ -4,7 +4,7 @@
   title: "Norme di progetto",
   sommario: "",
   changelog: (
-    "0.1.0", "12/11/2024", "Struttura iniziale e introduzione", team.T, "...."
+    "0.1.0", "13/11/2024", "Struttura iniziale e redazione di introduzione, documentazione e gestione di configurazione", team.T, "...."
   )
 )
 
