@@ -2,7 +2,7 @@
 
 #show: documento.with(
   title: "Piano di progetto",
-  sommario: "",
+  sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds",
   changelog: (
     "0.1.0", "12/11/2024", "Struttura iniziale e introduzione", team.M, "...."
   )
