@@ -3,6 +3,11 @@
 == Documentazione
 
 == Gestione della configurazione
+=== Caratteristiche e finalità
+
+=== Versionamento
+
+=== Gestione Repository
 
 == Accertamento della qualità
 
