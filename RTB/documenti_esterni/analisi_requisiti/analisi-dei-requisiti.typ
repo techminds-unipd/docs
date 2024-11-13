@@ -11,3 +11,4 @@
 #include "include/introduzione.typ"
 #include "include/descrizione.typ"
 #include "include/use_cases.typ"
+#include "include/requisiti.typ"
