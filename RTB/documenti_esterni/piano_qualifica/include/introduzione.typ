@@ -10,6 +10,9 @@ Tali parametri risulteranno utili per:
 - Sviluppatori: rappresenta un ottimo strumento per sviluppare le varie parti del prodotto a "regola d'arte(G)";
 - Utilizzatori: insieme alle Norme di Progetto (METTERE IL LINK), espone i parametri che hanno permesso la produzione e la verifica di qualità del prodotto finale.
 
+== Scopo del prodotto
+TODO
+
 == Glossario
 Per definire e chiarire le parole chiave che riteniamo particolarmente ambigue o di una certa rilevanza, ci siamo dotati di un Glossario interno (LINK AL GLOSSARIO). I termini che abbiamo definito all'interno di tale documento saranno indicati con DECIDERE COME INDICARE. 
 
