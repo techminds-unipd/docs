@@ -123,12 +123,17 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 = M
 
+== #h(2.1%) Major version
+#pad(left: 10pt, [Nel contesto di gestione delle versioni, indica un cambiamento radicale o aggiornamento significativo (a volte non retrocompatibile) di un software o documento.])
+
 == #h(2.1%) MVP
 #pad(left: 10pt, [Acronimo di Minimum Viable Product. Prodotto software ridotto nelle funzionalità che soddisfa i requisiti essenziali. É utilizzato a scopo esplorativo per ricevere feedback e valutare la bontà della visione di prodotto, in modo da prendere decisioni consapevoli sul completamento del software.])
 
 == #h(2.1%) Milestone
 #pad(left: 10pt, [Data di calendario che determina un punto di avanzamento atteso del progetto. Le milestones sono uno strumento di pianficazione.])
 
+== #h(2.1%) Minor version
+#pad(left: 10pt, [Nel contesto di gestione delle versioni, indica un aggiornamento che aggiunge contenuto/funzionalità senza cambiare il significato o il comportamento di un software o documento.])
 
 = N
 
@@ -137,6 +142,10 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 = O
 = P
+
+== #h(2.1%) Patch
+#pad(left: 10pt, [Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o piccole modifiche.])
+
 == #h(2.1%) Piano di qualifica
 #pad(left: 10pt, [Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.])
 
