@@ -42,6 +42,9 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 == #h(2.1%) Backlog
 #pad(left: 10pt, [Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog, il _product backlog_ ovvero l'insieme di tutti i compiti/attività del progetto e lo _spring backlog_, che indica i compiti/attività da completare durante uno sprint.])
 
+== #h(2.1%) Baseline
+#pad(left: 10pt, [Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fissati da una milestone. Una baseline viene approvata ed è modificabile solamente tramite un processo definito, formale e tracciato.])
+
 == #h(2.1%) Bedrock
 #pad(left: 10pt, [Bedrock è un servizio di AWS che rende disponibili modelli di intelligenza artificiale tramite un sistema unificato.])
 
@@ -114,14 +117,51 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 = J
 = K
 = L
+
+== #h(2.1%) LLM
+#pad(left: 10pt, [Acronimo di Large Language Model. Modello di deep learning progettato per eseguire task di Natural Language Processing, come la generazione di un testo. Un LLM apprende molti parametri in modo supervisionato, individuando relazioni statistiche tra una grande quantità di testi.])
+
 = M
+
+== #h(2.1%) MVP
+#pad(left: 10pt, [Acronimo di Minimum Viable Product. Prodotto software ridotto nelle funzionalità che soddisfa i requisiti essenziali. É utilizzato a scopo esplorativo per ricevere feedback e valutare la bontà della visione di prodotto, in modo da prendere decisioni consapevoli sul completamento del software.])
+
+== #h(2.1%) Milestone
+#pad(left: 10pt, [Data di calendario che determina un punto di avanzamento atteso del progetto. Le milestones sono uno strumento di pianficazione.])
+
+
 = N
+
+== #h(2.1%) Norme di progetto
+#pad(left: 10pt, [Documento gestionale interno redatto in forma esecutiva, ossia composto da regole e procedure, che descrive il way of working. É volto a standardizzare i processi in modo da assicurare la coerenza del lavoro svolto dai diversi membri e la qualità dei prodotti.])
+
 = O
 = P
+== #h(2.1%) Piano di qualifica
+#pad(left: 10pt, [Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.])
+
+== #h(2.1%) Processo
+#pad(left: 10pt, [Insieme	di attività correlate e	coese che, consumando risorse, trasformano ingressi (bisogni) in uscite (prodotti). Ogni processo deve svolgersi secondo le indicazioni fornite dalle Norme di Progetto.])
+
+== #h(2.1%) Processo di ciclo di vita
+#pad(left: 10pt, [Processi che definiscono quali attività svolgere per attuare, in modo efficiente ed efficace, corrette transizioni di stato nel ciclo di vita di un prodotto software.])
+
+== #h(2.1%) PB
+#pad(left: 10pt, [Acronimo di Product Baseline. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).])
+
+== #h(2.1%) PoC
+#pad(left: 10pt, [Acronimo di Proof of Concept. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.])
+
+== #h(2.1%) Python
+#pad(left: 10pt, [Linguaggio ad alto livello orientato agli oggetti, apprezzato per la sua semplicità e flessibilità.])
+
 = Q
 = R
 == #h(2.1%) Registro delle modifiche
 #pad(left: 10pt, [Struttura che tiene traccia delle modifiche effettuate ad un documento, con indicazione della versione, della data, della descrizione della modifica, dell'autore e del verificatore.])
+
+== #h(2.1%) Repository
+#pad(left: 10pt, [Luogo in cui vengono salvati i prodotti creati. Costituisce una fonte di condivisione del lavoro svolto da ciascun membro. É caratterizzato da persistenza e consistenza, garantite dalle procedure indicate nelle "Norme di Progetto".])
 
 == #h(2.1%) Requisito
 #pad(left: 10pt, [La capacità necessaria a un utente per raggiungere un obiettivo (lato bisogno/requisiti utente) o la capacità necessaria a un sistema per rispondere a una aspettativa (lato soluzione/requisiti software).])
@@ -133,7 +173,7 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 #pad(left: 10pt, [Attività che si svolge al termine di uno sprint, in cui il team riflette sul lavoro svolto, individua i punti di forza e debolezza e propone azioni di miglioramento per lo sprint successivo.])
 
 == #h(2.1%) RTB 
-#pad(left: 10pt, [Acronimo di "Requirements and Technology Baseline", consiste nella prima revisione di avanzamento del progetto, in cui vanno presentati l'Analisi dei Requisiti e il PoC.])
+#pad(left: 10pt, [Acronimo di "Requirements and Technology Baseline". Baseline il cui oggetto principale sono i requisiti e l'adeguatezza delle tecnologie, valutata tramite il PoC. I requisiti sono concordati con il proponente e raccolti nel documento "Analisi dei Requisiti". Una tecnologia è considerata adeguata se permette di raggiungere l'obiettivo per cui è stata scelta e se è integrabile con le altre.])
 
 = S
 == #h(2.1%) Scrum
@@ -153,7 +193,7 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 #pad(left: 10pt, [Typst è un sistema di impaginazione basato su markup progettato per essere un' alternativa a LaTeX pur essendo più facile da apprendere ed utilizzare.])
 
 = U
-== #h(2.1%) Uml
+== #h(2.1%) UML
 #pad(left: 10pt, [Acronimo di "Unified Modeling Language", è un linguaggio di modellazione utilizzato per descrivere, visualizzare e documentare i componenti di un sistema software.])
 
 == #h(2.1%) User Story
@@ -171,7 +211,7 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 = W
 == #h(2.1%) Way of working
-#pad(left: 10pt, [Si veda Norme di Progetto.])
+#pad(left: 10pt, [Insieme di regole e pratiche che stabiliscono come devono avvenire i processi del progetto.])
 
 = X
 = Y
