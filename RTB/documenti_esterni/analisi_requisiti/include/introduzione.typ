@@ -16,9 +16,9 @@ I casi d'uso seguono la seguente struttura:
 - *Estensioni*: Casi eccezionali che possono avvenire durante l'esecuzione del caso d'uso.
 
 == Scopo del prodotto
-Il progetto ha lo scopo di realizzare un prodotto che vada ad automatizzare molte delle routine digitali ricorrenti utilizzando l'#text([intelligenza artificiale#sub("G")], fill: red) generativa.#linebreak()
-Il prodotto sarà un'app desktop che permetterà di costruire dei #text([workflow#sub("G")], fill: red) i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicano l'automazione da effettuare in linguaggio naturale.
-Successivamente un #text([agente#sub("G")], fill: red) prenderà il workflow ed inizierà ad interpretare le istruzioni in linguaggio naturale ed eseguire il workflow.
+Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#text([intelligenza artificiale#sub("G")], fill: red) generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
+Il prodotto sarà un'app desktop che permetterà di costruire dei #text([workflow#sub("G")], fill: red) i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno l'automazione da effettuare in linguaggio naturale.
+Successivamente, un #text([agente#sub("G")], fill: red) prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
 == Glossario
 Per evitare fraintendimenti sulla terminologia utilizzata è stato stilato un glossario che contiene tutte le definizioni dei termini tecnici utilizzati in questo documento.
