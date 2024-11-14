@@ -176,6 +176,9 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 = Q
 = R
+== #h(2.1%) Refactoring
+#pad(left: 10pt, [Attività di ristrutturazione del codice sorgente, senza modificarne il comportamento esterno, al fine di renderlo più leggibile, manutenibile e riusabile.])
+
 == #h(2.1%) Registro delle modifiche
 #pad(left: 10pt, [Struttura che tiene traccia delle modifiche effettuate ad un documento, con indicazione della versione, della data, della descrizione della modifica, dell'autore e del verificatore.])
 
