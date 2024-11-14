@@ -8,7 +8,7 @@ TODO
     inset: 10pt,
     align: horizon,
     table.header(
-      [*Problema*], [*COdice rischio*], [*Soluzione*],
+      [*Problema*], [*Codice rischio*], [*Soluzione*],
     ),
     [Difficoltà per la scrittura in LateX e lavoro condiviso su Overleaf.],
     [TODO],
