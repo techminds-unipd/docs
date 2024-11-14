@@ -9,7 +9,7 @@
     table.header(
       [*Problema*], [*Codice rischio*], [*Soluzione*],
     ),
-    [Difficoltà per la scrittura in LateX e lavoro condiviso su Overleaf.],
+    [LaTeX ha una sintassi a volte troppo complessa e non permette di fare scripting per i template.],
     [TODO],
     [Passaggio a Typst per la scrittura, modifica e verifica della
     documentazione.]
