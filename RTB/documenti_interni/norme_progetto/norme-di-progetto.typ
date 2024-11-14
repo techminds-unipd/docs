@@ -7,7 +7,6 @@
     "0.1.0", "13/11/2024", "Struttura iniziale e redazione di introduzione, documentazione e gestione di configurazione", team.M, "...."
   )
 )
-
 #include "include/introduzione.typ"
 #include "include/processi-primari.typ"
 #include "include/processi-di-supporto.typ"

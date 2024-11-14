@@ -16,11 +16,13 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - Typst: linguaggio simile a LaTeX ma che permette di comporre documenti in modo più semplice.
 === Organizzazione dei documenti
 - Nomi dei file: i file iniziano sempre con lettera minuscola o con una data del tipo yyyy-mm-dd[-info] nel caso di verbali (info è un campo opzionale che contiene informazioni aggiuntive);
-- Organizzazione delle cartelle: el caso in cui il documento sia composto da più file, questi sono contenuti in una cartella chiamata ```/include```;
-- Elenchi: in tutti gli elenchi gli elementi terminano con ";" tranne l'ultimo che termina con ".".
-- Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X".
+- Organizzazione delle cartelle: nel caso in cui il documento sia composto da più file, questi sono contenuti in una cartella chiamata ```/include```;
+- Elenchi: in tutti gli elenchi gli elementi terminano con ";" tranne l'ultimo che termina con ".". Inoltre la prima lettera di ogni punto deve essere maiuscola, mentre se si tratta di un sottoelenco deve essere minuscola;
+- Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
+- Figure: ogni figura deve essere dotata di caption che ne spieghi brevemente il contenuto;
+- Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto.
 
-=== Struttura dei documenti
+=== Struttura dei documenti <struttura-dei-documenti>
 L'impaginazione e la struttura generale dei documenti è descritta nel file #raw("template.typ"). \ Tutti i documenti sono sempre divisi in almeno queste parti:
 + Intestazione:
   - Logo;
@@ -35,7 +37,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
 + Indice;
 + Contenuto.
 === Struttura dei verbali
-I verbali hanno informazioni aggiuntive oltre a quelle descritte nella sezione di struttura dei documenti. Tali informazioni sono già presenti nella funzione #raw("verbale") presente file #raw("template.typ"). Invocando la funzione e impostando i parametri indicati è possibile ottenere un verbale già formattato.
+I verbali hanno informazioni aggiuntive oltre a quelle descritte nella @struttura-dei-documenti[sezione]. Tali informazioni sono già presenti nella funzione #raw("verbale") presente file #raw("template.typ"). Invocando la funzione e impostando i parametri indicati è possibile ottenere un verbale già formattato.
 Le informazioni vanno a modificare la sezione del contenuto.
 - Nei verbali interni vengono aggiunti:
   + Partecipanti;
