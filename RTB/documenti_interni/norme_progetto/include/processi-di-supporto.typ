@@ -64,7 +64,7 @@ spiegazione:
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software #glossario[git] sulla piattaforma #glossario[GitHub].
 
 === Gestione Repository
-La struttura della repository è composta da:
+La struttura del repository è composta da:
 - *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo branch è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
 - *branch di feature* creati secondo la pratica #glossario[GitHub Flow].
 \
