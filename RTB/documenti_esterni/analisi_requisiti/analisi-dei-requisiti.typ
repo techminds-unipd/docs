@@ -2,10 +2,13 @@
 
 #show: documento.with(
   title: "Analisi dei requisiti",
-  sommario: "",
+  sommario: "Documento di Analisi dei requisiti.",
   changelog: (
-    "1.0", "00/00/2024", "Prima versione", "Il gruppo Tech Minds", "...."
+    "0.1.0", "12/11/2024", "Prima versione", team.G, team.A
   )
 )
 
 #include "include/introduzione.typ"
+#include "include/descrizione.typ"
+#include "include/use_cases.typ"
+#include "include/requisiti.typ"
