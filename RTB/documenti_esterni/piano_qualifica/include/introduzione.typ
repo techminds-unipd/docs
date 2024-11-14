@@ -28,8 +28,8 @@ L'approccio che abbiamo deciso di adottare per questo documento è di tipo incre
 
 == Riferimenti
 === Riferimenti normativi:
-  - Spunti per lezione rovesciata #1: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/FC1.pdf") ;
-  - Norme di progetto: #link("https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf") ;
-  - Regolamento progetto didattico: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf").
+  - Spunti per lezione rovesciata #1: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/FC1.pdf;
+  - Norme di progetto: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf;
+  - Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
 === Riferimenti informativi:
-  - Glossario: #link("https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf").
+  - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf.
