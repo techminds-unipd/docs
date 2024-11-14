@@ -2,10 +2,15 @@
 
 #show: documento.with(
   title: "Piano di qualifica",
-  sommario: "",
+  sommario: "Il documento esponde le metriche di verifica attuate per garantire qualità.",
   changelog: (
-    "1.0", "00/00/2024", "Prima versione", "Il gruppo Tech Minds", "...."
+    "0.1.0", "12/11/2024", "Prima versione", team.A, team.M
   )
 )
 
 #include "include/introduzione.typ"
+#include "include/qualita-prodotto.typ"
+#include "include/qualita-processo.typ"
+#include "include/testing.typ"
+#include "include/miglioramenti.typ"
+#include "include/controllo-metriche.typ"
