@@ -1,3 +1,3 @@
-#let glossario(term, color: rgb("#f16610")) = {
+#let glossario(term, color: rgb("#c30000")) = {
   text(color, style: "italic", box[#term])
 }
