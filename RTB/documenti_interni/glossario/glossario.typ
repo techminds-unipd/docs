@@ -93,6 +93,10 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 == #h(2.1%) GitHub
 #pad(left: 10pt, [Servizio di hosting per progetti software, il nome deriva dal fatto che è una implementazione dello strumento di controllo di versione distribuito git.])
 
+== #h(2.1%) GitHub Flow
+#pad(left: 10pt, [Pratica usata nella gestione dei branch in un repository, il GitHub Flow utilizza un branch principale (solitamente chiamato main o master) da cui vengono creati dei branch di feature.
+                 All'interno dei branch di feature vengono effettuate le modifiche che poi verranno integrate nel branch main attraverso una Pull Request.])
+
 == #h(2.1%) GitHub Pages
 #pad(left: 10pt, [Servizio di GitHub che fornisce hosting per siti web statici.])
 
@@ -150,7 +154,7 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 #pad(left: 10pt, [Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.])
 
 == #h(2.1%) Processo
-#pad(left: 10pt, [Insieme	di attività correlate e	coese che, consumando risorse, trasformano ingressi (bisogni) in uscite (prodotti). Ogni processo deve svolgersi secondo le indicazioni fornite dalle Norme di Progetto.])
+#pad(left: 10pt, [Insieme di attività correlate e coese che, consumando risorse, trasformano ingressi (bisogni) in uscite (prodotti). Ogni processo deve svolgersi secondo le indicazioni fornite dalle Norme di Progetto.])
 
 == #h(2.1%) Processo di ciclo di vita
 #pad(left: 10pt, [Processi che definiscono quali attività svolgere per attuare, in modo efficiente ed efficace, corrette transizioni di stato nel ciclo di vita di un prodotto software.])
@@ -160,6 +164,12 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 == #h(2.1%) PoC
 #pad(left: 10pt, [Acronimo di Proof of Concept. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.])
+
+== #h(2.1%) Progetto
+#pad(left: 10pt, [Insieme di attività che devono raggiungere determinati obiettivi a partire da determinate specifiche, con una data di inizio e una data di fine fissate, con risorse limitate che si consumano nello svolgersi.])
+
+== #h(2.1%) Pull request
+#pad(left: 10pt, [Nel contesto di un repository di versionamento distribuito, è un modo per notificare ai membri del team che è stata completata una funzionalità in un branch di feature e che si può effettuare il merge nel branch main, con previa verifica.])
 
 == #h(2.1%) Python
 #pad(left: 10pt, [Linguaggio ad alto livello orientato agli oggetti, apprezzato per la sua semplicità e flessibilità.])
