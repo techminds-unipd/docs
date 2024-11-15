@@ -1,5 +1,10 @@
 #import "/template/template.typ": documento,team
 
+#show outline.entry.where(level: 2): it => {
+    h(10pt);
+    it;
+}
+
 #show: documento.with(
   title: "Glossario",
   sommario: "",
