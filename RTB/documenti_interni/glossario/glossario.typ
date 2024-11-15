@@ -59,6 +59,9 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 == #h(2.1%) Caso d'uso
 #pad(left: 10pt, [Descrizione dettagliata di come un attore interagisce con il sistema nel compiere un'attivita specifica. È utilizzato nel contesto dello sviluppo software per individuare i requisiti funzionali del prodotto.])
 
+== #h(2.1%) Changelog
+#pad(left: 10pt, [Si veda #link(<registro_delle_modifiche>)[Registro delle modifiche].])
+
 == #h(2.1%) Commit
 #pad(left: 10pt, [Operazione che registra le modifiche apportate al codice in un repository. Ogni commit rappresenta uno snapshot del progetto in un determinato momento.])
 
@@ -93,6 +96,9 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 == #h(2.1%) GitHub
 #pad(left: 10pt, [Servizio di hosting per progetti software, il nome deriva dal fatto che è una implementazione dello strumento di controllo di versione distribuito git.])
 
+== #h(2.1%) GitHub Actions
+#pad(left: 10pt, [Piattaforma di continuous integration e continuous delivery che permette di automatizzare la build, i test e il rilascio di un prodotto.])
+
 == #h(2.1%) GitHub Flow
 #pad(left: 10pt, [Pratica usata nella gestione dei branch in un repository, il GitHub Flow utilizza un branch principale (solitamente chiamato main o master) da cui vengono creati dei branch di feature.
                  All'interno dei branch di feature vengono effettuate le modifiche che poi verranno integrate nel branch main attraverso una Pull Request.])
@@ -105,6 +111,10 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 = H
 = I
+
+== #h(2.1%) Indice Gulpease
+#pad(left: 10pt, [Indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto agli altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzichè in sillabe, semplificandone il calcolo automatico.
+                 #linebreak()La formula per il calcolo è $89 + (300("n_frasi") -10("n_lettere"))/"n_parole"$.])
 
 == #h(2.1%) Integrazione continua
 #pad(left: 10pt, [Spesso indicata con CI (dall'inglese Continuous Integration), è una pratica di sviluppo in cui è presente un meccanismo di Build Automation e dove il team integra frequentemente le modifiche.])
@@ -175,11 +185,19 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 #pad(left: 10pt, [Linguaggio ad alto livello orientato agli oggetti, apprezzato per la sua semplicità e flessibilità.])
 
 = Q
+== #h(2.1%) Qualità
+#pad(left: 10pt, [Insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.#linebreak()
+                 Può avere diversi punti di vista:
+                 - Intrinseca: conformità ai requisiti, idoneità all’uso;
+                 - Relativa: soddisfazione del cliente;
+                 - Quantitativa: misurazione oggettiva, per confronto.
+                 ])
+
 = R
 == #h(2.1%) Refactoring
 #pad(left: 10pt, [Attività di ristrutturazione del codice sorgente, senza modificarne il comportamento esterno, al fine di renderlo più leggibile, manutenibile e riusabile.])
 
-== #h(2.1%) Registro delle modifiche
+== #h(2.1%) Registro delle modifiche <registro_delle_modifiche>
 #pad(left: 10pt, [Struttura che tiene traccia delle modifiche effettuate ad un documento, con indicazione della versione, della data, della descrizione della modifica, dell'autore e del verificatore.])
 
 == #h(2.1%) Repository
@@ -234,6 +252,9 @@ con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 = W
 == #h(2.1%) Way of working
 #pad(left: 10pt, [Insieme di regole e pratiche che stabiliscono come devono avvenire i processi del progetto.])
+
+== #h(2.1%) Workflow
+#pad(left: 10pt, [Serie di attività orchestrate e ripetibili, eseguite in sequenza o in parallelo, con lo scopo di raggiungere un obiettivo specifico.])
 
 = X
 = Y
