@@ -7,7 +7,7 @@
 
 #show: documento.with(
   title: "Glossario",
-  sommario: "",
+  sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
     "0.1.0", "11/11/2024", "Prima versione", team.L, ""
   )
