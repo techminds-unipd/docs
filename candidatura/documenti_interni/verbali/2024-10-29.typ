@@ -13,5 +13,5 @@
   ordine_giorno: ("Finalizzazione stesura del documento di revisione dei capitolati;", "Scrivere la lettera di presentazione della candidatura."),
   riassunto: [Per prima cosa è stato revisionato collettivamente il documento di valutazione dei capitolati. Successivamente è stata scritta su Overleaf la lettera di candidatura. Non sono state evidenziate particolari criticità. #linebreak() Programmata la consegna della candidatura il giorno 31 ottobre.],
   decisioni: (),
-  firma: ""
+  firma: false
 )

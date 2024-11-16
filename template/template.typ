@@ -104,7 +104,7 @@
         }
     }
 
-    if firma == true {
+    if firma {
        align(bottom + right, text("Il proponente", weight: "bold") + v(2%) + line(length: 30%))
     }
 

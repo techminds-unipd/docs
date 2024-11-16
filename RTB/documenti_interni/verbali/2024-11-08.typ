@@ -1,5 +1,4 @@
-#import "/template/template.typ": verbale
-#import "/template/template.typ": team
+#import "/template/template.typ": verbale, team
 
 #show: verbale.with(
   title: "Verbale interno del 08/11/2024",
