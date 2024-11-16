@@ -40,10 +40,10 @@ Attività preliminare allo sviluppo (o alla modifica) di un sistema software, il
 Acronimo di _Application Programming Interface_, è un insieme di procedure atte a consentire la comunicazione tra diversi software o tra diversi componenti di software.
 
 == Attore
-Nel contesto dell'analisi dei requisiti, rappresenta un'entità che interagisce con il sistema svolgendo delle attività, può essere un utente oppure un sistema esterno.
+Nel contesto dell'analisi dei requisiti rappresenta un'entità che interagisce con il sistema svolgendo delle attività. Può essere un utente oppure un sistema esterno.
 
 == AWS
-Acronimo di Amazon Web Services, è una sussidiaria di Amazon che fornisce servizi di cloud computing.
+Acronimo di _Amazon Web Services_, è una sussidiaria di Amazon che fornisce servizi di cloud computing.
 
 = B
 
@@ -125,7 +125,7 @@ Indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto agli a
                  #linebreak()La formula per il calcolo è $89 + (300("n_frasi") -10("n_lettere"))/"n_parole"$.
 
 == Integrazione continua
-Spesso indicata con CI (dall'inglese Continuous Integration), è una pratica di sviluppo in cui è presente un meccanismo di Build Automation e dove il team integra frequentemente le modifiche.
+Spesso indicata con CI (dall'inglese _Continuous Integration_), è una pratica di sviluppo in cui è presente un meccanismo di Build Automation e dove il team integra frequentemente le modifiche.
 
 == Intelligenza Artificiale
 Disciplina che studia come realizzare sistemi informatici in grado di simulare il ragionamento umano.
@@ -134,28 +134,28 @@ Disciplina che studia come realizzare sistemi informatici in grado di simulare i
 Elemento che richiede attenzione o risoluzione all'interno di un progetto.
 
 == ITS
-Acronimo di Issues Tracking System, è uno strumento che gestisce e mantiene una lista di Issues, spesso usato per progetti in team.
+Acronimo di _Issues Tracking System_, è uno strumento che gestisce e mantiene una lista di Issues, spesso usato per progetti in team.
 
 = J
 = K
 = L
 
 == LLM
-Acronimo di Large Language Model. Modello di deep learning progettato per eseguire task di Natural Language Processing, come la generazione di un testo. Un LLM apprende molti parametri in modo supervisionato, individuando relazioni statistiche tra una grande quantità di testi.
+Acronimo di _Large Language Model_. Modello di deep learning progettato per eseguire task di Natural Language Processing, come la generazione di un testo. Un LLM apprende molti parametri in modo supervisionato, individuando relazioni statistiche tra una grande quantità di testi.
 
 = M
 
 == Major version
 Nel contesto di gestione delle versioni, indica un cambiamento radicale o aggiornamento significativo (a volte non retrocompatibile) di un software o documento.
 
-== MVP
-Acronimo di Minimum Viable Product. Prodotto software ridotto nelle funzionalità che soddisfa i requisiti essenziali. É utilizzato a scopo esplorativo per ricevere feedback e valutare la bontà della visione di prodotto, in modo da prendere decisioni consapevoli sul completamento del software.
-
 == Milestone
 Data di calendario che determina un punto di avanzamento atteso del progetto. Le milestones sono uno strumento di pianficazione.
 
 == Minor version
 Nel contesto di gestione delle versioni, indica un aggiornamento che aggiunge contenuto/funzionalità senza cambiare il significato o il comportamento di un software o documento.
+
+== MVP
+Acronimo di _Minimum Viable Product_. Prodotto software ridotto nelle funzionalità che soddisfa i requisiti essenziali. É utilizzato a scopo esplorativo per ricevere feedback e valutare la bontà della visione di prodotto, in modo da prendere decisioni consapevoli sul completamento del software.
 
 = N
 
@@ -168,20 +168,20 @@ Documento gestionale interno redatto in forma esecutiva, ossia composto da regol
 == Patch
 Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o piccole modifiche.
 
+== PB
+Acronimo di _Product Baseline_. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).
+
 == Piano di qualifica
 Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.
+
+== PoC
+Acronimo di _Proof of Concept_. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.
 
 == Processo
 Insieme di attività correlate e coese che, consumando risorse, trasformano ingressi (bisogni) in uscite (prodotti). Ogni processo deve svolgersi secondo le indicazioni fornite dalle Norme di Progetto.
 
 == Processo di ciclo di vita
 Processi che definiscono quali attività svolgere per attuare, in modo efficiente ed efficace, corrette transizioni di stato nel ciclo di vita di un prodotto software.
-
-== PB
-Acronimo di Product Baseline. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).
-
-== PoC
-Acronimo di Proof of Concept. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.
 
 == Progetto
 Insieme di attività che devono raggiungere determinati obiettivi a partire da determinate specifiche, con una data di inizio e una data di fine fissate, con risorse limitate che si consumano nello svolgersi.
@@ -208,7 +208,7 @@ Attività di ristrutturazione del codice sorgente, senza modificarne il comporta
 Struttura che tiene traccia delle modifiche effettuate ad un documento, con indicazione della versione, della data, della descrizione della modifica, dell'autore e del verificatore.
 
 == Repository
-Luogo in cui vengono salvati i prodotti creati. Costituisce una fonte di condivisione del lavoro svolto da ciascun membro. É caratterizzato da persistenza e consistenza, garantite dalle procedure indicate nelle "Norme di Progetto".
+Luogo in cui vengono salvati i prodotti creati. Costituisce una fonte di condivisione del lavoro svolto da ciascun membro. É caratterizzato da persistenza e consistenza, garantite dalle procedure indicate nelle Norme di Progetto.
 
 == Requisito
 La capacità necessaria a un utente per raggiungere un obiettivo (lato bisogno/requisiti utente) o la capacità necessaria a un sistema per rispondere a una aspettativa (lato soluzione/requisiti software).
@@ -220,7 +220,7 @@ Persona che ha il compito di coordinare le attività di gruppo, l'elaborazione d
 Attività che si svolge al termine di uno sprint, in cui il team riflette sul lavoro svolto, individua i punti di forza e debolezza e propone azioni di miglioramento per lo sprint successivo.
 
 == RTB
-Acronimo di "Requirements and Technology Baseline". Baseline il cui oggetto principale sono i requisiti e l'adeguatezza delle tecnologie, valutata tramite il PoC. I requisiti sono concordati con il proponente e raccolti nel documento "Analisi dei Requisiti". Una tecnologia è considerata adeguata se permette di raggiungere l'obiettivo per cui è stata scelta e se è integrabile con le altre.
+Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto principale sono i requisiti e l'adeguatezza delle tecnologie, valutata tramite il PoC. I requisiti sono concordati con il proponente e raccolti nel documento Analisi dei Requisiti. Una tecnologia è considerata adeguata se permette di raggiungere l'obiettivo per cui è stata scelta e se è integrabile con le altre.
 
 = S
 == Scrum
@@ -241,7 +241,7 @@ Typst è un sistema di impaginazione basato su markup progettato per essere un' 
 
 = U
 == UML
-Acronimo di "Unified Modeling Language", è un linguaggio di modellazione utilizzato per descrivere, visualizzare e documentare i componenti di un sistema software.
+Acronimo di _Unified Modeling Language_, è un linguaggio di modellazione utilizzato per descrivere, visualizzare e documentare i componenti di un sistema software.
 
 == User Story
 Breve descrizione di una funzionalità del software, scritta dal punto di vista dell'utente, che descrive chi è l'utente, cosa vuole e perché.
