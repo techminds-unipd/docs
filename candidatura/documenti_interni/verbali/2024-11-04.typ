@@ -18,5 +18,5 @@
     ([Verbali], [#link("https://github.com/techminds-unipd/docs/issues/17")[Issue \#17]: Fix errori tipografici], [#link("https://github.com/techminds-unipd/docs/issues/16")[Issue \#16]: Add "decisioni prese"],
     [#link("https://github.com/techminds-unipd/docs/issues/14")[Issue \#14]: Fix changelog])
   ),
-  firma: ""
+  firma: false
 )

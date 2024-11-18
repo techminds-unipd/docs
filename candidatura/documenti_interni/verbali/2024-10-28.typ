@@ -16,5 +16,5 @@
   Ci si è concentrati infine su una ripartizione equa delle ore per ogni singolo membro diviso per ruolo. #linebreak()
   Il gruppo ha fissato il prossimo incontro il giorno 29/10/2024 per iniziare a stendere la candidatura.],
   decisioni: (),
-  firma: ""
+  firma: false
 )

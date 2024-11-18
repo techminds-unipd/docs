@@ -16,5 +16,5 @@
   riassunto: [Primo incontro interno fra i membri del team da remoto. Per prima cosa sono state discusse le opinioni di ciascuno sui capitolati, individuando le preferenze attraverso una votazione. Successivamente sono stati scelti di comune accordo nome, logo e indirizzo di posta elettronica del team. È inoltre stata creata #link("https://github.com/techminds-unipd")[l’organizzazione] su GitHub che conterrà le varie repository. Ciascun componente del team si impegna a leggere attentamente i capitolati per trarre eventuali domande da porre ai proponenti. #parbreak()
 Fissato prossimo incontro il giorno 17/10/2024 alle 14:45.],
   decisioni: (),
-  firma: ""
+  firma: false
 )

@@ -67,7 +67,7 @@
     ordine_giorno: array,
     riassunto: content,
     decisioni: array,
-    firma: str,
+    firma: bool,
     body
 ) = {
     documento(title: title, sommario: sommario, changelog: changelog, [])
@@ -104,8 +104,8 @@
         }
     }
 
-    if firma.len() != 0 {
-       align(bottom + right, text("Il proponente, ", weight: "bold") + text(firma) + v(2%) + line(length: 30%))
+    if firma {
+       align(bottom + right, text("Il proponente", weight: "bold") + v(2%) + line(length: 30%))
     }
 
     body

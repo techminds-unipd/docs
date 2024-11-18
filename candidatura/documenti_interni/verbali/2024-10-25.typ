@@ -16,5 +16,5 @@
   Successivamente è stata effettuata la trascrizione in linguaggio LaTeX del documento di revisione dei capitolati, che verrà inserita nella repository. #linebreak()
 È stato deciso di utilizzare Canva per creare la presentazione del diario di bordo perchè è uno strumento completo che permette la collaborazione tra più utenti. Il contenuto e la composizione della presentazione verranno scelti in maniera asincrona durante il resto della giornata.],
   decisioni: (),
-  firma: ""
+  firma: false
 )

@@ -18,5 +18,5 @@
   Durante la discussione il referente del capitolato C1 ha proposto di fissare un incontro informativo Lunedì 21 Ottobre alle 14:30 sulla piattaforma Meet. #linebreak()
   Il prossimo incontro con tutti i componenti del gruppo si terrà dopo l’ultimo incontro con le aziende contattate.],
   decisioni: (),
-  firma: ""
+  firma: false
 )

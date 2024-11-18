@@ -1,11 +1,10 @@
-#import "/template/template.typ": verbale
-#import "/template/template.typ": team
+#import "/template/template.typ": verbale, team
 
 #show: verbale.with(
   title: "Verbale interno del 08/11/2024",
   sommario: "Verbale che riassume la riunione del 08/11/2024.",
   changelog: (
-    "1.0", "08/11/2024", "Prima versione", team.S, team.M + linebreak() + team.G 
+    "1.0.0", "08/11/2024", "Prima versione", team.S, team.M + linebreak() + team.G 
   ),
   durata_luogo: ("11:30", "12:30", "Chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C),
@@ -16,5 +15,5 @@
     ([Versionamento], [#link("https://github.com/techminds-unipd/docs/issues/33")[Issue \#33]: GitHub workflow compilazione Typst]),
     ([Organizzazione Repo], [#link("https://github.com/techminds-unipd/docs/issues/34")[Issue \#34]: Aggiornamento GitHub Pages])
   ),
-  firma: ""
+  firma: false
 )
