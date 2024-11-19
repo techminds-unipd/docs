@@ -15,11 +15,10 @@
                   "Assegnazione di un grado di importanza alle varie "+glossario[issues]+", data di inizio e di fine",
                   "Varie ed eventuali"
                   ),
-  riassunto: [Il team si è riunito per celebrare la prima sessione di sprint planning. A partire dall'ordine del giorno sono state aperte le issue indicate nella sezione sottostante. 
-  Si segnala che non è stato possibile tracciare la creazione delle labels per classificare le issues a causa di una limitazione di Github. 
-  \ Abbiamo deciso di comune accordo che le liste e gli elenchi nei verbali possono non terminare con punto e virgola. \ 
-  In merito alla formattazione dei verbali, è stato concordato che le liste e gli elenchi possono terminare senza l’uso del punto e virgola.
-  Per l’autoformazione, abbiamo scelto di procedere in modo asincrono, con l'eventuale implementazione degli esempi presenti nella documentazione. In caso di dubbi, sarà possibile consultare i membri del gruppo già formati sull’argomento.],
+  riassunto: [Il team si è riunito per celebrare la prima sessione di #glossario[sprint planning]. A partire dall'ordine del giorno sono state aperte le issues indicate nella sezione sottostante. 
+  Si segnala che non è stato possibile tracciare la creazione delle #glossario[labels] per classificare le issues a causa di una limitazione di Github. 
+  \ In merito alla formattazione dei verbali, è stato concordato che le liste e gli elenchi possono terminare senza l’uso del punto e virgola.
+  Per l’autoformazione, abbiamo scelto di procedere in modo asincrono, con l'eventuale implementazione degli esempi presenti nella documentazione. In caso di dubbi, sarà possibile consultare i membri del gruppo già formati sull’argomento. \ Infine, per quanto riguarda quali termini verranno segnati come presenti nel glossario, abbiamo deciso di evidenziare solo la prima occorrenza nel documento.],
   decisioni: (
     ([Documentazione], 
       [#link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62]: Redazione diagrammi dei casi d'uso],
