@@ -21,7 +21,7 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
 - Figure: ogni figura deve essere dotata di caption che ne spieghi brevemente il contenuto;
 - Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto;
-- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nella loro prime occorrenze nel documento.
+- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento.
 
 === Struttura dei documenti <struttura-dei-documenti>
 L'impaginazione e la struttura generale dei documenti è descritta nel file #raw("template.typ"). \ Tutti i documenti sono sempre divisi in almeno queste parti:
