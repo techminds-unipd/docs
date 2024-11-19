@@ -10,18 +10,18 @@
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A, team.S),
   ordine_giorno: ("Gestione delle parole del " + glossario[glossario], 
                   "Organizzazione dello studio delle tecnologie",
-                  "Continuazione dei documenti ("+glossario[piano di progetto]+", "+glossario[analisi dei requisiti]+", "+glossario[norme di progetto]+", se necessario "+glossario[glossario]+" e "+glossario[piano di qualifica]+")",
-                  "Aggiunta labels su "+glossario[Github],
+                  "Continuazione dei documenti ("+glossario[piano di progetto]+", "+glossario[analisi dei requisiti]+", "+glossario[norme di progetto]+", se necessario glossario e "+glossario[piano di qualifica]+")",
+                  "Aggiunta "+glossario("labels")+" su "+glossario[Github],
                   "Assegnazione di un grado di importanza alle varie "+glossario[issues]+", data di inizio e di fine",
                   "Varie ed eventuali"
                   ),
   riassunto: [Il team si è riunito per celebrare la prima sessione di #glossario[sprint planning]. A partire dall'ordine del giorno sono state aperte le issues indicate nella sezione sottostante. 
-  Si segnala che non è stato possibile tracciare la creazione delle #glossario[labels] per classificare le issues a causa di una limitazione di Github. 
-  \ In merito alla formattazione dei verbali, è stato concordato che le liste e gli elenchi possono terminare senza l’uso del punto e virgola.
+  Si segnala che non è stato possibile tracciare la creazione delle labels per classificare le issues a causa di una limitazione di Github. 
+  \ In merito alla formattazione dei #glossario[verbali], è stato concordato che le liste e gli elenchi possono terminare senza l’uso del punto e virgola.
   Per l’autoformazione, abbiamo scelto di procedere in modo asincrono, con l'eventuale implementazione degli esempi presenti nella documentazione. In caso di dubbi, sarà possibile consultare i membri del gruppo già formati sull’argomento. \ Infine, per quanto riguarda quali termini verranno segnati come presenti nel glossario, abbiamo deciso di evidenziare solo la prima occorrenza nel documento.],
   decisioni: (
     ([Documentazione], 
-      [#link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62]: Redazione diagrammi dei casi d'uso],
+      [#link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62]: Redazione diagrammi dei #glossario[casi d'uso]],
       [#link("https://github.com/techminds-unipd/docs/issues/68")[Issue \#68]: Redazione sprint 1 in piano di progetto],
       [#link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69]: Inizio analisi dei rischi in piano di progetto],
       [#link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56]: Uniformare il riferimento alla funzione #raw("glossario[]")],
