@@ -1,13 +1,14 @@
+#import "/template/template.typ": glossario
 #set list(indent: 1em)
 
 = Introduzione
 == Scopo del documento
-Questo documento fornisce una descrizione esaustiva e dettagliata dei requisiti e i #text([casi d'uso], fill: red) modellati dal gruppo Tech Minds per lo sviluppo del progetto _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
+Questo documento fornisce una descrizione esaustiva e dettagliata dei requisiti e i #glossario[casi d'uso] modellati dal gruppo Tech Minds per lo sviluppo del progetto _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
 All'interno di questo documento il linguaggio di modellazione utilizzato è UML, in modo da avere una rappresentazione formale. #linebreak()
 I casi d'uso seguono la seguente struttura:
 
 - *Nome/Identificatore*: identificativo del caso d'uso con una breve descrizione;
-- *#text([Attori], fill: red) principali*: chi esegue l'azione;
+- *#glossario[Attori] principali*: chi esegue l'azione;
 - *Attori secondari* (0..\*): parti di minore importanza coinvolte nell'esecuzione;
 - *Scenario principale*: descrizione dettagliata delle azioni svolte durante il caso d'uso, intermedio tra le ipotesi e i risultati;
 - *Pre-condizioni*: stato del programma prima dell'esecuzione del caso d'uso;
@@ -16,14 +17,14 @@ I casi d'uso seguono la seguente struttura:
 - *Estensioni*: casi eccezionali che possono avvenire durante l'esecuzione del caso d'uso.
 
 == Glossario
-Uno dei documenti interni prodotti dal gruppo è il così detto #text([glossario], fill: red), ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
+Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
 Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la stessa base di conoscenza e per sua natura è in continuo aggiornamento.
-I termini che sono presenti all'interno del glossario, verranno scritti #text([in questo stile], fill: red).
+I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
 
 == Scopo del prodotto
-Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#text([intelligenza artificiale], fill: red) generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
-Il prodotto sarà un'app desktop che permetterà di costruire dei #text([workflow], fill: red) i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno l'automazione da effettuare in linguaggio naturale.
-Successivamente, un #text([agente], fill: red) prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
+Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
+Il prodotto sarà un'app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno l'automazione da effettuare in linguaggio naturale.
+Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
 == Riferimenti
 

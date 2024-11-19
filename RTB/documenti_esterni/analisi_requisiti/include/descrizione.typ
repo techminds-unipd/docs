@@ -1,7 +1,8 @@
+#import "/template/template.typ": glossario
 = Descrizione
 
 == Obiettivi del prodotto
-Il prodotto ha l'obiettivo di ridurre il tempo giornaliero che l'utente dedica solitamente per le routine digitali ricorrenti, utilizzando delle automazioni che verranno eseguite da un #text([agente], fill: red).
+Il prodotto ha l'obiettivo di ridurre il tempo giornaliero che l'utente dedica solitamente per le routine digitali ricorrenti, utilizzando delle automazioni che verranno eseguite da un #glossario[agente].
 
 == Funzionalità del prodotto
 Il prodotto dovrà fornire all'utente la possibilità di creare workflow che coinvolgano le applicazioni supportate. La descrizione dell'azione da compiere sarà fornita tramite linguaggio naturale.#linebreak()
