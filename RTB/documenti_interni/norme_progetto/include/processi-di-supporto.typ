@@ -26,31 +26,31 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 === Struttura dei documenti <struttura-dei-documenti>
 L'impaginazione e la struttura generale dei documenti è descritta nel file #raw("template.typ"). \ Tutti i documenti sono sempre divisi in almeno queste parti:
 + Intestazione:
-  - Logo;
-  - Mail del gruppo;
-  - Nome del documento;
-  - Sommario (breve descrizione del contenuto del documento).
+  - logo;
+  - mail del gruppo;
+  - nome del documento;
+  - sommario (breve descrizione del contenuto del documento).
 + #glossario[Changelog], tabella che contiene tutti i cambiamenti effettuati al documento:
-  - Versione del documento;
-  - Data della modifica;
-  - Autore della modifica;
-  - Verificatore.
+  - versione del documento;
+  - data della modifica;
+  - autore della modifica;
+  - verificatore.
 + Indice;
 + Contenuto.
 === Struttura dei verbali
 I verbali hanno informazioni aggiuntive oltre a quelle descritte nella @struttura-dei-documenti[sezione]. Tali informazioni sono già presenti nella funzione #raw("verbale") presente file #raw("template.typ"). Invocando la funzione e impostando i parametri indicati è possibile ottenere un verbale già formattato.
 Le informazioni vanno a modificare la sezione del contenuto. 
 - Nei verbali interni vengono aggiunti:
-  + Partecipanti;
-  + Data, ora e luogo;
-  + Ordine del giorno;
-  + Riassunto con le decisioni prese.
+  + partecipanti;
+  + data, ora e luogo;
+  + ordine del giorno;
+  + riassunto con le decisioni prese.
 - Nei verbali esterni vengono aggiunti:
-  + Tutte le informazioni dei verbali interni;
-  + Lo spazio per la firma di chi non fa parte del gruppo.
+  + tutte le informazioni dei verbali interni;
+  + lo spazio per la firma di chi non fa parte del gruppo.
 - Scelte tipografiche specifiche dei verbali:
-  - Gli elenchi e le liste possono non terminare col punto e virgola;
-  - I termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
+  - gli elenchi e le liste possono non terminare col punto e virgola;
+  - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
 == Gestione della configurazione
 === Caratteristiche e finalità
 La gestione della configurazione è un processo fondamentale per monitorare e controllare le modifiche ai componenti software durante il loro ciclo di vita. Il prodotto SW non è mai un monolite, infatti è composto da più componenti, ognuno dei quali è caratterizzato da un proprio ciclo di vita. Ogni singolo componente ha una storia individuale che viene gestita tramite controllo di versione, che aiuta a non perdere traccia di questa storia e a poter avanzare o retrocedere nelle versioni. Il processo di gestione della configurazione, dunque, aiuta a mantenere la coerenza e l'integrità del software, facilitando la collaborazione tra i membri del team.
