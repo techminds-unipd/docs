@@ -1,5 +1,4 @@
-#import "/template/style.typ": glossario
-
+#import "/template/template.typ": glossario
 = Introduzione
 == Scopo del documento
 Il documento che descrive il piano di progetto nasce con l'intenzione di documentare i vari processi di pianificazione ed organizzativi, definendone la loro applicazione. In particolare, viene effettuata l'analisi dei rischi includendo alcune possibili tecniche di mitigazione, viene specificata la pianificazione attraverso la definizione di milestone che descriveranno date di calendario fissate per punti di avanzamento attesi, ed infine sono analizzati i costi per ogni sprint con relativi preventivi e consuntivi. 
