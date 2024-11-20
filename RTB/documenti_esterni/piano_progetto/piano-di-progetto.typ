@@ -4,6 +4,7 @@
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
+    "0.1.1", "20/11/2024", "Segnati i termini presenti nel glossario", team.T, "☣",
     "0.1.0", "12/11/2024", "Struttura iniziale e introduzione", team.M, "...."
   )
 )
