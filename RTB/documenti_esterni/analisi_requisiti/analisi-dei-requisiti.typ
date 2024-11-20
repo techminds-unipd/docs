@@ -4,6 +4,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.1.1", "20/11/2024", "Segnati termini presenti nel glossario", team.T, "(•_•)",
     "0.1.0", "12/11/2024", "Prima versione", team.G, team.A
   )
 )

@@ -4,7 +4,7 @@
 = Introduzione
 == Scopo del documento
 Questo documento fornisce una descrizione esaustiva e dettagliata dei requisiti e i #glossario[casi d'uso] modellati dal gruppo Tech Minds per lo sviluppo del progetto _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
-All'interno di questo documento il linguaggio di modellazione utilizzato è UML, in modo da avere una rappresentazione formale. #linebreak()
+All'interno di questo documento il linguaggio di modellazione utilizzato è #glossario[UML], in modo da avere una rappresentazione formale. #linebreak()
 I casi d'uso seguono la seguente struttura:
 
 - *Nome/Identificatore*: identificativo del caso d'uso con una breve descrizione;
