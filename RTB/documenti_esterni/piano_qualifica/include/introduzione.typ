@@ -1,7 +1,7 @@
 #import "/template/template.typ": glossario
 = Introduzione
 == Scopo del documento
-Un fattore di cruciale importanza per qualsiasi progetto software che vuole adeguarsi alla disciplina dell'ingegneria del software è assicurare #glossario[qualità].
+Un fattore di cruciale importanza per qualsiasi #glossario[progetto] software che vuole adeguarsi alla disciplina dell'ingegneria del software è assicurare #glossario[qualità].
 
 Il presente documento ha infatti lo scopo di fornire una checklist minuziosa e accurata definendo così le metriche e i metodi di #glossario[verifica] e #glossario[validazione] che andremo ad attuare nelle varie parti del prodotto software.
 Precisando quindi gli obiettivi, le risorse e le tecniche da attuare, il #glossario[piano di qualifica] fornirà una "linea guida" per assicurare un elevato grado di qualità.
