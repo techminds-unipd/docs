@@ -76,7 +76,7 @@ La struttura del #glossario[repository] è composta da:
 Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal nostro team per lo sviluppo. Si compone di cinque fasi principali:
 	1.	*Creare un branch di feature*: iniziare creando un nuovo branch dal main per lavorare su nuove funzionalità senza influenzare il codice principale;
 	2.	*Modificare i file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
-	3.	*Creare una Pull Request*: una volta effettuati i commit e il #glossario[push], aprire una #glossario[pull request] per avviare la revisione del codice;
+	3.	*Creare una #glossario[Pull Request]*: una volta effettuati i commit e il #glossario[push], aprire una pull request per avviare la revisione del codice;
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
 \
