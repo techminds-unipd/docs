@@ -15,7 +15,7 @@ Abbiamo scelto di usare la filosofia "#link(<docs-as-code>)[Docs as code]" che s
 Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - #glossario[Typst]: linguaggio simile a #glossario[LaTeX] ma che permette di comporre documenti in modo più semplice.
 === Organizzazione dei documenti
-- Nomi dei file: i file iniziano sempre con lettera minuscola o con una data del tipo yyyy-mm-dd[-info] nel caso di verbali (info è un campo opzionale che contiene informazioni aggiuntive);
+- Nomi dei file: i file iniziano sempre con lettera minuscola o con una data del tipo yyyy-mm-dd[-info] nel caso di #glossario[verbali] (info è un campo opzionale che contiene informazioni aggiuntive);
 - Organizzazione delle cartelle: nel caso in cui il documento sia composto da più file, questi sono contenuti in una cartella chiamata ```/include```;
 - Elenchi: in tutti gli elenchi gli elementi terminano con ";" tranne l'ultimo che termina con ".". Inoltre la prima lettera di ogni punto deve essere maiuscola, mentre se si tratta di un sottoelenco deve essere minuscola;
 - Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
@@ -38,7 +38,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
 + Indice;
 + Contenuto.
 === Struttura dei verbali
-I #glossario[verbali] hanno informazioni aggiuntive oltre a quelle descritte nella @struttura-dei-documenti[sezione]. Tali informazioni sono già presenti nella funzione #raw("verbale") presente file #raw("template.typ"). Invocando la funzione e impostando i parametri indicati è possibile ottenere un verbale già formattato.
+I verbali hanno informazioni aggiuntive oltre a quelle descritte nella @struttura-dei-documenti[sezione]. Tali informazioni sono già presenti nella funzione #raw("verbale") presente file #raw("template.typ"). Invocando la funzione e impostando i parametri indicati è possibile ottenere un verbale già formattato.
 - Nei verbali interni vengono aggiunti:
   + partecipanti;
   + data, ora e luogo;
@@ -52,7 +52,7 @@ I #glossario[verbali] hanno informazioni aggiuntive oltre a quelle descritte nel
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
 == Gestione della configurazione
 === Caratteristiche e finalità
-La gestione della configurazione è un processo fondamentale per monitorare e controllare le modifiche ai componenti software durante il loro ciclo di vita. Il prodotto SW non è mai un monolite, infatti è composto da più componenti, ognuno dei quali è caratterizzato da un proprio ciclo di vita. Ogni singolo componente ha una storia individuale che viene gestita tramite controllo di versione, che aiuta a non perdere traccia di questa storia e a poter avanzare o retrocedere nelle versioni. Il processo di gestione della configurazione, dunque, aiuta a mantenere la coerenza e l'integrità del software, facilitando la collaborazione tra i membri del team.
+La gestione della configurazione è un #glossario[processo] fondamentale per monitorare e controllare le modifiche ai componenti software durante il loro ciclo di vita. Il prodotto SW non è mai un monolite, infatti è composto da più componenti, ognuno dei quali è caratterizzato da un proprio ciclo di vita. Ogni singolo componente ha una storia individuale che viene gestita tramite controllo di versione, che aiuta a non perdere traccia di questa storia e a poter avanzare o retrocedere nelle versioni. Il processo di gestione della configurazione, dunque, aiuta a mantenere la coerenza e l'integrità del software, facilitando la collaborazione tra i membri del team.
 
 === Versionamento
 La procedura di versionamento in un progetto software è fondamentale per gestire le modifiche e garantire la collaborazione tra sviluppatori. In ogni documento è possibile trovare, prima ancora dell'indice, un registro delle modifiche (#glossario[changelog]), necessario per comprenderne il ciclo di vita dal suo concepimento fino all'ultima versione disponibile. All'interno del changelog si fa riferimento alla versione del documento rappresentato da un numero di versione così composto: \
@@ -70,11 +70,11 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 
 === Gestione Repository
 La struttura del #glossario[repository] è composta da:
-- *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo branch è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
+- *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo #glossario[branch] è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
 - *branch di feature* creati secondo la pratica #glossario[GitHub Flow].
 \
 Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal nostro team per lo sviluppo. Si compone di cinque fasi principali:
-	1.	*Creare un branch di feature*: iniziare creando un nuovo #glossario[branch] dal main per lavorare su nuove funzionalità senza influenzare il codice principale;
+	1.	*Creare un branch di feature*: iniziare creando un nuovo branch dal main per lavorare su nuove funzionalità senza influenzare il codice principale;
 	2.	*Modificare i file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
 	3.	*Creare una Pull Request*: una volta effettuati i commit e il #glossario[push], aprire una #glossario[pull request] per avviare la revisione del codice;
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;

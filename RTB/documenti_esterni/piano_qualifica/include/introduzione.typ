@@ -3,7 +3,7 @@
 == Scopo del documento
 Un fattore di cruciale importanza per qualsiasi progetto software che vuole adeguarsi alla disciplina dell'ingegneria del software è assicurare #glossario[qualità].
 
-Il presente documento ha infatti lo scopo di fornire una checklist minuziosa e accurata definendo così le metriche e i metodi di verifica e validazione che andremo ad attuare nelle varie parti del prodotto software.
+Il presente documento ha infatti lo scopo di fornire una checklist minuziosa e accurata definendo così le metriche e i metodi di #glossario[verifica] e #glossario[validazione] che andremo ad attuare nelle varie parti del prodotto software.
 Precisando quindi gli obiettivi, le risorse e le tecniche da attuare, il #glossario[piano di qualifica] fornirà una "linea guida" per assicurare un elevato grado di qualità.
 
 Tali parametri risulteranno utili per:
@@ -17,12 +17,12 @@ Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la ste
 I termini che sono presenti all'interno del glossario, verranno scritti in questo stile.
 
 == Scopo del prodotto
-Il #glossario[progetto] ha lo scopo di realizzare un prodotto che, utilizzando l’intelligenza artificiale generativa,
+Il #glossario[progetto] ha lo scopo di realizzare un prodotto che, utilizzando l’#glossario[intelligenza artificiale] generativa,
 vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
-Il prodotto sarà un’app desktop che permetterà di costruire dei workflow i cui nodi sono dei servizi
+Il prodotto sarà un’app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi
 esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno
 l’automazione da effettuare in linguaggio naturale. Successivamente, un #glossario[agente] prenderà il
-#glossario[workflow], interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
+workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
 == Redazione del documento
 L'approccio che abbiamo deciso di adottare per questo documento è di tipo incrementale dato che alcune necessità future non sono tracciabili fin dall'inizio. Nel momento in cui affronteremo le varie fasi del progetto andremo ad aggiornare questo documento, tenendo conto sia degli obiettivi di qualità interni al gruppo, sia di quelli richiesti dall'azienda.

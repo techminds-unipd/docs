@@ -3,7 +3,7 @@
 
 = Introduzione
 == Scopo del documento
-Questo documento fornisce una descrizione esaustiva e dettagliata dei requisiti e i #glossario[casi d'uso] modellati dal gruppo Tech Minds per lo sviluppo del progetto _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
+Questo documento fornisce una descrizione esaustiva e dettagliata dei #glossario[requisiti] e i #glossario[casi d'uso] modellati dal gruppo Tech Minds per lo sviluppo del progetto _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
 All'interno di questo documento il linguaggio di modellazione utilizzato è #glossario[UML], in modo da avere una rappresentazione formale. #linebreak()
 I casi d'uso seguono la seguente struttura:
 
@@ -29,7 +29,7 @@ Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le i
 == Riferimenti
 
 === Riferimenti normativi
-- Norme di progetto: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf;
+- #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf;
 - Capitolato C3, Automatizzare le routine digitali tramite l’intelligenza generativa: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf;
 - Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
 
