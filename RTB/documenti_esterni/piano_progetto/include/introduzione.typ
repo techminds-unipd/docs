@@ -1,7 +1,7 @@
 #import "/template/template.typ": glossario
 = Introduzione
 == Scopo del documento
-Il documento che descrive il #glossario[piano di progetto] nasce con l'intenzione di documentare i vari processi di pianificazione ed organizzativi, definendone la loro applicazione. In particolare, viene effettuata l'#glossario[analisi dei rischi] includendo alcune possibili tecniche di mitigazione, viene specificata la pianificazione attraverso la definizione di #glossario[milestone] che descriveranno date di calendario fissate per punti di avanzamento attesi, ed infine sono analizzati i costi per ogni #glossario[sprint] con relativi preventivi e consuntivi. 
+Il documento che descrive il #glossario[piano di progetto] nasce con l'intenzione di documentare i vari #glossario[processi] di pianificazione ed organizzativi, definendone la loro applicazione. In particolare, viene effettuata l'#glossario[analisi dei rischi] includendo alcune possibili tecniche di mitigazione, viene specificata la pianificazione attraverso la definizione di #glossario[milestone] che descriveranno date di calendario fissate per punti di avanzamento attesi, ed infine sono analizzati i costi per ogni #glossario[sprint] con relativi preventivi e consuntivi. 
 
 == Glossario
 Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
