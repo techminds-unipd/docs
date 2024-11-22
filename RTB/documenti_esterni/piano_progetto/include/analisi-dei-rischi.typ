@@ -80,7 +80,7 @@ I rischi personali sono identificati con la sigla "RP" seguita da un numero prog
     [*Tecniche di mitigazione*],
     [Promuovere l'autoformazione e lo studio individuale delle tecnologie utilizzate, attraverso la consultazione di documentazione, tutorial e corsi online. Organizzare sessioni di formazione e condivisione delle conoscenze all'interno del team, in modo da favorire lo scambio di informazioni e l'apprendimento reciproco.]
   ), 
-  caption: [RP4 - Problemi interpersonali tra membri del team]
+  caption: [RP4 - Scarsa conoscenza delle tecnologie utilizzate]
 ) <tabella-RP4>
 == Rischi organizzativi
 All'interno di questa categoria vengono inseriti tutti i rischi che possono derivare da problemi organizzativi distinguendoli tra problemi di natura interna ed esterna.\
@@ -121,7 +121,7 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Monitorare costantemente il budget e le spese sostenute, in modo da individuare tempestivamente eventuali scostamenti rispetto a quanto preventivato. Valutare con attenzione le priorità e le necessità del progetto, cercando di ottimizzare le risorse disponibili e di ridurre al minimo gli sprechi.]
   ), 
-  caption: [ROI2 - Budget insufficiente per sostenere le spese del progetto]
+  caption: [ROI2 - Budget insufficiente]
 ) <tabella-ROI2>
 #figure(
   table(
@@ -159,7 +159,7 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Comunicare tempestivamente al proponente le necessità e le richieste del team, in modo da favorire una maggiore tempestività nelle risposte attraverso canali di comunicazione differenti dal servizio di email. Organizzare incontri periodici con il proponente per discutere lo stato di avanzamento del progetto e per condividere eventuali dubbi o problematiche riscontrate.]
     ), 
-  caption: [ROE1 - Tempi di risposta da parte del proponente troppo lunghi]
+  caption: [ROE1 - Tempi di risposta da parte del proponente]
 ) <tabella-ROE1>
 #figure(
   table(
@@ -178,7 +178,7 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Contattare il proponente per sollecitare la consegna degli strumenti necessari, evidenziando l'importanza e l'urgenza della situazione. Valutare la possibilità di utilizzare alternative o soluzioni temporanee in attesa della fornitura dei materiali richiesti.]
   ), 
-  caption: [ROE2 - Tempi di risposta da parte del proponente troppo lunghi]
+  caption: [ROE2 - Ritardi nei tempi di fornitura degli strumenti necessari]
 ) <tabella-ROE2>
 == Rischi tecnologici
 All'interno di questa categoria vengono inseriti tutti i rischi che possono derivare da problemi legati alle tecnologie utilizzate.\
