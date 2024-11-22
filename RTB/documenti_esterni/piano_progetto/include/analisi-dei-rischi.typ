@@ -1,15 +1,15 @@
 #import "/template/template.typ": glossario
 = Analisi dei rischi
-L'analisi dei rischi è una fase cruciale nella gestione di un progetto software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto. Di seguito verrano riportati tutti i rischi identificati, permettendo così una corretta classificazione. Per ogni rischio verrà indicata una descrizione, una probabilità di occorrenza, la pericolosità che può avere sul progetto e le strategie di mitigazione adottate.\
+L'analisi dei rischi è una fase cruciale nella gestione di un progetto software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto. Di seguito verranno riportati tutti i rischi identificati, permettendo così una corretta classificazione. Per ogni rischio verrà indicata una descrizione, una probabilità di occorrenza, la pericolosità che può avere sul progetto e le strategie di mitigazione adottate.\
 La probabilità di occorrenza verrà valutata su una scala da 1 a 5 dove 1 indica una probabilità molto bassa e 5 una probabilità molto alta.\
 La pericolosità verrà valutata su una scala costituita da 3 livelli dove si parte dal livello "Bassa", seguito dal livello "Media" fino ad arrivare al livello "Alta".\
 == Rischi personali
-All'interno di questa categoria vengono inseriti tutti i rischi che possono derivare da problemi personali legati alle persone coinvolte nel progetto e all'organizzazione del lavoro.\
-I rischi personali sono identificati con la sigla "RP" seguita da un numero progressivo.\
+All’interno di questa categoria rientrano i rischi legati a problemi personali. Questi derivano dai nostri impegni individuali/difficoltà che possono verificarsi nel corso del progetto.\
+Ogni rischio è identificato dalla sigla “RP” seguita da un numero progressivo.
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "RP1 - Impegno di un membro del team inferiore a quanto dichiarato")),
@@ -21,14 +21,14 @@ I rischi personali sono identificati con la sigla "RP" seguita da un numero prog
     [*Pericolosità*],
     [Alta],
     [*Tecniche di mitigazione*],
-    [Comunicare tempestivamente eventuali problemi di impegno al responsabile del progetto, in modo da poter trovare una soluzione che non comprometta il lavoro del team. Sfruttare al meglio la pianificazione così che ogni membro del team possa organizzare al meglio il proprio tempo.]
+    [Comunicare tempestivamente eventuali problemi di impegno al responsabile del progetto, in modo da poter trovare una soluzione che non comprometta il lavoro del team. Sfruttare al meglio la pianificazione così che ogni membro del team possa organizzare il proprio tempo in maniera efficace.]
   ), 
-  caption: [RP1 - Impegno di un membro del team inferiore a quanto dichiarato]
+  caption: [RP1 - Impegno di un membro del team inferiore a quanto dichiarato.]
 ) <tabella-RP1>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "RP2 - Malattia di un membro del team")),
@@ -42,12 +42,12 @@ I rischi personali sono identificati con la sigla "RP" seguita da un numero prog
     [*Tecniche di mitigazione*],
     [Comunicare il proprio periodo di indisponibilità al responsabile, in modo da poter rivedere l'assegnazione dei compiti e la pianificazione.]
   ), 
-  caption: [RP2 - Malattia di un membro del team]
+  caption: [RP2 - Malattia di un membro del team.]
 ) <tabella-RP2>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "RP3 - Problemi interpersonali tra membri del team")),
@@ -61,12 +61,12 @@ I rischi personali sono identificati con la sigla "RP" seguita da un numero prog
     [*Tecniche di mitigazione*],
     [Promuovere un clima di collaborazione e rispetto all'interno del team, favorendo la comunicazione e la condivisione delle idee. Affrontare tempestivamente eventuali problemi interpersonali, cercando di risolverli in modo costruttivo e pacifico.]
   ), 
-  caption: [RP3 - Problemi interpersonali tra membri del team]
+  caption: [RP3 - Problemi interpersonali tra membri del team.]
 ) <tabella-RP3>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "RP4 - Scarsa conoscenza delle tecnologie utilizzate")),
@@ -80,15 +80,17 @@ I rischi personali sono identificati con la sigla "RP" seguita da un numero prog
     [*Tecniche di mitigazione*],
     [Promuovere l'autoformazione e lo studio individuale delle tecnologie utilizzate, attraverso la consultazione di documentazione, tutorial e corsi online. Organizzare sessioni di formazione e condivisione delle conoscenze all'interno del team, in modo da favorire lo scambio di informazioni e l'apprendimento reciproco.]
   ), 
-  caption: [RP4 - Scarsa conoscenza delle tecnologie utilizzate]
+  caption: [RP4 - Scarsa conoscenza delle tecnologie utilizzate.]
 ) <tabella-RP4>
 == Rischi organizzativi
-All'interno di questa categoria vengono inseriti tutti i rischi che possono derivare da problemi organizzativi distinguendoli tra problemi di natura interna ed esterna.\
-In particolare i rischi organizzativi interni sono identificati con la sigla "ROI" seguita da un numero progressivo, mentre i rischi organizzativi esterni dalla sigla "ROE".\
+All’interno di questa categoria vengono inseriti tutti i rischi che possono derivare da problemi
+organizzativi.\ Andremo a distinguerli tra:\
+- Problemi di natura interna: identificati con la sigla “ROI” seguita da un numero;
+- Problemi di natura esterna: identificati con la sigla “ROE” seguita da un numero.
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "ROI1 - Scarsa comunicazione interna")),
@@ -102,12 +104,12 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Promuovere una comunicazione chiara e trasparente all'interno del team, favorendo la condivisione delle informazioni e la partecipazione attiva di tutti i membri. Organizzare regolarmente riunioni interne per aggiornare lo stato di avanzamento del progetto e per discutere eventuali problemi o difficoltà riscontrate.]
   ), 
-  caption: [ROI1 - Scarsa comunicazione interna]
+  caption: [ROI1 - Scarsa comunicazione interna.]
 ) <tabella-ROI1>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "ROI2 - Budget insufficiente")),
@@ -121,12 +123,12 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Monitorare costantemente il budget e le spese sostenute, in modo da individuare tempestivamente eventuali scostamenti rispetto a quanto preventivato. Valutare con attenzione le priorità e le necessità del progetto, cercando di ottimizzare le risorse disponibili e di ridurre al minimo gli sprechi.]
   ), 
-  caption: [ROI2 - Budget insufficiente]
+  caption: [ROI2 - Budget insufficiente.]
 ) <tabella-ROI2>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "ROI3 - Mancata assunzione di responsabilità")),
@@ -140,12 +142,12 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Definire chiaramente i ruoli e le responsabilità di ciascun membro del team all'inizio di ogni sprint, in modo da evitare sovrapposizioni e ambiguità. Monitorare costantemente l'attività svolta da ciascun membro, fornendo supporto e feedback in caso di necessità.]
   ), 
-  caption: [ROI3 - Mancata assunzione di responsabilità]
+  caption: [ROI3 - Mancata assunzione di responsabilità.]
 ) <tabella-ROI3>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "ROE1 - Tempi di risposta da parte del proponente")),
@@ -159,12 +161,12 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Comunicare tempestivamente al proponente le necessità e le richieste del team, in modo da favorire una maggiore tempestività nelle risposte attraverso canali di comunicazione differenti dal servizio di email. Organizzare incontri periodici con il proponente per discutere lo stato di avanzamento del progetto e per condividere eventuali dubbi o problematiche riscontrate.]
     ), 
-  caption: [ROE1 - Tempi di risposta da parte del proponente]
+  caption: [ROE1 - Tempi di risposta da parte del proponente.]
 ) <tabella-ROE1>
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
       table.cell(colspan: 2, text(weight: "bold", "ROE2 - Ritardi nei tempi di fornitura degli strumenti necessari")),
@@ -178,7 +180,7 @@ In particolare i rischi organizzativi interni sono identificati con la sigla "RO
     [*Tecniche di mitigazione*],
     [Contattare il proponente per sollecitare la consegna degli strumenti necessari, evidenziando l'importanza e l'urgenza della situazione. Valutare la possibilità di utilizzare alternative o soluzioni temporanee in attesa della fornitura dei materiali richiesti.]
   ), 
-  caption: [ROE2 - Ritardi nei tempi di fornitura degli strumenti necessari]
+  caption: [ROE2 - Ritardi nei tempi di fornitura degli strumenti necessari.]
 ) <tabella-ROE2>
 == Rischi tecnologici
 All'interno di questa categoria vengono inseriti tutti i rischi che possono derivare da problemi legati alle tecnologie utilizzate.\
@@ -186,19 +188,19 @@ I rischi tecnologici sono identificati con la sigla "RT" seguita da un numero pr
 #figure(
   table(
     columns: (1fr, 2fr),
-    fill: (_, y) => if (y==0) { red.darken(15%) } else { if calc.even(y) { gray.lighten(50%) } else { white } },
+    fill: (_, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%) } else { white } },
     align: center+horizon,
     table.header(
-      table.cell(colspan: 2, text(weight: "bold", "RT1")),
+      table.cell(colspan: 2, text(weight: "bold", "RT1 - Cambiamento di strumenti e/o tecnologie utilizzate")),
     ),
     [*Descrizione*],
-    [],
+    [Cambiamento degli strumenti e/o delle tecnologie utilizzate nel corso del progetto, che può comportare la necessità di rivedere la pianificazione e di acquisire nuove competenze.],
     [*Probabilità di occorrenza*],
-    [],
+    [2],
     [*Pericolosità*],
-    [],
+    [Media],
     [*Tecniche di mitigazione*],
-    []
+    [Documentarsi tempestivamente sulle nuove tecnologie e strumenti da utilizzare, in modo da ridurre al minimo l'impatto del cambiamento. Favorire la formazione continua e lo scambio di conoscenze all'interno del team, per garantire una maggiore flessibilità e adattabilità alle nuove esigenze.]
     ), 
-  caption: [RT1 - ]
+  caption: [RT1 - Cambiamento di strumenti e/o tecnologie utilizzate.]
 ) <tabella-RT1>
