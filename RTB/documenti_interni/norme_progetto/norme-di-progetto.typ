@@ -4,7 +4,7 @@
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
-    "0.2.1", "20/11/2024", "Evidenziata solo la prima occorrenza dei termini del glossario.",team.T, "(⊙_⊙)?",
+    "0.2.1", "20/11/2024", "Evidenziata solo la prima occorrenza dei termini del glossario.",team.T, team.C,
     "0.2.0", "19/11/2024", "Specifica tipografica elenchi nei verbali. Specifica tipografica termini nel glossario.",team.T, team.A,
     "0.1.0", "13/11/2024", "Struttura iniziale e redazione di introduzione, documentazione e gestione di configurazione", team.M, team.C,    
   )
