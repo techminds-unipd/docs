@@ -3,7 +3,7 @@
 
 = Introduzione
 == Scopo del documento
-Questo documento fornisce una descrizione esaustiva e dettagliata dei #glossario[requisiti] e i #glossario[casi d'uso] modellati dal gruppo Tech Minds per lo sviluppo del progetto _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
+Questo documento fornisce una descrizione esaustiva e dettagliata dei #glossario[requisiti] e i #glossario[casi d'uso] modellati dal gruppo Tech Minds per lo sviluppo del #glossario[progetto] _Automatizzare le routine digitali tramite l’intelligenza generativa_. #linebreak()
 All'interno di questo documento il linguaggio di modellazione utilizzato è #glossario[UML], in modo da avere una rappresentazione formale. #linebreak()
 I casi d'uso seguono la seguente struttura:
 
@@ -22,7 +22,7 @@ Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la ste
 I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
 
 == Scopo del prodotto
-Il #glossario[progetto] ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
+Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
 Il prodotto sarà un'app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno l'automazione da effettuare in linguaggio naturale.
 Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
