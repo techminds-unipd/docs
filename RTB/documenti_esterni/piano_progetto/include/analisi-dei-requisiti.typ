@@ -1,5 +1,4 @@
-#import "/template/style.typ": glossario
-
+#import "/template/template.typ": glossario
 = Analisi dei rischi
 
 == Rischi personali ed organizzativi

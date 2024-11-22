@@ -1,3 +1,4 @@
+#import "/template/template.typ":glossario
 = Qualità di prodotto
 Di seguito sono elencate le caratteristiche che contraddistinguono un prodotto software di qualità misurabile dalle metriche sotto descritte:
 - MD ("Metriche Documentazione"): metriche relative alla qualità della documentazione;
@@ -44,7 +45,7 @@ Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nel
     [4%], 
     [0%], 
     [MD2], 
-    [Indice di Gulpease],
+    [#glossario[Indice di Gulpease]],
     [\u{2A7E}50], 
     [\u{2A7E}70], 
     [MD3],

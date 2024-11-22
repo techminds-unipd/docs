@@ -1,3 +1,3 @@
-#import "/template/style.typ": glossario
+#import "/template/template.typ": glossario
 
 = Pianificazione
