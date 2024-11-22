@@ -10,7 +10,7 @@
 )
 
 #include "include/introduzione.typ"
-#include "include/analisi-dei-requisiti.typ"
+#include "include/analisi-dei-rischi.typ"
 #include "include/pianificazione.typ"
 #include "include/periodi.typ"
 #include "include/costi.typ"
