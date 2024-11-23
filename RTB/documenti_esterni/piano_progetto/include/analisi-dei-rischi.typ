@@ -1,10 +1,15 @@
 #import "/template/template.typ": glossario
 = Analisi dei rischi
-L'analisi dei rischi è una fase cruciale nella gestione di un progetto software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto. Di seguito verranno riportati tutti i rischi identificati, permettendo così una corretta classificazione. Per ogni rischio verrà indicata una descrizione, una probabilità di occorrenza, la pericolosità che può avere sul progetto e le strategie di mitigazione adottate.\
-La probabilità di occorrenza verrà valutata su una scala da 1 a 5 dove 1 indica una probabilità molto bassa e 5 una probabilità molto alta.\
-La pericolosità verrà valutata su una scala costituita da 3 livelli dove si parte dal livello "Bassa", seguito dal livello "Media" fino ad arrivare al livello "Alta".\
+L'analisi dei rischi è una fase cruciale nella gestione di un progetto software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto.
+Di seguito verranno riportati tutti i rischi identificati, permettendo così una corretta classificazione. Per ogni rischio verrà indicata:\
+- Descrizione;
+- Probabilità di occorrenza;
+- Pericolosità che può avere sul progetto;
+- Strategie di mitigazione adottate.
+La probabilità di occorrenza verrà valutata su una scala da 1 a 5 dove 1 indica una probabilità molto bassa e 5 una probabilità molto alta.
+La pericolosità verrà valutata su una scala costituita da 3 livelli dove si parte dal livello “Bassa”, seguito dal livello “Media” fino ad arrivare al livello “Alta”.\
 == Rischi personali
-All’interno di questa categoria rientrano i rischi legati a problemi personali. Questi derivano dai nostri impegni individuali/difficoltà che possono verificarsi nel corso del progetto.\
+All'interno di questa categoria rientrano i rischi legati a problemi personali. Questi derivano dai nostri impegni individuali/difficoltà che possono verificarsi nel corso del progetto.\
 Ogni rischio è identificato dalla sigla “RP” seguita da un numero progressivo.
 #figure(
   table(
