@@ -5,13 +5,13 @@
 )
 
 #let team = (
-    A: "Bressan Alessandro ",
-    S: "Corradin Samuele ",
-    T: "Lazzarin Tommaso ",
-    L: "Salviato Leonardo ",
-    M: "Squarzoni Matteo ",
-    G: "Tutino Giuseppe ",
-    C: "Vallotto Caterina ",
+    A: "Bressan Alessandro",
+    S: "Corradin Samuele",
+    T: "Lazzarin Tommaso",
+    L: "Salviato Leonardo",
+    M: "Squarzoni Matteo",
+    G: "Tutino Giuseppe",
+    C: "Vallotto Caterina",
 )
 
 #let documento(
