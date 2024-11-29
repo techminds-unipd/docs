@@ -16,7 +16,17 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
   - Verificatore: #team.A, #team.C
 
 - Issues:
-//da aggiungere tutte le issues
+  - #link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56]: Sostituire termini del glossario nei documenti
+  - #link("https://github.com/techminds-unipd/docs/issues/57")[Issue \#57]: Miglioramenti grafici documentazione
+  - #link("https://github.com/techminds-unipd/docs/issues/60")[Issue \#60]: Autoformazione tecnologie proposte dall'azienda
+    - #link("https://github.com/techminds-unipd/docs/issues/64")[Issue \#64]: #glossario[React]
+    - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65]: #glossario[Typescript]
+    - #link("https://github.com/techminds-unipd/docs/issues/66")[Issue \#66]: #glossario[Node.js]
+    - #link("https://github.com/techminds-unipd/docs/issues/67")[Issue \#67]: #glossario[MongoDB]
+  - #link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62]: Redazione diagrammi dei #glossario[casi d'uso]
+  - #link("https://github.com/techminds-unipd/docs/issues/68")[Issue \#68]: Redazione #glossario[sprint] 1 in piano di progetto
+  - #link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69]: Inizio analisi dei rischi in piano di progetto
+  - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70]: Aggiornamento norme di progetto
 
 - Diagramma di Gantt:
 //todo inserire screenshot del diagramma di Gantt 

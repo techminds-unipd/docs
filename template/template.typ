@@ -170,3 +170,74 @@
 #let glossario(term, color: rgb("#c30000")) = {
   text(color, style: "italic", box[#term])
 }
+
+
+// template per tabelle sprint in piano_progetto
+#let calcoloTotaleOre(
+  bressan: array,
+  corradin: array,
+  lazzarin: array,
+  salviato: array,
+  squarzoni: array,
+  tutino: array,
+  vallotto: array
+) = {
+  let totaleOre = ()
+  for i in array.range(0, 6) {
+    let totOre = (bressan.at(i) + corradin.at(i) + lazzarin.at(i) + salviato.at(i) + squarzoni.at(i) + tutino.at(i) + vallotto.at(i))
+    totaleOre.push(totOre)
+  }
+  return totaleOre
+}
+
+#let tabellaSprint(
+  numSprint: int,
+  bressan: array,
+  corradin: array,
+  lazzarin: array,
+  salviato: array,
+  squarzoni: array,
+  tutino: array,
+  vallotto: array,
+  bilancio: int,
+  differenzaOre: ()
+) = {
+  let costoOrario = (30, 20, 25, 25, 15, 15) 
+  let totaleOre = calcoloTotaleOre(bressan: bressan, corradin: corradin, lazzarin:  lazzarin, salviato: salviato, squarzoni: squarzoni, tutino: tutino, vallotto: vallotto)
+  let costiParziali = totaleOre.zip(costoOrario).map(x => x.at(0) * x.at(1))
+  let costoTotale = costiParziali.sum()
+
+  if not differenzaOre.len() == 0 {
+    totaleOre.push([*Differenza ore*])
+    for x in differenzaOre {
+      if(x.first() == "+") {
+        totaleOre.push(text(x, fill: green))
+      } 
+      else {
+        totaleOre.push(text(x, fill: red))
+      }
+    }
+  }
+  
+  figure(
+  table(columns: (2fr, 1.5fr, 1.8fr, 1fr, 1.3fr, 1.8fr, 1.4fr),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { gray.lighten(10%) } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
+    align: center+horizon,
+    table.header([*Sprint #numSprint*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
+
+    [Bressan A.], ..bressan.map(x => str(x)),
+    [Corradin S.], ..corradin.map(x => str(x)),
+    [Lazzarin T.], ..lazzarin.map(x => str(x)),
+    [Salviato L.], ..salviato.map(x => str(x)),
+    [Squarzoni M.], ..squarzoni.map(x => str(x)),
+    [Tutino G.], ..tutino.map(x => str(x)),
+    [Vallotto C.], ..vallotto.map(x => str(x)),
+
+    [*Totale ore*], ..totaleOre.map(x => if type(x) != content { str(x)} else {x}),
+    [*Costo orario*], ..costoOrario.map(x => str(x)),
+    [*Costo*], ..costiParziali.map(x => str(x)),
+    table.cell([*Totale*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(str(costoTotale), fill: rgb("#f16610")),
+    table.cell([*Bilancio*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell([#bilancio], fill: rgb("#f16610"))
+  ),
+)
+}
