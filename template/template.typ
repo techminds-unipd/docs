@@ -254,9 +254,9 @@
 }
 
 #let tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino,vallotto, bilancio, isConsuntivo) = {
-  let caption = [Tabella preventivo #context numSprint.get()]
+  let caption = [Tabella preventivo sprint #context numSprint.get()]
   if isConsuntivo {
-    caption = [Tabella consuntivo #context numSprint.get()]
+    caption = [Tabella consuntivo sprint #context numSprint.get()]
   }
   else{
     numSprint.update(x => x + 1)
