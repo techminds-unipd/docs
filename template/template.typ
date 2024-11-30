@@ -239,8 +239,11 @@
         radius: 4,
         slice-style: colors,
         inner-radius: 0.4,
-        inner-label: (content: (value, label) => label, radius: 125%, angle: 35deg),
-        outer-label: (content: "%", radius: 115%))
+        //inner-label: (content: (value, label) => str(label), radius: 125%),
+        //outer-label: (content: "%", radius: 120%)
+        inner-label: (content: "%", radius: 135%, anchor: "center"),
+        outer-label: (content: "", radius: 120%)
+      )
     }
     ), caption: "Distribuzione ore per ruolo"
   )
