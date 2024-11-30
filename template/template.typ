@@ -1,3 +1,6 @@
+#import "@preview/cetz:0.3.1"
+#import "@preview/cetz-plot:0.1.0": plot, chart
+
 #let g = (
     name: "Tech Minds",
     mail: "techminds.unipd@gmail.com",
@@ -173,15 +176,16 @@
 
 
 // template per tabelle sprint in piano_progetto
-#let calcoloTotaleOre(
-  bressan: array,
-  corradin: array,
-  lazzarin: array,
-  salviato: array,
-  squarzoni: array,
-  tutino: array,
-  vallotto: array
-) = {
+#let calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto) = {
+
+  bressan = bressan.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+  corradin = corradin.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+  lazzarin = lazzarin.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+  salviato = salviato.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+  squarzoni = squarzoni.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+  tutino = tutino.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+  vallotto = vallotto.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
+
   let totaleOre = ()
   for i in array.range(0, 6) {
     let totOre = (bressan.at(i) + corradin.at(i) + lazzarin.at(i) + salviato.at(i) + squarzoni.at(i) + tutino.at(i) + vallotto.at(i))
@@ -190,54 +194,91 @@
   return totaleOre
 }
 
-#let tabellaSprint(
-  numSprint: int,
-  bressan: array,
-  corradin: array,
-  lazzarin: array,
-  salviato: array,
-  squarzoni: array,
-  tutino: array,
-  vallotto: array,
-  bilancio: int,
-  differenzaOre: ()
+
+#let textCellColorConsuntivo(
+  cell: str
 ) = {
+  if cell.contains("+") {
+    cell.split().at(0) + " " + text(cell.split().at(1), fill: rgb("#379c37"))
+  } else if cell.contains("-") {
+    cell.split().at(0) + " " + text(cell.split().at(1), fill: rgb("#b92c2c"))
+  } else {
+    cell
+  }
+
+}
+
+
+#let calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancio) = {
   let costoOrario = (30, 20, 25, 25, 15, 15) 
-  let totaleOre = calcoloTotaleOre(bressan: bressan, corradin: corradin, lazzarin:  lazzarin, salviato: salviato, squarzoni: squarzoni, tutino: tutino, vallotto: vallotto)
+  let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
   let costiParziali = totaleOre.zip(costoOrario).map(x => x.at(0) * x.at(1))
   let costoTotale = costiParziali.sum()
+  return bilancio - costoTotale
+}
 
-  if not differenzaOre.len() == 0 {
-    totaleOre.push([*Differenza ore*])
-    for x in differenzaOre {
-      if(x.first() == "+") {
-        totaleOre.push(text(x, fill: green))
-      } 
-      else {
-        totaleOre.push(text(x, fill: red))
-      }
+#let pieChartSprint(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto) = {
+  let costoOrario = (30, 20, 25, 25, 15, 15) 
+  let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
+  let data = (
+    ("Responsabile", totaleOre.at(0)),
+    ("Amministratore", totaleOre.at(1)),
+    ("Analista", totaleOre.at(2)),
+    ("Progettista", totaleOre.at(3)),
+    ("Programmatore", totaleOre.at(4)),
+    ("Verificatore", totaleOre.at(5)),
+  )
+  figure(
+    cetz.canvas({
+      let colors = gradient.linear(red, blue, green, yellow)
+
+      chart.piechart(
+        data,
+        value-key: 1,
+        label-key: 0,
+        radius: 4,
+        slice-style: colors,
+        inner-radius: 0.4,
+        inner-label: (content: (value, label) => label, radius: 125%, angle: 35deg),
+        outer-label: (content: "%", radius: 115%))
     }
+    ), caption: "Distribuzione ore per ruolo"
+  )
+}
+
+#let tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino,vallotto, bilancio, isConsuntivo) = {
+  let caption = [Tabella preventivo #context numSprint.get()]
+  if isConsuntivo {
+    caption = [Tabella consuntivo #context numSprint.get()]
   }
+  else{
+    numSprint.update(x => x + 1)
+  }
+  let costoOrario = (30, 20, 25, 25, 15, 15) 
+  let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
+  let costiParziali = totaleOre.zip(costoOrario).map(x => x.at(0) * x.at(1))
+  let costoTotale = costiParziali.sum()
   
   figure(
   table(columns: (2fr, 1.5fr, 1.8fr, 1fr, 1.3fr, 1.8fr, 1.4fr),
     fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { gray.lighten(10%) } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
     align: center+horizon,
-    table.header([*Sprint #numSprint*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
+    table.header([*Sprint #context numSprint.get()*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
 
-    [Bressan A.], ..bressan.map(x => str(x)),
-    [Corradin S.], ..corradin.map(x => str(x)),
-    [Lazzarin T.], ..lazzarin.map(x => str(x)),
-    [Salviato L.], ..salviato.map(x => str(x)),
-    [Squarzoni M.], ..squarzoni.map(x => str(x)),
-    [Tutino G.], ..tutino.map(x => str(x)),
-    [Vallotto C.], ..vallotto.map(x => str(x)),
+    [Bressan A.], ..bressan.map(x => textCellColorConsuntivo(cell: str(x))),
+    [Corradin S.], ..corradin.map(x => textCellColorConsuntivo(cell: str(x))),
+    [Lazzarin T.], ..lazzarin.map(x => textCellColorConsuntivo(cell: str(x))),
+    [Salviato L.], ..salviato.map(x => textCellColorConsuntivo(cell: str(x))),
+    [Squarzoni M.], ..squarzoni.map(x => textCellColorConsuntivo(cell: str(x))),
+    [Tutino G.], ..tutino.map(x => textCellColorConsuntivo(cell: str(x))),
+    [Vallotto C.], ..vallotto.map(x => textCellColorConsuntivo(cell: str(x))),
 
     [*Totale ore*], ..totaleOre.map(x => if type(x) != content { str(x)} else {x}),
     [*Costo orario*], ..costoOrario.map(x => str(x)),
     [*Costo*], ..costiParziali.map(x => str(x)),
     table.cell([*Totale*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(str(costoTotale), fill: rgb("#f16610")),
-    table.cell([*Bilancio*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell([#bilancio], fill: rgb("#f16610"))
+    table.cell([*Bilancio*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(str(bilancio), fill: rgb("#f16610"))
   ),
+  caption: caption
 )
 }
