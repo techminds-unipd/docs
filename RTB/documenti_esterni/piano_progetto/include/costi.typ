@@ -22,7 +22,8 @@ Nella seguente sezione vengono riportati i preventivi per ogni sprint. I costi s
 #let bilancioPreventivo = calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo)
 #tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
 <tabella-PreventivoSprint1> \
-#pieChartSprint(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
+#pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
+<grafico-PreventivoSprint1>
 ==== Consuntivo
 I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 #let bressan = ("25 (+5)", "10 (-1)", 10, 10, 10, 10)
@@ -36,6 +37,8 @@ I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 #let bilancioConsuntivo = calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo)
 #tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
 <tabella-ConsuntivoSprint1>
+#pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
+<grafico-ConsuntivoSprint1>
 === Sprint 2
 ==== Preventivo
 

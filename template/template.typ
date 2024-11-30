@@ -217,7 +217,11 @@
   return bilancio - costoTotale
 }
 
-#let pieChartSprint(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto) = {
+#let pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, isConsuntivo) = {
+  let caption = [Grafico distribuzione ore preventivo sprint #context numSprint.get()]
+  if isConsuntivo {
+    caption = [Grafico distribuzione ore consuntivo sprint #context numSprint.get()]
+  }
   let costoOrario = (30, 20, 25, 25, 15, 15) 
   let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
   let data = (
@@ -245,7 +249,7 @@
         outer-label: (content: "", radius: 120%)
       )
     }
-    ), caption: "Distribuzione ore per ruolo"
+    ), caption: caption
   )
 }
 
@@ -264,7 +268,7 @@
   
   figure(
   table(columns: (2fr, 1.5fr, 1.8fr, 1fr, 1.3fr, 1.8fr, 1.4fr),
-    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { gray.lighten(10%) } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { rgb("#f27f329f") } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
     align: center+horizon,
     table.header([*Sprint #context numSprint.get()*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
 
@@ -277,10 +281,10 @@
     [Vallotto C.], ..vallotto.map(x => textCellColorConsuntivo(cell: str(x))),
 
     [*Totale ore*], ..totaleOre.map(x => if type(x) != content { str(x)} else {x}),
-    [*Costo orario*], ..costoOrario.map(x => str(x)),
-    [*Costo*], ..costiParziali.map(x => str(x)),
-    table.cell([*Totale*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(str(costoTotale), fill: rgb("#f16610")),
-    table.cell([*Bilancio*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(str(bilancio), fill: rgb("#f16610"))
+    [*Costo orario*], ..costoOrario.map(x => str(x) + "€"),
+    [*Costo*], ..costiParziali.map(x => str(x) + "€"),
+    table.cell([*Totale*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(text(str(costoTotale) + "€", weight: "bold"), fill: rgb("#f16610")),
+    table.cell([*Bilancio*], colspan: 6, align: right, fill: rgb("#f16610")), table.cell(text(str(bilancio) + "€", weight: "bold"), fill: rgb("#f16610"))
   ),
   caption: caption
 )
