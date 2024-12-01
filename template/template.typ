@@ -240,7 +240,7 @@
         data,
         value-key: 1,
         label-key: 0,
-        radius: 4,
+        radius: 3.5,
         slice-style: colors,
         inner-radius: 0.4,
         //inner-label: (content: (value, label) => str(label), radius: 125%),
