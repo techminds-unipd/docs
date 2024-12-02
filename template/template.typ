@@ -177,7 +177,7 @@
 
 // template per tabelle sprint in piano_progetto
 #let calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto) = {
-
+  // conversione ore da stringa a intero se necessario (nel caso del consuntivo bisogna prendere solo il primo numero)
   bressan = bressan.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
   corradin = corradin.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
   lazzarin = lazzarin.map(x => if type(x) == str { int(x.split().at(0)) } else { x })
@@ -198,6 +198,7 @@
 #let textCellColorConsuntivo(
   cell: str
 ) = {
+  //per celle del consuntivo colora il testo in base al segno + o -
   if cell.contains("+") {
     cell.split().at(0) + " " + text(cell.split().at(1), fill: rgb("#379c37"))
   } else if cell.contains("-") {
@@ -205,10 +206,9 @@
   } else {
     cell
   }
-
 }
 
-
+//funzione per calcolare il bilancio di uno sprint
 #let calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancio) = {
   let costoOrario = (30, 20, 25, 25, 15, 15) 
   let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
@@ -235,7 +235,7 @@
   figure(
     cetz.canvas({
       let colors = gradient.linear(red, blue, green, yellow)
-
+      //prende i dati da data e crea il piechart
       chart.piechart(
         data,
         value-key: 1,
@@ -258,7 +258,7 @@
   if isConsuntivo {
     caption = [Tabella consuntivo sprint #context numSprint.get()]
   }
-  else{
+  else{ //aggiorna il numero dello sprint solo se si tratta di un preventivo
     numSprint.update(x => x + 1)
   }
   let costoOrario = (30, 20, 25, 25, 15, 15) 
@@ -271,7 +271,7 @@
     fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { rgb("#f27f329f") } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
     align: center+horizon,
     table.header([*Sprint #context numSprint.get()*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
-
+    //per ogni membro del team prende le ore relative allo sprint e le colora in base al segno oppure non le colora se si tratta di un preventivo
     [Bressan A.], ..bressan.map(x => textCellColorConsuntivo(cell: str(x))),
     [Corradin S.], ..corradin.map(x => textCellColorConsuntivo(cell: str(x))),
     [Lazzarin T.], ..lazzarin.map(x => textCellColorConsuntivo(cell: str(x))),
@@ -279,7 +279,7 @@
     [Squarzoni M.], ..squarzoni.map(x => textCellColorConsuntivo(cell: str(x))),
     [Tutino G.], ..tutino.map(x => textCellColorConsuntivo(cell: str(x))),
     [Vallotto C.], ..vallotto.map(x => textCellColorConsuntivo(cell: str(x))),
-
+    //righe con le ore totali e i costi con conversione in stringa
     [*Totale ore*], ..totaleOre.map(x => if type(x) != content { str(x)} else {x}),
     [*Costo orario*], ..costoOrario.map(x => str(x) + "€"),
     [*Costo*], ..costiParziali.map(x => str(x) + "€"),
