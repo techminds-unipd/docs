@@ -13,7 +13,11 @@
   let level = numbers.pos().len()
   if (level == 3) {
     return numbering("UC1", numbers.pos().at(level - 1))
-}})
+  }
+  else if (level == 4) {
+    return numbering("UC1.1", numbers.pos().at(level - 2), numbers.pos().at(level - 1))
+  }
+})
 #set heading(supplement: "")
 
 === Login <Login>
@@ -60,8 +64,8 @@
   - Google
 - *Scenario principale*:
  - Utente:
-   - Inserisce lo username (UC1.1).
-   - Inserisce la password (UC1.2).
+   - Inserisce lo username (@inserimento-username).
+   - Inserisce la password (@inserimento-password).
  - Sistema:
    1. Verifica che le credenziali dell'utente siano corrette.
    2. Se la verifica ha successo viene assegnata una sessione all'utente.
@@ -74,3 +78,6 @@
 - *Trigger*
 - *Estensioni*:
   - Login Google UC3
+
+==== Inserimento username <inserimento-username>
+==== Inserimento password <inserimento-password>
