@@ -41,6 +41,7 @@
     pagebreak()
 
     set align(left)
+    
 
     text("Changelog", weight: "bold")
 
@@ -54,7 +55,7 @@
     outline(title: "Indice", indent: true)
 
     pagebreak()
-
+    set par(justify: true)
     body
 }
 
@@ -71,7 +72,7 @@
     body
 ) = {
     documento(title: title, sommario: sommario, changelog: changelog, [])
-
+    set par(justify: true)
     set heading(numbering: "1.1")
     set page(numbering: "1")
     show link: underline
@@ -163,7 +164,7 @@
 
     set align(left)
     pagebreak()
-
+    set par(justify: true)
     body
 }
 
