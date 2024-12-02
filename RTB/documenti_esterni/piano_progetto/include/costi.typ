@@ -14,7 +14,7 @@ Nella seguente sezione vengono riportati i preventivi per ogni sprint. I costi s
 #let bressan = (0, 0, 0, 0, 0, 3)
 #let corradin = (0, 0, 3, 0, 0, 0)
 #let lazzarin = (0, 4, 0, 0, 0, 0)
-#let salviato = (0, 0, 3, 0, 0, 0)
+#let salviato = (0, 0, 4, 0, 0, 0)
 #let squarzoni = (3, 0, 0, 0, 0, 0)
 #let tutino = (0, 0, 4, 0, 0, 0)
 #let vallotto = (0, 0, 0, 0, 0, 3)
@@ -25,7 +25,7 @@ Nella seguente sezione vengono riportati i preventivi per ogni sprint. I costi s
 #pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint1> \
 - Spiegazione:
-In questo primo sprint, il team prevede di studiare le tecnologie suggerite dall'azienda ed iniziare l'analisi dei requisiti. Il lavoro è stato distribuito in modo equo tra i membri del team, con un'attenzione particolare alla fase di analisi e alla stesura della documentazione. Le ore produttive preventivate non contano le ore di autoformazione, che vengono considerate ore di allenamento.
+In questo primo sprint, prevediamo di studiare le tecnologie suggerite dall'azienda ed iniziare l'analisi dei requisiti. Il lavoro è stato distribuito in modo equo tra i membri del team, con un'attenzione particolare alla fase di analisi e alla stesura della documentazione. Le ore produttive preventivate non contano le ore di autoformazione, che vengono considerate ore di allenamento.
 ==== Consuntivo
 /*
 I numeri tra parentesi indicano le variazioni rispetto al preventivo.
