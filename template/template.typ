@@ -265,7 +265,7 @@
   let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
   let costiParziali = totaleOre.zip(costoOrario).map(x => x.at(0) * x.at(1))
   let costoTotale = costiParziali.sum()
-  
+  set par(justify: false)
   figure(
   table(columns: (2fr, 1.5fr, 1.8fr, 1fr, 1.3fr, 1.8fr, 1.4fr),
     fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { rgb("#f27f329f") } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
