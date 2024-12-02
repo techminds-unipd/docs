@@ -10,23 +10,23 @@ In seguito all'assegnazione del capitolato, abbiamo constatato che fosse prematu
 Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore a quelli successivi e verrà dedicato allo studio delle tecnologie necessarie per lo sviluppo del progetto. In accordo con il proponente, abbiamo deciso quindi di dare maggior priorità all'autoformazione sulle nuove tecnologie. Sono anche stati concordati dei corsi di formazione in presenza con l'azienda, nelle date 26/11/2024 e 28/11/2024, ed un ulteriore corso a distanza il giorno 03/12/2024. Il tempo rimanente verrà poi dedicato alla stesura di una parte del documento di analisi dei requisiti. Inoltre andremo ad aggiornare il piano di progetto, in particolare la sezione “Analisi dei rischi”, ed il documento riguardante le norme di progetto.\
 
 - Ruoli:
-  - Responsabile: #team.M\;
-  - Amministratore: #team.T\;
-  - Analista: #team.G, #team.L, #team.S\;
-  - Verificatore: #team.A, #team.C.
+  - responsabile: #team.M\;
+  - amministratore: #team.T\;
+  - analista: #team.G, #team.L, #team.S\;
+  - verificatore: #team.A, #team.C.
 
 - Issues:
-  - #link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56]: Sostituire termini del glossario nei documenti
-  - #link("https://github.com/techminds-unipd/docs/issues/57")[Issue \#57]: Miglioramenti grafici documentazione
-  - #link("https://github.com/techminds-unipd/docs/issues/60")[Issue \#60]: Autoformazione tecnologie proposte dall'azienda
-    - #link("https://github.com/techminds-unipd/docs/issues/64")[Issue \#64]: #glossario[React]
-    - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65]: #glossario[Typescript]
-    - #link("https://github.com/techminds-unipd/docs/issues/66")[Issue \#66]: #glossario[Node.js]
-    - #link("https://github.com/techminds-unipd/docs/issues/67")[Issue \#67]: #glossario[MongoDB]
-  - #link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62]: Redazione diagrammi dei #glossario[casi d'uso]
-  - #link("https://github.com/techminds-unipd/docs/issues/68")[Issue \#68]: Redazione #glossario[sprint] 1 in piano di progetto
-  - #link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69]: Inizio analisi dei rischi in piano di progetto
-  - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70]: Aggiornamento norme di progetto
+  - #link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56]: Sostituire termini del glossario nei documenti;
+  - #link("https://github.com/techminds-unipd/docs/issues/57")[Issue \#57]: Miglioramenti grafici documentazione;
+  - #link("https://github.com/techminds-unipd/docs/issues/60")[Issue \#60]: Autoformazione tecnologie proposte dall'azienda;
+    - #link("https://github.com/techminds-unipd/docs/issues/64")[Issue \#64]: React;
+    - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65]: Typescript;
+    - #link("https://github.com/techminds-unipd/docs/issues/66")[Issue \#66]: Node.js;
+    - #link("https://github.com/techminds-unipd/docs/issues/67")[Issue \#67]: MongoDB;
+  - #link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62]: Redazione diagrammi dei casi d'uso;
+  - #link("https://github.com/techminds-unipd/docs/issues/68")[Issue \#68]: Redazione sprint 1 in piano di progetto;
+  - #link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69]: Inizio analisi dei rischi in piano di progetto;
+  - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70]: Aggiornamento norme di progetto.
 
 - Diagramma di Gantt:
 //todo inserire screenshot del diagramma di Gantt 
