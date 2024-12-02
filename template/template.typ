@@ -57,7 +57,7 @@
     outline(title: "Indice", indent: true)
 
     pagebreak()
-
+    set par(justify: true)
     body
 }
 
@@ -79,7 +79,7 @@
     set page(numbering: "1")
     show link: underline
     show link: set text(rgb("#f16610"))
-
+    set par(justify: true)
     durata_luogo.at(0) = "Inizio: " + durata_luogo.at(0)
     durata_luogo.at(1) = "Fine: " + durata_luogo.at(1)
     durata_luogo.at(2) = "Luogo: " + durata_luogo.at(2)
@@ -110,7 +110,7 @@
     if firma {
        align(bottom + right, text("Il proponente", weight: "bold") + v(2%) + line(length: 30%))
     }
-
+    
     body
 }
 
@@ -164,9 +164,9 @@
         "Caterina", "Vallotto", "2076434"
     )
 
+    set par(justify: true)
     set align(left)
     pagebreak()
-
     body
 }
 
