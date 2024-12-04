@@ -87,6 +87,8 @@
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
+  - Credenziali errate (@credenziali-errate)
+- *Generalizzazioni*:
   - Login Google (@login-google).
 
 ==== Inserimento username <inserimento-username>
