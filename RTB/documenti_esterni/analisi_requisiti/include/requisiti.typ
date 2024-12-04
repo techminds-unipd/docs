@@ -2,11 +2,16 @@
 
 == Requisiti funzionali
 
-*User Story 1*:
-Come utente non loggato, vorrei accedere al mio account, per usufruire delle funzionalità dell'applicazione.
+- FMR (Functional Mandatory Requirement)
+- FDR (Functional Desirable Requirement)
+- FOR (Functional Optional Requirement)
 
-*User Story 2*:
-Come utente non registrato, vorrei creare un account personale, per potermi loggare successivamente.
+#table(
+  columns: (1fr, 5fr, 2fr),
+  table.header([*Codice*], [*Descrizione*], [*Fonti*]),
+  align: horizon + center,
+  [FOR 1], [L'utente può effettuare il login utilizzando Google], [@login-google]
+)
 
 == Requisiti di qualità
 
