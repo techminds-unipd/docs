@@ -154,7 +154,7 @@
  - Sistema:
    1. verifica che l'username non sia già in uso.
 - *Pre-condizioni*:
-   - L'utente non possiede un account;
+   - L'utente non possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito un username valido.
 
@@ -168,7 +168,7 @@
   - Sistema:
     1. verifica che l'email sia valida.
 - *Pre-condizioni*:
-  - L'utente non possiede un account;
+  - L'utente non possiede un account.
 - *Post-condizioni*:
   - L'utente ha inserito un'email valida.
 
@@ -181,7 +181,7 @@
   - Sistema:
     1. verifica che la password rispetti i vincoli.
 - *Pre-condizioni*:
-  - L'utente non possiede un account;
+  - L'utente non possiede un account.
 - *Post-condizioni*:
   - L'utente ha creato una password valida.
 
@@ -194,7 +194,7 @@
   - Sistema:
     1. verifica che la password sia stata confermata correttamente.
 - *Pre-condizioni*:
-  - L'utente non possiede un account;
+  - L'utente non possiede un account.
 - *Post-condizioni*:
   - La password è stata confermata.
 
@@ -215,10 +215,10 @@
     5. una delle verifiche fallisce;
     6. viene mostrato un messaggio d'errore.
 - *Pre-condizioni*:
-  - L'utente non possiede un account;
-- *Post-condizioni*:
   - L'utente non possiede un account.
-  - Viene mostrato un messaggio d'errore esplicativo.
+- *Post-condizioni*:
+  - L'utente non possiede un account;
+  - Viene mostrato un messaggio d'errore esplicativo;
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
 
