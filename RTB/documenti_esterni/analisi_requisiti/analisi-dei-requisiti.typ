@@ -4,6 +4,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.2.1", "04/12/2024", "Completato use case del Login con le varie estensioni e generalizzazioni", team.G, team.A,
     "0.2.0", "04/12/2024", "Descritto primo use case (Login)", team.G, team.C,
     "0.1.1", "20/11/2024", "Segnati termini presenti nel glossario", team.T, team.C,
     "0.1.0", "12/11/2024", "Prima versione", team.G, team.A
