@@ -66,7 +66,7 @@
         name: <group>)
     ),
 
-    caption: [Login UC diagram]
+    caption: [Login UC diagram.]
 ) <login-diagram>
 
 - *Attori principali*:
@@ -167,7 +167,7 @@
         snap: -1,
         name: <group>)
     ),
-    caption: [Login Google UC diagram]
+    caption: [Login Google UC diagram.]
 ) <login-google-diagram>
 
 - *Attori principali*:
