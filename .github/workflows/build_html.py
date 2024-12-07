@@ -11,10 +11,15 @@ def build_link(path):
 def format_name(name):
     if '-' in name:
         parts = name.split('-')
-        if len(parts) == 4:
+        #Caso yyyy-mm-dd (verbale standard)
+        if len(parts)==3:
+            return f"{parts[0]}/{parts[1]}/{parts[2]}"
+        #Caso yyyy-mm-dd-info (verbale firmato)
+        elif len(parts) == 4:
             return f"{parts[0]}/{parts[1]}/{parts[2]} {parts[3]}"
-        else:
-            return ' '.join(parts)
+        #Caso documento normale
+        return ' '.join(parts)
+    #Caso documento senza trattini nel nome
     return name
 
 repo_dir = os.environ['GITHUB_WORKSPACE']
