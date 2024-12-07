@@ -205,27 +205,27 @@
     node((2.7,0.3), align(center)[
             @errore-registrazione Errore registrazione
     ], shape: ellipse, name: <c>),
-    edge(<c>, <b>, "-->", [\<\<extend\>\>]),
+    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1,1), align(center)[
             @creazione-username Creazione username
     ], shape: ellipse, name: <d>),
-    edge(<b>, <d>, "-->", [\<\<include\>\>]),
+    edge(<b>, <d>, "--straight", [\<\<include\>\>]),
 
     node((1.5,1.3), align(center)[
             @inserimento-email Inserimento email
     ], shape: ellipse, name: <e>),
-    edge(<b>, <e>, "-->", [\<\<include\>\>]),
+    edge(<b>, <e>, "--straight", [\<\<include\>\>]),
 
     node((2,1), align(center)[
             @creazione-password Creazione password
     ], shape: ellipse, name: <f>),
-    edge(<b>, <f>, "-->", [\<\<include\>\>]),
+    edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node((2.7,1.3), align(center)[
             @conferma-password Conferma password
     ], shape: ellipse, name: <g>),
-    edge(<b>, <g>, "-->", [\<\<include\>\>]),
+    edge(<b>, <g>, "--straight", [\<\<include\>\>]),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
         align(top + right)[Sistema],
@@ -320,7 +320,7 @@
   - Utente.
 - *Scenario principale*:
   - Utente:
-    1. inserisce username, email, o password non validi.
+    1. inserisce username, email, o password non validi in @creazione-username, @inserimento-email, @creazione-password, @conferma-password.
   - Sistema:
     1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
     2. mostra un messaggio d'errore all'utente;
