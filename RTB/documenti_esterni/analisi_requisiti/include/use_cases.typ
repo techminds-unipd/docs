@@ -88,8 +88,8 @@
    - inserisce la password (@inserimento-password).
  - Sistema:
    1. attende esito verifica delle credenziali da @inserimento-username e @inserimento-password;
-   2. se la verifica ha successo viene assegnata una sessione all'utente;
-   3. se le credenziali sono sbagliate si mostra un messaggio d'errore (@credenziali-errate).
+   2. la verifica ha successo;
+   3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
    - L'utente possiede un account;
    - L'utente non è già autenticato.
@@ -133,13 +133,14 @@
 === Credenziali errate <credenziali-errate>
 
 - *Attori principali*:
-  - Utente. 
+  - Utente.
 - *Scenario principale*:
  - Utente:
    - l'utente inserisce credenziali errate in @login.
  - Sistema:
-   1. viene visualizzato un messaggio d'errore;
-   2. viene data la possibilità all'utente di riprovare il login.
+    1. l'esito della verifica delle credenziali da @inserimento-username e @inserimento-password non ha successo;
+    2. viene visualizzato un messaggio d'errore;
+    3. viene data la possibilità all'utente di riprovare il login.
 - *Pre-condizioni*:
    - L'utente possiede un account;
    - L'utente non è già autenticato.
