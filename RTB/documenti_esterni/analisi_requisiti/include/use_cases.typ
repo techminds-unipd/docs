@@ -238,13 +238,13 @@
   - Google.
 - *Scenario principale*:
  - Utente:
-   - Apre la configurazione dei servizi Google (@gestione-servizi-google);
-   - Inserisce delle credenziali Google (@inserimento-credenziali-google).
+   - apre la configurazione dei servizi Google (@gestione-servizi-google);
+   - inserisce delle credenziali Google (@inserimento-credenziali-google).
  - Sistema:
-   1. Verifica se un account Google è già collegato;
-   2. Se è collegato, permette all'utente di rimuoverlo (@rimozione-account-google-associato);
-   3. Se non è collegato, chiede all'utente di accedere a Google (@inserimento-credenziali-google);
-   4. Se si verifica un errore nella comunicazione mostra un messaggio d'errore (@errore-comunicazione-google);
+   1. verifica se un account Google è già collegato;
+   2. se è collegato, permette all'utente di rimuoverlo (@rimozione-account-google-associato);
+   3. se non è collegato, chiede all'utente di accedere a Google (@inserimento-credenziali-google);
+   4. se si verifica un errore nella comunicazione mostra un messaggio d'errore (@errore-comunicazione-google);
 
 - *Pre-condizioni*:
    - L'utente è autenticato;
@@ -261,11 +261,11 @@
   - Google.
 - *Scenario principale*:
  - Utente:
-   - Avvia la procedura di rimozione dell'account Google associato
+   - avvia la procedura di rimozione dell'account Google associato.
  - Sistema:
-   1. Rimuove l'account Google associato all'esecuzione dei blocchi nei workflow (@rimozione-account-google-associato);
-   2. Notifica il completamento dell'operazione;
-   3. Se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google);
+   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow (@rimozione-account-google-associato);
+   2. notifica il completamento dell'operazione;
+   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google);
 
 - *Pre-condizioni*:
    - L'utente è autenticato;
@@ -280,12 +280,12 @@
   - Google.
 - *Scenario principale*:
  - Utente:
-   - Avvia la procedura di associazione di un account Google;
-   - Inserisce le credenziali dell'account Google che vuole collegare.
+   - avvia la procedura di associazione di un account Google;
+   - inserisce le credenziali dell'account Google che vuole collegare.
  - Sistema:
-   1. Mostra la finestra di Google per la configurazione dell'account;
-   2. Notifica il completamento dell'operazione;
-   3. Se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
+   1. mostra la finestra di Google per la configurazione dell'account;
+   2. notifica il completamento dell'operazione;
+   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
 
 - *Pre-condizioni*:
    - L'utente è autenticato;
@@ -300,9 +300,9 @@
   - Google.
 - *Scenario principale*:
  - Utente:
-   - Compie un'azione per la gestione dell'account Google associato (@gestione-servizi-google).
+   - compie un'azione per la gestione dell'account Google associato (@gestione-servizi-google).
  - Sistema:
-   1. Notifica all'utente l'errore di comunicazione con Google e il mancato completamento dell'operazione corrente.
+   1. notifica all'utente l'errore di comunicazione con Google e il mancato completamento dell'operazione corrente.
 
 - *Pre-condizioni*:
    - Si verifica un errore di comunicazione con i sistemi di Google.
