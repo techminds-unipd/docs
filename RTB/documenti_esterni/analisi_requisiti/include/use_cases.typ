@@ -209,14 +209,14 @@
         snap: -1,
         name: <group>)
     ),
-    caption: [Creazione nuovo workflow UC diagram]
+    caption: [Creazione nuovo workflow UC diagram.]
 ) <creazione-nuovo-workflow-diagram>
 
 - *Attori principali*:
   - Utente.
 - *Scenario principale*:
  - Utente:
-   1. naviga nella pagina workflow.
+   1. naviga nella pagina workflow;
    2. seleziona l'opzione per creare un nuovo workflow;
    3. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
    4. seleziona il blocco di automazione che desidera;
@@ -262,7 +262,7 @@
         snap: -1,
         name: <group>)
     ),
-    caption: [Salvataggio workdflow UC diagram]
+    caption: [Salvataggio workflow UC diagram.]
 ) <salvataggio-workflow-diagram>
 
 - *Attori principali*:
@@ -277,7 +277,7 @@
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
-   - Errore connessione database (@errore-connessione-database)
+   - Errore connessione database (@errore-connessione-database).
 
 === Errore connessione database <errore-connessione-database>
 - *Attori principali*:
@@ -286,8 +286,8 @@
  - Utente:
    1. esegue un'operazione che richiede l'accesso ai dati sul database.
  - Sistema:
-   1. interagisce con il database.
-   2. il database non è disponibile.
+   1. interagisce con il database;
+   2. il database non è disponibile;
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
