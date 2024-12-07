@@ -198,37 +198,32 @@
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
-    node((3.5,0.6), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <c>),
+    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <b>),
 
-    node((1.5,0), align(center)[
+    node((1.7,0), align(center)[
             @esecuzione-workflow Esecuzione workflow 
     ], shape: ellipse, name: <b>),
 
-    node((2,0.6), align(center)[
-            @backend-esecuzione Backend esecuzione
+    node((1,0.6), align(center)[
+             @controllo-workflow Controllo workflow
     ], shape: ellipse, name: <c>),
     edge(<b>, <c>, "-->", [\<\<include\>\>]),
 
-    node((1,0.6), align(center)[
-             @controllo-workflow Controllo workflow
-    ], shape: ellipse, name: <d>),
-    edge(<b>, <d>, "-->", [\<\<include\>\>]),
-
-    node((1,1.2), align(center)[
+    node((1,1.4), align(center)[
             @vis-errore-workflow Vis. errore workflow
+    ], shape: ellipse, name: <d>),
+    edge(<d>, <c>, "-->", [\<\<extend\>\>]),
+
+    node((1.7,1), align(center)[
+            @vis-errore-runtime Vis. errore runtime
     ], shape: ellipse, name: <e>),
-    edge(<e>, <d>, "-->", [\<\<extend\>\>]),
+    edge(<e>, <b>, "-->", [\<\<extend\>\>]),
 
-    node((1.5,1.5), align(center)[
-            @vis-errore-backend Vis. errore backend
-    ], shape: ellipse, name: <g>),
-    edge(<g>, <c>, "-->", [\<\<extend\>\>]),
-
-    node((2.5,1.5), align(center)[
+    node((2.5,0.6), align(center)[
             @vis-risultato-esecuzione Vis. risultato esecuzione
     ], shape: ellipse, name: <f>),
-    edge(<c>, <f>, "-->", [\<\<include\>\>]),
+    edge(<b>, <f>, "-->", [\<\<include\>\>]),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>),
         align(top + right)[Sistema],
@@ -242,18 +237,23 @@
 
 - *Attori principali*:
   - Utente autenticato.
+- *Attori secondari*:
+  - LLM.
 - *Scenario principale*:
  - Utente autenticato:
    1. esegue il workflow.
  - Sistema:
    1. controlla che l'intero workflow sia valido (@controllo-workflow);
    2. attende l'esito del controllo;
-   3. inoltra i dati al backend (@backend-esecuzione).
+   3. inoltra i dati all'agente che si interfaccia ad un LLM;
+   4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
 - *Pre-condizioni*:
    - L'utente è autenticato.
    - L'utente ha creato un workflow con almeno due blocchi.
-- *Post-condizioni*:
-   - L'operazione viene gestita dal backend.
+- *Post-condizioni*:    
+  - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
+- *Estensioni*:
+  - Visualizzazione errore runtime (@vis-errore-runtime).
 
 ==== Controllo workflow <controllo-workflow>
 
@@ -261,38 +261,16 @@
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow.
+    1. esegue il workflow in @esecuzione-workflow.
   - Sistema:
     1. controlla che il workflow sia valido;
-    2. ritorna l'esito del controllo;
-    3. continua con l'esecuzione.
+    2. ritorna l'esito del controllo.
 - *Pre-condizioni*:
   - L'utente ha creato un workflow valido.
 - *Post-condizioni*:
-  - Il controllo ha successo.
+  - Restituisce l'esito del controllo.
 - *Estensioni*
   - Visualizzazione errore workflow (@vis-errore-workflow).
-
-==== Backend esecuzione <backend-esecuzione>
-
-- *Attori principali*:
-  - Utente autenticato.
-- *Attori secondari*:
-  - LLM.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. esegue il workflow.
-  - Sistema:
-    1. inoltra la descrizione ad un LLM;
-    2. processa la richiesta;
-    3. esegue l'operazione;
-    4. restituisce il risultato (@vis-risultato-esecuzione).
-- *Pre-condizioni*:
-  - Controllo workflow (@controllo-workflow) positivo.
-- *Post-condizioni*:    
-  - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).   
-- *Estensioni*:
-  - Visualizzazione errore (@vis-errore-backend).
 
 ==== Visualizzazione risultato esecuzione <vis-risultato-esecuzione>
 
@@ -300,9 +278,9 @@
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow.
+    1. esegue il workflow in @esecuzione-workflow.
   - Sistema:
-    1. riceve il risultato dell'operazione da @backend-esecuzione;
+    1. riceve il risultato dell'operazione da @esecuzione-workflow;
     2. mostra il risultato all'utente.
 - *Pre-condizioni*:
   - L'esecuzione termina senza errori.
@@ -314,7 +292,7 @@
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow.
+    1. esegue il workflow in @esecuzione-workflow.
   - Sistema:
     1. il controllo in @controllo-workflow non ha successo;
     2. mostra un messaggio d'errore all'utente;
@@ -324,15 +302,15 @@
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Visualizzazione errore backend <vis-errore-backend>
+=== Visualizzazione errore runtime <vis-errore-runtime>
 
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow.
+    1. esegue il workflow in @esecuzione-workflow.
   - Sistema:
-    1. risconta un problema durante l'esecuzione di @backend-esecuzione;
+    1. risconta un problema durante l'esecuzione di @esecuzione-workflow;
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
