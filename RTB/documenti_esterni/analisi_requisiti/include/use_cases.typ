@@ -241,10 +241,8 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0,0), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
-    node((4,0), [#image("../assets/actor.jpg") Database], stroke: 0pt, name: <database>),
+    node((0,0.25), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
-    edge(<database>, <a>),
 
     node((2,0), align(center)[
             @salvataggio-workflow Salvataggio workflow
