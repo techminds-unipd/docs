@@ -100,57 +100,72 @@
     node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
-    node((2,0.5), [#image("../assets/actor.jpg") Database], stroke: 0pt, name: <db>),
-    edge(<b>, <db>),
-
-    node((1,0), align(center)[
+    node((1.8,0), align(center)[
             @registrazione Registrazione
     ], shape: ellipse, name: <b>),
 
-    node((1, 1), align(center)[
+    node((2.7,0.3), align(center)[
             @errore-registrazione Errore registrazione
     ], shape: ellipse, name: <c>),
     edge(<c>, <b>, "-->", [\<\<extend\>\>]),
 
-    node(enclose: (<b>,<c>),
+    node((1,1), align(center)[
+            @creazione-username Creazione username
+    ], shape: ellipse, name: <d>),
+    edge(<b>, <d>, "-->", [\<\<include\>\>]),
+
+    node((1.5,1.3), align(center)[
+            @inserimento-email Inserimento email
+    ], shape: ellipse, name: <e>),
+    edge(<b>, <e>, "-->", [\<\<include\>\>]),
+
+    node((2,1), align(center)[
+            @creazione-password Creazione password
+    ], shape: ellipse, name: <f>),
+    edge(<b>, <f>, "-->", [\<\<include\>\>]),
+
+    node((2.7,1.3), align(center)[
+            @conferma-password Conferma password
+    ], shape: ellipse, name: <g>),
+    edge(<b>, <g>, "-->", [\<\<include\>\>]),
+
+    node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
         snap: -1,
         name: <group>)
     ),
-    caption: [Registrazione UC diagram]
+    caption: [Registrazione UC diagram.]
 ) <registrazione-diagram>
 
 - *Attori principali*:
   - Utente.
-- *Attori secondari*:
-  - Database.
 - *Scenario principale*:
  - Utente:
-   - seleziona voce di registrazione;
-   - crea un username univoco nel sistema (@creazione-username);
-   - inserisce un'email valida (@inserimento-email);
-   - crea una password valida (@creazione-password);
-   - conferma la password (@conferma-password).
+   1. seleziona voce di registrazione;
+   2. crea un username univoco nel sistema (@creazione-username);
+   3. inserisce un'email valida (@inserimento-email);
+   4. crea una password valida (@creazione-password);
+   5. conferma la password (@conferma-password).
  - Sistema:
-   1. verifica che l'username non sia già in uso e che la password/email siano valide;
-   2. se la verifica ha successo viene creato un nuovo account e salvato nel database;
-   3. se la verifica fallisce si mostra un messaggio d'errore (@errore-registrazione).
+   1. attende l'esito di @creazione-username, @inserimento-email, @creazione-password e @conferma-password;
+   2. crea un nuovo account;
+   3. salva nel database i dati del nuovo account.
 - *Pre-condizioni*:
-   - L'utente non possiede un account;
-   - L'utente possiede un'email valida.
+   - L'utente non possiede un account.
 - *Post-condizioni*:
    - L'utente possiede un account, contraddistinto da un username e da una password, e può effettuare il login.
 - *Estensioni*:
-  - Visualizzazione errore (@errore-registrazione).
+  - Errore registrazione (@errore-registrazione).
 
 ==== Creazione username <creazione-username>
+
 - *Attori principali*:
   - Utente.
 - *Scenario principale*:
  - Utente:
-   - inserisce un username.
+   1. inserisce un username.
  - Sistema:
    1. verifica che l'username non sia già in uso.
 - *Pre-condizioni*:
@@ -160,11 +175,12 @@
 
 
 ==== Inserimento email <inserimento-email>
+
 - *Attori principali*:
   - Utente.
 - *Scenario principale*:
   - Utente:
-    - inserisce un'email.
+    1. inserisce un'email.
   - Sistema:
     1. verifica che l'email sia valida.
 - *Pre-condizioni*:
@@ -173,11 +189,12 @@
   - L'utente ha inserito un'email valida.
 
 ==== Creazione password <creazione-password>
+
 - *Attori principali*:
   - Utente.
 - *Scenario principale*:
   - Utente:
-    - crea una password.
+    1. crea una password.
   - Sistema:
     1. verifica che la password rispetti i vincoli.
 - *Pre-condizioni*:
@@ -186,11 +203,12 @@
   - L'utente ha creato una password valida.
 
 ==== Conferma password <conferma-password>
+
 - *Attori principali*:
   - Utente.
 - *Scenario principale*:
   - Utente:
-    - conferma la password inserita precedentemente.
+    1. conferma la password inserita precedentemente.
   - Sistema:
     1. verifica che la password sia stata confermata correttamente.
 - *Pre-condizioni*:
@@ -199,26 +217,21 @@
   - La password è stata confermata.
 
 === Errore registrazione <errore-registrazione>
+
 - *Attori principali*:
   - Utente.
 - *Scenario principale*:
   - Utente:
-    - crea username;
-    - inserisce email;
-    - crea password;
-    - conferma password.
+    1. inserisce username, email, o password non validi.
   - Sistema:
-    1. verifica che l'username non sia già in uso;
-    2. verifica che l'email sia valida;
-    3. verifica che la password rispetti i vincoli;
-    4. verifica che la password sia stata confermata correttamente;
-    5. una delle verifiche fallisce;
-    6. viene mostrato un messaggio d'errore.
+    1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
+    2. mostra un messaggio d'errore all'utente;
+    3. offre la possibilità all'utente di correggere i campi errati.
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - L'utente non possiede un account;
-  - Viene mostrato un messaggio d'errore esplicativo;
+  - L'utente non possiede un account.
+  - Viene mostrato un messaggio d'errore esplicativo.
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
 
