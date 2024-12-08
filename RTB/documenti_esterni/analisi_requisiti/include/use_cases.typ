@@ -136,11 +136,11 @@
   - Utente.
 - *Scenario principale*:
  - Utente:
-   - l'utente inserisce credenziali errate in @login.
+   - l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
  - Sistema:
-    1. l'esito della verifica delle credenziali da @inserimento-username e @inserimento-password non ha successo;
-    2. viene visualizzato un messaggio d'errore;
-    3. viene data la possibilità all'utente di riprovare il login.
+    1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
+    2. mostra un messaggio d'errore;
+    3. dà la possibilità all'utente di riprovare il login.
 - *Pre-condizioni*:
    - L'utente possiede un account;
    - L'utente non è già autenticato.
@@ -189,7 +189,7 @@
    1. redirige l'utente ai servizi di Google;
    2. controlla che il login con i servizi di Google sia avvenuto correttamente.
 - *Pre-condizioni*:
-   - L'utente possiede un account Google.
+   - L'utente possiede un account Google;
    - L'utente non è già autenticato.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
