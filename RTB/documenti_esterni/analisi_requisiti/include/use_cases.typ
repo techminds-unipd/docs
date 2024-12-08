@@ -252,7 +252,7 @@
    - L'utente ha associato o rimosso un account Google.
 - *Estensioni*:
   - Inserimento credenziali Google (@inserimento-credenziali-google);
-  - Errore comunicazione Google (@errore-comunicazione-google);
+  - Errore comunicazione Google (@errore-comunicazione-google).
 
 === Rimozione account Google associato <rimozione-account-google-associato>
 - *Attori principali*:
@@ -265,7 +265,7 @@
  - Sistema:
    1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow (@rimozione-account-google-associato);
    2. notifica il completamento dell'operazione;
-   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google);
+   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
 
 - *Pre-condizioni*:
    - L'utente è autenticato;
