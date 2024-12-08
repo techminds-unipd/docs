@@ -9,12 +9,9 @@ def build_link(path):
 
 #Questa funzione funziona solo se teniamo i nomi dei documenti come sono ora.
 def format_name(name):
-    if '-' in name:
-        parts = name.split('-')
-        if len(parts) == 4:
-            return f"{parts[0]}/{parts[1]}/{parts[2]} {parts[3]}"
-        else:
-            return ' '.join(parts)
+    name=name.replace("-"," ")
+    if name[0].isdigit():
+        name = name.replace(" ", "/", 2)
     return name
 
 repo_dir = os.environ['GITHUB_WORKSPACE']

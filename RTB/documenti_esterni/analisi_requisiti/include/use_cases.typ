@@ -186,6 +186,278 @@
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
+=== Registrazione <registrazione>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+
+    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    edge(<a>, <b>),
+
+    node((1.8,0), align(center)[
+            @registrazione Registrazione
+    ], shape: ellipse, name: <b>),
+
+    node((2.7,0.3), align(center)[
+            @errore-registrazione Errore registrazione
+    ], shape: ellipse, name: <c>),
+    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
+
+    node((1,1), align(center)[
+            @creazione-username Creazione username
+    ], shape: ellipse, name: <d>),
+    edge(<b>, <d>, "--straight", [\<\<include\>\>]),
+
+    node((1.5,1.3), align(center)[
+            @inserimento-email Inserimento email
+    ], shape: ellipse, name: <e>),
+    edge(<b>, <e>, "--straight", [\<\<include\>\>]),
+
+    node((2,1), align(center)[
+            @creazione-password Creazione password
+    ], shape: ellipse, name: <f>),
+    edge(<b>, <f>, "--straight", [\<\<include\>\>]),
+
+    node((2.7,1.3), align(center)[
+            @conferma-password Conferma password
+    ], shape: ellipse, name: <g>),
+    edge(<b>, <g>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
+        align(top + right)[Sistema],
+        width: 200pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Registrazione UC diagram.]
+) <registrazione-diagram>
+
+- *Attori principali*:
+  - Utente.
+- *Scenario principale*:
+ - Utente:
+   1. seleziona voce di registrazione;
+   2. crea un username univoco nel sistema (@creazione-username);
+   3. inserisce un'email valida (@inserimento-email);
+   4. crea una password valida (@creazione-password);
+   5. conferma la password (@conferma-password).
+ - Sistema:
+   1. attende l'esito di @creazione-username, @inserimento-email, @creazione-password e @conferma-password;
+   2. crea un nuovo account;
+   3. salva nel database i dati del nuovo account.
+- *Pre-condizioni*:
+   - L'utente non possiede un account.
+- *Post-condizioni*:
+   - L'utente possiede un account, contraddistinto da un username e da una password, e può effettuare il login.
+- *Estensioni*:
+  - Errore registrazione (@errore-registrazione).
+
+==== Creazione username <creazione-username>
+
+- *Attori principali*:
+  - Utente.
+- *Scenario principale*:
+ - Utente:
+   1. inserisce un username.
+ - Sistema:
+   1. verifica che l'username non sia già in uso.
+- *Pre-condizioni*:
+   - L'utente non possiede un account.
+- *Post-condizioni*:
+   - L'utente ha inserito un username valido.
+
+
+==== Inserimento email <inserimento-email>
+
+- *Attori principali*:
+  - Utente.
+- *Scenario principale*:
+  - Utente:
+    1. inserisce un'email.
+  - Sistema:
+    1. verifica che l'email sia valida.
+- *Pre-condizioni*:
+  - L'utente non possiede un account.
+- *Post-condizioni*:
+  - L'utente ha inserito un'email valida.
+
+==== Creazione password <creazione-password>
+
+- *Attori principali*:
+  - Utente.
+- *Scenario principale*:
+  - Utente:
+    1. crea una password.
+  - Sistema:
+    1. verifica che la password rispetti i vincoli.
+- *Pre-condizioni*:
+  - L'utente non possiede un account.
+- *Post-condizioni*:
+  - L'utente ha creato una password valida.
+
+==== Conferma password <conferma-password>
+
+- *Attori principali*:
+  - Utente.
+- *Scenario principale*:
+  - Utente:
+    1. conferma la password inserita precedentemente.
+  - Sistema:
+    1. verifica che la password sia stata confermata correttamente.
+- *Pre-condizioni*:
+  - L'utente non possiede un account.
+- *Post-condizioni*:
+  - La password è stata confermata.
+
+=== Errore registrazione <errore-registrazione>
+
+- *Attori principali*:
+  - Utente.
+- *Scenario principale*:
+  - Utente:
+    1. inserisce username, email, o password non validi in @creazione-username, @inserimento-email, @creazione-password, @conferma-password.
+  - Sistema:
+    1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
+    2. mostra un messaggio d'errore all'utente;
+    3. offre la possibilità all'utente di correggere i campi errati.
+- *Pre-condizioni*:
+  - L'utente non possiede un account.
+- *Post-condizioni*:
+  - L'utente non possiede un account;
+  - Viene mostrato un messaggio d'errore esplicativo;
+  - L'utente può riprovare a registrarsi modificando i campi errati.
+
+
+
+
+=== Gestione servizi Google <gestione-servizi-google>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+
+    node((0.5,0.1), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    edge(<a>, <b>),
+
+    node((3.35,0.1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
+    edge(<google>, <b>),
+
+    node((1.5,0.65), align(center)[
+        @rimozione-account-google-associato Rimozione account \ Google associato
+    ], shape: ellipse, name: <e>, inset: 10pt),
+
+    node((2,0), align(center)[
+            @gestione-servizi-google Gestione servizi Google
+    ], shape: ellipse, name: <b>, inset: 10pt),
+
+    node((2,1.25), align(center)[
+            @inserimento-credenziali-google Inserimento\ credenziali Google
+    ], shape: ellipse, name: <c>, inset: 10pt),
+
+    node((2.5,0.8), align(center)[
+            @errore-comunicazione-google Errore comunicazione \ Google
+    ], shape: ellipse, name: <d>, inset: 10pt),
+
+    edge(<c>, <b>, "--straight", [\<\<extend\>\>], label-side: right),
+
+    edge(<d>, <b>, "--straight", [\<\<extend\>\>], label-side: right),
+
+    edge(<e>, <b>, "--straight", [\<\<extend\>\>], label-side: left),
+
+    node(enclose: (<b>,<c>, <d>, <e>),
+        align(top + right)[Sistema],
+        width: 200pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Associazione servizi Google UC diagram.]
+) <associazione-servizi-google-diagram>
+
+- *Attori principali*:
+  - Utente.
+- *Attori secondari*:
+  - Google.
+- *Scenario principale*:
+ - Utente:
+   - apre la configurazione dei servizi Google (@gestione-servizi-google);
+   - inserisce delle credenziali Google (@inserimento-credenziali-google).
+ - Sistema:
+   1. verifica se un account Google è già collegato;
+   2. se è collegato, permette all'utente di rimuoverlo (@rimozione-account-google-associato);
+   3. se non è collegato, chiede all'utente di accedere a Google (@inserimento-credenziali-google);
+   4. se si verifica un errore nella comunicazione mostra un messaggio d'errore (@errore-comunicazione-google);
+
+- *Pre-condizioni*:
+   - L'utente è autenticato;
+- *Post-condizioni*:
+   - L'utente ha associato o rimosso un account Google.
+- *Estensioni*:
+  - Inserimento credenziali Google (@inserimento-credenziali-google);
+  - Errore comunicazione Google (@errore-comunicazione-google).
+
+=== Rimozione account Google associato <rimozione-account-google-associato>
+- *Attori principali*:
+  - Utente.
+- *Attori secondari*:
+  - Google.
+- *Scenario principale*:
+ - Utente:
+   - avvia la procedura di rimozione dell'account Google associato.
+ - Sistema:
+   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow (@rimozione-account-google-associato);
+   2. notifica il completamento dell'operazione;
+   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
+
+- *Pre-condizioni*:
+   - L'utente è autenticato;
+   - L'utente ha associato un account Google.
+- *Post-condizioni*:
+   - L'utente non ha associato un account Google.
+
+=== Inserimento credenziali Google <inserimento-credenziali-google>
+- *Attori principali*:
+  - Utente.
+- *Attori secondari*:
+  - Google.
+- *Scenario principale*:
+ - Utente:
+   - avvia la procedura di associazione di un account Google;
+   - inserisce le credenziali dell'account Google che vuole collegare.
+ - Sistema:
+   1. mostra la finestra di Google per la configurazione dell'account;
+   2. notifica il completamento dell'operazione;
+   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
+
+- *Pre-condizioni*:
+   - L'utente è autenticato;
+   - L'utente non ha associato un account Google.
+- *Post-condizioni*:
+   - L'utente ha associato l'account Google di cui ha inserito le credenziali.
+
+=== Errore comunicazione con Google <errore-comunicazione-google>
+- *Attori principali*:
+  - Utente.
+- *Attori secondari*:
+  - Google.
+- *Scenario principale*:
+ - Utente:
+   - compie un'azione per la gestione dell'account Google associato (@gestione-servizi-google).
+ - Sistema:
+   1. notifica all'utente l'errore di comunicazione con Google e il mancato completamento dell'operazione corrente.
+
+- *Pre-condizioni*:
+   - Si verifica un errore di comunicazione con i sistemi di Google.
+- *Post-condizioni*:
+   - Il sistema notifica l'errore all'utente.
+
 === Esecuzione workflow <esecuzione-workflow>
 
 #figure(
