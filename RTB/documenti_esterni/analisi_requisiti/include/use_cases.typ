@@ -457,3 +457,138 @@
    - Si verifica un errore di comunicazione con i sistemi di Google.
 - *Post-condizioni*:
    - Il sistema notifica l'errore all'utente.
+
+=== Esecuzione workflow <esecuzione-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
+    edge(<a>, <b>),
+
+    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <b>),
+
+    node((1.7,0), align(center)[
+            @esecuzione-workflow Esecuzione workflow 
+    ], shape: ellipse, name: <b>),
+
+    node((1,0.6), align(center)[
+             @controllo-workflow Controllo workflow
+    ], shape: ellipse, name: <c>),
+    edge(<b>, <c>, "-->", [\<\<include\>\>]),
+
+    node((1,1.4), align(center)[
+            @vis-errore-workflow Vis. errore workflow
+    ], shape: ellipse, name: <d>),
+    edge(<d>, <c>, "-->", [\<\<extend\>\>]),
+
+    node((1.7,1), align(center)[
+            @vis-errore-runtime Vis. errore runtime
+    ], shape: ellipse, name: <e>),
+    edge(<e>, <b>, "-->", [\<\<extend\>\>]),
+
+    node((2.5,0.6), align(center)[
+            @vis-risultato-esecuzione Vis. risultato esecuzione
+    ], shape: ellipse, name: <f>),
+    edge(<b>, <f>, "-->", [\<\<include\>\>]),
+
+    node(enclose: (<b>,<c>,<d>,<e>,<f>),
+        align(top + right)[Sistema],
+        width: 200pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Esecuzione workflow UC diagram.]
+) <esecuzione-diagram>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Attori secondari*:
+  - LLM.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. esegue il workflow.
+ - Sistema:
+   1. controlla che l'intero workflow sia valido (@controllo-workflow);
+   2. attende l'esito del controllo;
+   3. inoltra i dati all'agente che si interfaccia ad un LLM;
+   4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
+- *Pre-condizioni*:
+   - L'utente è autenticato;
+   - L'utente ha creato un workflow con almeno due blocchi.
+- *Post-condizioni*:    
+  - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
+- *Estensioni*:
+  - Visualizzazione errore runtime (@vis-errore-runtime).
+
+==== Controllo workflow <controllo-workflow>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. esegue il workflow in @esecuzione-workflow.
+  - Sistema:
+    1. controlla che il workflow sia valido;
+    2. ritorna l'esito del controllo.
+- *Pre-condizioni*:
+  - L'utente ha creato un workflow valido.
+- *Post-condizioni*:
+  - Restituisce l'esito del controllo.
+- *Estensioni*
+  - Visualizzazione errore workflow (@vis-errore-workflow).
+
+==== Visualizzazione risultato esecuzione <vis-risultato-esecuzione>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. esegue il workflow in @esecuzione-workflow.
+  - Sistema:
+    1. riceve il risultato dell'operazione da @esecuzione-workflow;
+    2. mostra il risultato all'utente.
+- *Pre-condizioni*:
+  - L'esecuzione termina senza errori.
+- *Post-condizioni*:
+  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
+
+=== Visualizzazione errore workflow <vis-errore-workflow>
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. esegue il workflow in @esecuzione-workflow.
+  - Sistema:
+    1. il controllo in @controllo-workflow non ha successo;
+    2. mostra un messaggio d'errore all'utente;
+    3. termina l'esecuzione.
+- *Pre-condizioni*:
+  - L'utente ha creato un workflow senza rispettare i vincoli.
+- *Post-condizioni*:
+  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
+
+=== Visualizzazione errore runtime <vis-errore-runtime>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. esegue il workflow in @esecuzione-workflow.
+  - Sistema:
+    1. risconta un problema durante l'esecuzione di @esecuzione-workflow;
+    2. non conclude l'operazione;
+    3. mostra un messaggio d'errore all'utente.
+- *Pre-condizioni*:
+  - L'utente è autenticato.
+- *Post-condizioni*:
+  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
+
+  
+
