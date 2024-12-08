@@ -328,8 +328,8 @@
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - L'utente non possiede un account.
-  - Viene mostrato un messaggio d'errore esplicativo.
+  - L'utente non possiede un account;
+  - Viene mostrato un messaggio d'errore esplicativo;
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
 
