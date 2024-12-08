@@ -248,7 +248,7 @@
    3. inoltra i dati all'agente che si interfaccia ad un LLM;
    4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
 - *Pre-condizioni*:
-   - L'utente è autenticato.
+   - L'utente è autenticato;
    - L'utente ha creato un workflow con almeno due blocchi.
 - *Post-condizioni*:    
   - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
