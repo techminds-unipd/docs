@@ -39,8 +39,18 @@
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
-    node((4,0.5), [#image("../assets/actor.jpg") Database], stroke: 0pt, name: <db>),
-    edge(<db>, <b>),
+
+    node((3,-0.25), align(center)[
+            @inserimento-username Inserimento username
+    ], shape: ellipse, name: <e>),
+
+    edge(<b>, <e>, "--straight", [\<\<include\>\>]),
+
+    node((3,0.25), align(center)[
+            @inserimento-password Inserimento password
+    ], shape: ellipse, name: <f>),
+
+    edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node((2,0), align(center)[
             @login Login
@@ -58,10 +68,10 @@
 
     edge(<d>, <b>, marks: (none,empty-dash)),
 
-    node(enclose: (<b>,<c>,<d>),
+    node(enclose: (<b>,<c>,<d>,<e>,<f>),
         align(top + right)[Sistema],
         width: 200pt,
-        height: 200pt,
+        height: 250pt,
         snap: -1,
         name: <group>)
     ),
@@ -71,23 +81,22 @@
 
 - *Attori principali*:
   - Utente.
-- *Attori secondari*:
-  - Database.
 - *Scenario principale*:
  - Utente:
+   - avvia la procedura di login;
    - inserisce lo username (@inserimento-username);
    - inserisce la password (@inserimento-password).
  - Sistema:
-   1. verifica che le credenziali dell'utente siano corrette;
-   2. se la verifica ha successo viene assegnata una sessione all'utente;
-   3. se le credenziali sono sbagliate si mostra un messaggio d'errore (@credenziali-errate).
+   1. attende esito verifica delle credenziali da @inserimento-username e @inserimento-password;
+   2. la verifica ha successo;
+   3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
    - L'utente possiede un account;
    - L'utente non è già autenticato.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
-  - Credenziali errate (@credenziali-errate)
+  - Credenziali errate (@credenziali-errate).
 - *Generalizzazioni*:
   - Login Google (@login-google).
 
@@ -127,12 +136,11 @@
   - Utente.
 - *Scenario principale*:
  - Utente:
-   - inserisce lo username;
-   - inserisce la password;
+   - l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
  - Sistema:
-   1. verifica che le credenziali dell'utente siano corrette;
-   2. la verifica non ha successo;
-   3. viene visualizzato un messaggio d'errore.
+    1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
+    2. mostra un messaggio d'errore;
+    3. dà la possibilità all'utente di riprovare il login.
 - *Pre-condizioni*:
    - L'utente possiede un account;
    - L'utente non è già autenticato.
@@ -181,7 +189,7 @@
    1. redirige l'utente ai servizi di Google;
    2. controlla che il login con i servizi di Google sia avvenuto correttamente.
 - *Pre-condizioni*:
-   - L'utente possiede un account Google.
+   - L'utente possiede un account Google;
    - L'utente non è già autenticato.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
