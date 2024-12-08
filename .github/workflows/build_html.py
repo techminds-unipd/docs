@@ -4,7 +4,15 @@ def build_link(path):
     link = os.path.abspath(path).replace(repo_dir, "").replace("/build/", "")
     name = os.path.basename(path).replace(".pdf","")
     name = name[0].upper() + name[1:]
+    name = format_name(name)
     return "<li><a href=\"{}\" target=\"_blank\" >{}</a> <i class=\"fa-solid fa-arrow-up-right-from-square\"></i></li>\n".format(link, name)
+
+#Questa funzione funziona solo se teniamo i nomi dei documenti come sono ora.
+def format_name(name):
+    name=name.replace("-"," ")
+    if name[0].isdigit():
+        name = name.replace(" ", "/", 2)
+    return name
 
 repo_dir = os.environ['GITHUB_WORKSPACE']
 
