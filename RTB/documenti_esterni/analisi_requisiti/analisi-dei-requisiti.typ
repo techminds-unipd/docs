@@ -4,6 +4,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.2.4", "06/12/2024", "Completati use cases esecuzione workflow", team.S, team.C,
     "0.2.3", "05/12/2024", "Completati use cases relativi alla gestione dei servizi Google", team.L, team.A,
     "0.2.2", "04/12/2024", "Completato use case della registrazione", team.S, team.C,
     "0.2.1", "04/12/2024", "Completato use case del Login con le varie estensioni e generalizzazioni", team.G, team.A,
