@@ -24,8 +24,9 @@ Nella seguente sezione vengono riportati i preventivi per ogni sprint. I costi s
 <tabella-PreventivoSprint1> \
 #pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint1> \
-- Spiegazione:
-In questo primo sprint, prevediamo di studiare le tecnologie suggerite dall'azienda ed iniziare l'analisi dei requisiti. Il lavoro è stato distribuito in modo equo tra i membri del team, con un'attenzione particolare alla fase di analisi e alla stesura della documentazione. Le ore produttive preventivate non contano le ore di autoformazione, che vengono considerate ore di allenamento.
+
+==== Spiegazione
+In questo primo sprint prevediamo di studiare le tecnologie suggerite dall'azienda ed iniziare l'analisi dei requisiti. Il lavoro è stato distribuito in modo equo tra i membri del team, con un'attenzione particolare alla fase di analisi e alla stesura della documentazione. Le ore produttive preventivate non contano le ore di autoformazione, che vengono considerate ore di allenamento.
 ==== Consuntivo
 
 I numeri tra parentesi indicano le variazioni rispetto al preventivo.
@@ -42,7 +43,6 @@ I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 <tabella-ConsuntivoSprint1> \
 #pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
 <grafico-ConsuntivoSprint1> \
-- Spiegazione:
 
 === Sprint 2
 ==== Preventivo
