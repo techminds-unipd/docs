@@ -32,10 +32,20 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
 //todo inserire screenshot del diagramma di Gantt 
 
 - Review:
-//da fare a fine sprint
+Sono stati completati quasi tutti i task presenti nello sprint backlog tranne due task relativi alle tecnologie, ovvero Typescript #link("https://github.com/techminds-unipd/docs/issues/65")[\#65] e MongoDB #link("https://github.com/techminds-unipd/docs/issues/67")[\#67], entrambi sotto-task del task #link("https://github.com/techminds-unipd/docs/issues/60")[\#60].
+#linebreak()Nel complesso in questo primo sprint si è sottostimato un po' lo studio delle tecnologie.
 
 - Retrospettiva:
-//da fare a fine sprint
+Viste le varie difficoltà nella scrittura dei casi d'uso (e non solo) sono state prese le seguenti decisioni:
+#list(
+    indent: 10pt,
+    marker: [‣],
+    [è possibile rompere le convenzioni interne quando potrebbe agevolare o velocizzare i lavori. Ad esempio sarà permesso creare un branch di feature per l'analisi dei requisiti da usare come branch padre per i branch di feature dell'analisi, rompendo la convenzione del GitHub Flow;],
+    [per approfondire i casi d'uso si userà ad esempio il frontend come attore e il backend come sistema, in modo da non andare in conflitto con la definizione di attore (se il sistema non fosse solo il backend, in questo caso l'attore risulterebbe parte del sistema);],
+    [nei sotto-casi d'uso, ovvero quelli inclusi in altri con la clausola UML \<\<include\>\>, l'attore principale sarà lo stesso del caso d'uso padre;],
+    [nelle estensioni di un caso d'uso e nei sotto-casi d'uso non si ripetono le azioni avvenute nello use case da cui derivano, ma piuttosto vanno indicate con un link all'azione;],
+    [la verifica risulta molto onerosa dato che ci sono tante convenzioni interne per la scrittura dei documenti, quindi verrà creata una checklist per agevolare i verificatori.]
+)
 
 === Sprint 2
 
