@@ -31,12 +31,14 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
 
 - Diagramma di Gantt:
 Questo digramma mostra come sono avvenute le attività nell'arco temporate dello sprint.
+Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
 #linebreak()I colori sono significativi:
 #list(
     indent: 10pt,
     marker: [‣],
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica che il task è stato effettuato nell'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica che non si è concluso a fine sprint;],
+[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
+[il #underline("verde", stroke: 1pt + green, evade: false) indica il tempo risparmiato rispetto al preventivato;],
+[il #underline("rosso", stroke: 1pt + red, evade: false) indica il tempo sforato rispetto al preventivato;],
 [il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
 )
 
@@ -46,35 +48,36 @@ timeliney.timeline(
   {
     import timeliney: *
 
-    headerline(group(([*Novembre 2024*], 13)), group(([*Dicembre 2024*], 6)))
+    headerline(group(([*Novembre 2024*], 10)), group(([*Dicembre 2024*], 5)))
     headerline(
-      group(..range(13).map(n => strong(str(n + 18)))),
-      group(..range(6).map(n => strong(str(n + 1)))),
+      group(..range(5).map(n => strong(str(n + 18)))),
+      group(..range(5).map(n => strong(str(n + 18+7)))),
+      group(..range(5).map(n => strong(str(n + 2)))),
     )
 
     taskgroup(title: [*Autoformazione*], {
-      task("React", (from: 0, to: 13+6, style: (stroke: 2pt + gray)))
-      task("Node.js", (from: 0, to: 13+6, style: (stroke: 2pt + gray)))
-      task("Typescript", (from: 0, to: 13+6, style: (stroke: 2pt + red)))
-      task("MongoDB", (from: 0, to: 13+6, style: (stroke: 2pt + red)))
+      task("React", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
+      task("Node.js", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
+      task("Typescript", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
+      task("MongoDB", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Analisi dei requisiti*], {
-      task("Redazione diagrammi UC", (from: 11, to: 13+6, style: (stroke: 2pt + gray)))
-      task("User Story 1", (from: 13+1, to: 13+4, style: (stroke: 2pt + gray)))
-      task("User Story 2", (from: 13+1, to: 13+4, style: (stroke: 2pt + gray)))
-      task("User Story 3", (from: 13+1, to: 13+5, style: (stroke: 2pt + gray)))
-      task("User Story 4", (from: 13+3, to: 13+6, style: (stroke: 2pt + gray)))
-      task("User Story 5", (from: 13+3, to: 13+6, style: (stroke: 2pt + gray)))
+      task("Redazione diagrammi UC", (from: 9, to: 14, style: (stroke: 2pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
+      task("User Story 1", (from: 10, to: 12, style: (stroke: 2pt + gray)), (from: 12, to: 13, style: (stroke: 2pt + red)))
+      task("User Story 2", (from: 10, to: 13, style: (stroke: 2pt + gray)))
+      task("User Story 3", (from: 10, to: 14, style: (stroke: 2pt + gray)))
+      task("User Story 4", (from: 12, to: 15, style: (stroke: 2pt + gray)))
+      task("User Story 5", (from: 12, to: 14, style: (stroke: 2pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
     })
 
     task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 2pt + gray)))
     task("Sostituire termini glossario", (from: 1, to: 4, style: (stroke: 2pt + gray)))
-    task("Inizio analisi dei rischi", (from: 4, to: 7, style: (stroke: 2pt + gray)))
-    task("Redazione sprint 1 PdP", (from: 10, to: 13+2, style: (stroke: 2pt + gray)))
-    task("Miglioramenti grafici documentazione", (from: 13+1, to: 13+2, style: (stroke: 2pt + gray)))
-    task("Rifinitura pagina HTML", (from: 13+5, to: 13+6, style: (stroke: 2pt + gray)))
-    task("Fix use case", (from: 13+5, to: 13+6, style: (stroke: 2pt + gray)))
+    task("Inizio analisi dei rischi", (from: 4, to: 5, style: (stroke: 2pt + gray)))
+    task("Redazione sprint 1 PdP", (from: 7, to: 11, style: (stroke: 2pt + gray)))
+    task("Miglioramenti grafici documentazione", (from: 10, to: 11, style: (stroke: 2pt + gray)))
+    task("Rifinitura pagina HTML", (from: 14, to: 15, style: (stroke: 2pt + gray)))
+    task("Fix use case", (from: 14, to: 15, style: (stroke: 2pt + gray)))
   }
 ),
 caption: [Diagramma Gantt sprint 1.]
