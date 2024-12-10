@@ -27,15 +27,15 @@ Nella seguente sezione vengono riportati i preventivi per ogni sprint. I costi s
 - Spiegazione:
 In questo primo sprint, prevediamo di studiare le tecnologie suggerite dall'azienda ed iniziare l'analisi dei requisiti. Il lavoro è stato distribuito in modo equo tra i membri del team, con un'attenzione particolare alla fase di analisi e alla stesura della documentazione. Le ore produttive preventivate non contano le ore di autoformazione, che vengono considerate ore di allenamento.
 ==== Consuntivo
-/*
+
 I numeri tra parentesi indicano le variazioni rispetto al preventivo.
-#let bressan = ("25 (+5)", "10 (-1)", 10, 10, 10, 10)
-#let corradin = (1, 0, 0, 0, 0, 0)
-#let lazzarin = (1, "1 (+1)", 0, 0, 0, 0)
-#let salviato = (0, 0, 0, 0, 0, 0)
-#let squarzoni = (0, 0, 0, "1 (-1)", 0, 0)
-#let tutino = (10, 0, 0, 0, 0, 0)
-#let vallotto = (0, 0, 0, 0, 1, 0)
+#let bressan = (0, 0, 0, 0, 0, "4 (+1)")
+#let corradin = (0, 0, 3, 0, 0, 0)
+#let lazzarin = (0, "5 (+1)", 0, 0, 0, 0)
+#let salviato = (0, 0, "2 (-2)", 0, 0, 0)
+#let squarzoni = ("4 (+1)", "1 (+1)", 0, 0, 0, "1 (+1)")
+#let tutino = (0, "2 (+2)", "3 (-1)", 0, 0, 0)
+#let vallotto = (0, 0, 0, 0, 0, "5 (+2)")
 
 #let bilancioConsuntivo = calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo)
 #tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
@@ -43,7 +43,7 @@ I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 #pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
 <grafico-ConsuntivoSprint1> \
 - Spiegazione:
-*/
+
 === Sprint 2
 ==== Preventivo
 
