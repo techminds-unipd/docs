@@ -1,5 +1,6 @@
 #import "/template/template.typ": documento,team
 
+#set outline(depth: 3)
 #show: documento.with(
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",

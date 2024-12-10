@@ -7,7 +7,7 @@ In questa sezione verranno elencati i periodi di lavoro suddivisi per le milesto
 In seguito all'assegnazione del capitolato, abbiamo constatato che fosse prematuro cominciare il primo sprint senza avere avuto un primo contatto con il proponente. In attesa quindi dell'incontro con l'azienda VarGroup, la prima settimana dall'11/11/2024 al 17/11/2024 è stata dedicata alla stesura della struttura dei documenti e alla definizione dei ruoli per il primo sprint. Questo periodo "pre-sprint" ci ha permesso di iniziare a prendere confidenza con i vari ruoli svolgendo un allenamento propedeutico al vero e proprio sprint.
 === Sprint 1
 - Durata: 18/11/2024 - 06/12/2024\
-- Pianificazione: 
+==== Pianificazione
 Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore a quelli successivi e verrà dedicato allo studio delle tecnologie necessarie per lo sviluppo del progetto. In accordo con il proponente, abbiamo deciso quindi di dare maggior priorità all'autoformazione sulle nuove tecnologie. Sono anche stati concordati dei corsi di formazione in presenza con l'azienda, nelle date 26/11/2024 e 28/11/2024, ed un ulteriore corso a distanza il giorno 03/12/2024. Il tempo rimanente verrà poi dedicato alla stesura di una parte del documento di analisi dei requisiti. Inoltre andremo ad aggiornare il piano di progetto, in particolare la sezione “Analisi dei rischi”, ed il documento riguardante le norme di progetto.\
 
 - Ruoli:
@@ -29,13 +29,12 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
   - #link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69]: Inizio analisi dei rischi in piano di progetto;
   - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70]: Aggiornamento norme di progetto.
 
-- Diagramma di Gantt:
+==== Diagramma di Gantt
 Questo digramma mostra come sono avvenute le attività nell'arco temporate dello sprint.
 Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
 #linebreak()I colori sono significativi:
 #list(
     indent: 10pt,
-    marker: [‣],
 [il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
 [il #underline("verde", stroke: 1pt + green, evade: false) indica il tempo risparmiato rispetto al preventivato;],
 [il #underline("rosso", stroke: 1pt + red, evade: false) indica il tempo sforato rispetto al preventivato;],
@@ -83,15 +82,14 @@ timeliney.timeline(
 caption: [Diagramma Gantt sprint 1.]
 )
 
-- Review:
+==== Review
 Sono stati completati quasi tutti i task presenti nello sprint backlog tranne due task relativi alle tecnologie, ovvero Typescript #link("https://github.com/techminds-unipd/docs/issues/65")[\#65] e MongoDB #link("https://github.com/techminds-unipd/docs/issues/67")[\#67], entrambi sotto-task del task #link("https://github.com/techminds-unipd/docs/issues/60")[\#60].
 #linebreak()Nel complesso in questo primo sprint si è sottostimato un po' lo studio delle tecnologie.
 
-- Retrospettiva:
+==== Retrospettiva
 Viste le varie difficoltà nella scrittura dei casi d'uso (e non solo) sono state prese le seguenti decisioni:
 #list(
     indent: 10pt,
-    marker: [‣],
     [è possibile rompere le convenzioni interne quando potrebbe agevolare o velocizzare i lavori. Ad esempio sarà permesso creare un branch di feature per l'analisi dei requisiti da usare come branch padre per i branch di feature dell'analisi, rompendo la convenzione del GitHub Flow;],
     [per approfondire i casi d'uso si userà ad esempio il frontend come attore e il backend come sistema, in modo da non andare in conflitto con la definizione di attore (se il sistema non fosse solo il backend, in questo caso l'attore risulterebbe parte del sistema);],
     [nei sotto-casi d'uso, ovvero quelli inclusi in altri con la clausola UML \<\<include\>\>, l'attore principale sarà lo stesso del caso d'uso padre;],
