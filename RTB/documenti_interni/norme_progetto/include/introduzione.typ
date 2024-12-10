@@ -9,12 +9,18 @@ Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la ste
 I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
 
 == Scopo del prodotto
+Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l’intelligenza artificiale generativa,
+vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
+Il prodotto sarà un’app desktop che permetterà di costruire dei workflow i cui nodi sono dei servizi
+esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno
+l’automazione da effettuare in linguaggio naturale. Successivamente, un agente prenderà il workflow,
+interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
 == Riferimenti
 
-=== Riferimenti al capitolato
+=== Riferimenti normativi
 - #glossario[Capitolato] C3: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf").
 
-=== Riferimenti al materiale utilizzato
+=== Riferimenti informativi
 - T2 - Processi di ciclo di vita: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf");;
 - Docs as Code: #link("https://www.writethedocs.org/guide/docs-as-code/")<docs-as-code>.
