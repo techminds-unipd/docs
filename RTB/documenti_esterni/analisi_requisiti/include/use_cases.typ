@@ -705,3 +705,63 @@
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
+
+=== Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @visualizzazione-blocchi-configurati
+            Visualizzazione blocchi configurati
+    ], shape: ellipse, name: <a>),
+
+    node((2,0.5), align(center)[
+            @avviso-servizi-non-collegati Avviso servizi non collegati
+    ], shape: ellipse, name: <b>),
+    edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
+
+
+    node(enclose: (<a>,<b>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione blocchi configurati UC diagram.]
+) <visualizzazione-blocchi-configurati-diagram>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. Avvia la procedura di creazione di un nuovo workflow(@creazione-nuovo-workflow).
+ - Sistema:
+   1. Fa visualizzare i blocchi che hanno un account associato nella sezione dei blocchi configurati.
+- *Pre-condizioni*:
+   - L'utente ha almeno un servizio collegato.
+- *Post-condizioni*:
+   - L'utente visualizza i blocchi configurati.
+- *Estensioni*:
+   - Avviso servizi non collegati.
+
+=== Avviso servizi non collegati 
+<avviso-servizi-non-collegati>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Sistema:
+   1. Viene visualizzato un avviso.
+- *Pre-condizioni*:
+   - L'utente non ha nessun servizio collegato.
+- *Post-condizioni*:
+   - Viene segnalato all'utente che non ha nessun servizio collegato.
+   - L'utente viene rediretto alla pagina per collegare i servizio.
