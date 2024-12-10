@@ -69,6 +69,7 @@ timeliney.timeline(
       task("User Story 3", (from: 10, to: 14, style: (stroke: 2pt + gray)))
       task("User Story 4", (from: 12, to: 15, style: (stroke: 2pt + gray)))
       task("User Story 5", (from: 12, to: 14, style: (stroke: 2pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
+    task("Fix use case", (from: 14, to: 15, style: (stroke: 2pt + gray)))
     })
 
     task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 2pt + gray)))
@@ -77,7 +78,6 @@ timeliney.timeline(
     task("Redazione sprint 1 PdP", (from: 7, to: 11, style: (stroke: 2pt + gray)))
     task("Miglioramenti grafici documentazione", (from: 10, to: 11, style: (stroke: 2pt + gray)))
     task("Rifinitura pagina HTML", (from: 14, to: 15, style: (stroke: 2pt + gray)))
-    task("Fix use case", (from: 14, to: 15, style: (stroke: 2pt + gray)))
   }
 ),
 caption: [Diagramma Gantt sprint 1.]
@@ -96,7 +96,8 @@ Viste le varie difficoltà nella scrittura dei casi d'uso (e non solo) sono stat
     [per approfondire i casi d'uso si userà ad esempio il frontend come attore e il backend come sistema, in modo da non andare in conflitto con la definizione di attore (se il sistema non fosse solo il backend, in questo caso l'attore risulterebbe parte del sistema);],
     [nei sotto-casi d'uso, ovvero quelli inclusi in altri con la clausola UML \<\<include\>\>, l'attore principale sarà lo stesso del caso d'uso padre;],
     [nelle estensioni di un caso d'uso e nei sotto-casi d'uso non si ripetono le azioni avvenute nello use case da cui derivano, ma piuttosto vanno indicate con un link all'azione;],
-    [la verifica risulta molto onerosa dato che ci sono tante convenzioni interne per la scrittura dei documenti, quindi verrà creata una checklist per agevolare i verificatori.]
+    [la verifica risulta molto onerosa dato che ci sono tante convenzioni interne per la scrittura dei documenti, quindi verrà creata una checklist per agevolare i verificatori;],
+    [verificare che i termini del glossario siano correttamente indicati nei documenti richiede una quantità di tempo molto onerosa, quindi si cercherà di automatizzare questo controllo.]
 )
 
 === Sprint 2
