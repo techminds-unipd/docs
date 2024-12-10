@@ -1,4 +1,5 @@
 #import "/template/template.typ": glossario,team
+#import "@preview/timeliney:0.1.0"
 
 = Periodi
 In questa sezione verranno elencati i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello SCRUM. 
@@ -29,7 +30,55 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
   - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70]: Aggiornamento norme di progetto.
 
 - Diagramma di Gantt:
-//todo inserire screenshot del diagramma di Gantt 
+Questo digramma mostra come sono avvenute le attività nell'arco temporate dello sprint.
+#linebreak()I colori sono significativi:
+#list(
+    indent: 10pt,
+    marker: [‣],
+[il #underline("grigio", stroke: 1pt + gray, evade: false) indica che il task è stato effettuato nell'arco di tempo preventivato;],
+[il #underline("rosso", stroke: 1pt + red, evade: false) indica che non si è concluso a fine sprint;],
+[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
+)
+
+#figure(
+timeliney.timeline(
+  show-grid: true,
+  {
+    import timeliney: *
+
+    headerline(group(([*Novembre 2024*], 13)), group(([*Dicembre 2024*], 6)))
+    headerline(
+      group(..range(13).map(n => strong(str(n + 18)))),
+      group(..range(6).map(n => strong(str(n + 1)))),
+    )
+
+    taskgroup(title: [*Autoformazione*], {
+      task("React", (from: 0, to: 13+6, style: (stroke: 2pt + gray)))
+      task("Node.js", (from: 0, to: 13+6, style: (stroke: 2pt + gray)))
+      task("Typescript", (from: 0, to: 13+6, style: (stroke: 2pt + red)))
+      task("MongoDB", (from: 0, to: 13+6, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Analisi dei requisiti*], {
+      task("Redazione diagrammi UC", (from: 11, to: 13+6, style: (stroke: 2pt + gray)))
+      task("User Story 1", (from: 13+1, to: 13+4, style: (stroke: 2pt + gray)))
+      task("User Story 2", (from: 13+1, to: 13+4, style: (stroke: 2pt + gray)))
+      task("User Story 3", (from: 13+1, to: 13+5, style: (stroke: 2pt + gray)))
+      task("User Story 4", (from: 13+3, to: 13+6, style: (stroke: 2pt + gray)))
+      task("User Story 5", (from: 13+3, to: 13+6, style: (stroke: 2pt + gray)))
+    })
+
+    task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 2pt + gray)))
+    task("Sostituire termini glossario", (from: 1, to: 4, style: (stroke: 2pt + gray)))
+    task("Inizio analisi dei rischi", (from: 4, to: 7, style: (stroke: 2pt + gray)))
+    task("Redazione sprint 1 PdP", (from: 10, to: 13+2, style: (stroke: 2pt + gray)))
+    task("Miglioramenti grafici documentazione", (from: 13+1, to: 13+2, style: (stroke: 2pt + gray)))
+    task("Rifinitura pagina HTML", (from: 13+5, to: 13+6, style: (stroke: 2pt + gray)))
+    task("Fix use case", (from: 13+5, to: 13+6, style: (stroke: 2pt + gray)))
+  }
+),
+caption: [Diagramma Gantt sprint 1.]
+)
 
 - Review:
 Sono stati completati quasi tutti i task presenti nello sprint backlog tranne due task relativi alle tecnologie, ovvero Typescript #link("https://github.com/techminds-unipd/docs/issues/65")[\#65] e MongoDB #link("https://github.com/techminds-unipd/docs/issues/67")[\#67], entrambi sotto-task del task #link("https://github.com/techminds-unipd/docs/issues/60")[\#60].
