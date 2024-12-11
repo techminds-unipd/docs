@@ -340,10 +340,8 @@
   - Viene mostrato un messaggio d'errore esplicativo;
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
-
-
-
-=== Gestione servizi Google <gestione-servizi-google>
+=== Aggiunta account Google associato
+<aggiunta-account-google>
 #figure(
     diagram(
     debug: false,
@@ -351,123 +349,117 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0.5,0.1), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
-    node((3.35,0.1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
+    node((3.5,0.5), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
     edge(<google>, <b>),
 
-    node((1.5,0.65), align(center)[
-        @rimozione-account-google-associato Rimozione account \ Google associato
-    ], shape: ellipse, name: <e>, inset: 10pt),
-
-    node((2,0), align(center)[
-            @gestione-servizi-google Gestione servizi Google
+    node((2,0.5), align(center)[
+             @aggiunta-account-google Aggiunta account Google associato
     ], shape: ellipse, name: <b>, inset: 10pt),
 
-    node((2,1.25), align(center)[
-            @inserimento-credenziali-google Inserimento\ credenziali Google
-    ], shape: ellipse, name: <c>, inset: 10pt),
+    node((2,1.3), align(center)[
+            @errore-comunicazione-google Errore comunicazione Google
+    ], shape: ellipse, name: <e>, inset: 10pt),
+    edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
-    node((2.5,0.8), align(center)[
-            @errore-comunicazione-google Errore comunicazione \ Google
-    ], shape: ellipse, name: <d>, inset: 10pt),
+    node((1.6,0.9), align(center)[
+            Google trasmette #linebreak() un errore
+    ], shape: rect, name: <le>),
+    node((2,0.9), align(center)[
+    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
 
-    edge(<c>, <b>, "--straight", [\<\<extend\>\>], label-side: right),
-
-    edge(<d>, <b>, "--straight", [\<\<extend\>\>], label-side: right),
-
-    edge(<e>, <b>, "--straight", [\<\<extend\>\>], label-side: left),
-
-    node(enclose: (<b>,<c>, <d>, <e>),
+    node(enclose: (<b>,<e>,<le>,<nf>),
         align(top + right)[Sistema],
-        width: 200pt,
+        width: 300pt,
         height: 200pt,
         snap: -1,
         name: <group>)
     ),
-    caption: [Associazione servizi Google UC diagram.]
-) <associazione-servizi-google-diagram>
-
+    caption: [Aggiunta account Google diagram.]
+) <aggiunta-account-google-diagram>
+- *Descrizione*: 
+  - Questo caso d'uso descrive la procedura di aggiunta di un account Google associato all'utente autenticato.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
  - Utente:
-   - apre la configurazione dei servizi Google (@gestione-servizi-google);
-   - inserisce delle credenziali Google (@inserimento-credenziali-google).
+   1. avvia la procedura di associazione di un account Google;
  - Sistema:
-   1. verifica se un account Google è già collegato;
-   2. se è collegato, permette all'utente di rimuoverlo (@rimozione-account-google-associato);
-   3. se non è collegato, chiede all'utente di accedere a Google (@inserimento-credenziali-google);
-   4. se si verifica un errore nella comunicazione mostra un messaggio d'errore (@errore-comunicazione-google);
-
+   1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
+   2. attende il completamento dell'operazione;
+   3. l'operazione ha esito positivo.
 - *Pre-condizioni*:
-   - L'utente è autenticato;
-- *Post-condizioni*:
-   - L'utente ha associato o rimosso un account Google.
-- *Estensioni*:
-  - Inserimento credenziali Google (@inserimento-credenziali-google);
-  - Errore comunicazione Google (@errore-comunicazione-google).
-
-=== Rimozione account Google associato <rimozione-account-google-associato>
-- *Attori principali*:
-  - Utente.
-- *Attori secondari*:
-  - Google.
-- *Scenario principale*:
- - Utente:
-   - avvia la procedura di rimozione dell'account Google associato.
- - Sistema:
-   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow (@rimozione-account-google-associato);
-   2. notifica il completamento dell'operazione;
-   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
-
-- *Pre-condizioni*:
-   - L'utente è autenticato;
-   - L'utente ha associato un account Google.
-- *Post-condizioni*:
-   - L'utente non ha associato un account Google.
-
-=== Inserimento credenziali Google <inserimento-credenziali-google>
-- *Attori principali*:
-  - Utente.
-- *Attori secondari*:
-  - Google.
-- *Scenario principale*:
- - Utente:
-   - avvia la procedura di associazione di un account Google;
-   - inserisce le credenziali dell'account Google che vuole collegare.
- - Sistema:
-   1. mostra la finestra di Google per la configurazione dell'account;
-   2. notifica il completamento dell'operazione;
-   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
-
-- *Pre-condizioni*:
-   - L'utente è autenticato;
    - L'utente non ha associato un account Google.
 - *Post-condizioni*:
    - L'utente ha associato l'account Google di cui ha inserito le credenziali.
 
 === Errore comunicazione con Google <errore-comunicazione-google>
+- *Descrizione*: 
+  - Questo caso d'uso descrive la procedura di gestione dell'errore di comunicazione con Google.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
  - Utente:
-   - compie un'azione per la gestione dell'account Google associato (@gestione-servizi-google).
+   1. avvia la procedura di associazione di un account Google;
  - Sistema:
-   1. notifica all'utente l'errore di comunicazione con Google e il mancato completamento dell'operazione corrente.
-
+   1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
+   2. attende il completamento dell'operazione;
+   3. l'operazione ha esito negativo.
+   4. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-   - Si verifica un errore di comunicazione con i sistemi di Google.
+   - L'utente non ha associato un account Google.
 - *Post-condizioni*:
    - Il sistema notifica l'errore all'utente.
+   - L'utente può riprovare ad associare l'account Google.
+
+=== Rimozione account Google associato <rimozione-account-google-associato>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
+    edge(<a>, <b>),
+
+    node((2,0.5), align(center)[
+             @rimozione-account-google-associato Rimozione account Google associato
+    ], shape: ellipse, name: <b>, inset: 10pt),
+
+
+    node(enclose: (<b>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Rimozione account Google diagram.]
+) <rimozione-account-google-diagram>
+- *Descrizione*: 
+  - Questo caso d'uso descrive la procedura di rimozione dell'account Google associato all'utente autenticato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente:
+   1. avvia la procedura di rimozione dell'account Google associato.
+ - Sistema:
+   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow.
+   2. mostra un messaggio di conferma all'utente;
+- *Pre-condizioni*:
+   - L'utente ha associato un account Google.
+- *Post-condizioni*:
+   - L'utente non ha più un account Google associato.
 
 === Esecuzione workflow <esecuzione-workflow>
-
 #figure(
     diagram(
     debug: false,
