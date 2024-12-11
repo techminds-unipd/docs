@@ -341,7 +341,7 @@
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
 === Aggiunta account Google associato
-<aggiunta-account-google>
+<aggiunta-account-google-associato>
 #figure(
     diagram(
     debug: false,
@@ -356,7 +356,7 @@
     edge(<google>, <b>),
 
     node((2,0.5), align(center)[
-             @aggiunta-account-google Aggiunta account Google associato
+             @aggiunta-account-google-associato Aggiunta account Google associato
     ], shape: ellipse, name: <b>, inset: 10pt),
 
     node((2,1.3), align(center)[
@@ -397,6 +397,8 @@
    - L'utente non ha associato un account Google.
 - *Post-condizioni*:
    - L'utente ha associato l'account Google di cui ha inserito le credenziali.
+- *Estensioni*:
+  - Errore comunicazione Google (@errore-comunicazione-google).
 
 === Errore comunicazione con Google <errore-comunicazione-google>
 - *Descrizione*: 
