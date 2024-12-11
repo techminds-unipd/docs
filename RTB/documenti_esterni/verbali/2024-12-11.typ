@@ -11,12 +11,12 @@
   ordine_giorno: ("Discussione sull'analisi dei requisiti", "Discussione PoC", "Prossimi incontri per Design Thinking e allineamento periodico"),
   riassunto: [Dopo la fine dello sprint 1 abbiamo deciso di incontrarci con l'azienda per visionare il lavoro svolto (principalmente nell'analisi dei requisiti).
              Abbiamo mostrato l'attuale analisi dei requisiti, anche se con degli errori presenti all'interno, accordandoci su quali requisiti bisogna avere come obbligatori e quali possono essere tralasciati e messi come opzionali.
-             Abbiamo concordato che ai fini del progetto il login non è un requisito necessario, visto che l'applicazione potrebbe eseguire in locale sulla macchina dell'utilizzatore e salvare tutti i workflow creati direttamente in locale.
+             Abbiamo concordato che ai fini del progetto il login non è un requisito necessario, visto che l'applicazione potrebbe venire eseguita in locale sulla macchina dell'utilizzatore e salvare tutti i workflow creati direttamente in locale.
              Gli altri requisiti riguardanti i workflow sono risultati validi ma dobbiamo ancora lavorare su alcuni use case relativi ai blocchi di automazione scelti (mail, drive e calendario).
 
-             Successivamente abbiamo deciso quali funzionalità dovrà implementare il PoC. Abbiamo concordato che sarà sufficiente realizzare una webapp che permetta di creare dei semplici workflow (semplici nel senso che non siano troppo densi a livello di archi/nodi) con un drag&drop. Tali workflows dovranno essere eseguiti tramite un'agente.
+             Successivamente abbiamo deciso quali funzionalità dovrà implementare il PoC. Abbiamo concordato che sarà sufficiente realizzare una webapp che permetta di creare dei semplici workflow (semplici nel senso che non siano troppo densi a livello di archi/nodi) con un drag&drop. Tali workflow dovranno essere eseguiti tramite un agente.
 
-             Riguardo ai prossimi incontri, si fisserà l'incontro per il Design Thinking a gennaio e, sempre nello stesso mese, si inizierà ad avere degli incontri più frequenti (ogni due settimane circa) per allinearci sul lavoro svolto ed evitare di perdere i contatti.
+             Riguardo ai prossimi incontri con l'azienda, si fisserà l'incontro per il Design Thinking a gennaio e, sempre nello stesso mese, si inizierà ad avere degli incontri più frequenti (ogni due settimane circa) per allinearci sul lavoro svolto ed evitare di perdere i contatti.
   ],
   decisioni: (
     ([Analisi dei requisiti],
