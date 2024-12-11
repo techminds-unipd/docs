@@ -19,7 +19,8 @@ interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workf
 == Riferimenti
 
 === Riferimenti normativi
-- #glossario[Capitolato] C3: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf").
+- #glossario[Capitolato] C3: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf");
+- L'ISO/IEC 12207: 1995: #link("https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf").
 
 === Riferimenti informativi
 - T2 - Processi di ciclo di vita: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf");;
