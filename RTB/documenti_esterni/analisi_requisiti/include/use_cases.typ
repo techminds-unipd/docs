@@ -388,9 +388,9 @@
   - Google.
 - *Scenario principale*:
  - Utente:
-   1. avvia la procedura di associazione di un account Google;
+   1. avvia la procedura di associazione di un account Google.
  - Sistema:
-   1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
+   1. redirige l'utente alla finestra di Google per l'aggiunta dell'account da associare all'esecuzione dei blocchi nei workflow;
    2. attende il completamento dell'operazione;
    3. l'operazione ha esito positivo.
 - *Pre-condizioni*:
@@ -409,16 +409,16 @@
   - Google.
 - *Scenario principale*:
  - Utente:
-   1. avvia la procedura di associazione di un account Google;
+   1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
    2. attende il completamento dell'operazione;
-   3. l'operazione ha esito negativo.
+   3. l'operazione ha esito negativo;
    4. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
    - L'utente non ha associato un account Google.
 - *Post-condizioni*:
-   - Il sistema notifica l'errore all'utente.
+   - Il sistema notifica l'errore all'utente;
    - L'utente può riprovare ad associare l'account Google.
 
 === Rimozione account Google associato <rimozione-account-google-associato>
@@ -454,8 +454,8 @@
  - Utente:
    1. avvia la procedura di rimozione dell'account Google associato.
  - Sistema:
-   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow.
-   2. mostra un messaggio di conferma all'utente;
+   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow;
+   2. mostra un messaggio di conferma all'utente.
 - *Pre-condizioni*:
    - L'utente ha associato un account Google.
 - *Post-condizioni*:
