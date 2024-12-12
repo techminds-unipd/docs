@@ -4,7 +4,7 @@
   title: "Verbale esterno del 11/12/2024",
   sommario: "Allineamento con l'azienda.",
   changelog: (
-    "1.0.0", "11/12/2024", "Prima versione", team.G, ""
+    "1.0.0", "11/12/2024", "Prima versione", team.G, team.L
   ),
   durata_luogo: ("14:30", "15:30", "incontro su piattaforma Microsoft Teams"),
   partecipanti: (text(weight: "bold", "Massaro Michele") + " (Var Group)", (text(weight: "bold", "Battistella Francesco") + " (Var Group)"), team.T, team.L, team.M, team.C, team.G, team.A),
