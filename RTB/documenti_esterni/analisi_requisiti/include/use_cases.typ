@@ -151,7 +151,7 @@
   - Utente non autenticato.
 - *Scenario principale*:
  - Utente non autenticato:
-   - inserisce il proprio username.
+   1. inserisce il proprio username.
  - Sistema:
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
@@ -167,7 +167,7 @@
   - Utente non autenticato.
 - *Scenario principale*:
  - Utente non autenticato:
-   - inserisce la propria password.
+   1. inserisce la propria password.
  - Sistema:
    1. verifica la correttezza della password;
    2. continua la procedura di login.
@@ -182,7 +182,7 @@
   - Utente non autenticato.
 - *Scenario principale*:
  - Utente non autenticato:
-   - l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
+   1. l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
  - Sistema:
     1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
     2. mostra un messaggio d'errore;
@@ -201,7 +201,7 @@
   - Google.
 - *Scenario principale*:
  - Utente non autenticato:
-   - richiede di accedere con il proprio account Google.
+   1. richiede di accedere con il proprio account Google.
  - Sistema:
    1. redirige l'utente ai servizi di Google;
    2. il login ha successo;
