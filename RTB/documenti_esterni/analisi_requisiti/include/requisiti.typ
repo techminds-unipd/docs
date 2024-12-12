@@ -12,7 +12,7 @@
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
         [FOR 1], [L'utente può effettuare il login utilizzando Google], [@login-google],
-        [FOR 2], [L'utente può associare e dissociare un account Google da utilizzare limitatamente ai servizi Gmail e Calendar come blocchi dei workflow], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
+        [FMR 2], [L'utente può associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
     ),
     caption: [Tabella dei requisiti.]
 )<tabella-dei-requisiti>

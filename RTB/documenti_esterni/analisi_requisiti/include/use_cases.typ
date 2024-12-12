@@ -349,7 +349,7 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
+    node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((3.5,0.5), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
@@ -373,7 +373,7 @@
 
     node(enclose: (<b>,<e>,<le>,<nf>),
         align(top + right)[Sistema],
-        width: 300pt,
+        width: 240pt,
         height: 200pt,
         snap: -1,
         name: <group>)
@@ -381,7 +381,7 @@
     caption: [Aggiunta account Google diagram.]
 ) <aggiunta-account-google-diagram>
 - *Descrizione*: 
-  - Questo caso d'uso descrive la procedura di aggiunta di un account Google associato all'utente autenticato.
+  - Questo caso d'uso descrive la procedura di aggiunta di un account Google associato all'utente autenticato. Grazie a questa associazione, l'utente può utilizzare i servizi offerti dai blocchi dei workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
@@ -447,7 +447,7 @@
     caption: [Rimozione account Google diagram.]
 ) <rimozione-account-google-diagram>
 - *Descrizione*: 
-  - Questo caso d'uso descrive la procedura di rimozione dell'account Google associato all'utente autenticato.
+  - Questo caso d'uso descrive la procedura di rimozione dell'account Google associato ai servizi offerti dai workflow. 
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
