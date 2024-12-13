@@ -499,22 +499,22 @@
     node((1,0.6), align(center)[
              @controllo-workflow Controllo workflow
     ], shape: ellipse, name: <c>),
-    edge(<b>, <c>, "-->", [\<\<include\>\>]),
+    edge(<b>, <c>, "--straight", [\<\<include\>\>]),
 
     node((1,1.4), align(center)[
             @vis-errore-workflow Vis. errore workflow
     ], shape: ellipse, name: <d>),
-    edge(<d>, <c>, "-->", [\<\<extend\>\>]),
+    edge(<d>, <c>, "--straight", [\<\<extend\>\>]),
 
     node((1.7,1), align(center)[
             @vis-errore-runtime Vis. errore runtime
     ], shape: ellipse, name: <e>),
-    edge(<e>, <b>, "-->", [\<\<extend\>\>]),
+    edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((2.5,0.6), align(center)[
             @vis-risultato-esecuzione Vis. risultato esecuzione
     ], shape: ellipse, name: <f>),
-    edge(<b>, <f>, "-->", [\<\<include\>\>]),
+    edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>),
         align(top + right)[Sistema],
