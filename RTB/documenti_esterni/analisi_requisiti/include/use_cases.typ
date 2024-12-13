@@ -38,46 +38,47 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
     edge(<utente>, <login>),
 
     node((2,0), align(center)[
             @login Login
-    ], shape: ellipse, name: <login>, inset:10pt),
+    ], shape: ellipse, name: <login>, ),
     edge(<login-interno>, <login>,marks: (none,empty-dash)),
 
     node((2,0.5), align(center)[
             @login-interno Login interno
-    ], shape: ellipse, name: <login-interno>, inset:10pt),
+    ], shape: ellipse, name: <login-interno>, ),
 
     edge(<login-interno>, <ins-user>, "--straight", [\<\<include\>\>]),
 
     node((3,0.75), align(center)[
             @inserimento-username Inserimento username
-    ], shape: ellipse, name: <ins-user>, inset:10pt),
+    ], shape: ellipse, name: <ins-user>, ),
 
     edge(<login-interno>, <ins-pass>, "--straight", [\<\<include\>\>]),
 
     node((3,0.25), align(center)[
             @inserimento-password Inserimento password
-    ], shape: ellipse, name: <ins-pass>, inset:10pt),
+    ], shape: ellipse, name: <ins-pass>, ),
 
 
 
     node((2,1.5), align(center)[
             @credenziali-errate Credenziali errate
-    ], shape: ellipse, name: <credenziali-errate>, inset:10pt),
+    ], shape: ellipse, name: <credenziali-errate>, ),
 
  
    node((2,1), align(center)[
-    ], shape: circle, name: <nf>,width:1pt, height:1pt, inset:10pt),
+    ], shape: circle, name: <nf>,width:1pt, height:1pt, ),
 
   edge(<nf>,<pnf>, "--"),
 
   node((2.9,1.25), align(center)[
     L'utente inserisce delle #linebreak()credenziali errate o inesistenti
-    ], shape: rect, name: <pnf>, inset:10pt),
+    ], shape: rect, name: <pnf>, ),
  
 
 
@@ -85,7 +86,7 @@
 
     node((2.75,0), align(center)[
              @login-google Login Google
-    ], shape: ellipse, name: <login-google>, inset:10pt),
+    ], shape: ellipse, name: <login-google>, ),
 
     edge(<login-google>, <login>, marks: (none,empty-dash)),
 
@@ -219,6 +220,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -365,6 +367,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -445,6 +448,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -485,6 +489,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -621,6 +626,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0,0), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
@@ -667,6 +673,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0,0.25), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
