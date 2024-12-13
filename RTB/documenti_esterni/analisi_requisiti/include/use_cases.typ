@@ -138,7 +138,7 @@
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+   - L'utente ha scelto la procedura di login interno.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
@@ -158,7 +158,7 @@
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+   - L'utente ha avviato la procedura di login interno (@login-interno).
 - *Post-condizioni*:
    - L'utente ha inserito lo username correttamente.
 
@@ -174,7 +174,7 @@
    1. verifica la correttezza della password;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+   - L'utente ha avviato la procedura di login interno (@login-interno).
 - *Post-condizioni*:
    - L'utente ha inserito la password correttamente.
 
@@ -190,7 +190,7 @@
     2. mostra un messaggio d'errore;
     3. dà la possibilità all'utente di riprovare il login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+   - L'utente ha avviato la procedura di login interno (@login-interno).
 - *Post-condizioni*:
    - Viene segnalato all'utente che le credenziali inserite sono errate;
    - L'utente può riprovare ad eseguire il login.
@@ -280,7 +280,7 @@
    2. crea un nuovo account;
    3. salva nel database i dati del nuovo account.
 - *Pre-condizioni*:
-   - L'utente non possiede un account.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente possiede un account, contraddistinto da un username e da una password, e può effettuare il login.
 - *Estensioni*:
@@ -296,7 +296,7 @@
  - Sistema:
    1. verifica che l'username non sia già in uso.
 - *Pre-condizioni*:
-   - L'utente non possiede un account.
+- L'utente ha avviato la procedura di registrazione (@registrazione).
 - *Post-condizioni*:
    - L'utente ha inserito un username valido.
 
@@ -311,7 +311,7 @@
   - Sistema:
     1. verifica che l'email sia valida.
 - *Pre-condizioni*:
-  - L'utente non possiede un account.
+  - L'utente ha avviato la procedura di registrazione (@registrazione).
 - *Post-condizioni*:
   - L'utente ha inserito un'email valida.
 
@@ -325,7 +325,7 @@
   - Sistema:
     1. verifica che la password rispetti i vincoli.
 - *Pre-condizioni*:
-  - L'utente non possiede un account.
+  - L'utente ha avviato la procedura di registrazione (@registrazione).
 - *Post-condizioni*:
   - L'utente ha creato una password valida.
 
@@ -339,7 +339,9 @@
   - Sistema:
     1. verifica che la password sia stata confermata correttamente.
 - *Pre-condizioni*:
-  - L'utente non possiede un account.
+  - L'utente possiede l'applicativo.
+  //se fosse un include avrei messo
+  //- L'utente ha avviato la procedura di creazione della password (@creazione-password).
 - *Post-condizioni*:
   - La password è stata confermata.
 
@@ -355,7 +357,7 @@
     2. mostra un messaggio d'errore all'utente;
     3. offre la possibilità all'utente di correggere i campi errati.
 - *Pre-condizioni*:
-  - L'utente non possiede un account.
+  - L'utente ha avviato la procedura di registrazione (@registrazione).
 - *Post-condizioni*:
   - L'utente non possiede un account;
   - Viene mostrato un messaggio d'errore esplicativo;
@@ -417,7 +419,9 @@
    2. attende il completamento dell'operazione;
    3. l'operazione ha esito positivo.
 - *Pre-condizioni*:
-   - L'utente non ha associato un account Google.
+   //- L'utente non ha associato un account Google.
+   // l'utente non necessariamente non deve avere associato un account google, può avere più account associati
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente ha associato l'account Google di cui ha inserito le credenziali.
 - *Estensioni*:
@@ -439,7 +443,7 @@
    3. l'operazione ha esito negativo;
    4. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-   - L'utente non ha associato un account Google.
+   - L'utente ha avviato la procedura di aggiunta account google associato ai workflow (@aggiunta-account-google-associato).
 - *Post-condizioni*:
    - Il sistema notifica l'errore all'utente;
    - L'utente può riprovare ad associare l'account Google.
@@ -549,7 +553,6 @@
    3. inoltra i dati all'agente che si interfaccia ad un LLM;
    4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
 - *Pre-condizioni*:
-   - L'utente è autenticato;
    - L'utente ha creato un workflow con almeno due blocchi.
 - *Post-condizioni*:    
   - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
@@ -615,7 +618,7 @@
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-  - L'utente è autenticato.
+  - L'utente ha avviato l'esecuzione del workflow (@esecuzione-workflow).
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
@@ -667,7 +670,6 @@
    1. porta l'utente nella pagina per la creazione del workflow;
    2. gestisce gli input drag and drop dell'utente.
 - *Pre-condizioni*:
-   - L'utente è loggato.
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - Viene creato il workflow.
@@ -712,7 +714,7 @@
  - Sistema:
    1. interagisce con il database per salvare il workflow dell'utente.
 - *Pre-condizioni*:
-   - L'utente è loggato.
+   - L'utente ha avviato la creazione di un workflow (@creazione-nuovo-workflow).
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
