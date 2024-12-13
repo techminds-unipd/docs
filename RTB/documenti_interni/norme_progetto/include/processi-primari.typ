@@ -21,14 +21,13 @@ Per raggiungere lo scopo di ottenere una visione costante e aggiornata dello sta
 
 === Attività
 Come descrive lo standard ISO/IEC 12207: 1995, il processo primario di fornitura è composto dalle seguenti attività:
-1. Avvio: eseguiamo una revisione dei requisiti studiando a fondo il capitolato, decidendo poi di proporre un'offerta per un determinato capitolato;
+1. Avvio: eseguiamo una revisione dei requisiti studiando a fondo i capitolati, decidendo poi di fare una proposta per un determinato capitolato;
 2. Preparazione della risposta: definiamo e prepariamo la proposta, una sorta di "risposta alla richiesta proposta";
 3. Contrattazione: accordo sui requisiti e consegna del progetto;
 4. Pianificazione: revisioniamo i requisiti di acquisizione per definire il quadro per la gestione del progetto e per assicurare qualità del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
 5. Esecuzione e controllo: implementiamo il piano di gestione del progetto, controllando i progressi e la qualità del prodotto software e della relativa documentazione durante tutte le fasi del progetto;
-6. Revisione e valutazione: effettuiamo verifiche periodiche per dimostrare che i prodotti software e i processi soddisfano pienamente i requisiti individuati; 
-7. Consegna e completamento: consegnamo il prodotto software al proponenete secondo quanto accordato in precedenza.
-
+6. Revisione e valutazione: effettuiamo verifiche periodiche per dimostrare che i prodotti software e i processi soddisfino pienamente i requisiti individuati; 
+7. Consegna e completamento: consegniamo il prodotto software al proponente secondo quanto accordato in precedenza.
 
 === Rapporti con il proponente
 I rapporti con il proponente sono un elemento che riteniamo fondamentale per il progetto in quanto:
