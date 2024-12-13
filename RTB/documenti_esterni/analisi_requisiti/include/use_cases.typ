@@ -39,40 +39,41 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
     edge(<utente>, <login>),
 
     node((2,0), align(center)[
             @login Login
-    ], shape: ellipse, name: <login>, ),
+    ],  name: <login>, ),
     edge(<login-interno>, <login>,marks: (none,empty-dash)),
 
     node((2,0.5), align(center)[
             @login-interno Login interno
-    ], shape: ellipse, name: <login-interno>, ),
+    ],  name: <login-interno>, ),
 
     edge(<login-interno>, <ins-user>, "--straight", [\<\<include\>\>]),
 
     node((3,0.75), align(center)[
             @inserimento-username Inserimento username
-    ], shape: ellipse, name: <ins-user>, ),
+    ],  name: <ins-user>, ),
 
     edge(<login-interno>, <ins-pass>, "--straight", [\<\<include\>\>]),
 
     node((3,0.25), align(center)[
             @inserimento-password Inserimento password
-    ], shape: ellipse, name: <ins-pass>, ),
+    ],  name: <ins-pass>, ),
 
 
 
     node((2,1.5), align(center)[
             @credenziali-errate Credenziali errate
-    ], shape: ellipse, name: <credenziali-errate>, ),
+    ],  name: <credenziali-errate>, ),
 
  
    node((2,1), align(center)[
-    ], shape: circle, name: <nf>,width:1pt, height:1pt, ),
+    ],  name: <nf>,width:1pt, height:1pt, ),
 
   edge(<nf>,<pnf>, "--"),
 
@@ -86,7 +87,7 @@
 
     node((2.75,0), align(center)[
              @login-google Login Google
-    ], shape: ellipse, name: <login-google>, ),
+    ],  name: <login-google>, ),
 
     edge(<login-google>, <login>, marks: (none,empty-dash)),
 
@@ -221,37 +222,38 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((1.8,0), align(center)[
             @registrazione Registrazione
-    ], shape: ellipse, name: <b>),
+    ],  name: <b>),
 
     node((2.7,0.3), align(center)[
             @errore-registrazione Errore registrazione
-    ], shape: ellipse, name: <c>),
+    ],  name: <c>),
     edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1,1), align(center)[
             @creazione-username Creazione username
-    ], shape: ellipse, name: <d>),
+    ],  name: <d>),
     edge(<b>, <d>, "--straight", [\<\<include\>\>]),
 
     node((1.5,1.3), align(center)[
             @inserimento-email Inserimento email
-    ], shape: ellipse, name: <e>),
+    ],  name: <e>),
     edge(<b>, <e>, "--straight", [\<\<include\>\>]),
 
     node((2,1), align(center)[
             @creazione-password Creazione password
-    ], shape: ellipse, name: <f>),
+    ],  name: <f>),
     edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node((2.7,1.3), align(center)[
             @conferma-password Conferma password
-    ], shape: ellipse, name: <g>),
+    ],  name: <g>),
     edge(<b>, <g>, "--straight", [\<\<include\>\>]),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
@@ -368,6 +370,7 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -377,18 +380,18 @@
 
     node((2,0.5), align(center)[
              @aggiunta-account-google-associato Aggiunta account Google associato
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ],  name: <b>, inset: 10pt),
 
     node((2,1.3), align(center)[
             @errore-comunicazione-google Errore comunicazione Google
-    ], shape: ellipse, name: <e>, inset: 10pt),
+    ],  name: <e>, inset: 10pt),
     edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1.6,0.9), align(center)[
             Google trasmette #linebreak() un errore
     ], shape: rect, name: <le>),
     node((2,0.9), align(center)[
-    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    ],  name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
 
     node(enclose: (<b>,<e>,<le>,<nf>),
@@ -449,13 +452,14 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((2,0.5), align(center)[
              @rimozione-account-google-associato Rimozione account Google associato
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ],  name: <b>, inset: 10pt),
 
 
     node(enclose: (<b>,),
@@ -490,6 +494,7 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -499,26 +504,26 @@
 
     node((1.7,0), align(center)[
             @esecuzione-workflow Esecuzione workflow 
-    ], shape: ellipse, name: <b>),
+    ],  name: <b>),
 
     node((1,0.6), align(center)[
              @controllo-workflow Controllo workflow
-    ], shape: ellipse, name: <c>),
+    ],  name: <c>),
     edge(<b>, <c>, "--straight", [\<\<include\>\>]),
 
     node((1,1.4), align(center)[
             @vis-errore-workflow Vis. errore workflow
-    ], shape: ellipse, name: <d>),
+    ],  name: <d>),
     edge(<d>, <c>, "--straight", [\<\<extend\>\>]),
 
     node((1.7,1), align(center)[
             @vis-errore-runtime Vis. errore runtime
-    ], shape: ellipse, name: <e>),
+    ],  name: <e>),
     edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((2.5,0.6), align(center)[
             @vis-risultato-esecuzione Vis. risultato esecuzione
-    ], shape: ellipse, name: <f>),
+    ],  name: <f>),
     edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>),
@@ -627,13 +632,14 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0,0), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @creazione-nuovo-workflow Creazione workflow
-    ], shape: ellipse, name: <a>),
+    ],  name: <a>),
 
     node(enclose: (<a>,),
         align(top + right)[Sistema],
@@ -674,17 +680,18 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0,0.25), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @salvataggio-workflow Salvataggio workflow
-    ], shape: ellipse, name: <a>),
+    ],  name: <a>),
 
     node((2,0.5), align(center)[
             @errore-connessione-database Errore connessione database
-    ], shape: ellipse, name: <b>),
+    ],  name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
     node(enclose: (<a>,<b>),
