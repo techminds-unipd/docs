@@ -8,7 +8,7 @@ In seguito all'assegnazione del capitolato, abbiamo constatato che fosse prematu
 === Sprint 1
 - Durata: 18/11/2024 - 06/12/2024\
 ==== Pianificazione
-Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore a quelli successivi e verrà dedicato allo studio delle tecnologie necessarie per lo sviluppo del progetto. In accordo con il proponente, abbiamo deciso quindi di dare maggior priorità all'autoformazione sulle nuove tecnologie. Sono anche stati concordati dei corsi di formazione in presenza con l'azienda, nelle date 26/11/2024 e 28/11/2024, ed un ulteriore corso a distanza il giorno 03/12/2024. Il tempo rimanente verrà poi dedicato alla stesura di una parte del documento di analisi dei requisiti. Inoltre andremo ad aggiornare il piano di progetto, in particolare la sezione “Analisi dei rischi”, ed il documento riguardante le norme di progetto.\
+Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore rispetto a quelli successivi e verrà dedicato allo studio delle tecnologie necessarie per lo sviluppo del progetto. In accordo con il proponente, abbiamo deciso quindi di dare maggior priorità all'autoformazione sulle nuove tecnologie. Sono anche stati concordati dei corsi di formazione in presenza con l'azienda, nelle date 26/11/2024 e 28/11/2024, e un ulteriore corso a distanza il giorno 03/12/2024. Il tempo rimanente verrà poi dedicato alla stesura di una parte del documento di analisi dei requisiti. Inoltre andremo ad aggiornare il piano di progetto, in particolare la sezione “Analisi dei rischi”, e il documento riguardante le norme di progetto.\
 
 - Ruoli:
   - responsabile: #team.M\;
@@ -93,9 +93,9 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     [è possibile rompere le convenzioni interne quando potrebbe agevolare o velocizzare i lavori. Ad esempio, sarà permesso creare un branch per l'analisi dei requisiti da usare come padre per i branch di feature dell'analisi, rompendo la convenzione del GitHub Flow che obbliga ad avere tutti i branch che derivano dal main;],
     [per approfondire i casi d'uso si userà ad esempio il frontend come attore e il backend come sistema, in modo da non andare in conflitto con la definizione di attore (nel caso in cui il sistema non fosse circoscritto/limitato al backend, l'attore frontend risulterebbe parte di esso e quindi non più attore);],
     [nei sotto-casi d'uso, ovvero quelli inclusi in altri con la clausola UML #sym.angle.l.double include #sym.angle.r.double, l'attore principale sarà lo stesso del caso d'uso "padre";],
-    [nelle estensioni di un caso d'uso e nei sotto-casi d'uso non si ripetono le azioni avvenute nello use case da cui derivano, ma piuttosto vanno indicate con un link all'azione;],
+    [nelle estensioni di un caso d'uso e nei sotto-casi d'uso non si ripetono le azioni avvenute nello use case da cui derivano, ma piuttosto si indicano con un link all'azione;],
     [verrà creata una checklist con i vari controlli da svolgere nei documenti per agevolare le attività dei verificatori, dal momento che la verifica è risultata essere molto onerosa per le tante convenzioni interne adottate;],
-    [si cercherà di automatizzare il controllo dei termini del glossario presenti nei vari documenti visto che verificare che i termini siano correttamente indicati nei documenti richiede una quantità di tempo molto onerosa.]
+    [si cercherà di automatizzare il controllo dei termini del glossario presenti nei vari documenti, visto che verificare che i termini siano correttamente indicati richiede una quantità di tempo molto onerosa.]
 )
 
 === Sprint 2
