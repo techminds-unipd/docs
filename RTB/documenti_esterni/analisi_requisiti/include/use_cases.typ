@@ -41,8 +41,8 @@
     node-inset: 10pt,
     node-shape: ellipse,
 
-    node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
-    edge(<utente>, <login>),
+    node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente-non-autenticato>),
+    edge(<utente-non-autenticato>, <login>),
 
     node((2,0), align(center)[
             @login Login
@@ -224,7 +224,7 @@
     node-inset: 10pt,
     node-shape: ellipse,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    node((0,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((1.8,0), align(center)[
@@ -267,9 +267,9 @@
 ) <registrazione-diagram>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente non autenticato:
    1. seleziona voce di registrazione;
    2. crea un username univoco nel sistema (@creazione-username);
    3. inserisce un'email valida (@inserimento-email);
@@ -289,9 +289,9 @@
 ==== Creazione username <creazione-username>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente non autenticato:
    1. inserisce un username.
  - Sistema:
    1. verifica che l'username non sia già in uso.
@@ -304,9 +304,9 @@
 ==== Inserimento email <inserimento-email>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. inserisce un'email.
   - Sistema:
     1. verifica che l'email sia valida.
@@ -318,9 +318,9 @@
 ==== Creazione password <creazione-password>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. crea una password.
   - Sistema:
     1. verifica che la password rispetti i vincoli.
@@ -332,9 +332,9 @@
 ==== Conferma password <conferma-password>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. conferma la password inserita precedentemente.
   - Sistema:
     1. verifica che la password sia stata confermata correttamente.
@@ -346,9 +346,9 @@
 === Errore registrazione <errore-registrazione>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. inserisce username, email, o password non validi in @creazione-username, @inserimento-email, @creazione-password, @conferma-password.
   - Sistema:
     1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
@@ -410,7 +410,7 @@
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account da associare all'esecuzione dei blocchi nei workflow;
@@ -431,7 +431,7 @@
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
@@ -476,7 +476,7 @@
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di rimozione dell'account Google associato.
  - Sistema:
    1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow;
@@ -634,7 +634,7 @@
     node-inset: 10pt,
     node-shape: ellipse,
 
-    node((0,0), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
@@ -652,9 +652,9 @@
 ) <creazione-nuovo-workflow-diagram>
 
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. naviga nella pagina workflow;
    2. seleziona l'opzione per creare un nuovo workflow;
    3. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
@@ -682,7 +682,7 @@
     node-inset: 10pt,
     node-shape: ellipse,
 
-    node((0,0.25), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
@@ -705,9 +705,9 @@
 ) <salvataggio-workflow-diagram>
 
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. seleziona l'opzione per salvare il workflow che ha creato.
  - Sistema:
    1. interagisce con il database per salvare il workflow dell'utente.
@@ -720,9 +720,9 @@
 
 === Errore connessione database <errore-connessione-database>
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. esegue un'operazione che richiede l'accesso ai dati sul database.
  - Sistema:
    1. interagisce con il database;
