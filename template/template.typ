@@ -200,9 +200,9 @@
 ) = {
   //per celle del consuntivo colora il testo in base al segno + o -
   if cell.contains("+") {
-    cell.split().at(0) + " " + text(cell.split().at(1), fill: rgb("#379c37"))
-  } else if cell.contains("-") {
     cell.split().at(0) + " " + text(cell.split().at(1), fill: rgb("#b92c2c"))
+  } else if cell.contains("-") {
+    cell.split().at(0) + " " + text(cell.split().at(1), fill: rgb("#379c37"))
   } else {
     cell
   }
@@ -218,9 +218,9 @@
 }
 
 #let pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, isConsuntivo) = {
-  let caption = [Grafico distribuzione ore preventivo sprint #context numSprint.get()]
+  let caption = [Grafico distribuzione ore preventivo sprint #context numSprint.get().]
   if isConsuntivo {
-    caption = [Grafico distribuzione ore consuntivo sprint #context numSprint.get()]
+    caption = [Grafico distribuzione ore consuntivo sprint #context numSprint.get().]
   }
   let costoOrario = (30, 20, 25, 25, 15, 15) 
   let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
@@ -254,9 +254,9 @@
 }
 
 #let tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino,vallotto, bilancio, isConsuntivo) = {
-  let caption = [Tabella preventivo sprint #context numSprint.get()]
+  let caption = [Tabella preventivo sprint #context numSprint.get().]
   if isConsuntivo {
-    caption = [Tabella consuntivo sprint #context numSprint.get()]
+    caption = [Tabella consuntivo sprint #context numSprint.get().]
   }
   else{ //aggiorna il numero dello sprint solo se si tratta di un preventivo
     numSprint.update(x => x + 1)
