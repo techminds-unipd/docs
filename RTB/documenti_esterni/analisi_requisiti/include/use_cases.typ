@@ -25,6 +25,8 @@
   }
   else if (level == 4) {
     return numbering("UC1.1", numbers.pos().at(level - 2), numbers.pos().at(level - 1))
+  } else if(level == 5){
+    return numbering("UC1.1.1", numbers.pos().at(level - 3), numbers.pos().at(level - 2), numbers.pos().at(level - 1))
   }
 })
 #set heading(supplement: none)
@@ -37,160 +39,175 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
-
-    node((3,-0.25), align(center)[
-            @inserimento-username Inserimento username
-    ], shape: ellipse, name: <e>),
-
-    edge(<b>, <e>, "--straight", [\<\<include\>\>]),
-
-    node((3,0.25), align(center)[
-            @inserimento-password Inserimento password
-    ], shape: ellipse, name: <f>),
-
-    edge(<b>, <f>, "--straight", [\<\<include\>\>]),
+    node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
+    edge(<utente>, <login>),
 
     node((2,0), align(center)[
             @login Login
-    ], shape: ellipse, name: <b>),
+    ], shape: ellipse, name: <login>, inset:10pt),
+    edge(<login-interno>, <login>,marks: (none,empty-dash)),
 
-    node((2,1), align(center)[
+    node((2,0.5), align(center)[
+            @login-interno Login interno
+    ], shape: ellipse, name: <login-interno>, inset:10pt),
+
+    edge(<login-interno>, <ins-user>, "--straight", [\<\<include\>\>]),
+
+    node((3,0.75), align(center)[
+            @inserimento-username Inserimento username
+    ], shape: ellipse, name: <ins-user>, inset:10pt),
+
+    edge(<login-interno>, <ins-pass>, "--straight", [\<\<include\>\>]),
+
+    node((3,0.25), align(center)[
+            @inserimento-password Inserimento password
+    ], shape: ellipse, name: <ins-pass>, inset:10pt),
+
+
+
+    node((2,1.5), align(center)[
             @credenziali-errate Credenziali errate
-    ], shape: ellipse, name: <c>),
+    ], shape: ellipse, name: <credenziali-errate>, inset:10pt),
 
-    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
+ 
+   node((2,1), align(center)[
+    ], shape: circle, name: <nf>,width:1pt, height:1pt, inset:10pt),
 
-    node((3,1), align(center)[
+  edge(<nf>,<pnf>, "--"),
+
+  node((2.9,1.25), align(center)[
+    L'utente inserisce delle #linebreak()credenziali errate o inesistenti
+    ], shape: rect, name: <pnf>, inset:10pt),
+ 
+
+
+    edge(<credenziali-errate>,<login-interno>, "--straight", [\<\<extend\>\>]),
+
+    node((2.75,0), align(center)[
              @login-google Login Google
-    ], shape: ellipse, name: <d>),
+    ], shape: ellipse, name: <login-google>, inset:10pt),
 
-    edge(<d>, <b>, marks: (none,empty-dash)),
+    edge(<login-google>, <login>, marks: (none,empty-dash)),
 
-    node(enclose: (<b>,<c>,<d>,<e>,<f>),
+    node(enclose: (<login>,<login-interno>,<login-google>,<ins-user>,<ins-pass>,<credenziali-errate>,<nf>,<pnf>),
         align(top + right)[Sistema],
         width: 200pt,
         height: 250pt,
         snap: -1,
-        name: <group>)
-    ),
+        name: <group>),
 
+    node((4,0.25), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
+    edge(<google>, <login-google>),
+    ),
+  
     caption: [Login UC diagram.]
 ) <login-diagram>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di login di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - avvia la procedura di login;
-   - inserisce lo username (@inserimento-username);
-   - inserisce la password (@inserimento-password).
+ - Utente non autenticato:
+   1. avvia la procedura di login.
+ - Sistema:
+   1. attende esito verifica login;
+   2. la verifica ha successo;
+   3. viene assegnata una sessione all'utente.
+- *Pre-condizioni*:
+   - L'utente possiede l'applicativo.
+- *Post-condizioni*:
+   - L'utente viene autenticato ed ottiene una sessione.
+- *Generalizzazioni*:
+  - Login Google (@login-google);
+  - Login interno (@login-interno).
+
+=== Login interno <login-interno>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di login interno di un utente.
+- *Attori principali*:
+  - Utente non autenticato.
+- *Scenario principale*:
+ - Utente non autenticato:
+   1. sceglie la procedura di login interno;
+   2. inserisce lo username (@inserimento-username);
+   3. inserisce la password (@inserimento-password).
  - Sistema:
    1. attende esito verifica delle credenziali da @inserimento-username e @inserimento-password;
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
   - Credenziali errate (@credenziali-errate).
-- *Generalizzazioni*:
-  - Login Google (@login-google).
+
+
 
 ==== Inserimento username <inserimento-username>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di inserimento dello username di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - inserisce il proprio username.
+ - Utente non autenticato:
+   1. inserisce il proprio username.
  - Sistema:
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente ha inserito lo username correttamente.
 
 ==== Inserimento password <inserimento-password>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di inserimento della password di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - inserisce la propria password.
+ - Utente non autenticato:
+   1. inserisce la propria password.
  - Sistema:
    1. verifica la correttezza della password;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente ha inserito la password correttamente.
 
 === Credenziali errate <credenziali-errate>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
+ - Utente non autenticato:
+   1. l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
  - Sistema:
     1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
     2. mostra un messaggio d'errore;
     3. dà la possibilità all'utente di riprovare il login.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - Viene segnalato all'utente che le credenziali inserite sono errate;
    - L'utente può riprovare ad eseguire il login.
 
 === Login Google <login-google>
 
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
-
-    node((4,0.5), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
-    edge(<google>, <b>),
-
-    node((2,0.5), align(center)[
-             @login-google Login Google
-    ], shape: ellipse, name: <b>),
-
-
-    node(enclose: (<b>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Login Google UC diagram.]
-) <login-google-diagram>
-
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
-   - richiede di accedere con il proprio account Google.
+ - Utente non autenticato:
+   1. richiede di accedere con il proprio account Google.
  - Sistema:
    1. redirige l'utente ai servizi di Google;
-   2. controlla che il login con i servizi di Google sia avvenuto correttamente.
+   2. il login ha successo;
+   3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede un account Google;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
@@ -340,10 +357,8 @@
   - Viene mostrato un messaggio d'errore esplicativo;
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
-
-
-
-=== Gestione servizi Google <gestione-servizi-google>
+=== Aggiunta account Google associato ai workflows
+<aggiunta-account-google-associato>
 #figure(
     diagram(
     debug: false,
@@ -351,123 +366,119 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0.5,0.1), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
-    node((3.35,0.1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
+    node((3.5,0.5), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
     edge(<google>, <b>),
 
-    node((1.5,0.65), align(center)[
-        @rimozione-account-google-associato Rimozione account \ Google associato
-    ], shape: ellipse, name: <e>, inset: 10pt),
-
-    node((2,0), align(center)[
-            @gestione-servizi-google Gestione servizi Google
+    node((2,0.5), align(center)[
+             @aggiunta-account-google-associato Aggiunta account Google associato
     ], shape: ellipse, name: <b>, inset: 10pt),
 
-    node((2,1.25), align(center)[
-            @inserimento-credenziali-google Inserimento\ credenziali Google
-    ], shape: ellipse, name: <c>, inset: 10pt),
+    node((2,1.3), align(center)[
+            @errore-comunicazione-google Errore comunicazione Google
+    ], shape: ellipse, name: <e>, inset: 10pt),
+    edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
-    node((2.5,0.8), align(center)[
-            @errore-comunicazione-google Errore comunicazione \ Google
-    ], shape: ellipse, name: <d>, inset: 10pt),
+    node((1.6,0.9), align(center)[
+            Google trasmette #linebreak() un errore
+    ], shape: rect, name: <le>),
+    node((2,0.9), align(center)[
+    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
 
-    edge(<c>, <b>, "--straight", [\<\<extend\>\>], label-side: right),
-
-    edge(<d>, <b>, "--straight", [\<\<extend\>\>], label-side: right),
-
-    edge(<e>, <b>, "--straight", [\<\<extend\>\>], label-side: left),
-
-    node(enclose: (<b>,<c>, <d>, <e>),
+    node(enclose: (<b>,<e>,<le>,<nf>),
         align(top + right)[Sistema],
-        width: 200pt,
+        width: 240pt,
         height: 200pt,
         snap: -1,
         name: <group>)
     ),
-    caption: [Associazione servizi Google UC diagram.]
-) <associazione-servizi-google-diagram>
-
+    caption: [Aggiunta account Google diagram.]
+) <aggiunta-account-google-diagram>
+- *Descrizione*: 
+  - Questo caso d'uso descrive la procedura di aggiunta di un account Google associato all'utente autenticato. Grazie a questa associazione, l'utente può utilizzare i servizi offerti dai blocchi dei workflow.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
  - Utente:
-   - apre la configurazione dei servizi Google (@gestione-servizi-google);
-   - inserisce delle credenziali Google (@inserimento-credenziali-google).
+   1. avvia la procedura di associazione di un account Google.
  - Sistema:
-   1. verifica se un account Google è già collegato;
-   2. se è collegato, permette all'utente di rimuoverlo (@rimozione-account-google-associato);
-   3. se non è collegato, chiede all'utente di accedere a Google (@inserimento-credenziali-google);
-   4. se si verifica un errore nella comunicazione mostra un messaggio d'errore (@errore-comunicazione-google);
-
+   1. redirige l'utente alla finestra di Google per l'aggiunta dell'account da associare all'esecuzione dei blocchi nei workflow;
+   2. attende il completamento dell'operazione;
+   3. l'operazione ha esito positivo.
 - *Pre-condizioni*:
-   - L'utente è autenticato;
-- *Post-condizioni*:
-   - L'utente ha associato o rimosso un account Google.
-- *Estensioni*:
-  - Inserimento credenziali Google (@inserimento-credenziali-google);
-  - Errore comunicazione Google (@errore-comunicazione-google).
-
-=== Rimozione account Google associato <rimozione-account-google-associato>
-- *Attori principali*:
-  - Utente.
-- *Attori secondari*:
-  - Google.
-- *Scenario principale*:
- - Utente:
-   - avvia la procedura di rimozione dell'account Google associato.
- - Sistema:
-   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow (@rimozione-account-google-associato);
-   2. notifica il completamento dell'operazione;
-   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
-
-- *Pre-condizioni*:
-   - L'utente è autenticato;
-   - L'utente ha associato un account Google.
-- *Post-condizioni*:
-   - L'utente non ha associato un account Google.
-
-=== Inserimento credenziali Google <inserimento-credenziali-google>
-- *Attori principali*:
-  - Utente.
-- *Attori secondari*:
-  - Google.
-- *Scenario principale*:
- - Utente:
-   - avvia la procedura di associazione di un account Google;
-   - inserisce le credenziali dell'account Google che vuole collegare.
- - Sistema:
-   1. mostra la finestra di Google per la configurazione dell'account;
-   2. notifica il completamento dell'operazione;
-   3. se si verifica un errore nella comunicazione con Google mostra un messaggio d'errore (@errore-comunicazione-google).
-
-- *Pre-condizioni*:
-   - L'utente è autenticato;
    - L'utente non ha associato un account Google.
 - *Post-condizioni*:
    - L'utente ha associato l'account Google di cui ha inserito le credenziali.
+- *Estensioni*:
+  - Errore comunicazione Google (@errore-comunicazione-google).
 
 === Errore comunicazione con Google <errore-comunicazione-google>
+- *Descrizione*: 
+  - Questo caso d'uso descrive la procedura di gestione dell'errore di comunicazione con Google.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
  - Utente:
-   - compie un'azione per la gestione dell'account Google associato (@gestione-servizi-google).
+   1. avvia la procedura di associazione di un account Google.
  - Sistema:
-   1. notifica all'utente l'errore di comunicazione con Google e il mancato completamento dell'operazione corrente.
-
+   1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
+   2. attende il completamento dell'operazione;
+   3. l'operazione ha esito negativo;
+   4. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-   - Si verifica un errore di comunicazione con i sistemi di Google.
+   - L'utente non ha associato un account Google.
 - *Post-condizioni*:
-   - Il sistema notifica l'errore all'utente.
+   - Il sistema notifica l'errore all'utente;
+   - L'utente può riprovare ad associare l'account Google.
+
+=== Rimozione account Google associato ai workflows <rimozione-account-google-associato>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
+    edge(<a>, <b>),
+
+    node((2,0.5), align(center)[
+             @rimozione-account-google-associato Rimozione account Google associato
+    ], shape: ellipse, name: <b>, inset: 10pt),
+
+
+    node(enclose: (<b>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Rimozione account Google diagram.]
+) <rimozione-account-google-diagram>
+- *Descrizione*: 
+  - Questo caso d'uso descrive la procedura di rimozione dell'account Google associato ai servizi offerti dai workflow. 
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente:
+   1. avvia la procedura di rimozione dell'account Google associato.
+ - Sistema:
+   1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow;
+   2. mostra un messaggio di conferma all'utente.
+- *Pre-condizioni*:
+   - L'utente ha associato un account Google.
+- *Post-condizioni*:
+   - L'utente non ha più un account Google associato.
 
 === Esecuzione workflow <esecuzione-workflow>
-
 #figure(
     diagram(
     debug: false,
