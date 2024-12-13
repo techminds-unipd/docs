@@ -1,7 +1,7 @@
 = Processi primari
 Un progetto è definito tale se e solo se in esso sono attivi processi primari. 
 
-Lo standard ISO/IEC 12207: 1995 definisce i processi primari come i processi relativi alle attività fondamentali per la creazione e la gestione del software. 
+Lo standard ISO/IEC 12207:1995 definisce i processi primari come i processi relativi alle attività fondamentali per la creazione e la gestione del software. 
 
 Lo standard, all'interno dei processi primari, definisce 5 categorie:
 1. Acquisizione;
@@ -20,7 +20,7 @@ Questa sezione elenca tutte le regole che dobbiamo seguire e rispettare per mant
 Per raggiungere lo scopo di ottenere una visione costante e aggiornata dello stato del progetto e del bilancio andremo quindi a monitorare, documentare e valutare il lavoro svolto stimando le attività ancora da completare e confrontando il loro stato attuale con i requisiti definiti dal proponente. 
 
 === Attività
-Come descrive lo standard ISO/IEC 12207: 1995, il processo primario di fornitura è composto dalle seguenti attività:
+Come descrive lo standard ISO/IEC 12207:1995, il processo primario di fornitura è composto dalle seguenti attività:
 1. Avvio: eseguiamo una revisione dei requisiti studiando a fondo i capitolati, decidendo poi di fare una proposta per un determinato capitolato;
 2. Preparazione della risposta: definiamo e prepariamo la proposta, una sorta di "risposta alla richiesta proposta";
 3. Contrattazione: accordo sui requisiti e consegna del progetto;
@@ -41,12 +41,12 @@ La documentazione che forniamo al proponente e al committente è la seguente:
 - #text(weight: "bold")[Documentazione esterna]:
     - lettera di presentazione: documento di presentazione per ogni revisione del progetto;
     - piano di progetto: documento che ha lo scopo di raccogliere la pianificazione delle attività progettuali, compresi la gestione dei ruoli e il bilancio di sprint in sprint;
-    - piano di qualifica: documento che ha la funzione di cruscotto di qualità, contenente quindi le metriche e le normative che abbiamo individuato e adottato;
+    - piano di qualifica: documento che contiene le metriche e le normative che abbiamo individuato e adottato;
     - analisi dei requisiti: documento che raccoglie i requisiti del prodotto software.
 - #text(weight: "bold")[Documentazione interna (propedeutica al gruppo)]:
     - studio dei capitolati: documento che racchiude l'analisi approfondita di ogni proposta, con relativi vantaggi e svantaggi, tecnologie richieste e considerazioni;
-    - glossario: documento utile per definire termini chiave, ai fini di allineamento interno nella gestione della documentazione;
-    - norme di progetto: il presente documento, creato per identificare il way of working che ci guida nel corso del progetto.
+    - glossario: documento utile per definire termini rilevanti nell'ambito del progetto, al fine di uniformare la conoscenza dei membri del gruppo ed evitare incomprensioni e ambiguità;
+    - norme di progetto: il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
 
 === Strumenti utilizzati
 A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti:
