@@ -11,7 +11,7 @@
   ordine_giorno: ("Sprint retrospective", "Sprint plan"),
   riassunto: [Ci siamo riuniti per celebrare la sprint retrospective dello sprint 1, successivamente abbiamo celebrato lo sprint plan dello sprint 2.
              Abbiamo visionato i documenti prodotti nello sprint 1, in modo da allinearci sui vari progressi.
-             Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint, complessivamente sono stati completati la maggior parte dei task tranne alcuni di autoformazione.
+             Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint. Complessivamente sono stati completati la maggior parte dei task tranne alcuni di autoformazione.
              #linebreak()#linebreak()La sprint retrospective ha prodotto i seguenti risultati:
              - è possibile rompere le convenzioni interne quando potrebbe agevolare o velocizzare i lavori. Ad esempio, sarà permesso creare un branch di feature per l'analisi dei requisiti da usare come branch padre per i branch di feature dell'analisi, rompendo la convenzione del GitHub Flow;
              - per approfondire i casi d'uso si potranno usare attori che non siano l'utente umano. Ad esempio, si potrà creare un caso d'uso che abbia il frontend come attore e il backend come sistema. Ciò non crea conflitti con la definizione di attore dato che, nel caso d'uso, il sistema viene circoscritto al backend;
