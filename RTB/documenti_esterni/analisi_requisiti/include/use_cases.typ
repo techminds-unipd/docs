@@ -382,11 +382,11 @@
 
     node((2,0.5), align(center)[
              @aggiunta-account-google-associato Aggiunta account Google associato
-    ],  name: <b>, inset: 10pt),
+    ],  name: <b>),
 
     node((2,1.3), align(center)[
             @errore-comunicazione-google Errore comunicazione Google
-    ],  name: <e>, inset: 10pt),
+    ],  name: <e>),
     edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1.6,0.9), align(center)[
@@ -463,7 +463,7 @@
 
     node((2,0.5), align(center)[
              @rimozione-account-google-associato Rimozione account Google associato
-    ],  name: <b>, inset: 10pt),
+    ],  name: <b>),
 
 
     node(enclose: (<b>,),
