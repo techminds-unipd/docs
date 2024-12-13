@@ -66,38 +66,68 @@ In particolare:
     - redazione di piani dettagliati da inserire nel piano di progetto.
 - Verifica la fattibilità del piano proposto;
 - Gestisce relazioni con l'esterno;
-- Controlla i progressi del progetto.
+- Controlla i progressi del progetto;
+- Gestisce il bilancio.
 
 ==== Amministratore
 Funge da guida per quanto concerne le norme di progetto e predispone l'ambiente di lavoro utilizzato dal gruppo. In caso di necessità affronta e risolve le problematiche relative alla gestione dei processi e collabora con il responsabile per garantire qualità del prodotto offerto.
 
 ==== Analista
+Ha lo scopo di redigere l'analisi dei requisiti andando quindi a identificare, documentare e studiare a fondo le esigenze e le specifiche del progetto traducendole in requisiti dettagliati e non ambigui.
 
+In particolare:
+- Definisce il problema;
+- Stabilisce gli obiettivi analizzando il contesto;
+- Definisce i requisiti per raggiungere gli obiettivi;
+- Comprende a fondo i bisogni impliciti ed espliciti.
 
 ==== Progettista
-
+Partendo dal lavoro dell'analista effettua scelte progettuali per definire il "come" devono essere implementati i requisiti individuati durante la fase di analisi. Effettua quindi decisioni di natura tecnica e tecnologica, andando i particolare a:
+- Effettuare scelte per soddisfare i requisiti;
+- Progettare l'architettura del prodotto.
 
 ==== Programmatore
-
+Scrive il codice software con l'obiettivo che esso rispecchi i requisiti individuati con l'analidi dei requisiti e le specifiche fornite dai progettisti. 
+Il codice scritto deve:
+- Contenere gli strumenti per la verifica e la validazione;
+- Rispecchiare l'architettura ideata dai progettisti;
+- Essere manutenibile.
 
 ==== Verificatore
+Ruolo chiave in quanto ha lo scopo di controllare la qualità del lavoro svolta dagli altri ruoli e che questo lavoro sia stato eseguito secondo quanto prefissato e concordato dal gruppo e/o da specifiche tecniche. 
+
+Ha quindi il compito di:
+- Verificare conformità rispetto alle norme di progetto;
+- Evidenziare eventuali errori e richiederne la correzione;
+- Redarre il piano di qualifica definendo le metriche e i corrispettivi risultati.
 
 ==== Tecnologie
-TODO
-- github board
-- gant con Typst
-- github roadmap
-- github in generale
-- ambiene drive d google
+Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare le seguenti tecnologie:
+- GitHub Board (#link("https://github.com/orgs/techminds-unipd/projects/1")): utilizzato per le attività di pianificazione;
+- GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): utilizzato il controllo delle attivtà previste per ogni periodo;
+- Typst: utilizzatio per la documentazione, i diagrammi di Gantt e la creazione dei diagrammi per gli use cases;
+- Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
+- Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
 
 === Coordinemanto interno
-organizzazione interna 
+Per l'efficienza del progetto è necessario che ci sia un ottimo coordinamento interno che ci permette di collaborare e comunicare in modo rapido e semplice.
+
+==== Reperibilità dei membri
+A tal proposito abbiamo creato un foglio google condiviso nel quale ognuno ha indicato i propri orari di disponibilità durante l'arco della settimana, ovviamente modificabile in caso di impegni nuovi sorti tra l'inizio del progetto e la fase attuale. 
+
+Ogni membro 
+
+==== Comunicazioni testuali
+
+
+==== Incontri
+
 
 === Coordinemanto con il proponente
-orgniazzazione esterna
+organizzazione esterna
 
 === Organizzazione di attività
-issues, milestones, sprint, ticketing
+issues, milestones, sprint, ticketing, board, roadmap
 
 == Gestione delle infrastrutture
 
