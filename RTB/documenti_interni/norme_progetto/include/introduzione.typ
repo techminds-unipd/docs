@@ -14,6 +14,7 @@ I termini che sono presenti all'interno del glossario, verranno scritti #glossar
 
 === Riferimenti al capitolato
 - #glossario[Capitolato] C3: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf").
+- Regolamento proegtto didattico: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf").
 
 === Riferimenti al materiale utilizzato
 - T2 - Processi di ciclo di vita: #link("https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf");;
