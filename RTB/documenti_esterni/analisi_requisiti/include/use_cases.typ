@@ -25,6 +25,8 @@
   }
   else if (level == 4) {
     return numbering("UC1.1", numbers.pos().at(level - 2), numbers.pos().at(level - 1))
+  } else if(level == 5){
+    return numbering("UC1.1.1", numbers.pos().at(level - 3), numbers.pos().at(level - 2), numbers.pos().at(level - 1))
   }
 })
 #set heading(supplement: none)
@@ -37,160 +39,175 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
-
-    node((3,-0.25), align(center)[
-            @inserimento-username Inserimento username
-    ], shape: ellipse, name: <e>),
-
-    edge(<b>, <e>, "--straight", [\<\<include\>\>]),
-
-    node((3,0.25), align(center)[
-            @inserimento-password Inserimento password
-    ], shape: ellipse, name: <f>),
-
-    edge(<b>, <f>, "--straight", [\<\<include\>\>]),
+    node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
+    edge(<utente>, <login>),
 
     node((2,0), align(center)[
             @login Login
-    ], shape: ellipse, name: <b>),
+    ], shape: ellipse, name: <login>, inset:10pt),
+    edge(<login-interno>, <login>,marks: (none,empty-dash)),
 
-    node((2,1), align(center)[
+    node((2,0.5), align(center)[
+            @login-interno Login interno
+    ], shape: ellipse, name: <login-interno>, inset:10pt),
+
+    edge(<login-interno>, <ins-user>, "--straight", [\<\<include\>\>]),
+
+    node((3,0.75), align(center)[
+            @inserimento-username Inserimento username
+    ], shape: ellipse, name: <ins-user>, inset:10pt),
+
+    edge(<login-interno>, <ins-pass>, "--straight", [\<\<include\>\>]),
+
+    node((3,0.25), align(center)[
+            @inserimento-password Inserimento password
+    ], shape: ellipse, name: <ins-pass>, inset:10pt),
+
+
+
+    node((2,1.5), align(center)[
             @credenziali-errate Credenziali errate
-    ], shape: ellipse, name: <c>),
+    ], shape: ellipse, name: <credenziali-errate>, inset:10pt),
 
-    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
+ 
+   node((2,1), align(center)[
+    ], shape: circle, name: <nf>,width:1pt, height:1pt, inset:10pt),
 
-    node((3,1), align(center)[
+  edge(<nf>,<pnf>, "--"),
+
+  node((2.9,1.25), align(center)[
+    L'utente inserisce delle #linebreak()credenziali errate o inesistenti
+    ], shape: rect, name: <pnf>, inset:10pt),
+ 
+
+
+    edge(<credenziali-errate>,<login-interno>, "--straight", [\<\<extend\>\>]),
+
+    node((2.75,0), align(center)[
              @login-google Login Google
-    ], shape: ellipse, name: <d>),
+    ], shape: ellipse, name: <login-google>, inset:10pt),
 
-    edge(<d>, <b>, marks: (none,empty-dash)),
+    edge(<login-google>, <login>, marks: (none,empty-dash)),
 
-    node(enclose: (<b>,<c>,<d>,<e>,<f>),
+    node(enclose: (<login>,<login-interno>,<login-google>,<ins-user>,<ins-pass>,<credenziali-errate>,<nf>,<pnf>),
         align(top + right)[Sistema],
         width: 200pt,
         height: 250pt,
         snap: -1,
-        name: <group>)
-    ),
+        name: <group>),
 
+    node((4,0.25), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
+    edge(<google>, <login-google>),
+    ),
+  
     caption: [Login UC diagram.]
 ) <login-diagram>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di login di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - avvia la procedura di login;
-   - inserisce lo username (@inserimento-username);
-   - inserisce la password (@inserimento-password).
+ - Utente non autenticato:
+   1. avvia la procedura di login.
+ - Sistema:
+   1. attende esito verifica login;
+   2. la verifica ha successo;
+   3. viene assegnata una sessione all'utente.
+- *Pre-condizioni*:
+   - L'utente possiede l'applicativo.
+- *Post-condizioni*:
+   - L'utente viene autenticato ed ottiene una sessione.
+- *Generalizzazioni*:
+  - Login Google (@login-google);
+  - Login interno (@login-interno).
+
+=== Login interno <login-interno>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di login interno di un utente.
+- *Attori principali*:
+  - Utente non autenticato.
+- *Scenario principale*:
+ - Utente non autenticato:
+   1. sceglie la procedura di login interno;
+   2. inserisce lo username (@inserimento-username);
+   3. inserisce la password (@inserimento-password).
  - Sistema:
    1. attende esito verifica delle credenziali da @inserimento-username e @inserimento-password;
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
   - Credenziali errate (@credenziali-errate).
-- *Generalizzazioni*:
-  - Login Google (@login-google).
+
+
 
 ==== Inserimento username <inserimento-username>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di inserimento dello username di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - inserisce il proprio username.
+ - Utente non autenticato:
+   1. inserisce il proprio username.
  - Sistema:
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente ha inserito lo username correttamente.
 
 ==== Inserimento password <inserimento-password>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di inserimento della password di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - inserisce la propria password.
+ - Utente non autenticato:
+   1. inserisce la propria password.
  - Sistema:
    1. verifica la correttezza della password;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente ha inserito la password correttamente.
 
 === Credenziali errate <credenziali-errate>
 
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
-   - l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
+ - Utente non autenticato:
+   1. l'utente inserisce credenziali errate in @inserimento-username o @inserimento-password.
  - Sistema:
     1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
     2. mostra un messaggio d'errore;
     3. dà la possibilità all'utente di riprovare il login.
 - *Pre-condizioni*:
-   - L'utente possiede un account;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - Viene segnalato all'utente che le credenziali inserite sono errate;
    - L'utente può riprovare ad eseguire il login.
 
 === Login Google <login-google>
 
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
-
-    node((4,0.5), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <google>),
-    edge(<google>, <b>),
-
-    node((2,0.5), align(center)[
-             @login-google Login Google
-    ], shape: ellipse, name: <b>),
-
-
-    node(enclose: (<b>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Login Google UC diagram.]
-) <login-google-diagram>
-
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
-   - richiede di accedere con il proprio account Google.
+ - Utente non autenticato:
+   1. richiede di accedere con il proprio account Google.
  - Sistema:
    1. redirige l'utente ai servizi di Google;
-   2. controlla che il login con i servizi di Google sia avvenuto correttamente.
+   2. il login ha successo;
+   3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede un account Google;
-   - L'utente non è già autenticato.
+   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
