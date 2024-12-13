@@ -340,7 +340,7 @@
   - Viene mostrato un messaggio d'errore esplicativo;
   - L'utente può riprovare a registrarsi modificando i campi errati.
 
-=== Aggiunta account Google associato
+=== Aggiunta account Google associato ai workflows
 <aggiunta-account-google-associato>
 #figure(
     diagram(
@@ -421,7 +421,7 @@
    - Il sistema notifica l'errore all'utente;
    - L'utente può riprovare ad associare l'account Google.
 
-=== Rimozione account Google associato <rimozione-account-google-associato>
+=== Rimozione account Google associato ai workflows <rimozione-account-google-associato>
 #figure(
     diagram(
     debug: false,
