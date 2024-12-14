@@ -1,0 +1,30 @@
+name: Check Glossario
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout del codice del repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configurazione dell'ambiente Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # Esecuzione dello script Python e cattura dell'output
+      - name: Run Python Script
+        id: run_script
+        run: |
+          python scripts/check_glossario.py | tee output.log
+          if grep -q "FAIL" output.log; then
+            echo "FAIL found in output"
+            exit 1
+          fi
