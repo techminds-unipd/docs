@@ -578,7 +578,7 @@
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Visualizzazione risultato esecuzione <vis-risultato-esecuzione>
+=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
 
 
 #figure(
@@ -591,13 +591,13 @@
     node-inset: 10pt,
 
     node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
-    edge(<utente-autenticato>, <vis-risultato-esecuzione>),
+    edge(<utente-autenticato>, <vis-risultato-esecuzione-workflow>),
 
     node((2,0), align(center)[
-            @vis-risultato-esecuzione Vis. risultato esecuzione 
-    ],  name: <vis-risultato-esecuzione>),
+            @vis-risultato-esecuzione-workflow Vis. risultato esecuzione #linebreak() workflow
+    ],  name: <vis-risultato-esecuzione-workflow>),
 
-    node(enclose: (<vis-risultato-esecuzione>,),
+    node(enclose: (<vis-risultato-esecuzione-workflow>,),
         align(top + right)[Sistema],
         width: 150pt,
         height: 150pt,
