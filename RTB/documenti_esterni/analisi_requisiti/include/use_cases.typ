@@ -489,7 +489,7 @@
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
     edge(<utente-autenticato>, <esecuzione-workflow>),
 
-    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
     edge(<llm>, <esecuzione-workflow>),
 
 
@@ -528,17 +528,16 @@
  - Utente autenticato:
    1. esegue il workflow.
  - Sistema:
-   1. controlla che l'intero workflow sia valido (@controllo-workflow);
-   2. attende l'esito del controllo;
+   1. controlla che il workflow sia valido;
    3. inoltra i dati all'agente che si interfaccia ad un LLM;
-   4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
+   4. restituisce il risultato dell'operazione.
 - *Pre-condizioni*:
-   - L'utente è autenticato;
    - L'utente ha creato un workflow con almeno due blocchi.
-- *Post-condizioni*:    
-  - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
+- *Post-condizioni*:
+  - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
   - Visualizzazione errore runtime (@vis-errore-runtime).
+  - Visualizzazione errore workflow (@vis-errore-workflow).
 
 ==== Controllo workflow <controllo-workflow>
 
