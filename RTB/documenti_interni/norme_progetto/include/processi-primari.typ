@@ -34,21 +34,21 @@ I rapporti con il proponente sono un elemento che riteniamo fondamentale per il 
 - Guidano il corretto svolgimento dei processi;
 - Facilitano lo scambio di feedback e dubbi, da entrambi i lati (noi nei confronti del proponente e viceversa);
 - Garantiscono il rispetto di quanto pattuito.
-Sono stati quindi concordati dei canali di comunicazione che permettono il raggiungimento degli obiettivi sopra descritti.
+Sono stati quindi concordati dei canali di comunicazione che permettono il raggiungimento degli obiettivi sopra descritti, per ulteriori approfondimenti vedi @proponente.
 
 === Documentazione fornita
 La documentazione che forniamo al proponente e al committente è la seguente:
-- #text(weight: "bold")[Documentazione esterna]:
+- *Documentazione esterna*:
     - lettera di presentazione: documento di presentazione per ogni revisione del progetto;
     - piano di progetto: documento che ha lo scopo di raccogliere la pianificazione delle attività progettuali, compresi la gestione dei ruoli e il bilancio di sprint in sprint;
     - piano di qualifica: documento che contiene le metriche e le normative che abbiamo individuato e adottato;
     - analisi dei requisiti: documento che raccoglie i requisiti del prodotto software.
-- #text(weight: "bold")[Documentazione interna al gruppo]:
+- *Documentazione interna al gruppo*:
     - studio dei capitolati: documento che racchiude l'analisi approfondita di ogni proposta, con relativi vantaggi e svantaggi, tecnologie richieste e considerazioni;
     - glossario: documento utile per definire termini rilevanti nell'ambito del progetto, al fine di uniformare la conoscenza dei membri del gruppo ed evitare incomprensioni e ambiguità;
     - norme di progetto: il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
 
-=== Strumenti utilizzati
+=== Tecnologie
 A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti:
 - Canva per la realizzazione dei diari di bordo;
 - Microsoft Teams per gli incontri esterni;
