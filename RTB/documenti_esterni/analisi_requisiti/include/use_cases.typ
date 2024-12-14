@@ -219,15 +219,16 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    node((0,0.5), [#image("../assets/actor.jpg") Utente non #linebreak() autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
-    node((1.8,0), align(center)[
+    node((1.6,0), align(center)[
             @registrazione Registrazione
     ], shape: ellipse, name: <b>),
 
-    node((2.7,0.3), align(center)[
+    node((2.65,0.05), align(center)[
             @errore-registrazione Errore registrazione
     ], shape: ellipse, name: <c>),
     edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
@@ -242,7 +243,7 @@
     ], shape: ellipse, name: <e>),
     edge(<b>, <e>, "--straight", [\<\<include\>\>]),
 
-    node((2,1), align(center)[
+    node((1.91,1), align(center)[
             @creazione-password Creazione password
     ], shape: ellipse, name: <f>),
     edge(<b>, <f>, "--straight", [\<\<include\>\>]),
@@ -252,20 +253,28 @@
     ], shape: ellipse, name: <g>),
     edge(<b>, <g>, "--straight", [\<\<include\>\>]),
 
+    node((2.6,0.35), align(center)[
+            Utente sbaglia #linebreak() inserimento dati
+    ], shape: rect, name: <le>),
+    node((2.1,0.025), align(center)[
+    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
+
     node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
         align(top + right)[Sistema],
         width: 200pt,
-        height: 200pt,
+        height: 250pt,
         snap: -1,
         name: <group>)
     ),
     caption: [Registrazione UC diagram.]
 ) <registrazione-diagram>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di registrazione di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente non autenticato:
    1. seleziona voce di registrazione;
    2. crea un username univoco nel sistema (@creazione-username);
    3. inserisce un'email valida (@inserimento-email);
@@ -273,8 +282,9 @@
    5. conferma la password (@conferma-password).
  - Sistema:
    1. attende l'esito di @creazione-username, @inserimento-email, @creazione-password e @conferma-password;
-   2. crea un nuovo account;
-   3. salva nel database i dati del nuovo account.
+   2. tutte le verifiche hanno successo;
+   3. crea un nuovo account;
+   4. salva nel database i dati del nuovo account.
 - *Pre-condizioni*:
    - L'utente non possiede un account.
 - *Post-condizioni*:
@@ -283,11 +293,12 @@
   - Errore registrazione (@errore-registrazione).
 
 ==== Creazione username <creazione-username>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di creazione di uno username da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente non autenticato:
    1. inserisce un username.
  - Sistema:
    1. verifica che l'username non sia già in uso.
@@ -298,11 +309,12 @@
 
 
 ==== Inserimento email <inserimento-email>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di inserimento di un'email da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. inserisce un'email.
   - Sistema:
     1. verifica che l'email sia valida.
@@ -312,11 +324,12 @@
   - L'utente ha inserito un'email valida.
 
 ==== Creazione password <creazione-password>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di creazione di una password da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. crea una password.
   - Sistema:
     1. verifica che la password rispetti i vincoli.
@@ -326,11 +339,12 @@
   - L'utente ha creato una password valida.
 
 ==== Conferma password <conferma-password>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di conferma della password da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. conferma la password inserita precedentemente.
   - Sistema:
     1. verifica che la password sia stata confermata correttamente.
@@ -340,12 +354,13 @@
   - La password è stata confermata.
 
 === Errore registrazione <errore-registrazione>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di gestione dell'errore di registrazione.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
-    1. inserisce username, email, o password non validi in @creazione-username, @inserimento-email, @creazione-password, @conferma-password.
+  - Utente non autenticato:
+    1. inserisce username, email, o password non validi.
   - Sistema:
     1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
     2. mostra un messaggio d'errore all'utente;
@@ -355,7 +370,6 @@
 - *Post-condizioni*:
   - L'utente non possiede un account;
   - Viene mostrato un messaggio d'errore esplicativo;
-  - L'utente può riprovare a registrarsi modificando i campi errati.
 
 === Aggiunta account Google associato ai workflows
 <aggiunta-account-google-associato>
@@ -365,6 +379,7 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
 
     node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
@@ -374,11 +389,11 @@
 
     node((2,0.5), align(center)[
              @aggiunta-account-google-associato Aggiunta account Google associato
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ], shape: ellipse, name: <b>),
 
     node((2,1.3), align(center)[
             @errore-comunicazione-google Errore comunicazione Google
-    ], shape: ellipse, name: <e>, inset: 10pt),
+    ], shape: ellipse, name: <e>),
     edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1.6,0.9), align(center)[
@@ -404,7 +419,7 @@
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account da associare all'esecuzione dei blocchi nei workflow;
@@ -425,7 +440,7 @@
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
@@ -468,7 +483,7 @@
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di rimozione dell'account Google associato.
  - Sistema:
    1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow;
