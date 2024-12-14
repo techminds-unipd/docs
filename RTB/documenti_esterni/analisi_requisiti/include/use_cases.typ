@@ -485,6 +485,8 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
 
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
     edge(<utente-autenticato>, <esecuzione-workflow>),
@@ -496,17 +498,17 @@
 
     node((1.25,0), align(center)[
             @esecuzione-workflow Esecuzione workflow 
-    ], shape: ellipse, name: <esecuzione-workflow>),
+    ],  name: <esecuzione-workflow>),
 
     node((1,0.4), align(center)[
             @vis-errore-workflow Vis. errore workflow
-    ], shape: ellipse, name: <vis-errore-workflow>),
+    ],  name: <vis-errore-workflow>),
 
     edge(<vis-errore-workflow>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
 
     node((1.7,0.75), align(center)[
             @vis-errore-runtime Vis. errore runtime
-    ], shape: ellipse, name: <vis-errore-runtime>),
+    ],  name: <vis-errore-runtime>),
     edge(<vis-errore-runtime>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
     
 
@@ -520,6 +522,8 @@
     caption: [Esecuzione workflow UC diagram.]
 ) <esecuzione-diagram>
 
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di esecuzione di un workflow e i suoi scenari alternativi.
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
@@ -529,8 +533,8 @@
    1. esegue il workflow.
  - Sistema:
    1. controlla che il workflow sia valido;
-   3. inoltra i dati all'agente che si interfaccia ad un LLM;
-   4. restituisce il risultato dell'operazione.
+   2. inoltra i dati all'agente che si interfaccia ad un LLM;
+   3. restituisce il risultato dell'operazione.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno due blocchi.
 - *Post-condizioni*:
