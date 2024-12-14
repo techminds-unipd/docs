@@ -486,37 +486,31 @@
     edge-stroke: 1pt,
     label-size: 8pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <esecuzione-workflow>),
 
     node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <b>),
+    edge(<llm>, <esecuzione-workflow>),
 
-    node((1.7,0), align(center)[
+
+
+    node((1.25,0), align(center)[
             @esecuzione-workflow Esecuzione workflow 
-    ], shape: ellipse, name: <b>),
+    ], shape: ellipse, name: <esecuzione-workflow>),
 
-    node((1,0.6), align(center)[
-             @controllo-workflow Controllo workflow
-    ], shape: ellipse, name: <c>),
-    edge(<b>, <c>, "-->", [\<\<include\>\>]),
-
-    node((1,1.4), align(center)[
+    node((1,0.4), align(center)[
             @vis-errore-workflow Vis. errore workflow
-    ], shape: ellipse, name: <d>),
-    edge(<d>, <c>, "-->", [\<\<extend\>\>]),
+    ], shape: ellipse, name: <vis-errore-workflow>),
 
-    node((1.7,1), align(center)[
+    edge(<vis-errore-workflow>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
+
+    node((1.7,0.75), align(center)[
             @vis-errore-runtime Vis. errore runtime
-    ], shape: ellipse, name: <e>),
-    edge(<e>, <b>, "-->", [\<\<extend\>\>]),
+    ], shape: ellipse, name: <vis-errore-runtime>),
+    edge(<vis-errore-runtime>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
+    
 
-    node((2.5,0.6), align(center)[
-            @vis-risultato-esecuzione Vis. risultato esecuzione
-    ], shape: ellipse, name: <f>),
-    edge(<b>, <f>, "-->", [\<\<include\>\>]),
-
-    node(enclose: (<b>,<c>,<d>,<e>,<f>),
+    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
