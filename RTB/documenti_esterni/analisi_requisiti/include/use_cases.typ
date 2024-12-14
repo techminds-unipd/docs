@@ -545,13 +545,15 @@
   
 
 === Visualizzazione errore workflow <vis-errore-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore causato dell'avvio dell'esecuzione di un workflow costruito non correttamente.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
+    1. ha avviato l'esecuzione del workflow.
   - Sistema:
-    1. almeno 1 requisito per la creazione del workflow non è soddifatto;
+    1. rileva che almeno 1 requisito per la creazione del workflow non è stato soddifatto;
     2. mostra un messaggio d'errore all'utente;
     3. termina l'esecuzione.
 - *Pre-condizioni*:
@@ -560,18 +562,19 @@
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
 === Visualizzazione errore runtime <vis-errore-runtime>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore di runtime durante l'esecuzione di un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
+    1. ha avviato l'esecuzione di un workflow valido.
   - Sistema:
-    1. risconta un problema durante l'esecuzione di @esecuzione-workflow;
+    1. risconta un problema durante l'esecuzione del workflow;
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-  - L'utente è autenticato.
+  - L'utente ha creato un workflow valido.
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
