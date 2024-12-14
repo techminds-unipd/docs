@@ -604,8 +604,8 @@
         snap: -1,
         name: <group>)
     ),
-    caption: [Visualizzazione risultato workflow.]
-) <vis-risultato-esecuzione-diagram> 
+    caption: [Visualizzazione risultato dell'esecuzione del workflow.]
+) <vis-risultato-esecuzione-workflow-diagram> 
 
 - *Descrizione*:
   - Questo caso d'uso descrive la visualizzazione del risultato dell'esecuzione di un workflow.
@@ -615,10 +615,10 @@
   - Utente autenticato:
     1. ha eseguito il workflow (@esecuzione-workflow).
   - Sistema:
-    1. riceve il risultato dell'operazione da @esecuzione-workflow;
+    1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
     2. mostra il risultato all'utente.
 - *Pre-condizioni*:
-  - L'esecuzione dek workflow(@esecuzione-workflow) è terminata senza errori.
+  - L'esecuzione del workflow(@esecuzione-workflow) è terminata senza errori.
 - *Post-condizioni*:
   - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
 
