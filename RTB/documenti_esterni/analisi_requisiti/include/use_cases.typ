@@ -254,7 +254,7 @@
     edge(<b>, <g>, "--straight", [\<\<include\>\>]),
 
     node((2.6,0.35), align(center)[
-            Utente sbaglia #linebreak() inserimento dati
+            Utente inserisce #linebreak() dati non validi
     ], shape: rect, name: <le>),
     node((2.1,0.025), align(center)[
     ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
@@ -305,7 +305,7 @@
 - *Pre-condizioni*:
    - L'utente non possiede un account.
 - *Post-condizioni*:
-   - L'utente ha inserito un username valido.
+   - L'utente ha inserito un username.
 
 
 ==== Inserimento email <inserimento-email>
@@ -321,7 +321,7 @@
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - L'utente ha inserito un'email valida.
+  - L'utente ha inserito un'email.
 
 ==== Creazione password <creazione-password>
 - *Descrizione*:
@@ -336,7 +336,7 @@
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - L'utente ha creato una password valida.
+  - L'utente ha creato una password.
 
 ==== Conferma password <conferma-password>
 - *Descrizione*:
@@ -351,7 +351,7 @@
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - La password è stata confermata.
+  - La password è stata ripetuta per la conferma.
 
 === Errore registrazione <errore-registrazione>
 - *Descrizione*:
