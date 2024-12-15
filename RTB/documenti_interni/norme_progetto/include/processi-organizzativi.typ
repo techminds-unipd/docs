@@ -47,9 +47,9 @@ In conformità a quanto descritto nel regolamento del progetto didattico offerto
 ==== Rotazione dei ruoli
 Lo scopo che ci poniamo riguardo la rotazione dei ruoli è permettere ed assicurare a tutti di assumere almeno una volta ogni ruolo durante l'arco temporale in cui si svolge il progetto. Questo ci permette di apprendere le basi di ogni singola posizione e le relative responsabilità. 
 
-La politica di rotazione è determinata in accordo tra tutto il gruppo, tenenedo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che priviligiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremo assumere un ruolo che non ci è stato assegnato in fase di planning.
+La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che priviligiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremo assumere un ruolo che non ci è stato assegnato in fase di planning.
 
-Infine, durante la fase di scambio dei ruoli, chi ha assunto il ruolo precedentemente, deve "passare la conoscenza" acquisita per aiutare il successore durante il periodo di transizione. Per fare questo è fondamentale:
+Infine, durante la fase di scambio dei ruoli, chi ha assunto il ruolo precedentemente, deve condividere la conoscenza acquisita per aiutare il successore durante il periodo di transizione. Per fare questo è fondamentale:
 - Attivare canali vocali per uno scambio più immediato;
 - Utilizzare documenti informali per velocizzare il passaggio di conoscenza;
 - Documentare in modo chiaro e dettagliato ogni azione che è reputata non banale.
@@ -95,7 +95,7 @@ Il codice scritto deve:
 - Essere manutenibile.
 
 ==== Verificatore
-Ruolo chiave in quanto ha lo scopo di controllare la qualità del lavoro svolta dagli altri ruoli e che tale lavoro sia stato eseguito secondo quanto prefissato e concordato dal gruppo e/o da specifiche tecniche. 
+Ruolo chiave in quanto ha lo scopo di controllare la qualità del lavoro svolto dagli altri ruoli e che tale lavoro sia stato eseguito secondo quanto prefissato e concordato dal gruppo e/o da specifiche tecniche. 
 
 Ha quindi il compito di:
 - Verificare la conformità del lavoro svolto rispetto alle norme di progetto;
@@ -106,17 +106,17 @@ Ha quindi il compito di:
 Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare le seguenti tecnologie:
 - GitHub Board (#link("https://github.com/orgs/techminds-unipd/projects/1")): utilizzato per le attività di pianificazione;
 - GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): utilizzato per il controllo delle attivtà previste per ogni periodo;
-- Typst: utilizzato per la documentazione, i diagrammi di Gantt e la creazione dei diagrammi per gli use cases;
+- Typst: utilizzato per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
 
-=== Coordinemanto interno
+=== Coordiamento interno
 Per raggiungere una buona efficienza nello svolgimento del progetto è fondamentale un ottimo coordinamento interno che ci permette di collaborare e comunicare in modo rapido e semplice.
 
 ==== Reperibilità dei membri
 A tal proposito abbiamo creato un foglio google condiviso nel quale ognuno ha indicato i propri orari di disponibilità durante l'arco della settimana, modificabile in caso di nuovi impegni sorti tra l'inizio del progetto e la fase attuale. 
 
-Ogni membro inoltre si assume l'impegno di portare a termine le tasks assegnategli principalmente in modo asincrono e, in caso di necessità collaborative, anche in modo sincrono. La gestione individuale di tali attività è totalmente libera, tenendo comunque in considerazione l'impegno preso nei confronti del gruppo.
+Ogni membro inoltre si assume l'impegno di portare a termine le task assegnategli principalmente in modo asincrono e, in caso di necessità collaborative, anche in modo sincrono. La gestione individuale di tali attività è totalmente libera, tenendo comunque in considerazione l'impegno preso nei confronti del gruppo.
 
 Infine in caso di impegni personali, accademici o imprevisti è necessario che l'interessato comunichi il prima possibile al responsabile l'impedimento nel portare a termine i propri compiti secondo i termini previsti.
 
@@ -134,9 +134,9 @@ Per raggiungere l'obiettivo di mantenere comunicazioni attive e veloci interne a
   - Domande: utilizzato per raccogliere domande generiche.
 
 ==== Incontri
-Per quanto concerne i meetings interni, che solitamente si verificano da remoto, utilizziamo il canale vocale di Discord, suddiviso in 3 canali (Generale, Generale 1 e Generale 2) in caso di necessità di lavoro a piccoli gruppi. 
+Per quanto concerne i meeting interni, che solitamente si verificano da remoto, utilizziamo il canale vocale di Discord, suddiviso in 3 canali (Generale, Generale 1 e Generale 2) in caso di necessità di lavoro a piccoli gruppi. 
 
-Gli incontri interni si verificano periodicamente per effettuare la sprint review, la sprint retrospective e lo sprint planning tra la fine e l'inizio di uno sprint. In caso di necessità si possono fissare anche dei meetings "extra-sprint" se il gruppo li ritiene necessari per allineamento interno o per risolvere problematiche.
+Gli incontri interni si verificano periodicamente per effettuare la sprint review, la sprint retrospective e lo sprint planning tra la fine e l'inizio di uno sprint. In caso di necessità si possono fissare anche dei meeting "extra-sprint" se il gruppo li ritiene necessari per allineamento interno o per risolvere problematiche.
 
 Ogni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare, tenendo anche conto delle difficoltà e delle questioni emerse nel periodo trascorso dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito derogabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
 
@@ -147,15 +147,15 @@ Come evidenziato sopra, le tecnologie di supporto scelte sono:
 - Telegram.
 
 === Coordinamento con il proponente <proponente>
-Il coordinamento tra il gruppo e il proponente è fondamentale sia abbastanza frequente per non perdere l'allineamento tra ciò che il proponente richiede e il prodotto finale consegnato. Inoltre ricevere un feedback periodico sul lavoro svolto ci indica se il lavoro svolto è conforme agli obiettivi fissati.
+Il coordinamento tra il gruppo e il proponente è fondamentale sia abbastanza frequente per non perdere l'allineamento tra ciò che il proponente richiede e il prodotto finale consegnato. Inoltre ricevere un feedback periodico sul lavoro svolto ci indica se è conforme agli obiettivi fissati.
 
 ==== Comunicazioni testuali
 Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni testuali, dopo l'aggiudicazione dell'appalto invece il proponente ha creato un canale Slack in cui possiamo esporre dei dubbi, delle domande, scambiare file, risorse e materiali. Lo scopo di questo canale è risolvere dubbi in modo veloce e mirato e facilitare lo scambio di informazioni. 
 
-Il proponente ha anche aggiunto in questo canale delle figure professionali esperte nelle tecnologie da utlizzare durante lo svolgimento del progetto, in tal modo i nostri eventuali dubbi verranno risolti dal professionista più adatto. 
+Il proponente ha anche aggiunto in questo canale delle figure professionali esperte nelle tecnologie da utilizzare durante lo svolgimento del progetto, in tal modo i nostri eventuali dubbi verranno risolti dal professionista più adatto. 
 
 ==== Incontri
-I meetings esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati fissati degli incontri periodici in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Dal periodo natalizio in poi invece svolgiamo dei meeting di allineamento periodici nei quali esponiamo i nostri avanzamenti ed eventuali dubbi.
+I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati fissati degli incontri periodici in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Dal periodo natalizio in poi invece svolgiamo dei meeting di allineamento periodici nei quali esponiamo i nostri avanzamenti ed eventuali dubbi.
 
 Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (derogabile all'amministratore) e lo invia al proponente per fargli inserire la firma e validarlo.
 
@@ -169,7 +169,7 @@ Per i rapporti con il proponente utilizziamo le seguenti tecnologie:
 In questa sezione sono presenti le metodologie scelte per organizzare e gestire le varie attività da svolgere nel corso del progetto.
 
 ==== Metodologie utilizzate
-Abbiamo deciso di adottare un approccio agile nello sviluppo del progetto prendendo ispirazione dal modello Scrum, metologia ben consolidata e utilizzata nel contesto lavorativo. Questa scelta è stata guidata dai numerosi vantaggi che comporta, per esempio:
+Abbiamo deciso di adottare un approccio agile nello sviluppo del progetto prendendo ispirazione dal modello Scrum, metodologia ben consolidata e utilizzata nel contesto lavorativo. Questa scelta è stata guidata dai numerosi vantaggi che comporta, per esempio:
 - Maggiore flessibilità;
 - Maggiore produttività;
 - Maggiore trasparenza e comunicazione.
@@ -181,28 +181,28 @@ L'idea di base alle strategie di tipo agile è l'azione della pratica di Continu
 
 Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano mediamente due settimane (salvo eccezioni) e durante i quali il gruppo si impegna a svolgere le seguenti attività:
 - Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle da svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
-- Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le issues necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
+- Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le issue necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
 - Sprint review: viene effettuata alla fine dello sprint, prima della retrospettiva. Ogni membro del team mostra i progressi fatti e gli obiettivi raggiunti durante il periodo appena terminato;
 - Sprint retrospective: avviene dopo la sprint review ed è finalizzata ad analizzare l'andamento dello sprint quando questo è terminato per migliorare le performance future, è quindi propedeutica allo sprint successivo. Ispezionamo quindi cosa non ha funzionato e cosa è andato bene per apprendere e migliorare.
 
-==== Milestones e sprint
-Il progetto è suddiviso in periodi chiamati milestones e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
+==== Milestone e sprint
+Il progetto è suddiviso in periodi chiamati milestone e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
 - Milestone: rappresentano le revisioni di progetto. Ogni milestone, per essere raggiunta, richiede il completamento di periodi di tempo chiamati sprint;
-- Sprint: periodi di lavoro con durata fissa, generalmente due settimane, in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo e aiuta a mantenere disciplina e produttività. Variazioni sono consentite solo in alcuni casi e di come accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile.
+- Sprint: periodi di lavoro con durata fissa, generalmente due settimane, in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo e aiuta a mantenere disciplina e produttività. Variazioni sono consentite solo in alcuni casi e di comune accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile.
 
-==== Issues
-Utilizziamo le issues di GitHub per tracciare le attività da svolgere all'interno di ogni sprint.
+==== Issue
+Utilizziamo le issue di GitHub per tracciare le attività da svolgere all'interno di ogni sprint.
 
 ===== Creazione <creazione>
-Le issues vengono solitamente create dall'amministratore (ad eccezione di alcuni casi come lo sprint planning o un'elevata urgenza), specificando i seguenti attributi:
-- Titolo: descrive in modo breve e coinciso lo scopo della issue;
+Le issue vengono solitamente create dall'amministratore (ad eccezione di alcuni casi come lo sprint planning o un'elevata urgenza), specificando i seguenti attributi:
+- Titolo: descrive in modo breve e conciso lo scopo della issue;
 - Descrizione: breve spiegazione testuale di cosa dovrà essere fatto per poter portare a termine la issue, eventualmente anche con una checklist;
 - Label: tag che identifica la categoria (esempi: Norme di progetto, Allenamento, Glossario, bug, fix). In caso di necessità può essere creata una nuova label;
-- Projects: progetti a cui la issue è associata. Se sono presenti delle dashboards (vedi @dashboard per approfondimenti) associate ad un progetto, le issues associate sanno visibili anche da lì;
+- Project: progetti a cui la issue è associata. Se sono presenti delle dashboard (vedi @dashboard per approfondimenti) associate ad un progetto, le issue associate saranno visibili anche da lì;
 - Priority: priorità della issue rispetto alle altre, dove P0 indica massima priorià, P1 priorità media, P2 priorità bassa;
 - Sprint: ad ogni issue associamo lo sprint in cui deve essere completata.
 
-Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo si procede completando anche il campo "Assignees". Se invece è una issue che potrebbe essere svolta da più individui perchè due o più persone svolgono lo stesso ruolo, allora si lascia il campo "Assignees" vuoto e gli interessati andranno a suddividersi le issues di competenza in separata sede. 
+Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo si procede completando anche il campo "Assignees". Se invece è una issue che potrebbe essere svolta da più individui perchè due o più persone svolgono lo stesso ruolo, allora si lascia il campo "Assignees" vuoto e gli interessati andranno a suddividersi le issue di competenza in separata sede. 
 
 ===== Ciclo di vita
 Di seguito descriviamo il ciclo di vita di una issue:
@@ -218,23 +218,23 @@ Di seguito descriviamo il ciclo di vita di una issue:
 
 ==== Board e roadmap <dashboard>
 Riteniamo che board e roadmap siano degli stumenti molto validi:
-- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. Le motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate ed intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issues in modo veloce ed intuitivo;
+- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. L motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate ed intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
 - Roadmap: pianificazione ad alto livello che descrive gli obiettivi strategici del progetto, le funzionalità principali e le scadenze chiave. Tale strumento ci torna utile perchè allinea il team verso un obiettivo comune, definendo l'importanza di ogni attività per ogni sprint. 
 
 Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub project, in particolare:
 - GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1
   
   Dashboard suddivisa in 5 colonne:
-  - No Status: vengono inserite le issues che non hanno una particolare urgenza, solo una volta terminate le issues relative allo sprint verranno completate anche quelle presenti in questa colonna;
-  - Sprint Backlog: presenta tutte le issues che devono essere completate entro fine sprint, organizzate in ordine di priorità;
-  - In progress: raccoglie le issues che sono state iniziate ma non ancora terminate;
-  - In review: issues che si trovano in fase di revisione;
-  - Done: issues terminate.
+  - No Status: vengono inserite le issue che non hanno una particolare urgenza, solo una volta terminate le issue relative allo sprint verranno completate anche quelle presenti in questa colonna;
+  - Sprint Backlog: presenta tutte le issue che devono essere completate entro fine sprint, organizzate in ordine di priorità;
+  - In progress: raccoglie le issue che sono state iniziate ma non ancora terminate;
+  - In review: issue che si trovano in fase di revisione;
+  - Done: issue terminate.
   Ogni membro del gruppo è tenuto a controllare frequentemente la dashboard per una panoramica della situazione dello sprint e a gestire le attività assegnategli;
 
 - GitHub Roadmap: https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap
 
-  In questo caso ogni issues viene collocata secondo un principio temporale. Una volta presa in carico e una volta terminata l'assegnatario aggiorna le date date di inizio, di stima e di fine per consentire una comprensione chiara delle tempistiche delle attività. Finito ogni sprint il responsabile, partendo da questa roadmap, va a creare il diagramma di Gantt in Typst e lo inserisce nel piano di progetto.
+  In questo caso ogni issue viene collocata secondo un principio temporale. Una volta presa in carico e una volta terminata, l'assegnatario aggiorna le date date di inizio, di stima e di fine per consentire una comprensione chiara delle tempistiche delle attività. Finito ogni sprint il responsabile, partendo da questa roadmap, va a creare il diagramma di Gantt in Typst e lo inserisce nel piano di progetto.
 
 ==== Tecnologie
 Per la gestione dell'organizzazione delle attività ci siamo dotati delle seguenti tecnologie:
@@ -260,7 +260,7 @@ Elenco di tecnologie e strumenti:
 - Slack: strumento di messaggistica aziendale utilizzato con il proponente;
 - Microsoft Teams: piattaforma per collaborazione aziendale con chat e videochiamate utilizzata con il proponente;
 - Gmail: servizio di posta elettronica di Google utilizzato per comunicazioni con committente e proponente;
-- Typst: linguaggio per creare documenti con formattazione avanzata, utilizzato per la redazione della documentazione, creazione dei diagrammi degli use cases e di Gantt.
+- Typst: linguaggio per creare documenti con formattazione avanzata, utilizzato per la redazione della documentazione, creazione di diagrammi, tabelle e grafici.
 
 == Miglioramento del processo
 Ha lo scopo di stabilire, valutare, misurare, controllare e migliorare il processo del ciclo di vita del software (standard ISO/IEC 12207:1995).
@@ -270,7 +270,7 @@ Questo processo consiste nelle seguenti attività:
 1. Definizione del processo: con l'organizzazione abbiamo definito una serie di processi organizzativi da applicare alle varie attività e la loro applicazione deve essere documentata;
 2. Valutazione del processo: sviluppare, documentare ed applicare una procedura di valutazione del processo. Tale valutazione deve essere registrata. È necessario pianificare ed effettuare revisioni dei processi a intervalli regolari per garantire la loro continua idoneità ed efficacia alla luce dei risultati della valutazione;
 3. Miglioramento dei processi: a seguito di valutazione e revisione del processo è fondamentale apportare gli eventuali miglioramenti che riteniamo necessari. La documentazione del processo deve essere aggiornata per rispecchiare il suo miglioramento. Inoltre è importante svolgere le seguenti azioni:
-  - raccolta di dati storici, tecnici e di valutazione per ottenere un maggiore comprensione dei punti di forza e delle debolezze dei processi impiegati;
+  - raccolta di dati storici, tecnici e di valutazione per ottenere una maggiore comprensione dei punti di forza e delle debolezze dei processi impiegati;
   - utilizzare l'analisi come feedback per migliorare i processi e raccomandare cambiamenti in una direzione più efficiente;
   - documentare i costi per il miglioramento dell'organizzazione.
 
@@ -290,6 +290,6 @@ L'acquisizione, la fornitura, lo sviluppo, il funzionamento o la manutenzione de
 3. Attuazione del piano di formazione: realizzazione del piano di formazione.
 
 Questo processo di formazione è importante si svolga per l'intera durata del progetto, ovviamente con obiettivi diversi di fase in fase. Per il primo sprint la formazione si è concentrata sullo studio delle tecnologie da utilizzare ed è stata organizzata nel seguente modo:
-1. Attuazione del processo: abbiamo individuato, in accordo con il proponente, le tecnologie da studiare attraverso un profondo studio del capitolato. Abbiamo poi creato un piano di formazione;
-2. Sviluppo del materiale di formazione: il proponenete ci ha fornito delle risorse specifiche per ogni tecnologia e abbiamo trovato alcuni mini-progetti di prova per iniziare a maneggiare le prime tecnologie;
+1. Attuazione del processo: abbiamo individuato, in accordo con il proponente, le tecnologie da studiare attraverso un approfondimento del capitolato. Abbiamo poi creato un piano di formazione;
+2. Sviluppo del materiale di formazione: il proponente ci ha fornito delle risorse specifiche per ogni tecnologia e abbiamo trovato alcuni mini-progetti di prova per iniziare a prendere confidenza con le prime tecnologie;
 3. Attuazione del piano di formazione: ogni individuo ha attuato il piano di formazione, contattando gli altri membri del gruppo in caso di dubbi. Inoltre abbiamo partecipato a 3 corsi di formazione offerti dal proponente.
