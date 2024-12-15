@@ -55,8 +55,8 @@ I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
 #let bilancioPreventivo = calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo)
 #tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
-<tabella-PreventivoSprint1> \
+<tabella-PreventivoSprint2> \
 #pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
-<grafico-PreventivoSprint1> \
+<grafico-PreventivoSprint2> \
 
 ==== Consuntivo
