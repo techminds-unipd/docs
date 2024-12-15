@@ -698,6 +698,8 @@
    1. seleziona l'opzione per salvare il workflow che ha creato.
  - Sistema:
    1. interagisce con il database per salvare il workflow dell'utente.
+- *Pre-condizioni*:
+    - L'utente ha disegnato un workflow.
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
