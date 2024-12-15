@@ -546,7 +546,7 @@
 
 === Visualizzazione errore workflow <vis-errore-workflow>
 - *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione dell'errore causato dell'avvio dell'esecuzione di un workflow costruito non correttamente.
+  - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
