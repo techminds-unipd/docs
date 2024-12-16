@@ -1,6 +1,7 @@
-#import "/template/template.typ": glossario,team
+#import "/template/template.typ": glossario,team, tabellaSprint, pieChartSprint
 #import "@preview/timeliney:0.1.0"
 #import "../costi.typ": getSprintCostsSection
+//#import "/template/template.typ": ,textCellColorConsuntivo,calcolaBilancio,
 
 === Sprint 1
 - Durata: 18/11/2024 - 06/12/2024\
@@ -96,4 +97,29 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
 )
 
 ==== Costi
-#getSprintCostsSection(sprint_number: 1)
+
+===== Preventivo
+
+#let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 1)
+
+#let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo) = preventivo
+
+#tabellaSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
+<tabella-PreventivoSprint1> \
+
+#pieChartSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
+<grafico-PreventivoSprint1> \
+
+
+#if consuntivo != none [
+
+    #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
+
+    ===== Consuntivo
+    I numeri tra parentesi indicano le variazioni rispetto al preventivo.
+
+    #tabellaSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
+    <tabella-ConsuntivoSprint1> \
+    #pieChartSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
+    <grafico-ConsuntivoSprint1> \
+]
