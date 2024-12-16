@@ -618,7 +618,7 @@
     1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
     2. mostra il risultato all'utente.
 - *Pre-condizioni*:
-  - L'esecuzione del workflow(@esecuzione-workflow) è terminata senza errori.
+  - L'esecuzione del workflow (@esecuzione-workflow) è terminata senza errori.
 - *Post-condizioni*:
   - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
 
