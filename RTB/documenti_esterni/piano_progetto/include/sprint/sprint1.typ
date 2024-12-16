@@ -34,8 +34,7 @@ Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le fes
 #list(
     indent: 10pt,
 [il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("verde", stroke: 1pt + green, evade: false) indica il tempo risparmiato rispetto al preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica il tempo sforato rispetto al preventivato;],
+[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettevo;],
 [il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
 )
 
@@ -53,28 +52,28 @@ timeliney.timeline(
     )
 
     taskgroup(title: [*Autoformazione*], {
-      task("React", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
-      task("Node.js", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
-      task("Typescript", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
-      task("MongoDB", (from: 0, to: 10, style: (stroke: 2pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
+      task("React", (from: 0, to: 10, style: (stroke: 8pt + gray)), (from: 0, to: 15, style: (stroke: 2pt + red)))
+      task("Node.js", (from: 0, to: 10, style: (stroke: 8pt + gray)), (from: 0, to: 15, style: (stroke: 2pt + red)))
+      task("Typescript", (from: 0, to: 10, style: (stroke: 8pt + gray)), (from: 0, to: 15, style: (stroke: 2pt + red)))
+      task("MongoDB", (from: 0, to: 10, style: (stroke: 8pt + gray)), (from: 0, to: 15, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Analisi dei requisiti*], {
-      task("Redazione diagrammi UC", (from: 9, to: 14, style: (stroke: 2pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
-      task("User Story 1", (from: 10, to: 12, style: (stroke: 2pt + gray)), (from: 12, to: 13, style: (stroke: 2pt + red)))
-      task("User Story 2", (from: 10, to: 13, style: (stroke: 2pt + gray)))
-      task("User Story 3", (from: 10, to: 14, style: (stroke: 2pt + gray)))
-      task("User Story 4", (from: 12, to: 15, style: (stroke: 2pt + gray)))
-      task("User Story 5", (from: 12, to: 14, style: (stroke: 2pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
-    task("Fix use case", (from: 14, to: 15, style: (stroke: 2pt + gray)))
+      task("Redazione diagrammi UC", (from: 9, to: 14, style: (stroke: 8pt + gray)), (from: 9, to: 15, style: (stroke: 2pt + red)))
+      task("User Story 1", (from: 10, to: 12, style: (stroke: 8pt + gray)), (from: 10, to: 13, style: (stroke: 2pt + red)))
+      task("User Story 2", (from: 10, to: 13, style: (stroke: 8pt + gray)), (from: 10, to: 13, style: (stroke: 2pt + red)))
+      task("User Story 3", (from: 10, to: 14, style: (stroke: 8pt + gray)), (from: 10, to: 14, style: (stroke: 2pt + red)))
+      task("User Story 4", (from: 12, to: 15, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
+      task("User Story 5", (from: 12, to: 14, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
+      task("Fix use case", (from: 14, to: 15, style: (stroke: 8pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
     })
 
-    task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 2pt + gray)))
-    task("Sostituire termini glossario", (from: 1, to: 4, style: (stroke: 2pt + gray)))
-    task("Inizio analisi dei rischi", (from: 4, to: 5, style: (stroke: 2pt + gray)))
-    task("Redazione sprint 1 in PdP", (from: 7, to: 11, style: (stroke: 2pt + gray)))
-    task("Miglioramenti grafici documentazione", (from: 10, to: 11, style: (stroke: 2pt + gray)))
-    task("Rifinitura pagina HTML", (from: 14, to: 15, style: (stroke: 2pt + gray)))
+    task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
+    task("Sostituire termini glossario", (from: 1, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 4, style: (stroke: 2pt + red)))
+    task("Inizio analisi dei rischi", (from: 4, to: 5, style: (stroke: 8pt + gray)), (from: 4, to: 5, style: (stroke: 2pt + red)))
+    task("Redazione sprint 1 in PdP", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 11, style: (stroke: 2pt + red)))
+    task("Miglioramenti grafici documentazione", (from: 10, to: 11, style: (stroke: 8pt + gray)), (from: 10, to: 11, style: (stroke: 2pt + red)))
+    task("Rifinitura pagina HTML", (from: 14, to: 15, style: (stroke: 8pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
   }
 ),
 caption: [Diagramma Gantt sprint 1.]
