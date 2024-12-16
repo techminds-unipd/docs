@@ -13,9 +13,18 @@
 = Casi d'uso
 
 == Obiettivi
-
+Gli obbiettivi dei casi d'uso sono:
+- Descrivere le operazioni che l'utente può compiere all'interno dell'applicativo;
+- Definire le interazioni tra l'utente e il sistema;
+- Definire le interazioni tra il sistema e i servizi esterni.
+Tutti i casi d'uso sono descritti in maniera dettagliata, con l'obiettivo di fornire una visione chiara delle operazioni che l'utente può compiere all'interno dell'applicativo.
 == Attori
-
+- *Attori principali*:
+  - Utente non autenticato
+  - Utente autenticato
+- *Attori secondari*:
+  - Google
+  - LLM
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
