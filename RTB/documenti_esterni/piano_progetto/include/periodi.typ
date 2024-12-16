@@ -7,11 +7,4 @@ In questa sezione verranno elencati i periodi di lavoro suddivisi per le milesto
 In seguito all'assegnazione del capitolato, abbiamo constatato che fosse prematuro cominciare il primo sprint senza avere avuto un primo contatto con il proponente. In attesa quindi dell'incontro con l'azienda VarGroup, la prima settimana dall'11/11/2024 al 17/11/2024 è stata dedicata alla stesura della struttura dei documenti e alla definizione dei ruoli per il primo sprint. Questo periodo "pre-sprint" ci ha permesso di iniziare a prendere confidenza con i vari ruoli svolgendo un allenamento propedeutico al vero e proprio sprint.
 
 #include "sprint/sprint1.typ"
-
-=== Sprint 2
-
-== PB
-
-=== Sprint 1
-
-=== Sprint 2
+#include "sprint/sprint2.typ"

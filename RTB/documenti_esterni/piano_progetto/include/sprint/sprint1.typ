@@ -1,10 +1,10 @@
 #import "/template/template.typ": glossario,team, tabellaSprint, pieChartSprint
 #import "@preview/timeliney:0.1.0"
 #import "../costi.typ": getSprintCostsSection
-//#import "/template/template.typ": ,textCellColorConsuntivo,calcolaBilancio,
 
 === Sprint 1
 - Durata: 18/11/2024 - 06/12/2024\
+
 ==== Pianificazione
 Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore rispetto a quelli successivi e verrà dedicato allo studio delle tecnologie necessarie per lo sviluppo del progetto. In accordo con il proponente, abbiamo deciso quindi di dare maggior priorità all'autoformazione sulle nuove tecnologie. Sono anche stati concordati dei corsi di formazione in presenza con l'azienda, nelle date 26/11/2024 e 28/11/2024, e un ulteriore corso a distanza il giorno 03/12/2024. Il tempo rimanente verrà poi dedicato alla stesura di una parte del documento di analisi dei requisiti. Inoltre andremo ad aggiornare il piano di progetto, in particolare la sezione “Analisi dei rischi”, e il documento riguardante le norme di progetto.\
 
@@ -109,7 +109,6 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
 
 #pieChartSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint1> \
-
 
 #if consuntivo != none [
 

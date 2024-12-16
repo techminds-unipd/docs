@@ -1,5 +1,6 @@
 #import "/template/template.typ": glossario
 = Processi di supporto
+I processi di supporto rappresentano un insieme di attività trasversali che aiutano a garantire la qualità e l'efficacia dei processi attivi durante lo sviluppo software. Le attività descritte all'interno di questa sezione seguono un processo di adattamento e miglioramento in base alle esigenze che sorgono e alla necessità di garantire qualità.
 
 == Documentazione
 === Caratteristiche e finalità
