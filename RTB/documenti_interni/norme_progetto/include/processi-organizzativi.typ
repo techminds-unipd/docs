@@ -12,10 +12,10 @@ Obiettivi principali di tale processo sono:
 - Ottimizzare l'uso delle risorse, migliorando l'efficienza;
 - Mantenere la qualità del prodotto software, rispettando vincoli di tempo e costo. 
 
-I risultati di tutto ciò si concretizzano nel piano di progetto, documento utile per il gruppo ma anche per il committente e per il proponente in quanto fa da "bacheca" a quanto appena descritto.
+I risultati di tutto ciò si concretizzano nel piano di progetto, documento utile per il gruppo ma anche per il committente e per il proponente in quanto funge da presentazione dei processi organizzativi del team.
 
 === Organizzazione dei ruoli
-In conformità a quanto descritto nel regolamento del progetto didattico offerto dal committente e come indicato in @resp-ruoli, ogni ruolo ha le proprie responsabilità da assumersi.
+In conformità a quanto descritto nel regolamento del progetto didattico offerto dal committente e come indicato in @resp-ruoli, ogni persona che svolge un determinato ruolo deve assumersi diverse responsabilità.
 #figure(
   table(
     columns: (1fr, 2fr),
@@ -47,34 +47,34 @@ In conformità a quanto descritto nel regolamento del progetto didattico offerto
 ==== Rotazione dei ruoli
 Lo scopo che ci poniamo riguardo la rotazione dei ruoli è permettere ed assicurare a tutti di assumere almeno una volta ogni ruolo durante l'arco temporale in cui si svolge il progetto. Questo ci permette di apprendere le basi di ogni singola posizione e le relative responsabilità. 
 
-La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che priviligiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremo assumere un ruolo che non ci è stato assegnato in fase di planning.
+La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che privilegiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremo svolgere compiti afferenti a un ruolo diverso da quello assegnato per lo sprint corrente.
 
-Infine, durante la fase di scambio dei ruoli, chi ha assunto il ruolo precedentemente, deve condividere la conoscenza acquisita per aiutare il successore durante il periodo di transizione. Per fare questo è fondamentale:
-- Attivare canali vocali per uno scambio più immediato;
+Infine, durante la fase di scambio dei ruoli, chi lascia un ruolo deve condividere la conoscenza acquisita per facilitare la transizione. Per fare questo è fondamentale:
+- Utilizzare canali vocali (privilegiando i canali Discord) per uno scambio più immediato;
 - Utilizzare documenti informali per velocizzare il passaggio di conoscenza;
 - Documentare in modo chiaro e dettagliato ogni azione che è reputata non banale.
 
 ==== Responsabile
 Il responsabile è una figura di riferimento non solo per il team, ma anche per il committente e il proponente in quanto svolge il ruolo di mediatore tra le parti. 
 
-La sua posizione centrale è dovuta al fatto che svolge l'attività di *pianificazione*, componente fondamentale perchè programma un piano d'azione organizzato che mira al raggiungimento degli obiettivi posti per un determinato periodo. 
+La sua posizione centrale è dovuta al fatto che svolge l'attività di *pianificazione*, componente fondamentale perché programma un piano d'azione organizzato che mira al raggiungimento degli obiettivi posti per un determinato periodo. 
 
 In particolare:
 - Coordina la pianificazione:
-    - allocazione delle risorse specificando le tecnologie da utilizzare;
-    - definizione dei tempi e dei costi;
-    - redazione di piani dettagliati da inserire nel piano di progetto.
+    - alloca le risorse specificando le tecnologie da utilizzare;
+    - definisce i tempi e i costi;
+    - redige piani dettagliati da inserire nel piano di progetto.
 - Verifica la fattibilità del piano proposto;
-- Gestisce relazioni con l'esterno;
+- Gestisce le relazioni con gli altri stakeholder;
 - Controlla i progressi del progetto;
 - Gestisce il bilancio.
 
 ==== Amministratore
-Funge da guida per quanto concerne le norme di progetto e predispone l'ambiente di lavoro utilizzato dal gruppo. In caso di necessità affronta e risolve le problematiche relative alla gestione dei processi e collabora con il responsabile per garantire qualità del prodotto offerto.
-Inoltre si occupa della stesura delle norme di progetto.
+Funge da guida per quanto concerne le norme di progetto e predispone l'ambiente di lavoro utilizzato dal gruppo. In caso di necessità, affronta e risolve le problematiche relative alla gestione dei processi e collabora con il responsabile per garantire qualità del prodotto offerto.
+Inoltre, si occupa della stesura delle norme di progetto.
 
 ==== Analista
-Ha lo scopo di redigere l'analisi dei requisiti andando quindi a identificare, documentare e studiare a fondo le esigenze e le specifiche del progetto traducendole in requisiti dettagliati e non ambigui.
+Ha lo scopo di redigere l'analisi dei requisiti andando quindi a identificare, documentare e studiare a fondo le esigenze e le specifiche del progetto, traducendole in requisiti dettagliati e non ambigui.
 
 In particolare:
 - Definisce il problema;
@@ -88,40 +88,41 @@ Partendo dal lavoro dell'analista effettua scelte progettuali per definire il "c
 - Progettare l'architettura del prodotto.
 
 ==== Programmatore
-Scrive il codice software con l'obiettivo che esso rispecchi i requisiti individuati con l'analisi dei requisiti e le specifiche fornite dai progettisti. 
+Scrive il codice software con l'obiettivo che esso rispecchi i requisiti individuati con l'analisi e le specifiche fornite dai progettisti. 
+
 Il codice scritto deve:
 - Contenere gli strumenti per la verifica e la validazione;
 - Rispecchiare l'architettura ideata dai progettisti;
 - Essere manutenibile.
 
 ==== Verificatore
-Ruolo chiave in quanto ha lo scopo di controllare la qualità del lavoro svolto dagli altri ruoli e che tale lavoro sia stato eseguito secondo quanto prefissato e concordato dal gruppo e/o da specifiche tecniche. 
+Ruolo chiave in quanto ha lo scopo di controllare la qualità del lavoro svolto dagli altri ruoli e che tale lavoro sia stato eseguito secondo quanto concordato dal gruppo e prefissato dalle specifiche tecniche.
 
 Ha quindi il compito di:
 - Verificare la conformità del lavoro svolto rispetto alle norme di progetto;
 - Evidenziare eventuali errori e richiederne la correzione;
-- Redarre il piano di qualifica definendo le metriche e i corrispettivi risultati.
+- Redigere il piano di qualifica definendo le metriche e i corrispettivi risultati.
 
-==== Tecnologie
-Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare le seguenti tecnologie:
-- GitHub Board (#link("https://github.com/orgs/techminds-unipd/projects/1")): utilizzato per le attività di pianificazione;
-- GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): utilizzato per il controllo delle attivtà previste per ogni periodo;
-- Typst: utilizzato per la documentazione e la creazione di diagrammi, tabelle e grafici;
+==== Strumenti e tecnologie
+Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
+- GitHub Board (#link("https://github.com/orgs/techminds-unipd/projects/1")): per le attività di pianificazione;
+- GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): per il controllo delle attivtà previste per ogni periodo;
+- Typst: per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
 
 === Coordiamento interno
-Per raggiungere una buona efficienza nello svolgimento del progetto è fondamentale un ottimo coordinamento interno che ci permette di collaborare e comunicare in modo rapido e semplice.
+Per raggiungere una buona efficienza nello svolgimento del progetto è fondamentale un ottimo coordinamento interno, che permetta di collaborare e comunicare in modo rapido e semplice.
 
 ==== Reperibilità dei membri
-A tal proposito abbiamo creato un foglio google condiviso nel quale ognuno ha indicato i propri orari di disponibilità durante l'arco della settimana, modificabile in caso di nuovi impegni sorti tra l'inizio del progetto e la fase attuale. 
+Per far sì che tutti i membri siano a conoscenza degli impegni altrui, ciascun membro ha indicato i propri orari di disponibilità durante l'arco della settimana in un foglio Google condiviso. Il documento è modificabile in caso vi siano nuovi impegni sorti tra l'inizio del progetto e la fase attuale.
 
 Ogni membro inoltre si assume l'impegno di portare a termine le task assegnategli principalmente in modo asincrono e, in caso di necessità collaborative, anche in modo sincrono. La gestione individuale di tali attività è totalmente libera, tenendo comunque in considerazione l'impegno preso nei confronti del gruppo.
 
-Infine in caso di impegni personali, accademici o imprevisti è necessario che l'interessato comunichi il prima possibile al responsabile l'impedimento nel portare a termine i propri compiti secondo i termini previsti.
+Infine, in caso di impegni personali, accademici o imprevisti è necessario che l'interessato comunichi il prima possibile al responsabile l'impedimento nel portare a termine i propri compiti secondo i termini previsti.
 
 ==== Comunicazioni testuali
-Per raggiungere l'obiettivo di mantenere comunicazioni attive e veloci interne al team ci siamo dotati dei seguenti canali testuali:
+Per consentire al team di comunicare agilmente ci siamo dotati dei seguenti canali testuali:
 - Discord: abbiamo creato un server per facilitare sia le comunicazioni testuali che quelle vocali. In particolare per le comunicazioni testuali abbiamo creato più canali:
   - generale: per comunicazioni generali;
   - diario-di-bordo: raccolta di dubbi da esprimere durante il diario di bordo;
@@ -140,8 +141,8 @@ Gli incontri interni si verificano periodicamente per effettuare la sprint revie
 
 Ogni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare, tenendo anche conto delle difficoltà e delle questioni emerse nel periodo trascorso dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito derogabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
 
-==== Tecnologie
-Come evidenziato sopra, le tecnologie di supporto scelte sono:
+==== Strumenti e tecnologie
+Come evidenziato sopra, gli strumenti e tecnologie di supporto scelte sono:
 - Fogli Google;
 - Discord;
 - Telegram.
@@ -159,8 +160,8 @@ I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del proget
 
 Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (derogabile all'amministratore) e lo invia al proponente per fargli inserire la firma e validarlo.
 
-==== Tecnologie
-Per i rapporti con il proponente utilizziamo le seguenti tecnologie:
+==== Strumenti e tecnologie
+Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
 - Slack;
 - Microsoft Teams;
 - Gmail.
@@ -236,8 +237,8 @@ Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di 
 
   In questo caso ogni issue viene collocata secondo un principio temporale. Una volta presa in carico e una volta terminata, l'assegnatario aggiorna le date date di inizio, di stima e di fine per consentire una comprensione chiara delle tempistiche delle attività. Finito ogni sprint il responsabile, partendo da questa roadmap, va a creare il diagramma di Gantt in Typst e lo inserisce nel piano di progetto.
 
-==== Tecnologie
-Per la gestione dell'organizzazione delle attività ci siamo dotati delle seguenti tecnologie:
+==== Strumenti e tecnologie
+Per la gestione dell'organizzazione delle attività ci siamo dotati dei seguenti strumenti/tecnologie:
 - Ambiente GitHub: GitHub Projects, GitHub Boards, GitHub Roadmap.
 
 == Gestione delle infrastrutture
@@ -249,8 +250,8 @@ Secondo lo standard ISO/IEC 12207:1995 questo processo è formato dalle seguenti
 2. Realizzazione dell'infrastruttura: l'infrastuttura adottata deve essere installata, configurata o attuata (in base alla sua natura) in tempo per l'esecuzione del processo pertinente, tenendo conto dei suoi costi, sicurezza ed eventuale spazio richiesto;
 3. Manutenzione dell'infrastruttura: è importante che monitoriamo, manteniamo adatta e modifichiamo in caso di necessità l'architettura scelta in modo da soddisfare i requisiti del processo in corso.
 
-=== Tecnologie e strumenti
-In questa sezione approfondiamo le tecnologie che formano la nostra architettura a supporto dei processi organizzativi.
+=== Strumenti e tecnologie
+In questa sezione approfondiamo le tecnologie e gli strumenti che formano la nostra architettura a supporto dei processi organizzativi.
 
 Elenco di tecnologie e strumenti:
 - GitHub e strumenti annessi: piattaforma per il versionamento del codice, gestione di repository Git, gestione di un project attraverso GitHub Board e GitHub Roadmap;
@@ -260,17 +261,17 @@ Elenco di tecnologie e strumenti:
 - Slack: strumento di messaggistica aziendale utilizzato con il proponente;
 - Microsoft Teams: piattaforma per collaborazione aziendale con chat e videochiamate utilizzata con il proponente;
 - Gmail: servizio di posta elettronica di Google utilizzato per comunicazioni con committente e proponente;
-- Typst: linguaggio per creare documenti con formattazione avanzata, utilizzato per la redazione della documentazione, creazione di diagrammi, tabelle e grafici.
+- Typst: linguaggio per creare documenti con formattazione avanzata, utilizzato per la redazione della documentazione e per la creazione di diagrammi, tabelle e grafici.
 
 == Miglioramento del processo
-Ha lo scopo di stabilire, valutare, misurare, controllare e migliorare il processo del ciclo di vita del software (standard ISO/IEC 12207:1995).
+Il miglioramento del processo ha lo scopo di stabilire, valutare, misurare, controllare e migliorare il processo del ciclo di vita del software (standard ISO/IEC 12207:1995).
 
 === Attività
 Questo processo consiste nelle seguenti attività:
 1. Definizione del processo: con l'organizzazione abbiamo definito una serie di processi organizzativi da applicare alle varie attività e la loro applicazione deve essere documentata;
 2. Valutazione del processo: sviluppare, documentare ed applicare una procedura di valutazione del processo. Tale valutazione deve essere registrata. È necessario pianificare ed effettuare revisioni dei processi a intervalli regolari per garantire la loro continua idoneità ed efficacia alla luce dei risultati della valutazione;
-3. Miglioramento dei processi: a seguito di valutazione e revisione del processo è fondamentale apportare gli eventuali miglioramenti che riteniamo necessari. La documentazione del processo deve essere aggiornata per rispecchiare il suo miglioramento. Inoltre è importante svolgere le seguenti azioni:
-  - raccolta di dati storici, tecnici e di valutazione per ottenere una maggiore comprensione dei punti di forza e delle debolezze dei processi impiegati;
+3. Miglioramento dei processi: a seguito della valutazione e revisione del processo è fondamentale apportare gli eventuali miglioramenti che riteniamo necessari. La documentazione del processo deve essere aggiornata per rispecchiare il suo miglioramento. Inoltre è importante svolgere le seguenti azioni:
+  - raccogliere dati storici, tecnici e di valutazione per ottenere una maggiore comprensione dei punti di forza e delle debolezze dei processi impiegati;
   - utilizzare l'analisi come feedback per migliorare i processi e raccomandare cambiamenti in una direzione più efficiente;
   - documentare i costi per il miglioramento dell'organizzazione.
 
@@ -292,4 +293,4 @@ L'acquisizione, la fornitura, lo sviluppo, il funzionamento o la manutenzione de
 Questo processo di formazione è importante si svolga per l'intera durata del progetto, ovviamente con obiettivi diversi di fase in fase. Per il primo sprint la formazione si è concentrata sullo studio delle tecnologie da utilizzare ed è stata organizzata nel seguente modo:
 1. Attuazione del processo: abbiamo individuato, in accordo con il proponente, le tecnologie da studiare attraverso un approfondimento del capitolato. Abbiamo poi creato un piano di formazione;
 2. Sviluppo del materiale di formazione: il proponente ci ha fornito delle risorse specifiche per ogni tecnologia e abbiamo trovato alcuni mini-progetti di prova per iniziare a prendere confidenza con le prime tecnologie;
-3. Attuazione del piano di formazione: ogni individuo ha attuato il piano di formazione, contattando gli altri membri del gruppo in caso di dubbi. Inoltre abbiamo partecipato a 3 corsi di formazione offerti dal proponente.
+3. Attuazione del piano di formazione: ogni individuo ha attuato il piano di formazione, contattando gli altri membri del gruppo in caso di dubbi. Inoltre, abbiamo partecipato a 3 corsi di formazione offerti dal proponente.

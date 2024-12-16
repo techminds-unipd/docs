@@ -48,8 +48,8 @@ La documentazione che forniamo al proponente e al committente è la seguente:
     - glossario: documento utile per definire termini rilevanti nell'ambito del progetto, al fine di uniformare la conoscenza dei membri del gruppo ed evitare incomprensioni e ambiguità;
     - norme di progetto: il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
 
-=== Tecnologie
-A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti:
+=== Strumenti e tecnologie
+A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
 - Canva per la realizzazione dei diari di bordo;
 - Microsoft Teams per gli incontri esterni;
 - Slack per le comunicazioni testuali con il proponente;
