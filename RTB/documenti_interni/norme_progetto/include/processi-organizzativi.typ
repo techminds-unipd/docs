@@ -111,7 +111,7 @@ Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiam
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
 
-=== Coordiamento interno
+=== Coordinamento interno
 Per raggiungere una buona efficienza nello svolgimento del progetto è fondamentale un ottimo coordinamento interno, che permetta di collaborare e comunicare in modo rapido e semplice.
 
 ==== Reperibilità dei membri
@@ -184,7 +184,7 @@ Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano
 - Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle da svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
 - Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le issue necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
 - Sprint review: viene effettuata alla fine dello sprint, prima della retrospettiva. Ogni membro del team mostra i progressi fatti e gli obiettivi raggiunti durante il periodo appena terminato;
-- Sprint retrospective: avviene dopo la sprint review ed è finalizzata ad analizzare l'andamento dello sprint quando questo è terminato per migliorare le performance future, è quindi propedeutica allo sprint successivo. Ispezionamo quindi cosa non ha funzionato e cosa è andato bene per apprendere e migliorare.
+- Sprint retrospective: avviene dopo la sprint review ed è finalizzata ad analizzare l'andamento dello sprint quando questo è terminato per migliorare le performance future, è quindi propedeutica allo sprint successivo. Ispezioniamo quindi cosa non ha funzionato e cosa è andato bene per apprendere e migliorare.
 
 ==== Milestone e sprint
 Il progetto è suddiviso in periodi chiamati milestone e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
@@ -219,7 +219,7 @@ Di seguito descriviamo il ciclo di vita di una issue:
 
 ==== Board e roadmap <dashboard>
 Riteniamo che board e roadmap siano degli stumenti molto validi:
-- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. L motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate ed intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
+- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate ed intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
 - Roadmap: pianificazione ad alto livello che descrive gli obiettivi strategici del progetto, le funzionalità principali e le scadenze chiave. Tale strumento ci torna utile perchè allinea il team verso un obiettivo comune, definendo l'importanza di ogni attività per ogni sprint. 
 
 Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub project, in particolare:
