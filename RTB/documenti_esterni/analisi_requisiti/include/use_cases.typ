@@ -553,7 +553,7 @@
   - Utente autenticato:
     1. ha avviato l'esecuzione del workflow.
   - Sistema:
-    1. rileva che almeno 1 requisito per la creazione del workflow non è stato soddifatto;
+    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
     2. mostra un messaggio d'errore all'utente;
     3. termina l'esecuzione.
 - *Pre-condizioni*:
