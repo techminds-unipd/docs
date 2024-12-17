@@ -636,8 +636,8 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
-    node((0,0), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
+    node-inset: 10pt,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
@@ -653,11 +653,12 @@
     ),
     caption: [Creazione nuovo workflow UC diagram.]
 ) <creazione-nuovo-workflow-diagram>
-
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. naviga nella pagina workflow;
    2. seleziona l'opzione per creare un nuovo workflow;
    3. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
@@ -668,9 +669,8 @@
    8. per ogni arco può descrivere un'automazione in linguaggio naturale.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. gestisce gli input drag and drop dell'utente.
+   2. gestisce gli input dell'utente.
 - *Pre-condizioni*:
-   - L'utente è loggato.
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - Viene creato il workflow.
@@ -682,8 +682,8 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
-    node((0,0.25), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
+    node-inset: 10pt,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
@@ -704,26 +704,29 @@
     ),
     caption: [Salvataggio workflow UC diagram.]
 ) <salvataggio-workflow-diagram>
-
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di salvataggio di un workflow.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. seleziona l'opzione per salvare il workflow che ha creato.
  - Sistema:
    1. interagisce con il database per salvare il workflow dell'utente.
 - *Pre-condizioni*:
-   - L'utente è loggato.
+    - L'utente ha disegnato un workflow.
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
    - Errore connessione database (@errore-connessione-database).
 
 === Errore connessione database <errore-connessione-database>
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di gestione dell'errore di connessione al database.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. esegue un'operazione che richiede l'accesso ai dati sul database.
  - Sistema:
    1. interagisce con il database;
