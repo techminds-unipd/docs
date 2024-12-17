@@ -13,11 +13,14 @@
 = Casi d'uso
 
 == Obiettivi
-Gli obbiettivi dei casi d'uso sono:
-- Descrivere le operazioni che l'utente può compiere all'interno dell'applicativo;
-- Definire le interazioni tra l'utente e il sistema;
-- Definire le interazioni tra il sistema e i servizi esterni.
-Tutti i casi d'uso sono descritti in maniera dettagliata, con l'obiettivo di fornire una visione chiara delle operazioni che l'utente può compiere all'interno dell'applicativo.
+Questa sezione è dedicata all'identificazione e alla descrizione 
+dei casi d'uso emersi dall'analisi. I casi d'uso servono a 
+descrivere nel dettaglio le operazioni che l'utente può compiere 
+all'interno dell'applicativo, offrendo una panoramica completa 
+delle funzionalità disponibili. Inoltre, permettono di definire 
+chiaramente le interazioni tra l'utente e il sistema, evidenziando come avviene il 
+dialogo tra questi due. Infine, si occupano anche di delineare le modalità di interazione 
+tra il sistema e i servizi esterni, garantendo così una comprensione precisa delle connessioni e delle dipendenze tecnologiche.
 == Attori
 - *Attori principali*:
   - Utente non autenticato
