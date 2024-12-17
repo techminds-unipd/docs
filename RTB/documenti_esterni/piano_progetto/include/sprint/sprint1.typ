@@ -34,7 +34,7 @@ Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le fes
 #list(
     indent: 10pt,
 [il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettevo;],
+[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
 [il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
 )
 
@@ -59,7 +59,7 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Analisi dei requisiti*], {
-      task("Redazione diagrammi UC", (from: 9, to: 14, style: (stroke: 8pt + gray)), (from: 9, to: 15, style: (stroke: 2pt + red)))
+      task("Redazione diagrammi UC", (from: 9, to: 15, style: (stroke: 8pt + gray)), (from: 9, to: 15, style: (stroke: 2pt + red)))
       task("User Story 1", (from: 10, to: 12, style: (stroke: 8pt + gray)), (from: 10, to: 13, style: (stroke: 2pt + red)))
       task("User Story 2", (from: 10, to: 13, style: (stroke: 8pt + gray)), (from: 10, to: 13, style: (stroke: 2pt + red)))
       task("User Story 3", (from: 10, to: 14, style: (stroke: 8pt + gray)), (from: 10, to: 14, style: (stroke: 2pt + red)))
