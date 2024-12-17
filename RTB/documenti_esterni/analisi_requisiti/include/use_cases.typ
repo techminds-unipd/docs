@@ -734,3 +734,70 @@
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
+
+=== Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @visualizzazione-blocchi-configurati
+            Visualizzazione blocchi configurati
+    ], shape: ellipse, name: <a>),
+
+    node((1.8,1), align(center)[
+            @avviso-servizi-non-collegati Avviso servizi non collegati
+    ], shape: ellipse, name: <b>),
+    edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
+
+    node((2.6,0.4), align(center)[
+            Nessun servizio #linebreak() collegato
+    ], shape: rect, name: <le>),
+    node((1.89,0.5), align(center)[
+    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
+    node(enclose: (<a>,<b>,<le>),
+        align(top + right)[Sistema],
+        width: 300pt,
+        height: 170pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione blocchi configurati UC diagram.]
+) <visualizzazione-blocchi-configurati-diagram>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. Avvia la procedura di creazione di un nuovo workflow.
+ - Sistema:
+    1. Controlla che ci sia un account Google collegato.
+    2. Trova un account Google collegato.
+    3. Fa visualizzare i blocchi dei servizi di Google.
+- *Post-condizioni*:
+   - L'utente visualizza i blocchi configurati.
+- *Estensioni*:
+   - Avviso servizi non collegati.
+
+=== Avviso servizi non collegati 
+<avviso-servizi-non-collegati>
+
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. Avvia la procedura di creazione di un nuovo workflow.
+ - Sistema:
+    1. Controlla che ci sia un account Google collegato.
+    2. Non trova un account Google collegato. 
+    3. Viene visualizzato un avviso.
+- *Post-condizioni*:
+   - Viene segnalato all'utente che non ha nessun account Google collegato.
+   - L'utente viene rediretto alla pagina per collegare l'account Google.
