@@ -48,7 +48,7 @@ Acronimo di _Amazon Web Services_, è una sussidiaria di Amazon che fornisce ser
 = B
 
 == Backlog
-Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog, il _product backlog_ ovvero l'insieme di tutti i compiti/attività del progetto e lo _spring backlog_, che indica i compiti/attività da completare durante uno sprint.
+Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog, il _product backlog_ ovvero l'insieme di tutti i compiti/attività del progetto e lo _sprint backlog_, che indica i compiti/attività da completare durante uno sprint.
 
 == Baseline
 Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fissati da una milestone. Una baseline viene approvata ed è modificabile solamente tramite un processo definito, formale e tracciato.
@@ -124,7 +124,7 @@ Elenco organizzato di termini tecnici, acronimi e definizioni utilizzati nel con
 Indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto agli altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzichè in sillabe, semplificandone il calcolo automatico.
                  #linebreak()La formula per il calcolo è $89 + (300("n_frasi") -10("n_lettere"))/"n_parole"$.
 
-== Integrazione continua // {CI}
+== Integrazione continua // {Continous Integration}
 Spesso indicata con CI (dall'inglese _Continuous Integration_), è una pratica di sviluppo in cui è presente un meccanismo di Build Automation e dove il team integra frequentemente le modifiche.
 
 == Intelligenza Artificiale // {AI}
@@ -170,6 +170,8 @@ Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o
 
 == PB // {Product Baseline}
 Acronimo di _Product Baseline_. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).
+
+== Piano di progetto // {PdQ}
 
 == Piano di qualifica // {PdQ}
 Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.

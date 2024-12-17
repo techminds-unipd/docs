@@ -1,3 +1,4 @@
+#import "/template/template.typ": glossario
 = Processi organizzativi
 
 == Gestione dei processi
