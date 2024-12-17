@@ -70,7 +70,7 @@ In particolare:
 - Gestisce il bilancio.
 
 ==== Amministratore
-Funge da guida per quanto concerne le norme di progetto e predispone l'ambiente di lavoro utilizzato dal gruppo. In caso di necessità, affronta e risolve le problematiche relative alla gestione dei processi e collabora con il responsabile per garantire qualità del prodotto offerto.
+Funge da guida per quanto concerne le norme di progetto e predispone l'ambiente di lavoro utilizzato dal gruppo. In caso di necessità, affronta e risolve le problematiche relative alla gestione dei processi e collabora con il responsabile per garantire la qualità del prodotto offerto.
 Inoltre, si occupa della stesura delle norme di progetto.
 
 ==== Analista
@@ -104,9 +104,9 @@ Ha quindi il compito di:
 - Redigere il piano di qualifica definendo le metriche e i corrispettivi risultati.
 
 ==== Strumenti e tecnologie
-Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
+Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e le seguenti tecnologie:
 - GitHub Board (#link("https://github.com/orgs/techminds-unipd/projects/1")): per le attività di pianificazione;
-- GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): per il controllo delle attivtà previste per ogni periodo;
+- GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): per il controllo delle attività previste per ogni periodo;
 - Typst: per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
@@ -117,7 +117,7 @@ Per raggiungere una buona efficienza nello svolgimento del progetto è fondament
 ==== Reperibilità dei membri
 Per far sì che tutti i membri siano a conoscenza degli impegni altrui, ciascun membro ha indicato i propri orari di disponibilità durante l'arco della settimana in un foglio Google condiviso. Il documento è modificabile in caso vi siano nuovi impegni sorti tra l'inizio del progetto e la fase attuale.
 
-Ogni membro inoltre si assume l'impegno di portare a termine le task assegnategli principalmente in modo asincrono e, in caso di necessità collaborative, anche in modo sincrono. La gestione individuale di tali attività è totalmente libera, tenendo comunque in considerazione l'impegno preso nei confronti del gruppo.
+Ogni membro inoltre si assume l'impegno di portare a termine le proprie task principalmente in modo asincrono e, in caso di necessità collaborative, anche in modo sincrono. La gestione individuale di tali attività è totalmente libera, tenendo comunque in considerazione l'impegno preso nei confronti del gruppo.
 
 Infine, in caso di impegni personali, accademici o imprevisti è necessario che l'interessato comunichi il prima possibile al responsabile l'impedimento nel portare a termine i propri compiti secondo i termini previsti.
 
@@ -126,20 +126,20 @@ Per consentire al team di comunicare agilmente ci siamo dotati dei seguenti cana
 - Discord: abbiamo creato un server per facilitare sia le comunicazioni testuali che quelle vocali. In particolare per le comunicazioni testuali abbiamo creato più canali:
   - generale: per comunicazioni generali;
   - diario-di-bordo: raccolta di dubbi da esprimere durante il diario di bordo;
-  - analisi-dei-requisiti: canale relativo a dubbi o discussioni riguardo l'analisi dei requisiti e relativi use cases;
+  - analisi-dei-requisiti: canale relativo a dubbi o discussioni riguardo l'analisi dei requisiti e relativi use case;
   - poc: canale per dubbi o discussioni riguardo l'implementazione del PoC;
   - proponente: raccolta di dubbi da sottoporre al proponente.
-- Telegram: il gruppo Telegram viene utilizzato per uno scambio rapido di informazioni che hanno una certa rilevanza. Se invece sorgono dei dubbi o degli aspetti urgenti che possono essere risolti da un gruppo ristretto si predilige la comunicazione tra singoli individui per non intasare e rallentare il lavoro degli altri membri. Anche su Telegram abbiamo creato vari canali:
+- Telegram: il gruppo Telegram viene utilizzato per uno scambio rapido di informazioni di una certa rilevanza. Se invece sorgono dei dubbi o degli aspetti urgenti che possono essere risolti da un gruppo ristretto si predilige la comunicazione tra i singoli individui, per non intasare e rallentare il lavoro degli altri membri. Anche su Telegram abbiamo creato vari canali:
   - General: comunicazioni generali;
   - Daily Scrum: ogni membro indica le cose fatte il giorno prima, cosa farà durante il giorno, eventuali problemi sorti;
   - Domande: utilizzato per raccogliere domande generiche.
 
 ==== Incontri
-Per quanto concerne i meeting interni, che solitamente si verificano da remoto, utilizziamo il canale vocale di Discord, suddiviso in 3 canali (Generale, Generale 1 e Generale 2) in caso di necessità di lavoro a piccoli gruppi. 
+Per quanto concerne i meeting interni, che solitamente si tengono da remoto, utilizziamo il canale vocale di Discord, suddiviso in 3 canali (Generale, Generale 1 e Generale 2) in caso vi sia la necessità di lavorare contemporaneamente divisi in gruppi.
 
-Gli incontri interni si verificano periodicamente per effettuare la sprint review, la sprint retrospective e lo sprint planning tra la fine e l'inizio di uno sprint. In caso di necessità si possono fissare anche dei meeting "extra-sprint" se il gruppo li ritiene necessari per allineamento interno o per risolvere problematiche.
+Gli incontri interni si verificano periodicamente per effettuare la sprint retrospective e lo sprint planning tra la fine di uno sprint e l'inizio del successivo. Si possono fissare anche dei meeting nel mezzo dello sprint per necessità di allineamento interno o per risolvere problematiche urgenti.
 
-Ogni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare, tenendo anche conto delle difficoltà e delle questioni emerse nel periodo trascorso dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito derogabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
+OOgni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo, il responsabile deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare tenendo conto delle difficoltà e delle questioni emerse dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito delegabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
 
 ==== Strumenti e tecnologie
 Come evidenziato sopra, gli strumenti e tecnologie di supporto scelte sono:
@@ -148,17 +148,17 @@ Come evidenziato sopra, gli strumenti e tecnologie di supporto scelte sono:
 - Telegram.
 
 === Coordinamento con il proponente <proponente>
-Il coordinamento tra il gruppo e il proponente è fondamentale sia abbastanza frequente per non perdere l'allineamento tra ciò che il proponente richiede e il prodotto finale consegnato. Inoltre ricevere un feedback periodico sul lavoro svolto ci indica se è conforme agli obiettivi fissati.
+Un frequente coordinamento tra il gruppo e il proponente è fondamentale per assicurarsi che il prodotto evolva coerentemente con le richieste del proponente. Inoltre, ricevere dei feedback periodici sul lavoro svolto ci indica se è conforme agli obiettivi fissati.
 
 ==== Comunicazioni testuali
-Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni testuali, dopo l'aggiudicazione dell'appalto invece il proponente ha creato un canale Slack in cui possiamo esporre dei dubbi, delle domande, scambiare file, risorse e materiali. Lo scopo di questo canale è risolvere dubbi in modo veloce e mirato e facilitare lo scambio di informazioni. 
+Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni testuali; dopo l'aggiudicazione dell'appalto, invece, il proponente ha creato un canale Slack in cui possiamo fare delle domande e scambiare file, risorse e materiali. Gli scopi di questo canale sono rispondere ai dubbi in modo veloce e mirato e facilitare lo scambio di informazioni.
 
-Il proponente ha anche aggiunto in questo canale delle figure professionali esperte nelle tecnologie da utilizzare durante lo svolgimento del progetto, in tal modo i nostri eventuali dubbi verranno risolti dal professionista più adatto. 
+Il proponente ha aggiunto in questo canale diverse figure professionali esperte nelle tecnologie da utilizzare nel progetto, per poter rispondere in maniera esaustiva ai diversi tipi di dubbi e problematiche che possono sorgere.
 
 ==== Incontri
-I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati fissati degli incontri periodici in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Dal periodo natalizio in poi invece svolgiamo dei meeting di allineamento periodici nei quali esponiamo i nostri avanzamenti ed eventuali dubbi.
+I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati fissati degli incontri periodici in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Dal periodo natalizio in poi invece svolgeremo dei meeting di allineamento periodici nei quali mostrare gli avanzamenti ed esporre eventuali dubbi.
 
-Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (derogabile all'amministratore) e lo invia al proponente per fargli inserire la firma e validarlo.
+Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (delegabile all'amministratore) e lo invia al proponente per l'approvazione tramite una firma.
 
 ==== Strumenti e tecnologie
 Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
@@ -166,7 +166,7 @@ Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
 - Microsoft Teams;
 - Gmail.
 
-=== Organizzazione di attività
+=== Organizzazione delle attività
 In questa sezione sono presenti le metodologie scelte per organizzare e gestire le varie attività da svolgere nel corso del progetto.
 
 ==== Metodologie utilizzate
@@ -174,17 +174,17 @@ Abbiamo deciso di adottare un approccio agile nello sviluppo del progetto prende
 - Maggiore flessibilità;
 - Maggiore produttività;
 - Maggiore trasparenza e comunicazione.
-L'idea di base alle strategie di tipo agile è l'azione della pratica di Continuous Integration (CI) che:
+Alla base delle strategie di tipo agile vi è l'adozione della pratica di Continuous Integration (CI) che:
 - Favorisce il lavoro di gruppo promuovendo la collaborazione e la condivisione;
 - Promuove il miglioramento continuo, attraverso la retrospettiva, identificando e risolvendo le problematiche in modo mirato e rapido;
 - Garantisce una distribuzione efficace delle responsabilità e delle attività;
-- Fornisce trasparenza per proponente e committente facilitando l'analisi e la comprensione del processo di sviluppo.
+- Assicura trasparenza facilitando l'analisi e la comprensione del processo di sviluppo al proponente e al committente.
 
 Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano mediamente due settimane (salvo eccezioni) e durante i quali il gruppo si impegna a svolgere le seguenti attività:
-- Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle da svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
+- Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle che ha intenzione di svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
 - Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le issue necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
 - Sprint review: viene effettuata alla fine dello sprint, prima della retrospettiva. Ogni membro del team mostra i progressi fatti e gli obiettivi raggiunti durante il periodo appena terminato;
-- Sprint retrospective: avviene dopo la sprint review ed è finalizzata ad analizzare l'andamento dello sprint quando questo è terminato per migliorare le performance future, è quindi propedeutica allo sprint successivo. Ispezioniamo quindi cosa non ha funzionato e cosa è andato bene per apprendere e migliorare.
+- Sprint retrospective: avviene al termine dello sprint ed è finalizzata ad analizzare l'andamento dello sprint. Ispezionamo cosa non ha funzionato e cosa è andato bene per apprendere e migliorare. É anche un evento propedeutico allo sprint successivo in quanto volto a migliorare le performance future.
 
 ==== Milestone e sprint
 Il progetto è suddiviso in periodi chiamati milestone e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
@@ -199,8 +199,8 @@ Le issue vengono solitamente create dall'amministratore (ad eccezione di alcuni 
 - Titolo: descrive in modo breve e conciso lo scopo della issue;
 - Descrizione: breve spiegazione testuale di cosa dovrà essere fatto per poter portare a termine la issue, eventualmente anche con una checklist;
 - Label: tag che identifica la categoria (esempi: Norme di progetto, Allenamento, Glossario, bug, fix). In caso di necessità può essere creata una nuova label;
-- Project: progetti a cui la issue è associata. Se sono presenti delle dashboard (vedi @dashboard per approfondimenti) associate ad un progetto, le issue associate saranno visibili anche da lì;
-- Priority: priorità della issue rispetto alle altre, dove P0 indica massima priorià, P1 priorità media, P2 priorità bassa;
+- Project: GitHub Projects a cui la issue è associata. Se sono presenti delle dashboard (vedi @dashboard per approfondimenti) associate ad un progetto, le issue associate saranno visibili anche da lì;
+- Priority: priorità della issue rispetto alle altre, dove P0 indica massima priorità, P1 priorità media, P2 priorità bassa;
 - Sprint: ad ogni issue associamo lo sprint in cui deve essere completata.
 
 Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo si procede completando anche il campo "Assignees". Se invece è una issue che potrebbe essere svolta da più individui perchè due o più persone svolgono lo stesso ruolo, allora si lascia il campo "Assignees" vuoto e gli interessati andranno a suddividersi le issue di competenza in separata sede. 
@@ -213,42 +213,42 @@ Di seguito descriviamo il ciclo di vita di una issue:
   - accede alla dashboard e sposta la issue alla colonna "In progress". In alternativa può cambiare lo stato della issue anche modificando il campo "Status";
   - inserisce la data di inizio della issue;
   - inserisce la stima del termine della issue.
-4. Una volta che la issue è considerata terminata, l'assegnatario apre una Pull Request su GitHub, aggiornando lo stato della issue da "In progress" a "In review";
+4. Una volta che la issue è considerata terminata, l'assegnatario apre una Pull Request su GitHub scrivendo sulla descrizione close numero_issue e aggiornando lo stato della issue da "In progress" a "In review";
 5. I verificatori seguono la procedura di verifica;
-6. Se l'esito dei verificatori è positivo, la issue viene ufficialmente spostata alla colonna "Done" della dashboard.
+6. Se e quando l'esito della verifica è positivo, la issue viene ufficialmente spostata alla colonna "Done" della dashboard.
 
 ==== Board e roadmap <dashboard>
-Riteniamo che board e roadmap siano degli stumenti molto validi:
-- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate ed intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
+Riteniamo che board e roadmap siano degli stumenti molto validi come supporto all'organizzazione delle attività:
+- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate e intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
 - Roadmap: pianificazione ad alto livello che descrive gli obiettivi strategici del progetto, le funzionalità principali e le scadenze chiave. Tale strumento ci torna utile perchè allinea il team verso un obiettivo comune, definendo l'importanza di ogni attività per ogni sprint. 
 
 Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub project, in particolare:
 - GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1
   
-  Dashboard suddivisa in 5 colonne:
-  - No Status: vengono inserite le issue che non hanno una particolare urgenza, solo una volta terminate le issue relative allo sprint verranno completate anche quelle presenti in questa colonna;
+  Dashboard suddivisa in 5 colonne che corrispondono alle fasi del ciclo di vita delle issue:
+  - No Status: vengono inserite le issue che non hanno una particolare urgenza; solo una volta terminate le issue relative allo sprint verranno completate anche quelle presenti in questa colonna;
   - Sprint Backlog: presenta tutte le issue che devono essere completate entro fine sprint, organizzate in ordine di priorità;
   - In progress: raccoglie le issue che sono state iniziate ma non ancora terminate;
-  - In review: issue che si trovano in fase di revisione;
-  - Done: issue terminate.
-  Ogni membro del gruppo è tenuto a controllare frequentemente la dashboard per una panoramica della situazione dello sprint e a gestire le attività assegnategli;
+  - In review: raccoglie le issue che si trovano in fase di revisione;
+  - Done: raccoglie le issue terminate.
+  Ogni membro del gruppo è tenuto a controllare frequentemente la dashboard per avere una panoramica della situazione dello sprint e a gestire le attività che ha preso in carico;
 
 - GitHub Roadmap: https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap
 
-  In questo caso ogni issue viene collocata secondo un principio temporale. Una volta presa in carico e una volta terminata, l'assegnatario aggiorna le date date di inizio, di stima e di fine per consentire una comprensione chiara delle tempistiche delle attività. Finito ogni sprint il responsabile, partendo da questa roadmap, va a creare il diagramma di Gantt in Typst e lo inserisce nel piano di progetto.
+  In questo caso ogni issue viene collocata secondo un principio temporale. Una volta presa in carico e una volta terminata, l'assegnatario aggiorna le date date di inizio, di completamento stimato e di fine per consentire una comprensione chiara delle tempistiche delle attività. Finito ogni sprint il responsabile, partendo da questa roadmap, va a creare il diagramma di Gantt in Typst e lo inserisce nel piano di progetto.
 
 ==== Strumenti e tecnologie
 Per la gestione dell'organizzazione delle attività ci siamo dotati dei seguenti strumenti/tecnologie:
 - Ambiente GitHub: GitHub Projects, GitHub Boards, GitHub Roadmap.
 
 == Gestione delle infrastrutture
-La gestione delle infrastrutture ha lo scopo di stabilire e mantenere l'infrastruttura necessaria per qualsiasi altro processo. L'infrastruttura può includere hardware, software, strumenti, tecniche, standard e strutture per lo sviluppo, il funzionamento o la manutenzione.
+La gestione delle infrastrutture ha lo scopo di stabilire e mantenere l'infrastruttura a supporo di qualsiasi altro processo. L'infrastruttura può includere: hardware, software, strumenti, tecniche, standard e strutture per lo sviluppo, il funzionamento o la manutenzione.
 
 === Attività
 Secondo lo standard ISO/IEC 12207:1995 questo processo è formato dalle seguenti attività, che ci impegniamo a rispettare:
 1. Attuazione del processo: definizione e documentazione dell'infrastuttura, tenendo in considerazione le procedure descritte per ogni attività e gli standard da adottare;
-2. Realizzazione dell'infrastruttura: l'infrastuttura adottata deve essere installata, configurata o attuata (in base alla sua natura) in tempo per l'esecuzione del processo pertinente, tenendo conto dei suoi costi, sicurezza ed eventuale spazio richiesto;
-3. Manutenzione dell'infrastruttura: è importante che monitoriamo, manteniamo adatta e modifichiamo in caso di necessità l'architettura scelta in modo da soddisfare i requisiti del processo in corso.
+2. Realizzazione dell'infrastruttura: l'infrastuttura adottata deve essere installata, configurata o attuata (in base alla sua natura) in tempo per l'esecuzione del processo pertinente, tenendo conto dei suoi costi, della sicurezza e dell'eventuale spazio richiesto;
+3. Manutenzione dell'infrastruttura: è importante che monitoriamo, manteniamo adatta e modifichiamo in caso di necessità l'architettura scelta, in modo da soddisfare i requisiti del processo in corso.
 
 === Strumenti e tecnologie
 In questa sezione approfondiamo le tecnologie e gli strumenti che formano la nostra architettura a supporto dei processi organizzativi.
@@ -259,8 +259,8 @@ Elenco di tecnologie e strumenti:
 - Discord: piattaforma di comunicazione con chat vocali e testuali per scopi interni al gruppo;
 - Ambiente condiviso di Google: suite collaborativa online per editing e condivisione di documenti in tempo reale;
 - Slack: strumento di messaggistica aziendale utilizzato con il proponente;
-- Microsoft Teams: piattaforma per collaborazione aziendale con chat e videochiamate utilizzata con il proponente;
-- Gmail: servizio di posta elettronica di Google utilizzato per comunicazioni con committente e proponente;
+- Microsoft Teams: piattaforma per collaborazione aziendale con chat e videochiamate utilizzata per le riunioni con il proponente;
+- Gmail: servizio di posta elettronica di Google utilizzato per le comunicazioni con committente e proponente;
 - Typst: linguaggio per creare documenti con formattazione avanzata, utilizzato per la redazione della documentazione e per la creazione di diagrammi, tabelle e grafici.
 
 == Miglioramento del processo
