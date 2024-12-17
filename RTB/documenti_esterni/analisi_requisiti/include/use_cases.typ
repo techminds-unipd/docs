@@ -654,7 +654,7 @@
    8. per ogni arco può descrivere un'automazione in linguaggio naturale.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. gestisce gli input drag and drop dell'utente.
+   2. gestisce gli input dell'utente.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
