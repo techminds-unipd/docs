@@ -500,38 +500,34 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <esecuzione-workflow>),
 
-    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <b>),
+    node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <esecuzione-workflow>),
 
-    node((1.7,0), align(center)[
+
+
+    node((1.25,0), align(center)[
             @esecuzione-workflow Esecuzione workflow 
-    ], shape: ellipse, name: <b>),
+    ],  name: <esecuzione-workflow>),
 
-    node((1,0.6), align(center)[
-             @controllo-workflow Controllo workflow
-    ], shape: ellipse, name: <c>),
-    edge(<b>, <c>, "-->", [\<\<include\>\>]),
-
-    node((1,1.4), align(center)[
+    node((1,0.4), align(center)[
             @vis-errore-workflow Vis. errore workflow
-    ], shape: ellipse, name: <d>),
-    edge(<d>, <c>, "-->", [\<\<extend\>\>]),
+    ],  name: <vis-errore-workflow>),
 
-    node((1.7,1), align(center)[
+    edge(<vis-errore-workflow>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
+
+    node((1.7,0.75), align(center)[
             @vis-errore-runtime Vis. errore runtime
-    ], shape: ellipse, name: <e>),
-    edge(<e>, <b>, "-->", [\<\<extend\>\>]),
+    ],  name: <vis-errore-runtime>),
+    edge(<vis-errore-runtime>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
+    
 
-    node((2.5,0.6), align(center)[
-            @vis-risultato-esecuzione Vis. risultato esecuzione
-    ], shape: ellipse, name: <f>),
-    edge(<b>, <f>, "-->", [\<\<include\>\>]),
-
-    node(enclose: (<b>,<c>,<d>,<e>,<f>),
+    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
@@ -541,6 +537,8 @@
     caption: [Esecuzione workflow UC diagram.]
 ) <esecuzione-diagram>
 
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di esecuzione di un workflow e i suoi scenari alternativi.
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
@@ -549,58 +547,28 @@
  - Utente autenticato:
    1. esegue il workflow.
  - Sistema:
-   1. controlla che l'intero workflow sia valido (@controllo-workflow);
-   2. attende l'esito del controllo;
-   3. inoltra i dati all'agente che si interfaccia ad un LLM;
-   4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
+   1. controlla che il workflow sia valido;
+   2. inoltra i dati all'agente che si interfaccia ad un LLM;
+   3. restituisce il risultato dell'operazione.
 - *Pre-condizioni*:
-   - L'utente è autenticato;
    - L'utente ha creato un workflow con almeno due blocchi.
-- *Post-condizioni*:    
-  - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
+- *Post-condizioni*:
+  - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
   - Visualizzazione errore runtime (@vis-errore-runtime).
-
-==== Controllo workflow <controllo-workflow>
-
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
-  - Sistema:
-    1. controlla che il workflow sia valido;
-    2. ritorna l'esito del controllo.
-- *Pre-condizioni*:
-  - L'utente ha creato un workflow valido.
-- *Post-condizioni*:
-  - Restituisce l'esito del controllo.
-- *Estensioni*
   - Visualizzazione errore workflow (@vis-errore-workflow).
-
-==== Visualizzazione risultato esecuzione <vis-risultato-esecuzione>
-
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
-  - Sistema:
-    1. riceve il risultato dell'operazione da @esecuzione-workflow;
-    2. mostra il risultato all'utente.
-- *Pre-condizioni*:
-  - L'esecuzione termina senza errori.
-- *Post-condizioni*:
-  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
+  
 
 === Visualizzazione errore workflow <vis-errore-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
+    1. ha avviato l'esecuzione del workflow.
   - Sistema:
-    1. il controllo in @controllo-workflow non ha successo;
+    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
     2. mostra un messaggio d'errore all'utente;
     3. termina l'esecuzione.
 - *Pre-condizioni*:
@@ -609,23 +577,65 @@
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
 === Visualizzazione errore runtime <vis-errore-runtime>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore di runtime durante l'esecuzione di un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
+    1. ha avviato l'esecuzione di un workflow valido.
   - Sistema:
-    1. risconta un problema durante l'esecuzione di @esecuzione-workflow;
+    1. risconta un problema durante l'esecuzione del workflow;
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-  - L'utente è autenticato.
+  - L'utente ha creato un workflow valido.
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-  
+=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
 
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
+
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <vis-risultato-esecuzione-workflow>),
+
+    node((2,0), align(center)[
+            @vis-risultato-esecuzione-workflow Vis. risultato esecuzione #linebreak() workflow
+    ],  name: <vis-risultato-esecuzione-workflow>),
+
+    node(enclose: (<vis-risultato-esecuzione-workflow>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione risultato dell'esecuzione del workflow.]
+) <vis-risultato-esecuzione-workflow-diagram> 
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione del risultato dell'esecuzione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. ha eseguito il workflow (@esecuzione-workflow).
+  - Sistema:
+    1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
+    2. mostra il risultato all'utente.
+- *Pre-condizioni*:
+  - L'esecuzione del workflow (@esecuzione-workflow) è terminata senza errori.
+- *Post-condizioni*:
+  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
 
 
 === Creazione nuovo workflow <creazione-nuovo-workflow>
