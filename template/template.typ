@@ -218,9 +218,9 @@
 }
 
 #let pieChartSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, isConsuntivo) = {
-  let caption = [Grafico distribuzione ore preventivo sprint #context numSprint.get().]
+  let caption = [Grafico distribuzione ore preventivo sprint #numSprint.]
   if isConsuntivo {
-    caption = [Grafico distribuzione ore consuntivo sprint #context numSprint.get().]
+    caption = [Grafico distribuzione ore consuntivo sprint #numSprint.]
   }
   let costoOrario = (30, 20, 25, 25, 15, 15) 
   let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
@@ -254,12 +254,9 @@
 }
 
 #let tabellaSprint(numSprint, bressan, corradin, lazzarin, salviato, squarzoni, tutino,vallotto, bilancio, isConsuntivo) = {
-  let caption = [Tabella preventivo sprint #context numSprint.get().]
+  let caption = [Tabella preventivo sprint #numSprint.]
   if isConsuntivo {
-    caption = [Tabella consuntivo sprint #context numSprint.get().]
-  }
-  else{ //aggiorna il numero dello sprint solo se si tratta di un preventivo
-    numSprint.update(x => x + 1)
+    caption = [Tabella consuntivo sprint #numSprint.]
   }
   let costoOrario = (30, 20, 25, 25, 15, 15) 
   let totaleOre = calcoloTotaleOre(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto)
@@ -270,7 +267,7 @@
   table(columns: (2fr, 1.5fr, 1.8fr, 1fr, 1.3fr, 1.8fr, 1.4fr),
     fill: (x, y) => if (y==0) { rgb("#f16610") } else { if(y >= 8 and y <= 11) { rgb("#f27f329f") } else { if calc.even(y) { gray.lighten(50%)} else { white}} },
     align: center+horizon,
-    table.header([*Sprint #context numSprint.get()*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
+    table.header([*Sprint #numSprint*], [Responsabile], [Amministratore], [Analista], [Progettista], [Programmatore], [Verificatore]),
     //per ogni membro del team prende le ore relative allo sprint e le colora in base al segno oppure non le colora se si tratta di un preventivo
     [Bressan A.], ..bressan.map(x => textCellColorConsuntivo(cell: str(x))),
     [Corradin S.], ..corradin.map(x => textCellColorConsuntivo(cell: str(x))),
