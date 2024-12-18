@@ -744,3 +744,47 @@
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
+  
+
+
+=== Logout <logout>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @logout Logout
+    ], shape: ellipse, name: <a>),
+
+    
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Logout UC diagram.]
+) <logout-diagram>
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di logout di un utente.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. Seleziona l'opzione per fare il logout.
+   2. Conferma il logout.
+ - Sistema:
+   1. Fa visualizzare la schermata di conferma del logout.
+   2. Attende la conferma dell'utente.
+   3. Disconette l'account dall'applicativo.
+- *Pre-condizioni*:
+    - Nessuna.
+- *Post-condizioni*:
+   - Il logout avviene con successo.
