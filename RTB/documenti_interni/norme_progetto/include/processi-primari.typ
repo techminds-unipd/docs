@@ -25,7 +25,7 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di fornitura 
 1. Avvio: eseguiamo una revisione dei requisiti studiando a fondo i capitolati, decidendo poi di fare una proposta per un determinato capitolato;
 2. Preparazione della risposta: definiamo e prepariamo la proposta, una sorta di "risposta alla richiesta avanzata";
 3. Contrattazione: accordo sui requisiti e consegna del progetto;
-4. Pianificazione: revisioniamo i requisiti di acquisizione per definire il quadro per la gestione del progetto e per assicurare la qua#glossario[qualità]lità del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
+4. Pianificazione: revisioniamo i requisiti di acquisizione per definire il quadro per la gestione del progetto e per assicurare la #glossario[qualità] del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
 5. Esecuzione e controllo: implementiamo il piano di gestione del progetto, controllando i progressi e la qualità del prodotto software e della relativa documentazione durante tutte le fasi del progetto;
 6. Revisione e valutazione: effettuiamo #glossario[verifiche] periodiche per dimostrare che i prodotti software e i processi soddisfino pienamente i requisiti individuati; 
 7. Consegna e completamento: consegniamo il prodotto software al proponente secondo quanto accordato in precedenza.
