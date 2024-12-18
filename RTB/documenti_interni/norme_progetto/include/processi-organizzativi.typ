@@ -139,7 +139,7 @@ Per quanto concerne i meeting interni, che solitamente si tengono da remoto, uti
 
 Gli incontri interni si verificano periodicamente per effettuare la sprint retrospective e lo sprint planning tra la fine di uno sprint e l'inizio del successivo. Si possono fissare anche dei meeting nel mezzo dello sprint per necessità di allineamento interno o per risolvere problematiche urgenti.
 
-OOgni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo, il responsabile deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare tenendo conto delle difficoltà e delle questioni emerse dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito delegabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
+Ogni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo, il responsabile deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare tenendo conto delle difficoltà e delle questioni emerse dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito delegabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
 
 ==== Strumenti e tecnologie
 Come evidenziato sopra, gli strumenti e tecnologie di supporto scelte sono:
@@ -170,7 +170,7 @@ Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
 In questa sezione sono presenti le metodologie scelte per organizzare e gestire le varie attività da svolgere nel corso del progetto.
 
 ==== Metodologie utilizzate
-Abbiamo deciso di adottare un approccio agile nello sviluppo del progetto prendendo ispirazione dal modello Scrum, metodologia ben consolidata e utilizzata nel contesto lavorativo. Questa scelta è stata guidata dai numerosi vantaggi che comporta, per esempio:
+Abbiamo deciso di adottare un approccio agile allo sviluppo del progetto prendendo ispirazione dal modello Scrum, metodologia ben consolidata e utilizzata nel contesto lavorativo. Questa scelta è stata guidata dai numerosi vantaggi che comporta, per esempio:
 - Maggiore flessibilità;
 - Maggiore produttività;
 - Maggiore trasparenza e comunicazione.
@@ -183,7 +183,6 @@ Alla base delle strategie di tipo agile vi è l'adozione della pratica di Contin
 Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano mediamente due settimane (salvo eccezioni) e durante i quali il gruppo si impegna a svolgere le seguenti attività:
 - Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle che ha intenzione di svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
 - Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le issue necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
-- Sprint review: viene effettuata alla fine dello sprint, prima della retrospettiva. Ogni membro del team mostra i progressi fatti e gli obiettivi raggiunti durante il periodo appena terminato;
 - Sprint retrospective: avviene al termine dello sprint ed è finalizzata ad analizzare l'andamento dello sprint. Ispezionamo cosa non ha funzionato e cosa è andato bene per apprendere e migliorare. É anche un evento propedeutico allo sprint successivo in quanto volto a migliorare le performance future.
 
 ==== Milestone e sprint
@@ -210,19 +209,19 @@ Di seguito descriviamo il ciclo di vita di una issue:
 1. L'amministratore (o chi di competenza) accede al repository GitHub e crea la issue seguendo quanto descritto in @creazione;
 2. Accedendo poi alla dashboard di progetto sposta la issue dalla colonna "No Status" alla colonna "Sprint Backlog";
 3. L'assegnatario, quando prende in carico la issue, deve svolgere le seguenti azioni:
-  - accede alla dashboard e sposta la issue alla colonna "In progress". In alternativa può cambiare lo stato della issue anche modificando il campo "Status";
+  - accede alla dashboard e sposta la issue alla colonna "In progress". In alternativa può cambiare lo stato della issue modificando il campo "Status";
   - inserisce la data di inizio della issue;
   - inserisce la stima del termine della issue.
 4. Una volta che la issue è considerata terminata, l'assegnatario apre una Pull Request su GitHub scrivendo sulla descrizione close numero_issue e aggiornando lo stato della issue da "In progress" a "In review";
 5. I verificatori seguono la procedura di verifica;
-6. Se e quando l'esito della verifica è positivo, la issue viene ufficialmente spostata alla colonna "Done" della dashboard.
+6. Se e quando l'esito della verifica è positivo, la issue viene ufficialmente spostata nella colonna "Done" della dashboard.
 
 ==== Board e roadmap <dashboard>
 Riteniamo che board e roadmap siano degli stumenti molto validi come supporto all'organizzazione delle attività:
 - Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate e intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
 - Roadmap: pianificazione ad alto livello che descrive gli obiettivi strategici del progetto, le funzionalità principali e le scadenze chiave. Tale strumento ci torna utile perchè allinea il team verso un obiettivo comune, definendo l'importanza di ogni attività per ogni sprint. 
 
-Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub project, in particolare:
+Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub Projects, in particolare:
 - GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1
   
   Dashboard suddivisa in 5 colonne che corrispondono alle fasi del ciclo di vita delle issue:
