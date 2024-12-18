@@ -756,3 +756,43 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
+
+=== Visualizzazione funzioni del blocco Gmail <funzionalità-blocco-gmail>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-gmail Visualizzazione funzioni blocco Gmail
+    ], shape: ellipse, name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione funzioni del blocco Gmail UC diagram.]
+) <visualizzazione-funzioni-blocco-gmail-diagram>
+- *Descrizione*
+  - Questo caso d'uso descrive la visualizzazione delle funzioni del blocco Gmail.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca sul blocco Gmail;
+    2. visualizza le funzioni disponibili.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Gmail;
+    2. fa visualizzare la lista delle funzioni disponibili: ricerca di una mail, ottenere una specifica mail, creazione di una bozza.
+- *Pre-condizioni*:
+    - L'utente ha collegato l'account di Google per utilizzare il blocco Gmail.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte del blocco Gmail.
