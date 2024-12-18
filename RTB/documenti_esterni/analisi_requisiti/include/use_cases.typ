@@ -790,7 +790,7 @@
 === Avviso servizi non collegati 
 <avviso-servizi-non-collegati>
 - *Desrizione*:
-  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account Google collegato ai servizi offerti dai blocchi.
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account collegato ai servizi offerti dai blocchi.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
@@ -802,4 +802,4 @@
    3. Viene visualizzato un avviso.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non ha nessun servizio collegato;
-   - L'utente viene rediretto alla pagina per collegare i servizio.
+   - L'utente viene rediretto alla pagina per collegare i servizi.
