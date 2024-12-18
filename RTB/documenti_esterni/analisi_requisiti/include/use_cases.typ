@@ -758,7 +758,7 @@
     node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
-    node((2,0), align(center)[
+    node((1,0), align(center)[
             @logout Logout
     ], shape: ellipse, name: <a>),
 
