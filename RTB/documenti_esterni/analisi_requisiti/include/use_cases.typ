@@ -742,18 +742,18 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-    node-inset: 10pt,
+
     node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @visualizzazione-blocchi-configurati
             Visualizzazione blocchi configurati
-    ], shape: ellipse, name: <a>),
+    ], shape: ellipse, name: <a>, inset: 10pt),
 
     node((1.8,1), align(center)[
             @avviso-servizi-non-collegati Avviso servizi non collegati
-    ], shape: ellipse, name: <b>),
+    ], shape: ellipse, name: <b>, inset: 10pt),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
     node((2.6,0.4), align(center)[
@@ -771,16 +771,17 @@
     ),
     caption: [Visualizzazione blocchi configurati UC diagram.]
 ) <visualizzazione-blocchi-configurati-diagram>
-
+- *Desrizione*:
+  - Questo caso d'uso descrive la funzionalità di visualizzazione dei blocchi configurati.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
     1. Avvia la procedura di creazione di un nuovo workflow.
  - Sistema:
-    1. Controlla che ci sia un account Google collegato.
-    2. Trova un account Google collegato.
-    3. Fa visualizzare i blocchi dei servizi di Google.
+    1. Controlla che ci siano dei servizi collegati;
+    2. Trova almeno un servizio collegato;
+    3. Fa visualizzare i blocchi che un servizio associato nella sezione dei blocchi configurati.
 - *Post-condizioni*:
    - L'utente visualizza i blocchi configurati.
 - *Estensioni*:
@@ -788,16 +789,17 @@
 
 === Avviso servizi non collegati 
 <avviso-servizi-non-collegati>
-
+- *Desrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account Google collegato ai servizi offerti dai blocchi.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
     1. Avvia la procedura di creazione di un nuovo workflow.
  - Sistema:
-    1. Controlla che ci sia un account Google collegato.
-    2. Non trova un account Google collegato. 
-    3. Viene visualizzato un avviso.
+   1. Controlla che ci siano dei servizi collegati;
+   2. Non trova nessun servizio collegato; 
+   3. Viene visualizzato un avviso.
 - *Post-condizioni*:
-   - Viene segnalato all'utente che non ha nessun account Google collegato.
-   - L'utente viene rediretto alla pagina per collegare l'account Google.
+   - Viene segnalato all'utente che non ha nessun servizio collegato;
+   - L'utente viene rediretto alla pagina per collegare i servizio.
