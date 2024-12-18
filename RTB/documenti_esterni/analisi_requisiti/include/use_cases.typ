@@ -13,9 +13,21 @@
 = Casi d'uso
 
 == Obiettivi
-
+Questa sezione è dedicata all'identificazione e alla descrizione 
+dei casi d'uso emersi dall'analisi. I casi d'uso servono a 
+descrivere nel dettaglio le operazioni che l'utente può compiere 
+all'interno dell'applicativo, offrendo una panoramica completa 
+delle funzionalità disponibili. Inoltre, permettono di definire 
+chiaramente le interazioni tra l'utente e il sistema, evidenziando come avviene il 
+dialogo tra questi due. Infine, si occupano anche di delineare le modalità di interazione 
+tra il sistema e i servizi esterni, garantendo così una comprensione precisa delle connessioni e delle dipendenze tecnologiche.
 == Attori
-
+- *Attori principali*:
+  - Utente non autenticato
+  - Utente autenticato
+- *Attori secondari*:
+  - Google
+  - LLM
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
