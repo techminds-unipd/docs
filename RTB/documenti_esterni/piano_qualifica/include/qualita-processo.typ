@@ -1,3 +1,4 @@
+#import "/template/template.typ": glossario
 = Qualità di processo
 
 == Processi primari
