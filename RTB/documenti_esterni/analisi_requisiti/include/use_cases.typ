@@ -781,7 +781,7 @@
  - Sistema:
     1. Controlla che ci siano dei servizi collegati;
     2. Trova almeno un servizio collegato;
-    3. Fa visualizzare i blocchi che un servizio associato nella sezione dei blocchi configurati.
+    3. Fa visualizzare i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
 - *Post-condizioni*:
    - L'utente visualizza i blocchi configurati.
 - *Estensioni*:
