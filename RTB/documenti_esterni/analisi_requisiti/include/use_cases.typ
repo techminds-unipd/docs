@@ -514,7 +514,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-shape: ellipse,
     node-inset: 10pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    node((-0.5,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
     edge(<utente-autenticato>, <esecuzione-workflow>),
 
     node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
@@ -526,19 +526,34 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
             @esecuzione-workflow Esecuzione workflow 
     ],  name: <esecuzione-workflow>),
 
-    node((1,0.4), align(center)[
+    node((1,1.5), align(center)[
             @vis-errore-workflow Vis. errore workflow
     ],  name: <vis-errore-workflow>),
 
     edge(<vis-errore-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
 
-    node((1.7,0.75), align(center)[
+    node((.6,0.5), align(center)[
+            Il workflow non è valido
+    ], shape: rect, name: <post-it>),
+
+    node((1.15,0.5), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<post-it>, <nf>, "--"),
+
+    node((1.7,1.25), align(center)[
             @vis-errore-runtime Vis. errore runtime
     ],  name: <vis-errore-runtime>),
     edge(<vis-errore-runtime>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
     
+    node((2,0.8), align(center)[
+            L'agente non riesce a #linebreak() completare l'operazione
+    ], shape: rect, name: <post-it2>),
 
-    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>),
+    node((1.53,0.8), align(center)[
+    ], name: <nf2>, width: 1pt, height: 1pt),
+    edge(<post-it2>, <nf2>, "--"),
+
+    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
