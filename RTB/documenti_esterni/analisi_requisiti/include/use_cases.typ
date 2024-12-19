@@ -755,7 +755,7 @@
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
-    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    node((0,0.26), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((1,0), align(center)[
