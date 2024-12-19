@@ -778,11 +778,11 @@
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. Seleziona l'opzione per fare il logout;
-   2. Conferma il logout.
+   1. seleziona l'opzione per fare il logout;
+   2. conferma il logout.
  - Sistema:
-   1. Fa visualizzare la schermata di conferma del logout;
-   2. Attende la conferma dell'utente;
-   3. Disconnette l'account dall'applicativo.
+   1. fa visualizzare la schermata di conferma del logout;
+   2. attende la conferma dell'utente;
+   3. disconnette l'account dall'applicativo.
 - *Post-condizioni*:
    - L'utente non è più autenticato.
