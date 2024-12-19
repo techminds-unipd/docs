@@ -128,9 +128,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
-   - L'utente viene autenticato ed ottiene una sessione.
+    - L'utente viene autenticato ed ottiene una sessione.
 - *Generalizzazioni*:
   - Login Google (@login-google);
   - Login interno (@login-interno).
@@ -150,9 +150,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
-   - L'utente viene autenticato ed ottiene una sessione.
+    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
   - Credenziali errate (@credenziali-errate).
 
@@ -170,7 +170,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito lo username correttamente.
 
@@ -186,7 +186,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. verifica la correttezza della password;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito la password correttamente.
 
@@ -201,8 +201,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
     2. mostra un messaggio d'errore;
     3. dà la possibilità all'utente di riprovare il login.
-- *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - Viene segnalato all'utente che le credenziali inserite sono errate;
    - L'utente può riprovare ad eseguire il login.
@@ -220,8 +218,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. redirige l'utente ai servizi di Google;
    2. il login ha successo;
    3. viene assegnata una sessione all'utente.
-- *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
