@@ -50,46 +50,48 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
     edge(<utente>, <login>),
 
     node((2,0), align(center)[
             @login Login
-    ], shape: ellipse, name: <login>, inset:10pt),
+    ], name: <login>),
     edge(<login-interno>, <login>,marks: (none,empty-dash)),
 
     node((2,0.5), align(center)[
             @login-interno Login interno
-    ], shape: ellipse, name: <login-interno>, inset:10pt),
+    ], name: <login-interno>),
 
     edge(<login-interno>, <ins-user>, "--straight", [\<\<include\>\>]),
 
     node((3,0.75), align(center)[
             @inserimento-username Inserimento username
-    ], shape: ellipse, name: <ins-user>, inset:10pt),
+    ], name: <ins-user>),
 
     edge(<login-interno>, <ins-pass>, "--straight", [\<\<include\>\>]),
 
     node((3,0.25), align(center)[
             @inserimento-password Inserimento password
-    ], shape: ellipse, name: <ins-pass>, inset:10pt),
+    ], name: <ins-pass>),
 
 
 
     node((2,1.5), align(center)[
             @credenziali-errate Credenziali errate
-    ], shape: ellipse, name: <credenziali-errate>, inset:10pt),
+    ], name: <credenziali-errate>),
 
  
    node((2,1), align(center)[
-    ], shape: circle, name: <nf>,width:1pt, height:1pt, inset:10pt),
+    ], name: <nf>,width:1pt, height:1pt),
 
   edge(<nf>,<pnf>, "--"),
 
   node((2.9,1.25), align(center)[
     L'utente inserisce delle #linebreak()credenziali errate o inesistenti
-    ], shape: rect, name: <pnf>, inset:10pt),
+    ], shape: rect, name: <pnf>),
  
 
 
@@ -97,7 +99,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((2.75,0), align(center)[
              @login-google Login Google
-    ], shape: ellipse, name: <login-google>, inset:10pt),
+    ], name: <login-google>),
 
     edge(<login-google>, <login>, marks: (none,empty-dash)),
 
@@ -126,9 +128,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
-   - L'utente viene autenticato ed ottiene una sessione.
+    - L'utente viene autenticato ed ottiene una sessione.
 - *Generalizzazioni*:
   - Login Google (@login-google);
   - Login interno (@login-interno).
@@ -148,9 +150,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
-   - L'utente viene autenticato ed ottiene una sessione.
+    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
   - Credenziali errate (@credenziali-errate).
 
@@ -168,7 +170,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito lo username correttamente.
 
@@ -184,7 +186,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. verifica la correttezza della password;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito la password correttamente.
 
@@ -199,8 +201,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
     2. mostra un messaggio d'errore;
     3. dà la possibilità all'utente di riprovare il login.
-- *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - Viene segnalato all'utente che le credenziali inserite sono errate;
    - L'utente può riprovare ad eseguire il login.
@@ -218,8 +218,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. redirige l'utente ai servizi di Google;
    2. il login ha successo;
    3. viene assegnata una sessione all'utente.
-- *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
@@ -232,44 +230,44 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
-
+    node-shape: ellipse,
     node((0,0.5), [#image("../assets/actor.jpg") Utente non #linebreak() autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((1.6,0), align(center)[
             @registrazione Registrazione
-    ], shape: ellipse, name: <b>),
+    ], name: <b>),
 
     node((2.65,0.05), align(center)[
             @errore-registrazione Errore registrazione
-    ], shape: ellipse, name: <c>),
+    ], name: <c>),
     edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1,1), align(center)[
             @creazione-username Creazione username
-    ], shape: ellipse, name: <d>),
+    ], name: <d>),
     edge(<b>, <d>, "--straight", [\<\<include\>\>]),
 
     node((1.5,1.3), align(center)[
             @inserimento-email Inserimento email
-    ], shape: ellipse, name: <e>),
+    ], name: <e>),
     edge(<b>, <e>, "--straight", [\<\<include\>\>]),
 
     node((1.91,1), align(center)[
             @creazione-password Creazione password
-    ], shape: ellipse, name: <f>),
+    ], name: <f>),
     edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node((2.7,1.3), align(center)[
             @conferma-password Conferma password
-    ], shape: ellipse, name: <g>),
+    ], name: <g>),
     edge(<b>, <g>, "--straight", [\<\<include\>\>]),
 
     node((2.6,0.35), align(center)[
             Utente inserisce #linebreak() dati non validi
     ], shape: rect, name: <le>),
     node((2.1,0.025), align(center)[
-    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
@@ -392,7 +390,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
-
+    node-shape: ellipse,
     node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
@@ -401,18 +399,18 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((2,0.5), align(center)[
              @aggiunta-account-google-associato Aggiunta account Google associato
-    ], shape: ellipse, name: <b>),
+    ], name: <b>),
 
     node((2,1.3), align(center)[
             @errore-comunicazione-google Errore comunicazione Google
-    ], shape: ellipse, name: <e>),
+    ], name: <e>),
     edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1.6,0.9), align(center)[
             Google trasmette #linebreak() un errore
     ], shape: rect, name: <le>),
     node((2,0.9), align(center)[
-    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
 
     node(enclose: (<b>,<e>,<le>,<nf>),
@@ -472,13 +470,14 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
+    node-inset: 10pt,
+    node-shape: ellipse,
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((2,0.5), align(center)[
              @rimozione-account-google-associato Rimozione account Google associato
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ], name: <b>),
 
 
     node(enclose: (<b>,),
@@ -515,7 +514,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-shape: ellipse,
     node-inset: 10pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    node((-0.5,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
     edge(<utente-autenticato>, <esecuzione-workflow>),
 
     node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
@@ -527,19 +526,34 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
             @esecuzione-workflow Esecuzione workflow 
     ],  name: <esecuzione-workflow>),
 
-    node((1,0.4), align(center)[
+    node((1,1.5), align(center)[
             @vis-errore-workflow Vis. errore workflow
     ],  name: <vis-errore-workflow>),
 
-    edge(<vis-errore-workflow>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
+    edge(<vis-errore-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
 
-    node((1.7,0.75), align(center)[
+    node((.6,0.5), align(center)[
+            Il workflow non è valido
+    ], shape: rect, name: <post-it>),
+
+    node((1.15,0.5), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<post-it>, <nf>, "--"),
+
+    node((1.7,1.25), align(center)[
             @vis-errore-runtime Vis. errore runtime
     ],  name: <vis-errore-runtime>),
-    edge(<vis-errore-runtime>, <esecuzione-workflow>, "-->", [\<\<extend\>\>]),
+    edge(<vis-errore-runtime>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
     
+    node((2,0.8), align(center)[
+            L'agente non riesce a #linebreak() completare l'operazione
+    ], shape: rect, name: <post-it2>),
 
-    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>),
+    node((1.53,0.8), align(center)[
+    ], name: <nf2>, width: 1pt, height: 1pt),
+    edge(<post-it2>, <nf2>, "--"),
+
+    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
@@ -659,12 +673,13 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
     node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @creazione-nuovo-workflow Creazione workflow
-    ], shape: ellipse, name: <a>),
+    ], name: <a>),
 
     node(enclose: (<a>,),
         align(top + right)[Sistema],
@@ -705,16 +720,17 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
     node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @salvataggio-workflow Salvataggio workflow
-    ], shape: ellipse, name: <a>),
+    ], name: <a>),
 
     node((2,0.5), align(center)[
             @errore-connessione-database Errore connessione database
-    ], shape: ellipse, name: <b>),
+    ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
     node(enclose: (<a>,<b>),
@@ -764,25 +780,26 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
+    node-inset: 10pt,
+    node-shape: ellipse,
     node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @visualizzazione-blocchi-configurati
             Visualizzazione blocchi configurati
-    ], shape: ellipse, name: <a>, inset: 10pt),
+    ], name: <a>),
 
     node((1.8,1), align(center)[
             @avviso-servizi-non-collegati Avviso servizi non collegati
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
     node((2.6,0.4), align(center)[
             Nessun servizio #linebreak() collegato
     ], shape: rect, name: <le>),
     node((1.89,0.5), align(center)[
-    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
     node(enclose: (<a>,<b>,<le>),
         align(top + right)[Sistema],
