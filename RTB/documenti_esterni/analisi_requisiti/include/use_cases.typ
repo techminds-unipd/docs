@@ -765,12 +765,13 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge-stroke: 1pt,
     label-size: 8pt,
     node-inset: 10pt,
+    node-shape: ellipse,
     node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @funzionalità-blocco-gmail Visualizzazione funzioni blocco Gmail
-    ], shape: ellipse, name: <a>),
+    ], name: <a>),
 
     node(enclose: (<a>,),
         align(top + right)[Sistema],
