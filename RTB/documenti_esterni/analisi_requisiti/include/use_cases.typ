@@ -795,4 +795,4 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Pre-condizioni*:
     - L'utente ha collegato l'account di Google per utilizzare il blocco Gmail.
 - *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte del blocco Gmail.
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.
