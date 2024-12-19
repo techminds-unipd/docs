@@ -793,6 +793,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     1. fa visualizzare all'utente una breve descrizione del blocco Gmail;
     2. fa visualizzare la lista delle funzioni disponibili: ricerca di una mail, ottenere una specifica mail, creazione di una bozza.
 - *Pre-condizioni*:
-    - L'utente ha collegato l'account di Google per utilizzare il blocco Gmail.
+    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
 - *Post-condizioni*:
    - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.
