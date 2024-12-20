@@ -3,7 +3,7 @@
 = Pianificazione
 
 == Metodo di lavoro
-Abbiamo deciso di svolgere il progetto adottando il modello Agile, nello specifico il framework Scrum.
+Abbiamo deciso di svolgere il progetto adottando il modello Agile, nello specifico il framework #glossario[Scrum].
 Scrum ha dei vantaggi che riteniamo molto comodi, come:
 1. La gestione del progetto diventa flessibile, visto che si adatta molto bene ai cambiamenti nei requisiti, grazie ai brevi cicli di lavoro chiamati sprint;
 2. Trasparenza riguardo l'avanzamento del progetto, tramite comunicazioni frequenti attraverso i daily stand-up meeting e le retrospettive a fine sprint;
@@ -21,13 +21,13 @@ Il daily stand-up meeting ha una forma precisa, il messaggio deve contenere le s
 2. Cosa farò oggi;
 3. Problemi riscontrati che mi rallentano o impediscono di lavorare.
 
-Poi abbiamo un server Discord nel quale ci ritroviamo spesso a fare meeting remoti.
+Poi abbiamo un server #glossario[Discord] nel quale ci ritroviamo spesso a fare meeting remoti.
 Il server è suddiviso in canali testuali e canali vocali:
 + generale, per comunicazioni varie;
 + Sezione dubbi, che contiene:
    + diario-di-bordo, riguardante i dubbi da discutere ai diari di bordo;
    + analisi-dei-requisiti, riguardante i dubbi per l'analisi;
-   + poc, riguardante i dubbi per il poc;
+   + #glossario[poc], riguardante i dubbi per il poc;
    + proponente, riguandante i dubbi da discutere con il proponente.
 + Vari canali vocali, per svolgere meeting e lavorare in gruppo.
 
@@ -38,9 +38,9 @@ Oltre ai canali di comunicazione interni abbiamo un canale Slack in cui sono pre
 === Sprint e Milestone
 Visto che utilizziamo la metodologia Agile le nostre attività sono divise in periodi della durata di 2-3 settimane circa, chiamati sprint.
 L'intera durata del progetto è inoltre divisa in milestone, che rappresentano un progresso significativo.
-Le prime milestone che naturalmente abbiamo individuato sono RTB e PB.
+Le prime milestone che naturalmente abbiamo individuato sono #glossario[RTB] e #glossario[PB].
 Ad ogni sprint è associata una milestone.
 
 === Issue
-Uno sprint è composto da varie issue che rappresentano un'attività da svolgere. Una issue non dovrebbe essere troppo lunga e complicata, ma al contrario dovrebbe poter essere gestita da una singola persona e completata entro tempi brevi (entro fine sprint nel caso peggiore).
+Uno sprint è composto da varie #glossario[issue] che rappresentano un'attività da svolgere. Una issue non dovrebbe essere troppo lunga e complicata, ma al contrario dovrebbe poter essere gestita da una singola persona e completata entro tempi brevi (entro fine sprint nel caso peggiore).
 Se una issue richiede più impiego di tempo allora viene spezzata in sotto-issue di complessità ridotta in modo da agevolare il team e la suddivisione del lavoro.
