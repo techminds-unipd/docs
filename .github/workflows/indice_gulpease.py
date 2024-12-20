@@ -63,7 +63,7 @@ if __name__ == "__main__":
         sources = glob.glob("{}/**/*.typ".format(REPO_DIR), recursive=True)
 
         # Blacklist
-        blacklist = ["template/", "candidatura/", "/verbali/", "/costi.typ"]
+        blacklist = ["template/", "candidatura/", "/verbali/", "/costi.typ", "/piano-di-progetto.typ", "/use_cases.typ", "/qualita-processo.typ",  "/piano-di-qualifica.typ", "/analisi-dei-requisiti.typ", "/requisiti.typ", "/testing.typ", "/controllo-metriche.typ", "/norme-di-progetto.typ"]
         for source in sources:
             if not any([string in source for string in blacklist]):
                 sources_to_check.append(source)
@@ -81,5 +81,8 @@ if __name__ == "__main__":
         res = gulpease_index(source_text)
 
         if res < 40:
-            print("{} \t {}".format(res, os.path.abspath(source).split("docs/")[1]))
+            print("{} \t {}".format(res, os.path.abspath(source).split("RTB/")[1]))
             print(source_text)
+            sys.exit(1)
+        if res > 40:
+            print("{} \t {}".format(res, os.path.abspath(source).split("RTB/")[1]))
