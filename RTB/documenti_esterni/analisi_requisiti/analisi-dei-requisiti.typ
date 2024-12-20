@@ -4,6 +4,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.2.15", "20/12/2024", "Aggiunta use case per visualizzazione funzionalità del blocco Gmail", team.M, team.S,
     "0.2.14", "18/12/2024", "Refactoring di alcuni use case", team.M, team.L,
     "0.2.13", "18/12/2024", "Aggiunta use case per visualizzazione blocchi configurati (e correlati)", team.M, team.S,
     "0.2.12", "17/12/2024", "Aggiunta sezione obiettivi e attori casi d'uso", team.A, team.L,
