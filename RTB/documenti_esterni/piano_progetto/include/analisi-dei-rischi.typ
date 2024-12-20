@@ -1,6 +1,6 @@
 #import "/template/template.typ": glossario
 = Analisi dei rischi
-L'analisi dei rischi è una fase cruciale nella gestione di un progetto software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto.
+L'analisi dei rischi è una fase cruciale nella gestione di un #glossario[progetto] software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto.
 Di seguito verranno riportati tutti i rischi identificati, permettendo così una corretta classificazione. Per ogni rischio verrà indicata:\
 - Descrizione;
 - Probabilità di occorrenza;
@@ -26,7 +26,7 @@ Ogni rischio è identificato dalla sigla “RP” seguita da un numero progressi
     [*Pericolosità*],
     [Alta],
     [*Tecniche di mitigazione*],
-    [Comunicare tempestivamente eventuali problemi di impegno al responsabile del progetto, in modo da poter trovare una soluzione che non comprometta il lavoro del team. Sfruttare al meglio la pianificazione così che ogni membro del team possa organizzare il proprio tempo in maniera efficace.]
+    [Comunicare tempestivamente eventuali problemi di impegno al #glossario[responsabile] del progetto, in modo da poter trovare una soluzione che non comprometta il lavoro del team. Sfruttare al meglio la pianificazione così che ogni membro del team possa organizzare il proprio tempo in maniera efficace.]
   ), 
   caption: [RP1 - Impegno di un membro del team inferiore a quanto dichiarato.]
 ) <tabella-RP1>
@@ -77,7 +77,7 @@ Ogni rischio è identificato dalla sigla “RP” seguita da un numero progressi
       table.cell(colspan: 2, text(weight: "bold", "RP4 - Scarsa conoscenza delle tecnologie utilizzate")),
     ),
     [*Descrizione*],
-    [Mancanza di conoscenza delle tecnologie utilizzate nel progetto, che può rallentare lo sviluppo e la qualità del prodotto finale.],
+    [Mancanza di conoscenza delle tecnologie utilizzate nel progetto, che può rallentare lo sviluppo e la #glossario[qualità] del prodotto finale.],
     [*Probabilità di occorrenza*],
     [5],
     [*Pericolosità*],
@@ -145,7 +145,7 @@ organizzativi.\ Andremo a distinguerli tra:\
     [*Pericolosità*],
     [Media],
     [*Tecniche di mitigazione*],
-    [Definire chiaramente i ruoli e le responsabilità di ciascun membro del team all'inizio di ogni sprint, in modo da evitare sovrapposizioni e ambiguità. Monitorare costantemente l'attività svolta da ciascun membro, fornendo supporto e feedback in caso di necessità.]
+    [Definire chiaramente i ruoli e le responsabilità di ciascun membro del team all'inizio di ogni #glossario[sprint], in modo da evitare sovrapposizioni e ambiguità. Monitorare costantemente l'attività svolta da ciascun membro, fornendo supporto e feedback in caso di necessità.]
   ), 
   caption: [ROI3 - Mancata assunzione di responsabilità.]
 ) <tabella-ROI3>
@@ -158,7 +158,7 @@ organizzativi.\ Andremo a distinguerli tra:\
       table.cell(colspan: 2, text(weight: "bold", "ROE1 - Tempi di risposta da parte del proponente")),
     ),
     [*Descrizione*],
-    [Ritardi nei tempi di risposta da parte del proponente, che possono rallentare il processo decisionale e la realizzazione del progetto.],
+    [Ritardi nei tempi di risposta da parte del proponente, che possono rallentare il #glossario[processo] decisionale e la realizzazione del progetto.],
     [*Probabilità di occorrenza*],
     [3],
     [*Pericolosità*],

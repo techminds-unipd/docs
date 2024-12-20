@@ -2,8 +2,7 @@
 #import "@preview/timeliney:0.1.0"
 
 = Periodi
-In questa sezione sono descritti i periodi di lavoro suddivisi in base alle milestone principali del progetto didattico. Ogni periodo include più sprint, poiché abbiamo scelto di adottare una metodologia di lavoro agile, basata sul modello SCRUM.
-
+In questa sezione verranno elencati i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello #glossario[SCRUM]. 
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;

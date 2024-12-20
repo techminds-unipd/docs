@@ -1,10 +1,13 @@
 #import "/template/template.typ": documento,team
+//#glossario[user story]
+//#glossario[requisiti]
 
 #set outline(depth: 3)
 #show: documento.with(
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
+    "0.7.0", "19/12/2024", "Aggiunta sezione Pianificazione", team.G, team.S,
     "0.6.0", "18/12/2024", "Refactoring generale della struttura del documento", team.G, team.L,
     "0.5.0", "13/12/2024", "Aggiunta pianificazione sprint 2", team.G, team.S,
     "0.4.0", "10/12/2024", "Aggiunta retrospettiva, tabella consuntivo e Gantt dello Sprint 1", team.G, team.L,

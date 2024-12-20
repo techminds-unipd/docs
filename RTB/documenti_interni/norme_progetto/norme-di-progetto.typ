@@ -1,4 +1,6 @@
 #import "/template/template.typ": documento, team
+//#glossario[responsabile]
+//#glossario[scrum]
 
 #show: documento.with(
   title: "Norme di progetto",
