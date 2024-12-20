@@ -1,3 +1,4 @@
+#import "/template/template.typ": glossario
 = Processi organizzativi
 L'organizzazione garantisce che un processo esista e sia funzionale. In questa sezione infatti descriviamo le attività di mantenimento e miglioramento delle capacità organizzative per gestire il ciclo di vita del software in modo efficace.
 
@@ -50,12 +51,12 @@ Lo scopo che ci poniamo riguardo la rotazione dei ruoli è permettere ed assicur
 La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che privilegiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremo svolgere compiti afferenti a un ruolo diverso da quello assegnato per lo sprint corrente.
 
 Infine, durante la fase di scambio dei ruoli, chi lascia un ruolo deve condividere la conoscenza acquisita per facilitare la transizione. Per fare questo è fondamentale:
-- Utilizzare canali vocali (privilegiando i canali Discord) per uno scambio più immediato;
+- Utilizzare canali vocali (privilegiando i canali #glossario[Discord]) per uno scambio più immediato;
 - Utilizzare documenti informali per velocizzare il passaggio di conoscenza;
 - Documentare in modo chiaro e dettagliato ogni azione che è reputata non banale.
 
 ==== Responsabile
-Il responsabile è una figura di riferimento non solo per il team, ma anche per il committente e il proponente in quanto svolge il ruolo di mediatore tra le parti. 
+Il #glossario[responsabile] è una figura di riferimento non solo per il team, ma anche per il committente e il proponente in quanto svolge il ruolo di mediatore tra le parti. 
 
 La sua posizione centrale è dovuta al fatto che svolge l'attività di *pianificazione*, componente fondamentale perché programma un piano d'azione organizzato che mira al raggiungimento degli obiettivi posti per un determinato periodo. 
 
@@ -65,7 +66,7 @@ In particolare:
     - definisce i tempi e i costi;
     - redige piani dettagliati da inserire nel piano di progetto.
 - Verifica la fattibilità del piano proposto;
-- Gestisce le relazioni con gli altri stakeholder;
+- Gestisce le relazioni con gli altri #glossario[stakeholder] ;
 - Controlla i progressi del progetto;
 - Gestisce il bilancio.
 
@@ -91,7 +92,7 @@ Partendo dal lavoro dell'analista effettua scelte progettuali per definire il "c
 Scrive il codice software con l'obiettivo che esso rispecchi i requisiti individuati con l'analisi e le specifiche fornite dai progettisti. 
 
 Il codice scritto deve:
-- Contenere gli strumenti per la verifica e la validazione;
+- Contenere gli strumenti per la verifica e la #glossario[validazione] ;
 - Rispecchiare l'architettura ideata dai progettisti;
 - Essere manutenibile.
 
@@ -127,7 +128,7 @@ Per consentire al team di comunicare agilmente ci siamo dotati dei seguenti cana
   - generale: per comunicazioni generali;
   - diario-di-bordo: raccolta di dubbi da esprimere durante il diario di bordo;
   - analisi-dei-requisiti: canale relativo a dubbi o discussioni riguardo l'analisi dei requisiti e relativi use case;
-  - poc: canale per dubbi o discussioni riguardo l'implementazione del PoC;
+  - #glossario[poc]: canale per dubbi o discussioni riguardo l'implementazione del PoC;
   - proponente: raccolta di dubbi da sottoporre al proponente.
 - Telegram: il gruppo Telegram viene utilizzato per uno scambio rapido di informazioni di una certa rilevanza. Se invece sorgono dei dubbi o degli aspetti urgenti che possono essere risolti da un gruppo ristretto si predilige la comunicazione tra i singoli individui, per non intasare e rallentare il lavoro degli altri membri. Anche su Telegram abbiamo creato vari canali:
   - General: comunicazioni generali;
@@ -137,7 +138,7 @@ Per consentire al team di comunicare agilmente ci siamo dotati dei seguenti cana
 ==== Incontri
 Per quanto concerne i meeting interni, che solitamente si tengono da remoto, utilizziamo il canale vocale di Discord, suddiviso in 3 canali (Generale, Generale 1 e Generale 2) in caso vi sia la necessità di lavorare contemporaneamente divisi in gruppi.
 
-Gli incontri interni si verificano periodicamente per effettuare la sprint retrospective e lo sprint planning tra la fine di uno sprint e l'inizio del successivo. Si possono fissare anche dei meeting nel mezzo dello sprint per necessità di allineamento interno o per risolvere problematiche urgenti.
+Gli incontri interni si verificano periodicamente per effettuare la sprint #glossario[retrospective] e lo sprint planning tra la fine di uno sprint e l'inizio del successivo. Si possono fissare anche dei meeting nel mezzo dello sprint per necessità di allineamento interno o per risolvere problematiche urgenti.
 
 Ogni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo, il responsabile deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare tenendo conto delle difficoltà e delle questioni emerse dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito delegabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
 
@@ -170,7 +171,7 @@ Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
 In questa sezione sono presenti le metodologie scelte per organizzare e gestire le varie attività da svolgere nel corso del progetto.
 
 ==== Metodologie utilizzate
-Abbiamo deciso di adottare un approccio agile allo sviluppo del progetto prendendo ispirazione dal modello Scrum, metodologia ben consolidata e utilizzata nel contesto lavorativo. Questa scelta è stata guidata dai numerosi vantaggi che comporta, per esempio:
+Abbiamo deciso di adottare un approccio agile allo sviluppo del progetto prendendo ispirazione dal modello #glossario[Scrum], metodologia ben consolidata e utilizzata nel contesto lavorativo. Questa scelta è stata guidata dai numerosi vantaggi che comporta, per esempio:
 - Maggiore flessibilità;
 - Maggiore produttività;
 - Maggiore trasparenza e comunicazione.
@@ -182,11 +183,11 @@ Alla base delle strategie di tipo agile vi è l'adozione della pratica di Contin
 
 Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano mediamente due settimane (salvo eccezioni) e durante i quali il gruppo si impegna a svolgere le seguenti attività:
 - Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle che ha intenzione di svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
-- Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le issue necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
+- Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le #glossario[issue] necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
 - Sprint retrospective: avviene al termine dello sprint ed è finalizzata ad analizzare l'andamento dello sprint. Ispezionamo cosa non ha funzionato e cosa è andato bene per apprendere e migliorare. É anche un evento propedeutico allo sprint successivo in quanto volto a migliorare le performance future.
 
 ==== Milestone e sprint
-Il progetto è suddiviso in periodi chiamati milestone e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
+Il progetto è suddiviso in periodi chiamati #glossario[milestone] e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
 - Milestone: rappresentano le revisioni di progetto. Ogni milestone, per essere raggiunta, richiede il completamento di periodi di tempo chiamati sprint;
 - Sprint: periodi di lavoro con durata fissa, generalmente due settimane, in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo e aiuta a mantenere disciplina e produttività. Variazioni sono consentite solo in alcuni casi e di comune accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile.
 
@@ -207,7 +208,7 @@ Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo 
 ===== Ciclo di vita
 Di seguito descriviamo il ciclo di vita di una issue:
 1. L'amministratore (o chi di competenza) accede al repository GitHub e crea la issue seguendo quanto descritto in @creazione;
-2. Accedendo poi alla dashboard di progetto sposta la issue dalla colonna "No Status" alla colonna "Sprint Backlog";
+2. Accedendo poi alla dashboard di progetto sposta la issue dalla colonna "No Status" alla colonna "Sprint #glossario[Backlog]";
 3. L'assegnatario, quando prende in carico la issue, deve svolgere le seguenti azioni:
   - accede alla dashboard e sposta la issue alla colonna "In progress". In alternativa può cambiare lo stato della issue modificando il campo "Status";
   - inserisce la data di inizio della issue;
