@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "0.1.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,
     "0.1.0", "11/11/2024", "Prima versione", team.L, team.C
   )
 )
@@ -16,8 +17,7 @@
 
 
 = Introduzione
-Questo documento definisce tutti i termini specifici usati nell'ambito del progetto di Ingegneria del Software,
-con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
+Questo documento definisce tutti i termini specifici usati nell'ambito del progetto di Ingegneria del Software, con lo scopo di fornire una terminologia comune a tutti i membri del gruppo.
 
 
 #show heading.where(level: 1): text.with(size: 1.5em, weight: "bold", fill: rgb("#f16610"))
@@ -34,7 +34,7 @@ Nell'ambito della programmazione ad oggetti, è una misura del grado di dipenden
 Nel campo dell'intelligenza artificiale, l'agente (detto anche Agente Intelligente) è un'entità in grado di percepire l'ambiente esterno ed effettuare delle azioni in modo autonomo, migliorando le performance nel tempo attraverso la conoscenza passata.
 
 == Analisi dei requisiti // {AdR}
-Attività preliminare allo sviluppo (o alla modifica) di un sistema software, il cui scopo è quello di definire le funzionalità che il nuovo prodotto (o il prodotto modificato) deve offrire, ovvero i requisiti che devono essere soddisfatti dal software sviluppato.
+Attività preliminare allo sviluppo (o alla modifica) di un sistema software, il cui scopo è quello di definire le funzionalità che il nuovo prodotto (o il prodotto modificato) deve offrire. Tali funzionalità sono rappresentate dai requisiti che devono essere soddisfatti dal software sviluppato.
 
 == API // {Application Programming Interface}
 Acronimo di _Application Programming Interface_, è un insieme di procedure atte a consentire la comunicazione tra diversi software o tra diversi componenti di software.
@@ -48,7 +48,9 @@ Acronimo di _Amazon Web Services_, è una sussidiaria di Amazon che fornisce ser
 = B
 
 == Backlog
-Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog, il _product backlog_ ovvero l'insieme di tutti i compiti/attività del progetto e lo _sprint backlog_, che indica i compiti/attività da completare durante uno sprint.
+Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog:
+- il _product backlog_ ovvero l'insieme di tutti i compiti/attività del progetto;
+- lo _spring backlog_, che indica i compiti/attività da completare durante uno sprint.
 
 == Baseline
 Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fissati da una milestone. Una baseline viene approvata ed è modificabile solamente tramite un processo definito, formale e tracciato.

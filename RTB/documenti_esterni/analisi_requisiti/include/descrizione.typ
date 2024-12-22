@@ -8,7 +8,7 @@ Il prodotto ha l'obiettivo di ridurre il tempo giornaliero che l'utente dedica s
 Il prodotto dovrà fornire all'utente la possibilità di creare workflow che coinvolgano le applicazioni supportate. La descrizione dell'azione da compiere sarà fornita tramite linguaggio naturale.#linebreak()
 Le principali funzionalità del prodotto saranno:
 #set list(marker: ([•], [-]))
-- Creazione dei flussi di automazione tramite interfaccia drag and drop
+- Creazione dei flussi di automazione tramite interfaccia drag and drop:
   - disponibilità di tre o più blocchi di automazione per la definizione delle automazioni;
 - Descrizione delle azioni da svolgere in linguaggio naturale;
 - Interpretazione delle azioni tramite agenti.

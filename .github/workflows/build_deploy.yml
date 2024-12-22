@@ -23,6 +23,8 @@ jobs:
         sudo mv /tmp/typst*/typst /bin/typst
     - name: Check Glossario
       run: python .github/workflows/check_glossario.py
+    - name: Indice di Gulpease
+      run: python .github/workflows/indice_gulpease.py
     - name: Build sources
       run: python .github/workflows/build_sources.py
     - name: Build html
