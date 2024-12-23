@@ -1,9 +1,11 @@
 import glob, subprocess, os, shutil
 
-repo_dir = os.environ['GITHUB_WORKSPACE']
+REPO_DIR = '../../../docs'
+if 'GITHUB_WORKSPACE' in os.environ:
+    REPO_DIR = os.environ['GITHUB_WORKSPACE']
 
-sources = glob.glob("{}/**/*.typ".format(repo_dir), recursive=True)
-pdfs = glob.glob("{}/**/*.pdf".format(repo_dir), recursive=True)
+sources = glob.glob("{}/**/*.typ".format(REPO_DIR), recursive=True)
+pdfs = glob.glob("{}/**/*.pdf".format(REPO_DIR), recursive=True)
 
 # Blacklist
 sources_to_compile = []
@@ -14,17 +16,25 @@ for source in sources:
 
 # Make dirs in build
 for source in sources_to_compile+pdfs:
-    dir = os.path.dirname(source).replace("docs", "docs/build").replace("docs/build", "docs", 1)
+    dir = os.path.dirname(source).replace("docs", "docs/build")
+    if 'GITHUB_WORKSPACE' in os.environ:
+        dir = os.path.dirname(source).replace("docs", "docs/build").replace("docs/build", "docs", 1)
+
     os.makedirs(dir, exist_ok = True)
 
 # Moves signed pdfs in build
 for pdf in pdfs:
-    output_dir = os.path.abspath(pdf).replace("docs", "docs/build").replace("docs/build", "docs", 1)
+    output_dir = os.path.abspath(pdf).replace("docs", "docs/build")
+    if 'GITHUB_WORKSPACE' in os.environ:
+        output_dir = os.path.abspath(pdf).replace("docs", "docs/build").replace("docs/build", "docs", 1)
+
     shutil.copyfile(pdf, output_dir)
 
 # Compile typst files
 for source in sources_to_compile:
-    output_dir = os.path.dirname(source).replace("docs", "docs/build").replace("docs/build", "docs", 1)
-    res = subprocess.run(["typst", "compile", "--root", repo_dir, source, "{}/{}".format(output_dir,os.path.basename(source).replace(".typ",".pdf"))])
+    output_dir = os.path.dirname(source).replace("docs", "docs/build")
+    if 'GITHUB_WORKSPACE' in os.environ:
+        output_dir = os.path.dirname(source).replace("docs", "docs/build").replace("docs/build", "docs", 1)
+    res = subprocess.run(["typst", "compile", "--root", REPO_DIR, source, "{}/{}".format(output_dir,os.path.basename(source).replace(".typ",".pdf"))])
     if res.returncode != 0:
         exit(1)
