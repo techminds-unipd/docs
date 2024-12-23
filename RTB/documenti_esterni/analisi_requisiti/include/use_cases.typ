@@ -817,11 +817,11 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. Avvia la procedura di creazione di un nuovo workflow.
+    1. avvia la procedura di creazione di un nuovo workflow.
  - Sistema:
-    1. Controlla che ci siano dei servizi collegati;
-    2. Trova almeno un servizio collegato;
-    3. Fa visualizzare i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
+    1. controlla che ci siano dei servizi collegati;
+    2. trova almeno un servizio collegato;
+    3. fa visualizzare i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
 - *Post-condizioni*:
    - L'utente visualizza i blocchi configurati.
 - *Estensioni*:
@@ -835,11 +835,11 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. Avvia la procedura di creazione di un nuovo workflow.
+    1. avvia la procedura di creazione di un nuovo workflow.
  - Sistema:
-   1. Controlla che ci siano dei servizi collegati;
-   2. Non trova nessun servizio collegato; 
-   3. Viene visualizzato un avviso.
+   1. controlla che ci siano dei servizi collegati;
+   2. non trova nessun servizio collegato; 
+   3. viene visualizzato un avviso.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non ha nessun servizio collegato;
    - L'utente viene rediretto alla pagina per collegare i servizi.
