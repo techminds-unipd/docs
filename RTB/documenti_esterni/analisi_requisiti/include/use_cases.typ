@@ -702,7 +702,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
    2. crea un nuovo workflow vuoto;
-  3. mostra il nuovo workflow vuoto creato.
+   3. mostra il nuovo workflow vuoto creato.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
