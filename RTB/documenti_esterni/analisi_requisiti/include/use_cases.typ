@@ -713,6 +713,55 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene creato il workflow.
 
+=== Modifica workflow <modifica-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @modifica-workflow Modifica workflow
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Modifica workflow UC diagram.]
+) <modifica-workflow-diagram>
+
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di modifica di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
+   3. può selezionare un nuovo blocco di automazione e trascinarlo all'interno dell'area drag and drop;
+   4. può eliminare dei blocchi di automazione già presenti nel workflow;
+   5. può collegare i blocchi con degli archi orientati;
+   6. può modificare gli archi già presenti nel workflow;
+   7. per ogni arco può descrivere/modificare l'automazione in linguaggio naturale;
+   8. ripete le operazioni precedenti finchè ha bisogno di modificare il workflow.
+ - Sistema:
+   1. porta l'utente nella pagina per la modifica dei workflow;
+   2. gestisce gli input dell'utente.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow.
+- *Post-condizioni*:
+   - Viene modificato il workflow.
+
 === Salvataggio workflow <salvataggio-workflow>
 #figure(
     diagram(
