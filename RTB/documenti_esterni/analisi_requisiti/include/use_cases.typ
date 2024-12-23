@@ -665,7 +665,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
 
 
-=== Creazione nuovo workflow <creazione-nuovo-workflow>
+=== Creazione nuovo workflow vuoto <creazione-nuovo-workflow>
 
 #figure(
     diagram(
@@ -679,7 +679,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge(<user>, <a>),
 
     node((2,0), align(center)[
-            @creazione-nuovo-workflow Creazione workflow
+            @creazione-nuovo-workflow Creazione workflow vuoto
     ], name: <a>),
 
     node(enclose: (<a>,),
@@ -689,29 +689,24 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Creazione nuovo workflow UC diagram.]
+    caption: [Creazione nuovo workflow vuoto UC diagram.]
 ) <creazione-nuovo-workflow-diagram>
 - *Descrizione*
-  - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow.
+  - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow vuoto.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
    1. naviga nella pagina workflow;
-   2. seleziona l'opzione per creare un nuovo workflow;
-   3. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   4. seleziona il blocco di automazione che desidera;
-   5. lo trascina all'interno dell'area drag and drop;
-   6. ripete le due operazioni sopra finchè ha bisogno di nuovi blocchi;
-   7. collega i blocchi con degli archi orientati;
-   8. per ogni arco può descrivere un'automazione in linguaggio naturale.
+   2. seleziona l'opzione per creare un nuovo workflow.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. gestisce gli input dell'utente.
+   2. crea un nuovo workflow vuoto;
+  3. mostra il nuovo workflow vuoto creato.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
-   - Viene creato il workflow.
+   - Viene creato il workflow vuoto.
 
 === Salvataggio workflow <salvataggio-workflow>
 #figure(
