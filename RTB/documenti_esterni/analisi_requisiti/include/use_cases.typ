@@ -28,7 +28,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato
 - *Attori secondari*:
   - Google
-  - LLM
+  - #glossario[LLM]
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
