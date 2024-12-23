@@ -1,13 +1,13 @@
 #import "/template/template.typ":glossario
 = Qualità di prodotto
-Di seguito sono elencate le caratteristiche che contraddistinguono un prodotto software di qualità misurabile dalle metriche sotto descritte:
+Di seguito sono elencate le caratteristiche che contraddistinguono un prodotto software di qualità, misurabile dalle metriche sotto descritte:
 - MD ("Metriche Documentazione"): metriche relative alla qualità della documentazione;
 - MSW ("Metriche Software"): metriche relative alla qualità del software.
 
 == Qualità dell'architettura 
 
 == Qualità della documentazione
-Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nella documentazione che forniamo, attraverso delle metriche che garantiscano una valutazione oggettiva del documento. Inoltre nella @tabella-MDb abbiamo elencato il valori di accettazione e ottimalità di ciascuna metrica.
+Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nella documentazione che forniamo; questi obiettivi sono rappresentati da delle metriche che garantiscano una valutazione oggettiva del documento. Inoltre nella @tabella-MDb abbiamo elencato il valori di accettazione e ottimalità di ciascuna metrica.
 
 #figure(
   table(

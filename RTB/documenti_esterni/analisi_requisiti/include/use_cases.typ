@@ -2,6 +2,7 @@
 #import fletcher.shapes: ellipse, rect
 #import "@preview/cetz:0.3.0"
 #import cetz.draw
+#import "/template/template.typ": glossario
 
 #let empty-dash = (
     inherit: "}>",
