@@ -747,12 +747,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Utente autenticato:
    1. seleziona il workflow da modificare;
    2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. può selezionare un nuovo blocco di automazione e trascinarlo all'interno dell'area drag and drop;
-   4. può eliminare dei blocchi di automazione già presenti nel workflow;
-   5. può collegare i blocchi con degli archi orientati;
-   6. può modificare gli archi già presenti nel workflow;
-   7. per ogni arco può descrivere/modificare l'automazione in linguaggio naturale;
-   8. ripete le operazioni precedenti finchè ha bisogno di modificare il workflow.
+   3. sceglie tra le funzionalità di modifica offerte: aggiungere e togliere nodi di automazione e archi e modificare/aggiungere la descrizione dell'automazione in linguaggio naturale sugli archi;
+   4. ripete il punto precedente finchè non è soddisfatto del workflow. 
  - Sistema:
    1. porta l'utente nella pagina per la modifica dei workflow;
    2. gestisce gli input dell'utente.
