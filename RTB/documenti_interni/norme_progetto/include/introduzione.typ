@@ -26,8 +26,11 @@ interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workf
 === Riferimenti normativi
 - #glossario[Capitolato] C3: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf;
 - #par(justify: false, [ISO/IEC 12207:1995: https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf;])
-- Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
+- Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf;
+- Casi d'uso: https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf.
+
 
 === Riferimenti informativi
 - T2 - Processi di ciclo di vita: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf;
-- Docs as Code: https://www.writethedocs.org/guide/docs-as-code/<docs-as-code>.
+- Docs as Code: https://www.writethedocs.org/guide/docs-as-code/<docs-as-code>;
+- Analisi dei requisiti: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf.
