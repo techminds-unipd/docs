@@ -713,7 +713,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene creato il workflow.
 
-=== Modifica workflow <modifica-workflow>
+=== Aggiunta di un blocco <aggiunta-blocco>
 #figure(
     diagram(
     debug: false,
@@ -726,7 +726,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge(<user>, <a>),
 
     node((2,0), align(center)[
-            @modifica-workflow Modifica workflow
+            @aggiunta-blocco Aggiunta blocco
     ], name: <a>),
 
     node(enclose: (<a>,),
@@ -736,19 +736,18 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Modifica workflow UC diagram.]
-) <modifica-workflow-diagram>
+    caption: [Aggiunta di un blocco UC diagram.]
+) <aggiunta-blocco-diagram>
 
 - *Descrizione*
-  - Questo caso d'uso descrive la procedura di modifica di un workflow.
+  - Questo caso d'uso descrive la procedura di aggiunta di un blocco in un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
    1. seleziona il workflow da modificare;
    2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. sceglie tra le funzionalità di modifica offerte: aggiungere e togliere nodi di automazione e archi e modificare/aggiungere la descrizione dell'automazione in linguaggio naturale sugli archi;
-   4. ripete il punto precedente finchè non è soddisfatto del workflow. 
+   3. aggiunge un blocco di automazione trascinandolo nell'area drag and drop.
  - Sistema:
    1. porta l'utente nella pagina per la modifica dei workflow;
    2. gestisce gli input dell'utente.
@@ -756,7 +755,234 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow.
 - *Post-condizioni*:
-   - Viene modificato il workflow.
+   - Viene aggiunto un blocco al workflow.
+
+=== Eliminazione di un blocco <eliminazione-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @eliminazione-blocco Eliminazione blocco
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Eliminazione di un blocco UC diagram.]
+) <eliminazione-blocco-diagram>
+
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di eliminazione di un blocco in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
+   3. elimina il blocco di automazione prescelto.
+ - Sistema:
+   1. porta l'utente nella pagina per la modifica dei workflow;
+   2. gestisce gli input dell'utente.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow;
+   - Il workflow ha almeno un blocco.
+- *Post-condizioni*:
+   - Viene eliminato un blocco dal workflow.
+
+=== Collegamento blocchi <collegamento-arco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @collegamento-arco Collegamento blocchi
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Collegamento blocchi UC diagram.]
+) <collegamento-arco-diagram>
+
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di collegamento di due blocchi tramite un arco orientato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
+   3. collega i due blocchi prescelti attraverso un arco orientato.
+ - Sistema:
+   1. porta l'utente nella pagina per la modifica dei workflow;
+   2. gestisce gli input dell'utente.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow;
+   - Il workflow ha almeno due blocchi;
+   - I blocchi sono scollegati tra loro.
+- *Post-condizioni*:
+   - Viene creato un arco orientato tra i due blocchi.
+
+=== Scollegamento blocchi <scollegamento-arco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @scollegamento-arco Scollegamento blocchi
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Scollegamento blocchi UC diagram.]
+) <scollegamento-arco-diagram>
+
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di scollegamento di due blocchi collegati tramite un arco orientato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
+   3. scollega i due blocchi prescelti eliminando l'arco orientato che li collegava.
+ - Sistema:
+   1. porta l'utente nella pagina per la modifica dei workflow;
+   2. gestisce gli input dell'utente.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow;
+   - Il workflow ha almeno due blocchi;
+   - I blocchi sono collegati tra loro.
+- *Post-condizioni*:
+   - Viene eliminato l'arco orientato tra i due blocchi.
+
+=== Aggiunta descrizione <aggiunta-descrizione>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @aggiunta-descrizione Aggiunta descrizione
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Aggiunta descrizione UC diagram.]
+) <aggiunta-descrizione-diagram>
+
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di aggiunta della descrizione dell'automazione tra due blocchi collegati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
+   3. aggiunge la descrizione dell'automazione in linguaggio naturale sopra l'arco prescelto.
+ - Sistema:
+   1. porta l'utente nella pagina per la modifica dei workflow;
+   2. gestisce gli input dell'utente.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow con almeno due blocchi;
+   - I blocchi sono collegati tra loro.
+- *Post-condizioni*:
+   - Viene aggiunta la descrizione dell'automazione.
+
+=== Modifica descrizione <modifica-descrizione>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @modifica-descrizione Modifica descrizione
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Modifica descrizione UC diagram.]
+) <modifica-descrizione-diagram>
+
+- *Descrizione*
+  - Questo caso d'uso descrive la procedura di modifica della descrizione dell'automazione tra due blocchi collegati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
+   3. modifica la descrizione dell'automazione in linguaggio naturale sopra l'arco prescelto.
+ - Sistema:
+   1. porta l'utente nella pagina per la modifica dei workflow;
+   2. gestisce gli input dell'utente.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow con almeno due blocchi collegati tra loro;
+   - Sopra l'arco di collegamento è presente una descrizione.
+- *Post-condizioni*:
+   - Viene modificata la descrizione dell'automazione.
 
 === Salvataggio workflow <salvataggio-workflow>
 #figure(
