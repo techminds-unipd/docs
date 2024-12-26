@@ -691,7 +691,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ),
     caption: [Creazione nuovo workflow vuoto UC diagram.]
 ) <creazione-nuovo-workflow-diagram>
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow vuoto.
 - *Attori principali*:
   - Utente autenticato.
@@ -703,8 +703,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. porta l'utente nella pagina per la creazione del workflow;
    2. crea un nuovo workflow vuoto;
    3. mostra il nuovo workflow vuoto creato.
-- *Pre-condizioni*:
-   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - Viene creato il workflow vuoto.
 
@@ -738,7 +736,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ),
     caption: [Salvataggio workflow UC diagram.]
 ) <salvataggio-workflow-diagram>
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di salvataggio di un workflow.
 - *Attori principali*:
   - Utente autenticato.
@@ -755,7 +753,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - Errore connessione database (@errore-connessione-database).
 
 === Errore connessione database <errore-connessione-database>
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di gestione dell'errore di connessione al database.
 - *Attori principali*:
   - Utente autenticato.
@@ -806,7 +804,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ),
     caption: [Visualizzazione blocchi configurati UC diagram.]
 ) <visualizzazione-blocchi-configurati-diagram>
-- *Desrizione*:
+- *Descrizione*:
   - Questo caso d'uso descrive la funzionalità di visualizzazione dei blocchi configurati.
 - *Attori principali*:
   - Utente autenticato.
@@ -824,7 +822,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
 === Avviso servizi non collegati 
 <avviso-servizi-non-collegati>
-- *Desrizione*:
+- *Descrizione*:
   - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account collegato ai servizi offerti dai blocchi.
 - *Attori principali*:
   - Utente autenticato.
@@ -863,7 +861,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ),
     caption: [Visualizzazione funzioni del blocco Gmail UC diagram.]
 ) <visualizzazione-funzioni-blocco-gmail-diagram>
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la visualizzazione delle funzioni del blocco Gmail.
 - *Attori principali*:
   - Utente autenticato.
@@ -905,7 +903,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ),
     caption: [Logout UC diagram.]
 ) <logout-diagram>
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di logout di un utente.
 - *Attori principali*:
   - Utente autenticato.
