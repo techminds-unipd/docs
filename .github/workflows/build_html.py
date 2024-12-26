@@ -1,7 +1,13 @@
 import re, os, glob, shutil
 
+REPO_DIR = '../../../docs'
+if 'GITHUB_WORKSPACE' in os.environ:
+    REPO_DIR = os.environ['GITHUB_WORKSPACE']
+
 def build_link(path):
-    link = os.path.abspath(path).replace(repo_dir, "").replace("/build/", "")
+    link = os.path.abspath(path)
+    if 'GITHUB_WORKSPACE' in os.environ:
+        link = os.path.abspath(path).replace(REPO_DIR, "").replace("/build/", "")
     name = os.path.basename(path).replace(".pdf","")
     name = name[0].upper() + name[1:]
     name = format_name(name)
@@ -14,13 +20,11 @@ def format_name(name):
         name = name.replace(" ", "/", 2)
     return name
 
-repo_dir = os.environ['GITHUB_WORKSPACE']
-
-f = open("{}/template/index.html".format(repo_dir), "r")
+f = open("{}/template/index.html".format(REPO_DIR), "r")
 content = f.read()
 f.close()
 
-pdfs = glob.glob("{}/build/**/*.pdf".format(repo_dir), recursive=True)
+pdfs = glob.glob("{}/build/**/*.pdf".format(REPO_DIR), recursive=True)
 
 for i in re.findall("{.*}", content):
     lists = ""
@@ -33,10 +37,10 @@ for i in re.findall("{.*}", content):
         lists = lists + build_link(pdf)
     content = content.replace(i, "\n{}".format(lists))
 
-f = open("{}/build/index.html".format(repo_dir), "w")
+f = open("{}/build/index.html".format(REPO_DIR), "w")
 f.write(content)
 f.close()
 
 # CSS and Logo
-shutil.copyfile("{}/template/style.css".format(repo_dir), "{}/build/style.css".format(repo_dir))
-shutil.copyfile("{}/template/assets/logo.png".format(repo_dir), "{}/build/logo.png".format(repo_dir))
+shutil.copyfile("{}/template/style.css".format(REPO_DIR), "{}/build/style.css".format(REPO_DIR))
+shutil.copyfile("{}/template/assets/logo.png".format(REPO_DIR), "{}/build/logo.png".format(REPO_DIR))
