@@ -506,6 +506,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente non ha più un account Google associato.
 
 === Esecuzione workflow <esecuzione-workflow>
+
 #figure(
     diagram(
     debug: false,
@@ -620,8 +621,91 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
+=== Approfondimento esecuzione workflow back-end <esecuzione-workflow-backend>
 
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.2,0.5), [#image("../assets/actor.jpg") Back-end], stroke: 0pt, name: <back-end>),
+    edge(<back-end>, <esecuzione-workflow-backend>),
+
+    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <esecuzione-workflow-backend>),
+
+    node((2,0.5), align(center)[
+            @esecuzione-workflow-backend Esecuzione workflow back-end
+    ],  name: <esecuzione-workflow-backend>),
+
+    node((2,1.3), align(center)[
+            @errore-workflow-llm Vis. errore time-out
+    ],  name: <errore-workflow-llm>),
+    edge(<errore-workflow-llm>, <esecuzione-workflow-backend>, "--straight", [\<\<extend\>\>]),
+
+    node((1.6,0.9), align(center)[
+            Il time-out #linebreak() raggiunge il limite
+    ], shape: rect, name: <post-it>),
+    node((2,0.9), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<post-it>, <nf>, "--"),
+
+    node(enclose: (<esecuzione-workflow-backend>,<errore-workflow-llm>,<nf>,<post-it>,),
+        align(top + right)[Agente],
+        width: 240pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Approfondimento esecuzione workflow backend UC diagram.]
+) <esecuzione-workflow-backend-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di esecuzione del back-end durande la procedura di esecuzione di un workflow.
+- *Attori principali*:
+  - Back-end.
+- *Attori secondari*:
+  - LLM.
+- *Scenario principale*:
+ - Back-end:
+   1. invia i dati necessari per l'esecuzione del workflow all'agente;
+ - Agente:
+   1. riceve i dati;
+   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno;
+   3. termina l'esecuzione;
+   4. comunica la terminazione dell'esecuzione al back-end.
+- *Pre-condizioni*:
+   - Il back-end ha ricevuto il segnale di avviare l'esecuzione di un workflow.
+- *Post-condizioni*:
+  - L'esecuzione del workflow termina con successo.
+- *Estensioni*:
+  - Visualizzazione errore time-out (@errore-workflow-llm).
+
+=== Visualizzazione errore time-out <errore-workflow-llm>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
+- *Attori principali*:
+  - Back-end.
+- *Attori secondari*:
+  - LLM.
+- *Scenario principale*:
+ - Back-end:
+   1. invia i dati necessari per l'esecuzione del workflow all'agente;
+ - Agente:
+   1. riceve i dati;
+   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno;
+   3. il time-out raggiunge il limite;
+   4. termina l'esecuzione;
+   5. comunica l'errore di esecuzione del workflow al back-end.
+- *Pre-condizioni*:
+   - Il back-end ha ricevuto il segnale di avviare l'esecuzione di un workflow.
+- *Post-condizioni*:
+  - L'esecuzione termina e viene inviato un messaggio d'errore al back-end.
+
+=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
 
 #figure(
     diagram(
