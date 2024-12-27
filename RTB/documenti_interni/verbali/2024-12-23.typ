@@ -57,7 +57,7 @@
     ),
     
     ([Varie],
-      [#link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario (lasciata in sospeso dallo sprint 1)],
+      [#link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario],
       [#link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160]: Fix script python]
   )
   ),
