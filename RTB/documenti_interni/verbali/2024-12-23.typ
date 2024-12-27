@@ -53,7 +53,7 @@
     ([Norme di progetto],
        [#link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 ndp],
        [#link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158]: Redigere sezione 3.4, 3.5],
-       [#link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: aggiornamento ndp],
+       [#link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: Aggiornamento ndp],
     ),
     
     ([Varie],
