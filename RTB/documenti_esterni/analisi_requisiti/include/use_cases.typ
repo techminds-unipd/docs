@@ -382,7 +382,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - L'utente non possiede un account;
   - Viene mostrato un messaggio d'errore esplicativo;
 
-=== Aggiunta account Google associato ai workflows
+=== Aggiunta account Google associato ai workflow
 <aggiunta-account-google-associato>
 #figure(
     diagram(
@@ -464,7 +464,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - Il sistema notifica l'errore all'utente;
    - L'utente può riprovare ad associare l'account Google.
 
-=== Rimozione account Google associato ai workflows <rimozione-account-google-associato>
+=== Rimozione account Google associato ai workflow <rimozione-account-google-associato>
 #figure(
     diagram(
     debug: false,
@@ -612,7 +612,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato:
     1. ha avviato l'esecuzione di un workflow valido.
   - Sistema:
-    1. risconta un problema durante l'esecuzione del workflow;
+    1. riscontra un problema durante l'esecuzione del workflow;
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
@@ -621,7 +621,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
 === Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
-
 
 #figure(
     diagram(
@@ -706,6 +705,50 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene creato il workflow vuoto.
 
+=== Modifica workflow <modifica-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @modifica-workflow Modifica workflow
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Modifica workflow UC diagram.]
+) <modifica-workflow-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di avvio di modifica di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui viene visualizzato il workflow;
+   3. seleziona l'opzione di modifica del workflow.
+ - Sistema:
+   1. mostra il workflow con l'opzione di modifica all'utente;
+   2. avvia la modifica del workflow mostrando all'utente una schermata dove può gestire i blocchi e gli archi.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
+   - L'utente ha creato un workflow.
+- *Post-condizioni*:
+   - Viene avviata la modifica del workflow selezionato dall'utente.
+
 === Aggiunta di un blocco <aggiunta-blocco>
 #figure(
     diagram(
@@ -732,23 +775,23 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Aggiunta di un blocco UC diagram.]
 ) <aggiunta-blocco-diagram>
 
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di aggiunta di un blocco in un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. seleziona il workflow da modificare;
-   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. aggiunge un blocco di automazione trascinandolo nell'area drag and drop.
+   1. aggiunge un blocco di automazione (tra quelli disponibili) trascinandolo nell'area drag and drop.
  - Sistema:
-   1. porta l'utente nella pagina per la modifica dei workflow;
-   2. gestisce gli input dell'utente.
+   1. mostra all'utente i blocchi disponibili (@visualizzazione-blocchi-configurati);
+   2. gestisce gli input dell'utente;
+   3. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
-   - L'utente ha creato un workflow.
+   - L'utente ha creato un workflow;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
-   - Viene aggiunto un blocco al workflow.
+   - Viene aggiunto il blocco scelto dall'utente al workflow.
 
 === Eliminazione di un blocco <eliminazione-blocco>
 #figure(
@@ -776,22 +819,22 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Eliminazione di un blocco UC diagram.]
 ) <eliminazione-blocco-diagram>
 
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di eliminazione di un blocco in un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. seleziona il workflow da modificare;
-   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. elimina il blocco di automazione prescelto.
+   1. seleziona il blocco di automazione da eliminare tra quelli presenti nel workflow;
+   2. elimina il blocco di automazione selezionato.
  - Sistema:
-   1. porta l'utente nella pagina per la modifica dei workflow;
-   2. gestisce gli input dell'utente.
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow;
-   - Il workflow ha almeno un blocco.
+   - Il workflow ha almeno un blocco;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
    - Viene eliminato un blocco dal workflow.
 
@@ -821,25 +864,25 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Collegamento blocchi UC diagram.]
 ) <collegamento-arco-diagram>
 
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di collegamento di due blocchi tramite un arco orientato.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. seleziona il workflow da modificare;
-   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. collega i due blocchi prescelti attraverso un arco orientato.
+   1. sceglie due blocchi da collegare;
+   2. collega i due blocchi attraverso un arco orientato.
  - Sistema:
-   1. porta l'utente nella pagina per la modifica dei workflow;
-   2. gestisce gli input dell'utente.
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow;
    - Il workflow ha almeno due blocchi;
-   - I blocchi sono scollegati tra loro.
+   - I blocchi da collegare sono scollegati tra loro;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
-   - Viene creato un arco orientato tra i due blocchi.
+   - Viene creato un arco orientato tra i due blocchi selezionati dall'utente.
 
 === Scollegamento blocchi <scollegamento-arco>
 #figure(
@@ -867,25 +910,25 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Scollegamento blocchi UC diagram.]
 ) <scollegamento-arco-diagram>
 
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di scollegamento di due blocchi collegati tramite un arco orientato.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. seleziona il workflow da modificare;
-   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. scollega i due blocchi prescelti eliminando l'arco orientato che li collegava.
+   1. sceglie due blocchi da scollegare;
+   2. scollega i due blocchi scelti eliminando l'arco orientato che li collegava.
  - Sistema:
-   1. porta l'utente nella pagina per la modifica dei workflow;
-   2. gestisce gli input dell'utente.
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow;
    - Il workflow ha almeno due blocchi;
-   - I blocchi sono collegati tra loro.
+   - I blocchi da scollegare sono collegati tra loro;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
-   - Viene eliminato l'arco orientato tra i due blocchi.
+   - Viene eliminato l'arco orientato tra i due blocchi selezionato dall'utente.
 
 === Aggiunta descrizione <aggiunta-descrizione>
 #figure(
@@ -913,24 +956,24 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Aggiunta descrizione UC diagram.]
 ) <aggiunta-descrizione-diagram>
 
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di aggiunta della descrizione dell'automazione tra due blocchi collegati.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. seleziona il workflow da modificare;
-   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. aggiunge la descrizione dell'automazione in linguaggio naturale sopra l'arco prescelto.
+   1. sceglie l'arco in cui vuole aggiungere la descrizione;
+   2. aggiunge la descrizione dell'automazione in linguaggio naturale sopra l'arco scelto.
  - Sistema:
-   1. porta l'utente nella pagina per la modifica dei workflow;
-   2. gestisce gli input dell'utente.
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow con almeno due blocchi;
-   - I blocchi sono collegati tra loro.
+   - Almeno due blocchi sono collegati tra loro;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
-   - Viene aggiunta la descrizione dell'automazione.
+   - Viene aggiunta la descrizione dell'automazione relativa all'arco selezionato dall'utente.
 
 === Modifica descrizione <modifica-descrizione>
 #figure(
@@ -958,24 +1001,24 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Modifica descrizione UC diagram.]
 ) <modifica-descrizione-diagram>
 
-- *Descrizione*
+- *Descrizione*:
   - Questo caso d'uso descrive la procedura di modifica della descrizione dell'automazione tra due blocchi collegati.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. seleziona il workflow da modificare;
-   2. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   3. modifica la descrizione dell'automazione in linguaggio naturale sopra l'arco prescelto.
+   1. seleziona la descrizione da modificare;
+   2. modifica la descrizione dell'automazione scelta indicando in linguaggio naturale la nuova descrizione.
  - Sistema:
-   1. porta l'utente nella pagina per la modifica dei workflow;
-   2. gestisce gli input dell'utente.
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow con almeno due blocchi collegati tra loro;
-   - Sopra l'arco di collegamento è presente una descrizione.
+   - Sopra almeno un arco di collegamento è presente una descrizione;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
-   - Viene modificata la descrizione dell'automazione.
+   - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
 
 === Salvataggio workflow <salvataggio-workflow>
 #figure(
@@ -1081,7 +1124,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. avvia la procedura di creazione di un nuovo workflow.
+    1. avvia la procedura di modifica di un nuovo workflow.
  - Sistema:
     1. controlla che ci siano dei servizi collegati;
     2. trova almeno un servizio collegato;
@@ -1099,7 +1142,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. avvia la procedura di creazione di un nuovo workflow.
+    1. avvia la procedura di modifica di un nuovo workflow.
  - Sistema:
    1. controlla che ci siano dei servizi collegati;
    2. non trova nessun servizio collegato; 
@@ -1107,6 +1150,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene segnalato all'utente che non ha nessun servizio collegato;
    - L'utente viene rediretto alla pagina per collegare i servizi.
+
 === Visualizzazione funzioni del blocco Gmail <funzionalità-blocco-gmail>
 #figure(
     diagram(
