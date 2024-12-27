@@ -12,7 +12,7 @@
   ordine_giorno: ("Sprint retrospective", "Sprint plan"),
   riassunto: [Ci siamo riuniti per celebrare la sprint retrospective dello sprint 2, successivamente abbiamo celebrato lo sprint plan dello sprint 3.
              Abbiamo visionato i documenti prodotti nello sprint 2, in modo da allinearci sui vari progressi.
-             Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint. Complessivamente sono stati completati la maggior parte delle task.
+             Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint. Complessivamente sono stati completati la maggior parte dei task.
              #linebreak()#linebreak()La sprint retrospective ha prodotto i seguenti risultati:
 
              - abbiamo eliminato il campo "Estimate" dalle issue, in quanto non è stato utilizzato;
@@ -37,7 +37,7 @@
         [#link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151]: UC approfondimento esecuzione workflow],
         [#link("https://github.com/techminds-unipd/docs/issues/152")[Issue \#152]: UC creazione workflow],
         [#link("https://github.com/techminds-unipd/docs/issues/153")[Issue \#153]: UC modifica workflow],
-        [#link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: fix UC Visualizzazione blocchi configurati e avviso servizi collegati]   
+        [#link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: Fix UC Visualizzazione blocchi configurati e avviso servizi collegati]   
     ),
 
     ([Piano di Progetto],
@@ -53,11 +53,11 @@
     ([Norme di progetto],
        [#link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 ndp],
        [#link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158]: Redigere sezione 3.4, 3.5],
-       [#link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: aggiornamento ndp],
+       [#link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: Aggiornamento ndp],
     ),
     
     ([Varie],
-      [#link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario(lasciata in sospeso dallo sprint 1)],
+      [#link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario (lasciata in sospeso dallo sprint 1)],
       [#link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160]: Fix script python]
   )
   ),
