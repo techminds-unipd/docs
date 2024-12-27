@@ -15,11 +15,11 @@
              Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint. Complessivamente sono stati completati la maggior parte dei task.
              #linebreak()#linebreak()La sprint retrospective ha prodotto i seguenti risultati:
 
-             - abbiamo eliminato il campo "Estimate" dalle issue, in quanto non è stato utilizzato;
-             - abbiamo deciso di inserire il campo "Giorni previsti" per ogni issue, in modo da avere una stima più precisa dei tempi di completamento;
-             - il campo "priority" delle issue non sarà più descritto dai valori P0,P1 e P2 ma dai valori "alta", "media" e "bassa";
-            - alcuni ruoli sono stati considerati scarni di lavoro, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro nel contribuire ad un ruolo che non è il proprio, dando comunque priorità al ruolo deciso nello sprint planning;
-            - lo studio delle tecnologie è stato completato da tutti i componenti del gruppo.#linebreak()#linebreak()
+             - Abbiamo eliminato il campo "Estimate" dalle issue, in quanto non è stato utilizzato;
+             - Abbiamo deciso di inserire il campo "Giorni previsti" per ogni issue, in modo da avere una stima più precisa dei tempi di completamento;
+             - Il campo "priority" delle issue non sarà più descritto dai valori P0,P1 e P2 ma dai valori "alta", "media" e "bassa";
+            - Alcuni ruoli sono stati considerati scarni di lavoro, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro nel contribuire ad un ruolo che non è il proprio, dando comunque priorità al ruolo deciso nello sprint planning;
+            - Lo studio delle tecnologie è stato completato da tutti i componenti del gruppo.#linebreak()#linebreak()
             Successivamente abbiamo celebrato lo sprint plan dello sprint 3, che avrà la durata di tre settimane, vista la minore disponibilità dei componenti del gruppo a causa delle festività natalizie.
             Abbiamo deciso di focalizzare il lavoro di questo sprint sul PoC e sull'analisi dei requisiti.
             Infine abbiamo creato tutte le issue relative alla documentazione e non solo, sotto segue una lista esaustiva di ciò.
