@@ -5,7 +5,7 @@
   title: "Verbale interno del 23/12/2024",
   sommario: "Verbale che riassume la riunione del 23/12/2024.",
   changelog: (
-    "1.0.0", "23/12/2024", "Prima versione", team.A,".-.-."
+    "1.0.0", "27/12/2024", "Prima versione", team.A, team.L
   ),
   durata_luogo: ("9:00", "12:15", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
@@ -20,9 +20,9 @@
              - il campo "priority" delle issue non sarà più descritto dai valori P0,P1 e P2 ma dai valori "alta", "media" e "bassa";
             - alcuni ruoli sono stati considerati scarni di lavoro, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro nel contribuire ad un ruolo che non è il proprio, dando comunque priorità al ruolo deciso nello sprint planning;
             - lo studio delle tecnologie è stato completato da tutti i componenti del gruppo.#linebreak()#linebreak()
-             Successivamente abbiamo celebrato lo sprint plan dello sprint 3, che avrà la durata di tre settimane, vista la minore disponibilità dei componenti del gruppo a causa delle festività natalizie.
-             Abbiamo deciso di focalizzare il lavoro di questo sprint sul PoC e sull'analisi dei requisiti.
-             Infine abbiamo creato tutte le issue relative alla documentazione e non solo, sotto segue una lista esaustiva di ciò.
+            Successivamente abbiamo celebrato lo sprint plan dello sprint 3, che avrà la durata di tre settimane, vista la minore disponibilità dei componenti del gruppo a causa delle festività natalizie.
+            Abbiamo deciso di focalizzare il lavoro di questo sprint sul PoC e sull'analisi dei requisiti.
+            Infine abbiamo creato tutte le issue relative alla documentazione e non solo, sotto segue una lista esaustiva di ciò.
 
   ],
   decisioni: (
