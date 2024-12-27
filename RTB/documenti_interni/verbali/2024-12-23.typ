@@ -12,7 +12,7 @@
   ordine_giorno: ("Sprint retrospective", "Sprint plan"),
   riassunto: [Ci siamo riuniti per celebrare la sprint retrospective dello sprint 2, successivamente abbiamo celebrato lo sprint plan dello sprint 3.
              Abbiamo visionato i documenti prodotti nello sprint 2, in modo da allinearci sui vari progressi.
-             Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint. Complessivamente sono stati completati la maggior parte delle task.
+             Successivamente abbiamo visionato la Project Board di Github per verificare quali task dovevano essere completati entro fine sprint. Complessivamente sono stati completati la maggior parte dei task.
              #linebreak()#linebreak()La sprint retrospective ha prodotto i seguenti risultati:
 
              - abbiamo eliminato il campo "Estimate" dalle issue, in quanto non è stato utilizzato;
