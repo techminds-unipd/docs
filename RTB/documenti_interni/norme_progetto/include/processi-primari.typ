@@ -76,17 +76,19 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo i
 1. Analisi dei requisiti;
 2. Progettazione;
 3. Codifica e testing;
-4. Integrazione.
+4. Integrazione;
+5. Installazione.
 
 === Analisi dei requisiti
 L'attività di analisi dei requisiti è fondamentale per la corretta comprensione delle esigenze del proponente. In questa fase il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
-In generale l'analisi descrive la struttura funzionale del prodotto, quindi cosa deve succedere, e lo fa attraverso i casi d'uso.
+In generale l'analisi descrive la struttura funzionale del prodotto, quindi cosa deve succedere, e un modo per farlo è attraverso la scrittura dei casi d'uso.
 
 ==== Casi d'uso
 Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (attore). 
 
 Ogni caso d'uso è composto da:
-- Identificativo e nomenclatura: "UC.a.b Nome", dove "a" è il numero del caso d'uso, "b" è il numero del sotto caso d'uso, se presente, e "Nome" è il nome del caso d'uso (esplicativo del suo scopo);
+- Identificativo e nomenclatura: 
+#align(center)[UC.a.b Nome]dove "a" è il numero del caso d'uso, "b" è il numero del sotto caso d'uso, se presente, e "Nome" è il nome del caso d'uso (esplicativo del suo scopo);
 - Diagramma: rappresentazione grafica del caso d'uso;
 - Descrizione: breve descrizione del caso d'uso;
 - Attori principali: elenco degli attori principali (entità esterne che interagiscono attivamente con il sistema) coinvolti;
@@ -250,31 +252,72 @@ I componenti principali di un diagramma dei casi d'uso sono:
 
 ==== Requisiti
 Ogni requisito è costituito da:
-1. Codice identificativo, univoco del requisito, nel formato 
+1. Codice identificativo univoco, nel formato 
 #align(center)[[Tipologia][Importanza]Requirement N]
 dove "Tipologia" corrisponde a: 
-- "F", functional, requisito funzionale;
-- "Q", quality, requisito di qualità;
-- "C", constraint, requisito di vincolo;
+- "F", functional, requisito funzionale, descrive una funzionalità del sistema;
+- "Q", quality, requisito di qualità, descrive una caratteristica del sistema;
+- "C", constraint, requisito di vincolo, descrive una limitazione imposta al sistema;
 "Importanza" corrisponde a: 
-- "M", mandatory, requisito obbligatorio; 
-- "D", desirable, requisito desiderabile; 
-- "O", optional, requisito opzionale;
+- "M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli stakeholder; 
+- "D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile; 
+- "O", optional, requisito opzionale, relativamente utile o contrattabile più avanti nel progetto;
 "N" è un numero progressivo (es. QMR 2 indica un requisito di qualità obbligatorio numero 2);
 
 2. Descrizione, una breve descrizione del requisito;
 3. Fonti, le fonti da cui è stato identificato il requisito.
 
-// non so se la descrizione delle tipologie di requisiti vada qui o in analisi dei requisiti
-
-==== Metriche // non so se le useremo
+==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Progettazione
+L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi tutti gli stakeholder coinvolti nel progetto.
+
+Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona progettazione sono:
+- Tracciabilità rispetto ai requisiti dell'elemento software;
+- Coerenza esterna con i requisiti dell'elemento software;
+- Coerenza interna tra i componenti software;
+- Adeguatezza dei metodi e degli standard di progettazione utilizzati;
+- Fattibilità della progettazione dettagliata (se è realizzabile con le risorse disponibili);
+- Fattibilità delle operazioni e della manutenzione.
+
+A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura e nella futura fase di implementazione.
+
+==== Diagrammi delle classi
+I diagrammi delle classi sono uno strumento molto utile nella fase di progettazione del software, poiché permettono di rappresentare graficamente la struttura statica del sistema, mostrando le classi che lo compongono, i loro attributi, i metodi e le relazioni tra di esse. 
+
+I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
+- Aiutano ad identificare le responsabilità delle singole classi e a definire chiaramente i confini tra di esse;
+- Consentono di individuare potenziali problemi di progettazione, prima di iniziare la fase di codifica, riducendo così di molto il costo di modifiche o future correzioni;
+- Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
+- Offrono un linguaggio comune (UML) che permette di seguire uno standard riconosciuto a livello internazionale.
+
+*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
+
+==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Codifica e testing
+L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
+
+Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codifica/testing sono: 
+- Tracciabilità rispetto ai requisiti e alla progettazione dell'elemento software;
+- Coerenza esterna con i requisiti e la progettazione dell'elemento software;
+- Coerenza interna tra i requisiti delle unità;
+- Copertura dei test delle unità;
+- Adeguatezza dei metodi e degli standard di codifica utilizzati;
+- Fattibilità dell'integrazione e del testing del software;
+- Fattibilità delle operazioni e della manutenzione.
+
+// qui si dovranno mettere le regole che decidiamo di seguire per il codice, ad esempio come indentare, come scrivere i commenti, lunghezza metodi ecc.
+
+==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Integrazione
+L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. Ad ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
 
+// se decideremo delle regole per l'integrazione si dovranno mettere qui
+
+=== Installazione
+L'attività consiste nello sviluppo di un piano per installare il prodotto software nell'ambiente di destinazione. In questo piano devono essere fornite le risorse e le informazioni necessarie per l'installazione e la configurazione del software. L'obiettivo è quello di fornire istruzioni chiare e dettagliate all'utente finale, in modo tale da consentirgli di utilizzare il prodotto software.
 
 == Gestione operativa
 
