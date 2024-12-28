@@ -84,7 +84,7 @@ L'attività di analisi dei requisiti è fondamentale per la corretta comprension
 In generale l'analisi descrive la struttura funzionale del prodotto, quindi cosa deve succedere, e un modo per farlo è attraverso la scrittura dei casi d'uso.
 
 ==== Casi d'uso
-Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (attore). 
+Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (#glossario[attore]). 
 
 Ogni caso d'uso è composto da:
 - Identificativo e nomenclatura: 
@@ -259,7 +259,7 @@ dove "Tipologia" corrisponde a:
 - "Q", quality, requisito di qualità, descrive una caratteristica del sistema;
 - "C", constraint, requisito di vincolo, descrive una limitazione imposta al sistema;
 "Importanza" corrisponde a: 
-- "M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli stakeholder; 
+- "M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder]; 
 - "D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile; 
 - "O", optional, requisito opzionale, relativamente utile o contrattabile più avanti nel progetto;
 "N" è un numero progressivo (es. QMR 2 indica un requisito di qualità obbligatorio numero 2);
@@ -289,7 +289,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 - Aiutano ad identificare le responsabilità delle singole classi e a definire chiaramente i confini tra di esse;
 - Consentono di individuare potenziali problemi di progettazione, prima di iniziare la fase di codifica, riducendo così di molto il costo di modifiche o future correzioni;
 - Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
-- Offrono un linguaggio comune (UML) che permette di seguire uno standard riconosciuto a livello internazionale.
+- Offrono un linguaggio comune (#glossario[UML]) che permette di seguire uno standard riconosciuto a livello internazionale.
 
 *Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
 
