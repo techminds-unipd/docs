@@ -631,7 +631,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     label-size: 8pt,
     node-inset: 10pt,
     node-shape: ellipse,
-    node((0.2,0.5), [#image("../assets/actor.jpg") Back-end], stroke: 0pt, name: <back-end>),
+    node((0.2,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
     edge(<back-end>, <esecuzione-workflow-agente>),
 
     node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
@@ -664,21 +664,21 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 ) <esecuzione-workflow-agente-diagram>
 
 - *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di esecuzione del back-end e dell'agente durante la procedura di esecuzione di un workflow, approfondendo @esecuzione-workflow.
+  - Questo caso d'uso descrive le operazioni di esecuzione del backend e dell'agente durante la procedura di esecuzione di un workflow, approfondendo @esecuzione-workflow.
 - *Attori principali*:
-  - Back-end.
+  - Backend.
 - *Attori secondari*:
   - LLM.
 - *Scenario principale*:
- - Back-end:
+ - Backend:
    1. invia i dati necessari per l'esecuzione del workflow all'agente;
  - Agente:
    1. riceve i dati;
    2. esegue le automazioni interfacciandosi con un LLM esterno;
    3. termina l'esecuzione;
-   4. comunica la terminazione dell'esecuzione al back-end.
+   4. comunica la terminazione dell'esecuzione al backend.
 - *Pre-condizioni*:
-   - Il back-end ha ricevuto il segnale di avviare l'esecuzione di un workflow.
+   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
 - *Post-condizioni*:
   - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
@@ -688,22 +688,22 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Descrizione*:
   - Questo caso d'uso descrive la visualizzazione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
 - *Attori principali*:
-  - Back-end.
+  - Backend.
 - *Attori secondari*:
   - LLM.
 - *Scenario principale*:
- - Back-end:
+ - Backend:
    1. invia i dati necessari per l'esecuzione del workflow all'agente;
  - Agente:
    1. riceve i dati;
    2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno;
    3. il time-out raggiunge il limite;
    4. termina l'esecuzione;
-   5. comunica l'errore di esecuzione del workflow al back-end.
+   5. comunica l'errore di esecuzione del workflow al backend.
 - *Pre-condizioni*:
-   - Il back-end ha ricevuto il segnale di avviare l'esecuzione di un workflow.
+   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
 - *Post-condizioni*:
-  - L'esecuzione termina e viene inviato un messaggio d'errore al back-end.
+  - L'esecuzione termina e viene inviato un messaggio d'errore al backend.
 
 === Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
 
