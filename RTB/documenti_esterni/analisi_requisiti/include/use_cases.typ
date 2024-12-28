@@ -621,7 +621,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Approfondimento esecuzione workflow back-end <esecuzione-workflow-backend>
+=== Esecuzione del workflow da parte dell'agente. <esecuzione-workflow-agente>
 
 #figure(
     diagram(
@@ -632,39 +632,39 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-inset: 10pt,
     node-shape: ellipse,
     node((0.2,0.5), [#image("../assets/actor.jpg") Back-end], stroke: 0pt, name: <back-end>),
-    edge(<back-end>, <esecuzione-workflow-backend>),
+    edge(<back-end>, <esecuzione-workflow-agente>),
 
     node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <esecuzione-workflow-backend>),
+    edge(<llm>, <esecuzione-workflow-agente>),
 
     node((2,0.5), align(center)[
-            @esecuzione-workflow-backend Esecuzione workflow back-end
-    ],  name: <esecuzione-workflow-backend>),
+            @esecuzione-workflow-agente Esecuzione workflow agente
+    ],  name: <esecuzione-workflow-agente>),
 
     node((2,1.3), align(center)[
             @errore-workflow-llm Vis. errore time-out
     ],  name: <errore-workflow-llm>),
-    edge(<errore-workflow-llm>, <esecuzione-workflow-backend>, "--straight", [\<\<extend\>\>]),
+    edge(<errore-workflow-llm>, <esecuzione-workflow-agente>, "--straight", [\<\<extend\>\>]),
 
-    node((1.6,0.9), align(center)[
+    node((2.5,0.9), align(center)[
             Il time-out #linebreak() raggiunge il limite
     ], shape: rect, name: <post-it>),
     node((2,0.9), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<post-it>, <nf>, "--"),
 
-    node(enclose: (<esecuzione-workflow-backend>,<errore-workflow-llm>,<nf>,<post-it>,),
+    node(enclose: (<esecuzione-workflow-agente>,<errore-workflow-llm>,<nf>,<post-it>,),
         align(top + right)[Agente],
         width: 240pt,
         height: 200pt,
         snap: -1,
         name: <group>)
     ),
-    caption: [Approfondimento esecuzione workflow backend UC diagram.]
-) <esecuzione-workflow-backend-diagram>
+    caption: [Esecuzione del workflow da parte dell'agente UC diagram.]
+) <esecuzione-workflow-agente-diagram>
 
 - *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di esecuzione del back-end durande la procedura di esecuzione di un workflow.
+  - Questo caso d'uso descrive le operazioni di esecuzione del back-end e dell'agente durante la procedura di esecuzione di un workflow, approfondendo @esecuzione-workflow.
 - *Attori principali*:
   - Back-end.
 - *Attori secondari*:
@@ -674,7 +674,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. invia i dati necessari per l'esecuzione del workflow all'agente;
  - Agente:
    1. riceve i dati;
-   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno;
+   2. esegue le automazioni interfacciandosi con un LLM esterno;
    3. termina l'esecuzione;
    4. comunica la terminazione dell'esecuzione al back-end.
 - *Pre-condizioni*:
