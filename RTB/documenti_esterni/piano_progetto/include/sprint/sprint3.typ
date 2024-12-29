@@ -40,7 +40,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
     - Norme di progetto
        - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 ndp;
        - #link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158]: Redigere sezione 3.4, 3.5;
-       - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: aggiornamento ndp;
+       - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: aggiornamento ndp.
     
     - Varie
       - #link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario(lasciata in sospeso dallo sprint 1);
