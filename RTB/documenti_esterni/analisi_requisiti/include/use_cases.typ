@@ -758,7 +758,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. seleziona il workflow da modificare;
    2. si ritrova in una nuova schermata in cui viene visualizzato il workflow;
    3. seleziona l'opzione di modifica del workflow;
-   4. visualizza i blocchi disponibili (@visualizzazione-blocchi-configurati).
+   4. visualizza anche i blocchi disponibili (@visualizzazione-blocchi-configurati).
  - Sistema:
    1. mostra il workflow con l'opzione di modifica all'utente;
    2. avvia la modifica del workflow;
@@ -795,7 +795,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. visualizza avviso servizi non collegati.
+    1. visualizza un avviso che segnala l'assenza di servizi collegati.
  - Sistema:
    1. non trova nessun servizio collegato; 
    2. mostra un avviso.
@@ -976,7 +976,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - I blocchi da scollegare sono collegati tra loro;
    - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
-   - Viene eliminato l'arco orientato tra i due blocchi selezionato dall'utente.
+   - Viene eliminato l'arco orientato tra i due blocchi selezionati dall'utente.
 
 === Aggiunta descrizione <aggiunta-descrizione>
 #figure(
@@ -1016,7 +1016,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. gestisce l'input dell'utente;
    2. aggiorna il workflow.
 - *Pre-condizioni*:
-   - Il workflow ha almeno due blocchi collegati tra loro;
+   - Il workflow ha almeno due blocchi collegati tramite un arco che non specifica alcuna descrizione;
    - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
    - Viene aggiunta la descrizione dell'automazione relativa all'arco selezionato dall'utente.
@@ -1097,10 +1097,10 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
  - Utente autenticato:
    1. termina la modifica del workflow;
-   3. seleziona l'opzione per uscire dalla modalità di modifica.
+   2. seleziona l'opzione per uscire dalla modalità di modifica.
  - Sistema:
-   2. esce dalla modalità di modifica;
-   3. mostra la schermata con tutti i workflow.
+   1. esce dalla modalità di modifica;
+   2. mostra la schermata con tutti i workflow.
 - *Pre-condizioni*:
    - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
