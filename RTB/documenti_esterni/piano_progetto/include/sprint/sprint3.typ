@@ -31,7 +31,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
 
     - Piano di Progetto
         - #link("https://github.com/techminds-unipd/docs/issues/155")[Issue \#155]: Preventivo sprint 3;
-        - #link("https://github.com/techminds-unipd/docs/issues/156")[Issue \#156]: Consuntivo sprint 2;
+        - #link("https://github.com/techminds-unipd/docs/issues/156")[Issue \#156]: Consuntivo sprint 2.
 
     - Piano di Qualifica
         - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica (non completata durante lo sprint 2);
