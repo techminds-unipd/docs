@@ -75,7 +75,7 @@ timeliney.timeline(
     taskgroup(title: [*PoC*], {
         task("Inizio implementazione frontend workflow", (from: 3, to: 10, style: (stroke: 8pt + gray)), (from: 3, to:10, style: (stroke: 2pt + red)))
         task("Inizio implementazione backend", (from: 1, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 8, style: (stroke: 2pt + red)))
-        task("Inizio implementazione agenti nel backend(non completata)", (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task("Inizio implementazione agenti nel backend (non completata)", (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
       })
       taskgroup(title: [*Autoformazione*], {
         task("Typescript", (from: 0, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 6, style: (stroke: 2pt + red)))
@@ -128,14 +128,14 @@ Sono stati completati tutti i task tranne #link("https://github.com/techminds-un
 L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seguenti decisioni:
 #list(
     indent: 10pt,
-    [Per una maggiore leggibilità dei task è stato deciso di cambiare vari campi che andavano a descrivere una issue di github #list(
+    [Per una maggiore leggibilità dei task è stato deciso di cambiare vari campi che andavano a descrivere una issue di github: #list(
         indent: 10pt,
         [il campo "Estimate" non è mai stato utilizzato, perciò si è deciso di rimuoverlo;],
         [per avere una stima più precisa del tempo necessario per completare un task, si è deciso di inserire il campo "Giorni Previsti";],
-        [abbiamo deciso di cambiare i valori che rappresentavano il campo "Priority" dai valori "P0","P1" e "P2"  in "Alta", "Media" e "Bassa";],
+        [abbiamo deciso di cambiare i valori che rappresentavano il campo "Priority" dai valori "P0","P1" e "P2"  in "Alta", "Media" e "Bassa".],
     )],
-    [talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro nel contribuire ad un ruolo che non è il
-    proprio, dando comunque priorità al ruolo deciso nello sprint planning;],
+    [Talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro a contribuire ad un ruolo che non è il
+    proprio, dando comunque priorità al ruolo deciso nello sprint planning.],
 )
 ==== Costi
 
