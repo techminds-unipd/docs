@@ -382,7 +382,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - L'utente non possiede un account;
   - Viene mostrato un messaggio d'errore esplicativo;
 
-=== Aggiunta account Google associato ai workflows
+=== Aggiunta account Google associato ai workflow
 <aggiunta-account-google-associato>
 #figure(
     diagram(
@@ -464,7 +464,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - Il sistema notifica l'errore all'utente;
    - L'utente può riprovare ad associare l'account Google.
 
-=== Rimozione account Google associato ai workflows <rimozione-account-google-associato>
+=== Rimozione account Google associato ai workflow <rimozione-account-google-associato>
 #figure(
     diagram(
     debug: false,
@@ -613,7 +613,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato:
     1. ha avviato l'esecuzione di un workflow valido.
   - Sistema:
-    1. risconta un problema durante l'esecuzione del workflow;
+    1. riscontra un problema durante l'esecuzione del workflow;
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
@@ -790,6 +790,407 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene creato il workflow vuoto.
 
+=== Entrata modalità modifica <modifica-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.3), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((1.5,0), align(center)[
+            @modifica-workflow Entrata modalità modifica
+    ], name: <a>),
+    
+    node((2,0.5), align(center)[
+        @visualizzazione-blocchi-configurati
+        Visualizzazione blocchi configurati
+    ], name: <b>),
+    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+
+    node((1.8,1), align(center)[
+            @avviso-servizi-non-collegati Avviso servizi non collegati
+    ], name: <c>),
+    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
+
+    node((0.9,0.7), align(center)[
+            Nessun servizio #linebreak() collegato
+    ], shape: rect, name: <le>),
+    node((1.89,0.8), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
+
+    node(enclose: (<a>,<b>,<c>,<le>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Entrata modalità modifica UC diagram.]
+) <modifica-workflow-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura per entrare in modalità di modifica di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da modificare;
+   2. si ritrova in una nuova schermata in cui viene visualizzato il workflow;
+   3. seleziona l'opzione di modifica del workflow;
+   4. visualizza anche i blocchi disponibili (@visualizzazione-blocchi-configurati).
+ - Sistema:
+   1. mostra il workflow con l'opzione di modifica all'utente;
+   2. avvia la modifica del workflow;
+   3. mostra i blocchi configurati disponibili (@visualizzazione-blocchi-configurati).
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow.
+- *Post-condizioni*:
+   - Viene avviata la modifica del workflow selezionato dall'utente.
+   
+==== Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la funzionalità di visualizzazione dei blocchi configurati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. visualizza i blocchi configurati.
+ - Sistema:
+    1. verifica quali sono i servizi associati;
+    2. mostra i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
+- *Post-condizioni*:
+   - L'utente visualizza i blocchi configurati.
+- *Estensioni*:
+   - Avviso servizi non collegati (@avviso-servizi-non-collegati).
+
+=== Avviso servizi non collegati 
+<avviso-servizi-non-collegati>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account collegato ai servizi offerti dai blocchi.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. visualizza un avviso che segnala l'assenza di servizi collegati.
+ - Sistema:
+   1. non trova nessun servizio collegato; 
+   2. mostra un avviso.
+- *Pre-condizioni*:
+   - L'utente non ha collegato nessun account esterno per utilizzare i blocchi ad esso associati.
+- *Post-condizioni*:
+   - Viene segnalato all'utente che non ha nessun servizio collegato;
+   - L'utente viene rediretto alla pagina per collegare i servizi.
+
+=== Aggiunta di un blocco <aggiunta-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @aggiunta-blocco Aggiunta blocco
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Aggiunta di un blocco UC diagram.]
+) <aggiunta-blocco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di aggiunta di un blocco in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. aggiunge un blocco di automazione (tra quelli disponibili) trascinandolo nell'area drag and drop.
+ - Sistema:
+   1. mostra all'utente i blocchi disponibili (@visualizzazione-blocchi-configurati);
+   2. gestisce l'input dell'utente;
+   3. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene aggiunto il blocco scelto dall'utente al workflow.
+
+=== Eliminazione di un blocco <eliminazione-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @eliminazione-blocco Eliminazione blocco
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Eliminazione di un blocco UC diagram.]
+) <eliminazione-blocco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di eliminazione di un blocco in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il blocco di automazione da eliminare tra quelli presenti nel workflow;
+   2. elimina il blocco di automazione selezionato.
+ - Sistema:
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - Il workflow ha almeno un blocco;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene eliminato un blocco dal workflow.
+
+=== Collegamento blocchi <collegamento-arco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @collegamento-arco Collegamento blocchi
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Collegamento blocchi UC diagram.]
+) <collegamento-arco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di collegamento di due blocchi tramite un arco orientato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. sceglie due blocchi da collegare;
+   2. collega i due blocchi attraverso un arco orientato.
+ - Sistema:
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - Il workflow ha almeno due blocchi;
+   - I blocchi da collegare sono scollegati tra loro;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene creato un arco orientato tra i due blocchi selezionati dall'utente.
+
+=== Scollegamento blocchi <scollegamento-arco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @scollegamento-arco Scollegamento blocchi
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Scollegamento blocchi UC diagram.]
+) <scollegamento-arco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di scollegamento di due blocchi collegati tramite un arco orientato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. sceglie due blocchi da scollegare;
+   2. scollega i due blocchi scelti eliminando l'arco orientato che li collegava.
+ - Sistema:
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - Il workflow ha almeno due blocchi;
+   - I blocchi da scollegare sono collegati tra loro;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene eliminato l'arco orientato tra i due blocchi selezionati dall'utente.
+
+=== Aggiunta descrizione <aggiunta-descrizione>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @aggiunta-descrizione Aggiunta descrizione
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Aggiunta descrizione UC diagram.]
+) <aggiunta-descrizione-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di aggiunta della descrizione dell'automazione tra due blocchi collegati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. sceglie l'arco in cui vuole aggiungere la descrizione;
+   2. aggiunge la descrizione dell'automazione in linguaggio naturale sopra l'arco scelto.
+ - Sistema:
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - Il workflow ha almeno due blocchi collegati tramite un arco che non specifica alcuna descrizione;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene aggiunta la descrizione dell'automazione relativa all'arco selezionato dall'utente.
+
+=== Modifica descrizione <modifica-descrizione>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @modifica-descrizione Modifica descrizione
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Modifica descrizione UC diagram.]
+) <modifica-descrizione-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di modifica della descrizione dell'automazione tra due blocchi collegati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona la descrizione da modificare;
+   2. modifica la descrizione dell'automazione scelta indicando in linguaggio naturale la nuova azione che deve fare il sistema.
+ - Sistema:
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - È presente una descrizione in almeno un arco orientato del workflow;
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
+
+=== Uscita modalità modifica <stop-modifica-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @stop-modifica-workflow Uscita modalità modifica
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Uscita modalità modifica UC diagram.]
+) <stop-modifica-workflow-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura per uscire dalla modalità di modifica di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. termina la modifica del workflow;
+   2. seleziona l'opzione per uscire dalla modalità di modifica.
+ - Sistema:
+   1. esce dalla modalità di modifica;
+   2. mostra la schermata con tutti i workflow.
+- *Pre-condizioni*:
+   - L'utente è entrato in modalità di modifica (@modifica-workflow).
+- *Post-condizioni*:
+   - Viene terminata la modifica del workflow selezionato dall'utente.
+
 === Salvataggio workflow <salvataggio-workflow>
 #figure(
     diagram(
@@ -851,75 +1252,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
 
-=== Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @visualizzazione-blocchi-configurati
-            Visualizzazione blocchi configurati
-    ], name: <a>),
-
-    node((1.8,1), align(center)[
-            @avviso-servizi-non-collegati Avviso servizi non collegati
-    ], name: <b>),
-    edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
-
-    node((2.6,0.4), align(center)[
-            Nessun servizio #linebreak() collegato
-    ], shape: rect, name: <le>),
-    node((1.89,0.5), align(center)[
-    ], name: <nf>, width: 1pt, height: 1pt),
-    edge(<le>, <nf>, "--"),
-    node(enclose: (<a>,<b>,<le>),
-        align(top + right)[Sistema],
-        width: 300pt,
-        height: 170pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione blocchi configurati UC diagram.]
-) <visualizzazione-blocchi-configurati-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la funzionalità di visualizzazione dei blocchi configurati.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-    1. avvia la procedura di creazione di un nuovo workflow.
- - Sistema:
-    1. controlla che ci siano dei servizi collegati;
-    2. trova almeno un servizio collegato;
-    3. fa visualizzare i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
-- *Post-condizioni*:
-   - L'utente visualizza i blocchi configurati.
-- *Estensioni*:
-   - Avviso servizi non collegati.
-
-=== Avviso servizi non collegati 
-<avviso-servizi-non-collegati>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account collegato ai servizi offerti dai blocchi.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-    1. avvia la procedura di creazione di un nuovo workflow.
- - Sistema:
-   1. controlla che ci siano dei servizi collegati;
-   2. non trova nessun servizio collegato; 
-   3. viene visualizzato un avviso.
-- *Post-condizioni*:
-   - Viene segnalato all'utente che non ha nessun servizio collegato;
-   - L'utente viene rediretto alla pagina per collegare i servizi.
 === Visualizzazione funzioni del blocco Gmail <funzionalità-blocco-gmail>
 #figure(
     diagram(
