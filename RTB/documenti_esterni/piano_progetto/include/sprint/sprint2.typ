@@ -33,11 +33,11 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
         - #link("https://github.com/techminds-unipd/docs/issues/83")[Issue \#83]: Sistemare il paragrafo spiegazioni;
         - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106]: Aggiornare piano di progetto (sezione sprint 1);
         - #link("https://github.com/techminds-unipd/docs/issues/110")[Issue \#110]: Aggiungere info sprint 2.
+        - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112]: Redigere "Pianificazione" in piano di progetto.
 
     - Piano di Qualifica
         - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica;
         - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica;
-        - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112]: Redigere "Pianificazione" in piano di progetto.
 
     - Norme di progetto
         - #link("https://github.com/techminds-unipd/docs/issues/113")[Issue \#113]: Redigere "Processi organizzativi" in norme di progetto;
@@ -97,11 +97,11 @@ taskgroup(title: [*Piano di progetto*], {
     task("Aggiornare piano di progetto [sezione sprint 1]", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
     task("Aggiungere info sprint 2", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
     task("Sistemare il paragrafo spiegazioni", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+    task("Redigere 'Pianificazione' in piano di progetto", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
     taskgroup(title: [*Piano di qualifica*], {
         task("Fix piano di qualifica", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
         task("Redigere nuove sezioni piano di qualifica", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
-        task("Redigere 'Pianificazione' in piano di progetto", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
 
 taskgroup(title: [*Norme di progetto*], {
