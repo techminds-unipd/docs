@@ -705,7 +705,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene creato il workflow vuoto.
 
-=== Modifica workflow <modifica-workflow>
+=== Entrata modalità modifica <modifica-workflow>
 #figure(
     diagram(
     debug: false,
@@ -718,7 +718,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge(<user>, <a>),
 
     node((1.5,0), align(center)[
-            @modifica-workflow Modifica workflow
+            @modifica-workflow Entrata modalità modifica
     ], name: <a>),
     
     node((2,0.5), align(center)[
@@ -746,7 +746,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Modifica workflow UC diagram.]
+    caption: [Entrata modalità modifica UC diagram.]
 ) <modifica-workflow-diagram>
 
 - *Descrizione*:
@@ -764,7 +764,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. avvia la modifica del workflow;
    3. mostra i blocchi configurati disponibili (@visualizzazione-blocchi-configurati).
 - *Pre-condizioni*:
-   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati;
    - L'utente ha creato un workflow.
 - *Post-condizioni*:
    - Viene avviata la modifica del workflow selezionato dall'utente.
@@ -779,9 +778,10 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Utente autenticato:
     1. visualizza i blocchi configurati.
  - Sistema:
-    1. controlla che ci siano dei servizi collegati;
-    2. trova almeno un servizio collegato;
-    3. mostra i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
+    1. verifica quali sono i servizi associati;
+    1. mostra i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
+- *Pre-condizioni*:
+   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - L'utente visualizza i blocchi configurati.
 - *Estensioni*:
@@ -795,11 +795,12 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. avvia la procedura di modifica di un nuovo workflow.
+    1. visualizza avviso servizi non collegati.
  - Sistema:
-   1. controlla che ci siano dei servizi collegati;
-   2. non trova nessun servizio collegato; 
-   3. viene visualizzato un avviso.
+   1. non trova nessun servizio collegato; 
+   2. mostra un avviso.
+- *Pre-condizioni*:
+   - L'utente non ha collegato nessun account esterno per utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non ha nessun servizio collegato;
    - L'utente viene rediretto alla pagina per collegare i servizi.
@@ -1058,8 +1059,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. gestisce gli input dell'utente;
    2. aggiorna il workflow.
 - *Pre-condizioni*:
-   - Il workflow ha almeno due blocchi collegati tra loro;
-   - Sopra almeno un arco di collegamento è presente una descrizione;
+   - È presente una descrizione in almeno un arco orientato del workflow;
    - L'utente è entrato in modalità di modifica (@modifica-workflow).
 - *Post-condizioni*:
    - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
@@ -1097,10 +1097,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
  - Utente autenticato:
    1. termina la modifica del workflow;
-   2. seleziona l'opzione per salvare il workflow modificato (@salvataggio-workflow);
    3. seleziona l'opzione per uscire dalla modalità di modifica.
  - Sistema:
-   1. salva il workflow aggiornato (@salvataggio-workflow);
    2. esce dalla modalità di modifica;
    3. mostra la schermata con tutti i workflow.
 - *Pre-condizioni*:
