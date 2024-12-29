@@ -26,7 +26,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151]: UC approfondimento esecuzione workflow;
         - #link("https://github.com/techminds-unipd/docs/issues/152")[Issue \#152]: UC creazione workflow;
         - #link("https://github.com/techminds-unipd/docs/issues/153")[Issue \#153]: UC modifica workflow;
-        - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: fix UC Visualizzazione blocchi configurati e avviso servizi collegati;
+        - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: Fix UC Visualizzazione blocchi configurati e avviso servizi collegati.
     
 
     - Piano di Progetto
