@@ -5,6 +5,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.12.0", "29/12/2024", "Aggiunto use case esecuzione workflow da parte dell'agente", team.C, team.L,
     "0.11.1", "23/12/2024", "Fix use case creazione workflow", team.C, team.M,
     "0.11.0", "20/12/2024", "Aggiunto use case del logout", team.A, team.L,
     "0.10.0", "20/12/2024", "Aggiunto use case per visualizzazione funzionalità del blocco Gmail", team.M, team.S,
