@@ -75,7 +75,7 @@ timeliney.timeline(
     taskgroup(title: [*PoC*], {
         task("Inizio implementazione frontend workflow", (from: 3, to: 10, style: (stroke: 8pt + gray)), (from: 3, to:10, style: (stroke: 2pt + red)))
         task("Inizio implementazione backend", (from: 1, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 8, style: (stroke: 2pt + red)))
-        task("Inizio implementazione agenti nel backend(non completata)", (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task("Inizio implementazione agenti nel backend (non completata)", (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
       })
       taskgroup(title: [*Autoformazione*], {
         task("Typescript", (from: 0, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 6, style: (stroke: 2pt + red)))
