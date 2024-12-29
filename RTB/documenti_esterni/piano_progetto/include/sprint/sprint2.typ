@@ -134,7 +134,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
         [per avere una stima più precisa del tempo necessario per completare un task, si è deciso di inserire il campo "Giorni Previsti";],
         [abbiamo deciso di cambiare i valori che rappresentavano il campo "Priority" dai valori "P0","P1" e "P2"  in "Alta", "Media" e "Bassa".],
     )],
-    [Talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro nel contribuire ad un ruolo che non è il
+    [Talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro a contribuire ad un ruolo che non è il
     proprio, dando comunque priorità al ruolo deciso nello sprint planning.],
 )
 ==== Costi
