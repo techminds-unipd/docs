@@ -671,7 +671,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - LLM.
 - *Scenario principale*:
  - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente;
+   1. invia i dati necessari per l'esecuzione del workflow all'agente.
  - Agente:
    1. riceve i dati;
    2. esegue le automazioni interfacciandosi con un LLM esterno;
@@ -693,7 +693,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - LLM.
 - *Scenario principale*:
  - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente;
+   1. invia i dati necessari per l'esecuzione del workflow all'agente.
  - Agente:
    1. riceve i dati;
    2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno;
