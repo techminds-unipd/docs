@@ -128,7 +128,7 @@ Sono stati completati tutti i task tranne #link("https://github.com/techminds-un
 L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seguenti decisioni:
 #list(
     indent: 10pt,
-    [Per una maggiore leggibilità dei task è stato deciso di cambiare vari campi che andavano a descrivere una issue di github #list(
+    [Per una maggiore leggibilità dei task è stato deciso di cambiare vari campi che andavano a descrivere una issue di github: #list(
         indent: 10pt,
         [il campo "Estimate" non è mai stato utilizzato, perciò si è deciso di rimuoverlo;],
         [per avere una stima più precisa del tempo necessario per completare un task, si è deciso di inserire il campo "Giorni Previsti";],
