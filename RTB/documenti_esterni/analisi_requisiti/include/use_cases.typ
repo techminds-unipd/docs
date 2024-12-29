@@ -864,7 +864,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     1. visualizza i blocchi configurati.
  - Sistema:
     1. verifica quali sono i servizi associati;
-    1. mostra i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
+    2. mostra i blocchi che hanno un servizio associato nella sezione dei blocchi configurati.
 - *Pre-condizioni*:
    - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
