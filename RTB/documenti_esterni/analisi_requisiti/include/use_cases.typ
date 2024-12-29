@@ -621,7 +621,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Esecuzione del workflow da parte dell'agente. <esecuzione-workflow-agente>
+=== Esecuzione del workflow da parte dell'agente <esecuzione-workflow-agente>
 
 #figure(
     diagram(
