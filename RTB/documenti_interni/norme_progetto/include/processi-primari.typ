@@ -81,7 +81,8 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo i
 
 === Analisi dei requisiti
 L'attività di analisi dei requisiti è fondamentale per la corretta comprensione delle esigenze del proponente. In questa fase il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
-In generale l'analisi descrive la struttura funzionale del prodotto, quindi cosa deve succedere, e un modo per farlo è attraverso la scrittura dei casi d'uso.
+
+In generale, l'analisi studia a fondo i bisogni, con particolare attenzione al "cosa" deve succedere nel prodotto che verrà sviluppato, ovvero alla sua struttura funzionale. I requisiti riflettono la prospettiva dell'utente nel passaggio dalla situazione senza, a quella con il prodotto. Uno dei modi più efficaci per individuare i requisiti è attraverso la scrittura dei casi d'uso.
 
 ==== Casi d'uso
 Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune uno scopo finale (obiettivo) per un utente (#glossario[attore]). 
@@ -93,7 +94,7 @@ Ogni caso d'uso è composto da:
 - Descrizione: breve descrizione del caso d'uso;
 - Attori principali: elenco degli attori principali (entità esterne che interagiscono attivamente con il sistema) coinvolti;
 - Attori secondari: elenco degli attori secondari (entità esterne che interagiscono passivamente con il sistema) coinvolti, se presenti;
-- Scenario principale: sequenza di azioni che descrive il comportamento dell'attore e del sistema nel caso in cui non si verifichino errori;
+- Scenario principale: sequenza di azioni che descrive il comportamento dell'attore e del sistema;
 - Pre-condizioni: condizioni che devono essere sempre verificate prima dello scenario descritto;
 - Post-condizioni: condizioni che devono essere sempre verificate una volta concluso lo scenario descritto;
 - Estensioni: elenco delle estensioni, se presenti;
@@ -122,7 +123,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
     ), caption: "Caso d'uso", numbering: none
 ) <use-case>
 
-- Sistema: rappresenta il "dominio" di un particolare caso caso d'uso, serve a stabilire il confine tra ciò che è esterno e quindi non gestito dal sistema e ciò che invece è interno e quindi gestito dal sistema. Gli attori per definizione saranno rappresentati esternamente al sistema, mentre i casi d'uso al suo interno;
+- Sistema: rappresenta il "dominio" di un particolare caso d'uso, serve a stabilire il confine tra ciò che è esterno e quindi non gestito dal sistema e ciò che invece è interno e quindi gestito dal sistema. Gli attori per definizione saranno rappresentati esternamente al sistema, mentre i casi d'uso al suo interno;
 #figure(
     diagram(
     debug: false,
@@ -170,7 +171,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
         )
     ) <association>
 
-    - inclusione: relazione tra due casi d'uso, indica che un caso d'uso ne include un altro, può essere una funzionalità comune a più casi d'uso. Ogni istanza del caso d'uso "includente" esegue sempre il caso d'uso "incluso", con lo stesso attore principale. Nel sotto caso d'uso si utilizza l'identificativo dell' "includente" seguito da un punto e un numero progressivo;
+    - inclusione: relazione tra due casi d'uso, indica che un caso d'uso ne include un altro, può essere una funzionalità comune a più casi d'uso. Ogni istanza del caso d'uso "che include" esegue sempre il caso d'uso "incluso", con lo stesso attore principale. Nel sotto caso d'uso si utilizza l'identificativo del caso d'uso "che include" seguito da un punto e un numero progressivo;
     #figure(
         diagram(
         debug: false,
@@ -197,7 +198,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
         )
     ) <inclusion>
 
-    - estensione: relazione tra due casi d'uso, indica che un caso d'uso può estenderne un altro (aumenta le funzionalità), o anche più casi d'uso diversi. Ogni istanza del caso d'uso "base" esegue il caso d'uso che estende in modo condizionato (a differenza dell'inclusione), e questo dipende dalla condizione di estensione, la quale determina quando l'estensione deve essere utilizzata. Con le estensioni si vogliono descrivere variazioni dalla funzionalità del caso d'uso "base", ad esempio in caso di errore/eccezione;
+    - estensione: relazione tra due casi d'uso, indica che un caso d'uso può estendere uno o più casi d'uso, aumentandone le funzionalità. Ogni istanza del caso d'uso "base" esegue il caso d'uso che estende in modo condizionato (a differenza dell'inclusione), e questo dipende dalla condizione di estensione, la quale determina quando l'estensione deve essere utilizzata. Con le estensioni si vogliono descrivere variazioni dalla funzionalità del caso d'uso "base", ad esempio in caso di errore/eccezione;
     #figure(
         diagram(
         debug: false,
@@ -252,20 +253,19 @@ I componenti principali di un diagramma dei casi d'uso sono:
 
 ==== Requisiti
 Ogni requisito è costituito da:
-1. Codice identificativo univoco, nel formato 
+1. Codice: un codice identificativo univoco, nel formato 
 #align(center)[[Tipologia][Importanza]Requirement N]
-dove "Tipologia" corrisponde a: 
-- "F", functional, requisito funzionale, descrive una funzionalità del sistema;
-- "Q", quality, requisito di qualità, descrive una caratteristica del sistema;
-- "C", constraint, requisito di vincolo, descrive una limitazione imposta al sistema;
-"Importanza" corrisponde a: 
-- "M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder]; 
-- "D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile; 
-- "O", optional, requisito opzionale, relativamente utile o contrattabile più avanti nel progetto;
-"N" è un numero progressivo (es. QMR 2 indica un requisito di qualità obbligatorio numero 2);
+#h(3%)dove "Tipologia" corrisponde a:
 
-2. Descrizione, una breve descrizione del requisito;
-3. Fonti, le fonti da cui è stato identificato il requisito.
+#list(["F", functional, requisito funzionale, descrive una funzionalità del sistema;],["Q", quality, requisito di qualità, descrive una caratteristica del sistema;],["C", constraint, requisito di vincolo, descrive una limitazione imposta al sistema;],indent: 2.5em)
+
+#h(3%)"Importanza" corrisponde a:
+
+#list(["M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder] ;],["D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile;],["O", optional, requisito opzionale, relativamente utile e contrattabile anche quando il progetto è in uno stato avanzato;],indent: 2.5em)
+#h(3%)"N" è un numero progressivo (es. QMR 2 indica un requisito di qualità obbligatorio numero 2);
+
+2. Descrizione: una breve descrizione del requisito;
+3. Fonti: le fonti da cui è stato identificato il requisito.
 
 ==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
@@ -280,14 +280,14 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona prog
 - Fattibilità della progettazione dettagliata (se è realizzabile con le risorse disponibili);
 - Fattibilità delle operazioni e della manutenzione.
 
-A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura e nella futura fase di implementazione.
+A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura nella futura fase di implementazione.
 
 ==== Diagrammi delle classi
 I diagrammi delle classi sono uno strumento molto utile nella fase di progettazione del software, poiché permettono di rappresentare graficamente la struttura statica del sistema, mostrando le classi che lo compongono, i loro attributi, i metodi e le relazioni tra di esse. 
 
 I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
-- Aiutano ad identificare le responsabilità delle singole classi e a definire chiaramente i confini tra di esse;
-- Consentono di individuare potenziali problemi di progettazione, prima di iniziare la fase di codifica, riducendo così di molto il costo di modifiche o future correzioni;
+- Aiutano a identificare le responsabilità delle singole classi e a definire chiaramente i confini tra di esse;
+- Consentono di individuare potenziali problemi di progettazione prima di iniziare la fase di codifica, riducendo così di molto il costo di modifiche o future correzioni;
 - Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
 - Offrono un linguaggio comune (#glossario[UML]) che permette di seguire uno standard riconosciuto a livello internazionale.
 
@@ -296,7 +296,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 ==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Codifica e testing
-L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
+L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase, il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
 
 Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codifica/testing sono: 
 - Tracciabilità rispetto ai requisiti e alla progettazione dell'elemento software;
@@ -312,7 +312,7 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codi
 ==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Integrazione
-L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. Ad ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
+L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
 
 // se decideremo delle regole per l'integrazione si dovranno mettere qui
 
