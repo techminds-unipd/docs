@@ -37,7 +37,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica (non completata durante lo sprint 2);
         - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica (non completata durante lo sprint 2).
 
-    - Norme di progetto
+    - Norme di Progetto
        - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 ndp;
        - #link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158]: Redigere sezione 3.4, 3.5;
        - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: aggiornamento ndp.
