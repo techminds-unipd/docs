@@ -20,7 +20,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3]: Inizio implementazione agenti nel backend (non completata durante lo sprint 2);
         - #link("https://github.com/techminds-unipd/PoC/issues/8")[Issue \#8]: Gestione collegamento servizi Google.
     
-    - Analisi dei requisiti
+    - Analisi dei Requisiti
         - #link("https://github.com/techminds-unipd/docs/issues/149")[Issue \#149]: UC blocco Calendar;
         - #link("https://github.com/techminds-unipd/docs/issues/150")[Issue \#150]: UC blocco Docs;
         - #link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151]: UC approfondimento esecuzione workflow;
