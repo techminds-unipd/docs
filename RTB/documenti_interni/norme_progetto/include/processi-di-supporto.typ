@@ -127,7 +127,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Conformità agli standard: il documento deve rispettare le norme stilistiche e strutturali prestabilite;
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
-A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
+A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso #glossario[GitHub Actions], contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
 
 La verifica si conclude quando il verificatore approva il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
