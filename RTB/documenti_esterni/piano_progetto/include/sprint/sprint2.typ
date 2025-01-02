@@ -24,7 +24,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
     - Autoformazione
         - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65]: Typescript (non completata durante lo sprint 1).
 
-    - Analisi dei requisiti
+    - Analisi dei Requisiti
         - #link("https://github.com/techminds-unipd/docs/issues/89")[Issue \#89]: User Story 6;
         - #link("https://github.com/techminds-unipd/docs/issues/104")[Issue \#104]: Fix generale use case;
         - #link("https://github.com/techminds-unipd/docs/issues/105")[Issue \#105]: Scrivere nuove sezioni in analisi dei requisiti.
@@ -39,7 +39,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
         - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica;
         - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica;
 
-    - Norme di progetto
+    - Norme di Progetto
         - #link("https://github.com/techminds-unipd/docs/issues/113")[Issue \#113]: Redigere "Processi organizzativi" in norme di progetto;
         - #link("https://github.com/techminds-unipd/docs/issues/114")[Issue \#114]: Redigere "Processi primari" in norme di progetto.
 
