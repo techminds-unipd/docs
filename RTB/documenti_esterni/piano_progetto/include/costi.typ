@@ -32,6 +32,14 @@
     tutino_preventivo.push(    (3, 2, 0, 0, 2, 0) )
     vallotto_preventivo.push(  (0, 8, 0, 0, 0, 0) )
 
+    bressan_consuntivo.push(   (0, 0, 6, 0, 0, "0 (-1)") )
+    corradin_consuntivo.push(  (0, 0, 0, 0, 0, "10 (+2)") )
+    lazzarin_consuntivo.push(  (0, 0, 0, 0, 7, 0) )
+    salviato_consuntivo.push(  (0, 0, 0, 0, 0, "11 (+3)") )
+    squarzoni_consuntivo.push( (0, 0, "7 (+1)", 0, 0, "0 (-1)") )
+    tutino_consuntivo.push(    (3, 2, 0, 0, "4 (+2)", 0) )
+    vallotto_consuntivo.push(  (0, "10 (+2)", 0, 0, 0, 0) )
+
     //sprint 3
     bressan_preventivo.push(   (3, 0, 4, 0, 0, 0) )
     corradin_preventivo.push(  (0, 8, 0, 0, 0, 0) )
