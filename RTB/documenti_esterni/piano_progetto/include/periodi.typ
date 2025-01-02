@@ -14,3 +14,4 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 
 #include "sprint/sprint1.typ"
 #include "sprint/sprint2.typ"
+#include "sprint/sprint3.typ"
