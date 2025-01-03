@@ -1099,8 +1099,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Sistema:
     1. verifica quali sono i servizi associati;
     2. mostra i blocchi che hanno un servizio associato.
-- *Pre-condizioni*:
-   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - L'utente visualizza i blocchi configurati.
 - *Estensioni*:
@@ -1118,8 +1116,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Sistema:
    1. non trova nessun servizio collegato; 
    2. mostra un avviso.
-- *Pre-condizioni*:
-   - L'utente non ha collegato nessun account esterno per utilizzare i blocchi ad esso associati.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non ha nessun servizio collegato;
    - L'utente viene rediretto alla pagina per collegare i servizi.
