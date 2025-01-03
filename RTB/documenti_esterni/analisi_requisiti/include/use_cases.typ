@@ -1116,6 +1116,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Sistema:
    1. non trova nessun servizio collegato; 
    2. mostra un avviso.
+- *Pre-condizioni*:
+  - L'utente non ha collegato alcun servizio esterno per l'uso dei blocchi.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non ha nessun servizio collegato;
    - L'utente viene rediretto alla pagina per collegare i servizi.
