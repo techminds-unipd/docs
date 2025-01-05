@@ -17,18 +17,18 @@ In particolare lo standard definisce quattro attività principali:
 Per la natura di questo progetto, la prima e ultima attività non verranno svolte interamente.
 
 === Progettazione e sviluppo
-*Filosofia "Docs as code"* \
+==== Filosofia "Docs as code"
 Abbiamo scelto di usare la filosofia "#link(<docs-as-code>)[Docs as code]" che si prescrive di trattare tutta la documentazione come se fosse del vero e proprio codice sorgente. \ Questo porta i seguenti vantaggi:
 + Supporto agli #glossario[issue tracking system];;
 + Controllo di versione con #glossario[git];;
 + Processi di revisione del codice;
 + Test e #glossario[integrazione continua].
 
-*Tecnologie utilizzate per la documentazione* \
+==== Tecnologie utilizzate per la documentazione
 Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - #glossario[Typst]: linguaggio simile a #glossario[LaTeX] ma che permette di comporre documenti in modo più semplice.
 
-*Organizzazione dei documenti* \
+==== Organizzazione dei documenti
 - Nomi dei file: i file iniziano sempre con lettera minuscola o con una data del tipo yyyy-mm-dd[-info] nel caso di #glossario[verbali] (info è un campo opzionale che contiene informazioni aggiuntive);
 - Organizzazione delle cartelle: nel caso in cui il documento sia composto da più file, questi sono contenuti in una cartella chiamata ```/include```;
 - Elenchi: in tutti gli elenchi gli elementi terminano con ";" tranne l'ultimo che termina con ".". Inoltre la prima lettera di ogni punto deve essere maiuscola, mentre se si tratta di un sottoelenco deve essere minuscola;
@@ -37,7 +37,7 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto;
 - Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento.
 
-*Struttura dei documenti* \
+==== Struttura dei documenti
 L'impaginazione e la struttura generale dei documenti è descritta nel file #raw("template.typ"). \ Tutti i documenti sono sempre divisi in almeno queste parti:
 + Intestazione:
   - logo;
@@ -52,7 +52,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
 + Indice;
 + Contenuto.
 
-*Struttura dei verbali* \
+==== Struttura dei verbali
 I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente. Tali informazioni sono già presenti nella funzione #raw("verbale") presente file #raw("template.typ"). Invocando la funzione e impostando i parametri indicati è possibile ottenere un verbale già formattato.
 - Nei verbali interni vengono aggiunti:
   + partecipanti;
