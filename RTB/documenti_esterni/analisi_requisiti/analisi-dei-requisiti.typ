@@ -5,6 +5,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.13.1", "5/1/2024", "Fix use case per la modifica di un workflow", team.C, team.M,
     "0.13.0", "29/12/2024", "Aggiunti use case per la modifica di un workflow", team.C, team.M,
     "0.12.0", "29/12/2024", "Aggiunto use case esecuzione workflow da parte dell'agente", team.C, team.L,
     "0.11.1", "23/12/2024", "Fix use case creazione workflow", team.C, team.M,
