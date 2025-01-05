@@ -3,7 +3,7 @@
 #import "../costi.typ": getSprintCostsSection
 
 === Sprint 3
-- Durata: 23/12/2024 - 17/01/2025
+- Durata: 23/12/2024 - 10/01/2025
 
 ==== Pianificazione
 In questo terzo sprint continueremo a concentrarci principalmente sulla scrittura dei casi d'uso nell'analisi dei requisiti e sul PoC, senza tralasciare i task arretrati. La durata questa voltà sarà di tre settimane, che secondo le nostre previsioni dovrebbe essere adatta al periodo delle feste natalizie, periodo in cui vi sarà una minore disponibilità dei componenti del gruppo.
