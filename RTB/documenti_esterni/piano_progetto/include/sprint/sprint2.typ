@@ -15,7 +15,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
   - programmatore: #team.T\;
   - verificatore: #team.L, #team.S.
 
-- Issues:
+- Issue:
     - PoC
         - #link("https://github.com/techminds-unipd/PoC/issues/1")[Issue \#1]: Inizio implementazione frontend workflow;
         - #link("https://github.com/techminds-unipd/PoC/issues/2")[Issue \#2]: Inizio implementazione backend;
