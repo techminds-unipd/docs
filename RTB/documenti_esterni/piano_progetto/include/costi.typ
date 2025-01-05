@@ -47,7 +47,7 @@
     salviato_preventivo.push(  (0, 0, 0, 0, 0, 8) )
     squarzoni_preventivo.push( (0, 0, 0, 0, 0, 8) )
     tutino_preventivo.push(    (0, 0, 0, 0, 7, 0) )
-    vallotto_preventivo.push(  (0, 7, 0, 0, 0, 1) ) 
+    vallotto_preventivo.push(  (0, 0, 7, 0, 0, 1) ) 
     // Per calcolare il bilancio allo sprint n devo calcolare i bilanci precendenti
     for i in range(0, sprint_number) {
 
