@@ -3,7 +3,7 @@
 #import "../costi.typ": getSprintCostsSection
 
 === Sprint 3
-- Durata: 23/12/2024 - 17/01/2025
+- Durata: 23/12/2024 - 10/01/2025
 
 ==== Pianificazione
 In questo terzo sprint continueremo a concentrarci principalmente sulla scrittura dei casi d'uso nell'analisi dei requisiti e sul PoC, senza tralasciare i task arretrati. La durata questa voltà sarà di tre settimane, che secondo le nostre previsioni dovrebbe essere adatta al periodo delle feste natalizie, periodo in cui vi sarà una minore disponibilità dei componenti del gruppo.
@@ -15,7 +15,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
   - programmatore: #team.T, #team.G\;
   - verificatore: #team.L, #team.M.
 
-- Issues:
+- Issue:
     - PoC
         - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3]: Inizio implementazione agenti nel backend (non completata durante lo sprint 2);
         - #link("https://github.com/techminds-unipd/PoC/issues/8")[Issue \#8]: Gestione collegamento servizi Google.
@@ -38,12 +38,12 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica (non completata durante lo sprint 2).
 
     - Norme di Progetto
-       - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 ndp;
+       - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 norme di progetto;
        - #link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158]: Redigere sezione 3.4, 3.5;
-       - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: aggiornamento ndp.
+       - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: Aggiornamento norme di progetto.
     
     - Varie
-      - #link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario(lasciata in sospeso dallo sprint 1);
+      - #link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario (lasciata in sospeso dallo sprint 1);
       - #link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160]: Fix script python.
 
 

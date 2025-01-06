@@ -7,6 +7,7 @@
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
+    "0.9.1", "05/01/2025", "Fix preventivo sprint 3", team.L, team.M,
     "0.9.0", "02/01/2025", "Aggiunta preventivo sprint 3", team.A, team.M,
     "0.8.0", "29/12/2024", "Aggiunta consuntivo sprint 2 e diagramma di Gantt", team.A, team.L,
     "0.7.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,

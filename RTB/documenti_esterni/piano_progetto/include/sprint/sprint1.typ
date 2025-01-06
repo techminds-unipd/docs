@@ -14,7 +14,7 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
   - analista: #team.G, #team.L, #team.S\;
   - verificatore: #team.A, #team.C.
 
-- Issues:
+- Issue:
   - #link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56]: Sostituire termini del glossario nei documenti;
   - #link("https://github.com/techminds-unipd/docs/issues/57")[Issue \#57]: Miglioramenti grafici documentazione;
   - #link("https://github.com/techminds-unipd/docs/issues/60")[Issue \#60]: Autoformazione tecnologie proposte dall'azienda;
