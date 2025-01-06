@@ -33,4 +33,5 @@ interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workf
 === Riferimenti informativi
 - T2 - Processi di ciclo di vita: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf;
 - Docs as Code: https://www.writethedocs.org/guide/docs-as-code/<docs-as-code>;
-- #glossario[Analisi dei requisiti]: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf.
+- T5 -  #glossario[Analisi dei requisiti]: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf;
+- T9 - #glossario[Verifica] e #glossario[validazione]: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf.
