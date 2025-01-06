@@ -24,18 +24,19 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
 tra il sistema e i servizi esterni, garantendo così una comprensione precisa delle connessioni e delle dipendenze tecnologiche.
 == Attori
 - *Attori principali*:
-  - Utente non autenticato
-  - Utente autenticato
-  - Frontend
-  - Backend
+  - Utente non autenticato;
+  - Utente autenticato;
+  - Frontend;
+  - Backend.
 - *Attori secondari*:
-  - Google
-  - #glossario[LLM]
+  - Google;
+  - #glossario[LLM].
 == Sistema
-  - Frontend
-  - Backend
-  - Agente
-  - Database
+  Il sistema è composto dai seguenti elementi:
+    - Frontend;
+    - Backend;
+    - #glossario[Agente];
+    - Database.
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
