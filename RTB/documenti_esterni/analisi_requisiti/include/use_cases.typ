@@ -660,7 +660,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Esecuzione del workflow da parte del sistema UC diagram.]
 ) <esecuzione-workflow-frontend-diagram>
 - *Descrizione*:
-  - Questo caso d'uso descrive le operazioni che il sistema compie nella esecuzione di un workflow, approfondendo @esecuzione-workflow.
+  - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nella esecuzione di un workflow, approfondendo @esecuzione-workflow.
 - *Attori principali*:
   - Frontend.
 - *Scenario principale*:
