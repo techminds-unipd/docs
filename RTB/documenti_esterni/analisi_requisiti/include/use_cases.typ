@@ -1265,6 +1265,44 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.  
 
+=== Visualizzazione funzioni del blocco Pastebin <funzionalità-blocco-pastebin>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-pastebin Visualizzazione funzioni blocco Pastebin
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione funzioni del blocco Pastebin UC diagram.]
+) <visualizzazione-funzionali-blocco-pastebin-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle funzioni del blocco Pastebin.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca sul blocco Pastebin;
+    2. visualizza le funzioni disponibili.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Pastebin;
+    2. fa visualizzare la lista delle funzioni disponibili: creare e scrivere su un documento.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Pastebin.  
 
 === Logout <logout>
 #figure(
