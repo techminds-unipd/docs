@@ -84,9 +84,60 @@ Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal
 All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Action]. 
 == Accertamento della qualità
 
-== Verifica
+== Verifica e validazione
 
-== Validazione
+=== Caratteristiche e finalità
+La verifica e la validazione sono due processi fondamentali per garantire la qualità e la correttezza del prodotto finale. La verifica viene eseguita su tutte le componenti del prodotto, siano esse documentazione o codice, durante tutta la durata del progetto, in modo tale da confermare che il lavoro svolto fino a quel momento sia corretto e rispetti gli standard prefissati. La validazione, invece, agisce solo a fine progetto, poiché si occupa di confermare che il prodotto finale nel suo complesso soddisfi le aspettative e i requisiti concordati con il proponente. La validazione rispecchia quindi l'insieme di tutte le verifiche effettuate durante il progetto, e per questo motivo la verifica è ciò che permette alla validazione di essere eseguita con successo.
+
+Per il processo di verifica lo standard ISO/IEC 12207:1995 include i seguenti compiti:
+- Verifica della documentazione, considerando i criteri di completezza, correttezza e coerenza;
+- Verifica del design, considerando i criteri di correttezza, coerenza e tracciabilità rispetto ai requisiti;
+- Verifica del codice, considerando i criteri di correttezza, tracciabilità rispetto al design e ai requisiti, testabilità e conformità agli standard di codifica.
+
+La verifica può essere eseguita in due forme: analisi statica e analisi dinamica.
+
+=== Analisi statica
+L'analisi statica è una forma di verifica che non richiede l'esecuzione dell'oggetto di verifica e per questo può essere applicata a ogni componente del prodotto. Viene utilizzata per accertare il rispetto di regole di scrittura e di stile, l'assenza di difetti e la presenza di proprietà desiderate. Questa forma di verifica può essere eseguita tramite due modalità principali:
+- Walkthrough: tecnica di lettura in cui l'oggetto in esame viene controllato nella sua totalità, senza svolgere una ricerca di un errore/proprietà specifica al suo interno, ad esempio la lettura di un documento per rilevare errori grammaticali. Questo tipo di esame è privo di assunzioni o presupposti;
+- Inspection: tecnica di lettura in cui l'oggetto in esame viene controllato per verificare la presenza di difetti o proprietà specifiche, ad esempio la ricerca di termini particolari in un documento. L'esame è basato su presupposti e per questo permette una maggiore possibilità di automazione rispetto al Walkthrough.
+
+=== Analisi dinamica
+L'analisi dinamica è una forma di verifica che richiede l'esecuzione dell'oggetto di verifica e quindi può essere applicata solo a codice eseguibile. Viene utilizzata per accertare il corretto funzionamento dell'oggetto tramite test (prove), i quali verificano che l'oggetto produca i risultati attesi e individuano eventuali anomalie durante l'esecuzione. 
+I test possono essere di vario tipo e per questo è necessario classificarli a seconda del loro scopo e del loro ambito di applicazione.
+
+*Classificazione dei test*
+
+Le tipologie di test principali sono, in ordine di esecuzione:
++ Test di unità: verificano il corretto funzionamento di singole unità di codice, come funzioni, metodi o classi. Poiché verificano piccole porzioni di codice, questi test devono essere eseguiti per primi, in modo tale da evitare l'introduzione di errori una volta che queste unità vengono integrate tra loro;
++ Test di integrazione: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
++ Test di sistema: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
++ Test di regressione: verificano che le modifiche apportate al codice non abbiano introdotto errori in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
++ Test di accettazione: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente; sono l'ultima fase di test prima del possibile rilascio del prodotto.
+
+Ogni test è costituito da:
+// TODO: completare con l'identificazione dei test
+
+=== Verifica della documentazione
+Ogni documento relativo al progetto deve essere sottoposto a verifica. Questo compito è affidato al verificatore, che esegue un'analisi statica tramite Walkthrough. In caso di errori o dubbi, il verificatore può richiedere modifiche al redattore, aggiungendo commenti che citino parti specifiche del documento in verifica, in modo da facilitare la discussione e l'eventuale correzione. 
+
+In generale, la verifica dovrà controllare i seguenti aspetti:
+- Correttezza tecnica: le informazioni contenute nel documento devono essere accurate e basate su fonti attendibili;
+- Coerenza: le informazioni contenute nel documento devono essere coerenti tra loro e con gli altri documenti;
+- Chiarezza: il documento deve essere facilmente comprensibile, senza ambiguità o termini tecnici non spiegati;
+- Conformità agli standard: il documento deve rispettare le norme stilistiche e strutturali prestabilite;
+- Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
+
+A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso #glossario[GitHub Actions], contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
+
+La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
+
+=== Verifica del design // TODO: non so se ci sia un modo, se lo facciamo lo mettiamo altrimenti si toglie
+
+=== Verifica del codice // TODO
+
+=== Validazione
+Secondo lo standard ISO/IEC 12207:1995, la validazione è il processo che serve a determinare se i requisiti e il sistema/prodotto software finale, per come è stato costruito, soddisfano l'uso specifico previsto. Il prodotto finale deve quindi soddisfare tutti i requisiti concordati con il proponente e funzionare correttamente nel suo ambiente finale.
+// TODO: da completare con quello che faremo per validare
 
 == Revisioni congiunte con il cliente
 
