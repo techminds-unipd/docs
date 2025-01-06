@@ -666,10 +666,16 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
   - Frontend:
     1. invia il segnale di esecuzione del workflow.
-  - Backend, database e agente:
+  - Backend:
     1. riceve il segnale di esecuzione del workflow;
-    2. prende i dati necessari per l'esecuzione del workflow dal database;
-    3. invia i dati all'agente (@esecuzione-workflow-agente);
+    2. richiede i dati necessari per l'esecuzione del workflow dal database;
+  - Database:
+    1. fornisce i dati necessari per l'esecuzione del workflow al backend;
+  - Backend:
+    3. invia i dati all'agente
+  - Agente:
+    1. esegue le automazioni interfacciandosi con un LLM (@esecuzione-workflow-agente);
+  - Backend:
     4. riceve una risposta dall'agente;
     5. restituisce il risultato al frontend.
 - *Pre-condizioni*:
