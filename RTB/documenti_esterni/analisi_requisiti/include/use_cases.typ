@@ -1263,7 +1263,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Pre-condizioni*:
     - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
 - *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.  
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.
 
 === Visualizzazione funzioni del blocco Pastebin <funzionalità-blocco-pastebin>
 #figure(
@@ -1302,7 +1302,48 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     1. fa visualizzare all'utente una breve descrizione del blocco Pastebin;
     2. fa visualizzare la lista delle funzioni disponibili: creare e scrivere su un documento.
 - *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Pastebin.  
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Pastebin.
+
+=== Visualizzazione funzioni del blocco Calendar <funzionalità-blocco-calendar>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-calendar Visualizzazione funzioni blocco Calendar
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione funzioni del blocco Calendar UC diagram.]
+) <visualizzazione-funzioni-blocco-calendar-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle funzioni del blocco Calendar.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca sul blocco Calendar;
+    2. visualizza le funzioni disponibili.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Calendar;
+    2. fa visualizzare la lista delle funzioni disponibili: creare un evento, cercare tra gli eventi creati.
+- *Pre-condizioni*:
+    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Calendar.
 
 === Logout <logout>
 #figure(
