@@ -104,7 +104,7 @@ Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
 \
-All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Action]. 
+All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions]. 
 == Accertamento della qualità
 
 == Verifica e validazione
@@ -140,8 +140,18 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 Ogni test è costituito da:
 // TODO: completare con l'identificazione dei test
 
+=== Processo di verifica
+In generale, il processo di verifica include le seguenti fasi:
++ *Apertura della pull request e assegnazione dei verificatori*: il redattore o sviluppatore apre una pull request per sottoporre il proprio lavoro a revisione, aggiungendo un titolo e una breve descrizione del lavoro svolto. Successivamente, assegna i due verificatori scelti tra i membri del gruppo durante la pianificazione dello sprint in corso. Se necessario, è possibile aggiungere un terzo verificatore o sostituire uno dei verificatori già assegnati;
++ *Conflitti*: se sono presenti conflitti con il ramo di destinazione, è compito del redattore risolverli prima di procedere con la verifica;
++ *GitHub Actions*: se sono presenti automazioni, queste vengono eseguite automaticamente una volta aperta la pull request. È compito del redattore verificare che tutte abbiano successo prima di procedere con la verifica. In caso di fallimento di una o più automazioni, il redattore deve correggere gli errori e ripetere l'operazione fino a quando tutte le automazioni non avranno esito positivo;
++ *Verifica*: ogni verificatore esegue un'attenta fase di verifica del lavoro svolto, seguendo norme precise a seconda del tipo di lavoro sottoposto a revisione. In caso di errori o dubbi, il verificatore può richiedere modifiche al redattore, aggiungendo commenti che citino parti specifiche del lavoro, in modo da facilitare la discussione e l'eventuale correzione;
++ *Discussione*: se necessario, il redattore e i verificatori possono discutere le modifiche richieste o i dubbi tramite la sezione apposita della pull request. Quando un dubbio viene chiarito, è compito del redattore marcare la conversazione come risolta, in modo da mantenere ordine nelle conversazioni ancora aperte.
++ *Correzione*: il redattore apporta le modifiche richieste dai verificatori, se presenti, e richiede nuovamente la verifica. In caso di necessità o di correzioni banali, anche il verificatore può modificare il lavoro, in modo da velocizzare il più possibile questa fase. Questo processo può essere ripetuto più volte, fino a quando i verificatori non approvano la pull request;
++ *Chiusura della pull request*: una volta che tutti i verificatori hanno approvato la pull request, è loro compito apportare l'ultima modifica al changelog, in modo da tracciare il lavoro svolto. Successivamente la pull request viene chiusa e il ramo di feature viene unito al ramo destinazione, concludendo così il processo di verifica.
+
 === Verifica della documentazione
-Ogni documento relativo al progetto deve essere sottoposto a verifica. Questo compito è affidato al verificatore, che esegue un'analisi statica tramite Walkthrough. In caso di errori o dubbi, il verificatore può richiedere modifiche al redattore, aggiungendo commenti che citino parti specifiche del documento in verifica, in modo da facilitare la discussione e l'eventuale correzione. 
+Ogni documento relativo al progetto deve essere sottoposto a verifica. Questo compito è affidato al verificatore, che esegue un'analisi statica tramite Walkthrough.
 
 In generale, la verifica dovrà controllare i seguenti aspetti:
 - Correttezza tecnica: le informazioni contenute nel documento devono essere accurate e basate su fonti attendibili;
@@ -150,7 +160,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Conformità agli standard: il documento deve rispettare le norme stilistiche e strutturali prestabilite;
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
-A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso #glossario[GitHub Actions], contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
+A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
