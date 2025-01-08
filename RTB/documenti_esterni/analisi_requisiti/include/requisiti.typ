@@ -4,7 +4,7 @@
 == Requisiti funzionali
 
 - FMR (Functional Mandatory Requirement);
-    - Irrinunciabili per qualcuno degli stakeholder;
+    - Irrinunciabili per qualcuno degli #glossario[stakeholder];
 - FDR (Functional Desirable Requirement);
     - Non strettamente necessari ma a valore aggiunto riconoscibile
 - FOR (Functional Optional Requirement).
