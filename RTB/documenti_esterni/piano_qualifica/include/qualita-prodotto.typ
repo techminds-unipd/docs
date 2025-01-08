@@ -48,7 +48,7 @@ Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nel
     [0%], 
     [MD2], 
     [#glossario[Indice di Gulpease]],
-    [\u{2A7E}50], 
+    [\u{2A7E}40], 
     [\u{2A7E}70], 
     [MD3],
     [Caption in tabelle e figure],
