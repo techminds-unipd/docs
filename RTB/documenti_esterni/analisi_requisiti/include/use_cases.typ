@@ -24,11 +24,19 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
 tra il sistema e i servizi esterni, garantendo così una comprensione precisa delle connessioni e delle dipendenze tecnologiche.
 == Attori
 - *Attori principali*:
-  - Utente non autenticato
-  - Utente autenticato
+  - Utente non autenticato;
+  - Utente autenticato;
+  - Frontend;
+  - Backend.
 - *Attori secondari*:
-  - Google
-  - #glossario[LLM]
+  - Google;
+  - #glossario[LLM].
+== Sistema
+  Il sistema è composto dai seguenti elementi:
+    - Frontend;
+    - Backend;
+    - #glossario[Agente];
+    - Database.
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
@@ -609,6 +617,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Questo caso d'uso descrive la visualizzazione dell'errore di runtime durante l'esecuzione di un workflow.
 - *Attori principali*:
   - Utente autenticato.
+- *Attori secondari*:
+  - LLM.
 - *Scenario principale*:
   - Utente autenticato:
     1. ha avviato l'esecuzione di un workflow valido.
@@ -620,6 +630,54 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - L'utente ha creato un workflow valido.
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
+
+=== Esecuzione del workflow da parte del sistema <esecuzione-workflow-sistema>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
+
+    node((2,0.5), align(center)[
+            @esecuzione-workflow-sistema Esecuzione workflow da parte del sistema
+    ],  name: <esecuzione-workflow-sistema>),
+    edge(<frontend>, <esecuzione-workflow-sistema>),
+
+   
+
+    node(enclose: (<esecuzione-workflow-sistema>,),
+        align(top + right)[Backend + database + agente],
+        width: 240pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Esecuzione del workflow da parte del sistema UC diagram.]
+) <esecuzione-workflow-frontend-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nell'esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Frontend.
+- *Scenario principale*:
+  - Frontend:
+    1. invia la richiesta di esecuzione del workflow.
+  - Backend, database e agente:
+    1. il backend riceve la richiesta di esecuzione del workflow;
+    2. il backend prende i dati necessari per l'esecuzione del workflow dal database;
+    3. il backend invia i dati all'agente (@esecuzione-workflow-agente);
+    4. il backend riceve un risultato dall'agente;
+    5. il backend restituisce il risultato al frontend.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - Il frontend riceve il risultato dell'esecuzione del workflow.
+
+
 
 === Esecuzione del workflow da parte dell'agente <esecuzione-workflow-agente>
 

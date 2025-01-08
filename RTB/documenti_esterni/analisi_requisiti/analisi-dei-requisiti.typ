@@ -5,6 +5,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.17.0", "08/01/2024", "Aggiunto use case di approfondimento dell'esecuzione del workflow", team.A, team.L,
     "0.16.0", "07/01/2024", "Aggiunto use case per visualizzazione funzionalità del blocco Calendar", team.C, team.L,
     "0.15.0", "07/01/2024", "Aggiunto use case per visualizzazione funzionalità del blocco Pastebin", team.C, team.L,
     "0.14.0", "05/01/2024", "Aggiunto use case visualizzazione workflow", team.C, team.M,
