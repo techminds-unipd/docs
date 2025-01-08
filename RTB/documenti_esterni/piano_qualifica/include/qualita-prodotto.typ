@@ -12,6 +12,7 @@ Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nel
 #figure(
   table(
     columns: (auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
     inset: 10pt,
     align: horizon,
     table.header(
@@ -35,6 +36,7 @@ Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nel
 #figure(
   table(
     columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
     inset: 10pt,
     align: horizon,
     table.header(
@@ -46,7 +48,7 @@ Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nel
     [0%], 
     [MD2], 
     [#glossario[Indice di Gulpease]],
-    [\u{2A7E}50], 
+    [\u{2A7E}40], 
     [\u{2A7E}70], 
     [MD3],
     [Caption in tabelle e figure],

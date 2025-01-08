@@ -34,3 +34,4 @@ L'approccio che abbiamo deciso di adottare per questo documento è di tipo incre
   - Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
 === Riferimenti informativi:
   - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf.
+  - #glossario[Piano di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf.
