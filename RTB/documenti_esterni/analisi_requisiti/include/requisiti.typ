@@ -32,7 +32,7 @@
 
         [FMR 7], [L'utente deve poter visualizzare un workflow], [@visualizzazione-workflow],
 
-        [FMR 7], [L'utente deve poter aggiungere e eliminare un blocco in un workflow], [@aggiunta-blocco, @eliminazione-blocco],
+        [FMR 7], [L'utente deve poter aggiungere ed eliminare un blocco in un workflow], [@aggiunta-blocco, @eliminazione-blocco],
 
         [FMR 8], [L'utente deve poter collegare e scollegare due blocchi in un workflow], [@collegamento-arco, @scollegamento-arco],
 
