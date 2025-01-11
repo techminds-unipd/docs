@@ -40,7 +40,7 @@
 
         [FMR 10], [L'utente deve poter visualizzare quali blocchi (servizi) sono stati configurati], [@visualizzazione-blocchi-configurati, @avviso-servizi-non-collegati],
        
-        [FDR 1], [L'utente può salvare un workflow], [@salvataggio-workflow, @errore-connessione-database],
+        [FDR 1], [L'utente deve poter salvare un workflow], [@salvataggio-workflow, @errore-connessione-database],
 
         [FMR 11], [L'utente deve poter visualizzare le funzionalità del blocco Gmail, Pastebin e Calendar], [@funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
