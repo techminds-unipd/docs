@@ -44,7 +44,7 @@
 
         [FMR 11], [L'utente deve poter visualizzare le funzionalità del blocco Gmail, Pastebin e Calendar], [@funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
-        [FMR 12], [L'utente deve poter fare il Logout], [@logout],
+        [FMR 12], [L'utente deve poter fare il logout], [@logout],
     ),
     caption: [Tabella dei requisiti.]
 )<tabella-dei-requisiti>
