@@ -32,19 +32,19 @@
 
         [FMR 7], [L'utente deve poter visualizzare un workflow], [@visualizzazione-workflow],
 
-        [FMR 7], [L'utente deve poter aggiungere ed eliminare un blocco in un workflow], [@aggiunta-blocco, @eliminazione-blocco],
+        [FMR 8], [L'utente deve poter aggiungere ed eliminare un blocco in un workflow], [@aggiunta-blocco, @eliminazione-blocco],
 
-        [FMR 8], [L'utente deve poter collegare e scollegare due blocchi in un workflow], [@collegamento-arco, @scollegamento-arco],
+        [FMR 9], [L'utente deve poter collegare e scollegare due blocchi in un workflow], [@collegamento-arco, @scollegamento-arco],
 
-        [FMR 9], [L'utente deve poter aggiungere e modificare una descrizione dell'automazione tra due blocchi collegati], [@aggiunta-descrizione, @modifica-descrizione],
+        [FMR 10], [L'utente deve poter aggiungere e modificare una descrizione dell'automazione tra due blocchi collegati], [@aggiunta-descrizione, @modifica-descrizione],
 
-        [FMR 10], [L'utente deve poter visualizzare quali blocchi (servizi) sono stati configurati], [@visualizzazione-blocchi-configurati, @avviso-servizi-non-collegati],
+        [FMR 11], [L'utente deve poter visualizzare quali blocchi (servizi) sono stati configurati], [@visualizzazione-blocchi-configurati, @avviso-servizi-non-collegati],
        
         [FDR 1], [L'utente deve poter salvare un workflow], [@salvataggio-workflow, @errore-connessione-database],
 
-        [FMR 11], [L'utente deve poter visualizzare le funzionalità del blocco Gmail, Pastebin e Calendar], [@funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
+        [FMR 12], [L'utente deve poter visualizzare le funzionalità del blocco Gmail, Pastebin e Calendar], [@funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
-        [FMR 12], [L'utente deve poter fare il logout], [@logout],
+        [FMR 13], [L'utente deve poter fare il logout], [@logout],
     ),
     caption: [Tabella dei requisiti.]
 )<tabella-dei-requisiti>
