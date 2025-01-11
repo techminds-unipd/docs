@@ -6,7 +6,7 @@
 - FMR (Functional Mandatory Requirement);
     - Irrinunciabili per qualcuno degli #glossario[stakeholder];.
 - FDR (Functional Desirable Requirement);
-    - Non strettamente necessari ma a valore aggiunto riconoscibile
+    - Non strettamente necessari ma a valore aggiunto riconoscibile.
 - FOR (Functional Optional Requirement).
     - Relativamente utili oppure contrattabili più avanti nel progetto
 
