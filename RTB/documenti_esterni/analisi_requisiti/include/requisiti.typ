@@ -9,22 +9,22 @@
     - Non strettamente necessari ma a valore aggiunto riconoscibile.
 - FOR (Functional Optional Requirement).
     - Relativamente utili oppure contrattabili anche in fasi avanzate nel progetto.
-
+#set par (justify: false)
 #figure(
     table(
         columns: (1fr, 5fr, 2fr),
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        [FMR 1], [L'utente deve poter effettuare il login], [@login,@login-interno,@inserimento-username,
-        @inserimento-password,@credenziali-errate, ],
+        [FMR 1], [L'utente deve poter effettuare il login], 
+        [@login, @login-interno, @inserimento-username, @inserimento-password, @credenziali-errate],
 
         [FOR 1], [L'utente deve poter fare il login con Google], [@login-google],
         
-        [FMR 2], [L'utente deve potersi registrare], [@registrazione,@creazione-username,@inserimento-email,@creazione-password, @conferma-password, @errore-registrazione],
+        [FMR 2], [L'utente deve potersi registrare], [@registrazione, @creazione-username, @inserimento-email, @creazione-password, @conferma-password, @errore-registrazione],
 
         [FMR 3], [L'utente deve poter associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
 
-        [FMR 4], [L'utente deve poter eseguire un workflow], [@esecuzione-workflow,@vis-errore-workflow,@vis-errore-runtime, (Approfondimento: @esecuzione-workflow-sistema,@esecuzione-workflow-agente,@errore-workflow-llm)],
+        [FMR 4], [L'utente deve poter eseguire un workflow], [@esecuzione-workflow, @vis-errore-workflow, @vis-errore-runtime, (Approfondimento: @esecuzione-workflow-sistema, @esecuzione-workflow-agente, @errore-workflow-llm)],
 
         [FMR 5], [L'utente deve poter vedere il risultato dell'esecuzione del workflow], [@vis-risultato-esecuzione-workflow],
 
@@ -46,7 +46,7 @@
 
         [FMR 13], [L'utente deve poter fare il logout], [@logout],
     ),
-    caption: [Tabella dei requisiti.]
+    caption: [Tabella dei requisiti.],
 )<tabella-dei-requisiti>
 
 == Requisiti di qualità
