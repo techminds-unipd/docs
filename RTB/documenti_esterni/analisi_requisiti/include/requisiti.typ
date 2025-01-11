@@ -18,7 +18,7 @@
         [FMR 1], [L'utente deve poter effettuare il login], [@login,@login-interno,@inserimento-username,
         @inserimento-password,@credenziali-errate, ],
 
-        [FOR 1], [L'utente può fare il login con Google], [@login-google],
+        [FOR 1], [L'utente deve poter fare il login con Google], [@login-google],
         
         [FMR 2], [L'utente deve poter registrarsi], [@registrazione,@creazione-username,@inserimento-email,@creazione-password, @conferma-password, @errore-registrazione],
 
