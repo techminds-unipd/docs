@@ -8,7 +8,7 @@
 - FDR (Functional Desirable Requirement);
     - Non strettamente necessari ma a valore aggiunto riconoscibile.
 - FOR (Functional Optional Requirement).
-    - Relativamente utili oppure contrattabili più avanti nel progetto.
+    - Relativamente utili oppure contrattabili anche in fasi avanzate nel progetto.
 
 #figure(
     table(
