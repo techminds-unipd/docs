@@ -20,7 +20,7 @@
 
         [FOR 1], [L'utente deve poter fare il login con Google], [@login-google],
         
-        [FMR 2], [L'utente deve poter registrarsi], [@registrazione,@creazione-username,@inserimento-email,@creazione-password, @conferma-password, @errore-registrazione],
+        [FMR 2], [L'utente deve potersi registrare], [@registrazione,@creazione-username,@inserimento-email,@creazione-password, @conferma-password, @errore-registrazione],
 
         [FMR 3], [L'utente deve poter associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
 
