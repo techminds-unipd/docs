@@ -9,7 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
-    "0.2.0", "12/01/2024", "Inserimento nuovi termini", team.C, "",
+    "0.2.0", "12/01/2024", "Inserimento nuovi termini", team.C, team.M,
     "0.1.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,
     "0.1.0", "11/11/2024", "Prima versione", team.L, team.C
   )
