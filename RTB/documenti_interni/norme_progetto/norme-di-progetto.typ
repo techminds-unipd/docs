@@ -3,6 +3,7 @@
 //#glossario[scrum]
 //#glossario[Diagrammi UML]
 //#glossario[tracciamento]
+// //#glossario[label]
 
 #show: documento.with(
   title: "Norme di progetto",

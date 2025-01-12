@@ -1,6 +1,7 @@
 #import "/template/template.typ": documento,team
 //#glossario[user story]
 //#glossario[requisiti]
+//#glossario[push]
 
 #set outline(depth: 3)
 #show: documento.with(

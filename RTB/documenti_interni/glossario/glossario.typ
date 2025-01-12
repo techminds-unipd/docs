@@ -37,7 +37,7 @@ Nel campo dell'intelligenza artificiale, l'agente (detto anche Agente Intelligen
 == Analisi dei requisiti // {AdR}
 Attività preliminare allo sviluppo (o alla modifica) di un sistema software, il cui scopo è quello di definire le funzionalità che il nuovo prodotto (o il prodotto modificato) deve offrire. Tali funzionalità sono rappresentate dai requisiti che devono essere soddisfatti dal software sviluppato.
 
-== Analisi dei rischi
+== Analisi dei rischi 
 L'analisi dei rischi è un processo che identifica, valuta e pianifica i rischi che potrebbero influenzare il progetto. Permette di prendere misure per mitigarli e gestirli durante lo sviluppo del software.
 
 == API // {Application Programming Interface}

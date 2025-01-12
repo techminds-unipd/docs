@@ -9,7 +9,7 @@ Il prodotto dovrà fornire all'utente la possibilità di creare workflow che coi
 Le principali funzionalità del prodotto saranno:
 #set list(marker: ([•], [-]))
 - Creazione dei flussi di automazione tramite interfaccia drag and drop:
-  - disponibilità di tre o più blocchi di automazione per la definizione delle automazioni;
+  - disponibilità di tre o più #glossario[blocchi] di automazione per la definizione delle automazioni;
 - Descrizione delle azioni da svolgere in linguaggio naturale;
 - Interpretazione delle azioni tramite agenti.
 

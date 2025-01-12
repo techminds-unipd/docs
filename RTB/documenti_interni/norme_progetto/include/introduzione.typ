@@ -17,7 +17,7 @@ I termini che sono presenti all'interno del glossario, verranno scritti #glossar
 Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l’#glossario[intelligenza artificiale] generativa,
 vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
 Il prodotto sarà un’app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi
-esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno
+esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno
 l’automazione da effettuare in linguaggio naturale. Successivamente, un #glossario[agente] prenderà il workflow,
 interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
