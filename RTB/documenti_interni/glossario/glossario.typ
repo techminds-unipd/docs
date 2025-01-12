@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "0.2.0", "12/01/2024", "Inserimento nuovi termini", team.C, team.M,
     "0.1.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,
     "0.1.0", "11/11/2024", "Prima versione", team.L, team.C
   )
@@ -36,8 +37,14 @@ Nel campo dell'intelligenza artificiale, l'agente (detto anche Agente Intelligen
 == Analisi dei requisiti // {AdR}
 Attività preliminare allo sviluppo (o alla modifica) di un sistema software, il cui scopo è quello di definire le funzionalità che il nuovo prodotto (o il prodotto modificato) deve offrire. Tali funzionalità sono rappresentate dai requisiti che devono essere soddisfatti dal software sviluppato.
 
+== Analisi dei rischi 
+L'analisi dei rischi è un processo che identifica, valuta e pianifica i rischi che potrebbero influenzare il progetto. Permette di prendere misure per mitigarli e gestirli durante lo sviluppo del software.
+
 == API // {Application Programming Interface}
 Acronimo di _Application Programming Interface_, è un insieme di procedure atte a consentire la comunicazione tra diversi software o tra diversi componenti di software.
+
+== Arco // {Archi}
+Rappresenta il collegamento tra due blocchi. Sopra di esso viene inserita una descrizione in linguaggio naturale che indica l'automazione che l'utente desidera sia compiuta.
 
 == Attore // {Attori}
 Nel contesto dell'analisi dei requisiti rappresenta un'entità che interagisce con il sistema svolgendo delle attività. Può essere un utente oppure un sistema esterno.
@@ -57,6 +64,12 @@ Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fi
 
 == Bedrock
 Bedrock è un servizio di AWS che rende disponibili modelli di intelligenza artificiale tramite un sistema unificato.
+
+== Blocco // {Blocchi}
+Un blocco rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
+
+== Branch
+Un branch è una ramificazione del codice sorgente. Permette di lavorare su una copia separata del progetto senza influenzare il ramo principale. I rami sono utilizzati per sviluppare nuove funzionalità, correggere bug, o sperimentare senza compromettere il resto del codice.
 
 == Build Automation
 Processo che automatizza la build dei sorgenti.
@@ -142,6 +155,12 @@ Acronimo di _Issues Tracking System_, è uno strumento che gestisce e mantiene u
 = K
 = L
 
+== Label
+In GitHub, una label è un'etichetta che può essere applicata a un issue o a una pull request per fornire informazioni aggiuntive, come lo stato, la priorità, o il tipo di problema. Le label sono utili per organizzare e categorizzare facilmente gli elementi nel repository.
+
+== LaTeX
+LaTeX è un linguaggio di markup utilizzato per la scrittura di documenti scientifici e tecnici. 
+
 == LLM // {Large Language Model}
 Acronimo di _Large Language Model_. Modello di deep learning progettato per eseguire task di Natural Language Processing, come la generazione di un testo. Un LLM apprende molti parametri in modo supervisionato, individuando relazioni statistiche tra una grande quantità di testi.
 
@@ -156,10 +175,16 @@ Data di calendario che determina un punto di avanzamento atteso del progetto. Le
 == Minor version
 Nel contesto di gestione delle versioni, indica un aggiornamento che aggiunge contenuto/funzionalità senza cambiare il significato o il comportamento di un software o documento.
 
+== MongoDB
+MongoDB è un database NoSQL orientato ai documenti. Utilizza un formato di dati JSON-like per archiviare le informazioni e permette una gestione flessibile dei dati.
+
 == MVP // {Minimum Viable Product}
 Acronimo di _Minimum Viable Product_. Prodotto software ridotto nelle funzionalità che soddisfa i requisiti essenziali. É utilizzato a scopo esplorativo per ricevere feedback e valutare la bontà della visione di prodotto, in modo da prendere decisioni consapevoli sul completamento del software.
 
 = N
+
+== Node.js
+Node.js è un ambiente di esecuzione JavaScript lato server. Permette di eseguire codice JavaScript al di fuori di un browser, ed è utilizzato per costruire applicazioni server-side come API, servizi web e applicazioni real-time.
 
 == Norme di progetto // {NdP}
 Documento gestionale interno redatto in forma esecutiva, ossia composto da regole e procedure, che descrive il way of working. É volto a standardizzare i processi in modo da assicurare la coerenza del lavoro svolto dai diversi membri e la qualità dei prodotti.
@@ -174,6 +199,7 @@ Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o
 Acronimo di _Product Baseline_. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).
 
 == Piano di progetto // {PdQ}
+Il piano di progetto è un documento che descrive gli obiettivi, le risorse, i tempi e le attività previste per un progetto. Include anche la gestione dei rischi, la pianificazione delle fasi e l'assegnazione delle responsabilità.
 
 == Piano di qualifica // {PdQ}
 Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.
@@ -193,6 +219,9 @@ Insieme di attività che devono raggiungere determinati obiettivi a partire da d
 == Pull request // {PR}
 Nel contesto di un repository di versionamento distribuito, è un modo per notificare ai membri del team che è stata completata una funzionalità in un branch di feature e che si può effettuare il merge nel branch main, con previa verifica.
 
+== Push
+Push è l'operazione che consente di inviare le modifiche locali (commit) a un repository remoto su GitHub o un altro server Git. Permette di aggiornare il codice condiviso con gli altri membri del team.
+
 == Python
 Linguaggio ad alto livello orientato agli oggetti, apprezzato per la sua semplicità e flessibilità.
 
@@ -205,6 +234,9 @@ Può avere diversi punti di vista:
 - Quantitativa: misurazione oggettiva, per confronto.
 
 = R
+== React
+React è una libreria JavaScript per la costruzione di interfacce utente. È utilizzata per creare applicazioni web in modo dichiarativo e reattivo.
+
 == Refactoring
 Attività di ristrutturazione del codice sorgente, senza modificarne il comportamento esterno, al fine di renderlo più leggibile, manutenibile e riusabile.
 
@@ -233,12 +265,18 @@ Framework di sviluppo agile che suddivide il lavoro in cicli iterativi chiamati 
 == Sprint
 Periodo di tempo prefissato, di durata massima di un mese, in cui il team sviluppa un piccolo incremento di prodotto finale.
 
+== Sprint planning
+È una pratica agile in cui pianifichiamo le attività da completare durante uno sprint. In questa fase, vengono scelti i task da affrontare in base alla priorità e alla disponibilità di ogni membro del team.
+
 == Stakeholder
 Persona o gruppo di persone che hanno interesse nel progetto, e lo influenzano o vengono influenzati da esso, come il committente o il fornitore.
 
 = T
 == Tracciamento // {Tracciamenti}
 Attività che permette di mantenere la coerenza tra i requisiti e i componenti del sistema, in modo da poter tracciare l'evoluzione del sistema e verificare che i requisiti siano soddisfatti.
+
+== TypeScript
+TypeScript è un linguaggio di programmazione open source. Il linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia anche in grado di funzionare con TypeScript senza nessuna modifica. È quindi destinato a essere compilato in JavaScript per poter essere interpretato da qualunque web browser o app.
 
 == Typst
 Typst è un sistema di impaginazione basato su markup progettato per essere un' alternativa a LaTeX pur essendo più facile da apprendere ed utilizzare.
@@ -254,8 +292,8 @@ Breve descrizione di una funzionalità del software, scritta dal punto di vista 
 == Validazione // {Validazioni}
 Si occupa di accertare che il prodotto finale soddisfi i requisiti specificati e corrisponda alle attese (Did I build the right system?) quindi pone l'attenzione sul prodotto finale.
 
-== Verbali // {Verbali}
-Documento che riporta le discussioni e le decisioni prese durante una riunione, con indicazione della data, dei partecipanti, degli argomenti trattati e delle decisioni prese.
+== Verbale // {Verbali}
+Il verbale è un documento che registra in dettaglio ciò che è stato discusso e deciso in una riunione. Viene utilizzato per fare riferimento a decisioni e le rispettive azioni da intraprendere in seguito. Il verbale è definito interno quando si svolge solamente tra i membri del team, esterno altrimenti. Viene redatto dal responsabile o dall'amministratore (se delegato).
 
 == Verifica // {Verifiche}
 Si occupa di accertare che lo svolgimento delle attività di sviluppo non introduca errori (Did I build the system right?) quindi pone l'attenzione sul way of working.
