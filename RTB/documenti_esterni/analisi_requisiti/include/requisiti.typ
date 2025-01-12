@@ -42,7 +42,7 @@
        
         [FDR 1], [L'utente autenticato deve poter salvare un workflow], [@salvataggio-workflow, @errore-connessione-database],
 
-        [FMR 12], [L'utente autenticato deve poter visualizzare le funzionalità del blocco Gmail, Pastebin e Calendar], [@funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
+        [FMR 12], [L'utente autenticato deve poter visualizzare le funzionalità dei blocchi Gmail, Pastebin e Calendar], [@funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
         [FMR 13], [L'utente autenticato deve poter fare il logout], [@logout],
     ),
