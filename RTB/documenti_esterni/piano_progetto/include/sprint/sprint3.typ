@@ -46,7 +46,75 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
       - #link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario (lasciata in sospeso dallo sprint 1);
       - #link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160]: Fix script python.
 
+==== Diagramma di Gantt
+Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
+Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
+#linebreak()I colori sono significativi:
+#list(
+    indent: 10pt,
+[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
+[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
+[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
+)
 
+#figure(
+timeliney.timeline(
+  show-grid: true,
+  {
+    import timeliney: *
+
+    headerline(group(([*Dicembre 2024*], 6)), group(([*Gennaio 2024*], 6)))
+    headerline(
+      group(..range(2).map(n => strong(str(n + 23)))),
+      group(..range(4).map(n => strong(str(n + 27)))),
+      group(..range(2).map(n => strong(str(n + 2)))),
+      group(..range(4).map(n => strong(str(n + 7))))
+    )
+
+    taskgroup(title: [*PoC*], {
+      task("Implementazione agenti nel backend", (from: 0, to: 12, style: (stroke: 8pt + gray)), (from: 0, to: 12, style: (stroke: 2pt + red)))
+      task("Collegamento servizi Google", (from: 0, to: 12, style: (stroke: 8pt + gray)), (from: 0, to: 7, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Analisi dei requisiti*], {
+      task("UC blocco calendar", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
+      task("UC blocco Docs", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
+      task("UC approfondimento esecuzione workflow", (from: 2, to: 8, style: (stroke: 8pt + gray)), (from: 2, to: 9, style: (stroke: 2pt + red)))
+      task("UC creazione workflow", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 3, style: (stroke: 2pt + red)))
+      task("UC modifica workflow", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+      task("Fix UC visualizzazione blocchi", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Piano di Progetto*], {
+      task("Preventivo sprint 3", (from: 3, to: 7, style: (stroke: 8pt + gray)), (from: 3, to: 6, style: (stroke: 2pt + red)))
+      task("Consuntivo sprint 2", (from: 3, to: 6, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Piano di Qualifica*], {
+      task("Fix piano di qualifica", (from: 9, to: 12, style: (stroke: 8pt + gray)), (from: 9, to: 10, style: (stroke: 2pt + red)))
+      task("Redigere nuove sezioni piano di qualifica", (from: 0, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Norme di Progetto*], {
+      task("Redigere sezione 2.2 norme di progetto", (from: 2, to: 6, style: (stroke: 8pt + gray)), (from: 2, to: 6, style: (stroke: 2pt + red)))
+      task("Redigere sezione 3.4, 3.5", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+      task("Aggiornamento norme di progetto", (from: 6, to: 10, style: (stroke: 8pt + gray)), (from: 6, to: 10, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Varie*], {
+    task("Aggiungere termini al glossario", (from: 8, to: 12, style: (stroke: 8pt + gray)), (from: 11, to: 12, style: (stroke: 2pt + red)))
+    task("Fix script python", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+    })
+  }
+),
+caption: [Diagramma Gantt sprint 3.]
+)<diagramma-gantt-sprint3>
+
+==== Conclusioni
+Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/docs/issues/111")[\#111 Redazione sezioni piano di qualifica], che è stata eliminata andando a creare issue più specifiche e di dimensione minore, in modo da facilitare la divisione del compito.
+
+==== Restrospettiva
+Non ci sono state particolari difficoltà durante questo periodo, quindi non è stato deciso alcun cambiamento al way of working.
 
 ==== Costi
 
@@ -74,3 +142,4 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
     #pieChartSprint(3, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
     <grafico-ConsuntivoSprint3> \
 ]
+
