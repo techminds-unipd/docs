@@ -21,12 +21,12 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/PoC/issues/8")[Issue \#8]: Gestione collegamento servizi Google.
     
     - Analisi dei Requisiti
-        - #link("https://github.com/techminds-unipd/docs/issues/149")[Issue \#149]: UC blocco Calendar;
-        - #link("https://github.com/techminds-unipd/docs/issues/150")[Issue \#150]: UC blocco Docs;
+        - #link("https://github.com/techminds-unipd/docs/issues/149")[Issue \#149]: UC blocco calendar;
+        - #link("https://github.com/techminds-unipd/docs/issues/150")[Issue \#150]: UC blocco pastebin;
         - #link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151]: UC approfondimento esecuzione workflow;
         - #link("https://github.com/techminds-unipd/docs/issues/152")[Issue \#152]: UC creazione workflow;
         - #link("https://github.com/techminds-unipd/docs/issues/153")[Issue \#153]: UC modifica workflow;
-        - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: Fix UC Visualizzazione blocchi configurati e avviso servizi collegati.
+        - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: Fix UC visualizzazione blocchi configurati e avviso servizi collegati.
     
 
     - Piano di Progetto
@@ -77,16 +77,16 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Analisi dei requisiti*], {
-      task("UC blocco calendar", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
-      task("UC blocco Docs", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
-      task("UC approfondimento esecuzione workflow", (from: 2, to: 8, style: (stroke: 8pt + gray)), (from: 2, to: 9, style: (stroke: 2pt + red)))
+      task("UC blocco calendar", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 9, style: (stroke: 2pt + red)))
+      task("UC blocco pastebin", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 9, style: (stroke: 2pt + red)))
+      task("UC approfondimento esecuzione workflow", (from: 2, to: 8, style: (stroke: 8pt + gray)), (from: 2, to: 10, style: (stroke: 2pt + red)))
       task("UC creazione workflow", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 3, style: (stroke: 2pt + red)))
-      task("UC modifica workflow", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+      task("UC modifica workflow", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 5, style: (stroke: 2pt + red)))
       task("Fix UC visualizzazione blocchi", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Piano di Progetto*], {
-      task("Preventivo sprint 3", (from: 3, to: 7, style: (stroke: 8pt + gray)), (from: 3, to: 6, style: (stroke: 2pt + red)))
+      task("Preventivo sprint 3", (from: 3, to: 7, style: (stroke: 8pt + gray)), (from: 3, to: 7, style: (stroke: 2pt + red)))
       task("Consuntivo sprint 2", (from: 3, to: 6, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
     })
 
@@ -97,8 +97,8 @@ timeliney.timeline(
 
     taskgroup(title: [*Norme di Progetto*], {
       task("Redigere sezione 2.2 norme di progetto", (from: 2, to: 6, style: (stroke: 8pt + gray)), (from: 2, to: 6, style: (stroke: 2pt + red)))
-      task("Redigere sezione 3.4, 3.5", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
-      task("Aggiornamento norme di progetto", (from: 6, to: 10, style: (stroke: 8pt + gray)), (from: 6, to: 10, style: (stroke: 2pt + red)))
+      task("Redigere sezione 3.4, 3.5", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 9, style: (stroke: 2pt + red)))
+      task("Aggiornamento norme di progetto", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 9, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Varie*], {
@@ -111,7 +111,7 @@ caption: [Diagramma Gantt sprint 3.]
 )<diagramma-gantt-sprint3>
 
 ==== Conclusioni
-Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/docs/issues/111")[\#111 Redazione sezioni piano di qualifica], che è stata eliminata andando a creare issue più specifiche e di dimensione minore, in modo da facilitare la divisione del compito.
+Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/docs/issues/111")[\#111 Redazione sezioni piano di qualifica], poiché abbiamo sottovalutato la sua ampiezza e i membri a cui era assegnata avevano già un carico di lavoro non banale. Abbiamo deciso di eliminare questa issue e creare issue più specifiche e di dimensione minore, in modo da facilitare la divisione del compito.
 
 ==== Restrospettiva
 Non ci sono state particolari difficoltà durante questo periodo, quindi non è stato deciso alcun cambiamento al way of working.
