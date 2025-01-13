@@ -48,6 +48,16 @@
     squarzoni_preventivo.push( (0, 0, 0, 0, 0, 8) )
     tutino_preventivo.push(    (0, 0, 0, 0, 7, 0) )
     vallotto_preventivo.push(  (0, 0, 7, 0, 0, 1) ) 
+
+    // Sprint 4
+    bressan_preventivo.push(   (0, 5, 0, 0, 0, 0) )
+    corradin_preventivo.push(  (2, 0, 2, 0, 0, 0) )
+    lazzarin_preventivo.push(  (0, 0, 4, 0, 0, 0) )
+    salviato_preventivo.push(  (0, 5, 0, 0, 0, 0) )
+    squarzoni_preventivo.push( (0, 5, 0, 0, 0, 0) )
+    tutino_preventivo.push(    (0, 0, 0, 0, 0, 5) )
+    vallotto_preventivo.push(  (0, 0, 0, 0, 0, 5) )
+
     // Per calcolare il bilancio allo sprint n devo calcolare i bilanci precendenti
     for i in range(0, sprint_number) {
 
