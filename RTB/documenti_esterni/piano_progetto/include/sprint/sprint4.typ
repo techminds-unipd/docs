@@ -6,7 +6,7 @@
 - Durata: 13/01/2025 - 31/01/2025
 
 ==== Pianificazione
-In questo quarto sprint ci concentreremo sulla redazione dei documenti necessari alla prima revisione RTB, dando una particolare priorità alla stesura del documento di piano di qualifica. Dato che questo periodo coincide con la sessione d'esami, questo sprint avrà durata di tre settimane anziché due, così da dilatare il tempo a disposizione per completare i vari compiti e non sovraccaricare i membri del gruppo.
+In questo quarto sprint ci concentreremo sulla redazione dei documenti necessari alla revisione RTB, dando una particolare priorità alla stesura del documento di piano di qualifica. Dato che questo periodo coincide con la sessione d'esami, questo sprint avrà durata di tre settimane anziché due, così da dilatare il tempo a disposizione per completare i vari compiti e non sovraccaricare i membri del gruppo.
 
 - Ruoli:
   - responsabile: #team.S\;
