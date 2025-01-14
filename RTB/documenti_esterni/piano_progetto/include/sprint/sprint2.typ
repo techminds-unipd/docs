@@ -93,29 +93,31 @@ timeliney.timeline(
       task("Scrivere nuove sezioni in analisi dei requisiti", (from: 2, to: 6, style: (stroke: 8pt + gray)), (from: 2, to: 8, style: (stroke: 2pt + red)))
     })
 
-taskgroup(title: [*Piano di progetto*], {
-    task("Aggiornare piano di progetto [sezione sprint 1]", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-    task("Aggiungere info sprint 2", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
-    task("Sistemare il paragrafo spiegazioni", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-    task("Redigere 'Pianificazione' in piano di progetto", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+    taskgroup(title: [*Piano di progetto*], {
+        task("Aggiornare piano di progetto [sezione sprint 1]", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task("Aggiungere info sprint 2", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+        task("Sistemare il paragrafo spiegazioni", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task("Redigere 'Pianificazione' in piano di progetto", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
+
     taskgroup(title: [*Piano di qualifica*], {
         task("Fix piano di qualifica", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
         task("Redigere nuove sezioni piano di qualifica", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
     })
 
-taskgroup(title: [*Norme di progetto*], {
-    task("Redigere Processi primari in norme di progetto", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-    task("Redigere Processi organizzativi in norme di progetto", (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
-     })
+    taskgroup(title: [*Norme di progetto*], {
+        task("Redigere Processi primari in norme di progetto", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task("Redigere Processi organizzativi in norme di progetto", (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
+    })
+
     taskgroup(title: [*Automazione*], {
         task("Creazione script check_glossario.py", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
         task("Creazione script indice_gulpease.py", (from: 7, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
     })
-    task("Creazione checklist per i verificatori", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
 
-     
-   
+    taskgroup(title: [*Varie*], {
+        task("Creazione checklist per i verificatori", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
+    })
   }
 ),
 caption: [Diagramma Gantt sprint 2.]

@@ -49,6 +49,14 @@
     tutino_preventivo.push(    (0, 0, 0, 0, 7, 0) )
     vallotto_preventivo.push(  (0, 0, 7, 0, 0, 1) ) 
 
+    bressan_consuntivo.push(   (3, 0, 4, 0, 0, 0) )
+    corradin_consuntivo.push(  (0, 8, 0, 0, 0, 0) )
+    lazzarin_consuntivo.push(  (0, 0, 0, 0, "6 (-1)", 0) )
+    salviato_consuntivo.push(  (0, 0, 0, 0, 0, "7 (-1)") )
+    squarzoni_consuntivo.push( (0, 0, 0, 0, 0, "7 (-1)") )
+    tutino_consuntivo.push(    (0, 0, 0, 0, "6 (-1)", 0) )
+    vallotto_consuntivo.push(  (0, "1 (+1)", 7, 0, 0, "0 (-1)") )
+
     // Sprint 4
     bressan_preventivo.push(   (0, 5, 0, 0, 0, 0) )
     corradin_preventivo.push(  (2, 0, 2, 0, 0, 0) )
