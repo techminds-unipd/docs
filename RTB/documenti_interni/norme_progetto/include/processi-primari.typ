@@ -320,5 +320,16 @@ L'attività di integrazione consiste nell'unione delle parti di software svilupp
 L'attività consiste nello sviluppo di un piano per installare il prodotto software nell'ambiente di destinazione. In questo piano devono essere fornite le risorse e le informazioni necessarie per l'installazione e la configurazione del software. L'obiettivo è quello di fornire istruzioni chiare e dettagliate all'utente finale, in modo tale da consentirgli di utilizzare il prodotto software.
 
 == Gestione operativa
+=== Caratteristiche e finalità
+Il processo di gestione operativa  nello standard ISO/IEC 12207:1995 include le attività e i compiti necessari per la gestione del prodotto software e fornire supporto operativo agli utenti. Questo processo si riferisce principalmente alla fase in cui il software viene utilizzato nel suo ambiente operativo e interagisce con il sistema. #linebreak() #linebreak() 
+Lo standard definisce queste attività principali:
+1. Implementazione del processo: definisce un piano operativo e uno standard per gestire le attività, inoltre stabilisce procedure per il monitoraggio e la risoluzione dei problemi;
+2. Test operativi: definisce l'esecuzione di test per ogni rilascio del software nell'ambiente operativo, con particolare attenzione al funzionamento corretto del software rispetto al funzionamento atteso;
+3. Operazione del sistema: definisce che il sistema dovrebbe operare all'interno dell'ambiente previsto in accordo alla sua documentazione;
+4. Supporto agli utenti: definisce modalità di assistenza e consulenza agli utenti in base alle richieste, quest'ultime dovrebbero essere tracciate e monitorate.
+Queste attività assicurano che il software venga gestito efficacemente durante la sua fase operativa e che eventuali problemi o richieste degli utenti siano affrontati in modo tempestivo.
 
-
+=== Strumenti
+Al fine di rendere accessibile il prodotto è fondamentale esporre dettagli sull'installazione del software e sulle procedure necessarie per eseguire correttamente il prodotto, oltre ad eventuali requisiti di sistema necessari. Inoltre, è importante illustrare una guida all'utilizzo, esponendo le principali funzionalità utilizzabili ed il come interagire con il sistema. #linebreak()
+Viene di seguito fornito un puntatore al repository del PoC dove è possibile trovare le istruzioni per l'installazione e l'utilizzo del software: https://github.com/techminds-unipd/PoC/blob/main/README.md.
+//todo per parte di mvp
