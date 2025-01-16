@@ -331,5 +331,5 @@ Queste attività assicurano che il software venga gestito efficacemente durante 
 
 === Strumenti
 Al fine di rendere accessibile il prodotto è fondamentale esporre dettagli sull'installazione del software e sulle procedure necessarie per eseguire correttamente il prodotto, oltre ad eventuali requisiti di sistema necessari. Inoltre, è importante illustrare una guida all'utilizzo, esponendo le principali funzionalità utilizzabili ed il come interagire con il sistema. #linebreak()
-Viene di seguito fornito un puntatore al repository del PoC dove è possibile trovare le istruzioni per l'installazione e l'utilizzo del software: https://github.com/techminds-unipd/PoC/blob/main/README.md.
-//todo per parte di mvp
+Viene di seguito fornito un puntatore al #glossario[repository] del #glossario[PoC] dove è possibile trovare le istruzioni per l'installazione e l'utilizzo del software: https://github.com/techminds-unipd/PoC/blob/main/README.md.
+//todo per parte di minimun viable product
