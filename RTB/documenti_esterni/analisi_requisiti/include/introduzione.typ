@@ -7,7 +7,8 @@ Questo documento fornisce una descrizione esaustiva e dettagliata dei #glossario
 All'interno di questo documento il linguaggio di modellazione utilizzato è #glossario[UML], in modo da avere una rappresentazione formale. #linebreak()
 I casi d'uso seguono la seguente struttura:
 
-- *Nome/Identificatore*: identificativo del caso d'uso con una breve descrizione;
+- *Nome/Identificatore*: identificativo del caso d'uso;
+- *Descrizione*: breve testo che riassume lo scopo del caso d'uso;
 - *#glossario[Attori] principali*: chi esegue l'azione;
 - *Attori secondari* (0..\*): parti di minore importanza coinvolte nell'esecuzione;
 - *Scenario principale*: descrizione dettagliata delle azioni svolte durante il caso d'uso, intermedio tra le ipotesi e i risultati;

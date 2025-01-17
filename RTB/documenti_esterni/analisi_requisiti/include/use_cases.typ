@@ -200,7 +200,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente ha inserito la password correttamente.
 
 === Credenziali errate <credenziali-errate>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni nel caso in cui le credenziali fornite siano errate o inesistenti.
 - *Attori principali*:
   - Utente non autenticato.
 - *Scenario principale*:
@@ -215,7 +216,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente può riprovare ad eseguire il login.
 
 === Login Google <login-google>
-
+- Descrizione:
+  - Questo caso d'uso descrive l'uso dell'account Google per effettuare il login.
 - *Attori principali*:
   - Utente non autenticato.
 - *Attori secondari*:
