@@ -319,6 +319,7 @@ L'attività di integrazione consiste nell'unione delle parti di software svilupp
 === Installazione
 L'attività consiste nello sviluppo di un piano per installare il prodotto software nell'ambiente di destinazione. In questo piano devono essere fornite le risorse e le informazioni necessarie per l'installazione e la configurazione del software. L'obiettivo è quello di fornire istruzioni chiare e dettagliate all'utente finale, in modo tale da consentirgli di utilizzare il prodotto software.
 
+/*
 == Gestione operativa
 === Caratteristiche e finalità
 Il processo di gestione operativa  nello standard ISO/IEC 12207:1995 include le attività e i compiti necessari per la gestione del prodotto software e fornire supporto operativo agli utenti. Questo processo si riferisce principalmente alla fase in cui il software viene utilizzato nel suo ambiente operativo e interagisce con il sistema. #linebreak() #linebreak() 
@@ -333,3 +334,4 @@ Queste attività assicurano che il software venga gestito efficacemente durante 
 Al fine di rendere accessibile il prodotto è fondamentale esporre dettagli sull'installazione del software e sulle procedure necessarie per eseguire correttamente il prodotto, oltre ad eventuali requisiti di sistema necessari. Inoltre, è importante illustrare una guida all'utilizzo, esponendo le principali funzionalità utilizzabili ed il come interagire con il sistema. #linebreak()
 Viene di seguito fornito un puntatore al #glossario[repository] del #glossario[PoC] dove è possibile trovare le istruzioni per l'installazione e l'utilizzo del software: https://github.com/techminds-unipd/PoC/blob/main/README.md.
 //todo per parte di minimun viable product
+*/
