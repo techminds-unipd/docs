@@ -71,7 +71,7 @@ Si dividono in:
         [QMR 6],[Documentare i casi d'uso],[Capitolato],
         [QMR 7],[Documentare le classi attraverso diagrammi UML],[Capitolato],
         [QMR 8],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[Norme di progetto],
-        [QDR 2],[Le API devono essere documentate in formato Swagger],[Formazione col proponente],
+        [QDR 2],[Le #glossario[API] devono essere documentate in formato Swagger],[Formazione col proponente],
         [QMR 10],[La documentazione deve rispettare le metriche descritte nel piano di qualifica],[Piano di qualifica §2.2],
         [QDR 3],[Il codice TypeScript deve essere formattato secondo le regole ESLint],[Decisione interna]
     ),
