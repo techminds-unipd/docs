@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "0.2.0", "19/01/2025", "Aggiunti nuovi termini", team.T, "Qualcuno",
     "0.1.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,
     "0.1.0", "11/11/2024", "Prima versione", team.L, team.C
   )
@@ -96,6 +97,9 @@ Misura della capacità di raggiungere l'obiettivo prefissato.
 
 == Efficienza
 Misura dell'abilità di raggiungere l’obiettivo impiegando le risorse minime indispensabili.
+
+== ESLint
+È uno strumento di analisi statica del codice JavaScript. Si occupa sia della qualità del codice che dello stile di codifica. È possibile sovrascrivere le regole di default tramite un file di configurazione contenuto all'interno del repository.
 
 = F
 = G
@@ -236,7 +240,20 @@ Periodo di tempo prefissato, di durata massima di un mese, in cui il team svilup
 == Stakeholder
 Persona o gruppo di persone che hanno interesse nel progetto, e lo influenzano o vengono influenzati da esso, come il committente o il fornitore.
 
+== Swagger
+Insieme di strumenti che permette di documentare le API contestualmente alla loro definizione nel codice e testarle usando una interfaccia web.
+
 = T
+== Test di unità // {Unit test}
+Test che esamina una singola unità software. Si divide in funzionale e strutturale:
+- Funzionale (black-box): 
+  - Esaminano solo il legame tra input e output;
+  - Utilizzano dati in ingresso che corrispondono a specifici esiti: valori del dominio, valori di limite e valori illegali.
+- Strutturale (white-box):
+  - Verificano la logica interna dell'unità software;
+  - Un singolo caso di prova attiva un singolo cammino di esecuzione;
+  - L'obiettivo è quello di avere un insieme di casi di prova che riescono a far eseguire tutti i comandi e attraversare tutti i branch dell'unità in esame.
+
 == Tracciamento // {Tracciamenti}
 Attività che permette di mantenere la coerenza tra i requisiti e i componenti del sistema, in modo da poter tracciare l'evoluzione del sistema e verificare che i requisiti siano soddisfatti.
 
