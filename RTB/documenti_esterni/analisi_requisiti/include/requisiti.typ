@@ -4,11 +4,11 @@
 == Requisiti funzionali
 
 - FMR (Functional Mandatory Requirement);
-    - Irrinunciabili per qualcuno degli #glossario[stakeholder];.
+    - irrinunciabili per qualcuno degli #glossario[stakeholder];.
 - FDR (Functional Desirable Requirement);
-    - Non strettamente necessari ma a valore aggiunto riconoscibile.
+    - non strettamente necessari ma a valore aggiunto riconoscibile.
 - FOR (Functional Optional Requirement).
-    - Relativamente utili oppure contrattabili anche in fasi avanzate nel progetto.
+    - relativamente utili oppure contrattabili anche in fasi avanzate nel progetto.
 #set par (justify: false)
 #figure(
     table(
@@ -53,9 +53,9 @@
 I requisiti di #glossario[qualità] rappresentano come il sistema deve essere per soddisfare i requisiti dello stakeholder.\
 Si dividono in:
 - QMR (Qualitative Mandatory Requirement);
-    - Irrinunciabile per qualcuno degli stakeholder.
+    - irrinunciabile per qualcuno degli stakeholder.
 - QDR (Qualitative Desirable Requirement);
-    - Non strettamente necessari ma a valore aggiunto riconoscibile.
+    - non strettamente necessari ma a valore aggiunto riconoscibile.
 #set par (justify: false)
 #figure(
     table(
