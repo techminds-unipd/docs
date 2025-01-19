@@ -67,13 +67,13 @@ Si dividono in:
         [QDR 1], [Il prodotto deve essere facilmente trasferibile su #glossario[AWS]], [Capitolato, Riunione col proponente],
         [QMR 3],[Documentare i bug presenti],[Capitolato],
         [QMR 4],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
-        [QMR 5],[Copertura dei test di unità pari ad almeno il 70% del codice prodotto],[Capitolato],
+        [QMR 5],[Copertura dei #glossario[test di unità] pari ad almeno il 70% del codice prodotto],[Capitolato],
         [QMR 6],[Documentare i casi d'uso],[Capitolato],
         [QMR 7],[Documentare le classi attraverso #glossario[diagrammi UML]],[Capitolato],
         [QMR 8],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[Norme di progetto],
-        [QDR 2],[Le #glossario[API] devono essere documentate in formato Swagger],[Formazione col proponente],
+        [QDR 2],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger]],[Formazione col proponente],
         [QMR 10],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica]],[Piano di qualifica §2.2],
-        [QDR 3],[Il codice TypeScript deve essere formattato secondo le regole ESLint],[Decisione interna]
+        [QDR 3],[Il codice TypeScript deve essere formattato secondo le regole #glossario[ESLint]],[Decisione interna]
     ),
     caption: [Tabella dei requisiti di qualità]
 )<tabella-requisiti-di-qualita>
