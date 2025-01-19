@@ -633,7 +633,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Esecuzione del workflow da parte del backend <esecuzione-workflow-backend>          
+=== Esecuzione del workflow (frontend #sym.arrow backend)<esecuzione-workflow-backend>          
 
 #figure(
     diagram(
@@ -674,13 +674,12 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
   - Frontend:
     1. invia la richiesta di esecuzione del workflow;
-    2. invia i dati necessari al backend (@frontend-invio-dati-workflow).
+    2. invia i dati necessari (@frontend-invio-dati-workflow).
   - Backend:
     1. il backend riceve la richiesta di esecuzione del workflow;
-    2. il backend prende i dati necessari per l'esecuzione del workflow dal database;
-    3. il backend invia i dati all'agente (@esecuzione-workflow-agente);
-    4. il backend riceve un risultato dall'agente;
-    5. il backend restituisce il risultato al frontend.
+    2. il backend invia i dati all'agente (@esecuzione-workflow-agente);
+    3. il backend riceve un risultato dall'agente;
+    4. il backend restituisce il risultato al frontend.
 - *Pre-condizioni*:
    - L'esecuzione del workflow è stata avviata.
 - *Post-condizioni*:
@@ -694,7 +693,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
   - Frontend:
     1. invia la lista dei blocchi del workflow;
-    2. invia la lista degli archi, contenente la stringa dell'automazione da svolgere, del workflow.
+    2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
   - Backend:
     1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:
