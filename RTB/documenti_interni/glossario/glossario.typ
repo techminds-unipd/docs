@@ -247,12 +247,12 @@ Insieme di strumenti che permette di documentare le API contestualmente alla lor
 == Test di unità // {Unit test}
 Test che esamina una singola unità software. Si divide in funzionale e strutturale:
 - Funzionale (black-box): 
-  - Esaminano solo il legame tra input e output;
-  - Utilizzano dati in ingresso che corrispondono a specifici esiti: valori del dominio, valori di limite e valori illegali.
+  - esaminano solo il legame tra input e output;
+  - utilizzano dati in ingresso che corrispondono a specifici esiti: valori del dominio, valori di limite e valori illegali.
 - Strutturale (white-box):
-  - Verificano la logica interna dell'unità software;
-  - Un singolo caso di prova attiva un singolo cammino di esecuzione;
-  - L'obiettivo è quello di avere un insieme di casi di prova che riescono a far eseguire tutti i comandi e attraversare tutti i branch dell'unità in esame.
+  - verificano la logica interna dell'unità software;
+  - un singolo caso di prova attiva un singolo cammino di esecuzione;
+  - l'obiettivo è quello di avere un insieme di casi di prova che riescono a far eseguire tutti i comandi e attraversare tutti i branch dell'unità in esame.
 
 == Tracciamento // {Tracciamenti}
 Attività che permette di mantenere la coerenza tra i requisiti e i componenti del sistema, in modo da poter tracciare l'evoluzione del sistema e verificare che i requisiti siano soddisfatti.
