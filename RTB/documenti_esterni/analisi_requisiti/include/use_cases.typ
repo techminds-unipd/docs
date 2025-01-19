@@ -633,7 +633,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Esecuzione del workflow da parte del sistema <esecuzione-workflow-sistema>
+=== Esecuzione del workflow da parte del backend <esecuzione-workflow-backend>          
 
 #figure(
     diagram(
@@ -645,21 +645,27 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-shape: ellipse,
     node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
 
+    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
+
     node((2,0.5), align(center)[
-            @esecuzione-workflow-sistema Esecuzione workflow da parte del sistema
-    ],  name: <esecuzione-workflow-sistema>),
-    edge(<frontend>, <esecuzione-workflow-sistema>),
+            @esecuzione-workflow-backend Esecuzione workflow da parte del backend
+    ],  name: <esecuzione-workflow-backend>),
+    edge(<frontend>, <esecuzione-workflow-backend>),
+    edge(<agente>, <esecuzione-workflow-backend>),
 
-   
+    node((2,1), align(center)[
+            @frontend-invio-dati-workflow Invio dati workflow
+    ], name: <frontend-invio-dati-workflow>),
+    edge(<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
 
-    node(enclose: (<esecuzione-workflow-sistema>,),
-        align(top + right)[Backend + database + agente],
+    node(enclose: (<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>),
+        align(top + right)[Backend],
         width: 240pt,
         height: 200pt,
         snap: -1,
         name: <group>)
     ),
-    caption: [Esecuzione del workflow da parte del sistema UC diagram.]
+    caption: [Esecuzione del workflow da parte del backend UC diagram.]
 ) <esecuzione-workflow-frontend-diagram>
 - *Descrizione*:
   - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nell'esecuzione di un workflow, approfondendo @esecuzione-workflow.
@@ -667,8 +673,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Frontend.
 - *Scenario principale*:
   - Frontend:
-    1. invia la richiesta di esecuzione del workflow.
-  - Backend, database e agente:
+    1. invia la richiesta di esecuzione del workflow;
+    2. invia i dati necessari al backend (@frontend-invio-dati-workflow).
+  - Backend:
     1. il backend riceve la richiesta di esecuzione del workflow;
     2. il backend prende i dati necessari per l'esecuzione del workflow dal database;
     3. il backend invia i dati all'agente (@esecuzione-workflow-agente);
@@ -679,6 +686,21 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - Il frontend riceve il risultato dell'esecuzione del workflow.
 
+==== Invio dati workflow (frontend) <frontend-invio-dati-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del frontend verso il backend per l'esecuzione di un workflow.
+- *Attori principali*:
+  - Frontend.
+- *Scenario principale*:
+  - Frontend:
+    1. invia la lista dei blocchi del workflow;
+    2. invia la lista degli archi, contenente la stringa dell'automazione da svolgere, del workflow.
+  - Backend:
+    1. riceve i dati necessari per l'esecuzione del workflow.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
 
 
 === Esecuzione del workflow da parte dell'agente <esecuzione-workflow-agente>
