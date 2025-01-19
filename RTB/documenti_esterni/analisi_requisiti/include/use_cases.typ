@@ -648,7 +648,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
 
     node((2,0.5), align(center)[
-            @esecuzione-workflow-backend Esecuzione workflow da parte del backend
+            @esecuzione-workflow-backend Esecuzione workflow
     ],  name: <esecuzione-workflow-backend>),
     edge(<frontend>, <esecuzione-workflow-backend>),
     edge(<agente>, <esecuzione-workflow-backend>),
@@ -674,12 +674,12 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
   - Frontend:
     1. invia la richiesta di esecuzione del workflow;
-    2. invia i dati necessari (@frontend-invio-dati-workflow).
+    2. invia i dati necessari al backend(@frontend-invio-dati-workflow).
   - Backend:
-    1. il backend riceve la richiesta di esecuzione del workflow;
-    2. il backend invia i dati all'agente (@esecuzione-workflow-agente);
-    3. il backend riceve un risultato dall'agente;
-    4. il backend restituisce il risultato al frontend.
+    1. riceve la richiesta di esecuzione del workflow;
+    2. invia i dati all'agente (@esecuzione-workflow-agente);
+    3. riceve un risultato dall'agente;
+    4. restituisce il risultato al frontend.
 - *Pre-condizioni*:
    - L'esecuzione del workflow è stata avviata.
 - *Post-condizioni*:
