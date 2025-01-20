@@ -665,7 +665,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Esecuzione del workflow da parte del backend UC diagram.]
+    caption: [Esecuzione del workflow (frontend #sym.arrow backend) UC diagram.]
 ) <esecuzione-workflow-frontend-diagram>
 - *Descrizione*:
   - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nell'esecuzione di un workflow, approfondendo @esecuzione-workflow.
@@ -674,7 +674,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
   - Frontend:
     1. invia la richiesta di esecuzione del workflow;
-    2. invia i dati necessari al backend(@frontend-invio-dati-workflow).
+    2. invia i dati necessari al backend (@frontend-invio-dati-workflow).
   - Backend:
     1. riceve la richiesta di esecuzione del workflow;
     2. invia i dati all'agente (@esecuzione-workflow-agente);
