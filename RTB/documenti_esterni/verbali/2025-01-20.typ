@@ -4,7 +4,7 @@
   title: "Verbale esterno del 20/01/2025",
   sommario: "Presentazione analisi dei requisiti e PoC.",
   changelog: (
-    "1.0.0", "20/01/2025", "Prima versione", team.S, ""
+    "1.0.0", "20/01/2025", "Prima versione", team.S, team.G
   ),
   durata_luogo: ("08:30", "09:00", "incontro su piattaforma Microsoft Teams"),
   partecipanti: (text(weight: "bold", "Massaro Michele") + " (Var Group)", (text(weight: "bold", "Battistella Francesco") + " (Var Group)"), team.T, team.L, team.M, team.C, team.G, team.A, team.S),
