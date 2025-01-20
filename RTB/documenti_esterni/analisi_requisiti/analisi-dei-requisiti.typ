@@ -5,6 +5,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.19.2", "20/01/2025", "Refactoring UC14", team.S, "",
     "0.19.1", "19/01/2025", "Refactoring UC13", team.S, team.C,
     "0.19.0", "18/01/2025", "Aggiunti requisiti di qualità", team.T, team.C,
     "0.18.1", "16/01/2025", "Aggiunto campo descrizione nella struttura dei casi d'uso e su UC3, UC4.", team.T, team.G,
