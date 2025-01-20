@@ -24,7 +24,7 @@
 
         [FMR 3], [L'utente autenticato deve poter associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
 
-        [FMR 4], [L'utente autenticato deve poter eseguire un workflow], [@esecuzione-workflow, @vis-errore-workflow, @vis-errore-runtime, (Approfondimento: @esecuzione-workflow-sistema, @esecuzione-workflow-agente, @errore-workflow-llm)],
+        [FMR 4], [L'utente autenticato deve poter eseguire un workflow], [@esecuzione-workflow, @vis-errore-workflow, @vis-errore-runtime, (Approfondimento: @esecuzione-workflow-backend, @frontend-invio-dati-workflow, @esecuzione-workflow-agente, @errore-workflow-llm)],
 
         [FMR 5], [L'utente autenticato deve poter vedere il risultato dell'esecuzione del workflow], [@vis-risultato-esecuzione-workflow],
 
