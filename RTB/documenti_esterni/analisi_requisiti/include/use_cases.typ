@@ -702,7 +702,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
 
 
-=== Esecuzione del workflow da parte dell'agente <esecuzione-workflow-agente>
+=== Esecuzione del workflow (backend #sym.arrow agente)<esecuzione-workflow-agente>
 
 #figure(
     diagram(
@@ -712,36 +712,47 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     label-size: 8pt,
     node-inset: 10pt,
     node-shape: ellipse,
-    node((0.2,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
+    node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
     edge(<back-end>, <esecuzione-workflow-agente>),
 
     node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
     edge(<llm>, <esecuzione-workflow-agente>),
 
+    node((4.5,1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
+    edge(<ggl>, <esecuzione-workflow-agente>),
+
+    node((3.5,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
+    edge(<pstb>, <esecuzione-workflow-agente>),
+
     node((2,0.5), align(center)[
             @esecuzione-workflow-agente Esecuzione workflow agente
     ],  name: <esecuzione-workflow-agente>),
 
-    node((2,1.3), align(center)[
-            @errore-workflow-llm Vis. errore time-out
+    node((1.8,1.4), align(center)[
+            @errore-workflow-llm Ricezione errore time-out
     ],  name: <errore-workflow-llm>),
     edge(<errore-workflow-llm>, <esecuzione-workflow-agente>, "--straight", [\<\<extend\>\>]),
 
-    node((2.5,0.9), align(center)[
+    node((1.3,1), align(center)[
             Il time-out #linebreak() raggiunge il limite
     ], shape: rect, name: <post-it>),
-    node((2,0.9), align(center)[
+    node((1.88,1), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<post-it>, <nf>, "--"),
 
-    node(enclose: (<esecuzione-workflow-agente>,<errore-workflow-llm>,<nf>,<post-it>,),
+    node((2.4,1), align(center)[
+            @backend-invio-dati-workflow Invio dati workflow
+    ], name: <backend-invio-dati-workflow>),
+    edge(<esecuzione-workflow-agente>, <backend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<esecuzione-workflow-agente>,<errore-workflow-llm>,<nf>,<post-it>,<backend-invio-dati-workflow>,),
         align(top + right)[Agente],
         width: 240pt,
         height: 200pt,
         snap: -1,
         name: <group>)
     ),
-    caption: [Esecuzione del workflow da parte dell'agente UC diagram.]
+    caption: [Esecuzione del workflow (backend #sym.arrow agente) UC diagram.]
 ) <esecuzione-workflow-agente-diagram>
 
 - *Descrizione*:
@@ -749,13 +760,15 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Attori principali*:
   - Backend.
 - *Attori secondari*:
-  - LLM.
+  - LLM;
+  - Google;
+  - Pastebin.
 - *Scenario principale*:
  - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente.
+   1. invia i dati necessari per l'esecuzione del workflow all'agente (@backend-invio-dati-workflow).
  - Agente:
    1. riceve i dati;
-   2. esegue le automazioni interfacciandosi con un LLM esterno;
+   2. esegue le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
    3. termina l'esecuzione;
    4. comunica la terminazione dell'esecuzione al backend.
 - *Pre-condizioni*:
@@ -763,28 +776,46 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
-  - Visualizzazione errore time-out (@errore-workflow-llm).
+  - Ricezione errore time-out (@errore-workflow-llm).
 
-=== Visualizzazione errore time-out <errore-workflow-llm>
+==== Invio dati workflow (backend) <backend-invio-dati-workflow>
 - *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
+  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow.
+- *Attori principali*:
+  - Backend.
+- *Scenario principale*:
+  - Backend:
+    1. invia i dati ricevuti dal frontend (@frontend-invio-dati-workflow);
+    2. invia i token di autorizzazione necessari.
+  - Agente:
+    1. riceve i dati necessari per l'esecuzione del workflow.
+- *Pre-condizioni*:
+  - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
+
+=== Ricezione errore time-out <errore-workflow-llm>
+- *Descrizione*:
+  - Questo caso d'uso descrive la ricezione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
 - *Attori principali*:
   - Backend.
 - *Attori secondari*:
-  - LLM.
+  - LLM;
+  - Google;
+  - Pastebin.
 - *Scenario principale*:
  - Backend:
    1. invia i dati necessari per l'esecuzione del workflow all'agente.
  - Agente:
    1. riceve i dati;
-   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno;
+   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
    3. il time-out raggiunge il limite;
    4. termina l'esecuzione;
    5. comunica l'errore di esecuzione del workflow al backend.
 - *Pre-condizioni*:
    - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
 - *Post-condizioni*:
-  - L'esecuzione termina e viene inviato un messaggio d'errore al backend.
+  - L'esecuzione termina e il backend riceve un messaggio d'errore.
 
 === Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
 
