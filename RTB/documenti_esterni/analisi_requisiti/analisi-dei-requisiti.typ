@@ -5,6 +5,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "0.20.1", "22/01/2025", "Fix UC19 e aggiunta UC29", team.S, "",
     "0.20.0", "20/01/2025", "Aggiunti requisiti di vincolo", team.T, team.C,
     "0.19.2", "20/01/2025", "Refactoring UC14", team.S, team.G,
     "0.19.1", "19/01/2025", "Refactoring UC13", team.S, team.C,
