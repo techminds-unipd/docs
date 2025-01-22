@@ -1,4 +1,5 @@
 #import "/template/template.typ":glossario
+
 == Qualità di prodotto
 
 === Caratteristica di qualità
