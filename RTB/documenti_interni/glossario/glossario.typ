@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "0.3.0", "Aggiunta definizione di Docker", team.T, ";_;",
     "0.2.0", "19/01/2025", "Aggiunti nuovi termini", team.T, team.G,
     "0.1.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,
     "0.1.0", "11/11/2024", "Prima versione", team.L, team.C
@@ -86,6 +87,9 @@ Metodo per visualizzare sistemi e software utilizzando il linguaggio di modellaz
 
 == Discord
 Piattaforma VoIP, messaggistica instantanea e distribuzione digitale.
+
+== Docker
+Piattaforma che permette di creare ambienti isolati di esecuzione chiamati container con un uso meno estensivo di risorse rispetto ad una macchina virtuale.
 
 = E
 
