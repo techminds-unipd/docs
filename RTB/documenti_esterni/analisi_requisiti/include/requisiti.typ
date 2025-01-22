@@ -95,7 +95,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
         [CMR 1],[Il prodotto deve prevedere almeno tre blocchi],[Capitolato],
-        [CDR 1], [Il prodotto deve essere sviluppato in container #glossario[Docker] così il deploy su vari ambienti cloud (ad esempio #glossario[AWS])], [Capitolato, Riunione col proponente],
+        [CDR 1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS])], [Capitolato, Riunione col proponente],
         [CMR 2],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP],[Decisione interna]
     ),
     caption: [Tabella dei requisiti di vincolo.]
