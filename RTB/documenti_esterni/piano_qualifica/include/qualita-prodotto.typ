@@ -1,5 +1,17 @@
 #import "/template/template.typ":glossario
-= Qualità di prodotto
+
+== Qualità di prodotto
+
+=== Caratteristica di qualità
+==== Funzionalità 
+==== Affidabilità
+==== Manutenibilità
+==== Efficienza
+==== Usabilità
+==== Portabilità
+
+
+/*
 Di seguito sono elencate le caratteristiche che contraddistinguono un prodotto software di qualità, misurabile dalle metriche sotto descritte:
 - MD ("Metriche Documentazione"): metriche relative alla qualità della documentazione;
 - MSW ("Metriche Software"): metriche relative alla qualità del software.
@@ -58,6 +70,4 @@ Nella @tabella-MDa sono elencati gli obiettivi che ci poniamo di raggiungere nel
   caption: [codice delle metriche con valori soglia accettabili e ottimali.]
 ) <tabella-MDb>
 
-== Qualità del software
-
-=== Metriche utilizzate
+*/
