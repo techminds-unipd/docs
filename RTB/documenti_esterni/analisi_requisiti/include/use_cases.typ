@@ -776,7 +776,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
-  - Visualizzazione errore time-out (@errore-workflow-llm).
+  - Ricezione errore time-out (@errore-workflow-llm).
 
 ==== Invio dati workflow (backend) <backend-invio-dati-workflow>
 - *Descrizione*:
@@ -800,7 +800,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Attori principali*:
   - Backend.
 - *Attori secondari*:
-  - LLM.
+  - LLM;
+  - Google;
+  - Pastebin.
 - *Scenario principale*:
  - Backend:
    1. invia i dati necessari per l'esecuzione del workflow all'agente.
