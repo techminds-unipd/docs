@@ -12,8 +12,7 @@
 )
 
 #include "include/introduzione.typ"
-#include "include/qualita-prodotto.typ"
-#include "include/qualita-processo.typ"
+#include "include/metriche-qualita.typ"
 #include "include/testing.typ"
 #include "include/miglioramenti.typ"
 #include "include/controllo-metriche.typ"
