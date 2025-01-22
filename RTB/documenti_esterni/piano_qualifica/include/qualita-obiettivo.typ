@@ -1,16 +1,16 @@
-= Qualità per obiettivo
-== Processi primari
-=== Analisi dei requisiti
-=== Progettazione
-=== Fornitura
-=== Codifica
+== Qualità per obiettivo
+=== Processi primari
+==== Analisi dei requisiti
+==== Progettazione
+==== Fornitura
+==== Codifica
 
-== Processi di supporto
-=== Documentazione
-=== Verifica
-=== Gestione dei rischi
-=== Accertamento della qualità
+=== Processi di supporto
+==== Documentazione
+==== Verifica
+==== Gestione dei rischi
+==== Accertamento della qualità
 
-== Processi organizzativi
-=== Miglioramento
-=== Pianificazione
+=== Processi organizzativi
+==== Miglioramento
+==== Pianificazione

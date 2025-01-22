@@ -1,13 +1,13 @@
 #import "/template/template.typ":glossario
-= Qualità di prodotto
+== Qualità di prodotto
 
-== Caratteristica di qualità
-=== Funzionalità 
-=== Affidabilità
-=== Manutenibilità
-=== Efficienza
-=== Usabilità
-=== Portabilità
+=== Caratteristica di qualità
+==== Funzionalità 
+==== Affidabilità
+==== Manutenibilità
+==== Efficienza
+==== Usabilità
+==== Portabilità
 
 
 /*
