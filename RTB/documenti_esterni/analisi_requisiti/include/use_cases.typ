@@ -1496,3 +1496,49 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    3. disconnette l'account dall'applicativo.
 - *Post-condizioni*:
    - L'utente non è più autenticato.
+
+=== Eliminazione workflow <eliminazione-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @eliminazione-workflow Eliminazione workflow
+    ], name: <a>),
+
+    node((2,0.5), align(center)[
+            @errore-connessione-database Errore connessione database
+    ], name: <b>),
+    edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
+
+    node(enclose: (<a>,<b>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Eliminazione workflow UC diagram.]
+) <eliminazione-workflow-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di eliminazione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona l'opzione per eliminare il workflow che ha creato.
+ - Sistema:
+   1. interagisce con il database per cancellare il workflow dell'utente.
+- *Pre-condizioni*:
+    - Il workflow selezionato è presente nel database.
+- *Post-condizioni*:
+   - Il workflow selezionato è stato eliminato dal database e non è più disponibile.
+- *Estensioni*:
+   - Errore connessione database (@errore-connessione-database).
