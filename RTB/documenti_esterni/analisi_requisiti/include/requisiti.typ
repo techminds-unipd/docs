@@ -47,6 +47,8 @@
         [FMR 12], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
         [FMR 13], [L'utente autenticato deve poter fare il logout], [@logout],
+
+        [FMR 14], [L'utente autenticato deve poter cancellare un workflow], [@eliminazione-workflow]
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
