@@ -73,11 +73,6 @@ soddisfatti nel prodotto],
       ottimale*]
     ),
     [MAF1], 
-    [Errori ortografici],
-    [Misura la presenza di errori ortografici nei documenti],
-    [4], 
-    [0], 
-    [MAF2], 
     [#glossario[Indice di Gulpease]],
     [Misura la leggibilità di
 un testo in base alla
