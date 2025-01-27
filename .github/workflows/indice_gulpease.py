@@ -5,7 +5,7 @@ if 'GITHUB_WORKSPACE' in os.environ:
     REPO_DIR = os.environ['GITHUB_WORKSPACE'] + '/RTB'
 
 def gulpease_index(text):
-    n_lettere = len(text)
+    n_lettere = len(list(filter(lambda x: x.isalpha(), text)))
     n_parole = len(re.findall(r'\b\w+\b', text))
     n_frasi = len(re.findall(r'[.!?;:]', text))
 
