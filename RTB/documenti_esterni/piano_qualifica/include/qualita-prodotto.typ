@@ -157,11 +157,6 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
     [Misura il tempo medio di esecuzione di un workflow],
     [\u{2A7D}20 secondi (tempo timout)], 
     [\u{2A7D}10 secondi],
-    [ME2],
-    [Tempo medio di esecuzione tra blocchi],
-    [Misura il tempo medio di esecuzione delle azioni descritte tra esattamente 2 blocchi di un workflow],
-    [\u{2A7D}5 secondi], 
-    [\u{2A7D}3 secondi],
   ), 
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'efficienza.]
 ) <tabella-ME>
