@@ -152,7 +152,7 @@ Di seguito vengono descritte le metriche e le caratteristiche fondamentali che d
 
     [MU1],
     [Click per utilizzare una funzionalità],
-    [Metrica che misura il numero di click minimo necessariy per poter utilizzare una funzionalità.],
+    [Metrica che misura il numero di click minimo necessari per poter utilizzare una funzionalità.],
     [⩽7 click],
     [⩽5 click],
   ), 
