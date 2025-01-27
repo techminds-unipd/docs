@@ -2,12 +2,16 @@
 
 == Qualità di prodotto
 
-#import "/template/template.typ":glossario
-
-== Qualità di prodotto
-
 === Caratteristica di qualità
-
+Di seguito vengono descritte le metriche e le caratteristiche fondamentali che definiscono la qualità di un prodotto software.
+Le sezioni principali includono una dettagliata analisi delle qualità di prodotto, con particolare attenzione a:
+- funzionalità;
+- affidabilità;
+- manutenibilità;
+- efficienza;
+- usabilità;
+- accessibilità;
+- portabilità.
 ==== Funzionalità 
 #figure(
   table(
