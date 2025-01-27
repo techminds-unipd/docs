@@ -182,12 +182,10 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
     ),
 
     [MU1],
-    [Facilità di utilizzo],
-    [Metrica che misura
-l’usabilità di un sistema
-software],
-    [\u{2A7D}7 click],
-    [\u{2A7D}5 click],
+    [Click per utilizzare una funzionalità],
+    [Metrica che misura il numero di click minimo necessari per poter utilizzare una funzionalità.],
+    [⩽7 click],
+    [⩽5 click],
   ), 
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'usabilità.]
 ) <tabella-MU>
