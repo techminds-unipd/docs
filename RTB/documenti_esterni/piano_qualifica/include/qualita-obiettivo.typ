@@ -17,16 +17,12 @@ L'obiettivo principale della documentazione è quello di fornire una descrizione
     align: horizon,
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
-    ),
+    ), 
     [MD1], 
-    [Errori ortografici],
-    [4%], 
-    [0%], 
-    [MD2], 
     [Indice di Gulpease],
     [\u{2A7E}40], 
     [\u{2A7E}70], 
-    [MD3],
+    [MD2],
     [Caption in tabelle e figure],
     [100%],
     [100%]
