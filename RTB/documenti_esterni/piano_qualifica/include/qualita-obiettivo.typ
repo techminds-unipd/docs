@@ -36,6 +36,8 @@ L'obiettivo principale della documentazione è quello di fornire una descrizione
 
 ==== Verifica
 La verifica è un processo che si occupa di accertare che non vengano introdotti errori durante le attività di progetto. Questo processo è fondamentale per garantire la qualità del prodotto finale e prepara il successo della validazione.
+//TODO: aggiungere metriche di verifica
+//valutare se aggiungere statement coverage, branch coverage, condition coverage
 #figure(
   table(
     columns: (auto, auto, auto, auto),
@@ -56,7 +58,7 @@ La verifica è un processo che si occupa di accertare che non vengano introdotti
   ), 
   caption: [Verifica - Metriche e indici di qualità.]
 ) <tabella-MetricheVerifica>
-/* Da valutare se aggiungere dato che potrebbe andare in contrasto con la parte di analisi dei requisiti dei processi primari.
+/* Da valutare se aggiungere dato che potrebbe andare in contrasto con la parte di analisi dei requisiti dei processi primari
 ==== Validazione
 La validazione è un processo che si occupa di accertare che il prodotto software soddisfi i requisiti specificati nel contratto con il committente.
 #figure(
