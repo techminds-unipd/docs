@@ -32,11 +32,12 @@ L'obiettivo principale della documentazione è quello di fornire una descrizione
     [100%]
   ), 
   caption: [Documentazione - Metriche e indici di qualità.]
-) <tabella-MDb>
+) <tabella-MetricheDocumentazione>
 
 ==== Verifica
 La verifica è un processo che si occupa di accertare che non vengano introdotti errori durante le attività di progetto. Questo processo è fondamentale per garantire la qualità del prodotto finale e prepara il successo della validazione.
-//TODO: aggiungere metriche
+//TODO: aggiungere metriche di verifica
+//valutare se aggiungere statement coverage, branch coverage, condition coverage
 #figure(
   table(
     columns: (auto, auto, auto, auto),
@@ -47,13 +48,17 @@ La verifica è un processo che si occupa di accertare che non vengano introdotti
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
     [MV1], 
-    [],
-    [0%], 
-    [0%]
+    [Code Coverage],
+    [\u{2A7E}75%], 
+    [100%],
+    [MV2],
+    [Percentuale di test passati],
+    [\u{2A7E}90%],
+    [100%],
   ), 
   caption: [Verifica - Metriche e indici di qualità.]
-) <tabella-MDb>
-
+) <tabella-MetricheVerifica>
+/* Da valutare se aggiungere dato che potrebbe andare in contrasto con la parte di analisi dei requisiti dei processi primari
 ==== Validazione
 La validazione è un processo che si occupa di accertare che il prodotto software soddisfi i requisiti specificati nel contratto con il committente.
 #figure(
@@ -71,8 +76,8 @@ La validazione è un processo che si occupa di accertare che il prodotto softwar
     [100%]
   ), 
   caption: [Validazione - Metriche e indici di qualità.]
-) <tabella-MDb>
-
+) <tabella-MetricheValidazione>
+*/
 ==== Gestione dei rischi
 Il processo di gestione dei rischi ha lo scopo di identificare, analizzare e gestire i rischi che possono insorgere durante lo sviluppo del progetto.
 #figure(
@@ -90,7 +95,7 @@ Il processo di gestione dei rischi ha lo scopo di identificare, analizzare e ges
     [0]
   ), 
   caption: [Gestione dei rischi - Metriche e indici di qualità.]
-) <tabella-MDb>
+) <tabella-MetricheGestioneRischi>
 
 ==== Gestione della qualità
 Il processo di gestione della qualità ha lo scopo di garantire che il prodotto software soddisfi i requisiti di qualità stabiliti.
@@ -103,13 +108,13 @@ Il processo di gestione della qualità ha lo scopo di garantire che il prodotto 
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    [MA1], 
+    [MQ1], 
     [Percentuale di metriche soddisfatte],
     [\u{2A7E}80%], 
     [100%]
   ), 
   caption: [Gestione della qualità - Metriche e indici di qualità.]
-) <tabella-MDb>
+) <tabella-MetricheGestioneQualita>
 
 === Processi organizzativi
 ==== Miglioramento
