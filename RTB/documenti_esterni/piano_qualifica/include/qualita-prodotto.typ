@@ -1,3 +1,4 @@
+
 #import "/template/template.typ":glossario
 
 == Qualità di prodotto
@@ -5,14 +6,15 @@
 === Caratteristica di qualità
 Di seguito vengono descritte le metriche e le caratteristiche fondamentali che definiscono la qualità di un prodotto software.
 Le sezioni principali includono una dettagliata analisi delle qualità di prodotto, con particolare attenzione a:
-- funzionalità;
-- affidabilità;
-- manutenibilità;
-- efficienza;
-- usabilità;
-- accessibilità;
-- portabilità.
-==== Funzionalità 
+- Funzionalità;
+- Affidabilità;
+- Manutenibilità;
+- Efficienza;
+- Usabilità;
+- Accessibilità;
+- Portabilità;
+==== Funzionalità
+Misura di quanto il prodotto software soddisfa i requisiti essenziali, desiderabili e opzionali, garantendo che le funzionalità principali siano completamente implementate.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -59,6 +61,7 @@ soddisfatti nel prodotto],
 ) <tabella-MF>
 
 ==== Affidabilità
+Misura della stabilità e leggibilità del software.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -84,6 +87,7 @@ e delle frasi],
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'affidabilità.]
 ) <tabella-MAF>
 ==== Manutenibilità
+Indica quanto è semplice aggiornare, correggere o migliorare il software.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -139,6 +143,7 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti la manutenibilità.]
 ) <tabella-MM>
 ==== Efficienza
+Misura delle prestazioni del software in termini di utilizzo delle risorse (es. tempo di esecuzione) rispetto a soglie accettabili e ottimali.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -161,6 +166,7 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'efficienza.]
 ) <tabella-ME>
 ==== Usabilità
+Valuta quanto è facile per gli utenti interagire con il prodotto software.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -186,6 +192,7 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
 
 
 ==== Accessibilità
+Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti possibile.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -215,6 +222,7 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
 ) <tabella-MAC>
 
 ==== Portabilità
+Analizza la capacità del software di funzionare su diverse piattaforme e ambienti.
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
