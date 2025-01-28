@@ -4,6 +4,7 @@
   title: "Piano di qualifica",
   sommario: "Il documento espone le metriche di verifica attuate per garantire qualità.",
   changelog: (
+    "0.2.0", "28/1/2025", "Sottosezione processi di supporto in metriche per la qualità", team.M, team.C,
     "0.1.4", "22/1/2025", "Refactoring voci sezione 2 dell'indice", team.M, team.G,
     "0.1.3", "8/1/2025", "Fix colori tabelle e riferimento pdp", team.L, team.M,
     "0.1.2", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.A,
