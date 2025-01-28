@@ -5,7 +5,7 @@ if 'GITHUB_WORKSPACE' in os.environ:
     REPO_DIR = os.environ['GITHUB_WORKSPACE'] + '/RTB'
 
 def gulpease_index(text):
-    n_lettere = len(text)
+    n_lettere = len(list(filter(lambda x: x.isalpha(), text)))
     n_parole = len(re.findall(r'\b\w+\b', text))
     n_frasi = len(re.findall(r'[.!?;:]', text))
 
@@ -42,11 +42,17 @@ def filter_file(text):
     for i in res:
         text = text.replace(i, "")
 
+    # Remove comments
+    text = re.sub(r"\/\*([\s\S]*?)\*/", "", text)
+
     # Remove \
     text = re.sub(r"\\", "", text)
 
     # Remove # functions at startline
     text = re.sub("(?m)^#.*", "", text)
+
+    # Remove spaces and blank lines
+    text = " ".join(text.split())
 
     return text
 
