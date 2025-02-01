@@ -113,5 +113,34 @@ Il processo di gestione della qualità ha lo scopo di garantire che il prodotto 
 ) <tabella-MetricheGestioneQualita>
 
 === Processi organizzativi
-==== Miglioramento
 ==== Pianificazione
+La Pianificazione organizza obiettivi, risorse e tempistiche per guidare il successo di un progetto.
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+    ),
+    [MPI1], 
+    [Variazione del costo preventivato per uno sprint],
+    [\u{2A7D}5%], 
+    [\u{2A7D}0%],
+    [MPI2],
+    [Variazione delle tempistiche di una baseline],
+    [\u{2A7D}10%], 
+    [\u{2A7D}0%],
+    [MPI3],
+    [Percentuale di attività (issue) completate in uno sprint],
+    [\u{2A7E}90%], 
+    [100%],
+
+  ), 
+  caption: [Gestione della qualità - Metriche e indici di qualità.]
+) <tabella-MetricheGestioneQualita>
+
+==== Miglioramento
+Il processo di miglioramento mira a identificare le aree che possono essere ottimizzate o migliorate.
+Nella pratica si intendono tutte le situazioni in cui una o più metriche non hanno raggiunto il valore ottimale, ma solo il valore accettabile.
