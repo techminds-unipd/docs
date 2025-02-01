@@ -115,6 +115,30 @@ Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le
 - Garanzia di prodotto: definisce le garanzie di qualità che il prodotto software deve soddisfare;
 - Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
 
+=== Piano di qualifica
+Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono definiti gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni informate basate sui dati a disposizione.
+
+=== Struttura metriche di qualità
+- *Codice:* identificativo univoco della metrica;
+#align(center, block[
+  #set align(center)
+  M[numero]
+])
+dove:
+#set list(indent: 1em)
+- M: indica che si tratta di una metrica;
+- numero: numero progressivo della metrica.
+#set list(indent: 0em)
+- *Nome:* specifica il nome della metrica;
+//- *Descrizione:* breve descrizione della metrica;
+//- *Scopo:* obiettivo della metrica;
+
+//- *Formula:* formula matematica per il calcolo della metrica;
+//- *Strumento:* strumento utilizzato per il calcolo della metrica;
+- Relativi criteri di accettazione:
+  - *Valore accettabile*: valore minimo accettabile della metrica per essere conforme agli standard di qualità stabiliti;
+  - *Valore ottimale:* valore ideale della metrica;
+
 
 == Verifica e validazione
 
