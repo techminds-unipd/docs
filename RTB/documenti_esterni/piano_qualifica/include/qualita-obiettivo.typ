@@ -138,7 +138,7 @@ La Pianificazione organizza obiettivi, risorse e tempistiche per guidare il succ
     [100%],
 
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti la pianificazione.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti la pianificazione.]
 ) <tabella-MetrichePianificazione>
 
 ==== Miglioramento
@@ -153,14 +153,14 @@ Il processo di miglioramento mira a identificare le aree che possono essere otti
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
     [MMI1], 
-    [Percentuale di metriche non soddisfatte],
+    [Percentuale di metriche che non hanno raggiunto il valore accettabile],
     [\u{2A7D}5%], 
-    [\u{2A7D}0%],
-    [MMI1], 
-    [percentuale di metriche che hanno raggiunto il valore accettabile],
+    [0%],
+    [MMI2], 
+    [Percentuale di metriche che hanno raggiunto il valore ottimale],
     [\u{2A7E}30%], 
     [100%],
 
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti il miglioramento.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti il miglioramento.]
 ) <tabella-MetricheMiglioramento>
