@@ -16,7 +16,7 @@
     [Passaggio a #glossario[Typst] per la scrittura, modifica e verifica della
     documentazione.]
   ), 
-  caption: [problemi e soluzione per miglioramenti tecnologici.]
+  caption: [Problemi e soluzione per miglioramenti tecnologici.]
 ) <tabella-MT>
 
 == Organizzazione e impegni personali

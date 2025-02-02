@@ -57,7 +57,7 @@ soddisfatti nel prodotto],
     [\u{2A7E}0%],
     [100%]
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti le funzionalità.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti le funzionalità.]
 ) <tabella-MF>
 
 ==== Affidabilità
@@ -84,7 +84,7 @@ e delle frasi],
     [40], 
     [70],
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'affidabilità.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti l'affidabilità.]
 ) <tabella-MAF>
 ==== Manutenibilità
 Indica quanto è semplice aggiornare, correggere o migliorare il software.
@@ -140,7 +140,7 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
 [\u{2A7D}5],[\u{2A7D}3]
 
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti la manutenibilità.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti la manutenibilità.]
 ) <tabella-MM>
 ==== Efficienza
 Misura delle prestazioni del software in termini di utilizzo delle risorse (es. tempo di esecuzione) rispetto a soglie accettabili e ottimali.
@@ -163,7 +163,7 @@ Misura delle prestazioni del software in termini di utilizzo delle risorse (es. 
     [\u{2A7D}20 secondi (tempo timout)], 
     [\u{2A7D}10 secondi],
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'efficienza.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti l'efficienza.]
 ) <tabella-ME>
 ==== Usabilità
 Valuta quanto è facile per gli utenti interagire con il prodotto software.
@@ -187,7 +187,7 @@ Valuta quanto è facile per gli utenti interagire con il prodotto software.
     [⩽7 click],
     [⩽5 click],
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'usabilità.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti l'usabilità.]
 ) <tabella-MU>
 
 
@@ -218,7 +218,7 @@ Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti p
     [A],
     [AA]
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti l'accessibilità.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti l'accessibilità.]
 ) <tabella-MAC>
 
 ==== Portabilità
@@ -243,5 +243,5 @@ Analizza la capacità del software di funzionare su diverse piattaforme e ambien
     [⩾75%],
     [100%],
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti la portabilità.]
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti la portabilità.]
 ) <tabella-MP>
