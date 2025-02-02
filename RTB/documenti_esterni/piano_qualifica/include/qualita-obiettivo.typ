@@ -138,9 +138,29 @@ La Pianificazione organizza obiettivi, risorse e tempistiche per guidare il succ
     [100%],
 
   ), 
-  caption: [Gestione della qualità - Metriche e indici di qualità.]
-) <tabella-MetricheGestioneQualita>
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti la pianificazione.]
+) <tabella-MetrichePianificazione>
 
 ==== Miglioramento
 Il processo di miglioramento mira a identificare le aree che possono essere ottimizzate o migliorate.
-Nella pratica si intendono tutte le situazioni in cui una o più metriche non hanno raggiunto il valore ottimale, ma solo il valore accettabile.
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+    ),
+    [MMI1], 
+    [Percentuale di metriche non soddisfatte],
+    [\u{2A7D}5%], 
+    [\u{2A7D}0%],
+    [MMI1], 
+    [percentuale di metriche che hanno raggiunto il valore accettabile],
+    [\u{2A7E}30%], 
+    [100%],
+
+  ), 
+  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche rigurdanti il miglioramento.]
+) <tabella-MetricheMiglioramento>
