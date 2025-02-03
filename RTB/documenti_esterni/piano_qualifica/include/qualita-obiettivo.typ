@@ -51,7 +51,7 @@ La progettazione è il processo che si occupa di definire la struttura del siste
     [\u{2A7D}3],
     [ME1],
     [Tempo medio di esecuizone di un workflow],
-    [\u{2A7D}20 secondi (tempo timout)], 
+    [\u{2A7D}20 secondi (tempo timeout)], 
     [\u{2A7D}10 secondi],
     [MU1],
     [Click per utilizzare una funzionalità],
