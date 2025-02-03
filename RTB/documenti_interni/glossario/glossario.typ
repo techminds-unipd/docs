@@ -28,6 +28,10 @@ Questo documento definisce tutti i termini specifici usati nell'ambito del proge
 
 = A
 
+== AC // {Actual Cost}
+Acronimo di _Actual Cost_. É una metrica che misura i costi effettivamente sostenuti per svolgere le attività completate fino a un dato momento.
+<AC>
+
 == Accoppiamento // {Accoppiamenti}
 Nell'ambito della programmazione ad oggetti, è una misura del grado di dipendenza fra due classi. Più le classi sono accoppiate più è probabile che la modifica di una implica la modifica delle classi che ne dipendono.
 
@@ -53,6 +57,9 @@ Nel contesto dell'analisi dei requisiti rappresenta un'entità che interagisce c
 Acronimo di _Amazon Web Services_, è una sussidiaria di Amazon che fornisce servizi di cloud computing.
 
 = B
+
+== BAC // {Budget at Completion}
+Acronimo di _Budget at Completion_. É il budget totale previsto per il completamento del progetto. <BAC>
 
 == Backlog
 Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog:
@@ -88,6 +95,24 @@ Si veda #link(<registro_delle_modifiche>)[Registro delle modifiche].
 == Commit
 Operazione che registra le modifiche apportate al codice in un repository. Ogni commit rappresenta uno snapshot del progetto in un determinato momento.
 
+== CPI // {Cost Performance Index}
+Acronimo di _Cost Performance Index_. É un indice che offre una misura relativa dell'efficienza dei costi di un progetto fino a un dato momento. Indica quanto valore è stato ottenuto per ogni unità di costo spesa.#linebreak()
+Si calcola come: $ "CPI" &= #link(<EV>)[EV] / #link(<AC>)[AC] $#linebreak()
+Si ha che:
+- Se CPI > 1 il progetto ha un'efficienza finanziaria positiva e sta guadagnando con il proprio lavoro più di quanto sta spendendo. Maggiore è il CPI, più efficiente è il progetto;
+- Se CPI = 1 il progetto sta spendendo esattamente quanto preventivato per ottenere il valore generato dal lavoro;
+- Se CPI < 1 il progetto ha un'efficienza finanziaria negativa e sta spendendo più di quanto sta guadagnando con il proprio lavoro. Minore è il CPI, meno efficiente è il progetto.
+<CPI>
+
+== CV // {Cost Variance}
+Acronimo di _Cost Variance_. Metrica che misura la differenza tra il valore e il costo del lavoro completato.Indica se il progetto è sotto o sopra il budget pianificato per il lavoro completato.#linebreak()
+Si calcola come: $ "CV" &= #link(<EV>)[EV] - #link(<AC>)[AC] $#linebreak()
+Si ha quindi che:
+- Se CV > 0 il progetto sta spendendo meno di quanto ha guadagnato con il proprio lavoro ed è quindi sotto il budget previsto;
+- Se CV = 0 il progetto sta spendendo esattamente quanto ha guadagnato con il proprio lavoro ed è quindi perfettamente in linea con il budget previsto;
+- Se CV < 0 il progetto sta spendendo più di quanto ha guadagnato con il proprio lavoro ed è quindi sopra il budget previsto.
+<CV>
+
 = D
 
 == Diagramma di Gantt // {Diagrammi di Gantt}
@@ -101,6 +126,11 @@ Piattaforma VoIP, messaggistica instantanea e distribuzione digitale.
 
 = E
 
+== EAC // {Estimate at Completion}
+Acronimo di _Estimate at Completion_. É una metrica che stima il costo totale del progetto sulla base delle performance attuali.#linebreak()
+Esistono diverse formule per il calcolo dell'EAC. La formula che più si addice alla natura di questo progetto è quella che prevede un miglioramento delle performance future rispetto a quelle attuali, ovvero: #linebreak()$ "EAC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV])/(#link(<CPI>)[CPI] dot #link(<SPI>)[SPI]) + #link(<AC>)[AC]$. 
+<EAC>
+
 == Economicità
 Combinazione di efficienza ed efficacia.
 
@@ -110,6 +140,20 @@ Misura della capacità di raggiungere l'obiettivo prefissato.
 == Efficienza
 Misura dell'abilità di raggiungere l’obiettivo impiegando le risorse minime indispensabili.
 
+== ETC // {Estimate to Complete}
+Acronimo di _Estimate to Complete_. É una metrica che stima il costo rimanente necessario per completare il progetto.#linebreak()
+La formula per calcolare l'ETC basandosi sulle performance attuali è: $"ETC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV]) / #link(<CPI>)[CPI]$.#linebreak()
+Questa formula assume che la peformance di costo attuale non cambierà nel resto del progetto.
+
+<ETC>
+
+== EV // {Earned Value}
+Acronimo di _Earned Value_. Misura il valore del lavoro effettivamente completato in un dato momento. É il valore che il progetto ha effettivamente generato fino a quel momento.#linebreak()
+Si calcola come: $ "EV" &= "(Percentuale di lavoro completato)" dot "("#link(<BAC>)[BAC]")"$ ed è espresso in valore monetario.#linebreak()
+Va periodicamente confrontato con:
+- #link(<AC>)[AC] per valutare se il progetto è in linea con il budget o se si sta spendendo più di quello che si sta guadagnando con il proprio lavoro. Ciò  avviene tramite le metriche #link(<CV>)[CV] e #link(<CPI>)[CPI];
+- #link(<PV>)[PV] per valutare se il progetto è in linea con la pianificazione dal punto di vista dell'andamento temporale dei costi. Ciò avviene tramite le metriche #link(<SV>)[SV] e #link(<SPI>)[SPI].
+<EV>
 = F
 = G
 
@@ -216,6 +260,11 @@ Processi che definiscono quali attività svolgere per attuare, in modo efficient
 == Progetto // {Progetti}
 Insieme di attività che devono raggiungere determinati obiettivi a partire da determinate specifiche, con una data di inizio e una data di fine fissate, con risorse limitate che si consumano nello svolgersi.
 
+== PV // {Planned Value}
+Acronimo di _Planned Value_. É una metrica che misura il valore del lavoro che, secondo la pianificazione, dovrebbe essere completato in un determinato momento.#linebreak()
+Si calcola come: $"PV" &= "(Percentuale di completamento pianificata)" dot "("#link(<BAC>)[BAC]")" $
+<PV>
+
 == Pull request // {PR}
 Nel contesto di un repository di versionamento distribuito, è un modo per notificare ai membri del team che è stata completata una funzionalità in un branch di feature e che si può effettuare il merge nel branch main, con previa verifica.
 
@@ -249,6 +298,9 @@ Luogo in cui vengono salvati i prodotti creati. Costituisce una fonte di condivi
 == Requisito // {Requisiti}
 La capacità necessaria a un utente per raggiungere un obiettivo (lato bisogno/requisiti utente) o la capacità necessaria a un sistema per rispondere a una aspettativa (lato soluzione/requisiti software).
 
+== RSI // {Requirements Stability Index}
+Acronimo di _Requirements Stability Index_. É un indice che misura la stabilità dei requisiti durante il ciclo di vita del progetto. Indica quindi quanto i requisiti cambiano nel tempo. Un valore alto indica che i requisiti cambiano frequentemente e costituisce un segnale d'allarme.#linebreak()Si calcola come  $ "RSI" &= "Numero di requisiti modificati" / "Numero totale di requisiti"$.
+
 == Responsabile
 Persona che ha il compito di coordinare le attività di gruppo, l'elaborazione di piani e scadenze, e approva il rilascio di prodotti parziali o finali (software/documentazione).
 
@@ -262,6 +314,16 @@ Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto prin
 == Scrum
 Framework di sviluppo agile che suddivide il lavoro in cicli iterativi chiamati sprint e permette l'adattamento rapido ai cambiamenti attraverso feedback regolari.
 
+== SPI // {Schedule Performance Index}
+Acronimo di _Schedule Performance Index_. É un indice che offre una misura relativa dell'efficienza del progetto, mettendo in relazione il lavoro completato con quello pianificato.#linebreak()
+Si calcola come: $ "SPI" &= #link(<EV>)[EV] / #link(<PV>)[PV] $#linebreak()
+Si ha che:
+- Se SPI > 1 il progetto sta avanzando più velocemente rispetto a quanto pianificato;
+- Se SPI = 1 il progetto sta avanzando esattamente come pianificato;
+- Se SPI < 1 il progetto sta avanzando più lentamente rispetto a quanto pianificato.
+
+<SPI>
+
 == Sprint
 Periodo di tempo prefissato, di durata massima di un mese, in cui il team sviluppa un piccolo incremento di prodotto finale.
 
@@ -270,6 +332,15 @@ Periodo di tempo prefissato, di durata massima di un mese, in cui il team svilup
 
 == Stakeholder
 Persona o gruppo di persone che hanno interesse nel progetto, e lo influenzano o vengono influenzati da esso, come il committente o il fornitore.
+
+== SV // {Schedule Variance}
+Acronimo di _Schedule Variance_. Metrica che misura quanto il valore del lavoro completato si discosta da quanto pianificato. Indica se il progetto è in anticipo, in ritardo o in linea rispetto alla pianificazione.#linebreak()
+Si calcola come: $ "SV" &= #link(<EV>)[EV] - #link(<PV>)[PV] $#linebreak()
+Si ha quindi che:
+- Se SV > 0 il progetto è in anticipo rispetto alla pianificazione;
+- Se SV = 0 il progetto è in linea con la pianificazione;
+- Se SV < 0 il progetto è in ritardo rispetto alla pianificazione.
+<SV>
 
 = T
 == Tracciamento // {Tracciamenti}
