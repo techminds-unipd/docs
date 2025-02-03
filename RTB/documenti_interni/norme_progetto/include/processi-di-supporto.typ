@@ -105,7 +105,41 @@ Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
 \
 All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions]. 
+
 == Accertamento della qualità
+=== Caratteristiche e finalità
+L'accertamento della qualità è un processo che ha lo scopo di garantire che il prodotto software soddisfi i requisiti concordati con il proponente e che sia conforme agli standard di qualità prefissati. Questo processo è fondamentale per garantire che il prodotto finale sia affidabile, sicuro e soddisfi le aspettative del cliente.
+
+Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le seguenti attività:
+- Implementazione del processo: definisce un piano per l'accertamento della qualità, che descrive metodologie, procedure e strumenti da utilizzare. È necessario definire anche il coordinamento con le attività di verifica e validazione;
+- Garanzia di prodotto: definisce le garanzie di qualità che il prodotto software deve soddisfare;
+- Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
+
+=== Piano di qualifica
+Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni informate basate sui dati a disposizione.
+
+=== Struttura metriche di qualità
+- *Codice:* identificativo univoco della metrica;
+#align(center, block[
+  #set align(center)
+  M[lettera][numero]
+])
+dove:
+#set list(indent: 1em)
+- M: indica che si tratta di una metrica;
+- lettera: indica la categoria di appartenenza della metrica;
+- numero: numero progressivo della metrica.
+#set list(indent: 0em)
+- *Nome:* specifica il nome della metrica;
+//- *Descrizione:* breve descrizione della metrica;
+//- *Scopo:* obiettivo della metrica;
+
+//- *Formula:* formula matematica per il calcolo della metrica;
+//- *Strumento:* strumento utilizzato per il calcolo della metrica;
+- Relativi criteri di accettazione:
+  - *Valore accettabile*: valore minimo accettabile della metrica per essere conforme agli standard di qualità stabiliti;
+  - *Valore ottimale:* valore ideale della metrica;
+
 
 == Verifica e validazione
 
