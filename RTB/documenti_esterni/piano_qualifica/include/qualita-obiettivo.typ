@@ -1,9 +1,149 @@
 == Qualità per obiettivo
 === Processi primari
 ==== Analisi dei requisiti
+L'analisi dei requisiti è il processo che si occupa di individuare, definire e documentare le necessità e le aspettative degli stakeholder sotto forma di requisiti. #linebreak() L'obiettivo principale di questo processo è garantire che il prodotto software soddisfi le esigenze del committente.
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+    ), 
+    [MF1], 
+    [Percentuale di requisiti obbligatori soddisfatti],
+    [100%], 
+    [100%],
+    [MF2],
+    [Percentuale di requisiti desiderabili soddisfatti],
+    [\u{2A7E}0%], 
+    [100%],
+    [MF3],
+    [Percentuale di requisiti opzionali soddisfatti],
+    [\u{2A7E}0%], 
+    [100%],
+    [MPC9],
+    [Requirements Stability Index (RSI)],
+    [\u{2A7E}80%],
+    [100%],
+  ), 
+  caption: [Analisi dei requisiti - Metriche e indici di qualità.]
+) <tabella-MetricheAnalisiRequisiti>
 ==== Progettazione
+La progettazione è il processo che si occupa di definire la struttura del sistema software in modo da soddisfare i requisiti individuati durante l'analisi. Durante questo processo vengono individuate le specifiche tecniche ed architetturali che guideranno la codifica del prodotto software.
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+    ), 
+    [MM1],
+    [Accoppiamento tra classi],
+    [\u{2A7D}9],
+    [\u{2A7D}6],
+    [MM6],
+    [Profondità della gerarchie],
+    [\u{2A7D}5],
+    [\u{2A7D}3],
+    [ME1],
+    [Tempo medio di esecuizone di un workflow],
+    [\u{2A7D}20 secondi (tempo timout)], 
+    [\u{2A7D}10 secondi],
+    [MU1],
+    [Click per utilizzare una funzionalità],
+    [\u{2264}7 click],
+    [\u{2264}5 click],
+    [MAC2],
+    [Livello WCAG],
+    [A],
+    [AA]
+  ), 
+  caption: [Progettazione - Metriche e indici di qualità.]
+) <tabella-MetricheProgettazione>
 ==== Fornitura
+Il processo di fornitura si occupa sia della gestione delle attività in cui il proponente è coinvolto sia della gestione delle risorse necessarie a consegnare al proponente un prodotto che soddisfi i requisiti.
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+    ),
+    [MPC1],
+    [Earned Value (EV)],
+    [\u{2A7E}0],
+    [\u{2264} EAC],
+    [MPC2],
+    [Actual Cost (AC)],
+    [\u{2A7E}0],
+    [\u{2264} EAC],
+    [MPC3],
+    [Planned Value (PV)],
+    [\u{2A7E}0],
+    [\u{2264} BAC],
+    [MPC4],
+    [Cost Variance (CV)],
+    [\u{2A7E}-10%],
+    [\u{2A7E}0],
+    [MPC5],
+    [Schedule Variance (SV)],
+    [\u{2A7E}-10%],
+    [\u{2A7E}0],
+    [MPC6],
+    [Cost Performance Index (CPI)],
+    [\u{00B1}10%],
+    [\u{00B1}0%],
+    [MPC7],
+    [Estimate at completion (EAC)],
+    [\u{00B1}5% rispetto a quanto preventivato], 
+    [Come preventivato],
+        [MPC8],
+    [Estimate to complete (ETC)],
+    [\u{2A7E}0],
+    [\u{2264} EAC],
+  ), 
+  caption: [Fornitura - Metriche e indici di qualità.]
+) <tabella-MetricheFornitura>
 ==== Codifica
+Il processo di codifica si occupa di realizzare effettivamente il prodotto software, trasformando la progettazione in codice sorgente e garantendo il soddisfacimento dei requisiti. 
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+    ),
+    [MM2],
+    [Complessità ciclomatica per metodo],
+    [\u{2A7D}7],
+    [\u{2A7D}5],
+    [MM3],
+    [Parametri per metodo],
+    [\u{2A7D}6],
+    [\u{2A7D}5],
+    [MM4],
+    [Linee di codice per metodo],
+    [\u{2A7D}30],
+    [\u{2A7D}20],
+    [MM5],
+    [Attributi per classe],
+    [\u{2A7D}4],
+    [\u{2A7D}3],
+    [MP1],
+    [Versioni dei browser supportate],
+    [\u{2A7D}75%],
+    [100%],
+  ), 
+  caption: [Codifica - Metriche e indici di qualità.]
+) <tabella-MetricheCodifica>
 
 === Processi di supporto
 ==== Documentazione
