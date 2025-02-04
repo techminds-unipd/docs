@@ -20,7 +20,7 @@ I termini che sono presenti all'interno del glossario, verranno scritti in quest
 Il #glossario[progetto] ha lo scopo di realizzare un prodotto che, utilizzando l’#glossario[intelligenza artificiale] generativa,
 vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
 Il prodotto sarà un’app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi
-esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno
+esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno
 l’automazione da effettuare in linguaggio naturale. Successivamente, un #glossario[agente] prenderà il
 workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
@@ -28,9 +28,10 @@ workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguir�
 L'approccio che abbiamo deciso di adottare per questo documento è di tipo incrementale dato che alcune necessità future non sono tracciabili fin dall'inizio. Nel momento in cui affronteremo le varie fasi del progetto andremo ad aggiornare questo documento, tenendo conto sia degli obiettivi di qualità interni al gruppo, sia di quelli richiesti dall'azienda.
 
 == Riferimenti
-=== Riferimenti normativi:
+=== Riferimenti normativi
   - Spunti per lezione rovesciata #1: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/FC1.pdf;
   - #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf;
   - Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
-=== Riferimenti informativi:
+=== Riferimenti informativi
   - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf.
+  - #glossario[Piano di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf.

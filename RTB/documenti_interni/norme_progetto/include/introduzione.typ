@@ -17,7 +17,7 @@ I termini che sono presenti all'interno del glossario, verranno scritti #glossar
 Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l’#glossario[intelligenza artificiale] generativa,
 vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
 Il prodotto sarà un’app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi
-esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli archi indicheranno
+esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno
 l’automazione da effettuare in linguaggio naturale. Successivamente, un #glossario[agente] prenderà il workflow,
 interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
 
@@ -26,8 +26,12 @@ interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workf
 === Riferimenti normativi
 - #glossario[Capitolato] C3: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf;
 - #par(justify: false, [ISO/IEC 12207:1995: https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf;])
-- Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
+- Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf;
+- #glossario[Casi d'uso]: https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf.
+
 
 === Riferimenti informativi
 - T2 - Processi di ciclo di vita: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T02.pdf;
-- Docs as Code: https://www.writethedocs.org/guide/docs-as-code/<docs-as-code>.
+- Docs as Code: https://www.writethedocs.org/guide/docs-as-code/<docs-as-code>;
+- T5 -  #glossario[Analisi dei requisiti]: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf;
+- T9 - #glossario[Verifica] e #glossario[validazione]: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf.

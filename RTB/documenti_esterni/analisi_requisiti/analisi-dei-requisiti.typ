@@ -1,5 +1,7 @@
 #import "/template/template.typ": documento,team
 //#glossario[verifica]
+//#glossario[llm]
+//#glossario[label]
 
 #show: documento.with(
   title: "Analisi dei requisiti",

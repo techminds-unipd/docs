@@ -138,7 +138,7 @@ Per consentire al team di comunicare agilmente ci siamo dotati dei seguenti cana
 ==== Incontri
 Per quanto concerne i meeting interni, che solitamente si tengono da remoto, utilizziamo il canale vocale di Discord, suddiviso in 3 canali (Generale, Generale 1 e Generale 2) in caso vi sia la necessità di lavorare contemporaneamente divisi in gruppi.
 
-Gli incontri interni si verificano periodicamente per effettuare la sprint #glossario[retrospective] e lo sprint planning tra la fine di uno sprint e l'inizio del successivo. Si possono fissare anche dei meeting nel mezzo dello sprint per necessità di allineamento interno o per risolvere problematiche urgenti.
+Gli incontri interni si verificano periodicamente per effettuare la sprint #glossario[retrospective] e lo #glossario[sprint planning] tra la fine di uno sprint e l'inizio del successivo. Si possono fissare anche dei meeting nel mezzo dello sprint per necessità di allineamento interno o per risolvere problematiche urgenti.
 
 Ogni incontro interno verrà guidato e mediato dal responsabile. Oltre a questo, il responsabile deve stabilire una bozza dell'ordine del giorno, eventualmente da ampliare tenendo conto delle difficoltà e delle questioni emerse dal precedente incontro. Per ogni incontro interno effettuato il responsabile deve infine redigere il relativo verbale, compito delegabile all'amministratore nel caso in cui sorgano dei problemi personali o degli elementi di maggiore urgenza da risolvere.
 
