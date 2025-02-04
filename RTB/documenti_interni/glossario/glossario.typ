@@ -9,6 +9,8 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "0.4.0", "22/01/2025", "Aggiunta definizione di Docker", team.T, team.C,
+    "0.3.0", "19/01/2025", "Aggiunti nuovi termini", team.T, team.G,
     "0.2.0", "12/01/2024", "Inserimento nuovi termini", team.C, team.M,
     "0.1.1", "20/12/2024", "Fix conformità indice di Gulpease", team.C, team.G,
     "0.1.0", "11/11/2024", "Prima versione", team.L, team.C
@@ -124,6 +126,9 @@ Metodo per visualizzare sistemi e software utilizzando il linguaggio di modellaz
 == Discord
 Piattaforma VoIP, messaggistica instantanea e distribuzione digitale.
 
+== Docker
+Piattaforma che permette di creare ambienti isolati di esecuzione chiamati container con un uso meno estensivo di risorse rispetto ad una macchina virtuale.
+
 = E
 
 == EAC // {Estimate at Completion}
@@ -140,6 +145,9 @@ Misura della capacità di raggiungere l'obiettivo prefissato.
 == Efficienza
 Misura dell'abilità di raggiungere l’obiettivo impiegando le risorse minime indispensabili.
 
+== ESLint
+È uno strumento di analisi statica del codice JavaScript. Si occupa sia della qualità del codice che dello stile di codifica. È possibile sovrascrivere le regole di default tramite un file di configurazione contenuto all'interno del repository.
+
 == ETC // {Estimate to Complete}
 Acronimo di _Estimate to Complete_. É una metrica che stima il costo rimanente necessario per completare il progetto.#linebreak()
 La formula per calcolare l'ETC, basandosi sulle performance attuali, è: $"ETC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV]) / #link(<CPI>)[CPI]$.#linebreak()
@@ -154,6 +162,8 @@ Va periodicamente confrontato con:
 - #link(<AC>)[AC] per valutare se il progetto è in linea con il budget o se si sta spendendo più di quello che si sta guadagnando con il proprio lavoro. Ciò  avviene tramite le metriche #link(<CV>)[CV] e #link(<CPI>)[CPI]\;
 - #link(<PV>)[PV] per valutare se il progetto è in linea con la pianificazione dal punto di vista dell'andamento temporale dei costi. Ciò avviene tramite le metriche #link(<SV>)[SV] e #link(<SPI>)[SPI].
 <EV>
+
+
 = F
 = G
 
@@ -333,6 +343,7 @@ Periodo di tempo prefissato, di durata massima di un mese, in cui il team svilup
 == Stakeholder
 Persona o gruppo di persone che hanno interesse nel progetto, e lo influenzano o vengono influenzati da esso, come il committente o il fornitore.
 
+
 == SV // {Schedule Variance}
 Acronimo di _Schedule Variance_. Metrica che misura quanto il valore del lavoro completato si discosta da quanto pianificato. Indica se il progetto è in anticipo, in ritardo o in linea rispetto alla pianificazione.#linebreak()
 Si calcola come: $ "SV" &= #link(<EV>)[EV] - #link(<PV>)[PV] $#linebreak()
@@ -342,7 +353,21 @@ Si ha quindi che:
 - Se SV < 0 il progetto è in ritardo rispetto alla pianificazione.
 <SV>
 
+== Swagger
+Insieme di strumenti che permette di documentare le API contestualmente alla loro definizione nel codice e testarle usando una interfaccia web.
+
+
 = T
+== Test di unità // {Unit test}
+Test che esamina una singola unità software. Si divide in funzionale e strutturale:
+- Funzionale (black-box): 
+  - esaminano solo il legame tra input e output;
+  - utilizzano dati in ingresso che corrispondono a specifici esiti: valori del dominio, valori di limite e valori illegali.
+- Strutturale (white-box):
+  - verificano la logica interna dell'unità software;
+  - un singolo caso di prova attiva un singolo cammino di esecuzione;
+  - l'obiettivo è quello di avere un insieme di casi di prova che riescono a far eseguire tutti i comandi e attraversare tutti i branch dell'unità in esame.
+
 == Tracciamento // {Tracciamenti}
 Attività che permette di mantenere la coerenza tra i requisiti e i componenti del sistema, in modo da poter tracciare l'evoluzione del sistema e verificare che i requisiti siano soddisfatti.
 

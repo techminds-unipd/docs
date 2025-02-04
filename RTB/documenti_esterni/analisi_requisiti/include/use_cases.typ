@@ -14,9 +14,29 @@
 = Casi d'uso
 
 == Obiettivi
-
+Questa sezione è dedicata all'identificazione e alla descrizione 
+dei casi d'uso emersi dall'analisi. I casi d'uso servono a 
+descrivere nel dettaglio le operazioni che l'utente può compiere 
+all'interno dell'applicativo, offrendo una panoramica completa 
+delle funzionalità disponibili. Inoltre, permettono di definire 
+chiaramente le interazioni tra l'utente e il sistema, evidenziando come avviene il 
+dialogo tra questi due. Infine, si occupano anche di delineare le modalità di interazione 
+tra il sistema e i servizi esterni, garantendo così una comprensione precisa delle connessioni e delle dipendenze tecnologiche.
 == Attori
-
+- *Attori principali*:
+  - Utente non autenticato;
+  - Utente autenticato;
+  - Frontend;
+  - Backend.
+- *Attori secondari*:
+  - Google;
+  - #glossario[LLM].
+== Sistema
+  Il sistema è composto dai seguenti elementi:
+    - Frontend;
+    - Backend;
+    - #glossario[Agente];
+    - Database.
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
@@ -39,46 +59,48 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
 
     node((0.25,0.5), [#image("../assets/actor.jpg") Utente non#linebreak() autenticato], stroke: 0pt, name: <utente>),
     edge(<utente>, <login>),
 
     node((2,0), align(center)[
             @login Login
-    ], shape: ellipse, name: <login>, inset:10pt),
+    ], name: <login>),
     edge(<login-interno>, <login>,marks: (none,empty-dash)),
 
     node((2,0.5), align(center)[
             @login-interno Login interno
-    ], shape: ellipse, name: <login-interno>, inset:10pt),
+    ], name: <login-interno>),
 
     edge(<login-interno>, <ins-user>, "--straight", [\<\<include\>\>]),
 
     node((3,0.75), align(center)[
             @inserimento-username Inserimento username
-    ], shape: ellipse, name: <ins-user>, inset:10pt),
+    ], name: <ins-user>),
 
     edge(<login-interno>, <ins-pass>, "--straight", [\<\<include\>\>]),
 
     node((3,0.25), align(center)[
             @inserimento-password Inserimento password
-    ], shape: ellipse, name: <ins-pass>, inset:10pt),
+    ], name: <ins-pass>),
 
 
 
     node((2,1.5), align(center)[
             @credenziali-errate Credenziali errate
-    ], shape: ellipse, name: <credenziali-errate>, inset:10pt),
+    ], name: <credenziali-errate>),
 
  
    node((2,1), align(center)[
-    ], shape: circle, name: <nf>,width:1pt, height:1pt, inset:10pt),
+    ], name: <nf>,width:1pt, height:1pt),
 
   edge(<nf>,<pnf>, "--"),
 
   node((2.9,1.25), align(center)[
     L'utente inserisce delle #linebreak()credenziali errate o inesistenti
-    ], shape: rect, name: <pnf>, inset:10pt),
+    ], shape: rect, name: <pnf>),
  
 
 
@@ -86,7 +108,7 @@
 
     node((2.75,0), align(center)[
              @login-google Login Google
-    ], shape: ellipse, name: <login-google>, inset:10pt),
+    ], name: <login-google>),
 
     edge(<login-google>, <login>, marks: (none,empty-dash)),
 
@@ -115,9 +137,9 @@
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
-   - L'utente viene autenticato ed ottiene una sessione.
+    - L'utente viene autenticato ed ottiene una sessione.
 - *Generalizzazioni*:
   - Login Google (@login-google);
   - Login interno (@login-interno).
@@ -137,9 +159,9 @@
    2. la verifica ha successo;
    3. viene assegnata una sessione all'utente.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
-   - L'utente viene autenticato ed ottiene una sessione.
+    - L'utente viene autenticato ed ottiene una sessione.
 - *Estensioni*:
   - Credenziali errate (@credenziali-errate).
 
@@ -157,7 +179,7 @@
    1. verifica la correttezza dello username;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito lo username correttamente.
 
@@ -173,12 +195,13 @@
    1. verifica la correttezza della password;
    2. continua la procedura di login.
 - *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
+    - L'utente possiede un account.
 - *Post-condizioni*:
    - L'utente ha inserito la password correttamente.
 
 === Credenziali errate <credenziali-errate>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni nel caso in cui le credenziali fornite siano errate o inesistenti.
 - *Attori principali*:
   - Utente non autenticato.
 - *Scenario principale*:
@@ -188,14 +211,13 @@
     1. l'esito della verifica delle credenziali da @inserimento-username o @inserimento-password non ha successo;
     2. mostra un messaggio d'errore;
     3. dà la possibilità all'utente di riprovare il login.
-- *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - Viene segnalato all'utente che le credenziali inserite sono errate;
    - L'utente può riprovare ad eseguire il login.
 
 === Login Google <login-google>
-
+- Descrizione:
+  - Questo caso d'uso descrive l'uso dell'account Google per effettuare il login.
 - *Attori principali*:
   - Utente non autenticato.
 - *Attori secondari*:
@@ -207,8 +229,6 @@
    1. redirige l'utente ai servizi di Google;
    2. il login ha successo;
    3. viene assegnata una sessione all'utente.
-- *Pre-condizioni*:
-   - L'utente possiede l'applicativo.
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
@@ -220,53 +240,62 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
-    node((0,0.5), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <a>),
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.5), [#image("../assets/actor.jpg") Utente non #linebreak() autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
-    node((1.8,0), align(center)[
+    node((1.6,0), align(center)[
             @registrazione Registrazione
-    ], shape: ellipse, name: <b>),
+    ], name: <b>),
 
-    node((2.7,0.3), align(center)[
+    node((2.65,0.05), align(center)[
             @errore-registrazione Errore registrazione
-    ], shape: ellipse, name: <c>),
+    ], name: <c>),
     edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1,1), align(center)[
             @creazione-username Creazione username
-    ], shape: ellipse, name: <d>),
+    ], name: <d>),
     edge(<b>, <d>, "--straight", [\<\<include\>\>]),
 
     node((1.5,1.3), align(center)[
             @inserimento-email Inserimento email
-    ], shape: ellipse, name: <e>),
+    ], name: <e>),
     edge(<b>, <e>, "--straight", [\<\<include\>\>]),
 
-    node((2,1), align(center)[
+    node((1.91,1), align(center)[
             @creazione-password Creazione password
-    ], shape: ellipse, name: <f>),
+    ], name: <f>),
     edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
     node((2.7,1.3), align(center)[
             @conferma-password Conferma password
-    ], shape: ellipse, name: <g>),
+    ], name: <g>),
     edge(<b>, <g>, "--straight", [\<\<include\>\>]),
+
+    node((2.6,0.35), align(center)[
+            Utente inserisce #linebreak() dati non validi
+    ], shape: rect, name: <le>),
+    node((2.1,0.025), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
 
     node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
         align(top + right)[Sistema],
         width: 200pt,
-        height: 200pt,
+        height: 250pt,
         snap: -1,
         name: <group>)
     ),
     caption: [Registrazione UC diagram.]
 ) <registrazione-diagram>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di registrazione di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente non autenticato:
    1. seleziona voce di registrazione;
    2. crea un username univoco nel sistema (@creazione-username);
    3. inserisce un'email valida (@inserimento-email);
@@ -274,8 +303,9 @@
    5. conferma la password (@conferma-password).
  - Sistema:
    1. attende l'esito di @creazione-username, @inserimento-email, @creazione-password e @conferma-password;
-   2. crea un nuovo account;
-   3. salva nel database i dati del nuovo account.
+   2. tutte le verifiche hanno successo;
+   3. crea un nuovo account;
+   4. salva nel database i dati del nuovo account.
 - *Pre-condizioni*:
    - L'utente non possiede un account.
 - *Post-condizioni*:
@@ -284,69 +314,74 @@
   - Errore registrazione (@errore-registrazione).
 
 ==== Creazione username <creazione-username>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di creazione di uno username da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente non autenticato:
    1. inserisce un username.
  - Sistema:
    1. verifica che l'username non sia già in uso.
 - *Pre-condizioni*:
    - L'utente non possiede un account.
 - *Post-condizioni*:
-   - L'utente ha inserito un username valido.
+   - L'utente ha inserito un username.
 
 
 ==== Inserimento email <inserimento-email>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di inserimento di un'email da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. inserisce un'email.
   - Sistema:
     1. verifica che l'email sia valida.
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - L'utente ha inserito un'email valida.
+  - L'utente ha inserito un'email.
 
 ==== Creazione password <creazione-password>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di creazione di una password da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. crea una password.
   - Sistema:
     1. verifica che la password rispetti i vincoli.
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - L'utente ha creato una password valida.
+  - L'utente ha creato una password.
 
 ==== Conferma password <conferma-password>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di conferma della password da parte di un utente.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
+  - Utente non autenticato:
     1. conferma la password inserita precedentemente.
   - Sistema:
     1. verifica che la password sia stata confermata correttamente.
 - *Pre-condizioni*:
   - L'utente non possiede un account.
 - *Post-condizioni*:
-  - La password è stata confermata.
+  - La password è stata ripetuta per la conferma.
 
 === Errore registrazione <errore-registrazione>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di gestione dell'errore di registrazione.
 - *Attori principali*:
-  - Utente.
+  - Utente non autenticato.
 - *Scenario principale*:
-  - Utente:
-    1. inserisce username, email, o password non validi in @creazione-username, @inserimento-email, @creazione-password, @conferma-password.
+  - Utente non autenticato:
+    1. inserisce username, email, o password non validi.
   - Sistema:
     1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
     2. mostra un messaggio d'errore all'utente;
@@ -356,9 +391,8 @@
 - *Post-condizioni*:
   - L'utente non possiede un account;
   - Viene mostrato un messaggio d'errore esplicativo;
-  - L'utente può riprovare a registrarsi modificando i campi errati.
 
-=== Aggiunta account Google associato ai workflows
+=== Aggiunta account Google associato ai workflow
 <aggiunta-account-google-associato>
 #figure(
     diagram(
@@ -366,7 +400,8 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
+    node-inset: 10pt,
+    node-shape: ellipse,
     node((0.2,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
@@ -375,18 +410,18 @@
 
     node((2,0.5), align(center)[
              @aggiunta-account-google-associato Aggiunta account Google associato
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ], name: <b>),
 
     node((2,1.3), align(center)[
             @errore-comunicazione-google Errore comunicazione Google
-    ], shape: ellipse, name: <e>, inset: 10pt),
+    ], name: <e>),
     edge(<e>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((1.6,0.9), align(center)[
             Google trasmette #linebreak() un errore
     ], shape: rect, name: <le>),
     node((2,0.9), align(center)[
-    ], shape: circle, name: <nf>, width: 1pt, height: 1pt),
+    ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
 
     node(enclose: (<b>,<e>,<le>,<nf>),
@@ -405,7 +440,7 @@
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account da associare all'esecuzione dei blocchi nei workflow;
@@ -426,7 +461,7 @@
 - *Attori secondari*:
   - Google.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di associazione di un account Google.
  - Sistema:
    1. redirige l'utente alla finestra di Google per l'aggiunta dell'account;
@@ -439,20 +474,21 @@
    - Il sistema notifica l'errore all'utente;
    - L'utente può riprovare ad associare l'account Google.
 
-=== Rimozione account Google associato ai workflows <rimozione-account-google-associato>
+=== Rimozione account Google associato ai workflow <rimozione-account-google-associato>
 #figure(
     diagram(
     debug: false,
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
+    node-inset: 10pt,
+    node-shape: ellipse,
     node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
     edge(<a>, <b>),
 
     node((2,0.5), align(center)[
              @rimozione-account-google-associato Rimozione account Google associato
-    ], shape: ellipse, name: <b>, inset: 10pt),
+    ], name: <b>),
 
 
     node(enclose: (<b>,),
@@ -469,7 +505,7 @@
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. avvia la procedura di rimozione dell'account Google associato.
  - Sistema:
    1. rimuove l'account Google associato all'esecuzione dei blocchi nei workflow;
@@ -480,44 +516,56 @@
    - L'utente non ha più un account Google associato.
 
 === Esecuzione workflow <esecuzione-workflow>
+
 #figure(
     diagram(
     debug: false,
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
 
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <a>),
-    edge(<a>, <b>),
+    node((-0.5,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <esecuzione-workflow>),
 
-    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <b>),
+    node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <esecuzione-workflow>),
 
-    node((1.7,0), align(center)[
+
+
+    node((1.25,0), align(center)[
             @esecuzione-workflow Esecuzione workflow 
-    ], shape: ellipse, name: <b>),
+    ],  name: <esecuzione-workflow>),
 
-    node((1,0.6), align(center)[
-             @controllo-workflow Controllo workflow
-    ], shape: ellipse, name: <c>),
-    edge(<b>, <c>, "-->", [\<\<include\>\>]),
-
-    node((1,1.4), align(center)[
+    node((1,1.5), align(center)[
             @vis-errore-workflow Vis. errore workflow
-    ], shape: ellipse, name: <d>),
-    edge(<d>, <c>, "-->", [\<\<extend\>\>]),
+    ],  name: <vis-errore-workflow>),
 
-    node((1.7,1), align(center)[
+    edge(<vis-errore-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
+
+    node((.6,0.5), align(center)[
+            Il workflow non è valido
+    ], shape: rect, name: <post-it>),
+
+    node((1.15,0.5), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<post-it>, <nf>, "--"),
+
+    node((1.7,1.25), align(center)[
             @vis-errore-runtime Vis. errore runtime
-    ], shape: ellipse, name: <e>),
-    edge(<e>, <b>, "-->", [\<\<extend\>\>]),
+    ],  name: <vis-errore-runtime>),
+    edge(<vis-errore-runtime>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
+    
+    node((2,0.8), align(center)[
+            L'agente non riesce a #linebreak() completare l'operazione
+    ], shape: rect, name: <post-it2>),
 
-    node((2.5,0.6), align(center)[
-            @vis-risultato-esecuzione Vis. risultato esecuzione
-    ], shape: ellipse, name: <f>),
-    edge(<b>, <f>, "-->", [\<\<include\>\>]),
+    node((1.53,0.8), align(center)[
+    ], name: <nf2>, width: 1pt, height: 1pt),
+    edge(<post-it2>, <nf2>, "--"),
 
-    node(enclose: (<b>,<c>,<d>,<e>,<f>),
+    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
@@ -527,6 +575,8 @@
     caption: [Esecuzione workflow UC diagram.]
 ) <esecuzione-diagram>
 
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di esecuzione di un workflow e i suoi scenari alternativi.
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
@@ -535,58 +585,28 @@
  - Utente autenticato:
    1. esegue il workflow.
  - Sistema:
-   1. controlla che l'intero workflow sia valido (@controllo-workflow);
-   2. attende l'esito del controllo;
-   3. inoltra i dati all'agente che si interfaccia ad un LLM;
-   4. restituisce il risultato dell'operazione (@vis-risultato-esecuzione).
+   1. controlla che il workflow sia valido;
+   2. inoltra i dati all'agente che si interfaccia ad un LLM;
+   3. restituisce il risultato dell'operazione.
 - *Pre-condizioni*:
-   - L'utente è autenticato;
    - L'utente ha creato un workflow con almeno due blocchi.
-- *Post-condizioni*:    
-  - L'operazione viene eseguita e il risultato viene restituito (@vis-risultato-esecuzione).
+- *Post-condizioni*:
+  - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
   - Visualizzazione errore runtime (@vis-errore-runtime).
-
-==== Controllo workflow <controllo-workflow>
-
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
-  - Sistema:
-    1. controlla che il workflow sia valido;
-    2. ritorna l'esito del controllo.
-- *Pre-condizioni*:
-  - L'utente ha creato un workflow valido.
-- *Post-condizioni*:
-  - Restituisce l'esito del controllo.
-- *Estensioni*
   - Visualizzazione errore workflow (@vis-errore-workflow).
-
-==== Visualizzazione risultato esecuzione <vis-risultato-esecuzione>
-
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
-  - Sistema:
-    1. riceve il risultato dell'operazione da @esecuzione-workflow;
-    2. mostra il risultato all'utente.
-- *Pre-condizioni*:
-  - L'esecuzione termina senza errori.
-- *Post-condizioni*:
-  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
+  
 
 === Visualizzazione errore workflow <vis-errore-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
+    1. ha avviato l'esecuzione del workflow.
   - Sistema:
-    1. il controllo in @controllo-workflow non ha successo;
+    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
     2. mostra un messaggio d'errore all'utente;
     3. termina l'esecuzione.
 - *Pre-condizioni*:
@@ -595,26 +615,25 @@
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
 === Visualizzazione errore runtime <vis-errore-runtime>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore di runtime durante l'esecuzione di un workflow.
 - *Attori principali*:
   - Utente autenticato.
+- *Attori secondari*:
+  - LLM.
 - *Scenario principale*:
   - Utente autenticato:
-    1. esegue il workflow in @esecuzione-workflow.
+    1. ha avviato l'esecuzione di un workflow valido.
   - Sistema:
-    1. risconta un problema durante l'esecuzione di @esecuzione-workflow;
+    1. riscontra un problema durante l'esecuzione del workflow;
     2. non conclude l'operazione;
     3. mostra un messaggio d'errore all'utente.
 - *Pre-condizioni*:
-  - L'utente è autenticato.
+  - L'utente ha creato un workflow valido.
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-  
-
-
-
-=== Creazione nuovo workflow <creazione-nuovo-workflow>
+=== Esecuzione del workflow (frontend #sym.arrow backend)<esecuzione-workflow-backend>          
 
 #figure(
     diagram(
@@ -622,13 +641,242 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
 
-    node((0,0), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
+    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
+
+    node((2,0.5), align(center)[
+            @esecuzione-workflow-backend Esecuzione workflow
+    ],  name: <esecuzione-workflow-backend>),
+    edge(<frontend>, <esecuzione-workflow-backend>),
+    edge(<agente>, <esecuzione-workflow-backend>),
+
+    node((2,1), align(center)[
+            @frontend-invio-dati-workflow Invio dati workflow
+    ], name: <frontend-invio-dati-workflow>),
+    edge(<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>),
+        align(top + right)[Backend],
+        width: 240pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Esecuzione del workflow (frontend #sym.arrow backend) UC diagram.]
+) <esecuzione-workflow-frontend-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nell'esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Frontend.
+- *Scenario principale*:
+  - Frontend:
+    1. invia la richiesta di esecuzione del workflow;
+    2. invia i dati necessari al backend (@frontend-invio-dati-workflow).
+  - Backend:
+    1. riceve la richiesta di esecuzione del workflow;
+    2. invia i dati all'agente (@esecuzione-workflow-agente);
+    3. riceve un risultato dall'agente;
+    4. restituisce il risultato al frontend.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - Il frontend riceve il risultato dell'esecuzione del workflow.
+
+==== Invio dati workflow (frontend) <frontend-invio-dati-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del frontend verso il backend per l'esecuzione di un workflow.
+- *Attori principali*:
+  - Frontend.
+- *Scenario principale*:
+  - Frontend:
+    1. invia la lista dei blocchi del workflow;
+    2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
+  - Backend:
+    1. riceve i dati necessari per l'esecuzione del workflow.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
+
+
+=== Esecuzione del workflow (backend #sym.arrow agente)<esecuzione-workflow-agente>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
+    edge(<back-end>, <esecuzione-workflow-agente>),
+
+    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <esecuzione-workflow-agente>),
+
+    node((4.5,1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
+    edge(<ggl>, <esecuzione-workflow-agente>),
+
+    node((3.5,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
+    edge(<pstb>, <esecuzione-workflow-agente>),
+
+    node((2,0.5), align(center)[
+            @esecuzione-workflow-agente Esecuzione workflow agente
+    ],  name: <esecuzione-workflow-agente>),
+
+    node((1.8,1.4), align(center)[
+            @errore-workflow-llm Ricezione errore time-out
+    ],  name: <errore-workflow-llm>),
+    edge(<errore-workflow-llm>, <esecuzione-workflow-agente>, "--straight", [\<\<extend\>\>]),
+
+    node((1.3,1), align(center)[
+            Il time-out #linebreak() raggiunge il limite
+    ], shape: rect, name: <post-it>),
+    node((1.88,1), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<post-it>, <nf>, "--"),
+
+    node((2.4,1), align(center)[
+            @backend-invio-dati-workflow Invio dati workflow
+    ], name: <backend-invio-dati-workflow>),
+    edge(<esecuzione-workflow-agente>, <backend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<esecuzione-workflow-agente>,<errore-workflow-llm>,<nf>,<post-it>,<backend-invio-dati-workflow>,),
+        align(top + right)[Agente],
+        width: 240pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Esecuzione del workflow (backend #sym.arrow agente) UC diagram.]
+) <esecuzione-workflow-agente-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di esecuzione del backend e dell'agente durante la procedura di esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Backend.
+- *Attori secondari*:
+  - LLM;
+  - Google;
+  - Pastebin.
+- *Scenario principale*:
+ - Backend:
+   1. invia i dati necessari per l'esecuzione del workflow all'agente (@backend-invio-dati-workflow).
+ - Agente:
+   1. riceve i dati;
+   2. esegue le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
+   3. termina l'esecuzione;
+   4. comunica la terminazione dell'esecuzione al backend.
+- *Pre-condizioni*:
+   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
+- *Post-condizioni*:
+  - L'esecuzione del workflow termina con successo.
+- *Estensioni*:
+  - Ricezione errore time-out (@errore-workflow-llm).
+
+==== Invio dati workflow (backend) <backend-invio-dati-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow.
+- *Attori principali*:
+  - Backend.
+- *Scenario principale*:
+  - Backend:
+    1. invia i dati ricevuti dal frontend (@frontend-invio-dati-workflow);
+    2. invia i token di autorizzazione necessari.
+  - Agente:
+    1. riceve i dati necessari per l'esecuzione del workflow.
+- *Pre-condizioni*:
+  - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
+
+=== Ricezione errore time-out <errore-workflow-llm>
+- *Descrizione*:
+  - Questo caso d'uso descrive la ricezione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
+- *Attori principali*:
+  - Backend.
+- *Attori secondari*:
+  - LLM;
+  - Google;
+  - Pastebin.
+- *Scenario principale*:
+ - Backend:
+   1. invia i dati necessari per l'esecuzione del workflow all'agente.
+ - Agente:
+   1. riceve i dati;
+   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
+   3. il time-out raggiunge il limite;
+   4. termina l'esecuzione;
+   5. comunica l'errore di esecuzione del workflow al backend.
+- *Pre-condizioni*:
+   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
+- *Post-condizioni*:
+  - L'esecuzione termina e il backend riceve un messaggio d'errore.
+
+=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
+
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <vis-risultato-esecuzione-workflow>),
+
+    node((2,0), align(center)[
+            @vis-risultato-esecuzione-workflow Vis. risultato esecuzione #linebreak() workflow
+    ],  name: <vis-risultato-esecuzione-workflow>),
+
+    node(enclose: (<vis-risultato-esecuzione-workflow>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione risultato dell'esecuzione del workflow.]
+) <vis-risultato-esecuzione-workflow-diagram> 
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione del risultato dell'esecuzione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. ha eseguito il workflow (@esecuzione-workflow).
+  - Sistema:
+    1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
+    2. mostra il risultato all'utente.
+- *Pre-condizioni*:
+  - L'esecuzione del workflow (@esecuzione-workflow) è terminata senza errori.
+- *Post-condizioni*:
+  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
+
+
+=== Creazione nuovo workflow vuoto <creazione-nuovo-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
-            @creazione-nuovo-workflow Creazione workflow
-    ], shape: ellipse, name: <a>),
+            @creazione-nuovo-workflow Creazione workflow vuoto
+    ], name: <a>),
 
     node(enclose: (<a>,),
         align(top + right)[Sistema],
@@ -637,29 +885,395 @@
         snap: -1,
         name: <group>)
     ),
-    caption: [Creazione nuovo workflow UC diagram.]
+    caption: [Creazione nuovo workflow vuoto UC diagram.]
 ) <creazione-nuovo-workflow-diagram>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow vuoto.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. naviga nella pagina workflow;
-   2. seleziona l'opzione per creare un nuovo workflow;
-   3. si ritrova in una nuova schermata in cui può gestire i blocchi e gli archi;
-   4. seleziona il blocco di automazione che desidera;
-   5. lo trascina all'interno dell'area drag and drop;
-   6. ripete le due operazioni sopra finchè ha bisogno di nuovi blocchi;
-   7. collega i blocchi con degli archi orientati;
-   8. per ogni arco può descrivere un'automazione in linguaggio naturale.
+   2. seleziona l'opzione per creare un nuovo workflow.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. gestisce gli input drag and drop dell'utente.
-- *Pre-condizioni*:
-   - L'utente è loggato.
-   - L'utente ha collegato almeno un account esterno per poter utilizzare i blocchi ad esso associati.
+   2. crea un nuovo workflow vuoto;
+   3. mostra il nuovo workflow vuoto creato.
 - *Post-condizioni*:
-   - Viene creato il workflow.
+   - Viene creato il workflow vuoto.
+
+=== Visualizzazione workflow <visualizzazione-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @visualizzazione-workflow Visualizzazione workflow
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione workflow UC diagram.]
+) <visualizzazione-workflow-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di visualizzazione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il workflow da visualizzare.
+ - Sistema:
+   1. mostra il workflow selezionato dall'utente.
+- *Pre-condizioni*:
+   - L'utente ha creato almeno un workflow.
+- *Post-condizioni*:
+   - Viene mostrato il workflow selezionato dall'utente.
+
+=== Aggiunta di un blocco (Gmail/Calendar/Pastebin) <aggiunta-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @aggiunta-blocco Aggiunta blocco
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Aggiunta di un blocco (Gmail/Calendar/Pastebin) UC diagram.]
+) <aggiunta-blocco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di aggiunta di un blocco (Gmail/Calendar/Pastebin) in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. aggiunge un blocco di automazione (Gmail/Calendar/Pastebin) già configurato, trascinandolo nell'area drag and drop.
+ - Sistema:
+   2. gestisce l'input dell'utente;
+   3. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente ha creato almeno un workflow;
+   - L'utente sta modificando il workflow.
+- *Post-condizioni*:
+   - Viene aggiunto al workflow il blocco scelto dall'utente.
+
+=== Eliminazione di un blocco <eliminazione-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @eliminazione-blocco Eliminazione blocco
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Eliminazione di un blocco UC diagram.]
+) <eliminazione-blocco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di eliminazione di un blocco in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona il blocco di automazione da eliminare tra quelli presenti nel workflow;
+   2. elimina il blocco di automazione selezionato.
+ - Sistema:
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow con almeno un blocco;
+   - L'utente sta modificando il workflow.
+- *Post-condizioni*:
+   - Viene eliminato un blocco dal workflow.
+
+=== Collegamento blocchi <collegamento-arco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @collegamento-arco Collegamento blocchi
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Collegamento blocchi UC diagram.]
+) <collegamento-arco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di collegamento di due blocchi tramite un arco orientato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. sceglie due blocchi da collegare;
+   2. collega i due blocchi attraverso un arco orientato.
+ - Sistema:
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow con almeno due blocchi;
+   - I blocchi da collegare sono scollegati tra loro;
+   - L'utente sta modificando il workflow.
+- *Post-condizioni*:
+   - Viene creato un arco orientato tra i due blocchi selezionati dall'utente.
+
+=== Scollegamento blocchi <scollegamento-arco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @scollegamento-arco Scollegamento blocchi
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Scollegamento blocchi UC diagram.]
+) <scollegamento-arco-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di scollegamento di due blocchi collegati tramite un arco orientato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. sceglie due blocchi da scollegare;
+   2. scollega i due blocchi scelti eliminando l'arco orientato che li collegava.
+ - Sistema:
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow con almeno due blocchi;
+   - I blocchi da scollegare sono collegati tra loro;
+   - L'utente sta modificando il workflow.
+- *Post-condizioni*:
+   - Viene eliminato l'arco orientato tra i due blocchi selezionati dall'utente.
+
+=== Aggiunta descrizione <aggiunta-descrizione>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @aggiunta-descrizione Aggiunta descrizione
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Aggiunta descrizione UC diagram.]
+) <aggiunta-descrizione-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di aggiunta della descrizione dell'automazione tra due blocchi collegati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. sceglie l'arco in cui vuole aggiungere la descrizione;
+   2. aggiunge la descrizione dell'automazione in linguaggio naturale sopra l'arco scelto.
+ - Sistema:
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow con almeno due blocchi collegati tramite un arco che non specifica alcuna descrizione;
+   - L'utente sta modificando il workflow.
+- *Post-condizioni*:
+   - Viene aggiunta la descrizione dell'automazione relativa all'arco selezionato dall'utente.
+
+=== Modifica descrizione <modifica-descrizione>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @modifica-descrizione Modifica descrizione
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Modifica descrizione UC diagram.]
+) <modifica-descrizione-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di modifica della descrizione dell'automazione tra due blocchi collegati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona la descrizione da modificare;
+   2. modifica la descrizione dell'automazione scelta indicando in linguaggio naturale la nuova azione che deve fare il sistema.
+ - Sistema:
+   1. gestisce gli input dell'utente;
+   2. aggiorna il workflow.
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow con una descrizione in almeno un arco orientato;
+   - L'utente sta modificando il workflow.
+- *Post-condizioni*:
+   - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
+
+=== Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.3), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <b>),
+    
+    node((1.4,0.3), align(center)[
+        @visualizzazione-blocchi-configurati
+        Visualizzazione blocchi configurati
+    ], name: <b>),
+
+    node((1.8,1), align(center)[
+            @avviso-servizi-non-collegati Avviso servizi non collegati
+    ], name: <c>),
+    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
+
+    node((0.9,0.7), align(center)[
+            Nessun servizio #linebreak() collegato
+    ], shape: rect, name: <le>),
+    node((1.63,0.8), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
+
+    node(enclose: (<b>,<c>,<le>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione blocchi configurati UC diagram.]
+) <visualizzazione-blocchi-configurati-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la funzionalità di visualizzazione dei blocchi configurati.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. visualizza i blocchi configurati.
+ - Sistema:
+    1. verifica quali sono i servizi associati;
+    2. mostra i blocchi che hanno un servizio associato.
+- *Post-condizioni*:
+   - L'utente visualizza i blocchi configurati.
+- *Estensioni*:
+   - Avviso servizi non collegati (@avviso-servizi-non-collegati).
+
+=== Avviso servizi non collegati 
+<avviso-servizi-non-collegati>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account collegato ai servizi offerti dai blocchi.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. visualizza un avviso che segnala l'assenza di servizi collegati.
+ - Sistema:
+   1. non trova nessun servizio collegato; 
+   2. mostra un avviso.
+- *Pre-condizioni*:
+  - L'utente non ha collegato alcun servizio esterno per l'uso dei blocchi.
+- *Post-condizioni*:
+   - Viene segnalato all'utente che non ha nessun servizio collegato;
+   - L'utente viene rediretto alla pagina per collegare i servizi.
 
 === Salvataggio workflow <salvataggio-workflow>
 #figure(
@@ -668,17 +1282,18 @@
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-
-    node((0,0.25), [#image("../assets/actor.jpg") Utente], stroke: 0pt, name: <user>),
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @salvataggio-workflow Salvataggio workflow
-    ], shape: ellipse, name: <a>),
+    ], name: <a>),
 
     node((2,0.5), align(center)[
             @errore-connessione-database Errore connessione database
-    ], shape: ellipse, name: <b>),
+    ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
     node(enclose: (<a>,<b>),
@@ -690,26 +1305,29 @@
     ),
     caption: [Salvataggio workflow UC diagram.]
 ) <salvataggio-workflow-diagram>
-
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di salvataggio di un workflow.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. seleziona l'opzione per salvare il workflow che ha creato.
  - Sistema:
    1. interagisce con il database per salvare il workflow dell'utente.
 - *Pre-condizioni*:
-   - L'utente è loggato.
+    - L'utente ha disegnato un workflow.
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
    - Errore connessione database (@errore-connessione-database).
 
 === Errore connessione database <errore-connessione-database>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di gestione dell'errore di connessione al database.
 - *Attori principali*:
-  - Utente.
+  - Utente autenticato.
 - *Scenario principale*:
- - Utente:
+ - Utente autenticato:
    1. esegue un'operazione che richiede l'accesso ai dati sul database.
  - Sistema:
    1. interagisce con il database;
@@ -717,3 +1335,264 @@
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
    - Viene segnalato all'utente che non è possibile connettersi al database.
+
+=== Visualizzazione informazioni blocco <funzionalità-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((1,0.5), align(center)[
+            @funzionalità-blocco Vis. informazioni blocco
+    ], name: <a>),
+
+    node((1.7,0), align(center)[
+            @funzionalità-blocco-gmail Vis. informazioni blocco Gmail
+    ], name: <b>),
+    edge(<b>, <a>, marks: (none,empty-dash)),
+
+    node((2,0.5), align(center)[
+            @funzionalità-blocco-pastebin Vis. informazioni blocco Pastebin
+    ], name: <d>),
+    edge(<d>, <a>, marks: (none,empty-dash)),
+
+    node((1.7,1), align(center)[
+            @funzionalità-blocco-calendar Vis. informazioni blocco Calendar
+    ], name: <c>),
+    edge(<c>, <a>, marks: (none,empty-dash)),
+
+    node(enclose: (<a>,<b>,<c>,<d>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni blocco UC diagram.]
+) <visualizzazione-informazioni-blocco-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni di un blocco.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca su un blocco;
+    2. visualizza le informazioni disponibili.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco selezionato;
+    2. fa visualizzare la lista delle funzioni disponibili.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco selezionato.
+
+=== Visualizzazione informazioni del blocco Gmail <funzionalità-blocco-gmail>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-gmail Visualizzazione informazioni blocco Gmail
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni del blocco Gmail UC diagram.]
+) <visualizzazione-informazioni-blocco-gmail-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Gmail.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca sul blocco Gmail;
+    2. visualizza le informazioni relative al blocco.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Gmail;
+    2. fa visualizzare la lista delle funzioni disponibili: ricerca di una mail, ottenere una specifica mail, creazione di una bozza.
+- *Pre-condizioni*:
+    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.
+
+=== Visualizzazione informazioni del blocco Pastebin <funzionalità-blocco-pastebin>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-pastebin Visualizzazione informazioni blocco Pastebin
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni del blocco Pastebin UC diagram.]
+) <visualizzazione-funzionali-blocco-pastebin-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Pastebin.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca sul blocco Pastebin;
+    2. visualizza le informazioni relative al blocco.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Pastebin;
+    2. fa visualizzare la lista delle funzioni disponibili: creare e scrivere su un documento.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Pastebin.
+
+=== Visualizzazione informazioni del blocco Calendar <funzionalità-blocco-calendar>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-calendar Visualizzazione informazioni blocco Calendar
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni del blocco Calendar UC diagram.]
+) <visualizzazione-informazioni-blocco-calendar-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Calendar.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. clicca sul blocco Calendar;
+    2. visualizza le informazioni relative al blocco.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Calendar;
+    2. fa visualizzare la lista delle funzioni disponibili: creare un evento, cercare tra gli eventi creati.
+- *Pre-condizioni*:
+    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Calendar.
+
+=== Logout <logout>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((1,0), align(center)[
+            @logout Logout
+    ], shape: ellipse, name: <a>),
+
+    
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Logout UC diagram.]
+) <logout-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di logout di un utente.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona l'opzione per fare il logout;
+   2. conferma il logout.
+ - Sistema:
+   1. fa visualizzare la schermata di conferma del logout;
+   2. attende la conferma dell'utente;
+   3. disconnette l'account dall'applicativo.
+- *Post-condizioni*:
+   - L'utente non è più autenticato.
+
+=== Eliminazione workflow <eliminazione-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @eliminazione-workflow Eliminazione workflow
+    ], name: <a>),
+
+    node((2,0.5), align(center)[
+            @errore-connessione-database Errore connessione database
+    ], name: <b>),
+    edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
+
+    node(enclose: (<a>,<b>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Eliminazione workflow UC diagram.]
+) <eliminazione-workflow-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di eliminazione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona l'opzione per eliminare il workflow che ha creato.
+ - Sistema:
+   1. interagisce con il database per cancellare il workflow dell'utente.
+- *Pre-condizioni*:
+    - Il workflow selezionato è presente nel database.
+- *Post-condizioni*:
+   - Il workflow selezionato è stato eliminato dal database e non è più disponibile.
+- *Estensioni*:
+   - Errore connessione database (@errore-connessione-database).
