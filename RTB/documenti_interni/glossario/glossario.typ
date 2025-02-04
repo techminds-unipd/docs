@@ -105,7 +105,7 @@ Si ha che:
 <CPI>
 
 == CV // {Cost Variance}
-Acronimo di _Cost Variance_. Metrica che misura la differenza tra il valore e il costo del lavoro completato.Indica se il progetto è sotto o sopra il budget pianificato per il lavoro completato.#linebreak()
+Acronimo di _Cost Variance_. Metrica che misura la differenza tra il valore e il costo del lavoro completato. Indica se il progetto è sotto o sopra il budget pianificato per il lavoro completato.#linebreak()
 Si calcola come: $ "CV" &= #link(<EV>)[EV] - #link(<AC>)[AC] $#linebreak()
 Si ha quindi che:
 - Se CV > 0 il progetto sta spendendo meno di quanto ha guadagnato con il proprio lavoro ed è quindi sotto il budget previsto;
