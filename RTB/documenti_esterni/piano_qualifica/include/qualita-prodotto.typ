@@ -160,7 +160,7 @@ Misura delle prestazioni del software in termini di utilizzo delle risorse (es. 
     [ME1],
     [Tempo medio di esecuizone di un workflow],
     [Misura il tempo medio di esecuzione di un workflow],
-    [\u{2A7D}20 secondi (tempo timout)], 
+    [\u{2A7D}20 secondi (tempo timeout)], 
     [\u{2A7D}10 secondi],
   ), 
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti l'efficienza.]
