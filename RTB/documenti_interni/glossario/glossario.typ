@@ -263,7 +263,7 @@ Insieme di attività che devono raggiungere determinati obiettivi a partire da d
 == PV // {Planned Value}
 Acronimo di _Planned Value_. É una metrica che misura il valore del lavoro che, secondo la pianificazione, dovrebbe essere completato in un determinato momento.#linebreak()
 Si calcola come: $"PV" &= "(Percentuale di completamento pianificata)" dot "("#link(<BAC>)[BAC]")" $
-<PV>
+<PV>.
 
 == Pull request // {PR}
 Nel contesto di un repository di versionamento distribuito, è un modo per notificare ai membri del team che è stata completata una funzionalità in un branch di feature e che si può effettuare il merge nel branch main, con previa verifica.
