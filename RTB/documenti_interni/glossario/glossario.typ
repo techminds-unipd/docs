@@ -142,7 +142,7 @@ Misura dell'abilità di raggiungere l’obiettivo impiegando le risorse minime i
 
 == ETC // {Estimate to Complete}
 Acronimo di _Estimate to Complete_. É una metrica che stima il costo rimanente necessario per completare il progetto.#linebreak()
-La formula per calcolare l'ETC basandosi sulle performance attuali è: $"ETC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV]) / #link(<CPI>)[CPI]$.#linebreak()
+La formula per calcolare l'ETC, basandosi sulle performance attuali, è: $"ETC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV]) / #link(<CPI>)[CPI]$.#linebreak()
 Questa formula assume che la peformance di costo attuale non cambierà nel resto del progetto.
 
 <ETC>
