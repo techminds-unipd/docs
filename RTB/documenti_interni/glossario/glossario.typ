@@ -151,7 +151,7 @@ Questa formula assume che la peformance di costo attuale non cambierà nel resto
 Acronimo di _Earned Value_. Misura il valore del lavoro effettivamente completato in un dato momento. É il valore che il progetto ha effettivamente generato fino a quel momento.#linebreak()
 Si calcola come: $ "EV" &= "(Percentuale di lavoro completato)" dot "("#link(<BAC>)[BAC]")"$ ed è espresso in valore monetario.#linebreak()
 Va periodicamente confrontato con:
-- #link(<AC>)[AC] per valutare se il progetto è in linea con il budget o se si sta spendendo più di quello che si sta guadagnando con il proprio lavoro. Ciò  avviene tramite le metriche #link(<CV>)[CV] e #link(<CPI>)[CPI];
+- #link(<AC>)[AC] per valutare se il progetto è in linea con il budget o se si sta spendendo più di quello che si sta guadagnando con il proprio lavoro. Ciò  avviene tramite le metriche #link(<CV>)[CV] e #link(<CPI>)[CPI]\;
 - #link(<PV>)[PV] per valutare se il progetto è in linea con la pianificazione dal punto di vista dell'andamento temporale dei costi. Ciò avviene tramite le metriche #link(<SV>)[SV] e #link(<SPI>)[SPI].
 <EV>
 = F
