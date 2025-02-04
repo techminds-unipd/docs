@@ -78,7 +78,7 @@ Si dividono in:
         [QMR 8],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione],[Norme di progetto],
         [QDR 1],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger]],[Formazione col proponente],
         [QMR 10],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica]],[Piano di qualifica §2.2],
-        [QDR 2],[Il codice TypeScript deve essere formattato secondo le regole #glossario[ESLint]],[Decisione interna]
+        [QDR 2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint]],[Decisione interna]
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
