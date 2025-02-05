@@ -279,7 +279,7 @@ Ogni requisito è costituito da:
 3. Fonti: le fonti da cui è stato identificato il requisito.
 
 ==== Strumenti e tecnologie
-In linea con la nostra filosofia Docs as Code, tutti i diagrammi dei casi d'uso sono creati con Typst.
+In linea con la nostra filosofia "Docs as Code" (vedi @docsascode), tutti i diagrammi dei casi d'uso sono creati con Typst.
 
 === Progettazione
 L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi tutti gli stakeholder coinvolti nel progetto.

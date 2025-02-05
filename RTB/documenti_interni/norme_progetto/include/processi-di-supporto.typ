@@ -17,7 +17,7 @@ In particolare lo standard definisce quattro attività principali:
 Per la natura di questo progetto, la prima e ultima attività non verranno svolte interamente.
 
 === Progettazione e sviluppo
-==== Filosofia "Docs as code"
+==== Filosofia "Docs as code" <docsascode>
 Abbiamo scelto di usare la filosofia "#link(<docs-as-code>)[Docs as code]" che si prescrive di trattare tutta la documentazione come se fosse del vero e proprio codice sorgente. \ Questo porta i seguenti vantaggi:
 + Supporto agli #glossario[issue tracking system];;
 + Controllo di versione con #glossario[git];;
@@ -171,7 +171,7 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 + Test di regressione: verificano che le modifiche apportate al codice non abbiano introdotto errori in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
 + Test di accettazione: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente; sono l'ultima fase di test prima del possibile rilascio del prodotto.
 
-Ogni test è costituito da:
+//Ogni test è costituito da:
 // TODO: completare con l'identificazione dei test
 
 === Processo di verifica
@@ -198,15 +198,47 @@ A supporto del verificatore, per il controllo di alcune norme strutturali, sono 
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
-=== Verifica del design // TODO: non so se ci sia un modo, se lo facciamo lo mettiamo altrimenti si toglie
+//=== Verifica del design // TODO: non so se ci sia un modo, se lo facciamo lo mettiamo altrimenti si toglie
 
-=== Verifica del codice // TODO
+//=== Verifica del codice // TODO
 
 === Validazione
 Secondo lo standard ISO/IEC 12207:1995, la validazione è il processo che serve a determinare se i requisiti e il sistema/prodotto software finale, per come è stato costruito, soddisfano l'uso specifico previsto. Il prodotto finale deve quindi soddisfare tutti i requisiti concordati con il proponente e funzionare correttamente nel suo ambiente finale.
 // TODO: da completare con quello che faremo per validare
 
-== Revisioni congiunte con il cliente
+== Revisioni congiunte
+Secondo lo standard ISO/IEC 12207:1995, il processo di revisione congiunta ha l'obiettivo di valutare lo stato e i prodotti di un'attività di un progetto.
+Tali revisioni congiunte si svolgono durante tutto il ciclo di vita del "contratto" ed un processo che può essere impiegato da tutte le parti coinvolte, dove una parte (parte revisionante) esamina un'altra parte (parte revisionata).
+
+Questo processo si compone delle seguenti attività:
+- Implementazione del processo;
+- Revisioni della gestione del progetto;
+- Revisioni tecniche.
+
+=== Implementazione del processo
+Vengono programmate delle revisioni con il proponente quando lo svolgimento del lavoro ha raggiunto un buon grado di avanzamento rispetto all'incontro precedente. Durante tali revisioni rappresentiamo la parte revisionata, mentre il proponente rappresenta la parte revisionante. Oltre a concentrarsi sugli avanzamenti raggiunti, si discutono eventuali problematiche e le corrispettive azioni correttive necessarie.
+
+I risultati di tali revisioni sono poi documentati tramite i verbali esterni, i quali verranno firmati dalla parte revisionante per garantire lìapprovazione di quanto revisionato e discusso.
+
+=== Revisioni della gestione del progetto
+Questa attività riguarda la valutazione dello stato del progetto rispetto ai piani del progetto applicabili, ai programmi, agli standard e alle linee guida. 
+
+Ha quindi lo scopo di:
+- Verificare che le attività e il prodotto software procedano secondo i piani, valutando il loro stato;
+- Garantire che ci sia un'adeguata allocazione delle risorse;
+- Modificare la direzione del progetto o determinare la necessità di una pianificazione alternativa;
+- Valutare e gestire i rischi che potrebbero compromettere il successo del progetto.
+
+Tale attività viene svolta in fase di retrospettiva alla fine di ogni periodo.
+
+=== Revisioni tecniche
+L'attività "Revisioni tecniche" viene svolta costantemente dai verificatori e in fase di planning, per identificare i miglioramenti da apportare ai prodotti. In particolare è utile per fornire evidenza che essi:  
+- Sono completi;
+- Sono conformi agli standard e alle specifiche;
+- Le modifiche apportate sono correttamente implementate e interessano solo le aree identificate dalla change request;
+- Rispettano i programmi applicabili;
+- Sono pronti per la prossima attività;
+- Lo sviluppo, l'operatività o la manutenzione vengono condotti secondo i piani, i programmi, gli standard e le linee guida del progetto.
 
 == Verifiche ispettive interne
 
