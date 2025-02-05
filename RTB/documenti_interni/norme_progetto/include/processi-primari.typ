@@ -305,6 +305,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 
 //*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
 
+//==== Strumenti e tecnologie
 
 === Codifica e testing
 L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase, il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
