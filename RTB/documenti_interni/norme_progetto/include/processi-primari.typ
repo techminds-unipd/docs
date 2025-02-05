@@ -303,7 +303,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 - Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
 - Offrono un linguaggio comune (#glossario[UML]) che permette di seguire uno standard riconosciuto a livello internazionale.
 
-*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
+//*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
 
 
 === Codifica e testing
