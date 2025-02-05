@@ -239,7 +239,7 @@ Ha quindi lo scopo di:
 - Modificare la direzione del progetto o determinare la necessità di una pianificazione alternativa;
 - Valutare e gestire i rischi che potrebbero compromettere il successo del progetto.
 
-Tale attività viene svolta in fase di retrospettiva alla fine di ogni periodo.
+Tale attività viene svolta in fase di #glossario[retrospettiva] alla fine di ogni periodo.
 
 === Revisioni tecniche
 L'attività "Revisioni tecniche" viene svolta costantemente dai verificatori e in fase di planning, per identificare i miglioramenti da apportare ai prodotti. In particolare è utile per fornire evidenza che essi:  
@@ -264,7 +264,7 @@ Per garantire risultati concreti, è fondamentale adottare metodologie struttura
 Infine, la gestione accurata della documentazione relativa ai problemi riscontrati e alle soluzioni adottate è cruciale per assicurare trasparenza, tracciabilità e la possibilità di effettuare revisioni periodiche, contribuendo così a un costante miglioramento della qualità.
 
 === Gestione dei rischi
-All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione Analisi dei rischi). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le misure di mitigazione. 
+All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #glossario[Analisi dei rischi]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le misure di mitigazione. 
 
 ==== Codifica dei rischi
 Per identificare i rischi adottiamo la seguente struttura:
