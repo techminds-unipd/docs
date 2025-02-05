@@ -259,6 +259,10 @@ I componenti principali di un diagramma dei casi d'uso sono:
     ) <generalization>
 
 ==== Requisiti
+Per costruire un sistema efficace, efficiente e in linea con le aspettative del proponente è necessario individuare:
+- Requisiti funzionali: funzionalità e comportamenti che il software deve supportare per soddisfare le esigenze del proponente;
+- Requisiti non funzionali: definiscono come il sistema deve comportarsi, cioè le qualità, i vincoli e le caratteristiche tecniche che influenzano l'esperienza d'uso e le performance del software.
+
 Ogni requisito è costituito da:
 1. Codice: un codice identificativo univoco, nel formato 
 #align(center)[[Tipologia][Importanza]Requirement N]
@@ -269,10 +273,13 @@ Ogni requisito è costituito da:
 #h(3%)"Importanza" corrisponde a:
 
 #list(["M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder] ;],["D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile;],["O", optional, requisito opzionale, relativamente utile e contrattabile anche quando il progetto è in uno stato avanzato;],indent: 2.5em)
-#h(3%)"N" è un numero progressivo (es. QMR 2 indica un requisito di qualità obbligatorio numero 2);
+#h(3%)"N" è un numero progressivo (es. QMR2 indica un requisito di qualità obbligatorio numero 2);
 
 2. Descrizione: una breve descrizione del requisito;
 3. Fonti: le fonti da cui è stato identificato il requisito.
+
+==== Strumenti e tecnologie
+In linea con la nostra filosofia Docs as Code, tutti i diagrammi dei casi d'uso sono creati con Typst.
 
 === Progettazione
 L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi tutti gli stakeholder coinvolti nel progetto.
