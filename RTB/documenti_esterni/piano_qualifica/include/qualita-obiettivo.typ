@@ -278,7 +278,7 @@ La Pianificazione organizza obiettivi, risorse e tempistiche per guidare il succ
     [\u{2A7E}0],
     
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti la pianificazione.]
+  caption: [Pianificazione - Metriche e indici di qualità.]
 ) <tabella-MetrichePianificazione>
 
 ==== Miglioramento
@@ -302,5 +302,5 @@ Il processo di miglioramento mira a identificare le aree che possono essere otti
     [100%],
 
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti il miglioramento.]
+  caption: [Miglioramento - Metriche e indici di qualità.]
 ) <tabella-MetricheMiglioramento>
