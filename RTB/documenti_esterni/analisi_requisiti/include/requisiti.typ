@@ -110,7 +110,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         columns: (auto, auto, auto, auto),
         fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
         inset: 10pt,
-        table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Complessivo*])
+        table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Complessivo*]),
         align: horizon + center,
         [Funzionale], [15], [1], [16],
         [Di qualità], [9], [2], [11],
