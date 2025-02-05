@@ -1,3 +1,9 @@
+<div align="center">
+
+[![Build & Deploy](https://github.com/techminds-unipd/docs/actions/workflows/build_deploy.yml/badge.svg)](https://github.com/techminds-unipd/docs/actions/workflows/build_deploy.yml)
+
+</div>
+
 # Documentazione
 Questa repo contiene la documentazione del gruppo Tech Minds del progetto di SWE 24/25.
 ## Componenti del gruppo
