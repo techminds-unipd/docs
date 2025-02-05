@@ -1,5 +1,5 @@
 #import "/template/template.typ": glossario
-= Analisi dei rischi
+= Analisi dei rischi <analisi-dei-rischi>
 L'analisi dei rischi è una fase cruciale nella gestione di un #glossario[progetto] software, poiché permette di identificare, valutare e mitigare potenziali problemi che potrebbero compromettere il raggiungimento degli obiettivi. Un'analisi efficace consente al team di anticipare e affrontare in modo proattivo eventuali ostacoli, riducendo l'impatto di eventi negativi e migliorando la probabilità di successo del progetto.
 Di seguito verranno riportati tutti i rischi identificati, permettendo così una corretta classificazione. Per ogni rischio verrà indicata:\
 - Descrizione;
