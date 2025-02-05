@@ -1,5 +1,7 @@
 <div align="center">
-![Build & Deploy](https://github.com/techminds-unipd/docs/actions/workflows/build_deploy.yml/badge.svg)
+
+[![Build & Deploy](https://github.com/techminds-unipd/docs/actions/workflows/build_deploy.yml/badge.svg)](https://github.com/techminds-unipd/docs/actions/workflows/build_deploy.yml)
+
 </div>
 
 # Documentazione
