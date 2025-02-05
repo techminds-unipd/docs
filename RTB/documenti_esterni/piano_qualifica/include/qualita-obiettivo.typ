@@ -268,14 +268,15 @@ La Pianificazione organizza obiettivi, risorse e tempistiche per guidare il succ
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    [MPRO5],
-    [Schedule Variance (SV)],
-    [\u{2A7E}-10%],
-    [\u{2A7E}0],
     [MPRO4],
     [Cost Variance (CV)],
     [\u{2A7E}-10%],
     [\u{2A7E}0],
+    [MPRO5],
+    [Schedule Variance (SV)],
+    [\u{2A7E}-10%],
+    [\u{2A7E}0],
+    
   ), 
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti la pianificazione.]
 ) <tabella-MetrichePianificazione>
@@ -295,7 +296,7 @@ Il processo di miglioramento mira a identificare le aree che possono essere otti
     [Percentuale di metriche soddisfatte],
     [\u{2A7E}80%], 
     [100%],
-    [MPRO19], 
+    [MPRO15], 
     [Percentuale di metriche che hanno raggiunto il valore ottimale],
     [\u{2A7E}30%], 
     [100%],
