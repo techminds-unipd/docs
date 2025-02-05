@@ -27,7 +27,7 @@ Misura di quanto il prodotto software soddisfa i requisiti essenziali, desiderab
        accettabile*], [*Valore #linebreak()ottimale*]
     ),
    
-    [MF1],
+    [MFUN1],
     [Percentuale di requisiti obbligatori soddisfatti],
     [Metrica che valuta
 quanto del lavoro svolto
@@ -36,7 +36,7 @@ definiti in fase di analisi
 dei requisit],
     [100%],
     [100%],
-    [MF2],
+    [MFUN2],
     [Percentuale di requisiti desiderabili soddisfatti],
     [Metrica usata per valutare quanti di quei
 requisiti, che se integrati arricchirebbero
@@ -47,7 +47,7 @@ stati implementati o
 soddisfatti nel prodotto],
     [\u{2A7E}0%],
     [100%],
-    [MF3],
+    [MFUN3],
     [Percentuale di requisiti opzionali soddisfatti],
     [Metrica per valutare
 quanti dei requisiti aggiuntivi, non essenziali o
@@ -75,7 +75,7 @@ Misura della stabilità e leggibilità del software.
       #linebreak()
       ottimale*]
     ),
-    [MAF1], 
+    [MAFF1], 
     [#glossario[Indice di Gulpease]],
     [Misura la leggibilità di
 un testo in base alla
@@ -102,7 +102,7 @@ Indica quanto è semplice aggiornare, correggere o migliorare il software.
       ottimale*]
     ),
 
-    [MM1],
+    [MMAN1],
     [Accoppiamento tra
 classi
 ],
@@ -112,27 +112,27 @@ tra le classi all’interno di
 un sistema software],
     [\u{2A7D}9],
     [\u{2A7D}6],
-    [MM2],
+    [MMAN2],
     [Complessità ciclomatica
 per metodo],
     [Rappresenta la complessità di un metodo in
 base ai percorsi possibili.],
     [\u{2A7D}7],
     [\u{2A7D}5],
-    [MM3],
+    [MMAN3],
     [Parametri per metodo],
     [Numero massimo di
 parametri per metodo.],[\u{2A7D}6],[\u{2A7D}5],
-[MM4],
+[MMAN4],
 [Linee di codice per
 metodo],
 [Numero massimo di linee di codice per metodo.],
 [\u{2A7D}30],[\u{2A7D}20],
-[MM5],
+[MMAN5],
 [Attributi per classe],
 [Numero massimo di attributi per classe.],
 [\u{2A7D}4],[\u{2A7D}3],
-[MM6],
+[MMAN6],
 [Profondità della gerarchie],
 [Metrica che misura il
 numero di livelli tra una
@@ -142,6 +142,7 @@ classe base (superclasse) e le sue sottoclassi (classi derivate)],
   ), 
   caption: [Manutenibilità - Metriche e indici di qualità.]
 ) <tabella-MM>
+
 ==== Efficienza
 Misura delle prestazioni del software in termini di utilizzo delle risorse (es. tempo di esecuzione) rispetto a soglie accettabili e ottimali.
 #figure(
@@ -157,7 +158,7 @@ Misura delle prestazioni del software in termini di utilizzo delle risorse (es. 
       #linebreak()
       ottimale*]
     ),
-    [ME1],
+    [MEFF1],
     [Tempo medio di esecuizone di un workflow],
     [Misura il tempo medio di esecuzione di un workflow],
     [\u{2A7D}20 secondi (tempo timeout)], 
@@ -181,7 +182,7 @@ Valuta quanto è facile per gli utenti interagire con il prodotto software.
       ottimale*]
     ),
 
-    [MU1],
+    [MUSA1],
     [Click per utilizzare una funzionalità],
     [Metrica che misura il numero di click minimo necessari per poter utilizzare una funzionalità.],
     [⩽7 click],
@@ -207,12 +208,12 @@ Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti p
       ottimale*]
     ),
 
-    [MAC1],
+    [MACC1],
     [Caption in tabelle e figure],
     [Indica quante figure e tabelle hanno un titolo descrittivo associato.],
     [100%],
     [100%],
-    [MAC2],
+    [MACC2],
     [Livello WCAG],
     [Valuta il livello di conformità agli standard WCAG per l'accessibilità.],
     [A],
@@ -237,7 +238,7 @@ Analizza la capacità del software di funzionare su diverse piattaforme e ambien
       ottimale*]
     ),
 
-    [MP1],
+    [MPOR1],
     [Versioni dei browser supportate],
     [Calcola la percentuale di versioni di browser compatibili rispetto al totale disponibile sul mercato.],
     [⩾75%],

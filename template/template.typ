@@ -29,6 +29,7 @@
     set align(center)
     show link: underline
     show link: set text(rgb("#f16610"))
+    set text(lang: "it")
 
     parbreak()
 
@@ -59,6 +60,7 @@
     pagebreak()
     set par(justify: true)
     body
+    outline(title: "Lista delle figure", target: figure)
 }
 
 #let verbale(
@@ -80,6 +82,7 @@
     show link: underline
     show link: set text(rgb("#f16610"))
     set par(justify: true)
+    set text(lang: "it")
     durata_luogo.at(0) = "Inizio: " + durata_luogo.at(0)
     durata_luogo.at(1) = "Fine: " + durata_luogo.at(1)
     durata_luogo.at(2) = "Luogo: " + durata_luogo.at(2)
