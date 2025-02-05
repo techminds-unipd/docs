@@ -240,7 +240,36 @@ L'attività "Revisioni tecniche" viene svolta costantemente dai verificatori e i
 - Sono pronti per la prossima attività;
 - Lo sviluppo, l'operatività o la manutenzione vengono condotti secondo i piani, i programmi, gli standard e le linee guida del progetto.
 
-== Verifiche ispettive interne
+//== Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi
-=== Gestione dei cambiamenti
+Mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti e che le cause scatenanti siano riconosciute.
+
+Il processo di risoluzione dei problemi ha l’obiettivo di garantire un approccio rapido, responsabile e ben documentato per analizzare e risolvere le criticità riscontrate durante l’intero ciclo di vita del prodotto. Questo processo non si limita a gestire i problemi nell’immediato, ma punta anche a riconoscere eventuali tendenze e a comprendere le cause profonde delle non conformità, adottando misure preventive per evitarne il ripetersi in futuro.
+
+L’intento principale è affrontare ogni problematica in modo efficace, promuovendo al contempo una cultura del miglioramento continuo. L’esperienza derivante dall’analisi degli errori passati diventa così una risorsa preziosa per ottimizzare i processi e favorire la crescita organizzativa.
+
+Per garantire risultati concreti, è fondamentale adottare metodologie strutturate e strumenti adeguati, come la raccolta sistematica dei dati, l’analisi delle cause radice, la valutazione degli impatti e la definizione di piani d’azione correttivi e preventivi.
+
+Infine, la gestione accurata della documentazione relativa ai problemi riscontrati e alle soluzioni adottate è cruciale per assicurare trasparenza, tracciabilità e la possibilità di effettuare revisioni periodiche, contribuendo così a un costante miglioramento della qualità.
+
+=== Gestione dei rischi
+All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione Analisi dei rischi). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le misure di mitigazione. 
+
+==== Codifica dei rischi
+Per identificare i rischi adottiamo la seguente struttura:
+- *Codice*: 
+#align(center, block[
+  #set align(center)
+  R[a][numero]
+])
+dove:
+#set list(indent: 1em)
+- R: indica che si tratta di un rischio;
+- a: indica la primalettera della categoria di appartenenza del rischio (se ritenuto necessario è possibile inserire le prime 2 lettere);
+- numero: numero progressivo del rischio.
+#set list(indent: 0em)
+- *Descrizione*: descrizione del rischio;
+- *Probabilità di occorrenza*: numero da 1 a 5, dove 5 indica altissima probabilità di occorrenza;
+- *Pericolosità*: alta, media o bassa;
+- *Tecniche di mitigazione*: azioni che permettono di arginanare le possibili conseguenze del rischio.
