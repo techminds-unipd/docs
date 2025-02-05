@@ -230,26 +230,6 @@ Vengono programmate delle revisioni con il proponente quando lo svolgimento del 
 
 I risultati di tali revisioni sono poi documentati tramite i verbali esterni, i quali verranno firmati dalla parte revisionante per garantire l'approvazione di quanto revisionato e discusso.
 
-=== Revisioni della gestione del progetto
-Questa attività riguarda la valutazione dello stato del progetto rispetto ai piani del progetto applicabili, ai programmi, agli standard e alle linee guida. 
-
-Ha quindi lo scopo di:
-- Verificare che le attività e il prodotto software procedano secondo i piani, valutando il loro stato;
-- Garantire che ci sia un'adeguata allocazione delle risorse;
-- Modificare la direzione del progetto o determinare la necessità di una pianificazione alternativa;
-- Valutare e gestire i rischi che potrebbero compromettere il successo del progetto.
-
-Tale attività viene svolta in fase di #glossario[retrospettiva] alla fine di ogni periodo.
-
-=== Revisioni tecniche
-L'attività "Revisioni tecniche" viene svolta costantemente dai verificatori e in fase di planning, per identificare i miglioramenti da apportare ai prodotti. In particolare è utile per fornire evidenza che essi:  
-- Sono completi;
-- Sono conformi agli standard e alle specifiche;
-- Le modifiche apportate sono correttamente implementate e interessano solo le aree identificate dalla change request;
-- Rispettano i programmi applicabili;
-- Sono pronti per la prossima attività;
-- Lo sviluppo, l'operatività o la manutenzione vengono condotti secondo i piani, i programmi, gli standard e le linee guida del progetto.
-
 //== Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi
