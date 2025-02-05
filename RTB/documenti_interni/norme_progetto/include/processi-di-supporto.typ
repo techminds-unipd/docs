@@ -46,7 +46,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
   - sommario (breve descrizione del contenuto del documento).
 + Changelog, tabella che contiene tutti i cambiamenti effettuati al documento:
   - versione del documento;
-  - data della modifica;
+  - data della modifica nel formato gg/mm/aaaa;
   - autore della modifica;
   - verificatore.
 + Indice;
