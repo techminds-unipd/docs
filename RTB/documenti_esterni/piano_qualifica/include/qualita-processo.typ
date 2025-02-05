@@ -4,7 +4,7 @@
 show figure: set block(breakable: true)
 figure(
   table(
-    columns: (0.6fr, 1.1fr, 2fr, 0.9fr, 0.75fr),
+    columns: (0.65fr, 1.1fr, 2fr, 0.9fr, 0.75fr),
     fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
     inset: 10pt,
     align: horizon,
