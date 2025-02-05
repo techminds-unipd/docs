@@ -115,6 +115,16 @@ Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le
 - Garanzia di prodotto: definisce le garanzie di qualità che il prodotto software deve soddisfare;
 - Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
 
+=== PDCA
+Il ciclo PDCA, noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di raggiungere la qualità. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
+
+1. *Plan*: in questa fase si definiscono le attività necessarie per identificare quali processi avviare e in quale ordine, con l’obiettivo di raggiungere risultati specifici. Si stabiliscono obiettivi di miglioramento chiari e si progettano le azioni da intraprendere. Non riguarda pianificazione di progetto, ma bensì pianificazione di miglioramento;
+2. *Do*: si passa all’azione, mettendo in pratica quanto pianificato. Durante l’esecuzione si raccolgono dati e si monitorano i risultati per valutare l’efficacia delle attività svolte. Non è sviluppo, ma dispiegamento (esplorativo) di azioni di miglioramento;
+3. *Check*: qui si analizzano i dati raccolti nella fase di esecuzione, confrontandoli con gli obiettivi prefissati. Si utilizzano *metriche* specifiche per interpretare i risultati e individuare eventuali discrepanze o aree di miglioramento. Verifichiamo quindi l’esito delle azioni di miglioramento rispetto alle attese;
+4. *Act*: sulla base delle valutazioni precedenti, si consolidano le pratiche che hanno prodotto risultati positivi, inserendole nel way of working. Si implementano poi azioni correttive per affrontare eventuali criticità. Si analizzano le cause dei problemi e si apportano miglioramenti, favorendo così un’evoluzione continua del processo.
+
+Ogni ciclo PDCA rappresenta un’opportunità per raggiungere la qualità, creando un processo di miglioramento costante e progressivo.
+
 === Piano di qualifica
 Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni informate basate sui dati a disposizione.
 
@@ -131,7 +141,7 @@ dove:
 - numero: numero progressivo della metrica.
 #set list(indent: 0em)
 - *Nome:* specifica il nome della metrica;
-//- *Descrizione:* breve descrizione della metrica;
+- *Descrizione:* breve descrizione della metrica;
 //- *Scopo:* obiettivo della metrica;
 
 //- *Formula:* formula matematica per il calcolo della metrica;
