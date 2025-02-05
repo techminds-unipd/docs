@@ -1,5 +1,5 @@
 #import "/template/template.typ": glossario
-= Requisiti
+= Requisiti e tracciamento
 
 == Requisiti funzionali
 
@@ -42,13 +42,13 @@
 
         [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati], [@visualizzazione-blocchi-configurati, @avviso-servizi-non-collegati],
        
-        [FDR1], [L'utente autenticato deve poter salvare un workflow], [@salvataggio-workflow, @errore-connessione-database],
+        [FMR12], [L'utente autenticato deve poter salvare un workflow], [@salvataggio-workflow, @errore-connessione-database],
 
-        [FMR12], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
+        [FMR13], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
-        [FMR13], [L'utente autenticato deve poter fare il logout], [@logout],
+        [FMR14], [L'utente autenticato deve poter fare il logout], [@logout],
 
-        [FMR14], [L'utente autenticato deve poter cancellare un workflow], [@eliminazione-workflow]
+        [FMR15], [L'utente autenticato deve poter cancellare un workflow], [@eliminazione-workflow]
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
@@ -77,7 +77,7 @@ Si dividono in:
         [QMR7],[Documentare le classi attraverso #glossario[diagrammi UML]],[Capitolato],
         [QMR8],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione],[Norme di progetto],
         [QDR1],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger]],[Formazione col proponente],
-        [QMR10],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica]],[Piano di qualifica §2.2],
+        [QMR9],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica]],[Piano di qualifica §2.2],
         [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint]],[Decisione interna]
     ),
     caption: [Tabella dei requisiti di qualità.]
@@ -102,6 +102,20 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
-== Tracciamento
 
 == Riepilogo
+#set par (justify: false)
+#figure(
+    table(
+        columns: (auto, auto, auto, auto),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        inset: 10pt,
+        table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Complessivo*])
+        align: horizon + center,
+        [Funzionale], [15], [1], [16],
+        [Di qualità], [9], [2], [11],
+        [Di vincolo], [2], [1], [3],
+        table.cell(colspan: 3, align: left)[*Totale*], [*#str(16+11+3)*],
+    ),
+    caption: [Tabella di riepilogo dei requisiti.]
+)<tabella-riepilogo>
