@@ -120,10 +120,10 @@ Il ciclo PDCA, noto anche come ciclo di Deming, è stato scelto come approccio p
 
 1. *Plan*: in questa fase si definiscono le attività necessarie per identificare quali processi avviare e in quale ordine, con l’obiettivo di raggiungere risultati specifici. Si stabiliscono obiettivi di miglioramento chiari e si progettano le azioni da intraprendere. Non riguarda pianificazione di progetto, ma bensì pianificazione di miglioramento;
 2. *Do*: si passa all’azione, mettendo in pratica quanto pianificato. Durante l’esecuzione si raccolgono dati e si monitorano i risultati per valutare l’efficacia delle attività svolte. Non è sviluppo, ma dispiegamento (esplorativo) di azioni di miglioramento;
-3. *Check*: qui si analizzano i dati raccolti nella fase di esecuzione, confrontandoli con gli obiettivi prefissati. Si utilizzano *metriche* specifiche per interpretare i risultati e individuare eventuali discrepanze o aree di miglioramento. Verifichiamo quindi l’esito delle azioni di miglioramento rispetto alle attese;
+3. *Check*: qui si analizzano i dati raccolti nella fase di esecuzione, confrontandoli con gli obiettivi prefissati. Si utilizzano metriche specifiche per interpretare i risultati e individuare eventuali discrepanze o aree di miglioramento. Verifichiamo quindi l’esito delle azioni di miglioramento rispetto alle attese;
 4. *Act*: sulla base delle valutazioni precedenti, si consolidano le pratiche che hanno prodotto risultati positivi, inserendole nel way of working. Si implementano poi azioni correttive per affrontare eventuali criticità. Si analizzano le cause dei problemi e si apportano miglioramenti, favorendo così un’evoluzione continua del processo.
 
-Ogni ciclo PDCA rappresenta un’opportunità per raggiungere la qualità, creando un processo di miglioramento costante e progressivo.
+Ogni ciclo PDCA rappresenta un’opportunità per raggiungere gli obiettivi di qualità fissati, creando un processo di miglioramento costante e progressivo.
 
 === Piano di qualifica
 Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni informate basate sui dati a disposizione.
@@ -218,7 +218,7 @@ Secondo lo standard ISO/IEC 12207:1995, la validazione è il processo che serve 
 
 == Revisioni congiunte
 Secondo lo standard ISO/IEC 12207:1995, il processo di revisione congiunta ha l'obiettivo di valutare lo stato e i prodotti di un'attività di un progetto.
-Tali revisioni congiunte si svolgono durante tutto il ciclo di vita del "contratto" ed un processo che può essere impiegato da tutte le parti coinvolte, dove una parte (parte revisionante) esamina un'altra parte (parte revisionata).
+Tali revisioni congiunte si svolgono durante tutto il ciclo di vita del rapporto con il proponente. Questo processo può essere impiegato da tutte le parti coinvolte, dove una parte (parte revisionante) esamina un'altra parte (parte revisionata).
 
 Questo processo si compone delle seguenti attività:
 - Implementazione del processo;
@@ -253,7 +253,7 @@ L'attività "Revisioni tecniche" viene svolta costantemente dai verificatori e i
 //== Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi
-Mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti e che le cause scatenanti siano riconosciute.
+Mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti, riconoscendo le cause scatenanti.
 
 Il processo di risoluzione dei problemi ha l’obiettivo di garantire un approccio rapido, responsabile e ben documentato per analizzare e risolvere le criticità riscontrate durante l’intero ciclo di vita del prodotto. Questo processo non si limita a gestire i problemi nell’immediato, ma punta anche a riconoscere eventuali tendenze e a comprendere le cause profonde delle non conformità, adottando misure preventive per evitarne il ripetersi in futuro.
 
@@ -264,7 +264,7 @@ Per garantire risultati concreti, è fondamentale adottare metodologie struttura
 Infine, la gestione accurata della documentazione relativa ai problemi riscontrati e alle soluzioni adottate è cruciale per assicurare trasparenza, tracciabilità e la possibilità di effettuare revisioni periodiche, contribuendo così a un costante miglioramento della qualità.
 
 === Gestione dei rischi
-All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #glossario[Analisi dei rischi]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le misure di mitigazione. 
+All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #glossario[Analisi dei rischi]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
 
 ==== Codifica dei rischi
 Per identificare i rischi adottiamo la seguente struttura:
