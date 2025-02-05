@@ -4,7 +4,8 @@
   title: "Piano di qualifica",
   sommario: "Il documento espone le metriche di verifica attuate per garantire qualità.",
   changelog: (
-    "0.5.2", "05/02/2025", "Modifica metriche qualità di processo", team.S, "",
+    "0.5.3", "05/02/2025", "Modifica metriche qualità di processo", team.S, "",
+    "0.5.2", "05/02/2025", "Fix caption tabelle", team.G, team.T,
     "0.5.1", "04/02/2025", "Modifica identificativi metriche", team.C, team.M,
     "0.5.0", "04/02/2025", "Aggiunta qualità processi primari", team.L, team.G,
     "0.4.0", "01/02/2025", "Aggiunta qualità processi organizzativi", team.A, team.C,

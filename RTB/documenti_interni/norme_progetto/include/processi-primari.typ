@@ -267,8 +267,6 @@ Ogni requisito è costituito da:
 2. Descrizione: una breve descrizione del requisito;
 3. Fonti: le fonti da cui è stato identificato il requisito.
 
-==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
-
 === Progettazione
 L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi tutti gli stakeholder coinvolti nel progetto.
 
@@ -293,7 +291,6 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 
 *Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
 
-==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Codifica e testing
 L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase, il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
@@ -308,8 +305,6 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codi
 - Fattibilità delle operazioni e della manutenzione.
 
 // qui si dovranno mettere le regole che decidiamo di seguire per il codice, ad esempio come indentare, come scrivere i commenti, lunghezza metodi ecc.
-
-==== Metriche // da aggiornare quando si farà la sezione riguardante la qualità
 
 === Integrazione
 L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.

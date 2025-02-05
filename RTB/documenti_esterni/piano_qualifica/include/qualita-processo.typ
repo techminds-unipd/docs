@@ -111,5 +111,5 @@ figure(
     [\u{2A7E}30%], 
     [100%],
   ), 
-  caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche per la qualità dei processi.]
+  caption: [Qualità di processo - Metriche e indici di qualità.]
 )} <tabella-qualita-processo>
