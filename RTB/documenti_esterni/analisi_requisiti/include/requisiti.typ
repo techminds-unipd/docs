@@ -1,4 +1,5 @@
 #import "/template/template.typ": glossario
+#show figure: set block(breakable: true)
 = Requisiti e tracciamento
 
 == Requisiti funzionali
@@ -102,7 +103,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
-
+#pagebreak()
 == Riepilogo
 #set par (justify: false)
 #figure(

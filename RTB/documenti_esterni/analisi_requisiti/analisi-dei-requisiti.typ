@@ -7,7 +7,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
-    "0.23.0", "5/02/2025", "Aggiunta tabella riepilogo + fix codice tabella requisiti", team.G, "",
+    "0.23.0", "05/02/2025", "Aggiunta tabella riepilogo + fix codice tabella requisiti", team.G, team.M,
     "0.22.0", "23/01/2025", "Fix UC19 e aggiunta UC29", team.S, team.C,
     "0.21.0", "23/01/2025", "Aggiunto use case eliminazione workflow", team.T, team.G,
     "0.20.0", "20/01/2025", "Aggiunti requisiti di vincolo", team.T, team.C,
