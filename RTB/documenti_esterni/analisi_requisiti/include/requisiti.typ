@@ -115,7 +115,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         [Funzionale], [15], [1], [16],
         [Di qualità], [9], [2], [11],
         [Di vincolo], [2], [1], [3],
-        table.cell(colspan: 3, align: left)[*Totale*], [*#str(16+11+3)*],
+        [*Totale*], [*#str(15+9+2)*], [*#str(1+2+1)*], [*#str(16+11+3)*],
     ),
     caption: [Tabella di riepilogo dei requisiti.]
 )<tabella-riepilogo>
