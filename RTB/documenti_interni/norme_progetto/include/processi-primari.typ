@@ -321,6 +321,8 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codi
 
 // qui si dovranno mettere le regole che decidiamo di seguire per il codice, ad esempio come indentare, come scrivere i commenti, lunghezza metodi ecc.
 
+//==== Strumenti e tecnologie
+
 === Integrazione
 L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
 
