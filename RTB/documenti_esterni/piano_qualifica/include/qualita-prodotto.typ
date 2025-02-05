@@ -1,5 +1,5 @@
-
 #import "/template/template.typ":glossario
+#import "./definizione-metriche.typ": getMFUN, getMAFF, getMMAN, getMEFF, getMUSA, getMACC, getMPOR
 
 == Qualità di prodotto
 
@@ -15,6 +15,7 @@ Le sezioni principali includono una dettagliata analisi delle qualità di prodot
 - Portabilità;
 ==== Funzionalità
 Misura di quanto il prodotto software soddisfa i requisiti essenziali, desiderabili e opzionali, garantendo che le funzionalità principali siano completamente implementate.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -26,42 +27,17 @@ Misura di quanto il prodotto software soddisfa i requisiti essenziali, desiderab
        #linebreak()
        accettabile*], [*Valore #linebreak()ottimale*]
     ),
-   
-    [MFUN1],
-    [Percentuale di requisiti obbligatori soddisfatti],
-    [Metrica che valuta
-quanto del lavoro svolto
-durante lo sviluppo corrisponda ai requisiti essenziali o obbligatori
-definiti in fase di analisi
-dei requisit],
-    [100%],
-    [100%],
-    [MFUN2],
-    [Percentuale di requisiti desiderabili soddisfatti],
-    [Metrica usata per valutare quanti di quei
-requisiti, che se integrati arricchirebbero
-l’esperienza dell’utente
-o fornirebbero vantaggi
-aggiuntivi non strettamente necessari, sono
-stati implementati o
-soddisfatti nel prodotto],
-    [\u{2A7E}0%],
-    [100%],
-    [MFUN3],
-    [Percentuale di requisiti opzionali soddisfatti],
-    [Metrica per valutare
-quanti dei requisiti aggiuntivi, non essenziali o
-di bassa priorità, sono
-stati implementati o
-soddisfatti nel prodotto],
-    [\u{2A7E}0%],
-    [100%]
+    ..getMFUN(1),
+    ..getMFUN(2),
+    ..getMFUN(3),
   ), 
   caption: [Funzionalità - Metriche e indici di qualità.]
 ) <tabella-MF>
+#set par (justify: true)
 
 ==== Affidabilità
 Misura della stabilità e leggibilità del software.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -75,19 +51,15 @@ Misura della stabilità e leggibilità del software.
       #linebreak()
       ottimale*]
     ),
-    [MAFF1], 
-    [#glossario[Indice di Gulpease]],
-    [Misura la leggibilità di
-un testo in base alla
-lunghezza delle parole
-e delle frasi],
-    [40], 
-    [70],
+    ..getMAFF(1),
   ), 
   caption: [Affidabilità - Metriche e indici di qualità.]
 ) <tabella-MAF>
+#set par (justify: true)
+
 ==== Manutenibilità
 Indica quanto è semplice aggiornare, correggere o migliorare il software.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -101,50 +73,20 @@ Indica quanto è semplice aggiornare, correggere o migliorare il software.
       #linebreak()
       ottimale*]
     ),
-
-    [MMAN1],
-    [Accoppiamento tra
-classi
-],
-    [Misura della dipendenza
-e dell’interconnessione
-tra le classi all’interno di
-un sistema software],
-    [\u{2A7D}9],
-    [\u{2A7D}6],
-    [MMAN2],
-    [Complessità ciclomatica
-per metodo],
-    [Rappresenta la complessità di un metodo in
-base ai percorsi possibili.],
-    [\u{2A7D}7],
-    [\u{2A7D}5],
-    [MMAN3],
-    [Parametri per metodo],
-    [Numero massimo di
-parametri per metodo.],[\u{2A7D}6],[\u{2A7D}5],
-[MMAN4],
-[Linee di codice per
-metodo],
-[Numero massimo di linee di codice per metodo.],
-[\u{2A7D}30],[\u{2A7D}20],
-[MMAN5],
-[Attributi per classe],
-[Numero massimo di attributi per classe.],
-[\u{2A7D}4],[\u{2A7D}3],
-[MMAN6],
-[Profondità della gerarchie],
-[Metrica che misura il
-numero di livelli tra una
-classe base (superclasse) e le sue sottoclassi (classi derivate)],
-[\u{2A7D}5],[\u{2A7D}3]
-
+    ..getMMAN(1),
+    ..getMMAN(2),
+    ..getMMAN(3),
+    ..getMMAN(4),
+    ..getMMAN(5),
+    ..getMMAN(6),
   ), 
   caption: [Manutenibilità - Metriche e indici di qualità.]
 ) <tabella-MM>
+#set par (justify: true)
 
 ==== Efficienza
 Misura delle prestazioni del software in termini di utilizzo delle risorse (es. tempo di esecuzione) rispetto a soglie accettabili e ottimali.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -158,16 +100,15 @@ Misura delle prestazioni del software in termini di utilizzo delle risorse (es. 
       #linebreak()
       ottimale*]
     ),
-    [MEFF1],
-    [Tempo medio di esecuizone di un workflow],
-    [Misura il tempo medio di esecuzione di un workflow],
-    [\u{2A7D}20 secondi (tempo timeout)], 
-    [\u{2A7D}10 secondi],
+    ..getMEFF(1),
   ), 
   caption: [Efficienza - Metriche e indici di qualità.]
 ) <tabella-ME>
+#set par (justify: true)
+
 ==== Usabilità
 Valuta quanto è facile per gli utenti interagire con il prodotto software.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -182,18 +123,16 @@ Valuta quanto è facile per gli utenti interagire con il prodotto software.
       ottimale*]
     ),
 
-    [MUSA1],
-    [Click per utilizzare una funzionalità],
-    [Metrica che misura il numero di click minimo necessari per poter utilizzare una funzionalità.],
-    [⩽7 click],
-    [⩽5 click],
+    ..getMUSA(1),
   ), 
   caption: [Usabilità - Metriche e indici di qualità.]
 ) <tabella-MU>
+#set par (justify: true)
 
 
 ==== Accessibilità
 Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti possibile.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -208,22 +147,16 @@ Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti p
       ottimale*]
     ),
 
-    [MACC1],
-    [Caption in tabelle e figure],
-    [Indica quante figure e tabelle hanno un titolo descrittivo associato.],
-    [100%],
-    [100%],
-    [MACC2],
-    [Livello WCAG],
-    [Valuta il livello di conformità agli standard WCAG per l'accessibilità.],
-    [A],
-    [AA]
+    ..getMACC(1),
+    ..getMACC(2),
   ), 
   caption: [Accessibilità - Metriche e indici di qualità.]
 ) <tabella-MAC>
+#set par (justify: true)
 
 ==== Portabilità
 Analizza la capacità del software di funzionare su diverse piattaforme e ambienti.
+#set par (justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -237,12 +170,8 @@ Analizza la capacità del software di funzionare su diverse piattaforme e ambien
       #linebreak()
       ottimale*]
     ),
-
-    [MPOR1],
-    [Versioni dei browser supportate],
-    [Calcola la percentuale di versioni di browser compatibili rispetto al totale disponibile sul mercato.],
-    [⩾75%],
-    [100%],
+    ..getMPOR(1),
   ), 
   caption: [Portabilità - Metriche e indici di qualità.]
 ) <tabella-MP>
+#set par (justify: true)
