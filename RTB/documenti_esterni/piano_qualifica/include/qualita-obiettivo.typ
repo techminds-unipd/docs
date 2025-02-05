@@ -268,19 +268,14 @@ La Pianificazione organizza obiettivi, risorse e tempistiche per guidare il succ
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    [MPRO15], 
-    [Variazione del costo preventivato per uno sprint],
-    [\u{2A7D}5%], 
-    [\u{2A7D}0%],
-    [MPRO16],
-    [Variazione delle tempistiche di una baseline],
-    [\u{2A7D}10%], 
-    [\u{2A7D}0%],
-    [MPRO17],
-    [Percentuale di attività (issue) completate in uno sprint],
-    [\u{2A7E}90%], 
-    [100%],
-
+    [MPRO5],
+    [Schedule Variance (SV)],
+    [\u{2A7E}-10%],
+    [\u{2A7E}0],
+    [MPRO4],
+    [Cost Variance (CV)],
+    [\u{2A7E}-10%],
+    [\u{2A7E}0],
   ), 
   caption: [Tabella con codice, nome, descrizione, valori soglia accettabili e ottimali delle metriche riguardanti la pianificazione.]
 ) <tabella-MetrichePianificazione>
@@ -296,10 +291,10 @@ Il processo di miglioramento mira a identificare le aree che possono essere otti
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    [MPRO18], 
-    [Percentuale di metriche che non hanno raggiunto il valore accettabile],
-    [\u{2A7D}5%], 
-    [0%],
+    [MPRO14], 
+    [Percentuale di metriche soddisfatte],
+    [\u{2A7E}80%], 
+    [100%],
     [MPRO19], 
     [Percentuale di metriche che hanno raggiunto il valore ottimale],
     [\u{2A7E}30%], 
