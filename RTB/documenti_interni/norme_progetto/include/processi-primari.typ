@@ -80,7 +80,14 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo i
 5. Installazione.
 
 === Analisi dei requisiti
-L'attività di analisi dei requisiti è fondamentale per la corretta comprensione delle esigenze del proponente. In questa fase il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
+L'attività di analisi dei requisiti è fondamentale per:
+- La corretta comprensione delle esigenze del proponente;
+- Identificare, documentare e validare i requisiti funzionali e non funzionali;
+- Evitare il rischio che il prodotto software non converga mai;
+- Facilitare la compresione dei requisiti a tutti gli #glossario[stakeholder];
+- Garantire che la progettazione riceva in input dei requisiti chiari e semplici da comprendere.
+
+In questa fase, quindi, il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
 
 In generale, l'analisi studia a fondo i bisogni, con particolare attenzione al "cosa" deve succedere nel prodotto che verrà sviluppato, ovvero alla sua struttura funzionale. I requisiti riflettono la prospettiva dell'utente nel passaggio dalla situazione senza, a quella con il prodotto. Uno dei modi più efficaci per individuare i requisiti è attraverso la scrittura dei casi d'uso.
 
@@ -252,6 +259,10 @@ I componenti principali di un diagramma dei casi d'uso sono:
     ) <generalization>
 
 ==== Requisiti
+Per costruire un sistema efficace, efficiente e in linea con le aspettative del proponente è necessario individuare:
+- Requisiti funzionali: funzionalità e comportamenti che il software deve supportare per soddisfare le esigenze del proponente;
+- Requisiti non funzionali: definiscono come il sistema deve comportarsi, cioè le qualità, i vincoli e le caratteristiche tecniche che influenzano l'esperienza d'uso e le performance del software.
+
 Ogni requisito è costituito da:
 1. Codice: un codice identificativo univoco, nel formato 
 #align(center)[[Tipologia][Importanza]Requirement N]
@@ -262,10 +273,13 @@ Ogni requisito è costituito da:
 #h(3%)"Importanza" corrisponde a:
 
 #list(["M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder] ;],["D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile;],["O", optional, requisito opzionale, relativamente utile e contrattabile anche quando il progetto è in uno stato avanzato;],indent: 2.5em)
-#h(3%)"N" è un numero progressivo (es. QMR 2 indica un requisito di qualità obbligatorio numero 2);
+#h(3%)"N" è un numero progressivo (es. QMR2 indica un requisito di qualità obbligatorio numero 2);
 
 2. Descrizione: una breve descrizione del requisito;
 3. Fonti: le fonti da cui è stato identificato il requisito.
+
+==== Strumenti e tecnologie
+In linea con la nostra filosofia "Docs as Code" (vedi @docsascode), tutti i diagrammi dei casi d'uso sono creati con Typst.
 
 === Progettazione
 L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi tutti gli stakeholder coinvolti nel progetto.
@@ -289,8 +303,9 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 - Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
 - Offrono un linguaggio comune (#glossario[UML]) che permette di seguire uno standard riconosciuto a livello internazionale.
 
-*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
+//*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
 
+//==== Strumenti e tecnologie
 
 === Codifica e testing
 L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase, il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
@@ -305,6 +320,8 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codi
 - Fattibilità delle operazioni e della manutenzione.
 
 // qui si dovranno mettere le regole che decidiamo di seguire per il codice, ad esempio come indentare, come scrivere i commenti, lunghezza metodi ecc.
+
+//==== Strumenti e tecnologie
 
 === Integrazione
 L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.

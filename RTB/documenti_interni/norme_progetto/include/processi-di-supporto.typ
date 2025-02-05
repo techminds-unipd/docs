@@ -17,8 +17,8 @@ In particolare lo standard definisce quattro attività principali:
 Per la natura di questo progetto, la prima e ultima attività non verranno svolte interamente.
 
 === Progettazione e sviluppo
-==== Filosofia "Docs as code"
-Abbiamo scelto di usare la filosofia "#link(<docs-as-code>)[Docs as code]" che si prescrive di trattare tutta la documentazione come se fosse del vero e proprio codice sorgente. \ Questo porta i seguenti vantaggi:
+==== Filosofia "Docs as code" <docsascode>
+Abbiamo scelto di usare la filosofia "Docs as code" che si prescrive di trattare tutta la documentazione come se fosse del vero e proprio codice sorgente. \ Questo porta i seguenti vantaggi:
 + Supporto agli #glossario[issue tracking system];;
 + Controllo di versione con #glossario[git];;
 + Processi di revisione del codice;
@@ -115,6 +115,16 @@ Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le
 - Garanzia di prodotto: definisce le garanzie di qualità che il prodotto software deve soddisfare;
 - Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
 
+=== PDCA
+Il ciclo PDCA, noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
+
+1. *Plan*: in questa fase si definiscono le attività necessarie per identificare quali processi avviare e in quale ordine, con l’obiettivo di raggiungere risultati specifici. Si stabiliscono obiettivi di miglioramento chiari e si progettano le azioni da intraprendere. Non riguarda pianificazione di progetto, ma bensì pianificazione di miglioramento;
+2. *Do*: si passa all’azione, mettendo in pratica quanto pianificato. Durante l’esecuzione si raccolgono dati e si monitorano i risultati per valutare l’efficacia delle attività svolte. Non è sviluppo, ma dispiegamento (esplorativo) di azioni di miglioramento;
+3. *Check*: qui si analizzano i dati raccolti nella fase di esecuzione, confrontandoli con gli obiettivi prefissati. Si utilizzano metriche specifiche per interpretare i risultati e individuare eventuali discrepanze o aree di miglioramento. Verifichiamo quindi l’esito delle azioni di miglioramento rispetto alle attese;
+4. *Act*: sulla base delle valutazioni precedenti, si consolidano le pratiche che hanno prodotto risultati positivi, inserendole nel way of working. Si implementano poi azioni correttive per affrontare eventuali criticità. Si analizzano le cause dei problemi e si apportano miglioramenti, favorendo così un’evoluzione continua del processo.
+
+Ogni ciclo PDCA rappresenta un’opportunità per raggiungere gli obiettivi di qualità fissati, creando un processo di miglioramento costante e progressivo.
+
 === Piano di qualifica
 Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni informate basate sui dati a disposizione.
 
@@ -131,7 +141,7 @@ dove:
 - numero: numero progressivo della metrica.
 #set list(indent: 0em)
 - *Nome:* specifica il nome della metrica;
-//- *Descrizione:* breve descrizione della metrica;
+- *Descrizione:* breve descrizione della metrica;
 //- *Scopo:* obiettivo della metrica;
 
 //- *Formula:* formula matematica per il calcolo della metrica;
@@ -171,7 +181,7 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 + Test di regressione: verificano che le modifiche apportate al codice non abbiano introdotto errori in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
 + Test di accettazione: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente; sono l'ultima fase di test prima del possibile rilascio del prodotto.
 
-Ogni test è costituito da:
+//Ogni test è costituito da:
 // TODO: completare con l'identificazione dei test
 
 === Processo di verifica
@@ -198,17 +208,58 @@ A supporto del verificatore, per il controllo di alcune norme strutturali, sono 
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
-=== Verifica del design // TODO: non so se ci sia un modo, se lo facciamo lo mettiamo altrimenti si toglie
+//=== Verifica del design // TODO: non so se ci sia un modo, se lo facciamo lo mettiamo altrimenti si toglie
 
-=== Verifica del codice // TODO
+//=== Verifica del codice // TODO
 
 === Validazione
 Secondo lo standard ISO/IEC 12207:1995, la validazione è il processo che serve a determinare se i requisiti e il sistema/prodotto software finale, per come è stato costruito, soddisfano l'uso specifico previsto. Il prodotto finale deve quindi soddisfare tutti i requisiti concordati con il proponente e funzionare correttamente nel suo ambiente finale.
 // TODO: da completare con quello che faremo per validare
 
-== Revisioni congiunte con il cliente
+== Revisioni congiunte
+Secondo lo standard ISO/IEC 12207:1995, il processo di revisione congiunta ha l'obiettivo di valutare lo stato e i prodotti di un'attività di un progetto.
+Tali revisioni congiunte si svolgono durante tutto il ciclo di vita del rapporto con il proponente. Questo processo può essere impiegato da tutte le parti coinvolte, dove una parte (parte revisionante) esamina un'altra parte (parte revisionata).
 
-== Verifiche ispettive interne
+Questo processo si compone delle seguenti attività:
+- Implementazione del processo;
+- Revisioni della gestione del progetto;
+- Revisioni tecniche.
+
+=== Implementazione del processo
+Vengono programmate delle revisioni con il proponente quando lo svolgimento del lavoro ha raggiunto un buon grado di avanzamento rispetto all'incontro precedente. Durante tali revisioni rappresentiamo la parte revisionata, mentre il proponente rappresenta la parte revisionante. Oltre a concentrarsi sugli avanzamenti raggiunti, si discutono eventuali problematiche e le corrispettive azioni correttive necessarie.
+
+I risultati di tali revisioni sono poi documentati tramite i verbali esterni, i quali verranno firmati dalla parte revisionante per garantire l'approvazione di quanto revisionato e discusso.
+
+//== Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi
-=== Gestione dei cambiamenti
+Mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti, riconoscendo le cause scatenanti.
+
+Il processo di risoluzione dei problemi ha l’obiettivo di garantire un approccio rapido, responsabile e ben documentato per analizzare e risolvere le criticità riscontrate durante l’intero ciclo di vita del prodotto. Questo processo non si limita a gestire i problemi nell’immediato, ma punta anche a riconoscere eventuali tendenze e a comprendere le cause profonde delle non conformità, adottando misure preventive per evitarne il ripetersi in futuro.
+
+L’intento principale è affrontare ogni problematica in modo efficace, promuovendo al contempo una cultura del miglioramento continuo. L’esperienza derivante dall’analisi degli errori passati diventa così una risorsa preziosa per ottimizzare i processi e favorire la crescita organizzativa.
+
+Per garantire risultati concreti, è fondamentale adottare metodologie strutturate e strumenti adeguati, come la raccolta sistematica dei dati, l’analisi delle cause radice, la valutazione degli impatti e la definizione di piani d’azione correttivi e preventivi.
+
+Infine, la gestione accurata della documentazione relativa ai problemi riscontrati e alle soluzioni adottate è cruciale per assicurare trasparenza, tracciabilità e la possibilità di effettuare revisioni periodiche, contribuendo così a un costante miglioramento della qualità.
+
+=== Gestione dei rischi
+All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
+
+==== Codifica dei rischi
+Per identificare i rischi adottiamo la seguente struttura:
+- *Codice*: 
+#align(center, block[
+  #set align(center)
+  R[a][numero]
+])
+dove:
+#set list(indent: 1em)
+- R: indica che si tratta di un rischio;
+- a: indica la primalettera della categoria di appartenenza del rischio (se ritenuto necessario è possibile inserire le prime 2 lettere);
+- numero: numero progressivo del rischio.
+#set list(indent: 0em)
+- *Descrizione*: descrizione del rischio;
+- *Probabilità di occorrenza*: numero da 1 a 5, dove 5 indica altissima probabilità di occorrenza;
+- *Pericolosità*: alta, media o bassa;
+- *Tecniche di mitigazione*: azioni che permettono di arginanare le possibili conseguenze del rischio.

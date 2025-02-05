@@ -149,7 +149,7 @@ Come evidenziato sopra, gli strumenti e tecnologie di supporto scelte sono:
 - Telegram.
 
 === Coordinamento con il proponente <proponente>
-Un frequente coordinamento tra il gruppo e il proponente è fondamentale per assicurarsi che il prodotto evolva coerentemente con le richieste del proponente. Inoltre, ricevere dei feedback periodici sul lavoro svolto ci indica se è conforme agli obiettivi fissati.
+Un frequente coordinamento tra il gruppo e il proponente è fondamentale per assicurare che il prodotto evolva coerentemente con le richieste del proponente. Inoltre, ricevere dei feedback periodici sul lavoro svolto ci indica se è conforme agli obiettivi fissati.
 
 ==== Comunicazioni testuali
 Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni testuali; dopo l'aggiudicazione dell'appalto, invece, il proponente ha creato un canale Slack in cui possiamo fare delle domande e scambiare file, risorse e materiali. Gli scopi di questo canale sono rispondere ai dubbi in modo veloce e mirato e facilitare lo scambio di informazioni.
@@ -157,7 +157,7 @@ Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni te
 Il proponente ha aggiunto in questo canale diverse figure professionali esperte nelle tecnologie da utilizzare nel progetto, per poter rispondere in maniera esaustiva ai diversi tipi di dubbi e problematiche che possono sorgere.
 
 ==== Incontri
-I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati fissati degli incontri periodici in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Dal periodo natalizio in poi invece svolgeremo dei meeting di allineamento periodici nei quali mostrare gli avanzamenti ed esporre eventuali dubbi.
+I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati svolti degli incontri di revisione in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Sono però stati svolti degli incontri di formazione in presenza, offerti dal proponente. Dal periodo natalizio in poi invece vengono svolti degli incontri quando una delle due parti (noi in quanto gruppo o il proponente) lo ritengono necessario, ovvero quando sono stati raggiunti degli obiettivi di avanzamento considerevoli.
 
 Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (delegabile all'amministratore) e lo invia al proponente per l'approvazione tramite una firma.
 
