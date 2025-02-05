@@ -80,7 +80,14 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo i
 5. Installazione.
 
 === Analisi dei requisiti
-L'attività di analisi dei requisiti è fondamentale per la corretta comprensione delle esigenze del proponente. In questa fase il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
+L'attività di analisi dei requisiti è fondamentale per:
+- La corretta comprensione delle esigenze del proponente;
+- Identificare, documentare e validare i requisiti funzionali e non funzionali;
+- Evitare il rischio che il prodotto software non converga mai;
+- Facilitare la compresione dei requisiti a tutti gli stakeholder;
+- Garantire che la progettazione riceva in input dei requisiti chiari e semplici da comprendere.
+
+In questa fase, quindi, il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
 
 In generale, l'analisi studia a fondo i bisogni, con particolare attenzione al "cosa" deve succedere nel prodotto che verrà sviluppato, ovvero alla sua struttura funzionale. I requisiti riflettono la prospettiva dell'utente nel passaggio dalla situazione senza, a quella con il prodotto. Uno dei modi più efficaci per individuare i requisiti è attraverso la scrittura dei casi d'uso.
 
