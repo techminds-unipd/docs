@@ -7,6 +7,7 @@
 //#glossario[label]
 //#glossario[ac]
 //#glossario[etc]
+//#glossario[push]
 //#glossario[eac]
 
 // lines   :: [[number], [number]]
