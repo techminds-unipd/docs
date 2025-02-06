@@ -6,7 +6,7 @@ In questa sezione verranno elencati i periodi di lavoro suddivisi per le milesto
 
 == Struttura degli Sprint
 
-Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetitiva. Ogni sprint contiene le seguenti sezioni:
+Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta. In particolare ogni sprint contiene le seguenti sezioni:
 
 - *Durata*: le date di inizio e fine dello sprint;
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
