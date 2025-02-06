@@ -1,6 +1,7 @@
 #import "/template/template.typ": glossario
 #import "@preview/cetz:0.3.1"
 #import "@preview/cetz-plot:0.1.0": plot, chart
+#import "../../piano_progetto/include/costi.typ": getSprintCostsSection
 
 //#glossario[sprint]
 //#glossario[label]
@@ -34,23 +35,31 @@
     }), caption: caption)
 }
 
+#let sprint_number = 3
+#let tot_spesa = ()
+#for i in range(1, sprint_number+1) {
+    let (_, consuntivo) = getSprintCostsSection(sprint_number: i)
+    let bilancio  = consuntivo.bilancioConsuntivo
+    tot_spesa.push(12975 - tot_spesa.sum(default: 0) - bilancio)
+}
+
 = Cruscotto
 
 == Actual cost + Estimate to Complete + Estimated at Completion
 #linebreak()
 
-#let ac(offset: 0) = ((1,630),
-         (2,630 + 1135),
-         (3,630 + 1135 + 935),
-         (4,630 + 1135 + 935 + 660))
-#let etc(offset: 0) = ((1,12975),
-         (2,12975 - 1135),
-         (3,12975 - 1135 - 935),
-         (4,12975 - 1135 - 935 - 660))
-#let eac(offset: 0) = ((1,12975 + 630),
-         (2,12975 - 1135 + 630 + 1135),
-         (3,12975 - 1135 - 935 + 630 + 1135 + 935),
-         (4,12975 - 1135 - 935 - 660 + 630 + 1135 + 935 + 660)) // eac = ac + etc
+#let ac(offset: 0) = (
+         (1, tot_spesa.at(0)),
+         (2, tot_spesa.at(1)),
+         (3, tot_spesa.at(2)))
+#let etc(offset: 0) = (
+         (1,12975 - tot_spesa.slice(0,1).sum()),
+         (2,12975 - tot_spesa.slice(0,2).sum()),
+         (3,12975 - tot_spesa.slice(0,3).sum()))
+#let eac(offset: 0) = (
+         (1, tot_spesa.at(0) + 12975 - tot_spesa.slice(0,1).sum()),
+         (2, tot_spesa.at(1) + 12975 - tot_spesa.slice(0,2).sum()),
+         (3, tot_spesa.at(2) + 12975 - tot_spesa.slice(0,3).sum()))  // eac = ac + etc
 
 #lineChart(lines: (ac,etc,eac),
           legends: ([AC],[ETC],[EAC]),
