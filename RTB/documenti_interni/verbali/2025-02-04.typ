@@ -4,7 +4,7 @@
   title: "Verbale interno del 04/02/2025",
   sommario: "Verbale che riassume la riunione del 04/02/2025.",
   changelog: (
-    "1.0.0", "06/02/2025", "Prima versione", team.L, ""
+    "1.0.0", "06/02/2025", "Prima versione", team.L, team.T
   ),
   durata_luogo: ("15:15", "18:30", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
