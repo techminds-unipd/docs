@@ -110,11 +110,11 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
           legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[]),
           hlines: ((40,40)),
           x-label: "sprint",
-          y-label: "costo \u{20AC}",
+          y-label: "indice",
           caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
-- #glossario[Analisi dei requisiti];
+- #glossario[Analisi dei requisiti] ;
 - Piano di progetto;
 - Piano di qualifica;
 - Glossario;
@@ -136,7 +136,7 @@ I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabi
           hlines: (),
           x-label: "sprint",
           y-label: "%",
-          caption: [Caption in tabelle e figure])
+          caption: [Caption in tabelle e figure.])
 
 Il grafico illustra:
 - Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
