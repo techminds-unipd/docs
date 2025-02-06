@@ -10,9 +10,7 @@ I casi d'uso seguono la seguente struttura:
 - *Nome/Identificatore*: identificativo del caso d'uso;
 - *Descrizione*: breve testo che riassume lo scopo del caso d'uso;
 - *#glossario[Attori] principali*: entità che eseguono l'azione;
-#set par(justify: false)
-- *Attori secondari* (0..\*): entità di minore importanza esterne al sistema ma coinvolte nell'esecuzione;
-#set par(justify: true)
+- *Attori secondari* (0..\*): entità esterne al sistema ma coinvolte nell'esecuzione;
 - *Scenario principale*: descrizione dettagliata delle azioni svolte durante il caso d'uso, intermedio tra le ipotesi e i risultati;
 - *Pre-condizioni*: stato del programma prima dell'esecuzione del caso d'uso;
 - *Post-condizioni*: stato del programma dopo l'esecuzione del caso d'uso;
