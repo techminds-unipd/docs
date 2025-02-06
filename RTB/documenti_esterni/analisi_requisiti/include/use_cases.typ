@@ -11,6 +11,25 @@
     stealth: 0
 )
 
+#let uc_comment(node, extrude) = {
+	let (w, h) = node.size
+	let (x, y) = (w/2, h/2)
+	let d = 0.5*calc.min(w/2, h/2)
+
+	let obj = draw.line(
+		(-x, -y),
+		(-x, +y),
+		(+x -0.3cm, +y),
+		(+x, +y -0.3cm),
+		(+x -0.3cm, +y -0.3cm),
+		(+x -0.3cm, +y),
+		(+x, +y -0.3cm),
+		(+x, -y),
+		close: true,
+	)
+	draw.group(obj) // enables cetz border anchors
+}
+
 = Casi d'uso
 
 == Obiettivi
@@ -102,7 +121,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
   node((2.9,1.25), align(center)[
     L'utente inserisce delle #linebreak()credenziali errate o inesistenti
-    ], shape: rect, name: <pnf>),
+    ], shape: uc_comment, name: <pnf>),
  
 
 
@@ -278,7 +297,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((2.6,0.35), align(center)[
             Utente inserisce #linebreak() dati non validi
-    ], shape: rect, name: <le>),
+    ], shape: uc_comment, name: <le>),
     node((2.1,0.025), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
@@ -421,7 +440,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((1.6,0.9), align(center)[
             Google trasmette #linebreak() un errore
-    ], shape: rect, name: <le>),
+    ], shape: uc_comment, name: <le>),
     node((2,0.9), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
@@ -548,7 +567,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((.6,0.5), align(center)[
             Il workflow non è valido
-    ], shape: rect, name: <post-it>),
+    ], shape: uc_comment, name: <post-it>),
 
     node((1.15,0.5), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
@@ -561,7 +580,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     
     node((2,0.8), align(center)[
             L'agente non riesce a #linebreak() completare l'operazione
-    ], shape: rect, name: <post-it2>),
+    ], shape: uc_comment, name: <post-it2>),
 
     node((1.53,0.8), align(center)[
     ], name: <nf2>, width: 1pt, height: 1pt),
@@ -737,7 +756,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((1.3,1), align(center)[
             Il time-out #linebreak() raggiunge il limite
-    ], shape: rect, name: <post-it>),
+    ], shape: uc_comment, name: <post-it>),
     node((1.88,1), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<post-it>, <nf>, "--"),
@@ -1223,7 +1242,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((0.9,0.7), align(center)[
             Nessun servizio #linebreak() collegato
-    ], shape: rect, name: <le>),
+    ], shape: uc_comment, name: <le>),
     node((1.63,0.8), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
@@ -1294,7 +1313,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((2.7,0.6), align(center)[
             Database non disponibile
-    ], shape: rect, name: <c>),
+    ], shape: uc_comment, name: <c>),
 
     node((2,0.6), align(center)[
     ], name: <d>, width: 1pt, height: 1pt),
@@ -1573,7 +1592,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((2.7,0.6), align(center)[
             Database non disponibile
-    ], shape: rect, name: <c>),
+    ], shape: uc_comment, name: <c>),
 
     node((2,0.6), align(center)[
     ], name: <d>, width: 1pt, height: 1pt),
