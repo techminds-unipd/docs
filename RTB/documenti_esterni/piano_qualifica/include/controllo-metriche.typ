@@ -114,7 +114,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
           caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
-- Analisi dei requisiti;
+- #glossario[Analisi dei requisiti];
 - Piano di progetto;
 - Piano di qualifica;
 - Glossario;
