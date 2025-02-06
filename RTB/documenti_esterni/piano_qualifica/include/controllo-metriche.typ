@@ -2,6 +2,9 @@
 #import "@preview/cetz:0.3.1"
 #import "@preview/cetz-plot:0.1.0": plot, chart
 
+//#glossario[sprint]
+//#glossario[label]
+
 // lines   :: [[number], [number]]
 // legends :: [[content], [content]]
 // hlines  :: [number]
@@ -54,6 +57,6 @@
           caption: [AC + ETC + EAC])
 
 Il grafico illustra:
-- Actual Cost: i costi sostenuti fino ad ora;
-- Estimate to Complete: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
-- Estimated to Completion: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
+- #glossario[Actual Cost]: i costi sostenuti fino ad ora;
+- #glossario[Estimate to Complete]: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
+- #glossario[Estimated to Completion]: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
