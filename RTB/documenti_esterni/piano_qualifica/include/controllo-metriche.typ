@@ -64,12 +64,22 @@
     caption_figure.push((i, 100))
     rischi.push((i, 0))
 }
+#let g_adr = ((1,64),(2,66),(3,65),(4,66))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58))
 
 #let ac_fun(offset: 0) = ac
 #let etc_fun(offset: 0) = etc
 #let eac_fun(offset: 0) = eac
 #let ev_fun(offset: 0) = ev
 #let caption_figure_fun(offset: 0) = caption_figure
+#let g_adr_fun(offset: 0) = g_adr
+#let g_pdp_fun(offset: 0) = g_pdp
+#let g_pdq_fun(offset: 0) = g_pdq
+#let g_ndp_fun(offset: 0) = g_ndp
+#let g_gloss_fun(offset: 0) = g_gloss
 #let rischi_fun(offset: 0) = rischi
 
 = Cruscotto
@@ -81,7 +91,7 @@
           hlines: (),
           x-label: "sprint",
           y-label: "costo \u{20AC}",
-          caption: [AC, ETC, EAC])
+          caption: [AC, ETC, EAC.])
 
 Il grafico illustra:
 - #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
@@ -92,6 +102,31 @@ Il grafico illustra:
 In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizialmente le ore produttive sono molte meno rispetto a quelle di orologio.
 Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
 EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
+
+== MAFF1 (Indice di Gulpease)
+#linebreak()
+
+#let x_axis = ((1,36),)
+#let x_axis_fun(offset: 0) = x_axis
+
+#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, x_axis_fun),
+          legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[]),
+          hlines: ((40,40)),
+          x-label: "sprint",
+          y-label: "indice",
+          caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
+
+Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
+- #glossario[Analisi dei requisiti] ;
+- Piano di progetto;
+- Piano di qualifica;
+- Glossario;
+- Norme di progetto.
+
+#linebreak()
+*RTB*
+#linebreak()
+I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabile (ovvero 40). In alcuni documenti, come Analisi dei requisiti, il valore dell'indice è rimasto abbastanza stabile. Si sono riscontrati dei notevoli incrementi in Norme di progetto e Piano di progetto, dovuti dalla maggiore cura e attenzione da parte del gruppo nella formulazione delle frasi. Infine, anche se in Glossario e Piano di qualifica ci sono stati dei peggioramenti, tra lo sprint 3 e lo sprint 4 si è registrato un impegno nel migliorare il valore dell'indice.
 
 == MACC1 (Caption in tabelle e figure)
 #linebreak()
@@ -104,7 +139,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
           hlines: (),
           x-label: "sprint",
           y-label: "%",
-          caption: [Caption in tabelle e figure])
+          caption: [Caption in tabelle e figure.])
 
 Il grafico illustra:
 - Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
