@@ -71,4 +71,4 @@
 Il grafico illustra:
 - #glossario[Actual Cost]: i costi sostenuti fino ad ora;
 - #glossario[Estimate to Complete]: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
-- #glossario[Estimated to Completion]: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
+- #glossario[Estimated at Completion]: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
