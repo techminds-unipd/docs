@@ -246,6 +246,9 @@ Documento gestionale interno redatto in forma esecutiva, ossia composto da regol
 = O
 = P
 
+== Pastebin
+Servizio web che permette di condividere frammenti di testo e codice sorgente.
+
 == Patch
 Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o piccole modifiche.
 
