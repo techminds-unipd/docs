@@ -66,6 +66,14 @@
     tutino_preventivo.push(    (0, 0, 0, 0, 0, 5) )
     vallotto_preventivo.push(  (0, 0, 0, 0, 0, 5) )
 
+    bressan_consuntivo.push(   (0, 5, 0, 0, 0, 0) )
+    corradin_consuntivo.push(  (2, 0, 2, 0, 0, 0) )
+    lazzarin_consuntivo.push(  (0, 0, "5 (+1)", 0, 0, 0) )
+    salviato_consuntivo.push(  (0, 5, 0, 0, 0, 0) )
+    squarzoni_consuntivo.push( (0, 5, 0, 0, 0, 0) )
+    tutino_consuntivo.push(    (0, 0, 0, 0, 0, 5) )
+    vallotto_consuntivo.push(  (0, 0, 0, 0, 0, 5) )
+
     // Per calcolare il bilancio allo sprint n devo calcolare i bilanci precendenti
     for i in range(0, sprint_number) {
 

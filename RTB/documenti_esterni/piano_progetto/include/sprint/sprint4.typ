@@ -108,7 +108,6 @@ caption: [Diagramma Gantt sprint 4.]
 #pieChartSprint(4, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint4> \
 
-// TODO
 #if consuntivo != none [
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
