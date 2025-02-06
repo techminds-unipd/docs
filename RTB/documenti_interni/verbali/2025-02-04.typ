@@ -11,7 +11,7 @@
   ordine_giorno: ("Sprint 4 retrospective", "Sprint 5 planning"),
   riassunto: [Ci siamo riuniti per celebrare prima la sprint retrospective dello sprint 4 e successivamente lo    sprint planning dello sprint 5.#linebreak()
     Abbiamo visionato i documenti prodotti durante lo sprint 4, in particolare l'Analisi dei Requisiti e il Piano di Qualifica.
-    Successivamente abbiamo guardato la Project Board di Github per verificare quali task non fossimo riusciti a completare entro la fine dello sprint. L'unico task non completato era stato svolto come parte di un altro task ed è quindi stato chiuso come non pianificato.
+    In seguito abbiamo guardato la Project Board di Github per verificare quali task non fossimo riusciti a completare entro la fine dello sprint. L'unico task non completato era stato svolto come parte di un altro task ed è quindi stato chiuso come non pianificato.
 
     Ognuno ha poi provveduto a compilare il consuntivo dello ore di lavoro dello sprint 4.
 
