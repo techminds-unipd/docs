@@ -50,20 +50,21 @@
 == Actual cost + Estimate to Complete + Estimated at Completion
 #linebreak()
 
-#let ac(offset: 0) = (
-         (1, tot_spesa.slice(0,1).sum()),
-         (2, tot_spesa.slice(0,2).sum()),
-         (3, tot_spesa.slice(0,3).sum()))
-#let etc(offset: 0) = (
-         (1,12975 - tot_spesa.slice(0,1).sum()),
-         (2,12975 - tot_spesa.slice(0,2).sum()),
-         (3,12975 - tot_spesa.slice(0,3).sum()))
-#let eac(offset: 0) = (
-         (1, tot_spesa.slice(0,1).sum() + 12975 - tot_spesa.slice(0,1).sum()),
-         (2, tot_spesa.slice(0,2).sum() + 12975 - tot_spesa.slice(0,2).sum()),
-         (3, tot_spesa.slice(0,3).sum() + 12975 - tot_spesa.slice(0,3).sum()))  // eac = ac + etc
+#let ac = ()
+#let etc = ()
+#let eac = ()
+#let costo_totale_stimato = (12975, 12975, 12975)
+#for i in range(1, sprint_number+1) {
+    ac.push((i, tot_spesa.slice(0,i).sum()))
+    etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
+    eac.push((i, costo_totale_stimato.at(i - 1)))
+}
 
-#lineChart(lines: (ac,etc,eac),
+#let ac_fun(offset: 0) = ac
+#let etc_fun(offset: 0) = etc
+#let eac_fun(offset: 0) = eac
+
+#lineChart(lines: (ac_fun,etc_fun,eac_fun),
           legends: ([AC],[ETC],[EAC]),
           hlines: (),
           x-label: "sprint",
