@@ -106,5 +106,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 Il grafico illustra:
 - Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
 
-=== RTB
+#linebreak()
+*RTB*
+#linebreak()
 Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente.
