@@ -120,5 +120,5 @@ Il grafico illustra:
 #linebreak()
 *RTB*
 #linebreak()
-In questo periodo abbiamo rispettato abbastanza bene i costi pianificati, scostandoci molto poco. Questo mette in evidenza una buona metodologia di pianificazione.
+In questo periodo abbiamo rispettato abbastanza bene i costi preventivati, scostandoci di poco. Questo mette in evidenza una buona metodologia di pianificazione.
 In generale i costi sono bassi perchè in questo periodo erano presenti molti impegni fra lezioni e esami che non permettevano di allocare molto tempo.
