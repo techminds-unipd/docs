@@ -54,6 +54,7 @@
 #let eac = ()
 #let ev = ()
 #let caption_figure = ()
+#let rischi = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
 #for i in range(1, sprint_number+1) {
     ac.push((i, tot_spesa.slice(0,i).sum()))
@@ -61,6 +62,7 @@
     eac.push((i, costo_totale_stimato.at(i - 1)))
     ev.push((i, tot_spesa.slice(0,i).sum()))
     caption_figure.push((i, 100))
+    rischi.push((i, 0))
 }
 #let g_adr = ((1,64),(2,66),(3,65),(4,66))
 #let g_pdp = ((1,48),(2,47),(3,56),(4,68))
@@ -78,6 +80,7 @@
 #let g_pdq_fun(offset: 0) = g_pdq
 #let g_ndp_fun(offset: 0) = g_ndp
 #let g_gloss_fun(offset: 0) = g_gloss
+#let rischi_fun(offset: 0) = rischi
 
 = Cruscotto
 == MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
@@ -144,4 +147,25 @@ Il grafico illustra:
 #linebreak()
 *RTB*
 #linebreak()
-Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente. Inoltre permette di creare la lista delle figure, ovvero l'indice a loro dedicato.
+Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente. Inoltre permette di creare la lista delle figure, ovvero l'indice a loro dedicato. 
+
+== MPRO11 (Rischi non previsti)
+#linebreak()
+
+#let point = ((1,9),)
+#let point_fun(offset: 0) = point
+
+#lineChart(lines: (rischi_fun, point_fun,),
+          legends: ([Rischi], []),
+          hlines: (),
+          x-label: "sprint",
+          y-label: "rischi",
+          caption: [Rischi])
+
+Il grafico illustra:
+- Rischi: il numero di rischi non previsti che si sono verificati durante lo svolgimento del progetto.
+
+#linebreak()
+*RTB*
+#linebreak()
+Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previsti. Per maggiori informazioni sui rischi previsti si veda #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi", "Analisi dei rischi").
