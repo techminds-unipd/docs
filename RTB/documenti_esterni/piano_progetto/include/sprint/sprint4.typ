@@ -36,7 +36,7 @@ In questo quarto sprint ci concentreremo sulla redazione dei documenti necessari
     - #link("https://github.com/techminds-unipd/docs/issues/197")[Issue \#197]: Redigere sezione gestione operativa;
     - #link("https://github.com/techminds-unipd/docs/issues/198")[Issue \#198]: Redigere sezione accertamento della qualità.
 
-==== Diagramma di Gantt // TODO
+==== Diagramma di Gantt
 Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
 Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
 #linebreak()I colori sono significativi:
@@ -46,6 +46,49 @@ Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le fes
 [il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
 [il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
 )
+
+#figure(
+timeliney.timeline(
+  show-grid: true,
+  {
+    import timeliney: *
+
+    headerline(([*Gennaio 2025*], 19))
+    headerline(
+      group(..range(5).map(n => strong(str(n + 13)))),
+      group(..range(2).map(n => strong(str(n + 18)))),
+      group(..range(5).map(n => strong(str(n + 20)))),
+      group(..range(2).map(n => strong(str(n + 25)))),
+      group(..range(5).map(n => strong(str(n + 27))))
+    )
+
+    taskgroup(title: [*Analisi dei requisiti*], {
+      task("UC eliminazione workflow", (from: 9, to: 11, style: (stroke: 8pt + gray)), (from: 9, to: 11, style: (stroke: 2pt + red)))
+      task("Tabella requisiti qualitativi", (from: 5, to: 8, style: (stroke: 8pt + gray)), (from: 5, to: 8, style: (stroke: 2pt + red)))
+      task("Tabella requisiti di vincolo", (from: 7, to: 10, style: (stroke: 8pt + gray)), (from: 7, to: 10, style: (stroke: 2pt + red)))
+      task("Aggiungere campo descrizione\n nella sezione 1.1", (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Piano di Progetto*], {
+      task("Redigere consuntivo sprint 3", (from: 0, to: 3, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+      task("Redigere preventivo sprint 4", (from: 0, to: 3, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Piano di Qualifica*], {
+      task("Redigere sezione qualità\n di prodotto", (from: 10, to: 15, style: (stroke: 8pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
+      task("Redigere sezione qualità\n per obiettivo (processi primari)", (from: 15, to: 19, style: (stroke: 8pt + gray)), (from: 16, to: 19, style: (stroke: 2pt + red)))
+      task("Redigere sezione qualità\n per obiettivo (processi di supporto)", (from: 11, to: 15, style: (stroke: 8pt + gray)), (from: 11, to: 15, style: (stroke: 2pt + red)))
+      task("Redigere sezione qualità\n per obiettivo (processi organizzativi)", (from: 16, to: 18, style: (stroke: 8pt + gray)), (from: 16, to: 19, style: (stroke: 2pt + red)))
+    })
+
+    taskgroup(title: [*Norme di Progetto*], {
+      task("Redigere sezione gestione operativa", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
+      task("Redigere sezione accertamento\n della qualità", (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 19, style: (stroke: 2pt + red)))
+    })
+  }
+),
+caption: [Diagramma Gantt sprint 4.]
+)<diagramma-gantt-sprint4>
 
 ==== Conclusioni // TODO
 
