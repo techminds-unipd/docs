@@ -12,6 +12,8 @@
 //#glossario[ev]
 //#glossario[pv]
 //#glossario[rtb]
+//#glossario[cv]
+//#glossario[sv]
 
 // lines   :: [[number], [number]]
 // legends :: [content, content]
@@ -64,6 +66,8 @@
 #let eac = ()
 #let ev = ()
 #let pv = ()
+#let cv = ()
+#let sv = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
 #for i in range(1, sprint_number+1) {
     ac.push((i, tot_spesa.slice(0,i).sum()))
@@ -72,6 +76,9 @@
 
     ev.push((i, tot_spesa.slice(0,i).sum()))
     pv.push((i, tot_spesa_preventivata.slice(0,i).sum()))
+
+    cv.push((i, ev.at(i - 1).at(1) - ac.at(i - 1).at(1)))
+    sv.push((i, ev.at(i - 1).at(1) - pv.at(i - 1).at(1)))
 }
 
 #let ac_fun(offset: 0) = ac
@@ -79,6 +86,8 @@
 #let eac_fun(offset: 0) = eac
 #let ev_fun(offset: 0) = ev
 #let pv_fun(offset: 0) = pv
+#let cv_fun(offset: 0) = cv
+#let sv_fun(offset: 0) = sv
 
 = Cruscotto
 == MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
@@ -89,7 +98,7 @@
           hlines: (),
           x-label: "sprint",
           y-label: "costo \u{20AC}",
-          caption: [AC, ETC, EAC],)
+          caption: [AC, ETC, EAC.])
 
 Il grafico illustra:
 - #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
@@ -111,14 +120,39 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
           hlines: (),
           x-label: "sprint",
           y-label: "costo \u{20AC}",
-          caption: [EV, PV])
+          caption: [EV, PV.])
 
 Il grafico illustra:
-- #glossario[Planned Value] (PV): Costo pianificato per realizzare le attività di progetto alla data corrente;
-- #glossario[Earned Value] (EV): Valore delle attività realizzate alla data corrente.
+- #glossario[Planned Value] (PV): costo pianificato per realizzare le attività di progetto alla data corrente;
+- #glossario[Earned Value] (EV): valore delle attività realizzate alla data corrente.
 
 #linebreak()
 *RTB*
 #linebreak()
 In questo periodo abbiamo rispettato abbastanza bene i costi preventivati, scostandoci di poco. Questo mette in evidenza una buona metodologia di pianificazione.
 In generale i costi sono bassi perchè in questo periodo erano presenti molti impegni fra lezioni e esami che non permettevano di allocare molto tempo.
+
+== MPRO4 (CV), MPRO5 (SV)
+#linebreak()
+
+#let sv_values = sv.map(el => el.at(1))
+#let pv_values = pv.map(el => el.at(1))
+#let min_sv_value = sv_values.map(el => calc.abs(el)).sorted().first()
+#let acceptable_value = sv_values.zip(pv_values).map(el => 100 * (el.at(0)/el.at(1))).sorted().first() * min_sv_value
+
+#lineChart(lines: (cv_fun,sv_fun),
+          legends: ([CV],[SV]),
+          hlines: (0, acceptable_value),
+          x-label: "sprint",
+          y-label: "y",
+          caption: [CV, SV.])
+
+Il grafico illustra:
+- #glossario[Cost Variance] (CV): indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo;
+- #glossario[Schedule Variance] (SV): indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline.
+
+#linebreak()
+*RTB*
+#linebreak()
+In questo periodo si nota che CV è sempre 0, ovvero stiamo usando le risorse producendo adeguatamente.
+SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle attività, successivamente con un rallentamento causato dalla sessione di esami.
