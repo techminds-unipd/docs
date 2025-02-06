@@ -11,6 +11,7 @@
 //#glossario[eac]
 //#glossario[ev]
 //#glossario[pv]
+//#glossario[rtb]
 
 // lines   :: [[number], [number]]
 // legends :: [content, content]
