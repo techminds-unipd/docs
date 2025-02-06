@@ -77,4 +77,6 @@ Il grafico illustra:
 - #glossario[Estimated at Completion] (EAC): revisione del valore stimato per la realizzazione del progetto (AC + ETC).
 
 === RTB
-In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
+In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizialmente le ore produttive sono molte meno rispetto a quelle di orologio.
+Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
+EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
