@@ -75,14 +75,43 @@
     firma: bool,
     body
 ) = {
-    documento(title: title, sommario: sommario, changelog: changelog, [])
-
     set heading(numbering: "1.1")
+    set document(author: "Tech Minds", title: title)
     set page(numbering: "1")
+    set align(center)
     show link: underline
     show link: set text(rgb("#f16610"))
-    set par(justify: true)
     set text(lang: "it")
+
+    parbreak()
+
+    image(g.logo, width: 80%)
+    text(20pt, title, weight: "bold")
+    parbreak()
+    text(link("mailto:"+g.mail))
+    parbreak()
+    text(10pt, "Sommario", weight: "bold")
+    linebreak()
+    text(10pt, sommario)
+
+    pagebreak()
+
+    set align(left)
+
+    text("Changelog", weight: "bold")
+
+    table(
+        columns: 5,
+        align: center+horizon,
+        table.header([*Versione*],[*Data*],[*Descrizione*],[*Autore*],[*Verificatore*]),
+        ..changelog
+    )
+
+    outline(title: "Indice", indent: true)
+
+    pagebreak()
+    set par(justify: true)
+
     durata_luogo.at(0) = "Inizio: " + durata_luogo.at(0)
     durata_luogo.at(1) = "Fine: " + durata_luogo.at(1)
     durata_luogo.at(2) = "Luogo: " + durata_luogo.at(2)
