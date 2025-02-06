@@ -36,8 +36,9 @@
     }), caption: caption)
 }
 
-#let sprint_number = 3
+// tot_spesa.at(i) => spesa sostenuta allo sprint i
 #let tot_spesa = ()
+#let sprint_number = 3
 #for i in range(1, sprint_number+1) {
     let (_, consuntivo) = getSprintCostsSection(sprint_number: i)
     let bilancio  = consuntivo.bilancioConsuntivo
@@ -50,17 +51,17 @@
 #linebreak()
 
 #let ac(offset: 0) = (
-         (1, tot_spesa.at(0)),
-         (2, tot_spesa.at(1)),
-         (3, tot_spesa.at(2)))
+         (1, tot_spesa.slice(0,1).sum()),
+         (2, tot_spesa.slice(0,2).sum()),
+         (3, tot_spesa.slice(0,3).sum()))
 #let etc(offset: 0) = (
          (1,12975 - tot_spesa.slice(0,1).sum()),
          (2,12975 - tot_spesa.slice(0,2).sum()),
          (3,12975 - tot_spesa.slice(0,3).sum()))
 #let eac(offset: 0) = (
-         (1, tot_spesa.at(0) + 12975 - tot_spesa.slice(0,1).sum()),
-         (2, tot_spesa.at(1) + 12975 - tot_spesa.slice(0,2).sum()),
-         (3, tot_spesa.at(2) + 12975 - tot_spesa.slice(0,3).sum()))  // eac = ac + etc
+         (1, tot_spesa.slice(0,1).sum() + 12975 - tot_spesa.slice(0,1).sum()),
+         (2, tot_spesa.slice(0,2).sum() + 12975 - tot_spesa.slice(0,2).sum()),
+         (3, tot_spesa.slice(0,3).sum() + 12975 - tot_spesa.slice(0,3).sum()))  // eac = ac + etc
 
 #lineChart(lines: (ac,etc,eac),
           legends: ([AC],[ETC],[EAC]),
