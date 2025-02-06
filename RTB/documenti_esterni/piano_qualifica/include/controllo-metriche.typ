@@ -9,6 +9,7 @@
 //#glossario[etc]
 //#glossario[push]
 //#glossario[eac]
+//#glossario[ev]
 
 // lines   :: [[number], [number]]
 // legends :: [content, content]
