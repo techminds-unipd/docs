@@ -90,9 +90,11 @@ timeliney.timeline(
 caption: [Diagramma Gantt sprint 4.]
 )<diagramma-gantt-sprint4>
 
-==== Conclusioni // TODO
+==== Conclusioni
+Sono state completate tutte le task previste per questo sprint. La #link("https://github.com/techminds-unipd/docs/issues/193")[issue \#193], è stata chiusa come non pianificata dato che è stata completata come parte di altre task.
 
-==== Retrospettiva // TODO
+==== Retrospettiva
+Durante questo sprint ci siamo accorti di non aver impostato delle milestone dettagliate per monitorare l'avanzamento dei documenti in vista dell'RTB. Abbiamo quindi deciso di creare una milestone per ogni documento, a eccezione del glossario che, per sua natura, viene aggiornato quando necessario durante lo svolgimento delle task.
 
 ==== Costi
 
