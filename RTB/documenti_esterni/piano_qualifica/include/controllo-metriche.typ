@@ -49,17 +49,18 @@
 }
 
 // Valori metriche
-
 #let ac = ()
 #let etc = ()
 #let eac = ()
 #let ev = ()
+#let caption_figure = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
 #for i in range(1, sprint_number+1) {
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
     eac.push((i, costo_totale_stimato.at(i - 1)))
     ev.push((i, tot_spesa.slice(0,i).sum()))
+    caption_figure.push((i, 100))
 }
 #let g_adr = ((1,64),(2,66),(3,65),(4,66))
 #let g_pdp = ((1,48),(2,47),(3,56),(4,68))
@@ -71,6 +72,7 @@
 #let etc_fun(offset: 0) = etc
 #let eac_fun(offset: 0) = eac
 #let ev_fun(offset: 0) = ev
+#let caption_figure_fun(offset: 0) = caption_figure
 #let g_adr_fun(offset: 0) = g_adr
 #let g_pdp_fun(offset: 0) = g_pdp
 #let g_pdq_fun(offset: 0) = g_pdq
@@ -122,3 +124,24 @@ Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti d
 *RTB*
 #linebreak()
 I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabile (ovvero 40). In alcuni documenti, come Analisi dei requisiti, il valore dell'indice è rimasto abbastanza stabile. Si sono riscontrati dei notevoli incrementi in Norme di progetto e Piano di progetto, dovuti dalla maggiore cura e attenzione da parte del gruppo nella formulazione delle frasi. Infine, anche se in Glossario e Piano di qualifica ci sono stati dei peggioramenti, tra lo sprint 3 e lo sprint 4 si è registrato un impegno nel migliorare il valore dell'indice.
+
+== MACC1 (Caption in tabelle e figure)
+#linebreak()
+
+#let x_axis = ((1,0),)
+#let x_axis_fun(offset: 0) = x_axis
+
+#lineChart(lines: (caption_figure_fun, x_axis_fun),
+          legends: ([MACC1], []),
+          hlines: (),
+          x-label: "sprint",
+          y-label: "%",
+          caption: [Caption in tabelle e figure])
+
+Il grafico illustra:
+- Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
+
+#linebreak()
+*RTB*
+#linebreak()
+Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente. Inoltre permette di creare la lista delle figure, ovvero l'indice a loro dedicato.
