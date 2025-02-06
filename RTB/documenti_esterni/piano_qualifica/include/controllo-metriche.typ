@@ -11,7 +11,7 @@
 //#glossario[eac]
 
 // lines   :: [[number], [number]]
-// legends :: [[content], [content]]
+// legends :: [content, content]
 // hlines  :: [number]
 #let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, caption: content) = {
     figure(
@@ -21,9 +21,7 @@
         axis-style: "left",
         x-label: [#pad(left: 35pt, top: 5pt, x-label)],
         y-label: [#pad(right: 5pt, bottom: 5pt, y-label)],
-        x-tick-step: 1,
-        //y-tick-step: 0.5, {
-        {
+        x-tick-step: 1, {
 
         for data in lines.zip(legends) {
             plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1))
@@ -45,23 +43,28 @@
     tot_spesa.push(12975 - tot_spesa.sum(default: 0) - bilancio)
 }
 
-= Cruscotto
-== MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
-#linebreak()
+// Valori metriche
 
 #let ac = ()
 #let etc = ()
 #let eac = ()
+#let ev = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
 #for i in range(1, sprint_number+1) {
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
     eac.push((i, costo_totale_stimato.at(i - 1)))
+    ev.push((i, tot_spesa.slice(0,i).sum()))
 }
 
 #let ac_fun(offset: 0) = ac
 #let etc_fun(offset: 0) = etc
 #let eac_fun(offset: 0) = eac
+#let ev_fun(offset: 0) = ev
+
+= Cruscotto
+== MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
+#linebreak()
 
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
           legends: ([AC],[ETC],[EAC]),
