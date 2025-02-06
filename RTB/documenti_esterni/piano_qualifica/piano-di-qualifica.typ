@@ -22,6 +22,7 @@
   )
 )
 //#glossario[processo]
+//#glossario[RTB]
 
 #include "include/introduzione.typ"
 #include "include/metriche-qualita.typ"
