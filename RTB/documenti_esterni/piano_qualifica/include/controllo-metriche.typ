@@ -4,6 +4,9 @@
 
 //#glossario[sprint]
 //#glossario[label]
+//#glossario[ac]
+//#glossario[etc]
+//#glossario[eac]
 
 // lines   :: [[number], [number]]
 // legends :: [[content], [content]]
