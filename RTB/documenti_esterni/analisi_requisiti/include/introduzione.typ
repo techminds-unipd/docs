@@ -15,7 +15,7 @@ I casi d'uso seguono la seguente struttura:
 - *Pre-condizioni*: stato del programma prima dell'esecuzione del caso d'uso;
 - *Post-condizioni*: stato del programma dopo l'esecuzione del caso d'uso;
 - *Estensioni*: casi eccezionali che possono avvenire durante l'esecuzione del caso d'uso;
-- *Generalizzazioni*: servono ad aggiungere o modificare caratteristiche del padre da cui si generalizza.
+- *Generalizzazioni*: servono ad aggiungere o modificare caratteristiche del caso d'uso padre da cui si generalizza.
 
 == Glossario
 Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
