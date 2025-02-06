@@ -2,7 +2,7 @@
 #import "@preview/timeliney:0.1.0"
 
 = Periodi
-In questa sezione verranno elencati i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello #glossario[SCRUM]. 
+In questa sezione verranno elencati i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello Scrum. 
 
 == Struttura degli Sprint
 
@@ -17,10 +17,10 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 - #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
 - *Costi*:
   - *Preventivo*:
-    - Tabella contenente le ore (e quindi i costi) preventivate per ciascun ruolo/persona. La tabella contiene anche il totale delle ore e dei costi preventivati;
+    - Tabella contenente le ore e i costi preventivati per ciascun ruolo e persona;
     - Grafico a torta che mostra la distribuzione delle ore preventivate per ruolo.
   - *Consuntivo*:
-    - Tabella contenente le ore (e quindi i costi) consumate per ciascun ruolo/persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate. La tabella contiene anche il totale delle ore e dei costi conseguiti;
+    - Tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
     - Grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
