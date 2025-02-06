@@ -1,5 +1,8 @@
 #import "/template/template.typ": glossario
 
+// WARNING: aggiungere le nuove metriche con il push solo alla fine. Altrimenti potrebbe cambiare l'ordine degli indici e nel cruscotto viene fuori un macello.
+// Se si rimuovono delle metriche bisogna controllare i codici all'interno del cruscotto.
+
 #let getMPRO(number) = {
     let MPRO = ()
 

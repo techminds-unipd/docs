@@ -46,8 +46,7 @@
 }
 
 = Cruscotto
-
-== Actual cost + Estimate to Complete + Estimated at Completion
+== MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
 #linebreak()
 
 #let ac = ()
@@ -69,7 +68,7 @@
           hlines: (),
           x-label: "sprint",
           y-label: "costo \u{20AC}",
-          caption: [AC + ETC + EAC])
+          caption: [AC, ETC, EAC])
 
 Il grafico illustra:
 - #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
