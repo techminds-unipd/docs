@@ -72,6 +72,6 @@
           caption: [AC + ETC + EAC])
 
 Il grafico illustra:
-- #glossario[Actual Cost]: i costi sostenuti fino ad ora;
-- #glossario[Estimate to Complete]: il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
-- #glossario[Estimated at Completion]: revisione del valore stimato per la realizzazione del progetto (AC + ETC).
+- #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
+- #glossario[Estimate to Complete] (ETC): il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
+- #glossario[Estimated at Completion] (EAC): revisione del valore stimato per la realizzazione del progetto (AC + ETC).
