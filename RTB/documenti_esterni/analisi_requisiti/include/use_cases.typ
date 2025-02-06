@@ -11,6 +11,25 @@
     stealth: 0
 )
 
+#let uc_comment(node, extrude) = {
+	let (w, h) = node.size
+	let (x, y) = (w/2, h/2)
+	let d = 0.5*calc.min(w/2, h/2)
+
+	let obj = draw.line(
+		(-x, -y),
+		(-x, +y),
+		(+x -0.3cm, +y),
+		(+x, +y -0.3cm),
+		(+x -0.3cm, +y -0.3cm),
+		(+x -0.3cm, +y),
+		(+x, +y -0.3cm),
+		(+x, -y),
+		close: true,
+	)
+	draw.group(obj) // enables cetz border anchors
+}
+
 = Casi d'uso
 
 == Obiettivi
@@ -30,13 +49,15 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Backend.
 - *Attori secondari*:
   - Google;
+  - #glossario[Pastebin];;
   - #glossario[LLM].
+
 == Sistema
   Il sistema è composto dai seguenti elementi:
     - Frontend;
     - Backend;
-    - #glossario[Agente];
-    - Database.
+    - Database;
+    - #glossario[Agente].
 == Definizione casi d'uso
 
 #set heading(numbering: (..numbers) => {
@@ -100,7 +121,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
   node((2.9,1.25), align(center)[
     L'utente inserisce delle #linebreak()credenziali errate o inesistenti
-    ], shape: rect, name: <pnf>),
+    ], shape: uc_comment, name: <pnf>),
  
 
 
@@ -216,7 +237,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente può riprovare ad eseguire il login.
 
 === Login Google <login-google>
-- Descrizione:
+- *Descrizione*:
   - Questo caso d'uso descrive l'uso dell'account Google per effettuare il login.
 - *Attori principali*:
   - Utente non autenticato.
@@ -276,7 +297,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((2.6,0.35), align(center)[
             Utente inserisce #linebreak() dati non validi
-    ], shape: rect, name: <le>),
+    ], shape: uc_comment, name: <le>),
     node((2.1,0.025), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
@@ -390,7 +411,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - L'utente non possiede un account.
 - *Post-condizioni*:
   - L'utente non possiede un account;
-  - Viene mostrato un messaggio d'errore esplicativo;
+  - Viene mostrato un messaggio d'errore esplicativo.
 
 === Aggiunta account Google associato ai workflow
 <aggiunta-account-google-associato>
@@ -419,7 +440,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((1.6,0.9), align(center)[
             Google trasmette #linebreak() un errore
-    ], shape: rect, name: <le>),
+    ], shape: uc_comment, name: <le>),
     node((2,0.9), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
@@ -434,7 +455,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     caption: [Aggiunta account Google diagram.]
 ) <aggiunta-account-google-diagram>
 - *Descrizione*: 
-  - Questo caso d'uso descrive la procedura di aggiunta di un account Google associato all'utente autenticato. Grazie a questa associazione, l'utente può utilizzare i servizi offerti dai blocchi dei workflow.
+  - Questo caso d'uso descrive la procedura di aggiunta di un account Google associato all'utente autenticato. Grazie a questa associazione, l'utente può utilizzare i servizi Google offerti dai blocchi dei workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
@@ -546,7 +567,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((.6,0.5), align(center)[
             Il workflow non è valido
-    ], shape: rect, name: <post-it>),
+    ], shape: uc_comment, name: <post-it>),
 
     node((1.15,0.5), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
@@ -559,7 +580,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     
     node((2,0.8), align(center)[
             L'agente non riesce a #linebreak() completare l'operazione
-    ], shape: rect, name: <post-it2>),
+    ], shape: uc_comment, name: <post-it2>),
 
     node((1.53,0.8), align(center)[
     ], name: <nf2>, width: 1pt, height: 1pt),
@@ -735,7 +756,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((1.3,1), align(center)[
             Il time-out #linebreak() raggiunge il limite
-    ], shape: rect, name: <post-it>),
+    ], shape: uc_comment, name: <post-it>),
     node((1.88,1), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<post-it>, <nf>, "--"),
@@ -977,11 +998,10 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Utente autenticato:
    1. aggiunge un blocco di automazione (Gmail/Calendar/Pastebin) già configurato, trascinandolo nell'area drag and drop.
  - Sistema:
-   2. gestisce l'input dell'utente;
-   3. aggiorna il workflow.
+   1. gestisce l'input dell'utente;
+   2. aggiorna il workflow.
 - *Pre-condizioni*:
-   - L'utente ha creato almeno un workflow;
-   - L'utente sta modificando il workflow.
+   - L'utente ha creato almeno un workflow.
 - *Post-condizioni*:
    - Viene aggiunto al workflow il blocco scelto dall'utente.
 
@@ -1023,8 +1043,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. gestisce gli input dell'utente;
    2. aggiorna il workflow.
 - *Pre-condizioni*:
-   - L'utente ha creato un workflow con almeno un blocco;
-   - L'utente sta modificando il workflow.
+   - L'utente ha creato un workflow con almeno un blocco.
 - *Post-condizioni*:
    - Viene eliminato un blocco dal workflow.
 
@@ -1067,8 +1086,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno due blocchi;
-   - I blocchi da collegare sono scollegati tra loro;
-   - L'utente sta modificando il workflow.
+   - I blocchi da collegare sono scollegati tra loro.
 - *Post-condizioni*:
    - Viene creato un arco orientato tra i due blocchi selezionati dall'utente.
 
@@ -1111,8 +1129,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. aggiorna il workflow.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno due blocchi;
-   - I blocchi da scollegare sono collegati tra loro;
-   - L'utente sta modificando il workflow.
+   - I blocchi da scollegare sono collegati tra loro.
 - *Post-condizioni*:
    - Viene eliminato l'arco orientato tra i due blocchi selezionati dall'utente.
 
@@ -1154,8 +1171,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. gestisce l'input dell'utente;
    2. aggiorna il workflow.
 - *Pre-condizioni*:
-   - L'utente ha creato un workflow con almeno due blocchi collegati tramite un arco che non specifica alcuna descrizione;
-   - L'utente sta modificando il workflow.
+   - L'utente ha creato un workflow con almeno due blocchi collegati tramite un arco che non specifica alcuna descrizione.
 - *Post-condizioni*:
    - Viene aggiunta la descrizione dell'automazione relativa all'arco selezionato dall'utente.
 
@@ -1197,8 +1213,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. gestisce gli input dell'utente;
    2. aggiorna il workflow.
 - *Pre-condizioni*:
-   - L'utente ha creato un workflow con una descrizione in almeno un arco orientato;
-   - L'utente sta modificando il workflow.
+   - L'utente ha creato un workflow con una descrizione in almeno un arco orientato.
 - *Post-condizioni*:
    - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
 
@@ -1227,7 +1242,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 
     node((0.9,0.7), align(center)[
             Nessun servizio #linebreak() collegato
-    ], shape: rect, name: <le>),
+    ], shape: uc_comment, name: <le>),
     node((1.63,0.8), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
@@ -1291,12 +1306,20 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
             @salvataggio-workflow Salvataggio workflow
     ], name: <a>),
 
-    node((2,0.5), align(center)[
+    node((2,1), align(center)[
             @errore-connessione-database Errore connessione database
     ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
-    node(enclose: (<a>,<b>),
+    node((2.7,0.6), align(center)[
+            Database non disponibile
+    ], shape: uc_comment, name: <c>),
+
+    node((2,0.6), align(center)[
+    ], name: <d>, width: 1pt, height: 1pt),
+    edge(<c>, <d>, "--"),
+
+    node(enclose: (<a>,<b>, <c>, <d>),
         align(top + right)[Sistema],
         width: 150pt,
         height: 150pt,
@@ -1382,7 +1405,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. clicca su un blocco;
+    1. seleziona un blocco;
     2. visualizza le informazioni disponibili.
  - Sistema:
     1. fa visualizzare all'utente una breve descrizione del blocco selezionato;
@@ -1421,7 +1444,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. clicca sul blocco Gmail;
+    1. seleziona blocco Gmail;
     2. visualizza le informazioni relative al blocco.
  - Sistema:
     1. fa visualizzare all'utente una breve descrizione del blocco Gmail;
@@ -1462,7 +1485,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. clicca sul blocco Pastebin;
+    1. seleziona blocco Pastebin;
     2. visualizza le informazioni relative al blocco.
  - Sistema:
     1. fa visualizzare all'utente una breve descrizione del blocco Pastebin;
@@ -1501,7 +1524,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. clicca sul blocco Calendar;
+    1. seleziona blocco Calendar;
     2. visualizza le informazioni relative al blocco.
  - Sistema:
     1. fa visualizzare all'utente una breve descrizione del blocco Calendar;
@@ -1567,12 +1590,20 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
             @eliminazione-workflow Eliminazione workflow
     ], name: <a>),
 
-    node((2,0.5), align(center)[
+    node((2.7,0.6), align(center)[
+            Database non disponibile
+    ], shape: uc_comment, name: <c>),
+
+    node((2,0.6), align(center)[
+    ], name: <d>, width: 1pt, height: 1pt),
+    edge(<c>, <d>, "--"),
+
+    node((2,1), align(center)[
             @errore-connessione-database Errore connessione database
     ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
-    node(enclose: (<a>,<b>),
+    node(enclose: (<a>,<b>, <c>, <d>),
         align(top + right)[Sistema],
         width: 150pt,
         height: 150pt,
