@@ -49,11 +49,11 @@
 }
 
 // Valori metriche
-
 #let ac = ()
 #let etc = ()
 #let eac = ()
 #let ev = ()
+#let caption_figure = ()
 #let rischi = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
 #for i in range(1, sprint_number+1) {
@@ -61,6 +61,7 @@
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
     eac.push((i, costo_totale_stimato.at(i - 1)))
     ev.push((i, tot_spesa.slice(0,i).sum()))
+    caption_figure.push((i, 100))
     rischi.push((i, 0))
 }
 
@@ -68,6 +69,7 @@
 #let etc_fun(offset: 0) = etc
 #let eac_fun(offset: 0) = eac
 #let ev_fun(offset: 0) = ev
+#let caption_figure_fun(offset: 0) = caption_figure
 #let rischi_fun(offset: 0) = rischi
 
 = Cruscotto
@@ -89,7 +91,28 @@ Il grafico illustra:
 === RTB
 In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizialmente le ore produttive sono molte meno rispetto a quelle di orologio.
 Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
-EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi. 
+EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
+
+== MACC1 (Caption in tabelle e figure)
+#linebreak()
+
+#let x_axis = ((1,0),)
+#let x_axis_fun(offset: 0) = x_axis
+
+#lineChart(lines: (caption_figure_fun, x_axis_fun),
+          legends: ([MACC1], []),
+          hlines: (),
+          x-label: "sprint",
+          y-label: "%",
+          caption: [Caption in tabelle e figure])
+
+Il grafico illustra:
+- Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
+
+#linebreak()
+*RTB*
+#linebreak()
+Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente. Inoltre permette di creare la lista delle figure, ovvero l'indice a loro dedicato. 
 
 == MPRO11 (Rischi non previsti)
 #linebreak()
