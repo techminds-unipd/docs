@@ -4,6 +4,7 @@
   title: "Piano di qualifica",
   sommario: "Il documento espone le metriche di verifica attuate per garantire qualità.",
   changelog: (
+    "0.7.0", "06/02/2025", "Aggiunto grafico metrica rischi non previsti", team.S, "",
     "0.6.0", "06/02/2025", "Aggiunto grafico metriche AC, ETC, EAC", team.G, team.T,
     "0.5.4", "05/02/2025", "Modifica metriche qualità di processo", team.S, team.M,
     "0.5.3", "05/02/2025", "Modifica tabella metriche pianificazione e miglioramento", team.A, team.T,

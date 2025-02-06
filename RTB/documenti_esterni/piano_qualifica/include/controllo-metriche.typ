@@ -25,7 +25,11 @@
         x-tick-step: 1, {
 
         for data in lines.zip(legends) {
-            plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1))
+            if (data.at(1) == []) {
+                plot.add(data.at(0)(offset: 0), line: "linear")
+            } else {
+                plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1))
+            }
         }
 
         for hline in hlines {
@@ -50,18 +54,21 @@
 #let etc = ()
 #let eac = ()
 #let ev = ()
+#let rischi = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
 #for i in range(1, sprint_number+1) {
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
     eac.push((i, costo_totale_stimato.at(i - 1)))
     ev.push((i, tot_spesa.slice(0,i).sum()))
+    rischi.push((i, 0))
 }
 
 #let ac_fun(offset: 0) = ac
 #let etc_fun(offset: 0) = etc
 #let eac_fun(offset: 0) = eac
 #let ev_fun(offset: 0) = ev
+#let rischi_fun(offset: 0) = rischi
 
 = Cruscotto
 == MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
@@ -80,6 +87,27 @@ Il grafico illustra:
 - #glossario[Estimated at Completion] (EAC): revisione del valore stimato per la realizzazione del progetto (AC + ETC).
 
 === RTB
-In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizialmente le ore produttive sono molte meno rispetto a quelle di orologio.
+In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizi  almente le ore produttive sono molte meno rispetto a quelle di orologio.
 Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
-EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
+EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi. 
+
+== MPRO11 (Rischi non previsti)
+#linebreak()
+
+#let point = ((1,9),)
+#let point_fun(offset: 0) = point
+
+#lineChart(lines: (rischi_fun, point_fun,),
+          legends: ([Rischi], []),
+          hlines: (),
+          x-label: "sprint",
+          y-label: "rischi",
+          caption: [Rischi])
+
+Il grafico illustra:
+- Rischi: il numero di rischi non previsti che si sono verificati durante lo svolgimento del progetto.
+
+#linebreak()
+*RTB*
+#linebreak()
+Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previsti. Per maggiori informazioni sui rischi previsti si veda #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi", "Analisi dei rischi").
