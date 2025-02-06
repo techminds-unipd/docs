@@ -33,7 +33,7 @@ La progettazione è il processo che si occupa di definire la struttura del siste
     inset: 10pt,
     align: horizon,
     table.header(
-      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+      [*Codice*], [*Nome metrica*], [*Descrizione*], [*Valore accettabile*], [*Valore ottimale*]
     ), 
     ..getMMAN(1),
     ..getMMAN(6),
@@ -126,7 +126,7 @@ La verifica è un processo che si occupa di accertare che non vengano introdotti
     inset: 10pt,
     align: horizon,
     table.header(
-      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
+      [*Codice*], [*Nome metrica*], [*Descrizione*], [*Valore accettabile*], [*Valore ottimale*]
     ),
     ..getMPRO(12),
     ..getMPRO(13),
