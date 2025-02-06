@@ -12,9 +12,9 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetitiv
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte.
 - *Ruoli*: elenca i ruoli assegnati ai membri del team per lo sprint in considerazione.
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]:
-- #glossario[*Diagramma di Gantt*]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore grigio) e il tempo effettivamente passato (colore rosso) per completare ogni issue.
+- #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore grigio) e il tempo effettivamente passato (colore rosso) per completare ogni issue.
 - *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso.
-- #glossario[*Retrospettiva*]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint.
+- #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint.
 - *Costi*:
   - *Preventivo*:
     - Tabella contenente le ore (e quindi i costi) preventivate per ciascun ruolo/persona. La tabella contiene anche il totale delle ore e dei costi preventivati.
