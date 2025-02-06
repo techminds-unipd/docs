@@ -83,3 +83,26 @@ Il grafico illustra:
 In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizialmente le ore produttive sono molte meno rispetto a quelle di orologio.
 Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
 EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
+
+== MAFF1 (Indice di Gulpease)
+#linebreak()
+
+#lineChart(lines: (ac_fun,etc_fun,eac_fun),
+          legends: ([AC],[ETC],[EAC]),
+          hlines: (),
+          x-label: "sprint",
+          y-label: "costo \u{20AC}",
+          caption: [AC, ETC, EAC])
+
+Il grafico illustra:
+- #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
+- #glossario[Estimate to Complete] (ETC): il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
+- #glossario[Estimated at Completion] (EAC): revisione del valore stimato per la realizzazione del progetto (AC + ETC).
+
+#linebreak()
+*RTB*
+#linebreak()
+
+In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. AC sta crescendo lentamente, questo perchè inizialmente le ore produttive sono molte meno rispetto a quelle di orologio.
+Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
+EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
