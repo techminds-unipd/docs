@@ -60,7 +60,6 @@
 }
 
 // Valori metriche
-
 #let ac = ()
 #let etc = ()
 #let eac = ()
@@ -68,7 +67,9 @@
 #let pv = ()
 #let cv = ()
 #let sv = ()
+#let caption_figure = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
+
 #for i in range(1, sprint_number+1) {
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
@@ -79,6 +80,8 @@
 
     cv.push((i, ev.at(i - 1).at(1) - ac.at(i - 1).at(1)))
     sv.push((i, ev.at(i - 1).at(1) - pv.at(i - 1).at(1)))
+
+    caption_figure.push((i, 100))
 }
 
 #let ac_fun(offset: 0) = ac
@@ -88,6 +91,7 @@
 #let pv_fun(offset: 0) = pv
 #let cv_fun(offset: 0) = cv
 #let sv_fun(offset: 0) = sv
+#let caption_figure_fun(offset: 0) = caption_figure
 
 = Cruscotto
 == MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
@@ -129,9 +133,11 @@ Il grafico illustra:
 #linebreak()
 *RTB*
 #linebreak()
+
 In questo periodo abbiamo rispettato abbastanza bene i costi preventivati, scostandoci di poco. Questo mette in evidenza una buona metodologia di pianificazione.
 In generale i costi sono bassi perchè in questo periodo erano presenti molti impegni fra lezioni e esami che non permettevano di allocare molto tempo.
 
+#pagebreak()
 == MPRO4 (CV), MPRO5 (SV)
 #linebreak()
 
@@ -156,3 +162,25 @@ Il grafico illustra:
 #linebreak()
 In questo periodo si nota che CV è sempre 0, ovvero stiamo usando le risorse producendo adeguatamente.
 SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle attività, successivamente con un rallentamento causato dalla sessione di esami.
+
+#pagebreak()
+== MACC1 (Caption in tabelle e figure)
+#linebreak()
+
+#let x_axis = ((1,0),)
+#let x_axis_fun(offset: 0) = x_axis
+
+#lineChart(lines: (caption_figure_fun, x_axis_fun),
+          legends: ([MACC1], []),
+          hlines: (),
+          x-label: "sprint",
+          y-label: "%",
+          caption: [Caption in tabelle e figure])
+
+Il grafico illustra:
+- Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
+
+#linebreak()
+*RTB*
+#linebreak()
+Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente. Inoltre permette di creare la lista delle figure, ovvero l'indice a loro dedicato.
