@@ -75,3 +75,6 @@ Il grafico illustra:
 - #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
 - #glossario[Estimate to Complete] (ETC): il valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto;
 - #glossario[Estimated at Completion] (EAC): revisione del valore stimato per la realizzazione del progetto (AC + ETC).
+
+=== RTB
+In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC. EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
