@@ -30,7 +30,7 @@ Descrive gli obiettivi principali dello sprint, le attività previste e le motiv
   - Verificatore;
 
 === Issue
-Elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario("GitHub"):
+Elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]:
 
 === Diagramma di Gantt
 Un grafico che mostra la distribuzione temporale delle attività pianificate e svolte.
