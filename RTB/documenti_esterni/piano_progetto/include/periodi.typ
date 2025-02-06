@@ -9,19 +9,19 @@ In questa sezione verranno elencati i periodi di lavoro suddivisi per le milesto
 Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetitiva. Ogni sprint contiene le seguenti sezioni:
 
 - *Durata*: le date di inizio e fine dello sprint;
-- *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte.
-- *Ruoli*: elenca i ruoli assegnati ai membri del team per lo sprint in considerazione.
+- *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
+- *Ruoli*: elenca i ruoli assegnati ai membri del team per lo sprint in considerazione;
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]:
-- #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore grigio) e il tempo effettivamente passato (colore rosso) per completare ogni issue.
-- *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso.
-- #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint.
+- #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore grigio) e il tempo effettivamente passato (colore rosso) per completare ogni issue;
+- *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso;
+- #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
 - *Costi*:
   - *Preventivo*:
-    - Tabella contenente le ore (e quindi i costi) preventivate per ciascun ruolo/persona. La tabella contiene anche il totale delle ore e dei costi preventivati.
-    - Grafico a torta che mostra la distribuzione delle ore preventivate per ruolo. 
+    - Tabella contenente le ore (e quindi i costi) preventivate per ciascun ruolo/persona. La tabella contiene anche il totale delle ore e dei costi preventivati;
+    - Grafico a torta che mostra la distribuzione delle ore preventivate per ruolo.
   - *Consuntivo*:
-    - Tabella contenente le ore (e quindi i costi) consumate per ciascun ruolo/persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate. La tabella contiene anche il totale delle ore e dei costi conseguiti.
-    - Grafico a torta che mostra la distribuzione delle ore consumate per ruolo. 
+    - Tabella contenente le ore (e quindi i costi) consumate per ciascun ruolo/persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate. La tabella contiene anche il totale delle ore e dei costi conseguiti;
+    - Grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;
