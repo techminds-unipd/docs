@@ -57,11 +57,21 @@
     eac.push((i, costo_totale_stimato.at(i - 1)))
     ev.push((i, tot_spesa.slice(0,i).sum()))
 }
+#let g_adr = ((),(2,66))
+#let g_pdp = (())
+#let g_pdq = (())
+#let g_ndp = (())
+#let g_gloss = (())
 
 #let ac_fun(offset: 0) = ac
 #let etc_fun(offset: 0) = etc
 #let eac_fun(offset: 0) = eac
 #let ev_fun(offset: 0) = ev
+#let g_adr_fun(offset: 0) = g_adr
+#let g_pdp_fun(offset: 0) = g_pdp
+#let g_pdq_fun(offset: 0) = g_pdq
+#let g_ndp_fun(offset: 0) = g_ndp
+#let g_gloss_fun(offset: 0) = g_gloss
 
 = Cruscotto
 == MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
