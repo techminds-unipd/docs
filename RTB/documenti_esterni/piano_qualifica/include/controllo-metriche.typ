@@ -116,6 +116,8 @@
 #let g_gloss_fun(offset: 0) = g_gloss
 #let rischi_fun(offset: 0) = rischi
 
+#pagebreak()
+
 = Cruscotto
 == MPRO2 (AC), MPRO8 (ETC), MPRO7 (EAC)
 #linebreak()
@@ -207,7 +209,7 @@ Il grafico illustra:
 #linebreak()
 In questo periodo si nota che CPI è esattamente a 1, indicando che il costo per completare i lavori è in linea a quanto stabilito.
 La SPI inizialmente supera 1, indicando che abbiamo ottenuto i risultati aspettati con costi minori dei preventivati, aumentanto così l'efficienza.
-Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto ad aspettative troppo ambizione e poco tempo disponibile con l'avvicinarsi della sessione di esami.
+Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto ad aspettative troppo ambiziose e poco tempo disponibile con l'avvicinarsi della sessione di esami.
 
 #pagebreak()
 
