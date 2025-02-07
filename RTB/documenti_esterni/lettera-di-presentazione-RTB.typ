@@ -20,7 +20,7 @@ proposto dall'azienda VarGroup.
 Tutta la documentazione riguardante il lavoro svolto è esposta nel sito web del nostro gruppo:
 #align(center, link("https://techminds-unipd.github.io/docs/"))
 
-All'interno della sezione "Requirements and Technology Baseline", oltre alla presente lettera, sono presenti i seguenti documenti:
+All'interno della sezione "Requirements and Technology Baseline", oltre alla presente lettera, sono inclusi i seguenti documenti:
 - Documentazione esterna:
   - Analisi dei requisiti;
   - Piano di progetto;
