@@ -1,4 +1,5 @@
 #import "./definizione-metriche.typ": getMPRO, getMFUN, getMAFF, getMMAN, getMEFF, getMUSA, getMACC, getMPOR
+#show figure: set block(breakable: true)
 
 == Qualità per obiettivo
 === Processi primari

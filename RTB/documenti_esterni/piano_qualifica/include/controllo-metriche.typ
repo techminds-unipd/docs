@@ -14,6 +14,8 @@
 //#glossario[rtb]
 //#glossario[cv]
 //#glossario[sv]
+//#glossario[cpi]
+//#glossario[spi]
 
 // lines   :: [[number], [number]]
 // legends :: [content, content]
@@ -67,6 +69,9 @@
 #let pv = ()
 #let cv = ()
 #let sv = ()
+#let cpi = ()
+#let spi = ()
+#let cpi = ()
 #let caption_figure = ()
 #let rischi = ()
 #let costo_totale_stimato = (12975, 12975, 12975)
@@ -81,6 +86,9 @@
 
     cv.push((i, ev.at(i - 1).at(1) - ac.at(i - 1).at(1)))
     sv.push((i, ev.at(i - 1).at(1) - pv.at(i - 1).at(1)))
+
+    cpi.push((i, ev.at(i - 1).at(1) / ac.at(i - 1).at(1)))
+    spi.push((i, ev.at(i - 1).at(1) / pv.at(i - 1).at(1)))
 
     caption_figure.push((i, 100))
     rischi.push((i, 0))
@@ -98,6 +106,8 @@
 #let pv_fun(offset: 0) = pv
 #let cv_fun(offset: 0) = cv
 #let sv_fun(offset: 0) = sv
+#let cpi_fun(offset: 0) = cpi
+#let spi_fun(offset: 0) = spi
 #let caption_figure_fun(offset: 0) = caption_figure
 #let g_adr_fun(offset: 0) = g_adr
 #let g_pdp_fun(offset: 0) = g_pdp
@@ -105,6 +115,8 @@
 #let g_ndp_fun(offset: 0) = g_ndp
 #let g_gloss_fun(offset: 0) = g_gloss
 #let rischi_fun(offset: 0) = rischi
+
+#pagebreak()
 
 = Cruscotto
 == MPRO2 (AC), MPRO8 (ETC), MPRO7 (EAC)
@@ -172,6 +184,32 @@ Il grafico illustra:
 #linebreak()
 In questo periodo si nota che CV è sempre 0, ovvero stiamo usando le risorse producendo adeguatamente.
 SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle attività, successivamente con un rallentamento causato dalla sessione di esami.
+
+#pagebreak()
+
+== MPRO6 (CPI), MPRO9 (SPI)
+#linebreak()
+
+#let spi_values = spi.map(el => el.at(1))
+#let lower_bound = spi_values.sum() / spi_values.len()
+
+#lineChart(lines: (cpi_fun,spi_fun),
+          legends: ([CPI],[SPI]),
+          hlines: (1,-lower_bound - 0.1*lower_bound),
+          x-label: "sprint",
+          y-label: "y",
+          caption: [CPI, SPI.])
+
+Il grafico illustra:
+- #glossario[Cost Performance Index] (CPI): indica l’#glossario[efficienza] dei costi di un progetto mettendo in relazione il valore prodotto e i costi sostenuti;
+- #glossario[Schedule Performance Index] (SPI): indica l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.
+
+#linebreak()
+*RTB*
+#linebreak()
+In questo periodo si nota che CPI è esattamente a 1, indicando che il costo per completare i lavori è in linea a quanto stabilito.
+La SPI inizialmente supera 1, indicando che abbiamo ottenuto i risultati aspettati con costi minori dei preventivati, aumentanto così l'efficienza.
+Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto ad aspettative troppo ambiziose e poco tempo disponibile con l'avvicinarsi della sessione di esami.
 
 #pagebreak()
 
