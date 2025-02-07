@@ -63,7 +63,7 @@ timeliney.timeline(
   {
     import timeliney: *
 
-    headerline(group(([*Dicembre 2024*], 6)), group(([*Gennaio 2024*], 6)))
+    headerline(group(([*Dicembre 2024*], 6)), group(([*Gennaio 2025*], 6)))
     headerline(
       group(..range(2).map(n => strong(str(n + 23)))),
       group(..range(4).map(n => strong(str(n + 27)))),
