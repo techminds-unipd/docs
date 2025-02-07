@@ -199,7 +199,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
           caption: [CPI, SPI.])
 
 Il grafico illustra:
-- #glossario[Cost Performance Index] (CPI): indica l’efficienza dei costi di un progetto mettendo in relazione il valore prodotto e i costi sostenuti;
+- #glossario[Cost Performance Index] (CPI): indica l’#glossario[efficienza] dei costi di un progetto mettendo in relazione il valore prodotto e i costi sostenuti;
 - #glossario[Schedule Performance Index] (SPI): indica l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.
 
 #linebreak()
