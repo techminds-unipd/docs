@@ -52,19 +52,17 @@ timeliney.timeline(
   show-grid: true,
   {
     import timeliney: *
-    headerline(([*Gennaio 2025*], 19))
+    headerline(([*Gennaio 2025*], 15))
     headerline(
       group(..range(5).map(n => strong(str(n + 13)))),
-      group(..range(2).map(n => strong(str(n + 18)))),
       group(..range(5).map(n => strong(str(n + 20)))),
-      group(..range(2).map(n => strong(str(n + 25)))),
       group(..range(5).map(n => strong(str(n + 27))))
     )
 
     taskgroup(title: [*Analisi dei requisiti*],{
-      task("UC eliminazione workflow", (from: 9, to: 11, style: (stroke: 8pt + gray)), (from: 9, to: 11, style: (stroke: 2pt + red)))
-      task("Tabella requisiti qualitativi", (from: 5, to: 8, style: (stroke: 8pt + gray)), (from: 5, to: 8, style: (stroke: 2pt + red)))
-      task("Tabella requisiti di vincolo", (from: 7, to: 10, style: (stroke: 8pt + gray)), (from: 7, to: 10, style: (stroke: 2pt + red)))
+      task("UC eliminazione workflow", (from: 7, to: 9, style: (stroke: 8pt + gray)), (from: 7, to: 9, style: (stroke: 2pt + red)))
+      task("Tabella requisiti qualitativi", (from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
+      task("Tabella requisiti di vincolo", (from: 5, to: 8, style: (stroke: 8pt + gray)), (from: 5, to: 8, style: (stroke: 2pt + red)))
       task(align(center, [Aggiungere campo descrizione #linebreak() nella sezione 1.1]), (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
     })
 
@@ -74,15 +72,15 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Piano di Qualifica*], {
-      task(align(center, [Redigere sezione qualità #linebreak() di prodotto]), (from: 10, to: 15, style: (stroke: 8pt + gray)), (from: 10, to: 15, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi primari)]), (from: 15, to: 19, style: (stroke: 8pt + gray)), (from: 16, to: 19, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi di supporto)]), (from: 11, to: 15, style: (stroke: 8pt + gray)), (from: 11, to: 15, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi organizzativi)]), (from: 16, to: 18, style: (stroke: 8pt + gray)), (from: 16, to: 19, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione qualità #linebreak() di prodotto]), (from: 8, to: 11, style: (stroke: 8pt + gray)), (from: 8, to: 11, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi primari)]), (from: 11, to: 15, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi di supporto)]), (from: 9, to: 11, style: (stroke: 8pt + gray)), (from: 9, to: 11, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi organizzativi)]), (from: 12, to: 14, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Norme di Progetto*], {
       task("Redigere sezione gestione operativa", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione accertamento #linebreak() della qualità]), (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 19, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione accertamento #linebreak() della qualità]), (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 15, style: (stroke: 2pt + red)))
     })
   }
 ),
