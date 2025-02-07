@@ -1,7 +1,7 @@
 #import "/template/template.typ": glossario
 #import "@preview/cetz:0.3.1"
 #import "@preview/cetz-plot:0.1.0": plot, chart
-#import "../../piano_progetto/include/costi.typ": getSprintCostsSection
+#import "../../piano_progetto/include/costi.typ": getSprintCostsSection, getSprintNumber
 
 //#glossario[sprint]
 //#glossario[label]
@@ -47,7 +47,7 @@
 
 // tot_spesa.at(i) => spesa sostenuta allo sprint i
 #let tot_spesa = ()
-#let sprint_number = 3
+#let sprint_number = getSprintNumber()
 #for i in range(1, sprint_number+1) {
     let (_, consuntivo) = getSprintCostsSection(sprint_number: i)
     let bilancio  = consuntivo.bilancioConsuntivo
@@ -74,9 +74,11 @@
 #let cpi = ()
 #let caption_figure = ()
 #let rischi = ()
-#let costo_totale_stimato = (12975, 12975, 12975)
+#let costo_totale_stimato = ()
 
 #for i in range(1, sprint_number+1) {
+    costo_totale_stimato.push(12975)
+
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
     eac.push((i, costo_totale_stimato.at(i - 1)))
@@ -165,12 +167,9 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 == MPRO4 (CV), MPRO5 (SV)
 #linebreak()
 
-#let sv_values = sv.map(el => el.at(1))
-#let lower_bound = sv_values.sum() / sv_values.len()
-
 #lineChart(lines: (cv_fun,sv_fun),
           legends: ([CV],[SV]),
-          hlines: (0, -lower_bound - 0.1*lower_bound),
+          hlines: (0,),
           x-label: "sprint",
           y-label: "y",
           caption: [CV, SV.])
@@ -190,12 +189,9 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 == MPRO6 (CPI), MPRO9 (SPI)
 #linebreak()
 
-#let spi_values = spi.map(el => el.at(1))
-#let lower_bound = spi_values.sum() / spi_values.len()
-
 #lineChart(lines: (cpi_fun,spi_fun),
           legends: ([CPI],[SPI]),
-          hlines: (1,-lower_bound - 0.1*lower_bound),
+          hlines: (1,),
           x-label: "sprint",
           y-label: "y",
           caption: [CPI, SPI.])

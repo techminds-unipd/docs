@@ -27,19 +27,19 @@
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Cost Variance] (CV)],
                 [Misura la differenza tra il valore e il costo del lavoro completato. Indica se il progetto è sotto o sopra il budget pianificato per il lavoro completato.],
-                [\u{2A7E}-10%],
+                [\u{2A7E}0],
                 [\u{2A7E}0]))
 
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Schedule Variance] (SV)],
                 [Misura il valore del lavoro completato rispetto a quanto pianificato. Indica se il progetto è in anticipo, in ritardo o in linea rispetto alla pianificazione.],
-                [\u{2A7E}-10%],
+                [\u{2A7E}0],
                 [\u{2A7E}0]))
 
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Cost Performance Index] (CPI)],
                 [Valuta l'efficienza dei costi di un progetto fino a un determinato momento mettendo in relazione il valore prodotto e i costi sostenuti.],
-                [\u{2A7E}-10%],
+                [\u{2A7E}1],
                 [\u{2A7E}1]))
 
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
@@ -57,7 +57,7 @@
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Schedule Performance Index] (SPI)],
                 [Misura l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.],
-                [\u{2A7E}-10%],
+                [\u{2A7E}1],
                 [\u{2A7E}1]))
 
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
@@ -207,7 +207,7 @@
     let MEFF = ()
 
     MEFF.push(  ("MEFF" + str(MEFF.len()+1),
-                [Tempo medio di esecuizone di un workflow],
+                [Tempo medio di esecuzione di un workflow],
                 [Misura il tempo medio di esecuzione di un workflow],
                 [\u{2A7D}20 secondi (tempo timeout)],
                 [\u{2A7D}10 secondi]))
@@ -224,6 +224,12 @@
                 [⩽7 click],
                 [⩽5 click]))
 
+    //MUSA.push(  ("MUSA" + str(MUSA.len()+1),
+    //            [Numero di messaggi di errore],
+    //            [Metrica che misura il numero di messaggi di errore che può mostrare il prodotto],
+    //            [⩽7 ],
+    //            [⩽5 click]))
+
     return MUSA.at(number - 1)
 }
 
@@ -235,12 +241,6 @@
                 [Indica quante figure e tabelle hanno un titolo descrittivo associato.],
                 [100%],
                 [100%]))
-
-    MACC.push(  ("MACC" + str(MACC.len()+1),
-                [Livello WCAG],
-                [Valuta il livello di conformità agli standard WCAG per l'accessibilità.],
-                [A],
-                [AA]))
 
     return MACC.at(number - 1)
 }
