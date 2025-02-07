@@ -39,8 +39,8 @@
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Cost Performance Index] (CPI)],
                 [Valuta l'efficienza dei costi di un progetto fino a un determinato momento mettendo in relazione il valore prodotto e i costi sostenuti.],
-                [\u{00B1}10%],
-                [\u{00B1}0%]))
+                [\u{2A7E}-10%],
+                [\u{2A7E}1]))
 
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Estimate at completion] (EAC)],
@@ -57,8 +57,8 @@
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Schedule Performance Index] (SPI)],
                 [Misura l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.],
-                [\u{00B1}10%],
-                [\u{00B1}0%]))
+                [\u{2A7E}-10%],
+                [\u{2A7E}1]))
 
     MPRO.push(  ("MPRO" + str(MPRO.len()+1),
                 [#glossario[Requirements Stability Index] (RSI)],
