@@ -1,11 +1,6 @@
 #import "/template/template.typ": glossario,team,tabellaSprint,textCellColorConsuntivo,calcolaBilancio,pieChartSprint
 
-#let getSprintCostsSection(
-    sprint_number: int,
-) = {
-    let bilancioConsuntivo = 12975
-    let bilancioPreventivo = 12975
-
+#let getSprintData() = {
     // Sprint 1
     let bressan_preventivo   = ((0, 0, 0, 0, 0, 3),)
     let corradin_preventivo  = ((0, 0, 3, 0, 0, 0),)
@@ -74,50 +69,83 @@
     tutino_consuntivo.push(    (0, 0, 0, 0, 0, 5) )
     vallotto_consuntivo.push(  (0, 0, 0, 0, 0, 5) )
 
+    let preventivo = (
+        bressan: bressan_preventivo,
+        corradin: corradin_preventivo,
+        lazzarin: lazzarin_preventivo,
+        salviato: salviato_preventivo,
+        squarzoni: squarzoni_preventivo,
+        tutino: tutino_preventivo,
+        vallotto: vallotto_preventivo)
+
+    let consuntivo = (
+        bressan: bressan_consuntivo,
+        corradin: corradin_consuntivo,
+        lazzarin: lazzarin_consuntivo,
+        salviato: salviato_consuntivo,
+        squarzoni: squarzoni_consuntivo,
+        tutino: tutino_consuntivo,
+        vallotto: vallotto_consuntivo)
+
+    return (preventivo, consuntivo)
+}
+
+#let getSprintNumber() = {
+    let (_, consuntivo) = getSprintData()
+    return consuntivo.bressan.len()
+}
+
+#let getSprintCostsSection(
+    sprint_number: int,
+) = {
+    let bilancioConsuntivo = 12975
+    let bilancioPreventivo = 12975
+
+    let (preventivo, consuntivo) = getSprintData()
+
     // Per calcolare il bilancio allo sprint n devo calcolare i bilanci precendenti
     for i in range(0, sprint_number) {
 
-        let bressan   = bressan_preventivo.at(i)
-        let corradin  = corradin_preventivo.at(i)
-        let lazzarin  = lazzarin_preventivo.at(i)
-        let salviato  = salviato_preventivo.at(i)
-        let squarzoni = squarzoni_preventivo.at(i)
-        let tutino    = tutino_preventivo.at(i)
-        let vallotto  = vallotto_preventivo.at(i)
+        let bressan   = preventivo.bressan.at(i)
+        let corradin  = preventivo.corradin.at(i)
+        let lazzarin  = preventivo.lazzarin.at(i)
+        let salviato  = preventivo.salviato.at(i)
+        let squarzoni = preventivo.squarzoni.at(i)
+        let tutino    = preventivo.tutino.at(i)
+        let vallotto  = preventivo.vallotto.at(i)
         bilancioPreventivo = calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo)
 
-        if bressan_consuntivo.len() >= i + 1 {
-            let bressan   = bressan_consuntivo.at(i)
-            let corradin  = corradin_consuntivo.at(i)
-            let lazzarin  = lazzarin_consuntivo.at(i)
-            let salviato  = salviato_consuntivo.at(i)
-            let squarzoni = squarzoni_consuntivo.at(i)
-            let tutino    = tutino_consuntivo.at(i)
-            let vallotto  = vallotto_consuntivo.at(i)
+        if consuntivo.bressan.len() >= i + 1 {
+            let bressan   = consuntivo.bressan.at(i)
+            let corradin  = consuntivo.corradin.at(i)
+            let lazzarin  = consuntivo.lazzarin.at(i)
+            let salviato  = consuntivo.salviato.at(i)
+            let squarzoni = consuntivo.squarzoni.at(i)
+            let tutino    = consuntivo.tutino.at(i)
+            let vallotto  = consuntivo.vallotto.at(i)
             bilancioConsuntivo = calcolaBilancio(bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo)
         }
     }
 
-    let preventivo = (bressan: bressan_preventivo.at(sprint_number - 1),
-        corradin: corradin_preventivo.at(sprint_number - 1),
-        lazzarin: lazzarin_preventivo.at(sprint_number - 1),
-        salviato: salviato_preventivo.at(sprint_number - 1),
-        squarzoni: squarzoni_preventivo.at(sprint_number - 1),
-        tutino: tutino_preventivo.at(sprint_number - 1),
-        vallotto: vallotto_preventivo.at(sprint_number - 1),
-        bilancioPreventivo: bilancioPreventivo)
+    preventivo.insert("bilancioPreventivo", bilancioPreventivo)
+    preventivo.bressan = preventivo.bressan.at(sprint_number - 1)
+    preventivo.corradin = preventivo.corradin.at(sprint_number - 1)
+    preventivo.lazzarin = preventivo.lazzarin.at(sprint_number - 1)
+    preventivo.salviato = preventivo.salviato.at(sprint_number - 1)
+    preventivo.squarzoni = preventivo.squarzoni.at(sprint_number - 1)
+    preventivo.tutino = preventivo.tutino.at(sprint_number - 1)
+    preventivo.vallotto = preventivo.vallotto.at(sprint_number - 1)
 
-    let consuntivo = none
 
-    if bressan_consuntivo.len() >= sprint_number {
-        consuntivo = (bressan: bressan_consuntivo.at(sprint_number - 1),
-            corradin: corradin_consuntivo.at(sprint_number - 1),
-            lazzarin: lazzarin_consuntivo.at(sprint_number - 1),
-            salviato: salviato_consuntivo.at(sprint_number - 1),
-            squarzoni: squarzoni_consuntivo.at(sprint_number - 1),
-            tutino: tutino_consuntivo.at(sprint_number - 1),
-            vallotto: vallotto_consuntivo.at(sprint_number - 1),
-            bilancioConsuntivo: bilancioConsuntivo)
+    if consuntivo.bressan.len() >= sprint_number {
+        consuntivo.insert("bilancioConsuntivo", bilancioConsuntivo)
+        consuntivo.bressan = consuntivo.bressan.at(sprint_number - 1)
+        consuntivo.corradin = consuntivo.corradin.at(sprint_number - 1)
+        consuntivo.lazzarin = consuntivo.lazzarin.at(sprint_number - 1)
+        consuntivo.salviato = consuntivo.salviato.at(sprint_number - 1)
+        consuntivo.squarzoni = consuntivo.squarzoni.at(sprint_number - 1)
+        consuntivo.tutino = consuntivo.tutino.at(sprint_number - 1)
+        consuntivo.vallotto = consuntivo.vallotto.at(sprint_number - 1)
     }
 
     return (preventivo,consuntivo)
