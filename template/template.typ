@@ -158,6 +158,7 @@
     set align(center)
     show link: underline
     show link: set text(rgb("#f16610"))
+    set text(lang: "it")
 
     parbreak()
 
