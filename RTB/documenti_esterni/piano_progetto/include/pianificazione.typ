@@ -41,7 +41,7 @@ L'intera durata del progetto è inoltre divisa in milestone, che rappresentano u
 Le prime milestone che naturalmente abbiamo individuato sono #glossario[RTB] e #glossario[PB]. Nel periodo riguardante la RTB ad ogni documento è associata una milestone. I documenti in questione sono:
 - #glossario[analisi dei requisiti];
 - #glossario[piano di progetto];
-- piano di qualifica;
+- #glossario[piano di qualifica];
 - norme di progetto.
 === Issue
 Uno sprint è composto da varie #glossario[issue] che rappresentano un'attività da svolgere. Una issue non dovrebbe essere troppo lunga e complicata, ma al contrario dovrebbe poter essere gestita da una singola persona e completata entro tempi brevi (entro fine sprint nel caso peggiore).
