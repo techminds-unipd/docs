@@ -4,6 +4,7 @@
   title: "Piano di qualifica",
   sommario: "Il documento espone le metriche di verifica attuate per garantire qualità.",
   changelog: (
+    "0.11.0", "06/02/2025", "Aggiunte metriche EV, PV, CV, SV", team.G, team.T,
     "0.10.0", "06/02/2025", "Aggiunto miglioramento tecnologie", team.C, team.T,
     "0.9.0", "06/02/2025", "Aggiunto grafico indice di gulpease", team.C, team.M,
     "0.8.0", "06/02/2025", "Aggiunto grafico metrica rischi non previsti", team.S, team.T,
