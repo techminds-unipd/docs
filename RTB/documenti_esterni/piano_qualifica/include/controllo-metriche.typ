@@ -154,13 +154,11 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 #linebreak()
 
 #let sv_values = sv.map(el => el.at(1))
-#let pv_values = pv.map(el => el.at(1))
-#let min_sv_value = sv_values.map(el => calc.abs(el)).sorted().first()
-#let acceptable_value = sv_values.zip(pv_values).map(el => 100 * (el.at(0)/el.at(1))).sorted().first() * min_sv_value
+#let lower_bound = sv_values.sum() / sv_values.len()
 
 #lineChart(lines: (cv_fun,sv_fun),
           legends: ([CV],[SV]),
-          hlines: (0, acceptable_value),
+          hlines: (0, -lower_bound - 0.1*lower_bound),
           x-label: "sprint",
           y-label: "y",
           caption: [CV, SV.])
