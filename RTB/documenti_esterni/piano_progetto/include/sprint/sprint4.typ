@@ -92,7 +92,7 @@ Sono state completate tutte le task previste per questo sprint. La #link("https:
 
 ==== Retrospettiva
 Osservando i documenti abbiamo notato la mancanza di una sezione dedicata ai dati forniti dalle metriche, vanificando l'utilità delle stesse. Per questo motivo il prossimo sprint sarà dedicato alla realizzazione di un cruscotto che permetta di monitorare la qualità dei prodotti e dei processi, sfruttando i dati forniti dalle metriche già individuate.#linebreak()
-Durante questo sprint ci siamo anche accorti di non aver impostato delle milestone dettagliate per monitorare l'avanzamento dei documenti in vista dell'RTB. Abbiamo quindi deciso che nel prossimo sprint sarà creata una milestone per ogni documento, a eccezione del glossario che, per sua natura, viene aggiornato quando necessario durante lo svolgimento delle task.
+Durante questo sprint ci siamo anche accorti di non aver impostato delle milestone dettagliate per monitorare l'avanzamento dei documenti in vista dell'RTB. Abbiamo quindi deciso che nel prossimo sprint sarà creata una milestone per ogni documento, ad eccezione del glossario che, per sua natura, viene aggiornato quando necessario durante lo svolgimento delle task.
 
 ==== Costi
 
