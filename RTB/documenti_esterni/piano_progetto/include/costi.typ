@@ -95,6 +95,34 @@
     return consuntivo.bressan.len()
 }
 
+#let getNumber(data) = {
+    if type(data) == str {
+        return int(data.find(regex("\d+")))
+    }
+    return int(data)
+}
+
+#let getOreConsumateRuoli() = {
+    let (_, consuntivo) = getSprintData()
+    let sprintNumber = getSprintNumber()
+
+    let ruoli = ()
+    for i in range(0, 6) {
+        let oreRuolo = 0;
+        for j in range(0, sprintNumber) {
+            oreRuolo += getNumber(consuntivo.bressan.at(j).at(i))
+            oreRuolo += getNumber(consuntivo.corradin.at(j).at(i))
+            oreRuolo += getNumber(consuntivo.lazzarin.at(j).at(i))
+            oreRuolo += getNumber(consuntivo.salviato.at(j).at(i))
+            oreRuolo += getNumber(consuntivo.squarzoni.at(j).at(i))
+            oreRuolo += getNumber(consuntivo.tutino.at(j).at(i))
+            oreRuolo += getNumber(consuntivo.vallotto.at(j).at(i))
+        }
+        ruoli.push(oreRuolo)
+    }
+    return ruoli
+}
+
 #let getSprintCostsSection(
     sprint_number: int,
 ) = {
