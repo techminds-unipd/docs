@@ -148,7 +148,6 @@ Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti p
     ),
 
     ..getMACC(1),
-    ..getMACC(2),
   ), 
   caption: [Accessibilità - Metriche e indici di qualità.]
 ) <tabella-MAC>

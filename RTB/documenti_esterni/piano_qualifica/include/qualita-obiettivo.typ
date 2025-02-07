@@ -40,7 +40,6 @@ La progettazione è il processo che si occupa di definire la struttura del siste
     ..getMMAN(6),
     ..getMEFF(1),
     ..getMUSA(1),
-    ..getMACC(2),
   ), 
   caption: [Progettazione - Metriche e indici di qualità.]
 ) <tabella-MetricheProgettazione>

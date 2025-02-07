@@ -167,12 +167,9 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 == MPRO4 (CV), MPRO5 (SV)
 #linebreak()
 
-#let sv_values = sv.map(el => el.at(1))
-#let lower_bound = sv_values.sum() / sv_values.len()
-
 #lineChart(lines: (cv_fun,sv_fun),
           legends: ([CV],[SV]),
-          hlines: (0, -lower_bound - 0.1*lower_bound),
+          hlines: (0,),
           x-label: "sprint",
           y-label: "y",
           caption: [CV, SV.])
@@ -192,12 +189,9 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 == MPRO6 (CPI), MPRO9 (SPI)
 #linebreak()
 
-#let spi_values = spi.map(el => el.at(1))
-#let lower_bound = spi_values.sum() / spi_values.len()
-
 #lineChart(lines: (cpi_fun,spi_fun),
           legends: ([CPI],[SPI]),
-          hlines: (1,-lower_bound - 0.1*lower_bound),
+          hlines: (1,),
           x-label: "sprint",
           y-label: "y",
           caption: [CPI, SPI.])
