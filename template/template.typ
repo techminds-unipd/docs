@@ -56,11 +56,11 @@
     )
 
     outline(title: "Indice", indent: true)
+    outline(title: "Lista delle figure", target: figure)
 
     pagebreak()
     set par(justify: true)
     body
-    outline(title: "Lista delle figure", target: figure)
 }
 
 #let verbale(

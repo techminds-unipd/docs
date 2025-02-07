@@ -107,7 +107,7 @@
 #let rischi_fun(offset: 0) = rischi
 
 = Cruscotto
-== MPRO1 (AC), MPRO8 (ETC), MPRO7 (EAC)
+== MPRO2 (AC), MPRO8 (ETC), MPRO7 (EAC)
 #linebreak()
 
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
