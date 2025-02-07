@@ -8,7 +8,8 @@
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
-    "0.13.1", "07/02/2025", "Aggiunta milestones della RTB in Pianificazione", team.A, team.M,
+    "0.14.0", "07/02/2025", "Aggiunta sezione Budget e costi", team.C, "",
+    "0.13.1", "07/02/2025", "Aggiunte milestone della RTB in Pianificazione", team.A, team.M,
     "0.13.0", "07/02/2025", "Aggiunta consuntivo sprint 4", team.L, team.T,
     "0.12.0", "06/02/2025", "Aggiunta descrizione testuale della struttura di uno sprint", team.A, team.M,
     "0.11.0", "13/01/2025", "Aggiunta preventivo sprint 4", team.S, team.G,
@@ -31,5 +32,6 @@
 #include "include/introduzione.typ"
 #include "include/analisi-dei-rischi.typ"
 #include "include/pianificazione.typ"
+#include "include/budget-costi.typ"
 #include "include/periodi.typ"
 #include "include/costi.typ"
