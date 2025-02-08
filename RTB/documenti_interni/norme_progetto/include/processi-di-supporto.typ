@@ -150,6 +150,11 @@ dove:
   - *Valore accettabile*: valore minimo accettabile della metrica per essere conforme agli standard di qualità stabiliti;
   - *Valore ottimale:* valore ideale della metrica;
 
+=== Aggiornamento cruscotto
+Il cruscotto è interamento gestito e generato in typst. Ogni volta che viene compilato, il documento riprende tutti i valori aggiornati degli sprint da una funzione apposita (definita in costi.typ nella directory piano di progetto).
+I valori ottenuti vengono usati per calcolare le varie metriche, che saranno successivamente visualizzate attraverso dei grafici, sempre generati in typst con la libreria cetz.
+C'è da precisare che questa automazione è semi-automatica, perchè ad esempio alcuni dati per le metriche devono essere inseriti a mano ad ogni sprint.
+I dati in questione riguardano l'indice di Gulpease, rischi non previsti.
 
 == Verifica e validazione
 
