@@ -13,7 +13,7 @@
     Durante la riunione abbiamo discusso della candidatura per la revisione RTB, in particolare abbiamo deciso di candidarci per la revisione.
     Abbiamo quindi preparato:
     - la lettera di presentazione per la candidatura;
-    - la mail a Cardin;
+    - la mail al prof. Cardin;
     - slides di presentazione.
     Durante la preparazione di tali documenti, è stata notata una distribuzione delle ore/ruolo mal gestita da cui ne è scaturita la decisione di attuare un cambiamento.
     In particolare sono state aggiunte delle ore al ruolo di Amministratore a discapito delle ore dedicate ai ruoli di Analista e di Responsabile.
