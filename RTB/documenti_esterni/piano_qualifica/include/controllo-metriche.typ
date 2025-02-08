@@ -45,7 +45,7 @@
         }), caption: caption)
 }
 
-#let calcoloMetricheAccettabili(i,
+#let calcoloMetricheAccettabili(
     ev, ac, pv,
     cv, sv, cpi,
     eac, etc, spi,
@@ -54,26 +54,47 @@
 
         let metriche_accettabili = 0
 
-        metriche_accettabili += int(ev.at(i - 1).at(1) >= 0)
-        metriche_accettabili += int(ac.at(i - 1).at(1) >= 0)
-        metriche_accettabili += int(pv.at(i - 1).at(1) >= 0)
-        metriche_accettabili += int(cv.at(i - 1).at(1) >= 0)
-        metriche_accettabili += int(sv.at(i - 1).at(1) >= 0)
-        metriche_accettabili += int(cpi.at(i - 1).at(1) >= 1)
-        metriche_accettabili += int(eac.at(i - 1).at(1) >= 12975 +0.5*12975 or eac.at(i - 1).at(1) >= 12975 -0.5*12975)
-        metriche_accettabili += int(etc.at(i - 1).at(1) >= 0)
-        metriche_accettabili += int(spi.at(i - 1).at(1) >= 1)
-        metriche_accettabili += int(caption_figure.at(i - 1).at(1) == 100)
-        metriche_accettabili += int(rischi.at(i - 1).at(1) <= 4)
-
-        metriche_accettabili += int((g_adr.at(i - 1).at(1),
-            g_pdp.at(i - 1).at(1),
-            g_pdq.at(i - 1).at(1),
-            g_ndp.at(i - 1).at(1),
-            g_gloss.at(i - 1).at(1)).sorted().first() >= 40)
+        metriche_accettabili += int(ev >= 0)
+        metriche_accettabili += int(ac >= 0)
+        metriche_accettabili += int(pv >= 0)
+        metriche_accettabili += int(cv >= 0)
+        metriche_accettabili += int(sv >= 0)
+        metriche_accettabili += int(cpi >= 1)
+        metriche_accettabili += int(eac >= 12975 +0.5*12975 or eac >= 12975 -0.5*12975)
+        metriche_accettabili += int(etc >= 0)
+        metriche_accettabili += int(spi >= 1)
+        metriche_accettabili += int(caption_figure == 100)
+        metriche_accettabili += int(rischi <= 4)
+        metriche_accettabili += int((g_adr, g_pdp, g_pdq, g_ndp, g_gloss).sorted().first() >= 40)
 
         return metriche_accettabili
 }
+
+#let calcoloMetricheOttime(
+    ev, ac, pv,
+    cv, sv, cpi,
+    eac, etc, spi,
+    caption_figure, rischi,
+    g_adr, g_pdp, g_pdq, g_ndp, g_gloss) = {
+
+        let metriche_ottime = 0
+
+        metriche_ottime += int(ev <= eac)
+        metriche_ottime += int(ac <= eac)
+        metriche_ottime += int(pv <= 12975)
+        metriche_ottime += int(cv >= 0)
+        metriche_ottime += int(sv >= 0)
+        metriche_ottime += int(cpi >= 1)
+        metriche_ottime += int(eac == 12975)
+        metriche_ottime += int(etc >= eac)
+        metriche_ottime += int(spi >= 1)
+        metriche_ottime += int(caption_figure == 100)
+        metriche_ottime += int(rischi == 0)
+        metriche_ottime += int((g_adr, g_pdp, g_pdq, g_ndp, g_gloss).sorted().first() >= 70)
+
+        return metriche_ottime
+}
+
 
 // tot_spesa.at(i) => spesa sostenuta allo sprint i
 #let tot_spesa = ()
@@ -108,6 +129,7 @@
 #let rischi = ()
 #let costo_totale_stimato = ()
 #let metriche_accettabili = ()
+#let metriche_ottime = ()
 
 #let g_adr = ((1,64),(2,66),(3,65),(4,66))
 #let g_pdp = ((1,48),(2,47),(3,56),(4,68))
@@ -135,11 +157,18 @@
     rischi.push((i, 0))
 
     metriche_accettabili.push((i,
-        calcoloMetricheAccettabili(i,
-            ev, ac, pv, cv,
-            sv, cpi, eac, etc,
-            spi, caption_figure, rischi,
-            g_adr, g_pdp, g_pdq, g_ndp, g_gloss)))
+        calcoloMetricheAccettabili(
+            ev.at(i - 1).at(1), ac.at(i - 1).at(1), pv.at(i - 1).at(1), cv.at(i - 1).at(1),
+            sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
+            spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
+            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1))))
+
+    metriche_ottime.push((i,
+        calcoloMetricheOttime(
+            ev.at(i - 1).at(1), ac.at(i - 1).at(1), pv.at(i - 1).at(1), cv.at(i - 1).at(1),
+            sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
+            spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
+            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1))))
 }
 
 #let ac_fun(offset: 0) = ac
@@ -159,6 +188,7 @@
 #let g_gloss_fun(offset: 0) = g_gloss
 #let rischi_fun(offset: 0) = rischi
 #let metriche_accettabili_fun(offset:0) = metriche_accettabili
+#let metriche_ottime_fun(offset:0) = metriche_ottime
 
 #pagebreak()
 
@@ -340,3 +370,23 @@ Il grafico illustra:
 #linebreak()
 In questo periodo abbiamo quasi sempre raggiunto le soglie definite per noi accettabili.
 Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di conseguenza alcune metriche che controllano i tempi/costi di consegna non sono state soddisfatte.
+
+#pagebreak()
+
+==  MPRO15 (Metriche ottimali)
+#linebreak()
+
+#lineChart(lines: (metriche_ottime_fun,),
+    legends: ([Metriche],),
+    hlines: (num_metriche*0.3, num_metriche),
+    x-label: "sprint",
+    y-label: "n. metriche",
+    caption: [Metriche ottimali])
+
+Il grafico illustra:
+- Metriche ottimali: il numero di metriche che raggiungono il valore ottimale.
+
+#linebreak()
+*RTB*
+#linebreak()
+In questo periodo abbiamo sempre superato abbastanza la soglia accettabile, quasi arrivando a toccare il valore ottimo (ovvero soddisfare tutte le metriche all'ottimo).
