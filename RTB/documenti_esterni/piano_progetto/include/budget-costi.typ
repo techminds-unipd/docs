@@ -50,6 +50,6 @@ Avvicinandosi alla prima revisione RTB, è stato subito chiaro che la ripartizio
     caption: "Ripartizione oraria tra ruoli - RTB."
 )<table>
 
-Come si può notare dalla @table, c'è stata una forte ridistribuzione delle ore per i ruoli di responsabile, amministratore e analista. Per quanto riguarda programmatore e verificatore riteniamo che le ore assegnate siano in linea con le responsabilità richieste dai due ruoli. Infine anche per progettista il carico orario è rimasto invariato perchè, non avendo ancora svolto nessuna attività ricoperta da questo ruolo, non avevamo abbastanza indicatori per poter aggiungere o togliere carico orario.
+Come si può notare dalla @table, c'è stata una forte ridistribuzione delle ore per i ruoli di responsabile, amministratore e analista. Per quanto riguarda programmatore e verificatore riteniamo che le ore assegnate siano in linea con le responsabilità richieste dai due ruoli. Infine anche per il progettista il carico orario è rimasto invariato perché, non avendo ancora svolto nessuna attività ricoperta da questo ruolo, non sono presenti abbastanza indicatori per poter aggiungere o togliere carico orario.
 
 Grazie ai cambiamenti effettuati il costo di progetto preventivato risulta ora essere di *12.625 #sym.euro*, con una lieve diminuzione rispetto ai precedenti *12.975 #sym.euro*.
