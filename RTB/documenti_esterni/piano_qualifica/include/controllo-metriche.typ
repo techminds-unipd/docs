@@ -340,7 +340,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
     hlines: (),
     x-label: "sprint",
     y-label: "rischi",
-    caption: [Rischi])
+    caption: [Rischi.])
 
 Il grafico illustra:
 - Rischi: il numero di rischi non previsti che si sono verificati durante lo svolgimento del progetto.
@@ -360,7 +360,7 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
     hlines: (num_metriche*0.9, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
-    caption: [Metriche accetabili])
+    caption: [Metriche accettabili.])
 
 Il grafico illustra:
 - Metriche accettabili: il numero di metriche che raggiungono la soglia accettabile.
@@ -381,7 +381,7 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
     hlines: (num_metriche*0.3, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
-    caption: [Metriche ottimali])
+    caption: [Metriche ottimali.])
 
 Il grafico illustra:
 - Metriche ottimali: il numero di metriche che raggiungono il valore ottimale.
