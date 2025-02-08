@@ -50,6 +50,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
   - autore della modifica;
   - verificatore.
 + Indice;
++ Lista delle figure;
 + Contenuto.
 
 ==== Struttura dei verbali
