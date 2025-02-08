@@ -70,13 +70,13 @@
     vallotto_consuntivo.push(  (0, 0, 0, 0, 0, 5) )
 
     //Sprint 5
-    bressan_preventivo.push(   (0, 13, 0, 0, 0, 0) )
-    corradin_preventivo.push(  (0, 13, 0, 0, 0, 0) )
+    bressan_preventivo.push(   (0, 8, 0, 0, 0, 3) )
+    corradin_preventivo.push(  (0, 4, 5, 0, 0, 2) )
     lazzarin_preventivo.push(  (0, 0, 0, 0, 0, 15) )
-    salviato_preventivo.push(  (6, 0, 0, 0, 0, 0) )
+    salviato_preventivo.push(  (6, 0, 0, 0, 0, 2) )
     squarzoni_preventivo.push( (0, 0, 0, 0, 0, 15) )
     tutino_preventivo.push(    (0, 13, 0, 0, 0, 0) )
-    vallotto_preventivo.push(  (0, 13, 0, 0, 0, 0) )
+    vallotto_preventivo.push(  (0, 9, 0, 0, 0, 2) )
 
 
     let preventivo = (
