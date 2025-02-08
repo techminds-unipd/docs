@@ -69,6 +69,16 @@
     tutino_consuntivo.push(    (0, 0, 0, 0, 0, 5) )
     vallotto_consuntivo.push(  (0, 0, 0, 0, 0, 5) )
 
+    //Sprint 5
+    bressan_preventivo.push(   (0, 13, 0, 0, 0, 0) )
+    corradin_preventivo.push(  (0, 13, 0, 0, 0, 0) )
+    lazzarin_preventivo.push(  (0, 0, 0, 0, 0, 15) )
+    salviato_preventivo.push(  (6, 0, 0, 0, 0, 0) )
+    squarzoni_preventivo.push( (0, 0, 0, 0, 0, 15) )
+    tutino_preventivo.push(    (0, 13, 0, 0, 0, 0) )
+    vallotto_preventivo.push(  (0, 13, 0, 0, 0, 0) )
+
+
     let preventivo = (
         bressan: bressan_preventivo,
         corradin: corradin_preventivo,
