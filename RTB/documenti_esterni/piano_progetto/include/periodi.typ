@@ -59,9 +59,13 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 - Svolgere attività preparatorie per un avvio più rapido del primo sprint.
 
 #include "sprint/sprint1.typ"
+#pagebreak()
 #include "sprint/sprint2.typ"
+#pagebreak()
 #include "sprint/sprint3.typ"
+#pagebreak()
 #include "sprint/sprint4.typ"
+#pagebreak()
 #include "sprint/sprint5.typ"
 #pagebreak()
 
