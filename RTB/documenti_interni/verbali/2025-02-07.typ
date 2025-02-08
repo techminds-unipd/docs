@@ -18,7 +18,7 @@
     Durante la preparazione di tali documenti, è stata notata una distribuzione delle ore/ruolo mal gestita da cui ne è scaturita la decisione di attuare un cambiamento, attraverso la redazione del Preventivo a Finire.
     In particolare sono state aggiunte delle ore al ruolo di Amministratore a discapito delle ore dedicate ai ruoli di Analista e di Responsabile.
     Tali scelte sono dovute dal fatto che il ruolo di amministratore si è rivelato più oneroso del previsto, visto che a seguito dello sprint attuale si prevede che le ore da amministratore sarebbero terminate.
-    Vedi #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[Lettera di presentazione RTB] per ulteriori dettagli.
+    Si veda #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[Lettera di presentazione RTB] per ulteriori dettagli.
 
     Visto il ritardo nella candidatura e la necessità di mantenere degli standard di qualità, abbiamo deciso di spostare la data di consegna del progetto dal 28 marzo al 4 aprile.
     
