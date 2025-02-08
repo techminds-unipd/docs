@@ -31,7 +31,7 @@ Tali suddivisioni orarie sono state scelte in base alle seguenti motivazioni:
 Il costo totale di completamento previsto risulta quindi essere *12.975 #sym.euro*.
 
 == RTB
-Durante lo scorrere dei periodi tra la Candidatura e l'avanzamento RTB, è stato subito chiaro che la ripartizione delle ore svolta in precedenza non risultava del tutto corretta. In particolare per i ruoli di responsabile, amministratore e analista abbiamo notato una forte discrepanza tra quanto previsto e quanto effettivamente necessario. Questo sbaglio era, come sottolineato prima, già calcolato data l'inesperienza del gruppo. Con un'attenta analisi delle ore, e di conseguenza dei costi, consumati durante i vari periodi, abbiamo deciso di distribuire nuovamente il carico orario:
+Avvicinandosi alla prima revisione RTB, è stato subito chiaro che la ripartizione delle ore svolta in precedenza non risultava del tutto corretta. In particolare per i ruoli di responsabile, amministratore e analista abbiamo notato una forte discrepanza tra quanto previsto e quanto effettivamente necessario. La pianificazione errata era prevedibile data l'inesperienza del team. Con un'attenta analisi delle ore, e di conseguenza dei costi, consumati durante i vari periodi, abbiamo deciso di ridistribuire nuovamente il carico orario:
 
 #figure(
     table(
