@@ -15,7 +15,7 @@
     - la lettera di presentazione per la candidatura;
     - la mail al prof. Cardin;
     - slides di presentazione.
-    Durante la preparazione di tali documenti, è stata notata una distribuzione delle ore/ruolo mal gestita da cui ne è scaturita la decisione di attuare un cambiamento.
+    Durante la preparazione di tali documenti, è stata notata una distribuzione delle ore/ruolo mal gestita da cui ne è scaturita la decisione di attuare un cambiamento, attraverso la redazione del Preventivo a Finire.
     In particolare sono state aggiunte delle ore al ruolo di Amministratore a discapito delle ore dedicate ai ruoli di Analista e di Responsabile.
     Tali scelte sono dovute dal fatto che il ruolo di amministratore si è rivelato più oneroso del previsto, visto che a seguito dello sprint attuale si prevede che le ore da amministratore tenderebbero a finire.
     Vedi #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[Lettera di presentazione RTB] per ulteriori dettagli.
