@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "0.5.0", "08/02/2025", "Aggiunta definizione dei test", team.S, "",
     "0.4.0", "22/01/2025", "Aggiunta definizione di Docker", team.T, team.C,
     "0.3.0", "19/01/2025", "Aggiunti nuovi termini", team.T, team.G,
     "0.2.0", "12/01/2024", "Inserimento nuovi termini", team.C, team.M,
@@ -361,6 +362,22 @@ Insieme di strumenti che permette di documentare le API contestualmente alla lor
 
 
 = T
+
+== Test di accettazione
+Test che verifica che il sistema soddisfi i requisiti utente specificati nel capitolato e concordati con il proponente. Corrisponde all'ultima fase di test prima del possibile rilascio del prodotto.
+
+== Test di integrazione
+Test che verifica che i vari componenti/unità del sistema funzionino correttamente quando vengono integrati tra loro. Si svolge dopo i test di unità e prima dei test di sistema. 
+\ Esistono due strategie di integrazione:
+- Bottom-up: si integrano prima le componenti/unità di livello più basso, più interne al sistema e con meno dipendenze;
+- Top-down: si integrano prima le componenti/unità di livello più alto, più esterne al sistema e con più dipendenze. 
+
+== Test di regressione
+Test che verifica che le modifiche apportate al software non abbiano introdotto errori in parti del software che funzionavano correttamente in precedenza. Si svolge dopo ogni modifica al codice ed è una ripetizione di altri test già eseguiti in precedenza.
+
+== Test di sistema
+Test che verifica che il sistema soddisfi i requisiti software specificati nel documento di analisi dei requisiti. Si svolge dopo i test di integrazione e prima dei test di accettazione.
+
 == Test di unità // {Unit test}
 Test che esamina una singola unità software. Si divide in funzionale e strutturale:
 - Funzionale (black-box): 
