@@ -4,6 +4,7 @@
   title: "Piano di qualifica",
   sommario: "Il documento espone le metriche di verifica attuate per garantire qualità.",
   changelog: (
+    "0.13.0", "08/02/2025", "Aggiunta sezione Specifica dei test e primi test di sistema", team.C, "",
     "0.12.0", "07/02/2025", "Aggiunte metriche CPI, SPI", team.G, team.M,
     "0.11.0", "06/02/2025", "Aggiunte metriche EV, PV, CV, SV", team.G, team.T,
     "0.10.0", "06/02/2025", "Aggiunto miglioramento tecnologie", team.C, team.T,
