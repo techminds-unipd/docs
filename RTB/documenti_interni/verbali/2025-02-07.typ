@@ -10,7 +10,7 @@
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C),
   ordine_giorno: ("Candidatura per la revisione RTB", "Data di consegna"),
   riassunto: [
-    Durante la riunione abbiamo discusso della candidatura per la revisione RTB, in particolare abbiamo deciso di candidarsi per la revisione.
+    Durante la riunione abbiamo discusso della candidatura per la revisione RTB, in particolare abbiamo deciso di candidarci per la revisione.
     Abbiamo quindi preparato:
     - la lettera di presentazione per la candidatura;
     - la mail a Cardin;
