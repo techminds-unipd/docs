@@ -25,7 +25,7 @@
     Inoltre si è deciso di aggiornare alcuni documenti a causa di ciò che si è discusso in questa riunione:
   ],
   decisioni: (
-    ([Analisi dei requisiti],
+    ([Piano di qualifica],
       [#link("https://github.com/techminds-unipd/docs/issues/287")[Issue \#287]: Test di sistema],
     ),
      ([Piano di progetto],
