@@ -63,7 +63,7 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     [FMR2],
     [NI],
     [TS4],
-    [Verificare che l'utente autenticato possa associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow.],
+    [Verificare che l'utente autenticato possa associare e dissociare un account Google da utilizzare per i servizi offerti dai #glossario[blocchi] dei workflow.],
     [FMR3],
     [NI],
     [TS5],
