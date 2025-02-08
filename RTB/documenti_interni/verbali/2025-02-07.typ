@@ -8,7 +8,7 @@
   ),
   durata_luogo: ("15:30", "18:30", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C),
-  ordine_giorno: ("Candidatura per la revisione RTB", "Data di consegna"),
+  ordine_giorno: ("Candidatura per la revisione RTB", "Preventivo a finire", "Data di consegna"),
   riassunto: [
     Durante la riunione abbiamo discusso della candidatura per la revisione RTB, in particolare abbiamo deciso di candidarci per la revisione.
     Abbiamo quindi preparato:
