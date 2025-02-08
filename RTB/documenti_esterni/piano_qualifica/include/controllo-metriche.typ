@@ -404,4 +404,4 @@ Il grafico illustra:
 #linebreak()
 *RTB*
 #linebreak()
-In questo periodo abbiamo sempre superato abbastanza la soglia accettabile, quasi arrivando a toccare il valore ottimo (ovvero soddisfare tutte le metriche all'ottimo).
+In questo periodo abbiamo  superato la soglia accettabile per la maggior parte degli sprint, quasi arrivando a toccare il valore ottimo (ovvero soddisfare tutte le metriche all'ottimo).
