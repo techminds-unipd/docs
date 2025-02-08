@@ -20,7 +20,12 @@
 // lines   :: [[number], [number]]
 // legends :: [content, content]
 // hlines  :: [number]
-#let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, caption: content) = {
+#let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, y-tick-step: int, caption: content) = {
+
+    if y-tick-step <= 0 {
+        y-tick-step = auto
+    }
+
     figure(
         cetz.canvas({
             plot.plot(size: (14,6),
@@ -28,7 +33,8 @@
                 axis-style: "left",
                 x-label: [#pad(left: 35pt, top: 5pt, x-label)],
                 y-label: [#pad(right: 5pt, bottom: 5pt, y-label)],
-                x-tick-step: 1, {
+                x-tick-step: 1,
+                y-tick-step: y-tick-step, {
 
                     for data in lines.zip(legends) {
                         if (data.at(1) == []) {
@@ -201,6 +207,7 @@
     hlines: (),
     x-label: "sprint",
     y-label: "costo \u{20AC}",
+    y-tick-step: -1,
     caption: [AC, ETC, EAC.])
 
 Il grafico illustra:
@@ -223,6 +230,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
     hlines: (),
     x-label: "sprint",
     y-label: "costo \u{20AC}",
+    y-tick-step: -1,
     caption: [EV, PV.])
 
 Il grafico illustra:
@@ -244,6 +252,7 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
     hlines: (0,),
     x-label: "sprint",
     y-label: "y",
+    y-tick-step: -1,
     caption: [CV, SV.])
 
 Il grafico illustra:
@@ -266,6 +275,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
     hlines: (1,),
     x-label: "sprint",
     y-label: "y",
+    y-tick-step: -1,
     caption: [CPI, SPI.])
 
 Il grafico illustra:
@@ -292,6 +302,7 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
     hlines: ((40,40)),
     x-label: "sprint",
     y-label: "indice",
+    y-tick-step: -1,
     caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
@@ -317,6 +328,7 @@ I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabi
     hlines: (),
     x-label: "sprint",
     y-label: "%",
+    y-tick-step: -1,
     caption: [Caption in tabelle e figure.])
 
 Il grafico illustra:
@@ -340,6 +352,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
     hlines: (),
     x-label: "sprint",
     y-label: "rischi",
+    y-tick-step: -1,
     caption: [Rischi.])
 
 Il grafico illustra:
@@ -360,6 +373,7 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
     hlines: (num_metriche*0.9, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
+    y-tick-step: 1,
     caption: [Metriche accettabili.])
 
 Il grafico illustra:
@@ -381,6 +395,7 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
     hlines: (num_metriche*0.3, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
+    y-tick-step: 1,
     caption: [Metriche ottimali.])
 
 Il grafico illustra:
