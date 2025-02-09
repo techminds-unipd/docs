@@ -50,6 +50,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
   - autore della modifica;
   - verificatore.
 + Indice;
++ Lista delle figure;
 + Contenuto.
 
 ==== Struttura dei verbali
@@ -150,6 +151,11 @@ dove:
   - *Valore accettabile*: valore minimo accettabile della metrica per essere conforme agli standard di qualità stabiliti;
   - *Valore ottimale:* valore ideale della metrica;
 
+=== Aggiornamento cruscotto
+Il cruscotto è interamento gestito e generato in Typst. Ogni volta che viene compilato, il documento riprende tutti i valori aggiornati degli sprint da una funzione apposita (definita in costi.typ nella directory contenente il piano di progetto).
+I valori ottenuti vengono usati per calcolare le varie metriche, che saranno successivamente visualizzate attraverso dei grafici, sempre generati in Typst con la libreria CeTZ.
+C'è da precisare che questa è una procedura semi-automatica, ad esempio alcuni dati per le metriche devono essere inseriti a mano ad ogni sprint.
+I dati in questione riguardano l'indice di Gulpease, rischi non previsti e l'#glossario[Earned Value].
 
 == Verifica e validazione
 
