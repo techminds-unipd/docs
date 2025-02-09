@@ -176,10 +176,10 @@ I test possono essere di vario tipo e per questo è necessario classificarli a s
 
 Le tipologie di test principali sono, in ordine di esecuzione:
 + #glossario[Test di unità]: verificano il corretto funzionamento di singole unità di codice, come funzioni, metodi o classi. Poiché verificano piccole porzioni di codice, questi test devono essere eseguiti per primi, in modo tale da evitare l'introduzione di errori una volta che queste unità vengono integrate tra loro;
-+ Test di integrazione: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
-+ Test di sistema: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
-+ Test di regressione: verificano che le modifiche apportate al codice non abbiano introdotto errori in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
-+ Test di accettazione: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente; sono l'ultima fase di test prima del possibile rilascio del prodotto.
++ #glossario[Test di integrazione]: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
++ #glossario[Test di sistema]: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
++ #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto errori in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
++ #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente; sono l'ultima fase di test prima del possibile rilascio del prodotto.
 
 //Ogni test è costituito da:
 // TODO: completare con l'identificazione dei test
