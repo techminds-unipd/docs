@@ -4,7 +4,7 @@
   title: "Verbale interno del 07/02/2025",
   sommario: "Verbale che riassume la riunione del 07/02/2025.",
   changelog: (
-    "1.0.0", "07/02/2025", "Prima versione", team.A, "----"
+    "1.0.0", "07/02/2025", "Prima versione", team.A, team.M,
   ),
   durata_luogo: ("15:30", "18:30", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C),
@@ -22,7 +22,6 @@
 
     Visto il ritardo nella candidatura e la necessità di mantenere degli standard di qualità, abbiamo deciso di spostare la data di consegna del progetto dal 28 marzo al 4 aprile.
     
-    Inoltre si è deciso di aggiornare alcuni documenti a causa di ciò che si è discusso in questa riunione:
   ],
   decisioni: (
     ([Piano di qualifica],
