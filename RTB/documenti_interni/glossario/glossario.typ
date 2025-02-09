@@ -367,13 +367,13 @@ Insieme di strumenti che permette di documentare le API contestualmente alla lor
 Test che verifica che il sistema soddisfi i requisiti utente specificati nel capitolato e concordati con il proponente. Corrisponde all'ultima fase di test prima del possibile rilascio del prodotto.
 
 == Test di integrazione
-Test che verifica che i vari componenti/unità del sistema funzionino correttamente quando vengono integrati tra loro. Si svolge dopo i test di unità e prima dei test di sistema. 
+Test che verifica che le varie componenti o unità del sistema funzionino correttamente quando vengono integrate tra loro. Si svolge dopo i test di unità e prima dei test di sistema.
 \ Esistono due strategie di integrazione:
 - Bottom-up: si integrano prima le componenti/unità di livello più basso, più interne al sistema e con meno dipendenze;
 - Top-down: si integrano prima le componenti/unità di livello più alto, più esterne al sistema e con più dipendenze. 
 
 == Test di regressione
-Test che verifica che le modifiche apportate al software non abbiano introdotto difetti in parti del software che funzionavano correttamente in precedenza. Si svolge dopo ogni modifica al codice ed è una ripetizione di altri test già eseguiti in precedenza.
+Test che verifica che le modifiche apportate al software non abbiano introdotto difetti in parti del software che funzionavano correttamente in precedenza. Si svolge dopo ogni modifica al codice ed è una ripetizione di altri test già eseguiti precedentemente.
 
 == Test di sistema
 Test che verifica che il sistema soddisfi i requisiti software specificati nel documento di analisi dei requisiti. Si svolge dopo i test di integrazione e prima dei test di accettazione.
