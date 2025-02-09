@@ -368,8 +368,11 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
 ==  MPRO14 (Metriche accettabili)
 #linebreak()
 
-#lineChart(lines: (metriche_accettabili_fun,),
-    legends: ([Metriche],),
+#let point = ((1,0),)
+#let point_fun(offset: 0) = point
+
+#lineChart(lines: (metriche_accettabili_fun, point_fun),
+    legends: ([Metriche],[]),
     hlines: (num_metriche*0.9, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
@@ -390,8 +393,11 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
 ==  MPRO15 (Metriche ottimali)
 #linebreak()
 
-#lineChart(lines: (metriche_ottime_fun,),
-    legends: ([Metriche],),
+#let point = ((1,0),)
+#let point_fun(offset: 0) = point
+
+#lineChart(lines: (metriche_ottime_fun, point_fun),
+    legends: ([Metriche],[]),
     hlines: (num_metriche*0.3, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
