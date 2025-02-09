@@ -9,7 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
-    "0.5.0", "08/02/2025", "Aggiunta definizione dei test", team.S, "",
+    "0.5.0", "08/02/2025", "Aggiunta definizione dei test", team.S, team.T,
     "0.4.0", "22/01/2025", "Aggiunta definizione di Docker", team.T, team.C,
     "0.3.0", "19/01/2025", "Aggiunti nuovi termini", team.T, team.G,
     "0.2.0", "12/01/2024", "Inserimento nuovi termini", team.C, team.M,
@@ -373,7 +373,7 @@ Test che verifica che i vari componenti/unità del sistema funzionino correttame
 - Top-down: si integrano prima le componenti/unità di livello più alto, più esterne al sistema e con più dipendenze. 
 
 == Test di regressione
-Test che verifica che le modifiche apportate al software non abbiano introdotto errori in parti del software che funzionavano correttamente in precedenza. Si svolge dopo ogni modifica al codice ed è una ripetizione di altri test già eseguiti in precedenza.
+Test che verifica che le modifiche apportate al software non abbiano introdotto difetti in parti del software che funzionavano correttamente in precedenza. Si svolge dopo ogni modifica al codice ed è una ripetizione di altri test già eseguiti in precedenza.
 
 == Test di sistema
 Test che verifica che il sistema soddisfi i requisiti software specificati nel documento di analisi dei requisiti. Si svolge dopo i test di integrazione e prima dei test di accettazione.
