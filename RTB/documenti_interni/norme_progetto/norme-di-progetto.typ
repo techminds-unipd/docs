@@ -9,6 +9,7 @@
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
+    "0.9.0", "09/02/2025", "Documentato l'aggiornamento del cruscotto", team.G, "",
     "0.8.0", "05/02/2025", "Redazione sezioni revisioni congiunte, risoluzione di problemi, PDCA e vari ampliamenti", team.C, team.T,
     "0.7.2", "05/02/2025", "Fix indice", team.C, team.M,
     "0.7.1", "04/02/2025", "Modifica identificativo delle metriche", team.C, team.T,
