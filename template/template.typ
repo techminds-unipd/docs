@@ -56,7 +56,10 @@
     )
 
     outline(title: "Indice", indent: true)
-    outline(title: "Lista delle figure", target: figure)
+
+    if title != "Glossario" {
+        outline(title: "Lista delle figure", target: figure)
+    }
 
     pagebreak()
     set par(justify: true)
