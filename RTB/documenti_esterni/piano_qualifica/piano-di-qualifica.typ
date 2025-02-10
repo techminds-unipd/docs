@@ -2,7 +2,7 @@
 
 #show: documento.with(
   title: "Piano di qualifica",
-  sommario: "Il documento espone le metriche di verifica attuate per garantire qualità.",
+  sommario: "Il documento riporta le attività di verifica e validazione, affidandosi a delle metriche per garantire la qualità del prodotto.",
   changelog: (
     "1.0.0", "10/02/2025", "Revisione documento", team.C, "",
     "0.13.0", "08/02/2025", "Aggiunte metriche accettabili e ottimali", team.G, team.T,
@@ -29,9 +29,6 @@
   )
 )
 //#glossario[processo]
-//#glossario[RTB]
-// //#glossario[adr]
-// //#glossario[requisiti]
 
 #include "include/introduzione.typ"
 #include "include/metriche-qualita.typ"

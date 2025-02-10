@@ -1,7 +1,7 @@
 #import "/template/template.typ": glossario
 = Introduzione
 == Scopo del documento
-Il #glossario[Piano di Qualifica] è un documento di riferimento che guida le attività di #glossario[verifica] e #glossario[validazione] durante tutto il ciclo di vita del software, assicurando che il prodotto finale soddisfi i requisiti e gli standard di #glossario[qualità] definiti. Il piano permette di tenere traccia dei progressi, identificare i punti critici e garantire che la qualità venga perseguita attivamente durante l'intero #glossario[progetto].
+Il #glossario[Piano di Qualifica] è un documento di riferimento che guida le attività di #glossario[verifica] e #glossario[validazione] durante tutto il ciclo di vita del software, assicurando che il prodotto finale soddisfi i #glossario[requisiti] e gli standard di #glossario[qualità] definiti. Il piano permette di tenere traccia dei progressi, identificare i punti critici e garantire che la qualità venga perseguita attivamente durante l'intero #glossario[progetto].
 
 Ha lo scopo di specificare come verranno svolte le attività di verifica e validazione, definendo anche gli obiettivi di qualità da raggiungere. Non si limita però a definire le attività da svolgere, ma specifica anche come verranno svolte, con quali obiettivi e quali metriche verranno utilizzate.
 
