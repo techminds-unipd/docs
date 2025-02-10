@@ -17,34 +17,34 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
 
 - Issue:
     - PoC
-        - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3]: Inizio implementazione agenti nel backend (non completata durante lo sprint 2);
-        - #link("https://github.com/techminds-unipd/PoC/issues/8")[Issue \#8]: Gestione collegamento servizi Google.
+        - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3] #footnote("https://github.com/techminds-unipd/PoC/issues/3"): Inizio implementazione agenti nel backend (non completata durante lo sprint 2);
+        - #link("https://github.com/techminds-unipd/PoC/issues/8")[Issue \#8] #footnote("https://github.com/techminds-unipd/PoC/issues/8"): Gestione collegamento servizi Google.
     
     - Analisi dei Requisiti
-        - #link("https://github.com/techminds-unipd/docs/issues/149")[Issue \#149]: UC blocco calendar;
-        - #link("https://github.com/techminds-unipd/docs/issues/150")[Issue \#150]: UC blocco pastebin;
-        - #link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151]: UC approfondimento esecuzione workflow;
-        - #link("https://github.com/techminds-unipd/docs/issues/152")[Issue \#152]: UC creazione workflow;
-        - #link("https://github.com/techminds-unipd/docs/issues/153")[Issue \#153]: UC modifica workflow;
-        - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154]: Fix UC visualizzazione blocchi configurati e avviso servizi collegati.
+        - #link("https://github.com/techminds-unipd/docs/issues/149")[Issue \#149] #footnote("https://github.com/techminds-unipd/docs/issues/149"): UC blocco calendar;
+        - #link("https://github.com/techminds-unipd/docs/issues/150")[Issue \#150] #footnote("https://github.com/techminds-unipd/docs/issues/150"): UC blocco pastebin;
+        - #link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151] #footnote("https://github.com/techminds-unipd/docs/issues/151"): UC approfondimento esecuzione workflow;
+        - #link("https://github.com/techminds-unipd/docs/issues/152")[Issue \#152] #footnote("https://github.com/techminds-unipd/docs/issues/152"): UC creazione workflow;
+        - #link("https://github.com/techminds-unipd/docs/issues/153")[Issue \#153] #footnote("https://github.com/techminds-unipd/docs/issues/153"): UC modifica workflow;
+        - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154] #footnote("https://github.com/techminds-unipd/docs/issues/154"): Fix UC visualizzazione blocchi configurati e avviso servizi collegati.
     
 
     - Piano di Progetto
-        - #link("https://github.com/techminds-unipd/docs/issues/155")[Issue \#155]: Preventivo sprint 3;
-        - #link("https://github.com/techminds-unipd/docs/issues/156")[Issue \#156]: Consuntivo sprint 2.
+        - #link("https://github.com/techminds-unipd/docs/issues/155")[Issue \#155] #footnote("https://github.com/techminds-unipd/docs/issues/155"): Preventivo sprint 3;
+        - #link("https://github.com/techminds-unipd/docs/issues/156")[Issue \#156] #footnote("https://github.com/techminds-unipd/docs/issues/156"): Consuntivo sprint 2.
 
     - Piano di Qualifica
-        - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica (non completata durante lo sprint 2);
-        - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica (non completata durante lo sprint 2).
+        - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109] #footnote("https://github.com/techminds-unipd/docs/issues/109"): Fix piano di qualifica (non completata durante lo sprint 2);
+        - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111] #footnote("https://github.com/techminds-unipd/docs/issues/111"): Redigere nuove sezioni piano di qualifica (non completata durante lo sprint 2).
 
     - Norme di Progetto
-       - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157]: Redigere sezione 2.2 norme di progetto;
-       - #link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158]: Redigere sezione 3.4, 3.5;
-       - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159]: Aggiornamento norme di progetto.
+       - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157] #footnote("https://github.com/techminds-unipd/docs/issues/157"): Redigere sezione 2.2 norme di progetto;
+       - #link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158] #footnote("https://github.com/techminds-unipd/docs/issues/158"): Redigere sezione 3.4, 3.5;
+       - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159] #footnote("https://github.com/techminds-unipd/docs/issues/159"): Aggiornamento norme di progetto.
     
     - Varie
-      - #link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72]: Aggiungere termini al glossario (lasciata in sospeso dallo sprint 1);
-      - #link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160]: Fix script python.
+      - #link("https://github.com/techminds-unipd/docs/issues/72")[Issue \#72] #footnote("https://github.com/techminds-unipd/docs/issues/72"): Aggiungere termini al glossario (lasciata in sospeso dallo sprint 1);
+      - #link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160] #footnote("https://github.com/techminds-unipd/docs/issues/160"): Fix script python.
 
 ==== Diagramma di Gantt
 Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.

@@ -17,37 +17,37 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
 
 - Issue:
     - PoC
-        - #link("https://github.com/techminds-unipd/PoC/issues/1")[Issue \#1]: Inizio implementazione frontend workflow;
-        - #link("https://github.com/techminds-unipd/PoC/issues/2")[Issue \#2]: Inizio implementazione backend;
-        - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3]: Inizio implementazione agenti nel backend.
+        - #link("https://github.com/techminds-unipd/PoC/issues/1")[Issue \#1] #footnote("https://github.com/techminds-unipd/PoC/issues/1"): Inizio implementazione frontend workflow;
+        - #link("https://github.com/techminds-unipd/PoC/issues/2")[Issue \#2] #footnote("https://github.com/techminds-unipd/PoC/issues/2"): Inizio implementazione backend;
+        - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3] #footnote("https://github.com/techminds-unipd/PoC/issues/3"): Inizio implementazione agenti nel backend.
 
     - Autoformazione
-        - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65]: Typescript (non completata durante lo sprint 1).
+        - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65] #footnote("https://github.com/techminds-unipd/docs/issues/65"): Typescript (non completata durante lo sprint 1).
 
     - Analisi dei Requisiti
-        - #link("https://github.com/techminds-unipd/docs/issues/89")[Issue \#89]: User Story 6;
-        - #link("https://github.com/techminds-unipd/docs/issues/104")[Issue \#104]: Fix generale use case;
-        - #link("https://github.com/techminds-unipd/docs/issues/105")[Issue \#105]: Scrivere nuove sezioni in analisi dei requisiti.
+        - #link("https://github.com/techminds-unipd/docs/issues/89")[Issue \#89] #footnote("https://github.com/techminds-unipd/docs/issues/89"): User Story 6;
+        - #link("https://github.com/techminds-unipd/docs/issues/104")[Issue \#104] #footnote("https://github.com/techminds-unipd/docs/issues/104"): Fix generale use case;
+        - #link("https://github.com/techminds-unipd/docs/issues/105")[Issue \#105] #footnote("https://github.com/techminds-unipd/docs/issues/105"): Scrivere nuove sezioni in analisi dei requisiti.
 
     - Piano di Progetto
-        - #link("https://github.com/techminds-unipd/docs/issues/83")[Issue \#83]: Sistemare il paragrafo spiegazioni;
-        - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106]: Aggiornare piano di progetto (sezione sprint 1);
-        - #link("https://github.com/techminds-unipd/docs/issues/110")[Issue \#110]: Aggiungere info sprint 2.
-        - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112]: Redigere "Pianificazione" in piano di progetto.
+        - #link("https://github.com/techminds-unipd/docs/issues/83")[Issue \#83] #footnote("https://github.com/techminds-unipd/docs/issues/83"): Sistemare il paragrafo spiegazioni;
+        - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106] #footnote("https://github.com/techminds-unipd/docs/issues/106"): Aggiornare piano di progetto (sezione sprint 1);
+        - #link("https://github.com/techminds-unipd/docs/issues/110")[Issue \#110] #footnote("https://github.com/techminds-unipd/docs/issues/110"): Aggiungere info sprint 2.
+        - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112] #footnote("https://github.com/techminds-unipd/docs/issues/112"): Redigere "Pianificazione" in piano di progetto.
 
     - Piano di Qualifica
-        - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica;
-        - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica;
+        - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109] #footnote("https://github.com/techminds-unipd/docs/issues/109"): Fix piano di qualifica;
+        - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111] #footnote("https://github.com/techminds-unipd/docs/issues/111"): Redigere nuove sezioni piano di qualifica;
 
     - Norme di Progetto
-        - #link("https://github.com/techminds-unipd/docs/issues/113")[Issue \#113]: Redigere "Processi organizzativi" in norme di progetto;
-        - #link("https://github.com/techminds-unipd/docs/issues/114")[Issue \#114]: Redigere "Processi primari" in norme di progetto.
+        - #link("https://github.com/techminds-unipd/docs/issues/113")[Issue \#113] #footnote("https://github.com/techminds-unipd/docs/issues/113"): Redigere "Processi organizzativi" in norme di progetto;
+        - #link("https://github.com/techminds-unipd/docs/issues/114")[Issue \#114] #footnote("https://github.com/techminds-unipd/docs/issues/114"): Redigere "Processi primari" in norme di progetto.
 
     - Automazione
-        - #link("https://github.com/techminds-unipd/docs/issues/107")[Issue \#107]: Creazione script check_glossario.py;
-        - #link("https://github.com/techminds-unipd/docs/issues/108")[Issue \#108]: Creazione script indice_gulpease.py.
+        - #link("https://github.com/techminds-unipd/docs/issues/107")[Issue \#107] #footnote("https://github.com/techminds-unipd/docs/issues/107"): Creazione script check_glossario.py;
+        - #link("https://github.com/techminds-unipd/docs/issues/108")[Issue \#108] #footnote("https://github.com/techminds-unipd/docs/issues/108"): Creazione script indice_gulpease.py.
     - Varie
-        - #link("https://github.com/techminds-unipd/docs/issues/115")[Issue \#115]: Creazione checklist per i verificatori.
+        - #link("https://github.com/techminds-unipd/docs/issues/115")[Issue \#115] #footnote("https://github.com/techminds-unipd/docs/issues/115"): Creazione checklist per i verificatori.
 
 
 ==== Diagramma di Gantt

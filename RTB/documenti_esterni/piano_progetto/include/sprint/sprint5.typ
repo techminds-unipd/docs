@@ -16,31 +16,31 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
 
 - Issue:
   - Analisi dei Requisiti
-    - #link("https://github.com/techminds-unipd/docs/issues/229")[Issue \#229]: Refactoring Analisi dei Requisiti.
+    - #link("https://github.com/techminds-unipd/docs/issues/229")[Issue \#229] #footnote("https://github.com/techminds-unipd/docs/issues/229"): Refactoring Analisi dei Requisiti.
 
   - Piano di Progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/232")[Issue \#232]: Scrivere consuntivo sprint 4;
-    - #link("https://github.com/techminds-unipd/docs/issues/233")[Issue \#233]: Scrivere pianificazione sprint 5;
-    - #link("https://github.com/techminds-unipd/docs/issues/139")[Issue \#139]: Documentare la struttura dei periodi in PdP;
-    - #link("https://github.com/techminds-unipd/docs/issues/240")[Issue \#240]: Documentare in PdP le milestone.
+    - #link("https://github.com/techminds-unipd/docs/issues/232")[Issue \#232] #footnote("https://github.com/techminds-unipd/docs/issues/232"): Scrivere consuntivo sprint 4;
+    - #link("https://github.com/techminds-unipd/docs/issues/233")[Issue \#233] #footnote("https://github.com/techminds-unipd/docs/issues/233"): Scrivere pianificazione sprint 5;
+    - #link("https://github.com/techminds-unipd/docs/issues/139")[Issue \#139] #footnote("https://github.com/techminds-unipd/docs/issues/139"): Documentare la struttura dei periodi in PdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/240")[Issue \#240] #footnote("https://github.com/techminds-unipd/docs/issues/240"): Documentare in PdP le milestone.
 
   - Piano di Qualifica
-    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226]: Modificare identificativi metriche in PdQ e NdP;
-    - #link("https://github.com/techminds-unipd/docs/issues/227")[Issue \#227]: Refactoring dati metriche in PdQ;
-    - #link("https://github.com/techminds-unipd/docs/issues/231")[Issue \#231]: Scrivere descrizione metriche con TODO;
-    - #link("https://github.com/techminds-unipd/docs/issues/236")[Issue \#236]: Aggiornamento cruscotto;
-    - #link("https://github.com/techminds-unipd/docs/issues/237")[Issue \#237]: Metriche pianificazione e miglioramento;
-    - #link("https://github.com/techminds-unipd/docs/issues/238")[Issue \#238]: Uniformare la caption delle tabelle in PdQ;
-    - #link("https://github.com/techminds-unipd/docs/issues/239")[Issue \#239]: Macrosezione miglioramenti in PdQ.
+    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote("https://github.com/techminds-unipd/docs/issues/226"): Modificare identificativi metriche in PdQ e NdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/227")[Issue \#227] #footnote("https://github.com/techminds-unipd/docs/issues/227"): Refactoring dati metriche in PdQ;
+    - #link("https://github.com/techminds-unipd/docs/issues/231")[Issue \#231] #footnote("https://github.com/techminds-unipd/docs/issues/231"): Scrivere descrizione metriche con TODO;
+    - #link("https://github.com/techminds-unipd/docs/issues/236")[Issue \#236] #footnote("https://github.com/techminds-unipd/docs/issues/236"): Aggiornamento cruscotto;
+    - #link("https://github.com/techminds-unipd/docs/issues/237")[Issue \#237] #footnote("https://github.com/techminds-unipd/docs/issues/237"): Metriche pianificazione e miglioramento;
+    - #link("https://github.com/techminds-unipd/docs/issues/238")[Issue \#238] #footnote("https://github.com/techminds-unipd/docs/issues/238"): Uniformare la caption delle tabelle in PdQ;
+    - #link("https://github.com/techminds-unipd/docs/issues/239")[Issue \#239] #footnote("https://github.com/techminds-unipd/docs/issues/239"): Macrosezione miglioramenti in PdQ.
 
   - Norme di Progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226]: Modificare identificativi metriche in PdQ e NdP;
-    - #link("https://github.com/techminds-unipd/docs/issues/230")[Issue \#230]: Nascondere sezioni non scritte in NdP.
+    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote("https://github.com/techminds-unipd/docs/issues/226"): Modificare identificativi metriche in PdQ e NdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/230")[Issue \#230] #footnote("https://github.com/techminds-unipd/docs/issues/230"): Nascondere sezioni non scritte in NdP.
   - Altro
-    - #link("https://github.com/techminds-unipd/docs/issues/234")[Issue \#234]: Scrivere lettera di presentazione per RTB
-    - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235]: Uniformare date in tutti i documenti
+    - #link("https://github.com/techminds-unipd/docs/issues/234")[Issue \#234] #footnote("https://github.com/techminds-unipd/docs/issues/234"): Scrivere lettera di presentazione per RTB;
+    - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235] #footnote("https://github.com/techminds-unipd/docs/issues/235"): Uniformare date in tutti i documenti.
 
-==== Diagramma di Gantt //TODO
+==== Diagramma di Gantt
 Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
 Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
 #linebreak()I colori sono significativi:
