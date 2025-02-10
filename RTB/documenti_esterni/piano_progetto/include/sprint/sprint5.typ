@@ -10,7 +10,8 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
 
 - Ruoli:
   - responsabile: #team.L\;
-  - amministratore: #team.G, #team.S, #team.C, #team.A\;
+  - amministratore: #team.G, #team.C, #team.A\;
+  - analista: #team.S\;
   - verificatore: #team.T, #team.M.
 
 - Issue:
@@ -93,8 +94,8 @@ timeliney.timeline(
     })
   }
 ),
-caption: [Diagramma Gantt sprint 4.]
-)<diagramma-gantt-sprint4>
+caption: [Diagramma Gantt sprint 5.]
+)<diagramma-gantt-sprint5>
 
 // ==== Conclusioni //TODO
 
