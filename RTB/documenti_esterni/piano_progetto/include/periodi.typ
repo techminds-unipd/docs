@@ -59,9 +59,15 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 - Svolgere attività preparatorie per un avvio più rapido del primo sprint.
 
 #include "sprint/sprint1.typ"
+#pagebreak()
 #include "sprint/sprint2.typ"
+#pagebreak()
 #include "sprint/sprint3.typ"
+#pagebreak()
 #include "sprint/sprint4.typ"
+#pagebreak()
+#include "sprint/sprint5.typ"
+#pagebreak()
 
 === Preventivo a Finire
 Avvicinandosi alla prima revisione RTB, è stato subito chiaro che la ripartizione delle ore svolta in precedenza non risultava del tutto corretta. In particolare per i ruoli di responsabile, amministratore e analista abbiamo notato una forte discrepanza tra quanto previsto e quanto effettivamente necessario. La pianificazione errata era prevedibile data l'inesperienza del team. Con una più attenta analisi delle ore e di conseguenza dei costi consumati durante i vari periodi, abbiamo deciso di ridistribuire nuovamente il carico orario:
