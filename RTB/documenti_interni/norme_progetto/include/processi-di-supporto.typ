@@ -116,7 +116,7 @@ Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le
 - Garanzia di prodotto: definisce le garanzie di qualità che il prodotto software deve soddisfare;
 - Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
 
-=== #glossario[PDCA]
+=== PDCA
 Il ciclo PDCA, noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
 
 1. *Plan*: in questa fase si definiscono le attività necessarie per identificare quali processi avviare e in quale ordine, con l’obiettivo di raggiungere risultati specifici. Si stabiliscono obiettivi di miglioramento chiari e si progettano le azioni da intraprendere. Non riguarda pianificazione di progetto, ma bensì pianificazione di miglioramento;
