@@ -14,12 +14,9 @@ Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la ste
 I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
 
 == Scopo del prodotto
-Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l’#glossario[intelligenza artificiale] generativa,
-vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
-Il prodotto sarà una web app che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi
-esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno
-l’automazione da effettuare in linguaggio naturale. Successivamente, un #glossario[agente] riceverà il workflow,
-interpreterà le istruzioni fornite in linguaggio naturale e le eseguirà.
+Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
+Il prodotto sarà una web app che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno l'automazione da effettuare in linguaggio naturale.
+Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale e le eseguirà.
 
 == Riferimenti
 

@@ -292,7 +292,7 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona prog
 - Fattibilità della progettazione dettagliata (se è realizzabile con le risorse disponibili);
 - Fattibilità delle operazioni e della manutenzione.
 
-A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso  l'architettura per la futura fase di implementazione.
+A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura per la futura fase di implementazione.
 
 ==== Diagrammi delle classi
 I diagrammi delle classi sono uno strumento molto utile nella fase di progettazione del software, poiché permettono di rappresentare graficamente la struttura statica del sistema, mostrando le classi che lo compongono, i loro attributi, i metodi e le relazioni tra di esse. 
