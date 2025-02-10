@@ -8,7 +8,7 @@ Anche in questo caso lo standard ISO/IEC 12207:1995 definisce i processi che con
 La gestione dei processi è essenziale per garantire che tutte le attività relative al ciclo di vita del software siano condotte in modo strutturato, supervisionato e orientato agli obiettivi. Questo processo fornisce una struttura per pianificare, monitorare e controllare lo svolgimento del progetto.
 
 Obiettivi principali di tale processo sono:
-- Assicurare che il progetto resti allineato agli obiettivi strategici e soddisfi i requisiti del proponente;
+- Assicurare che il progetto resti allineato agli obiettivi e soddisfi i requisiti del proponente;
 - Minimizzare i rischi e le incertezze, attraverso una supervisione continua e azioni preventive;
 - Ottimizzare l'uso delle risorse, migliorando l'efficienza;
 - Mantenere la qualità del prodotto software, rispettando vincoli di tempo e costo. 
@@ -48,7 +48,7 @@ In conformità a quanto descritto nel regolamento del progetto didattico offerto
 ==== Rotazione dei ruoli
 Lo scopo che ci poniamo riguardo la rotazione dei ruoli è permettere ed assicurare a tutti di assumere almeno una volta ogni ruolo durante l'arco temporale in cui si svolge il progetto. Questo ci permette di apprendere le basi di ogni singola posizione e le relative responsabilità. 
 
-La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che privilegiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremo svolgere compiti afferenti a un ruolo diverso da quello assegnato per lo sprint corrente.
+La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che privilegiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremmo svolgere compiti afferenti a un ruolo diverso da quello assegnato per lo sprint corrente.
 
 Infine, durante la fase di scambio dei ruoli, chi lascia un ruolo deve condividere la conoscenza acquisita per facilitare la transizione. Per fare questo è fondamentale:
 - Utilizzare canali vocali (privilegiando i canali #glossario[Discord]) per uno scambio più immediato;
@@ -94,7 +94,7 @@ Scrive il codice software con l'obiettivo che esso rispecchi i requisiti individ
 Il codice scritto deve:
 - Contenere gli strumenti per la verifica e la #glossario[validazione] ;
 - Rispecchiare l'architettura ideata dai progettisti;
-- Essere manutenibile.
+- Essere conforme ai requisiti di qualità stabiliti.
 
 ==== Verificatore
 Ruolo chiave in quanto ha lo scopo di controllare la qualità del lavoro svolto dagli altri ruoli e che tale lavoro sia stato eseguito secondo quanto concordato dal gruppo e prefissato dalle specifiche tecniche.
@@ -130,7 +130,7 @@ Per consentire al team di comunicare agilmente ci siamo dotati dei seguenti cana
   - analisi-dei-requisiti: canale relativo a dubbi o discussioni riguardo l'analisi dei requisiti e relativi use case;
   - #glossario[poc]: canale per dubbi o discussioni riguardo l'implementazione del PoC;
   - proponente: raccolta di dubbi da sottoporre al proponente.
-- Telegram: il gruppo Telegram viene utilizzato per uno scambio rapido di informazioni di una certa rilevanza. Se invece sorgono dei dubbi o degli aspetti urgenti che possono essere risolti da un gruppo ristretto si predilige la comunicazione tra i singoli individui, per non intasare e rallentare il lavoro degli altri membri. Anche su Telegram abbiamo creato vari canali:
+- Telegram: il gruppo Telegram viene utilizzato per uno scambio rapido di informazioni di una certa rilevanza. Se invece sorgono dei dubbi o degli aspetti urgenti che possono essere risolti da un gruppo ristretto si predilige la comunicazione tra i singoli individui, per non congestionare e rallentare il lavoro degli altri membri. Anche su Telegram abbiamo creato vari canali:
   - General: comunicazioni generali;
   - Daily Scrum: ogni membro indica le cose fatte il giorno prima, cosa farà durante il giorno, eventuali problemi sorti;
   - Domande: utilizzato per raccogliere domande generiche.
@@ -200,7 +200,8 @@ Le issue vengono solitamente create dall'amministratore (ad eccezione di alcuni 
 - Descrizione: breve spiegazione testuale di cosa dovrà essere fatto per poter portare a termine la issue, eventualmente anche con una checklist;
 - Label: tag che identifica la categoria (esempi: Norme di progetto, Allenamento, Glossario, bug, fix). In caso di necessità può essere creata una nuova label;
 - Project: GitHub Projects a cui la issue è associata. Se sono presenti delle dashboard (vedi @dashboard per approfondimenti) associate ad un progetto, le issue associate saranno visibili anche da lì;
-- Priority: priorità della issue rispetto alle altre, dove P0 indica massima priorità, P1 priorità media, P2 priorità bassa;
+- Priority: priorità della issue rispetto alle altre, scelta tra alta, media e bassa;
+- Size: dimensione della issue in termini di giornate di lavoro, scelta tra XS, S, M, L, XL;
 - Sprint: ad ogni issue associamo lo sprint in cui deve essere completata.
 
 Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo si procede completando anche il campo "Assignees". Se invece è una issue che potrebbe essere svolta da più individui perchè due o più persone svolgono lo stesso ruolo, allora si lascia il campo "Assignees" vuoto e gli interessati andranno a suddividersi le issue di competenza in separata sede. 
@@ -210,9 +211,9 @@ Di seguito descriviamo il ciclo di vita di una issue:
 1. L'amministratore (o chi di competenza) accede al repository GitHub e crea la issue seguendo quanto descritto in @creazione;
 2. Accedendo poi alla dashboard di progetto sposta la issue dalla colonna "No Status" alla colonna "Sprint #glossario[Backlog]";
 3. L'assegnatario, quando prende in carico la issue, deve svolgere le seguenti azioni:
-  - accede alla dashboard e sposta la issue alla colonna "In progress". In alternativa può cambiare lo stato della issue modificando il campo "Status";
-  - inserisce la data di inizio della issue;
-  - inserisce la stima del termine della issue.
+  - accedere alla dashboard e spostare la issue nella colonna "In progress". In alternativa può cambiare lo stato della issue modificando il campo "Status";
+  - inserire la data di inizio della issue;
+  - inserire la stima del termine della issue.
 4. Una volta che la issue è considerata terminata, l'assegnatario apre una Pull Request su GitHub scrivendo sulla descrizione close numero_issue e aggiornando lo stato della issue da "In progress" a "In review";
 5. I verificatori seguono la procedura di verifica;
 6. Se e quando l'esito della verifica è positivo, la issue viene ufficialmente spostata nella colonna "Done" della dashboard.
