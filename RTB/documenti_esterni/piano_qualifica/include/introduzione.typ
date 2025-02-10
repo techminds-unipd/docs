@@ -7,7 +7,7 @@ Ha lo scopo di specificare come verranno svolte le attività di verifica e valid
 
 Gli obiettivi di qualità definiti, sia per il prodotto software che per i processi di sviluppo, devono essere specifici e misurabili. Le attività del piano dovrebbero essere il più possibile automatizzate per ridurre i costi e aumentare l'#glossario[efficacia].
 
-Sono inoltre incluse anche le metriche di riferimento e gli obiettivi metrici che saranno utilizzati per valutare la qualità del software. Le misurazioni effettuate e le valutazioni basate su tali misurazioni trovano poi spazio nel cruscotto di valutazione, strumento fondamentale per verificare se gli obiettivi di qualità sono stati raggiunti.
+Sono inoltre incluse anche le metriche di riferimento e gli obiettivi metrici che saranno utilizzati per valutare la qualità del software. Le misurazioni effettuate e le loro conseguenti valutazioni trovano poi spazio nel cruscotto di valutazione, strumento fondamentale per verificare se gli obiettivi di qualità sono stati raggiunti.
 
 Inoltre tale documento include anche le strategie di test che saranno applicate al prodotto software. Questo facilita il #glossario[tracciamento] dei requisiti e delle attività di verifica, garantendo che ogni requisito sia soddisfatto e che non vi siano funzionalità superflue.
 
