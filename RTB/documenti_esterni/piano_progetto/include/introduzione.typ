@@ -23,7 +23,7 @@ Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le i
 - Regolamento progetto didattico, in particolare le slide intitolate "Costi riconosciuti", "Piano di Progetto" e "Revisioni di avanzamento": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 10/02/2025\].
 
 === Riferimenti informativi
-- Slide argomento T3 - Il ciclo di vita del SW (corso di Ingegneria del Software), in particolare le slide intitolate "Metodi agili" e "Scrum": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T03.pdf \[visitato il: 10/02/2025\];
-- Slide argomento T4 - Gestione di progetto (corso di Ingegneria del Software), in particolare le slide "Milestone e baseline", "Ruoli", "Pianificazione di progetto" e "Diagramma di Gantt": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf \[visitato il: 10/02/2025\];
+- Slide argomento T3 - Il ciclo di vita del SW (corso di Ingegneria del Software), in particolare le slide intitolate "Metodi agili" e "#glossario[Scrum]": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T03.pdf \[visitato il: 10/02/2025\];
+- Slide argomento T4 - Gestione di progetto (corso di Ingegneria del Software), in particolare le slide "Milestone e #glossario[baseline]", "Ruoli", "Pianificazione di progetto" e "#glossario[Diagramma di Gantt]": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf \[visitato il: 10/02/2025\];
 - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 1.0.0\].
 #set par(justify: true)
