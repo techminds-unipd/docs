@@ -256,6 +256,9 @@ Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o
 == PB // {Product Baseline}
 Acronimo di _Product Baseline_. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).
 
+== PDCA
+Acronimo di _Plan-Do-Check-Act_. È un metodo di gestione iterativo in quattro fasi (Pianificare-Eseguire-Valutare-Agire) per il controllo e il miglioramento continuo dei processi e dei prodotti.
+
 == Piano di progetto // {PdQ}
 Il piano di progetto è un documento che descrive gli obiettivi, le risorse, i tempi e le attività previste per un progetto. Include anche la gestione dei rischi, la pianificazione delle fasi e l'assegnazione delle responsabilità.
 
