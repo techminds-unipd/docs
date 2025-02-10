@@ -5,7 +5,7 @@ Il #glossario[Piano di Qualifica] è un documento di riferimento che guida le at
 
 Ha lo scopo di specificare come verranno svolte le attività di verifica e validazione, definendo anche gli obiettivi di qualità da raggiungere. Non si limita però a definire le attività da svolgere, ma specifica anche come verranno svolte, con quali obiettivi e quali metriche verranno utilizzate.
 
-Gli obiettivi di qualità definiti, sia per il prodotto software che per i processi di sviluppo, devono essere specifici e misurabili. Le attività del piano dovrebbero essere il più possibile automatizzate per ridurre i costi e aumentare l'#glossario[efficacia].
+Gli obiettivi di qualità definiti, sia per il prodotto software che per i processi di sviluppo, devono essere specifici e misurabili. Le attività del piano dovrebbero essere il più possibile automatizzate per ridurre i costi e aumentare l'#glossario[efficienza].
 
 Sono inoltre incluse anche le metriche di riferimento e gli obiettivi metrici che saranno utilizzati per valutare la qualità del software. Le misurazioni effettuate e le loro conseguenti valutazioni trovano poi spazio nel cruscotto di valutazione, strumento fondamentale per verificare se gli obiettivi di qualità sono stati raggiunti.
 
