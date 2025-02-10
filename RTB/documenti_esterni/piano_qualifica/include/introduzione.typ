@@ -9,7 +9,7 @@ Precisando quindi gli obiettivi, le risorse e le tecniche da attuare, il #glossa
 Tali parametri risulteranno utili per:
 - Verificatori: fornisce gli indicatori necessari per verificare la qualità del prodotto;
 - Sviluppatori: rappresenta un ottimo strumento per sviluppare le varie parti del prodotto a "regola d'arte";
-- Utilizzatori: insieme alle #link("https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf")[Norme di Progetto], espone i parametri che hanno permesso la produzione e la verifica di qualità del prodotto finale.
+- Utilizzatori: insieme alle #link("https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf")[Norme di Progetto] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf")) [versione 1.0.0], espone i parametri che hanno permesso la produzione e la verifica di qualità del prodotto finale.
 
 == Glossario
 Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
@@ -28,10 +28,12 @@ workflow, interpreterà le istruzioni fornite in linguaggio naturale ed eseguir�
 L'approccio che abbiamo deciso di adottare per questo documento è di tipo incrementale dato che alcune necessità future non sono tracciabili fin dall'inizio. Nel momento in cui affronteremo le varie fasi del progetto andremo ad aggiornare questo documento, tenendo conto sia degli obiettivi di qualità interni al gruppo, sia di quelli richiesti dall'azienda.
 
 == Riferimenti
+#set par(justify: false)
 === Riferimenti normativi
-  - Spunti per lezione rovesciata #1: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/FC1.pdf;
-  - #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf;
-  - Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf.
+  - Spunti per lezione rovesciata #1, in particolare le slide intitolate "Cosa documentare": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/FC1.pdf \[visitato il: 10/02/2025\];
+  - #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf \[versione 1.0.0\];
+  - Regolamento progetto didattico, in particolare le slide "Controllo di avanzamento", "Piano di Qualifica" e "Obblighi documentali": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 10/02/2025\].
 === Riferimenti informativi
-  - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf.
-  - #glossario[Piano di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf.
+  - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 1.0.0\];
+  - #glossario[Piano di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf \[versione 1.0.0\].
+  #set par(justify: true)
