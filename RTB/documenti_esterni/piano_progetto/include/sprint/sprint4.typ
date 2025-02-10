@@ -16,25 +16,25 @@ In questo quarto sprint ci concentreremo sulla redazione dei documenti necessari
 
 - Issue:
   - Analisi dei Requisiti
-    - #link("https://github.com/techminds-unipd/docs/issues/189")[Issue \#189] #footnote("https://github.com/techminds-unipd/docs/issues/189"): UC eliminazione workflow;
-    - #link("https://github.com/techminds-unipd/docs/issues/190")[Issue \#190] #footnote("https://github.com/techminds-unipd/docs/issues/190"): Tabella requisiti qualitativi;
-    - #link("https://github.com/techminds-unipd/docs/issues/191")[Issue \#191] #footnote("https://github.com/techminds-unipd/docs/issues/191"): Tabella requisiti di vincolo;
-    - #link("https://github.com/techminds-unipd/docs/issues/200")[Issue \#200] #footnote("https://github.com/techminds-unipd/docs/issues/200"): Aggiungere campo descrizione nella sezione 1.1.
+    - #link("https://github.com/techminds-unipd/docs/issues/189")[Issue \#189] #footnote(link("https://github.com/techminds-unipd/docs/issues/189")): UC eliminazione workflow;
+    - #link("https://github.com/techminds-unipd/docs/issues/190")[Issue \#190] #footnote(link("https://github.com/techminds-unipd/docs/issues/190")): Tabella requisiti qualitativi;
+    - #link("https://github.com/techminds-unipd/docs/issues/191")[Issue \#191] #footnote(link("https://github.com/techminds-unipd/docs/issues/191")): Tabella requisiti di vincolo;
+    - #link("https://github.com/techminds-unipd/docs/issues/200")[Issue \#200] #footnote(link("https://github.com/techminds-unipd/docs/issues/200")): Aggiungere campo descrizione nella sezione 1.1.
 
   - Piano di Progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/187")[Issue \#187] #footnote("https://github.com/techminds-unipd/docs/issues/187"): Redigere consuntivo sprint 3;
-    - #link("https://github.com/techminds-unipd/docs/issues/188")[Issue \#188] #footnote("https://github.com/techminds-unipd/docs/issues/188"): Redigere preventivo sprint 4.
+    - #link("https://github.com/techminds-unipd/docs/issues/187")[Issue \#187] #footnote(link("https://github.com/techminds-unipd/docs/issues/187")): Redigere consuntivo sprint 3;
+    - #link("https://github.com/techminds-unipd/docs/issues/188")[Issue \#188] #footnote(link("https://github.com/techminds-unipd/docs/issues/188")): Redigere preventivo sprint 4.
 
   - Piano di Qualifica
-    - #link("https://github.com/techminds-unipd/docs/issues/192")[Issue \#192] #footnote("https://github.com/techminds-unipd/docs/issues/192"): Redigere sezione qualità di prodotto;
-    - #link("https://github.com/techminds-unipd/docs/issues/193")[Issue \#193] #footnote("https://github.com/techminds-unipd/docs/issues/193"): Redigere sezione qualità di processo;
-    - #link("https://github.com/techminds-unipd/docs/issues/194")[Issue \#194] #footnote("https://github.com/techminds-unipd/docs/issues/194"): Redigere sezione qualità per obiettivo (processi primari);
-    - #link("https://github.com/techminds-unipd/docs/issues/195")[Issue \#195] #footnote("https://github.com/techminds-unipd/docs/issues/195"): Redigere sezione qualità per obiettivo (processi di supporto);
-    - #link("https://github.com/techminds-unipd/docs/issues/196")[Issue \#196] #footnote("https://github.com/techminds-unipd/docs/issues/196"): Redigere sezione qualità per obiettivo (processi organizzativi).
+    - #link("https://github.com/techminds-unipd/docs/issues/192")[Issue \#192] #footnote(link("https://github.com/techminds-unipd/docs/issues/192")): Redigere sezione qualità di prodotto;
+    - #link("https://github.com/techminds-unipd/docs/issues/193")[Issue \#193] #footnote(link("https://github.com/techminds-unipd/docs/issues/193")): Redigere sezione qualità di processo;
+    - #link("https://github.com/techminds-unipd/docs/issues/194")[Issue \#194] #footnote(link("https://github.com/techminds-unipd/docs/issues/194")): Redigere sezione qualità per obiettivo (processi primari);
+    - #link("https://github.com/techminds-unipd/docs/issues/195")[Issue \#195] #footnote(link("https://github.com/techminds-unipd/docs/issues/195")): Redigere sezione qualità per obiettivo (processi di supporto);
+    - #link("https://github.com/techminds-unipd/docs/issues/196")[Issue \#196] #footnote(link("https://github.com/techminds-unipd/docs/issues/196")): Redigere sezione qualità per obiettivo (processi organizzativi).
 
   - Norme di Progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/197")[Issue \#197] #footnote("https://github.com/techminds-unipd/docs/issues/197"): Redigere sezione gestione operativa;
-    - #link("https://github.com/techminds-unipd/docs/issues/198")[Issue \#198] #footnote("https://github.com/techminds-unipd/docs/issues/198"): Redigere sezione accertamento della qualità.
+    - #link("https://github.com/techminds-unipd/docs/issues/197")[Issue \#197] #footnote(link("https://github.com/techminds-unipd/docs/issues/197")): Redigere sezione gestione operativa;
+    - #link("https://github.com/techminds-unipd/docs/issues/198")[Issue \#198] #footnote(link("https://github.com/techminds-unipd/docs/issues/198")): Redigere sezione accertamento della qualità.
 
 ==== Diagramma di Gantt
 Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
@@ -88,7 +88,7 @@ caption: [Diagramma Gantt sprint 4.]
 )<diagramma-gantt-sprint4>
 
 ==== Conclusioni
-Sono state completate tutte le task previste per questo sprint. La #link("https://github.com/techminds-unipd/docs/issues/193")[issue \#193], è stata chiusa come non pianificata dato che è stata completata come parte di altre task.
+Sono state completate tutte le task previste per questo sprint. La #link("https://github.com/techminds-unipd/docs/issues/193")[issue \#193] #footnote(link("https://github.com/techminds-unipd/docs/issues/193")), è stata chiusa come non pianificata dato che è stata completata come parte di altre task.
 
 ==== Retrospettiva
 Osservando i documenti abbiamo notato la mancanza di una sezione dedicata ai dati forniti dalle metriche, vanificando l'utilità delle stesse. Per questo motivo il prossimo sprint sarà dedicato alla realizzazione di un cruscotto che permetta di monitorare la qualità dei prodotti e dei processi, sfruttando i dati forniti dalle metriche già individuate.#linebreak()

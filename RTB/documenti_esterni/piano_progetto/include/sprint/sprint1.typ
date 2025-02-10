@@ -15,17 +15,17 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
   - verificatore: #team.A, #team.C.
 
 - Issue:
-  - #link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56] #footnote("https://github.com/techminds-unipd/docs/issues/56"): Sostituire termini del glossario nei documenti;
-  - #link("https://github.com/techminds-unipd/docs/issues/57")[Issue \#57] #footnote("https://github.com/techminds-unipd/docs/issues/57"): Miglioramenti grafici documentazione;
-  - #link("https://github.com/techminds-unipd/docs/issues/60")[Issue \#60] #footnote("https://github.com/techminds-unipd/docs/issues/60"): Autoformazione tecnologie proposte dall'azienda;
-    - #link("https://github.com/techminds-unipd/docs/issues/64")[Issue \#64] #footnote("https://github.com/techminds-unipd/docs/issues/64"): React;
-    - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65] #footnote("https://github.com/techminds-unipd/docs/issues/65"): Typescript;
-    - #link("https://github.com/techminds-unipd/docs/issues/66")[Issue \#66] #footnote("https://github.com/techminds-unipd/docs/issues/66"): Node.js;
-    - #link("https://github.com/techminds-unipd/docs/issues/67")[Issue \#67] #footnote("https://github.com/techminds-unipd/docs/issues/67"): MongoDB;
-  - #link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62] #footnote("https://github.com/techminds-unipd/docs/issues/62"): Redazione diagrammi dei casi d'uso;
-  - #link("https://github.com/techminds-unipd/docs/issues/68")[Issue \#68] #footnote("https://github.com/techminds-unipd/docs/issues/68"): Redazione sprint 1 in piano di progetto;
-  - #link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69] #footnote("https://github.com/techminds-unipd/docs/issues/69"): Inizio analisi dei rischi in piano di progetto;
-  - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70] #footnote("https://github.com/techminds-unipd/docs/issues/70"): Aggiornamento norme di progetto.
+  - #link("https://github.com/techminds-unipd/docs/issues/56")[Issue \#56] #footnote(link("https://github.com/techminds-unipd/docs/issues/56")): Sostituire termini del glossario nei documenti;
+  - #link("https://github.com/techminds-unipd/docs/issues/57")[Issue \#57] #footnote(link("https://github.com/techminds-unipd/docs/issues/57")): Miglioramenti grafici documentazione;
+  - #link("https://github.com/techminds-unipd/docs/issues/60")[Issue \#60] #footnote(link("https://github.com/techminds-unipd/docs/issues/60")): Autoformazione tecnologie proposte dall'azienda;
+    - #link("https://github.com/techminds-unipd/docs/issues/64")[Issue \#64] #footnote(link("https://github.com/techminds-unipd/docs/issues/64")): React;
+    - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65] #footnote(link("https://github.com/techminds-unipd/docs/issues/65")): Typescript;
+    - #link("https://github.com/techminds-unipd/docs/issues/66")[Issue \#66] #footnote(link("https://github.com/techminds-unipd/docs/issues/66")): Node.js;
+    - #link("https://github.com/techminds-unipd/docs/issues/67")[Issue \#67] #footnote(link("https://github.com/techminds-unipd/docs/issues/67")): MongoDB;
+  - #link("https://github.com/techminds-unipd/docs/issues/62")[Issue \#62] #footnote(link("https://github.com/techminds-unipd/docs/issues/62")): Redazione diagrammi dei casi d'uso;
+  - #link("https://github.com/techminds-unipd/docs/issues/68")[Issue \#68] #footnote(link("https://github.com/techminds-unipd/docs/issues/68")): Redazione sprint 1 in piano di progetto;
+  - #link("https://github.com/techminds-unipd/docs/issues/69")[Issue \#69] #footnote(link("https://github.com/techminds-unipd/docs/issues/69")): Inizio analisi dei rischi in piano di progetto;
+  - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70] #footnote(link("https://github.com/techminds-unipd/docs/issues/70")): Aggiornamento norme di progetto.
 
 ==== Diagramma di Gantt
 Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
@@ -80,7 +80,7 @@ caption: [Diagramma Gantt sprint 1.]
 )<diagramma-gantt-sprint1>
 
 ==== Conclusioni
-Sono stati completati quasi tutti i task presenti nello sprint backlog tranne due task relativi alle tecnologie, ovvero Typescript #link("https://github.com/techminds-unipd/docs/issues/65")[\#65] e MongoDB #link("https://github.com/techminds-unipd/docs/issues/67")[\#67], entrambi sotto-task del task #link("https://github.com/techminds-unipd/docs/issues/60")[\#60].
+Sono stati completati quasi tutti i task presenti nello sprint backlog tranne due task relativi alle tecnologie, ovvero Typescript #link("https://github.com/techminds-unipd/docs/issues/65")[\#65] #footnote(link("https://github.com/techminds-unipd/docs/issues/65")) e MongoDB #link("https://github.com/techminds-unipd/docs/issues/67")[\#67] #footnote(link("https://github.com/techminds-unipd/docs/issues/67")), entrambi sotto-task del task #link("https://github.com/techminds-unipd/docs/issues/60")[\#60] #footnote(link("https://github.com/techminds-unipd/docs/issues/60")).
 #linebreak()Nel complesso in questo primo sprint si è sottostimato lo studio delle tecnologie.
 
 ==== Retrospettiva
