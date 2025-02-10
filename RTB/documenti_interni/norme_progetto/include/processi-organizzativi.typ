@@ -106,8 +106,8 @@ Ha quindi il compito di:
 
 ==== Strumenti e tecnologie
 Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e le seguenti tecnologie:
-- GitHub Board (#link("https://github.com/orgs/techminds-unipd/projects/1")): per le attività di pianificazione;
-- GitHub Roadmap (#link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")): per il controllo delle attività previste per ogni periodo;
+- #link("https://github.com/orgs/techminds-unipd/projects/1", "GitHub Board") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1")) \[visitato il: 10/02/2025\] per le attività di pianificazione;
+- #link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap", "GitHub Roadmap") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")) \[visitato il: 10/02/2025\]: per il controllo delle attività previste per ogni periodo;
 - Typst: per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
