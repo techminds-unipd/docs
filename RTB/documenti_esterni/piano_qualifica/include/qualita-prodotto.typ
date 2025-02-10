@@ -12,9 +12,9 @@ Le sezioni principali includono una dettagliata analisi delle qualità di prodot
 - Efficienza;
 - Usabilità;
 - Accessibilità;
-- Portabilità;
+- Portabilità.
 ==== Funzionalità
-Misura di quanto il prodotto software soddisfa i requisiti essenziali, desiderabili e opzionali, garantendo che le funzionalità principali siano completamente implementate.
+Misura se e quanto il prodotto software soddisfa i requisiti essenziali, desiderabili e opzionali, garantendo che le funzionalità principali siano completamente implementate.
 #set par (justify: false)
 #figure(
   table(
@@ -58,7 +58,7 @@ Misura della stabilità e leggibilità del software.
 #set par (justify: true)
 
 ==== Manutenibilità
-Indica quanto è semplice aggiornare, correggere o migliorare il software.
+Indica quanto è semplice aggiornare, correggere e migliorare il software.
 #set par (justify: false)
 #figure(
   table(
