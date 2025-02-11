@@ -35,7 +35,7 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
 - Figure: ogni figura deve essere dotata di caption che ne spieghi brevemente il contenuto;
 - Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto;
-- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento.
+- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento;
 - Link: quando il link viene inserito come risorsa da consultare, deve essere indicata la data dell'ultima volta in cui la risorsa è stata visitata (nel formato [visitato il: dd/mm/aaaa]). Se invece il link porta ad un documento con ciclo di vita, è necessario inserirne la versione (nel formato [versione X.Y.Z]). Per i link relativi alle #glossario[issue] non vale quando appena descritto. I link possono essere scritti:
   - per esteso: il link deve essere cliccabile e portare alla risorsa;
   - come testo cliccabile: deve essere aggiunta una footnote con il link per esteso.
