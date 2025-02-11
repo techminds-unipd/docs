@@ -198,7 +198,7 @@ Elenco organizzato di termini tecnici, acronimi e definizioni utilizzati nel con
 Indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto agli altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzichè in sillabe, semplificandone il calcolo automatico.
                  #linebreak()La formula per il calcolo è $89 + (300("n_frasi") -10("n_lettere"))/"n_parole"$.
 
-== Integrazione continua // {Continous Integration} {CI}
+== Integrazione continua // {Continous Integration}
 Spesso indicata con CI (dall'inglese _Continuous Integration_), è una pratica di sviluppo in cui è presente un meccanismo di Build Automation e dove il team integra frequentemente le modifiche.
 
 == Intelligenza Artificiale // {AI}
