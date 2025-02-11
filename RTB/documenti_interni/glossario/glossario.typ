@@ -51,7 +51,7 @@ L'analisi dei rischi è un processo che identifica, valuta e pianifica i rischi 
 Acronimo di _Application Programming Interface_, è un insieme di procedure atte a consentire la comunicazione tra diversi software o tra diversi componenti di software.
 
 == Arco // {Archi}
-L'arco è un elemento specifico richiesto nel capitolato del progetto.
+L'arco è un elemento specifico richiesto nel capitolato.
 Rappresenta il collegamento tra due blocchi. Sopra di esso viene inserita una descrizione in linguaggio naturale che indica l'automazione che l'utente desidera sia compiuta.
 
 == Attore // {Attori}
@@ -78,7 +78,7 @@ Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fi
 Bedrock è un servizio di AWS che rende disponibili modelli di intelligenza artificiale tramite un sistema unificato.
 
 == Blocco // {Blocchi}
-Un blocco è una componente la cui presenza è necessaria nel nostro capitolato e che rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
+Un blocco è un elemento specifico richiesto nel capitolato. Rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
 
 == Branch
 Un branch è una ramificazione del codice sorgente. Permette di lavorare su una copia separata del progetto senza influenzare il ramo principale. I rami sono utilizzati per sviluppare nuove funzionalità, correggere bug, o sperimentare senza compromettere il resto del codice.
@@ -433,7 +433,7 @@ Si occupa di accertare che lo svolgimento delle attività di sviluppo non introd
 Insieme di regole e pratiche che stabiliscono come devono avvenire i processi del progetto.
 
 == Workflow
-Il Workflow è un elemento strettamente collegato con il capitolato del progetto.
+Il workflow è un elemento strettamente collegato con il capitolato.
 Serie di attività orchestrate e ripetibili, eseguite in sequenza o in parallelo, con lo scopo di raggiungere un obiettivo specifico.
 
 = X
