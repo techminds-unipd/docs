@@ -25,5 +25,7 @@ try:
         print("Le parole in glossario NON sono in ordine alfabetico.")
         out_of_order = find_out_of_order(words)
         print("Parole fuori posto:", out_of_order)
+        sys.exit(1)
 except Exception as e:
     print(f"Errore durante la lettura del file: {e}")
+    sys.exit(1)
