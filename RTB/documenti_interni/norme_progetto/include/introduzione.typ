@@ -1,7 +1,7 @@
 #import "/template/template.typ": glossario
 = Introduzione
 == Scopo del documento
-Questo documento nasce con l'intenzione di documentare il #glossario[way of working] del gruppo al fine di gestire ed organizzare le attività di #glossario[progetto] nella maniera più efficiente possibile. Tutte le modifiche effettuate all'interno dei documenti saranno registrate all'interno del registro delle modifiche (#glossario[changelog]).
+Questo documento nasce con l'intenzione di documentare il #glossario[way of working] del gruppo al fine di gestire ed organizzare le attività di #glossario[progetto] nella maniera più efficiente possibile. Tutte le modifiche effettuate all'interno dei documenti saranno riportate nel registro delle modifiche (#glossario[changelog]).
 
 Abbiamo deciso di seguire lo standard ISO/IEC 12207:1995 che definisce i #glossario[processi di ciclo di vita], ovvero l'insieme dei #glossario[processi] che descrivono e organizzano il software dalla sua concezione iniziale fino al suo ritiro.
 La scelta di aderire ad uno standard è dovuta al fatto che ci fornisce delle regole comuni ottimali, le quali ci permetteranno di raggiungere l'#glossario[economicità] (combinazione di #glossario[efficienza] ed #glossario[efficacia]).
@@ -14,12 +14,9 @@ Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la ste
 I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
 
 == Scopo del prodotto
-Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l’#glossario[intelligenza artificiale] generativa,
-vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.
-Il prodotto sarà un’app desktop che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi
-esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno
-l’automazione da effettuare in linguaggio naturale. Successivamente, un #glossario[agente] prenderà il workflow,
-interpreterà le istruzioni fornite in linguaggio naturale ed eseguirà il workflow.
+Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
+Il prodotto sarà una web app che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno l'automazione da effettuare in linguaggio naturale.
+Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale e le eseguirà.
 
 == Riferimenti
 #set par(justify: false)
