@@ -17,37 +17,37 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
 
 - Issue:
     - PoC
-        - #link("https://github.com/techminds-unipd/PoC/issues/1")[Issue \#1]: Inizio implementazione frontend workflow;
-        - #link("https://github.com/techminds-unipd/PoC/issues/2")[Issue \#2]: Inizio implementazione backend;
-        - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3]: Inizio implementazione agenti nel backend.
+        - #link("https://github.com/techminds-unipd/PoC/issues/1")[Issue \#1] #footnote(link("https://github.com/techminds-unipd/PoC/issues/1")): Inizio implementazione frontend workflow;
+        - #link("https://github.com/techminds-unipd/PoC/issues/2")[Issue \#2] #footnote(link("https://github.com/techminds-unipd/PoC/issues/2")): Inizio implementazione backend;
+        - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3] #footnote(link("https://github.com/techminds-unipd/PoC/issues/3")): Inizio implementazione agenti nel backend.
 
     - Autoformazione
-        - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65]: Typescript (non completata durante lo sprint 1).
+        - #link("https://github.com/techminds-unipd/docs/issues/65")[Issue \#65] #footnote(link("https://github.com/techminds-unipd/docs/issues/65")): Typescript (non completata durante lo sprint 1).
 
     - Analisi dei Requisiti
-        - #link("https://github.com/techminds-unipd/docs/issues/89")[Issue \#89]: User Story 6;
-        - #link("https://github.com/techminds-unipd/docs/issues/104")[Issue \#104]: Fix generale use case;
-        - #link("https://github.com/techminds-unipd/docs/issues/105")[Issue \#105]: Scrivere nuove sezioni in analisi dei requisiti.
+        - #link("https://github.com/techminds-unipd/docs/issues/89")[Issue \#89] #footnote(link("https://github.com/techminds-unipd/docs/issues/89")): User Story 6;
+        - #link("https://github.com/techminds-unipd/docs/issues/104")[Issue \#104] #footnote(link("https://github.com/techminds-unipd/docs/issues/104")): Fix generale use case;
+        - #link("https://github.com/techminds-unipd/docs/issues/105")[Issue \#105] #footnote(link("https://github.com/techminds-unipd/docs/issues/105")): Scrivere nuove sezioni in analisi dei requisiti.
 
     - Piano di Progetto
-        - #link("https://github.com/techminds-unipd/docs/issues/83")[Issue \#83]: Sistemare il paragrafo spiegazioni;
-        - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106]: Aggiornare piano di progetto (sezione sprint 1);
-        - #link("https://github.com/techminds-unipd/docs/issues/110")[Issue \#110]: Aggiungere info sprint 2.
-        - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112]: Redigere "Pianificazione" in piano di progetto.
+        - #link("https://github.com/techminds-unipd/docs/issues/83")[Issue \#83] #footnote(link("https://github.com/techminds-unipd/docs/issues/83")): Sistemare il paragrafo spiegazioni;
+        - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106] #footnote(link("https://github.com/techminds-unipd/docs/issues/106")): Aggiornare piano di progetto (sezione sprint 1);
+        - #link("https://github.com/techminds-unipd/docs/issues/110")[Issue \#110] #footnote(link("https://github.com/techminds-unipd/docs/issues/110")): Aggiungere info sprint 2.
+        - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112] #footnote(link("https://github.com/techminds-unipd/docs/issues/112")): Redigere "Pianificazione" in piano di progetto.
 
     - Piano di Qualifica
-        - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109]: Fix piano di qualifica;
-        - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111]: Redigere nuove sezioni piano di qualifica;
+        - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109] #footnote(link("https://github.com/techminds-unipd/docs/issues/109")): Fix piano di qualifica;
+        - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111] #footnote(link("https://github.com/techminds-unipd/docs/issues/111")): Redigere nuove sezioni piano di qualifica;
 
     - Norme di Progetto
-        - #link("https://github.com/techminds-unipd/docs/issues/113")[Issue \#113]: Redigere "Processi organizzativi" in norme di progetto;
-        - #link("https://github.com/techminds-unipd/docs/issues/114")[Issue \#114]: Redigere "Processi primari" in norme di progetto.
+        - #link("https://github.com/techminds-unipd/docs/issues/113")[Issue \#113] #footnote(link("https://github.com/techminds-unipd/docs/issues/113")): Redigere "Processi organizzativi" in norme di progetto;
+        - #link("https://github.com/techminds-unipd/docs/issues/114")[Issue \#114] #footnote(link("https://github.com/techminds-unipd/docs/issues/114")): Redigere "Processi primari" in norme di progetto.
 
     - Automazione
-        - #link("https://github.com/techminds-unipd/docs/issues/107")[Issue \#107]: Creazione script check_glossario.py;
-        - #link("https://github.com/techminds-unipd/docs/issues/108")[Issue \#108]: Creazione script indice_gulpease.py.
+        - #link("https://github.com/techminds-unipd/docs/issues/107")[Issue \#107] #footnote(link("https://github.com/techminds-unipd/docs/issues/107")): Creazione script check_glossario.py;
+        - #link("https://github.com/techminds-unipd/docs/issues/108")[Issue \#108] #footnote(link("https://github.com/techminds-unipd/docs/issues/108")): Creazione script indice_gulpease.py.
     - Varie
-        - #link("https://github.com/techminds-unipd/docs/issues/115")[Issue \#115]: Creazione checklist per i verificatori.
+        - #link("https://github.com/techminds-unipd/docs/issues/115")[Issue \#115] #footnote(link("https://github.com/techminds-unipd/docs/issues/115")): Creazione checklist per i verificatori.
 
 
 ==== Diagramma di Gantt
@@ -75,7 +75,7 @@ timeliney.timeline(
     taskgroup(title: [*PoC*], {
         task("Inizio implementazione frontend workflow", (from: 3, to: 10, style: (stroke: 8pt + gray)), (from: 3, to:10, style: (stroke: 2pt + red)))
         task("Inizio implementazione backend", (from: 1, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 8, style: (stroke: 2pt + red)))
-        task("Inizio implementazione agenti nel backend (non completata)", (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task(align(center, [Inizio implementazione agenti #linebreak() nel backend (non completata)]), (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
       })
       taskgroup(title: [*Autoformazione*], {
         task("Typescript", (from: 0, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 6, style: (stroke: 2pt + red)))
@@ -94,10 +94,10 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Piano di progetto*], {
-        task("Aggiornare piano di progetto [sezione sprint 1]", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task(align(center, [Aggiornare piano di #linebreak() progetto [sezione sprint 1]]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
         task("Aggiungere info sprint 2", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
         task("Sistemare il paragrafo spiegazioni", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-        task("Redigere 'Pianificazione' in piano di progetto", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere 'Pianificazione' #linebreak() in piano di progetto]), (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Piano di qualifica*], {
@@ -106,8 +106,8 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Norme di progetto*], {
-        task("Redigere Processi primari in norme di progetto", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-        task("Redigere Processi organizzativi in norme di progetto", (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere Processi primari #linebreak() in norme di progetto]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere Processi organizzativi #linebreak() in norme di progetto]), (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Automazione*], {
@@ -124,7 +124,7 @@ caption: [Diagramma Gantt sprint 2.]
 )<diagramma-gantt-sprint2>
 
 ==== Conclusioni
-Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/PoC/issues/3")[#underline("#3 Inizio implementazione agenti nel backend")] riguardante il PoC, e due rivolte al piano di qualifica, ossia #link("https://github.com/techminds-unipd/docs/issues/109")[#underline("#109 Fix piano di qualifica")] e #link("https://github.com/techminds-unipd/docs/issues/111")[#underline("#111 Redigere nuove sezioni piano di qualifica")].
+Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/PoC/issues/3")[#underline("#3 Inizio implementazione agenti nel backend")] #footnote(link("https://github.com/techminds-unipd/PoC/issues/3")) riguardante il PoC, e due rivolte al piano di qualifica, ossia #link("https://github.com/techminds-unipd/docs/issues/109")[#underline("#109 Fix piano di qualifica")]#footnote(link("https://github.com/techminds-unipd/docs/issues/109")) e #link("https://github.com/techminds-unipd/docs/issues/111")[#underline("#111 Redigere nuove sezioni piano di qualifica")] #footnote(link("https://github.com/techminds-unipd/docs/issues/111")).
 
 ==== Retrospettiva
 L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seguenti decisioni:

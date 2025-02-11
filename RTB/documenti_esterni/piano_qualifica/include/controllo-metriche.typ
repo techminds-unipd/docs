@@ -20,30 +20,87 @@
 // lines   :: [[number], [number]]
 // legends :: [content, content]
 // hlines  :: [number]
-#let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, caption: content) = {
+#let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, y-tick-step: int, caption: content) = {
+
+    if y-tick-step <= 0 {
+        y-tick-step = auto
+    }
+
     figure(
-    cetz.canvas({
-      plot.plot(size: (14,6),
-        legend: auto,
-        axis-style: "left",
-        x-label: [#pad(left: 35pt, top: 5pt, x-label)],
-        y-label: [#pad(right: 5pt, bottom: 5pt, y-label)],
-        x-tick-step: 1, {
+        cetz.canvas({
+            plot.plot(size: (14,6),
+                legend: auto,
+                axis-style: "left",
+                x-label: [#pad(left: 35pt, top: 5pt, x-label)],
+                y-label: [#pad(right: 5pt, bottom: 5pt, y-label)],
+                x-tick-step: 1,
+                y-tick-step: y-tick-step, {
 
-        for data in lines.zip(legends) {
-            if (data.at(1) == []) {
-                plot.add(data.at(0)(offset: 0), line: "linear")
-            } else {
-                plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1))
-            }
-        }
+                    for data in lines.zip(legends) {
+                        if (data.at(1) == []) {
+                            plot.add(data.at(0)(offset: 0), line: "linear")
+                        } else {
+                            plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1))
+                        }
+                    }
 
-        for hline in hlines {
-            plot.add-hline(hline, style:(stroke: (dash: "dashed", paint: gray)))
-        }
-      })
-    }), caption: caption)
+                    for hline in hlines {
+                        plot.add-hline(hline, style:(stroke: (dash: "dashed", paint: gray)))
+                    }
+                })
+        }), caption: caption)
 }
+
+#let calcoloMetricheAccettabili(
+    ev, ac, pv,
+    cv, sv, cpi,
+    eac, etc, spi,
+    caption_figure, rischi,
+    g_adr, g_pdp, g_pdq, g_ndp, g_gloss) = {
+
+        let metriche_accettabili = 0
+
+        metriche_accettabili += int(ev >= 0)
+        metriche_accettabili += int(ac >= 0)
+        metriche_accettabili += int(pv >= 0)
+        metriche_accettabili += int(cv >= 0)
+        metriche_accettabili += int(sv >= 0)
+        metriche_accettabili += int(cpi >= 1)
+        metriche_accettabili += int(eac >= 12975 +0.5*12975 or eac >= 12975 -0.5*12975)
+        metriche_accettabili += int(etc >= 0)
+        metriche_accettabili += int(spi >= 1)
+        metriche_accettabili += int(caption_figure == 100)
+        metriche_accettabili += int(rischi <= 4)
+        metriche_accettabili += int((g_adr, g_pdp, g_pdq, g_ndp, g_gloss).sorted().first() >= 40)
+
+        return metriche_accettabili
+}
+
+#let calcoloMetricheOttime(
+    ev, ac, pv,
+    cv, sv, cpi,
+    eac, etc, spi,
+    caption_figure, rischi,
+    g_adr, g_pdp, g_pdq, g_ndp, g_gloss) = {
+
+        let metriche_ottime = 0
+
+        metriche_ottime += int(ev <= eac)
+        metriche_ottime += int(ac <= eac)
+        metriche_ottime += int(pv <= 12975)
+        metriche_ottime += int(cv >= 0)
+        metriche_ottime += int(sv >= 0)
+        metriche_ottime += int(cpi >= 1)
+        metriche_ottime += int(eac == 12975)
+        metriche_ottime += int(etc >= eac)
+        metriche_ottime += int(spi >= 1)
+        metriche_ottime += int(caption_figure == 100)
+        metriche_ottime += int(rischi == 0)
+        metriche_ottime += int((g_adr, g_pdp, g_pdq, g_ndp, g_gloss).sorted().first() >= 70)
+
+        return metriche_ottime
+}
+
 
 // tot_spesa.at(i) => spesa sostenuta allo sprint i
 #let tot_spesa = ()
@@ -61,6 +118,8 @@
     tot_spesa_preventivata.push(12975 - tot_spesa_preventivata.sum(default: 0) - bilancio)
 }
 
+#let num_metriche = 12
+
 // Valori metriche
 #let ac = ()
 #let etc = ()
@@ -75,6 +134,14 @@
 #let caption_figure = ()
 #let rischi = ()
 #let costo_totale_stimato = ()
+#let metriche_accettabili = ()
+#let metriche_ottime = ()
+
+#let g_adr = ((1,64),(2,66),(3,65),(4,66))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58))
 
 #for i in range(1, sprint_number+1) {
     costo_totale_stimato.push(12975)
@@ -94,12 +161,21 @@
 
     caption_figure.push((i, 100))
     rischi.push((i, 0))
+
+    metriche_accettabili.push((i,
+        calcoloMetricheAccettabili(
+            ev.at(i - 1).at(1), ac.at(i - 1).at(1), pv.at(i - 1).at(1), cv.at(i - 1).at(1),
+            sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
+            spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
+            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1))))
+
+    metriche_ottime.push((i,
+        calcoloMetricheOttime(
+            ev.at(i - 1).at(1), ac.at(i - 1).at(1), pv.at(i - 1).at(1), cv.at(i - 1).at(1),
+            sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
+            spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
+            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1))))
 }
-#let g_adr = ((1,64),(2,66),(3,65),(4,66))
-#let g_pdp = ((1,48),(2,47),(3,56),(4,68))
-#let g_pdq = ((1,52),(2,56),(3,49),(4,58))
-#let g_ndp = ((1,47),(2,51),(3,52),(4,66))
-#let g_gloss = ((1,59),(2,59),(3,47),(4,58))
 
 #let ac_fun(offset: 0) = ac
 #let etc_fun(offset: 0) = etc
@@ -117,6 +193,8 @@
 #let g_ndp_fun(offset: 0) = g_ndp
 #let g_gloss_fun(offset: 0) = g_gloss
 #let rischi_fun(offset: 0) = rischi
+#let metriche_accettabili_fun(offset:0) = metriche_accettabili
+#let metriche_ottime_fun(offset:0) = metriche_ottime
 
 #pagebreak()
 
@@ -125,11 +203,12 @@
 #linebreak()
 
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
-          legends: ([AC],[ETC],[EAC]),
-          hlines: (),
-          x-label: "sprint",
-          y-label: "costo \u{20AC}",
-          caption: [AC, ETC, EAC.])
+    legends: ([AC],[ETC],[EAC]),
+    hlines: (),
+    x-label: "sprint",
+    y-label: "costo \u{20AC}",
+    y-tick-step: -1,
+    caption: [AC, ETC, EAC.])
 
 Il grafico illustra:
 - #glossario[Actual Cost] (AC): i costi sostenuti fino ad ora;
@@ -147,11 +226,12 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 #linebreak()
 
 #lineChart(lines: (ev_fun,pv_fun),
-          legends: ([EV],[PV]),
-          hlines: (),
-          x-label: "sprint",
-          y-label: "costo \u{20AC}",
-          caption: [EV, PV.])
+    legends: ([EV],[PV]),
+    hlines: (),
+    x-label: "sprint",
+    y-label: "costo \u{20AC}",
+    y-tick-step: -1,
+    caption: [EV, PV.])
 
 Il grafico illustra:
 - #glossario[Planned Value] (PV): costo pianificato per realizzare le attività di progetto alla data corrente;
@@ -168,11 +248,12 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 #linebreak()
 
 #lineChart(lines: (cv_fun,sv_fun),
-          legends: ([CV],[SV]),
-          hlines: (0,),
-          x-label: "sprint",
-          y-label: "y",
-          caption: [CV, SV.])
+    legends: ([CV],[SV]),
+    hlines: (0,),
+    x-label: "sprint",
+    y-label: "y",
+    y-tick-step: -1,
+    caption: [CV, SV.])
 
 Il grafico illustra:
 - #glossario[Cost Variance] (CV): indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo;
@@ -190,11 +271,12 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 #linebreak()
 
 #lineChart(lines: (cpi_fun,spi_fun),
-          legends: ([CPI],[SPI]),
-          hlines: (1,),
-          x-label: "sprint",
-          y-label: "y",
-          caption: [CPI, SPI.])
+    legends: ([CPI],[SPI]),
+    hlines: (1,),
+    x-label: "sprint",
+    y-label: "y",
+    y-tick-step: -1,
+    caption: [CPI, SPI.])
 
 Il grafico illustra:
 - #glossario[Cost Performance Index] (CPI): indica l’#glossario[efficienza] dei costi di un progetto mettendo in relazione il valore prodotto e i costi sostenuti;
@@ -216,11 +298,12 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 #let x_axis_fun(offset: 0) = x_axis
 
 #lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, x_axis_fun),
-          legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[]),
-          hlines: ((40,40)),
-          x-label: "sprint",
-          y-label: "indice",
-          caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
+    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[]),
+    hlines: ((40,40)),
+    x-label: "sprint",
+    y-label: "indice",
+    y-tick-step: -1,
+    caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
 - #glossario[Analisi dei requisiti] ;
@@ -241,11 +324,12 @@ I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabi
 #let x_axis_fun(offset: 0) = x_axis
 
 #lineChart(lines: (caption_figure_fun, x_axis_fun),
-          legends: ([MACC1], []),
-          hlines: (),
-          x-label: "sprint",
-          y-label: "%",
-          caption: [Caption in tabelle e figure.])
+    legends: ([MACC1], []),
+    hlines: (),
+    x-label: "sprint",
+    y-label: "%",
+    y-tick-step: -1,
+    caption: [Caption in tabelle e figure.])
 
 Il grafico illustra:
 - Caption in tabelle e figure: indica quante figure e tabelle hanno un titolo descrittivo associato.
@@ -264,11 +348,12 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
 #let point_fun(offset: 0) = point
 
 #lineChart(lines: (rischi_fun, point_fun,),
-          legends: ([Rischi], []),
-          hlines: (),
-          x-label: "sprint",
-          y-label: "rischi",
-          caption: [Rischi])
+    legends: ([Rischi], []),
+    hlines: (),
+    x-label: "sprint",
+    y-label: "rischi",
+    y-tick-step: -1,
+    caption: [Rischi.])
 
 Il grafico illustra:
 - Rischi: il numero di rischi non previsti che si sono verificati durante lo svolgimento del progetto.
@@ -276,4 +361,53 @@ Il grafico illustra:
 #linebreak()
 *RTB*
 #linebreak()
-Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previsti. Per maggiori informazioni sui rischi previsti si veda #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi", "Analisi dei rischi").
+Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previsti. Per maggiori informazioni sui rischi previsti si veda #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi", "Analisi dei rischi") #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")) [Piano di Progetto, versione 1.0.0].
+
+#pagebreak()
+
+==  MPRO14 (Metriche accettabili)
+#linebreak()
+
+#let point = ((1,0),)
+#let point_fun(offset: 0) = point
+
+#lineChart(lines: (metriche_accettabili_fun, point_fun),
+    legends: ([Metriche],[]),
+    hlines: (num_metriche*0.9, num_metriche),
+    x-label: "sprint",
+    y-label: "n. metriche",
+    y-tick-step: 1,
+    caption: [Metriche accettabili.])
+
+Il grafico illustra:
+- Metriche accettabili: il numero di metriche che raggiungono la soglia accettabile.
+
+#linebreak()
+*RTB*
+#linebreak()
+In questo periodo abbiamo quasi sempre raggiunto le soglie definite per noi accettabili.
+Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di conseguenza alcune metriche che controllano i tempi/costi di consegna non sono state soddisfatte.
+
+#pagebreak()
+
+==  MPRO15 (Metriche ottimali)
+#linebreak()
+
+#let point = ((1,0),)
+#let point_fun(offset: 0) = point
+
+#lineChart(lines: (metriche_ottime_fun, point_fun),
+    legends: ([Metriche],[]),
+    hlines: (num_metriche*0.3, num_metriche),
+    x-label: "sprint",
+    y-label: "n. metriche",
+    y-tick-step: 1,
+    caption: [Metriche ottimali.])
+
+Il grafico illustra:
+- Metriche ottimali: il numero di metriche che raggiungono il valore ottimale.
+
+#linebreak()
+*RTB*
+#linebreak()
+In questo periodo abbiamo  superato la soglia accettabile per la maggior parte degli sprint, quasi arrivando a toccare il valore ottimo (ovvero soddisfare tutte le metriche all'ottimo).
