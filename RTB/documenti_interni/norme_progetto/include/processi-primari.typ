@@ -65,7 +65,7 @@ La documentazione che forniamo al proponente e al committente è la seguente:
 A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
 - Canva per la realizzazione dei diari di bordo;
 - Microsoft Teams per gli incontri esterni;
-- Slack per le comunicazioni testuali con il proponente;
+- #glossario[Slack] per le comunicazioni testuali con il proponente;
 - #glossario[Typst] per la stesura della documentazione, compresi i vari diagrammi (#glossario[casi d'uso], #glossario[diagrammi di gantt] ecc.) e le tabelle.
 
 == Sviluppo
