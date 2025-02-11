@@ -202,7 +202,9 @@ Le issue vengono solitamente create dall'amministratore (ad eccezione di alcuni 
 - Project: GitHub Projects a cui la issue è associata. Se sono presenti delle dashboard (vedi @dashboard per approfondimenti) associate ad un progetto, le issue associate saranno visibili anche da lì;
 - Priority: priorità della issue rispetto alle altre, scelta tra alta, media e bassa;
 - Size: dimensione della issue in termini di giornate di lavoro, scelta tra XS, S, M, L, XL;
-- Sprint: ad ogni issue associamo lo sprint in cui deve essere completata.
+- Sprint: ad ogni issue associamo lo sprint in cui deve essere completata;
+- Giorni previsti: giorni previsti per il completamento della issue, includendo la verifica;
+- Milestone: alla issue associamo la milestone di riferimento.
 
 Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo si procede completando anche il campo "Assignees". Se invece è una issue che potrebbe essere svolta da più individui perchè due o più persone svolgono lo stesso ruolo, allora si lascia il campo "Assignees" vuoto e gli interessati andranno a suddividersi le issue di competenza in separata sede. 
 
