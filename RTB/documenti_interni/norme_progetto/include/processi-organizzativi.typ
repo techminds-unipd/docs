@@ -235,7 +235,7 @@ Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di 
 
 ==== Diagrammi di Gantt
 Per pianificare le attività di ogni sprint utilizziamo dei diagrammi di Gantt generati in Typst con la libreria timeliney. Il diagramma ha una riga per ogni issue dello sprint con relativa linea del tempo di fianco che indica con dei colori i tempi preventivati ed effettivi dell'attività.
-Per ottenere i tempi effettivi di una issue abbiamo uno script Python che, utilizzando le API di GitHub, recupera la data di inizio della prima commit associata alla issue e la data di chiusura della Pull Request ad essa associata.
+Per ottenere i tempi effettivi di una issue abbiamo uno script #glossario[Python] che, utilizzando le #glossario[API] di GitHub, recupera la data di inizio della prima commit associata alla issue e la data di chiusura della Pull Request ad essa associata.
 Queste due date precedentemente citate corrispondono alla data di inizio e di fine della issue, che pur non essendo sempre esatte sono una buona approssimazione della realtà.
 
 ==== Strumenti e tecnologie
