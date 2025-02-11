@@ -420,7 +420,7 @@ Si occupa di accertare che lo svolgimento delle attività di sviluppo non introd
 Insieme di regole e pratiche che stabiliscono come devono avvenire i processi del progetto.
 
 == Workflow
-Il Workflow è un elemento strettamente collegato con il capitolato del progetto.
+Il workflow è un elemento strettamente collegato con il capitolato.
 Serie di attività orchestrate e ripetibili, eseguite in sequenza o in parallelo, con lo scopo di raggiungere un obiettivo specifico.
 
 = X
