@@ -32,8 +32,8 @@ Questo documento definisce tutti i termini specifici usati nell'ambito del proge
 = A
 
 == AC // {Actual Cost}
-Acronimo di _Actual Cost_. É una metrica che misura i costi effettivamente sostenuti per svolgere le attività completate fino a un dato momento.
 <AC>
+Acronimo di _Actual Cost_. É una metrica che misura i costi effettivamente sostenuti per svolgere le attività completate fino a un dato momento.
 
 == Accoppiamento // {Accoppiamenti}
 Nell'ambito della programmazione ad oggetti, è una misura del grado di dipendenza fra due classi. Più le classi sono accoppiate più è probabile che la modifica di una implica la modifica delle classi che ne dipendono.
@@ -51,6 +51,7 @@ L'analisi dei rischi è un processo che identifica, valuta e pianifica i rischi 
 Acronimo di _Application Programming Interface_, è un insieme di procedure atte a consentire la comunicazione tra diversi software o tra diversi componenti di software.
 
 == Arco // {Archi}
+L'arco è un elemento specifico richiesto nel capitolato del progetto.
 Rappresenta il collegamento tra due blocchi. Sopra di esso viene inserita una descrizione in linguaggio naturale che indica l'automazione che l'utente desidera sia compiuta.
 
 == Attore // {Attori}
@@ -62,7 +63,8 @@ Acronimo di _Amazon Web Services_, è una sussidiaria di Amazon che fornisce ser
 = B
 
 == BAC // {Budget at Completion}
-Acronimo di _Budget at Completion_. É il budget totale previsto per il completamento del progetto. <BAC>
+<BAC>
+Acronimo di _Budget at Completion_. É il budget totale previsto per il completamento del progetto. 
 
 == Backlog
 Insieme di compiti/attività da completare per un certo obiettivo. Nel framework Scrum esistono due tipologie di backlog:
@@ -76,7 +78,7 @@ Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fi
 Bedrock è un servizio di AWS che rende disponibili modelli di intelligenza artificiale tramite un sistema unificato.
 
 == Blocco // {Blocchi}
-Un blocco rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
+Un blocco è una componente la cui presenza è necessaria nel nostro capitolato e che rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
 
 == Branch
 Un branch è una ramificazione del codice sorgente. Permette di lavorare su una copia separata del progetto senza influenzare il ramo principale. I rami sono utilizzati per sviluppare nuove funzionalità, correggere bug, o sperimentare senza compromettere il resto del codice.
@@ -99,22 +101,23 @@ Si veda #link(<registro_delle_modifiche>)[Registro delle modifiche].
 Operazione che registra le modifiche apportate al codice in un repository. Ogni commit rappresenta uno snapshot del progetto in un determinato momento.
 
 == CPI // {Cost Performance Index}
+<CPI>
 Acronimo di _Cost Performance Index_. É un indice che offre una misura relativa dell'efficienza dei costi di un progetto fino a un dato momento. Indica quanto valore è stato ottenuto per ogni unità di costo spesa.#linebreak()
 Si calcola come: $ "CPI" &= #link(<EV>)[EV] / #link(<AC>)[AC] $#linebreak()
 Si ha che:
 - Se CPI > 1 il progetto ha un'efficienza finanziaria positiva e sta guadagnando con il proprio lavoro più di quanto sta spendendo. Maggiore è il CPI, più efficiente è il progetto;
 - Se CPI = 1 il progetto sta spendendo esattamente quanto preventivato per ottenere il valore generato dal lavoro;
 - Se CPI < 1 il progetto ha un'efficienza finanziaria negativa e sta spendendo più di quanto sta guadagnando con il proprio lavoro. Minore è il CPI, meno efficiente è il progetto.
-<CPI>
 
 == CV // {Cost Variance}
+<CV>
 Acronimo di _Cost Variance_. Metrica che misura la differenza tra il valore e il costo del lavoro completato. Indica se il progetto è sotto o sopra il budget pianificato per il lavoro completato.#linebreak()
 Si calcola come: $ "CV" &= #link(<EV>)[EV] - #link(<AC>)[AC] $#linebreak()
 Si ha quindi che:
 - Se CV > 0 il progetto sta spendendo meno di quanto ha guadagnato con il proprio lavoro ed è quindi sotto il budget previsto;
 - Se CV = 0 il progetto sta spendendo esattamente quanto ha guadagnato con il proprio lavoro ed è quindi perfettamente in linea con il budget previsto;
 - Se CV < 0 il progetto sta spendendo più di quanto ha guadagnato con il proprio lavoro ed è quindi sopra il budget previsto.
-<CV>
+
 
 = D
 
@@ -133,9 +136,9 @@ Piattaforma che permette di creare ambienti isolati di esecuzione chiamati conta
 = E
 
 == EAC // {Estimate at Completion}
+<EAC>
 Acronimo di _Estimate at Completion_. É una metrica che stima il costo totale del progetto sulla base delle performance attuali.#linebreak()
 Esistono diverse formule per il calcolo dell'EAC. La formula che più si addice alla natura di questo progetto è quella che prevede un miglioramento delle performance future rispetto a quelle attuali, ovvero: #linebreak()$ "EAC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV])/(#link(<CPI>)[CPI] dot #link(<SPI>)[SPI]) + #link(<AC>)[AC]$. 
-<EAC>
 
 == Economicità
 Combinazione di efficienza ed efficacia.
@@ -150,20 +153,18 @@ Misura dell'abilità di raggiungere l’obiettivo impiegando le risorse minime i
 È uno strumento di analisi statica del codice JavaScript. Si occupa sia della qualità del codice che dello stile di codifica. È possibile sovrascrivere le regole di default tramite un file di configurazione contenuto all'interno del repository.
 
 == ETC // {Estimate to Complete}
+<ETC>
 Acronimo di _Estimate to Complete_. É una metrica che stima il costo rimanente necessario per completare il progetto.#linebreak()
 La formula per calcolare l'ETC, basandosi sulle performance attuali, è: $"ETC" &= (#link(<BAC>)[BAC] - #link(<EV>)[EV]) / #link(<CPI>)[CPI]$.#linebreak()
 Questa formula assume che la peformance di costo attuale non cambierà nel resto del progetto.
 
-<ETC>
-
 == EV // {Earned Value}
+<EV>
 Acronimo di _Earned Value_. Misura il valore del lavoro effettivamente completato in un dato momento. É il valore che il progetto ha effettivamente generato fino a quel momento.#linebreak()
 Si calcola come: $ "EV" &= "(Percentuale di lavoro completato)" dot "("#link(<BAC>)[BAC]")"$ ed è espresso in valore monetario.#linebreak()
 Va periodicamente confrontato con:
 - #link(<AC>)[AC] per valutare se il progetto è in linea con il budget o se si sta spendendo più di quello che si sta guadagnando con il proprio lavoro. Ciò  avviene tramite le metriche #link(<CV>)[CV] e #link(<CPI>)[CPI]\;
 - #link(<PV>)[PV] per valutare se il progetto è in linea con la pianificazione dal punto di vista dell'andamento temporale dei costi. Ciò avviene tramite le metriche #link(<SV>)[SV] e #link(<SPI>)[SPI].
-<EV>
-
 
 = F
 = G
@@ -172,7 +173,7 @@ Va periodicamente confrontato con:
 Software per il controllo di versione distribuito.
 
 == GitHub
-Servizio di hosting per progetti software, il nome deriva dal fatto che è una implementazione dello strumento di controllo di versione distribuito git.
+Servizio di hosting per progetti software, il nome deriva dal fatto che è una implementazione dello strumento di controllo di versione distribuito Git.
 
 == GitHub Actions
 Piattaforma di continuous integration e continuous delivery che permette di automatizzare la build, i test e il rilascio di un prodotto.
@@ -202,6 +203,7 @@ Disciplina che studia come realizzare sistemi informatici in grado di simulare i
 
 == Issue
 Elemento che richiede attenzione o risoluzione all'interno di un progetto.
+Rappresenta un ticket dell'issue tracking system di GitHub.
 
 == ITS // {Issue Tracking System}
 Acronimo di _Issues Tracking System_, è uno strumento che gestisce e mantiene una lista di Issues, spesso usato per progetti in team.
@@ -260,7 +262,7 @@ Acronimo di _Product Baseline_. Baseline il cui oggetto centrale è il MVP (Mini
 Il piano di progetto è un documento che descrive gli obiettivi, le risorse, i tempi e le attività previste per un progetto. Include anche la gestione dei rischi, la pianificazione delle fasi e l'assegnazione delle responsabilità.
 
 == Piano di qualifica // {PdQ}
-Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi.
+Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi. Nel documento è presente anche il cruscotto di qualità attraverso il quale si tiene traccia dell'andamento del progetto e si valutano le performance.
 
 == PoC // {Proof of Concept}
 Acronimo di _Proof of Concept_. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.
@@ -274,16 +276,16 @@ Processi che definiscono quali attività svolgere per attuare, in modo efficient
 == Progetto // {Progetti}
 Insieme di attività che devono raggiungere determinati obiettivi a partire da determinate specifiche, con una data di inizio e una data di fine fissate, con risorse limitate che si consumano nello svolgersi.
 
-== PV // {Planned Value}
-Acronimo di _Planned Value_. É una metrica che misura il valore del lavoro che, secondo la pianificazione, dovrebbe essere completato in un determinato momento.#linebreak()
-Si calcola come: $"PV" &= "(Percentuale di completamento pianificata)" dot "("#link(<BAC>)[BAC]")" $
-<PV>.
-
 == Pull request // {PR}
 Nel contesto di un repository di versionamento distribuito, è un modo per notificare ai membri del team che è stata completata una funzionalità in un branch di feature e che si può effettuare il merge nel branch main, con previa verifica.
 
 == Push
 Push è l'operazione che consente di inviare le modifiche locali (commit) a un repository remoto su GitHub o un altro server Git. Permette di aggiornare il codice condiviso con gli altri membri del team.
+
+== PV // {Planned Value}
+<PV>
+Acronimo di _Planned Value_. É una metrica che misura il valore del lavoro che, secondo la pianificazione, dovrebbe essere completato in un determinato momento.#linebreak()
+Si calcola come: $"PV" &= "(Percentuale di completamento pianificata)" dot "("#link(<BAC>)[BAC]")" $.
 
 == Python
 Linguaggio ad alto livello orientato agli oggetti, apprezzato per la sua semplicità e flessibilità.
@@ -312,14 +314,14 @@ Luogo in cui vengono salvati i prodotti creati. Costituisce una fonte di condivi
 == Requisito // {Requisiti}
 La capacità necessaria a un utente per raggiungere un obiettivo (lato bisogno/requisiti utente) o la capacità necessaria a un sistema per rispondere a una aspettativa (lato soluzione/requisiti software).
 
-== RSI // {Requirements Stability Index}
-Acronimo di _Requirements Stability Index_. É un indice che misura la stabilità dei requisiti durante il ciclo di vita del progetto. Indica quindi quanto i requisiti cambiano nel tempo. Un valore alto indica che i requisiti cambiano frequentemente e costituisce un segnale d'allarme.#linebreak()Si calcola come  $ "RSI" &= "Numero di requisiti modificati" / "Numero totale di requisiti"$.
-
 == Responsabile
 Persona che ha il compito di coordinare le attività di gruppo, l'elaborazione di piani e scadenze, e approva il rilascio di prodotti parziali o finali (software/documentazione).
 
 == Retrospettiva // {Retrospective}
 Attività che si svolge al termine di uno sprint, in cui il team riflette sul lavoro svolto, individua i punti di forza e debolezza e propone azioni di miglioramento per lo sprint successivo.
+
+== RSI // {Requirements Stability Index}
+Acronimo di _Requirements Stability Index_. É un indice che misura la stabilità dei requisiti durante il ciclo di vita del progetto. Indica quindi quanto i requisiti cambiano nel tempo. Un valore alto indica che i requisiti cambiano frequentemente e costituisce un segnale d'allarme.#linebreak()Si calcola come  $ "RSI" &= "Numero di requisiti modificati" / "Numero totale di requisiti"$.
 
 == RTB // {Requirements and Technology Baseline}
 Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto principale sono i requisiti e l'adeguatezza delle tecnologie, valutata tramite il PoC. I requisiti sono concordati con il proponente e raccolti nel documento Analisi dei Requisiti. Una tecnologia è considerata adeguata se permette di raggiungere l'obiettivo per cui è stata scelta e se è integrabile con le altre.
@@ -329,14 +331,13 @@ Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto prin
 Framework di sviluppo agile che suddivide il lavoro in cicli iterativi chiamati sprint e permette l'adattamento rapido ai cambiamenti attraverso feedback regolari.
 
 == SPI // {Schedule Performance Index}
+<SPI> 
 Acronimo di _Schedule Performance Index_. É un indice che offre una misura relativa dell'efficienza del progetto, mettendo in relazione il lavoro completato con quello pianificato.#linebreak()
 Si calcola come: $ "SPI" &= #link(<EV>)[EV] / #link(<PV>)[PV] $#linebreak()
 Si ha che:
 - Se SPI > 1 il progetto sta avanzando più velocemente rispetto a quanto pianificato;
 - Se SPI = 1 il progetto sta avanzando esattamente come pianificato;
 - Se SPI < 1 il progetto sta avanzando più lentamente rispetto a quanto pianificato.
-
-<SPI>
 
 == Sprint
 Periodo di tempo prefissato, di durata massima di un mese, in cui il team sviluppa un piccolo incremento di prodotto finale.
@@ -349,13 +350,13 @@ Persona o gruppo di persone che hanno interesse nel progetto, e lo influenzano o
 
 
 == SV // {Schedule Variance}
+<SV>
 Acronimo di _Schedule Variance_. Metrica che misura quanto il valore del lavoro completato si discosta da quanto pianificato. Indica se il progetto è in anticipo, in ritardo o in linea rispetto alla pianificazione.#linebreak()
 Si calcola come: $ "SV" &= #link(<EV>)[EV] - #link(<PV>)[PV] $#linebreak()
 Si ha quindi che:
 - Se SV > 0 il progetto è in anticipo rispetto alla pianificazione;
 - Se SV = 0 il progetto è in linea con la pianificazione;
 - Se SV < 0 il progetto è in ritardo rispetto alla pianificazione.
-<SV>
 
 == Swagger
 Insieme di strumenti che permette di documentare le API contestualmente alla loro definizione nel codice e testarle usando una interfaccia web.
@@ -419,6 +420,7 @@ Si occupa di accertare che lo svolgimento delle attività di sviluppo non introd
 Insieme di regole e pratiche che stabiliscono come devono avvenire i processi del progetto.
 
 == Workflow
+Il Workflow è un elemento strettamente collegato con il capitolato del progetto.
 Serie di attività orchestrate e ripetibili, eseguite in sequenza o in parallelo, con lo scopo di raggiungere un obiettivo specifico.
 
 = X
