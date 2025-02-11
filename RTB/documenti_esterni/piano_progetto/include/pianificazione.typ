@@ -6,7 +6,7 @@
 Abbiamo deciso di svolgere il progetto adottando il modello Agile, nello specifico il framework #glossario[Scrum].
 Scrum ha dei vantaggi che riteniamo molto comodi, come:
 1. La gestione del progetto diventa flessibile, visto che si adatta molto bene ai cambiamenti nei requisiti, grazie ai brevi cicli di lavoro chiamati sprint;
-2. Trasparenza riguardo l'avanzamento del progetto, tramite comunicazioni frequenti attraverso i daily stand-up meeting e le retrospettive a fine sprint;
+2. Trasparenza riguardo l'avanzamento del progetto, tramite comunicazioni frequenti attraverso i #glossario[daily stand-up meeting] e le retrospettive a fine sprint;
 3. Miglioramento continuo, tramite le retrospettive ad ogni sprint. Questo permetterà con il passare del tempo di essere più efficienti.
 
 == Gestione delle comunicazioni
@@ -31,7 +31,7 @@ Il server è suddiviso in canali testuali e canali vocali:
    + proponente, riguandante i dubbi da discutere con il proponente.
 + Vari canali vocali, per svolgere meeting e lavorare in gruppo.
 
-Oltre ai canali di comunicazione interni abbiamo un canale Slack in cui sono presenti vari membri dell'azienda proponente. Questo canale viene usato per fissare incontri, comunicazioni veloci e aiuti riguardo il progetto.
+Oltre ai canali di comunicazione interni abbiamo un canale #glossario[Slack] in cui sono presenti vari membri dell'azienda proponente. Questo canale viene usato per fissare incontri, comunicazioni veloci e aiuti riguardo il progetto.
 
 == Suddivisione delle attività
 
