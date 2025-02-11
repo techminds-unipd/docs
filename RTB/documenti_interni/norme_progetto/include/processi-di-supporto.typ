@@ -35,7 +35,10 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
 - Figure: ogni figura deve essere dotata di caption che ne spieghi brevemente il contenuto;
 - Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto;
-- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento.
+- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento;
+- Link: quando un link viene inserito come risorsa da consultare, deve essere indicata la data dell'ultima volta in cui la risorsa è stata visitata (nel formato [visitato il: dd/mm/aaaa]). Se invece un link porta ad un documento con ciclo di vita, è necessario inserirne la versione (nel formato [versione X.Y.Z]). Per i link relativi alle #glossario[issue] non vale quanto appena descritto. I link possono essere scritti:
+  - per esteso: il link deve essere cliccabile e portare alla risorsa;
+  - come testo cliccabile: deve essere aggiunta una footnote con il link per esteso.
 
 ==== Struttura dei documenti
 L'impaginazione e la struttura generale dei documenti è descritta nel file #raw("template.typ"). \ Tutti i documenti sono sempre divisi in almeno queste parti:
@@ -66,6 +69,9 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
 - Scelte tipografiche specifiche dei verbali:
   - gli elenchi e le liste possono non terminare col punto e virgola;
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
+
+=== Sito web
+Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle GitHub Action. Ogni volta che avviene un cambiamento nel branch main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
 
 == Gestione della configurazione
 === Caratteristiche e finalità
@@ -117,7 +123,7 @@ Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le
 - Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
 
 === PDCA
-Il ciclo PDCA, noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
+Il ciclo #glossario[PDCA], noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
 
 1. *Plan*: in questa fase si definiscono le attività necessarie per identificare quali processi avviare e in quale ordine, con l’obiettivo di raggiungere risultati specifici. Si stabiliscono obiettivi di miglioramento chiari e si progettano le azioni da intraprendere. Non riguarda pianificazione di progetto, ma bensì pianificazione di miglioramento;
 2. *Do*: si passa all’azione, mettendo in pratica quanto pianificato. Durante l’esecuzione si raccolgono dati e si monitorano i risultati per valutare l’efficacia delle attività svolte. Non è sviluppo, ma dispiegamento (esplorativo) di azioni di miglioramento;
@@ -211,6 +217,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
 A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
+Gli script in questione si occupano di controllare che le parole da glossario siano ben indicate nei documenti e che tutti i documenti ottengano il punteggio accettabile per l'indice di Gulpease.
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
