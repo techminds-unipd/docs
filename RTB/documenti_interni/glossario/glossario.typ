@@ -341,7 +341,7 @@ Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto prin
 Framework di sviluppo agile che suddivide il lavoro in cicli iterativi chiamati sprint e permette l'adattamento rapido ai cambiamenti attraverso feedback regolari.
 
 == Slack
-Piattaforma di messaggistica istantanea utilizzata dal team per la maggiorparte delle comunicazioni con l'azienda proponente.
+Piattaforma di messaggistica istantanea utilizzata dal team per la maggior parte delle comunicazioni con l'azienda proponente.
 
 == SPI // {Schedule Performance Index}
 <SPI> 
