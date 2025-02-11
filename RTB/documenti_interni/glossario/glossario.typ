@@ -121,7 +121,7 @@ Si ha quindi che:
 
 = D
 == Daily stand-up meeting
-Riunione giornaliera in cui i membri del team possono lavorare insieme, esponendo le difficoltà incontrate e proponendo possibili soluzioni.
+Riunione giornaliera in cui i membri del team si tengono aggiornati riguardo il lavoro svolto e da svolgere, esponendo le difficoltà incontrate e proponendo possibili soluzioni.
 La continua comunicazione tra i membri del team permette di mantenere alta la produttività e di risolvere velocemente eventuali problemi.
 
 == Diagramma di Gantt // {Diagrammi di Gantt}
