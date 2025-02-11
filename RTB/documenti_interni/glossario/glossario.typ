@@ -51,7 +51,7 @@ L'analisi dei rischi è un processo che identifica, valuta e pianifica i rischi 
 Acronimo di _Application Programming Interface_, è un insieme di procedure atte a consentire la comunicazione tra diversi software o tra diversi componenti di software.
 
 == Arco // {Archi}
-L'arco è un elemento specifico richiesto nel capitolato del progetto.
+L'arco è un elemento specifico richiesto nel capitolato.
 Rappresenta il collegamento tra due blocchi. Sopra di esso viene inserita una descrizione in linguaggio naturale che indica l'automazione che l'utente desidera sia compiuta.
 
 == Attore // {Attori}
