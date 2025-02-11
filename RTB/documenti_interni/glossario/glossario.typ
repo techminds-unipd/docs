@@ -78,7 +78,7 @@ Versione di un prodotto corrispondente ad obiettivi di raggiungimento, spesso fi
 Bedrock è un servizio di AWS che rende disponibili modelli di intelligenza artificiale tramite un sistema unificato.
 
 == Blocco // {Blocchi}
-Un blocco è una componente la cui presenza è necessaria nel nostro capitolato e che rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
+Un blocco è un elemento specifico richiesto nel capitolato. Rappresenta un elemento che può essere trascinato e posizionato all'interno di un'area di lavoro (interfaccia drag and drop). Ogni blocco è collegato a un servizio esterno.
 
 == Branch
 Un branch è una ramificazione del codice sorgente. Permette di lavorare su una copia separata del progetto senza influenzare il ramo principale. I rami sono utilizzati per sviluppare nuove funzionalità, correggere bug, o sperimentare senza compromettere il resto del codice.
