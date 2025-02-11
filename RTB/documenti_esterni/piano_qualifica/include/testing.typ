@@ -43,7 +43,7 @@ Accertano la correttezza del codice a livello più basso, garantendo che ogni si
 
 
 == Test di sistema
-In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare come l'esecuzione del sistema soddisfi i requisiti funzionali individuati durante la fase di analisi (vedi #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")).
+In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare come l'esecuzione del sistema soddisfi i requisiti funzionali individuati durante la fase di analisi (vedi #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf") [versione 1.0.0]).
 
 #figure(
   table(
@@ -59,19 +59,39 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     [FMR1],
     [NI],
     [TS2],
+    [Verificare che venga visualizzato un messaggio di errore se l'utente inserisce credenziali non valide per effettuare il login.],
+    [FMR1],
+    [NI],
+    [TS3],
     [Verificare che l'utente possa effettuare il login con Google.],
     [FOR1],
     [NI],
-    [TS3],
+    [TS4],
     [Verificare che l'utente possa registrarsi.],
     [FMR2],
     [NI],
-    [TS4],
-    [Verificare che l'utente autenticato possa associare e dissociare un account Google da utilizzare per i servizi offerti dai #glossario[blocchi] dei workflow.],
+    [TS5],
+    [Verificare che venga visualizzato un messaggio di errore se l'utente inserisce credenziali non valide per registrarsi.],
+    [FMR2],
+    [NI],
+    [TS6],
+    [Verificare che l'utente autenticato possa associare un account Google da utilizzare per i servizi offerti dai #glossario[blocchi] dei workflow.],
     [FMR3],
     [NI],
-    [TS5],
+    [TS7],
+    [Verificare che l'utente autenticato possa dissociare un account Google da utilizzare per i servizi offerti dai #glossario[blocchi] dei workflow.],
+    [FMR3],
+    [NI],
+    [TS8],
     [Verificare che l'utente autenticato possa eseguire un workflow.],
+    [FMR4],
+    [NI],
+    [TS9],
+    [Verificare che venga visualizzato un messaggio di errore se l'utente esegue un workflow non valido.],
+    [FMR4],
+    [NI],
+    [TS10],
+    [Verificare che venga visualizzato un messaggio di errore se l'agente non riesce a completare l'operazione.],
     [FMR4],
     [NI],
   ), 
