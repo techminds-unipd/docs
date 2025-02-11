@@ -89,7 +89,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     indent: 10pt,
     [è possibile rompere le convenzioni interne quando potrebbe agevolare o velocizzare i lavori. Ad esempio, sarà permesso creare un branch per l'analisi dei requisiti da usare come padre per i branch di feature dell'analisi, rompendo la convenzione del GitHub Flow che obbliga ad avere tutti i branch che derivano dal main;],
     [per approfondire i casi d'uso si userà ad esempio il frontend come attore e il backend come sistema, in modo da non andare in conflitto con la definizione di attore (nel caso in cui il sistema non fosse circoscritto/limitato al backend, l'attore frontend risulterebbe parte di esso e quindi non più attore);],
-    [nei sotto-casi d'uso, ovvero quelli inclusi in altri con la clausola UML #sym.angle.l.double include #sym.angle.r.double, l'attore principale sarà lo stesso del caso d'uso "padre";],
+    [nei sotto-casi d'uso, ovvero quelli inclusi in altri con la clausola UML \<\<include\>\> l'attore principale sarà lo stesso del caso d'uso \"padre\";],
     [nelle estensioni di un caso d'uso e nei sotto-casi d'uso non si ripetono le azioni avvenute nello use case da cui derivano, ma piuttosto si indicano con un link all'azione;],
     [verrà creata una checklist con i vari controlli da svolgere nei documenti per agevolare le attività dei verificatori, dal momento che la verifica è risultata essere molto onerosa per le tante convenzioni interne adottate;],
     [si cercherà di automatizzare il controllo dei termini del glossario presenti nei vari documenti, visto che verificare che i termini siano correttamente indicati richiede una quantità di tempo molto onerosa.]
