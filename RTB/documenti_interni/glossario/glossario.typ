@@ -120,6 +120,9 @@ Si ha quindi che:
 
 
 = D
+== Daily stand-up meeting
+Riunione giornaliera in cui i membri del team possono lavorare insieme, esponendo le difficoltà incontrate e proponendo possibili soluzioni.
+La continua comunicazione tra i membri del team permette di mantenere alta la produttività e di risolvere velocemente eventuali problemi.
 
 == Diagramma di Gantt // {Diagrammi di Gantt}
 Strumento a supporto della gestione dei progetti, costituito da barre orizzontali di lunghezza variabile che rappresentano le sequenze, la durata e l'arco temporale di ogni singola attività del progetto.
@@ -195,7 +198,7 @@ Elenco organizzato di termini tecnici, acronimi e definizioni utilizzati nel con
 Indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto agli altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anzichè in sillabe, semplificandone il calcolo automatico.
                  #linebreak()La formula per il calcolo è $89 + (300("n_frasi") -10("n_lettere"))/"n_parole"$.
 
-== Integrazione continua // {Continous Integration}
+== Integrazione continua // {Continous Integration} {CI}
 Spesso indicata con CI (dall'inglese _Continuous Integration_), è una pratica di sviluppo in cui è presente un meccanismo di Build Automation e dove il team integra frequentemente le modifiche.
 
 == Intelligenza Artificiale // {AI}
@@ -258,6 +261,9 @@ Piccolo aggiornamento, spesso utilizzato per indicare la risoluzione di un bug o
 == PB // {Product Baseline}
 Acronimo di _Product Baseline_. Baseline il cui oggetto centrale è il MVP (Minimum Viable Product).
 
+== PDCA // {Plan-Do-Check-Act}
+Acronimo di _Plan-Do-Check-Act_. É un metodo di gestione iterativo per il controllo e il miglioramento continuo dei processi e dei prodotti.
+
 == Piano di progetto // {PdQ}
 Il piano di progetto è un documento che descrive gli obiettivi, le risorse, i tempi e le attività previste per un progetto. Include anche la gestione dei rischi, la pianificazione delle fasi e l'assegnazione delle responsabilità.
 
@@ -266,6 +272,10 @@ Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualit�
 
 == PoC // {Proof of Concept}
 Acronimo di _Proof of Concept_. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.
+
+== PodMan
+Podman è un tool per la gestione di container simile a Docker.
+Permette di creare ambienti isolati di esecuzione chiamati container con un uso meno estensivo di risorse rispetto ad una macchina virtuale.
 
 == Processo // {Processi}
 Insieme di attività correlate e coese che, consumando risorse, trasformano ingressi (bisogni) in uscite (prodotti). Ogni processo deve svolgersi secondo le indicazioni fornite dalle Norme di Progetto.
@@ -329,6 +339,9 @@ Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto prin
 = S
 == Scrum
 Framework di sviluppo agile che suddivide il lavoro in cicli iterativi chiamati sprint e permette l'adattamento rapido ai cambiamenti attraverso feedback regolari.
+
+== Slack
+Piattaforma di messaggistica istantanea utilizzata dal team per la maggiorparte delle comunicazioni con l'azienda proponente.
 
 == SPI // {Schedule Performance Index}
 <SPI> 
