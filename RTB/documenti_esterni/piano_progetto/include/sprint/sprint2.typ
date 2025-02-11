@@ -75,7 +75,7 @@ timeliney.timeline(
     taskgroup(title: [*PoC*], {
         task("Inizio implementazione frontend workflow", (from: 3, to: 10, style: (stroke: 8pt + gray)), (from: 3, to:10, style: (stroke: 2pt + red)))
         task("Inizio implementazione backend", (from: 1, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 8, style: (stroke: 2pt + red)))
-        task("Inizio implementazione agenti nel backend (non completata)", (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task(align(center, [Inizio implementazione agenti #linebreak() nel backend (non completata)]), (from: 4, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
       })
       taskgroup(title: [*Autoformazione*], {
         task("Typescript", (from: 0, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 6, style: (stroke: 2pt + red)))
@@ -94,10 +94,10 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Piano di progetto*], {
-        task("Aggiornare piano di progetto [sezione sprint 1]", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task(align(center, [Aggiornare piano di #linebreak() progetto [sezione sprint 1]]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
         task("Aggiungere info sprint 2", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
         task("Sistemare il paragrafo spiegazioni", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-        task("Redigere 'Pianificazione' in piano di progetto", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere 'Pianificazione' #linebreak() in piano di progetto]), (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Piano di qualifica*], {
@@ -106,8 +106,8 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Norme di progetto*], {
-        task("Redigere Processi primari in norme di progetto", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-        task("Redigere Processi organizzativi in norme di progetto", (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere Processi primari #linebreak() in norme di progetto]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere Processi organizzativi #linebreak() in norme di progetto]), (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Automazione*], {
