@@ -107,7 +107,6 @@ Ha quindi il compito di:
 ==== Strumenti e tecnologie
 Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e le seguenti tecnologie:
 - #link("https://github.com/orgs/techminds-unipd/projects/1", "GitHub Board") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1")) \[visitato il: 10/02/2025\] per le attività di pianificazione;
-- #link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap", "GitHub Roadmap") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap")) \[visitato il: 10/02/2025\]: per il controllo delle attività previste per ogni periodo;
 - Typst: per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
@@ -218,10 +217,8 @@ Di seguito descriviamo il ciclo di vita di una issue:
 5. I verificatori seguono la procedura di verifica;
 6. Se e quando l'esito della verifica è positivo, la issue viene ufficialmente spostata nella colonna "Done" della dashboard.
 
-==== Board e roadmap <dashboard>
-Riteniamo che board e roadmap siano degli stumenti molto validi come supporto all'organizzazione delle attività:
-- Board: è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate e intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
-- Roadmap: pianificazione ad alto livello che descrive gli obiettivi strategici del progetto, le funzionalità principali e le scadenze chiave. Tale strumento ci torna utile perchè allinea il team verso un obiettivo comune, definendo l'importanza di ogni attività per ogni sprint. 
+==== Board <dashboard>
+Board è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate e intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo;
 
 Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub Projects, in particolare:
 - GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1
@@ -234,13 +231,14 @@ Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di 
   - Done: raccoglie le issue terminate.
   Ogni membro del gruppo è tenuto a controllare frequentemente la dashboard per avere una panoramica della situazione dello sprint e a gestire le attività che ha preso in carico;
 
-- GitHub Roadmap: https://github.com/orgs/techminds-unipd/projects/1/views/1?layout=roadmap
-
-  In questo caso ogni issue viene collocata secondo un principio temporale. Una volta presa in carico e una volta terminata, l'assegnatario aggiorna le date date di inizio, di completamento stimato e di fine per consentire una comprensione chiara delle tempistiche delle attività. Finito ogni sprint il responsabile, partendo da questa roadmap, va a creare il diagramma di Gantt in Typst e lo inserisce nel piano di progetto.
+==== Diagrammi di Gantt
+Per pianificare le attività di ogni sprint utilizziamo dei diagrammi di Gantt generati in Typst con la libreria timeliney. Il diagramma ha una riga per ogni issue dello sprint con relativa linea del tempo di fianco che indica con dei colori i tempi preventivati ed effettivi dell'attività.
+Per ottenere i tempi effettivi di una issue abbiamo uno script Python che, utilizzando le API di GitHub, recupera la data di inizio della prima commit associata alla issue e la data di chiusura della Pull Request ad essa associata.
+Queste due date precedentemente citate corrispondono alla data di inizio e di fine della issue, che pur non essendo sempre esatte sono una buona approssimazione della realtà.
 
 ==== Strumenti e tecnologie
 Per la gestione dell'organizzazione delle attività ci siamo dotati dei seguenti strumenti/tecnologie:
-- Ambiente GitHub: GitHub Projects, GitHub Boards, GitHub Roadmap.
+- Ambiente GitHub: GitHub Projects, GitHub Boards.
 
 == Gestione delle infrastrutture
 La gestione delle infrastrutture ha lo scopo di stabilire e mantenere l'infrastruttura a supporo di qualsiasi altro processo. L'infrastruttura può includere: hardware, software, strumenti, tecniche, standard e strutture per lo sviluppo, il funzionamento o la manutenzione.
@@ -255,7 +253,7 @@ Secondo lo standard ISO/IEC 12207:1995 questo processo è formato dalle seguenti
 In questa sezione approfondiamo le tecnologie e gli strumenti che formano la nostra architettura a supporto dei processi organizzativi.
 
 Elenco di tecnologie e strumenti:
-- GitHub e strumenti annessi: piattaforma per il versionamento del codice, gestione di repository Git, gestione di un project attraverso GitHub Board e GitHub Roadmap;
+- GitHub e strumenti annessi: piattaforma per il versionamento del codice, gestione di repository Git e gestione di un project attraverso GitHub Board;
 - Telegram: app di messaggistica istantanea per chat di gruppo interne;
 - Discord: piattaforma di comunicazione con chat vocali e testuali per scopi interni al gruppo;
 - Ambiente condiviso di Google: suite collaborativa online per editing e condivisione di documenti in tempo reale;
