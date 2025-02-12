@@ -19,6 +19,8 @@ jobs:
       run: python .github/workflows/check_glossario.py
     - name: Indice di Gulpease
       run: python .github/workflows/indice_gulpease.py
+    - name: Check ordinamento glossario
+      run: python .github/workflows/ordinamento_glossario.py
     - name: Build sources
       run: python .github/workflows/build_sources.py
     - name: Build html
