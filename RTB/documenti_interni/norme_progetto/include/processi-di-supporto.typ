@@ -217,7 +217,10 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
 A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
-Gli script in questione si occupano di controllare che le parole da glossario siano ben indicate nei documenti e che tutti i documenti ottengano il punteggio accettabile per l'indice di Gulpease.
+Gli script in questione si occupano di controllare:
+- che le parole da glossario siano ben indicate nei documenti;
+- che tutti i documenti ottengano il punteggio accettabile per l'indice di Gulpease;
+- che le parole presenti nel glossario siano in ordine alfabetico.
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
