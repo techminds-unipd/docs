@@ -3,13 +3,7 @@
 #import fletcher.shapes: ellipse, rect
 #import "@preview/cetz:0.3.0"
 #import cetz.draw
-
-#let empty-dash = (
-    inherit: "}>",
-    size: 10,
-    fill: none,
-    stealth: 0
-)
+#import "/RTB/documenti_esterni/analisi_requisiti/include/use_cases.typ": empty-dash, uc_comment
 
 = Processi primari
 Un progetto è definito tale se e solo se in esso sono attivi processi primari. 
@@ -22,7 +16,7 @@ Lo standard, all'interno dei processi primari, definisce 5 categorie:
 3. Sviluppo;
 4. Gestione operativa;
 5. Manutenzione.
-I processi di acquisizione e manutenzione non saranno descritti a causa della natura di questo progetto.
+I processi di acquisizione, manutenzione e gestione operativa non saranno descritti a causa della natura di questo progetto.
 
 == Fornitura
 === Scopo 
@@ -84,7 +78,7 @@ L'attività di analisi dei requisiti è fondamentale per:
 - La corretta comprensione delle esigenze del proponente;
 - Identificare, documentare e validare i requisiti funzionali e non funzionali;
 - Evitare il rischio che il prodotto software non converga mai verso le aspettative del proponente;
-- Facilitare la compresione dei requisiti a tutti gli #glossario[stakeholder] ;
+- Facilitare la compresione dei requisiti a tutti gli #glossario[stakeholder]#h(1pt)\;
 - Garantire che la progettazione riceva dei requisiti chiari e semplici da comprendere.
 
 In questa fase il nostro compito è quindi quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
@@ -222,7 +216,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
 
         node((3,0.5), align(center)[UC.b Nome], name: <euc>),
 
-        node((2.3,1), align(center)[Condizione di estensione], name: <cond>, shape: rect),
+        node((2.3,1), align(center)[Condizione di estensione], name: <cond>, shape: uc_comment),
 
         node((2.3, 0.5), align(center)[], name: <coll>, width: 1pt, height: 1pt),
         edge(<coll>, <cond>, "--"),
@@ -272,7 +266,7 @@ Ogni requisito è costituito da:
 
 #h(3%)"Importanza" corrisponde a:
 
-#list(["M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder] ;],["D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile;],["O", optional, requisito opzionale, relativamente utile e contrattabile anche quando il progetto è in uno stato avanzato;],indent: 2.5em)
+#list(["M", mandatory, requisito obbligatorio, irrinunciabile per qualcuno degli #glossario[stakeholder]#h(1pt)\;],["D", desirable, requisito desiderabile, non strettamente necessario ma a valore aggiunto riconoscibile;],["O", optional, requisito opzionale, relativamente utile e contrattabile anche quando il progetto è in uno stato avanzato;],indent: 2.5em)
 #h(3%)"N" è un numero progressivo (es. QMR2 indica un requisito di qualità obbligatorio numero 2);
 
 2. Descrizione: una breve descrizione del requisito;

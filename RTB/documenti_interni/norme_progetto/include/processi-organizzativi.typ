@@ -66,7 +66,7 @@ In particolare:
     - definisce i tempi e i costi;
     - redige piani dettagliati da inserire nel piano di progetto.
 - Verifica la fattibilità del piano proposto;
-- Gestisce le relazioni con gli altri #glossario[stakeholder] ;
+- Gestisce le relazioni con gli altri #glossario[stakeholder]#h(1pt)\;
 - Controlla i progressi del progetto;
 - Gestisce il bilancio.
 
@@ -92,7 +92,7 @@ Partendo dal lavoro dell'analista effettua scelte progettuali per definire il "c
 Scrive il codice software con l'obiettivo che esso rispecchi i requisiti individuati con l'analisi e le specifiche fornite dai progettisti. 
 
 Il codice scritto deve:
-- Contenere gli strumenti per la verifica e la #glossario[validazione] ;
+- Contenere gli strumenti per la verifica e la #glossario[validazione]\;
 - Rispecchiare l'architettura ideata dai progettisti;
 - Essere conforme ai requisiti di qualità stabiliti.
 
