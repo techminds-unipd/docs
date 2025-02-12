@@ -78,7 +78,7 @@ L'attività di analisi dei requisiti è fondamentale per:
 - La corretta comprensione delle esigenze del proponente;
 - Identificare, documentare e validare i requisiti funzionali e non funzionali;
 - Evitare il rischio che il prodotto software non converga mai verso le aspettative del proponente;
-- Facilitare la compresione dei requisiti a tutti gli #glossario[stakeholder]#h(1pt)\;
+- Facilitare la comprensione dei requisiti a tutti gli #glossario[stakeholder]#h(1pt)\;
 - Garantire che la progettazione riceva dei requisiti chiari e semplici da comprendere.
 
 In questa fase il nostro compito è quindi quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
