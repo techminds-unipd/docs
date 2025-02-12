@@ -108,19 +108,13 @@
                 quanto del lavoro svolto
                 durante lo sviluppo corrisponda ai requisiti essenziali o obbligatori
                 definiti in fase di analisi
-                dei requisit],
+                dei requisiti.],
                 [100%],
                 [100%]))
 
     MFUN.push(  ("MFUN" + str(MFUN.len()+1),
                 [Percentuale di requisiti desiderabili soddisfatti],
-                [Metrica usata per valutare quanti di quei
-                requisiti, che se integrati arricchirebbero
-                l’esperienza dell’utente
-                o fornirebbero vantaggi
-                aggiuntivi non strettamente necessari, sono
-                stati implementati o
-                soddisfatti nel prodotto],
+                [Metrica usata per valutare quanti requisiti opzionali, che potrebbero migliorare l'esperienza dell'utente o offrire vantaggi aggiuntivi non strettamente necessari, sono stati effettivamente implementati nel prodotto.],
                 [\u{2A7E}0%],
                 [100%]))
 
@@ -130,7 +124,7 @@
                 quanti dei requisiti aggiuntivi, non essenziali o
                 di bassa priorità, sono
                 stati implementati o
-                soddisfatti nel prodotto],
+                soddisfatti nel prodotto.],
                 [\u{2A7E}0%],
                 [100%]))
 
@@ -145,7 +139,7 @@
                 [Misura la leggibilità di
                 un testo in base alla
                 lunghezza delle parole
-                e delle frasi],
+                e delle frasi.],
                 [40],
                 [70]))
 
@@ -161,7 +155,7 @@
                 [Misura della dipendenza
                 e dell’interconnessione
                 tra le classi all’interno di
-                un sistema software],
+                un sistema software.],
                 [\u{2A7D}9],
                 [\u{2A7D}6]))
 
@@ -196,7 +190,7 @@
                 [Profondità della gerarchie],
                 [Metrica che misura il
                 numero di livelli tra una
-                classe base (superclasse) e le sue sottoclassi (classi derivate)],
+                classe base (superclasse) e le sue sottoclassi (classi derivate).],
                 [\u{2A7D}5],
                 [\u{2A7D}3]))
 
@@ -208,7 +202,7 @@
 
     MEFF.push(  ("MEFF" + str(MEFF.len()+1),
                 [Tempo medio di esecuzione di un workflow],
-                [Misura il tempo medio di esecuzione di un workflow],
+                [Misura il tempo medio di esecuzione di un workflow.],
                 [\u{2A7D}20 secondi (tempo timeout)],
                 [\u{2A7D}10 secondi]))
 
@@ -220,7 +214,7 @@
 
     MUSA.push(  ("MUSA" + str(MUSA.len()+1),
                 [Click per utilizzare una funzionalità],
-                [Metrica che misura il numero di click minimo necessari per poter utilizzare una funzionalità.],
+                [Metrica che misura il numero di click minimi necessari per poter utilizzare una funzionalità.],
                 [⩽7 click],
                 [⩽5 click]))
 

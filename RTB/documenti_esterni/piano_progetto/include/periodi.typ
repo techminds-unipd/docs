@@ -38,7 +38,7 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 - *Durata*: le date di inizio e fine dello sprint;
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
 - *Ruoli*: elenca i ruoli assegnati ai membri del team in quel determinato sprint;
-- *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub] ;
+- *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]\;
 - #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore grigio) e il tempo effettivamente impiegato (colore rosso) per completare ogni issue;
 - *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso;
 - #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
@@ -59,9 +59,15 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 - Svolgere attività preparatorie per un avvio più rapido del primo sprint.
 
 #include "sprint/sprint1.typ"
+#pagebreak()
 #include "sprint/sprint2.typ"
+#pagebreak()
 #include "sprint/sprint3.typ"
+#pagebreak()
 #include "sprint/sprint4.typ"
+#pagebreak()
+#include "sprint/sprint5.typ"
+#pagebreak()
 
 === Preventivo a Finire
 Avvicinandosi alla prima revisione RTB, è stato subito chiaro che la ripartizione delle ore svolta in precedenza non risultava del tutto corretta. In particolare per i ruoli di responsabile, amministratore e analista abbiamo notato una forte discrepanza tra quanto previsto e quanto effettivamente necessario. La pianificazione errata era prevedibile data l'inesperienza del team. Con una più attenta analisi delle ore e di conseguenza dei costi consumati durante i vari periodi, abbiamo deciso di ridistribuire nuovamente il carico orario:

@@ -26,7 +26,7 @@ I processi di acquisizione e manutenzione non saranno descritti a causa della na
 
 == Fornitura
 === Scopo 
-Il processo primario di fornitura è focalizzato sulle attività che coinvolgono noi e il proponente durante la fornitura del prodotto software, oltre alle attività sono presenti le risorse necessarie per completare il progetto con successo.
+Il processo primario di fornitura è focalizzato sulle attività che coinvolgono noi e il proponente durante la fornitura del prodotto software e sulle risorse necessarie per completare il progetto con successo.
 
 Questa sezione elenca tutte le regole che dobbiamo seguire e rispettare per mantenere una relazione efficace e trasparente con il proponente e i committenti durante l'intero progetto.
 
@@ -37,7 +37,7 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di fornitura 
 1. Avvio: eseguiamo una revisione dei requisiti studiando a fondo i capitolati, decidendo poi di fare una proposta per un determinato capitolato;
 2. Preparazione della risposta: definiamo e prepariamo la proposta, una sorta di "risposta alla richiesta avanzata";
 3. Contrattazione: accordo sui requisiti e consegna del progetto;
-4. Pianificazione: revisioniamo i requisiti di acquisizione per definire il quadro per la gestione del progetto e per assicurare la #glossario[qualità] del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
+4. Pianificazione: revisioniamo i requisiti di acquisizione per definire la gestione del progetto e per assicurare la #glossario[qualità] del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
 5. Esecuzione e controllo: implementiamo il piano di gestione del progetto, controllando i progressi e la qualità del prodotto software e della relativa documentazione durante tutte le fasi del progetto;
 6. Revisione e valutazione: effettuiamo #glossario[verifiche] periodiche per dimostrare che i prodotti software e i processi soddisfino pienamente i requisiti individuati; 
 7. Consegna e completamento: consegniamo il prodotto software al proponente secondo quanto accordato in precedenza.
@@ -65,8 +65,8 @@ La documentazione che forniamo al proponente e al committente è la seguente:
 A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
 - Canva per la realizzazione dei diari di bordo;
 - Microsoft Teams per gli incontri esterni;
-- Slack per le comunicazioni testuali con il proponente;
-- #glossario[Typst] per la stesura della documentazione, compresi i diagrammi dei #glossario[casi d'uso], i #glossario[diagrammi di gantt] e le tabelle di bilancio.
+- #glossario[Slack] per le comunicazioni testuali con il proponente;
+- #glossario[Typst] per la stesura della documentazione, compresi i vari diagrammi (#glossario[casi d'uso], #glossario[diagrammi di gantt] ecc.) e le tabelle.
 
 == Sviluppo
 === Scopo
@@ -83,11 +83,11 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo i
 L'attività di analisi dei requisiti è fondamentale per:
 - La corretta comprensione delle esigenze del proponente;
 - Identificare, documentare e validare i requisiti funzionali e non funzionali;
-- Evitare il rischio che il prodotto software non converga mai;
-- Facilitare la compresione dei requisiti a tutti gli #glossario[stakeholder];
-- Garantire che la progettazione riceva in input dei requisiti chiari e semplici da comprendere.
+- Evitare il rischio che il prodotto software non converga mai verso le aspettative del proponente;
+- Facilitare la compresione dei requisiti a tutti gli #glossario[stakeholder] ;
+- Garantire che la progettazione riceva dei requisiti chiari e semplici da comprendere.
 
-In questa fase, quindi, il nostro compito è quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
+In questa fase il nostro compito è quindi quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
 
 In generale, l'analisi studia a fondo i bisogni, con particolare attenzione al "cosa" deve succedere nel prodotto che verrà sviluppato, ovvero alla sua struttura funzionale. I requisiti riflettono la prospettiva dell'utente nel passaggio dalla situazione senza, a quella con il prodotto. Uno dei modi più efficaci per individuare i requisiti è attraverso la scrittura dei casi d'uso.
 
@@ -279,10 +279,10 @@ Ogni requisito è costituito da:
 3. Fonti: le fonti da cui è stato identificato il requisito.
 
 ==== Strumenti e tecnologie
-In linea con la nostra filosofia "Docs as Code" (vedi @docsascode), tutti i diagrammi dei casi d'uso sono creati con Typst.
+In linea con la nostra filosofia "Docs as Code" (si veda @docsascode), tutti i diagrammi dei casi d'uso sono creati con Typst.
 
 === Progettazione
-L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi tutti gli stakeholder coinvolti nel progetto.
+L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi le esigenze di tutti gli stakeholder coinvolti nel progetto.
 
 Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona progettazione sono:
 - Tracciabilità rispetto ai requisiti dell'elemento software;
@@ -292,7 +292,7 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona prog
 - Fattibilità della progettazione dettagliata (se è realizzabile con le risorse disponibili);
 - Fattibilità delle operazioni e della manutenzione.
 
-A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura nella futura fase di implementazione.
+A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura per la futura fase di implementazione.
 
 ==== Diagrammi delle classi
 I diagrammi delle classi sono uno strumento molto utile nella fase di progettazione del software, poiché permettono di rappresentare graficamente la struttura statica del sistema, mostrando le classi che lo compongono, i loro attributi, i metodi e le relazioni tra di esse. 

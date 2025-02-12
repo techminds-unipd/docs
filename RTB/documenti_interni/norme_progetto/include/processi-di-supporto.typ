@@ -10,7 +10,7 @@ Secondo lo standard ISO/IEC 12207:1995, il processo di documentazione è un proc
 
 In particolare lo standard definisce quattro attività principali:
 + Implementazione del processo: definisce un piano per identificare i documenti da produrre durante il ciclo di vita del software e stabilisce gli aspetti che ogni documento deve contenere;
-+ Progettazione e sviluppo: definisce la struttura del documento e l'origine delle informazioni da includere al suo interno; crea e sviluppa del contenuto in base agli standard definiti;
++ Progettazione e sviluppo: definisce la struttura del documento e l'origine delle informazioni da includere al suo interno. Crea e sviluppa del contenuto in base agli standard definiti;
 + Produzione: produce e distribuisce il documento finale nel formato prestabilito; 
 + Manutenzione: aggiorna il documento nel tempo in modo che sia sempre accurato e pertinente.
 
@@ -26,7 +26,7 @@ Abbiamo scelto di usare la filosofia "Docs as code" che si prescrive di trattare
 
 ==== Tecnologie utilizzate per la documentazione
 Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
-- #glossario[Typst]: linguaggio simile a #glossario[LaTeX] ma che permette di comporre documenti in modo più semplice.
+- #glossario[Typst]: linguaggio simile a #glossario[LaTeX] ma che permette di comporre documenti in modo più semplice e intuitivo.
 
 ==== Organizzazione dei documenti
 - Nomi dei file: i file iniziano sempre con lettera minuscola o con una data del tipo yyyy-mm-dd[-info] nel caso di #glossario[verbali] (info è un campo opzionale che contiene informazioni aggiuntive);
@@ -35,7 +35,10 @@ Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
 - Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
 - Figure: ogni figura deve essere dotata di caption che ne spieghi brevemente il contenuto;
 - Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto;
-- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento.
+- Termini nel glossario: si evidenziano le parole presenti nel glossario solamente nelle loro prime occorrenze nel documento;
+- Link: quando un link viene inserito come risorsa da consultare, deve essere indicata la data dell'ultima volta in cui la risorsa è stata visitata (nel formato [visitato il: dd/mm/aaaa]). Se invece un link porta ad un documento con ciclo di vita, è necessario inserirne la versione (nel formato [versione X.Y.Z]). Per i link relativi alle #glossario[issue] non vale quanto appena descritto. I link possono essere scritti:
+  - per esteso: il link deve essere cliccabile e portare alla risorsa;
+  - come testo cliccabile: deve essere aggiunta una footnote con il link per esteso.
 
 ==== Struttura dei documenti
 L'impaginazione e la struttura generale dei documenti è descritta nel file #raw("template.typ"). \ Tutti i documenti sono sempre divisi in almeno queste parti:
@@ -50,6 +53,7 @@ L'impaginazione e la struttura generale dei documenti è descritta nel file #raw
   - autore della modifica;
   - verificatore.
 + Indice;
++ Lista delle figure;
 + Contenuto.
 
 ==== Struttura dei verbali
@@ -65,6 +69,9 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
 - Scelte tipografiche specifiche dei verbali:
   - gli elenchi e le liste possono non terminare col punto e virgola;
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
+
+=== Sito web
+Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle GitHub Action. Ogni volta che avviene un cambiamento nel branch main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
 
 == Gestione della configurazione
 === Caratteristiche e finalità
@@ -86,8 +93,8 @@ La procedura di versionamento in un progetto software è fondamentale per gestir
 ])
 
 spiegazione:
-- X rappresenta la versione principale (#glossario[major version]), che cambia con aggiornamenti significativi o modifiche radicali.
-- Y indica la sottoversione (#glossario[minor version]), che viene aggiornata per miglioramenti o nuove funzionalità non critiche.
+- X rappresenta la versione principale (#glossario[major version]), che cambia con aggiornamenti significativi o modifiche radicali;
+- Y indica la sottoversione (#glossario[minor version]), che viene aggiornata per miglioramenti o nuove funzionalità non critiche;
 - Z è il numero di #glossario[patch], utilizzato per correzioni di bug o piccole modifiche.
 \
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software git sulla piattaforma #glossario[GitHub].
@@ -116,17 +123,17 @@ Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le
 - Garanzia di processo: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
 
 === PDCA
-Il ciclo PDCA, noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
+Il ciclo #glossario[PDCA], noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
 
 1. *Plan*: in questa fase si definiscono le attività necessarie per identificare quali processi avviare e in quale ordine, con l’obiettivo di raggiungere risultati specifici. Si stabiliscono obiettivi di miglioramento chiari e si progettano le azioni da intraprendere. Non riguarda pianificazione di progetto, ma bensì pianificazione di miglioramento;
 2. *Do*: si passa all’azione, mettendo in pratica quanto pianificato. Durante l’esecuzione si raccolgono dati e si monitorano i risultati per valutare l’efficacia delle attività svolte. Non è sviluppo, ma dispiegamento (esplorativo) di azioni di miglioramento;
-3. *Check*: qui si analizzano i dati raccolti nella fase di esecuzione, confrontandoli con gli obiettivi prefissati. Si utilizzano metriche specifiche per interpretare i risultati e individuare eventuali discrepanze o aree di miglioramento. Verifichiamo quindi l’esito delle azioni di miglioramento rispetto alle attese;
+3. *Check*: qui si analizzano i dati raccolti nella fase di esecuzione, confrontandoli con gli obiettivi prefissati. Si utilizzano metriche specifiche per interpretare i risultati e individuare eventuali discrepanze o aree di miglioramento. Si verifica quindi l’esito delle azioni di miglioramento rispetto alle attese;
 4. *Act*: sulla base delle valutazioni precedenti, si consolidano le pratiche che hanno prodotto risultati positivi, inserendole nel way of working. Si implementano poi azioni correttive per affrontare eventuali criticità. Si analizzano le cause dei problemi e si apportano miglioramenti, favorendo così un’evoluzione continua del processo.
 
 Ogni ciclo PDCA rappresenta un’opportunità per raggiungere gli obiettivi di qualità fissati, creando un processo di miglioramento costante e progressivo.
 
 === Piano di qualifica
-Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni informate basate sui dati a disposizione.
+Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni migliorative basate sui dati a disposizione.
 
 === Struttura metriche di qualità
 - *Codice:* identificativo univoco della metrica;
@@ -150,6 +157,11 @@ dove:
   - *Valore accettabile*: valore minimo accettabile della metrica per essere conforme agli standard di qualità stabiliti;
   - *Valore ottimale:* valore ideale della metrica;
 
+=== Aggiornamento cruscotto
+Il cruscotto è interamento gestito e generato in Typst. Ogni volta che viene compilato, il documento riprende tutti i valori aggiornati degli sprint da una funzione apposita (definita in costi.typ nella directory contenente il piano di progetto).
+I valori ottenuti vengono usati per calcolare le varie metriche, che saranno successivamente visualizzate attraverso dei grafici, sempre generati in Typst con la libreria CeTZ.
+C'è da precisare che questa è una procedura semi-automatica, ad esempio alcuni dati per le metriche devono essere inseriti a mano ad ogni sprint.
+I dati in questione riguardano l'indice di Gulpease, rischi non previsti e l'#glossario[Earned Value].
 
 == Verifica e validazione
 
@@ -176,10 +188,10 @@ I test possono essere di vario tipo e per questo è necessario classificarli a s
 
 Le tipologie di test principali sono, in ordine di esecuzione:
 + #glossario[Test di unità]: verificano il corretto funzionamento di singole unità di codice, come funzioni, metodi o classi. Poiché verificano piccole porzioni di codice, questi test devono essere eseguiti per primi, in modo tale da evitare l'introduzione di errori una volta che queste unità vengono integrate tra loro;
-+ Test di integrazione: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
-+ Test di sistema: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
-+ Test di regressione: verificano che le modifiche apportate al codice non abbiano introdotto errori in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
-+ Test di accettazione: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente; sono l'ultima fase di test prima del possibile rilascio del prodotto.
++ #glossario[Test di integrazione]: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
++ #glossario[Test di sistema]: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
++ #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto difetti in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
++ #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono l'ultima fase di test prima del possibile rilascio del prodotto.
 
 //Ogni test è costituito da:
 // TODO: completare con l'identificazione dei test
@@ -205,6 +217,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
 A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
+Gli script in questione si occupano di controllare che le parole da glossario siano ben indicate nei documenti e che tutti i documenti ottengano il punteggio accettabile per l'indice di Gulpease.
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
 
@@ -218,7 +231,7 @@ Secondo lo standard ISO/IEC 12207:1995, la validazione è il processo che serve 
 
 == Revisioni congiunte
 Secondo lo standard ISO/IEC 12207:1995, il processo di revisione congiunta ha l'obiettivo di valutare lo stato e i prodotti di un'attività di un progetto.
-Tali revisioni congiunte si svolgono durante tutto il ciclo di vita del rapporto con il proponente. Questo processo può essere impiegato da tutte le parti coinvolte, dove una parte (parte revisionante) esamina un'altra parte (parte revisionata).
+Tali revisioni congiunte si svolgono per tutta la durata del rapporto con il proponente. Questo processo può essere impiegato da tutte le parti coinvolte, dove una "parte revisionante" esamina una "parte revisionata".
 
 Questo processo si compone delle seguenti attività:
 - Implementazione del processo;
@@ -239,12 +252,12 @@ Il processo di risoluzione dei problemi ha l’obiettivo di garantire un approcc
 
 L’intento principale è affrontare ogni problematica in modo efficace, promuovendo al contempo una cultura del miglioramento continuo. L’esperienza derivante dall’analisi degli errori passati diventa così una risorsa preziosa per ottimizzare i processi e favorire la crescita organizzativa.
 
-Per garantire risultati concreti, è fondamentale adottare metodologie strutturate e strumenti adeguati, come la raccolta sistematica dei dati, l’analisi delle cause radice, la valutazione degli impatti e la definizione di piani d’azione correttivi e preventivi.
+Per garantire risultati concreti, è fondamentale adottare metodologie strutturate e strumenti adeguati, come la raccolta sistematica dei dati, l’analisi delle cause, la valutazione degli impatti e la definizione di piani d’azione correttivi e preventivi.
 
 Infine, la gestione accurata della documentazione relativa ai problemi riscontrati e alle soluzioni adottate è cruciale per assicurare trasparenza, tracciabilità e la possibilità di effettuare revisioni periodiche, contribuendo così a un costante miglioramento della qualità.
 
 === Gestione dei rischi
-All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
+All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")) \[versione 1.0.0]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
 
 ==== Codifica dei rischi
 Per identificare i rischi adottiamo la seguente struttura:
@@ -256,10 +269,10 @@ Per identificare i rischi adottiamo la seguente struttura:
 dove:
 #set list(indent: 1em)
 - R: indica che si tratta di un rischio;
-- a: indica la primalettera della categoria di appartenenza del rischio (se ritenuto necessario è possibile inserire le prime 2 lettere);
+- a: indica la prima lettera della categoria di appartenenza del rischio (se ritenuto necessario è possibile inserire le prime 2 lettere);
 - numero: numero progressivo del rischio.
 #set list(indent: 0em)
 - *Descrizione*: descrizione del rischio;
 - *Probabilità di occorrenza*: numero da 1 a 5, dove 5 indica altissima probabilità di occorrenza;
 - *Pericolosità*: alta, media o bassa;
-- *Tecniche di mitigazione*: azioni che permettono di arginanare le possibili conseguenze del rischio.
+- *Tecniche di mitigazione*: azioni che permettono di arginare le possibili conseguenze del rischio.
