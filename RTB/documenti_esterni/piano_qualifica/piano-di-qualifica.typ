@@ -4,7 +4,8 @@
   title: "Piano di qualifica",
   sommario: "Il documento riporta le attività di verifica e validazione, affidandosi a delle metriche per garantire la qualità del prodotto.",
   changelog: (
-    "1.1.0", "11/02/2025", "Aggiunta primi test di sistema ", team.C, team.T,
+    "1.2.0", "13/02/2025", "Completamento test di sistema", team.C, "",
+    "1.1.0", "11/02/2025", "Aggiunta primi test di sistema", team.C, team.T,
     "1.0.0", "10/02/2025", "Revisione documento", team.C, team.T,
     "0.13.0", "08/02/2025", "Aggiunte metriche accettabili e ottimali", team.G, team.T,
     "0.12.0", "07/02/2025", "Aggiunte metriche CPI, SPI", team.G, team.M,
