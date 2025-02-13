@@ -111,7 +111,7 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     [FMR10],
     [NI],
     [TS19],
-    [Verificare che l'utente autenticato possa modificare una descrizione dell'automazione tra due blocchi collegati.],
+    [Verificare che l'utente autenticato possa modificare la descrizione di un'automazione tra due blocchi collegati.],
     [FMR10],
     [NI],
     [TS20],
