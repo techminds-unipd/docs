@@ -19,8 +19,8 @@ Per la natura di questo progetto, la prima e ultima attività non verranno svolt
 === Progettazione e sviluppo
 ==== Filosofia "Docs as code" <docsascode>
 Abbiamo scelto di usare la filosofia "Docs as code" che si prescrive di trattare tutta la documentazione come se fosse del vero e proprio codice sorgente. \ Questo porta i seguenti vantaggi:
-+ Supporto agli #glossario[issue tracking system];;
-+ Controllo di versione con #glossario[git];;
++ Supporto agli #glossario[issue tracking system]\;
++ Controllo di versione con #glossario[git]\;
 + Processi di revisione del codice;
 + Test e #glossario[integrazione continua].
 
