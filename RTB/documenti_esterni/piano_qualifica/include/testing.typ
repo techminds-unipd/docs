@@ -1,4 +1,6 @@
 #import "/template/template.typ": glossario
+#show figure: set block(breakable: true)
+
 = Specifica dei test
 Nelle successive sezioni andremo ad individuare varie tipologie di test.
 In particolare:
@@ -121,15 +123,15 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     [FMR12],
     [NI],
     [TS22],
-    [Verificare che l'utente autenticato possa visualizzare le informazione relative al blocco Gmail.],
+    [Verificare che l'utente autenticato possa visualizzare le informazioni relative al blocco Gmail.],
     [FMR13],
     [NI],
     [TS23],
-    [Verificare che l'utente autenticato possa visualizzare le informazione relative al blocco Pastebin.],
+    [Verificare che l'utente autenticato possa visualizzare le informazioni relative al blocco Pastebin.],
     [FMR13],
     [NI],
     [TS24],
-    [Verificare che l'utente autenticato possa visualizzare le informazione relative al blocco Calendar.],
+    [Verificare che l'utente autenticato possa visualizzare le informazioni relative al blocco Calendar.],
     [FMR13],
     [NI],
     [TS25],
