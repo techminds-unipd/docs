@@ -127,7 +127,7 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     [FMR13],
     [NI],
     [TS23],
-    [Verificare che l'utente autenticato possa visualizzare le informazioni relative al blocco Pastebin.],
+    [Verificare che l'utente autenticato possa visualizzare le informazioni relative al blocco #glossario[Pastebin].],
     [FMR13],
     [NI],
     [TS24],
