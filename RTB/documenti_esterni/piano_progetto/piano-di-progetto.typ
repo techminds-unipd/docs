@@ -8,6 +8,7 @@
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
+    "0.16.0", "14/02/2025", "Aggiunta consuntivo sprint 5", team.L, team.T,
     "0.15.1", "11/02/2025", "Correzione piccoli errori stilistici e ortografici", team.G, team.M,
     "0.15.0", "10/02/2025", "Aggiunta pianificazione sprint 5", team.L, team.M,
     "0.14.0", "07/02/2025", "Aggiunto preventivo candidatura", team.C, team.T,
