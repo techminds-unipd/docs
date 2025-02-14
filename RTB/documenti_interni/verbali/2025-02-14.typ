@@ -10,7 +10,7 @@
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
   ordine_giorno: ("Retrospettiva sprint 5", "Consuntivo di periodo RTB"),
   riassunto: [
-    Ci siamo riuniti per celebrare la sprint retrospective dello sprint 5, successivamente abbiamo redatto il consuntivo di periodo RTB. Dalla retrospettiva dello sprint 5 è emerso che il team ha lavorato bene, riuscendo a completare tutti i task assegnati con largo anticipo. Le issue dello sprint sono state sovrastimate e di conseguenza sono state create nuove issue per continuare il lavoro. Quindi abbiamo deciso che nel piano di progetto documenteremo le issue create in seguito alla pianificazione iniziale.
+    Ci siamo riuniti per celebrare la sprint retrospective dello sprint 5, successivamente abbiamo redatto il consuntivo di periodo RTB. Dalla retrospettiva dello sprint 5 è emerso che il team ha lavorato bene, riuscendo a completare tutti i task assegnati con largo anticipo. Le issue dello sprint sono state sovrastimate e di conseguenza ne sono state create di nuove per continuare il lavoro. Infine abbiamo deciso che nel piano di progetto documenteremo le nuove issue create in seguito alla pianificazione iniziale.
 
     Successivamente abbiamo deciso di redigere il consuntivo di periodo RTB.
     
