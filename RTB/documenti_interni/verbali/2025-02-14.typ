@@ -19,6 +19,8 @@
     ([Piano di progetto],
       [#link("https://github.com/techminds-unipd/docs/issues/327")[Issue \#327]: Redazione consuntivo sprint 5],
       [#link("https://github.com/techminds-unipd/docs/issues/326")[Issue \#326]: Redazione consuntivo di periodo RTB],
+      [#link("https://github.com/techminds-unipd/docs/issues/325")[Issue \#325]: Documentare preventivo a finire in struttura sprint],
+      [#link("https://github.com/techminds-unipd/docs/issues/324")[Issue \#324]: Ridondanza diagramma di Gantt],
     ),
   ),
   firma: false
