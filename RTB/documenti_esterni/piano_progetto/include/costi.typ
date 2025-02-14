@@ -78,6 +78,14 @@
     tutino_preventivo.push(    (0, 13, 0, 0, 0, 0) )
     vallotto_preventivo.push(  (0, 9, 0, 0, 0, 2) )
 
+    bressan_consuntivo.push(   (0, 8, 0, 0, 0, 3) )
+    corradin_consuntivo.push(  (0, 4, 5, 0, 0, 2) )
+    lazzarin_consuntivo.push(  (0, 0, 0, 0, 0, 15) )
+    salviato_consuntivo.push(  (6, "2 (+2)", 0, 0, 0, "0 (-2)") )
+    squarzoni_consuntivo.push( (0, 0, 0, 0, 0, 15) )
+    tutino_consuntivo.push(    (0, 13, 0, 0, 0, "2 (+2)") )
+    vallotto_consuntivo.push(  (0, "10 (+1)", 0, 0, 0, "3 (+1)") )
+
 
     let preventivo = (
         bressan: bressan_preventivo,
