@@ -1,5 +1,6 @@
 #import "/template/template.typ": glossario,team
 #import "@preview/timeliney:0.1.0"
+#import "costi.typ": getOreConsumateRuoli
 
 = Periodi
 In questa sezione elenchiamo i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello Scrum. Inoltre analizziamo la variazione del costo stimato di completamento del progetto e l'assegnazione delle ore ai ruoli. Tale analisi risulta fondamentale per comprendere al meglio se le previsioni effettuate durante la fase di candidatura risultino poi adatte e congruenti alla realtà dei fatti.
@@ -67,4 +68,30 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #include "sprint/sprint4.typ"
 #pagebreak()
 #include "sprint/sprint5.typ"
+
+
+#linebreak()
+#linebreak()
+#linebreak()
+#let oreConsumate = getOreConsumateRuoli(5)
+#let totale = oreConsumate.zip((30, 20, 25, 25, 15, 15)).map(x => x.at(0) * x.at(1)).sum()
+
+=== Consuntivo di periodo RTB
+I costi effettivamente sostenuti durante il periodo RTB sono stati i seguenti:
+#figure(
+    table(
+        columns: (1fr,)*4,
+        align: center+horizon,
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*],[*Ore*], [*Costo orario*], [*Costo totale*]),
+        [Responsabile], [#oreConsumate.at(0)], [30 #sym.euro], [#(oreConsumate.at(0)*30) #sym.euro],
+        [Amministratore], [#oreConsumate.at(1)], [20 #sym.euro], [#(oreConsumate.at(1)*20) #sym.euro],
+        [Analista], [#oreConsumate.at(2)], [25 #sym.euro], [#(oreConsumate.at(2)*25) #sym.euro],
+        [Progettista], [#oreConsumate.at(3)], [25 #sym.euro], [#(oreConsumate.at(3)*25) #sym.euro],
+        [Programmatore], [#oreConsumate.at(4)], [15 #sym.euro], [#(oreConsumate.at(4)*15) #sym.euro],
+        [Verificatore], [#oreConsumate.at(5)], [15 #sym.euro], [#(oreConsumate.at(5)*15) #sym.euro],
+        table.cell([*Totale*], colspan: 3, fill: white), table.cell([*#totale #sym.euro*], fill: white)
+    ),
+    caption: "Consuntivo di periodo RTB."
+)
 
