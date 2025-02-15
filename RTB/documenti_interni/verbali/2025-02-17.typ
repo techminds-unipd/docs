@@ -11,7 +11,7 @@
     ordine_giorno: ("Sprint plan",),
     riassunto: [Ci siamo riuniti per celebrare lo sprint plan dello sprint 6, che avrà la durata di una settimana.
         Questo sprint sarà breve perchè il suo obiettivo è quello di apportare le correzioni suggerite dal prof. Cardin per l'analisi dei requisiti.
-        Abbiamo creato tutte le issue relative all'analisi  , sotto segue una lista esaustiva di ciò.
+        Abbiamo creato tutte le issue relative all'analisi, sotto segue una lista esaustiva di ciò.
     ],
     decisioni: (
         ([Analisi dei requisiti],
@@ -20,9 +20,9 @@
             [#link("https://github.com/techminds-unipd/docs/issues/340")[Issue \#340]: Aggiungere nuovi requisiti funzionali],
             [#link("https://github.com/techminds-unipd/docs/issues/339")[Issue \#339]: Correzione requisiti qualità e vincolo],
             [#link("https://github.com/techminds-unipd/docs/issues/338")[Issue \#338]: Correzione salvataggio workflow],
-            [#link("https://github.com/techminds-unipd/docs/issues/337")[Issue \#337]: Correzione Visualizzazione blocchi configurati],
-            [#link("https://github.com/techminds-unipd/docs/issues/336")[Issue \#336]: Correzione visualizzazione, crezione e risultato workflow],
-            [#link("https://github.com/techminds-unipd/docs/issues/335")[Issue \#335]: Correggere Esecuzione del workflow],
+            [#link("https://github.com/techminds-unipd/docs/issues/337")[Issue \#337]: Correzione visualizzazione blocchi configurati],
+            [#link("https://github.com/techminds-unipd/docs/issues/336")[Issue \#336]: Correzione visualizzazione, creazione e risultato workflow],
+            [#link("https://github.com/techminds-unipd/docs/issues/335")[Issue \#335]: Correzione esecuzione del workflow],
             [#link("https://github.com/techminds-unipd/docs/issues/334")[Issue \#334]: Risoluzione struttura UC],
             [#link("https://github.com/techminds-unipd/docs/issues/333")[Issue \#333]: Aggiungere numeri di versione e ultima visita nei link],
         ),
