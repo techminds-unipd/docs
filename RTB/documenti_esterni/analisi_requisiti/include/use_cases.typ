@@ -547,12 +547,17 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-shape: ellipse,
     node-inset: 10pt,
 
-    node((-0.5,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
+    node((-0.6,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
     edge(<utente-autenticato>, <esecuzione-workflow>),
 
-    node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    node((3.9,0), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
     edge(<llm>, <esecuzione-workflow>),
+    
+    node((3.5,0.55), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
+    edge(<ggl>, <esecuzione-workflow>),
 
+    node((3.9,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
+    edge(<pstb>, <esecuzione-workflow>),
 
 
     node((1.25,0), align(center)[
@@ -601,13 +606,15 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
-  - LLM.
+  - LLM;
+  - Google;
+  - Pastebin.
 - *Scenario principale*:
  - Utente autenticato:
    1. esegue il workflow.
  - Sistema:
    1. controlla che il workflow sia valido;
-   2. inoltra i dati all'agente che si interfaccia ad un LLM;
+   2. inoltra i dati all'agente che si interfaccia ad un LLM, il quale utilizza i servizi di Google e Pastebin;
    3. restituisce il risultato dell'operazione.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno due blocchi.
@@ -654,189 +661,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
 
-=== Esecuzione del workflow (frontend #sym.arrow backend)<esecuzione-workflow-backend>          
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
-
-    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
-
-    node((2,0.5), align(center)[
-            @esecuzione-workflow-backend Esecuzione workflow
-    ],  name: <esecuzione-workflow-backend>),
-    edge(<frontend>, <esecuzione-workflow-backend>),
-    edge(<agente>, <esecuzione-workflow-backend>),
-
-    node((2,1), align(center)[
-            @frontend-invio-dati-workflow Invio dati workflow
-    ], name: <frontend-invio-dati-workflow>),
-    edge(<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
-
-    node(enclose: (<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>),
-        align(top + right)[Backend],
-        width: 240pt,
-        height: 200pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Esecuzione del workflow (frontend #sym.arrow backend) UC diagram.]
-) <esecuzione-workflow-frontend-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nell'esecuzione di un workflow, approfondendo @esecuzione-workflow.
-- *Attori principali*:
-  - Frontend.
-- *Scenario principale*:
-  - Frontend:
-    1. invia la richiesta di esecuzione del workflow;
-    2. invia i dati necessari al backend (@frontend-invio-dati-workflow).
-  - Backend:
-    1. riceve la richiesta di esecuzione del workflow;
-    2. invia i dati all'agente (@esecuzione-workflow-agente);
-    3. riceve un risultato dall'agente;
-    4. restituisce il risultato al frontend.
-- *Pre-condizioni*:
-   - L'esecuzione del workflow è stata avviata.
-- *Post-condizioni*:
-  - Il frontend riceve il risultato dell'esecuzione del workflow.
-
-==== Invio dati workflow (frontend) <frontend-invio-dati-workflow>
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del frontend verso il backend per l'esecuzione di un workflow.
-- *Attori principali*:
-  - Frontend.
-- *Scenario principale*:
-  - Frontend:
-    1. invia la lista dei blocchi del workflow;
-    2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
-  - Backend:
-    1. riceve i dati necessari per l'esecuzione del workflow.
-- *Pre-condizioni*:
-   - L'esecuzione del workflow è stata avviata.
-- *Post-condizioni*:
-  - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
-
-
-=== Esecuzione del workflow (backend #sym.arrow agente)<esecuzione-workflow-agente>
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
-    edge(<back-end>, <esecuzione-workflow-agente>),
-
-    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <esecuzione-workflow-agente>),
-
-    node((4.5,1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
-    edge(<ggl>, <esecuzione-workflow-agente>),
-
-    node((3.5,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
-    edge(<pstb>, <esecuzione-workflow-agente>),
-
-    node((2,0.5), align(center)[
-            @esecuzione-workflow-agente Esecuzione workflow agente
-    ],  name: <esecuzione-workflow-agente>),
-
-    node((1.8,1.4), align(center)[
-            @errore-workflow-llm Ricezione errore time-out
-    ],  name: <errore-workflow-llm>),
-    edge(<errore-workflow-llm>, <esecuzione-workflow-agente>, "--straight", [\<\<extend\>\>]),
-
-    node((1.3,1), align(center)[
-            Il time-out #linebreak() raggiunge il limite
-    ], shape: uc_comment, name: <post-it>),
-    node((1.88,1), align(center)[
-    ], name: <nf>, width: 1pt, height: 1pt),
-    edge(<post-it>, <nf>, "--"),
-
-    node((2.4,1), align(center)[
-            @backend-invio-dati-workflow Invio dati workflow
-    ], name: <backend-invio-dati-workflow>),
-    edge(<esecuzione-workflow-agente>, <backend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
-
-    node(enclose: (<esecuzione-workflow-agente>,<errore-workflow-llm>,<nf>,<post-it>,<backend-invio-dati-workflow>,),
-        align(top + right)[Agente],
-        width: 240pt,
-        height: 200pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Esecuzione del workflow (backend #sym.arrow agente) UC diagram.]
-) <esecuzione-workflow-agente-diagram>
-
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di esecuzione del backend e dell'agente durante la procedura di esecuzione di un workflow, approfondendo @esecuzione-workflow.
-- *Attori principali*:
-  - Backend.
-- *Attori secondari*:
-  - LLM;
-  - Google;
-  - Pastebin.
-- *Scenario principale*:
- - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente (@backend-invio-dati-workflow).
- - Agente:
-   1. riceve i dati;
-   2. esegue le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
-   3. termina l'esecuzione;
-   4. comunica la terminazione dell'esecuzione al backend.
-- *Pre-condizioni*:
-   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
-- *Post-condizioni*:
-  - L'esecuzione del workflow termina con successo.
-- *Estensioni*:
-  - Ricezione errore time-out (@errore-workflow-llm).
-
-==== Invio dati workflow (backend) <backend-invio-dati-workflow>
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow.
-- *Attori principali*:
-  - Backend.
-- *Scenario principale*:
-  - Backend:
-    1. invia i dati ricevuti dal frontend (@frontend-invio-dati-workflow);
-    2. invia i token di autorizzazione necessari.
-  - Agente:
-    1. riceve i dati necessari per l'esecuzione del workflow.
-- *Pre-condizioni*:
-  - L'esecuzione del workflow è stata avviata.
-- *Post-condizioni*:
-  - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
-
-=== Ricezione errore time-out <errore-workflow-llm>
-- *Descrizione*:
-  - Questo caso d'uso descrive la ricezione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
-- *Attori principali*:
-  - Backend.
-- *Attori secondari*:
-  - LLM;
-  - Google;
-  - Pastebin.
-- *Scenario principale*:
- - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente.
- - Agente:
-   1. riceve i dati;
-   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
-   3. il time-out raggiunge il limite;
-   4. termina l'esecuzione;
-   5. comunica l'errore di esecuzione del workflow al backend.
-- *Pre-condizioni*:
-   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
-- *Post-condizioni*:
-  - L'esecuzione termina e il backend riceve un messaggio d'errore.
 
 === Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
 
@@ -1627,3 +1451,106 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - Il workflow selezionato è stato eliminato dal database e non è più disponibile.
 - *Estensioni*:
    - Errore connessione database (@errore-connessione-database).
+
+=== Invio dati workflow (frontend #sym.arrow backend)<invio-dati-frontend-backend>          
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
+
+    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
+
+    node((2,0.5), align(center)[
+            @invio-dati-frontend-backend Invio dati workflow
+    ],  name: <invio-dati-frontend-backend>),
+    edge(<frontend>, <invio-dati-frontend-backend>),
+    edge(<agente>, <invio-dati-frontend-backend>),
+
+    node(enclose: (<invio-dati-frontend-backend>,),
+        align(top + right)[Backend],
+        width: 200pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Invio dati workflow (frontend #sym.arrow backend) UC diagram.]
+) <invio-dati-frontend-backend-diagram>
+- *Descrizione*:
+  - Questo caso d’uso descrive le operazioni di invio dei dati necessari da parte del frontend al backend per l’esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Frontend.
+- *Scenario principale*:
+  - Frontend:
+    1. invia la lista dei blocchi del workflow;
+    2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
+  - Backend:
+    1. riceve i dati necessari per l'esecuzione del workflow.
+    2. invia i dati all'agente (@invio-dati-backend-agente);
+    //3. riceve un risultato dall'agente;
+    //4. restituisce il risultato al frontend.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
+
+=== Invio dati workflow (backend #sym.arrow agente)<invio-dati-backend-agente>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
+    edge(<back-end>, <invio-dati-backend-agente>),
+
+    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <invio-dati-backend-agente>),
+
+    node((2,0.5), align(center)[
+            @invio-dati-backend-agente Invio dati workflow
+    ],  name: <invio-dati-backend-agente>),
+
+
+    node(enclose: (<invio-dati-backend-agente>,),
+        align(top + right)[Agente],
+        width: 200pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Invio dati workflow (backend #sym.arrow agente) UC diagram.]
+) <invio-dati-backend-agente-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Backend.
+- *Attori secondari*:
+  - LLM.
+- *Scenario principale*:
+ - Backend:
+    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend);
+    2. invia i token di autorizzazione necessari.
+ - Agente:
+   1. riceve i dati necessari per l'esecuzione del workflow;
+   2. esegue le automazioni interfacciandosi con un LLM esterno.
+   //3. termina l'esecuzione;
+   //4. comunica la terminazione dell'esecuzione al backend.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata;
+   - Il backend ha ricevuto ha ricevuto i dati relativi al workflow dal frontend.
+- *Post-condizioni*:
+  - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
+
+
+
+
