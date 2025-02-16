@@ -639,7 +639,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - Il nome del workflow è stato inserito.
 
-=== Aggiunta di un blocco (Gmail/Calendar/Pastebin) <aggiunta-blocco>
+=== Aggiunta di un blocco <aggiunta-blocco>
 #figure(
     diagram(
     debug: false,
@@ -662,16 +662,16 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Aggiunta di un blocco (Gmail/Calendar/Pastebin) UC diagram.]
+    caption: [Aggiunta di un blocco UC diagram.]
 ) <aggiunta-blocco-diagram>
 
 - *Descrizione*:
-  - Questo caso d'uso descrive la procedura di aggiunta di un blocco (Gmail/Calendar/Pastebin) in un workflow.
+  - Questo caso d'uso descrive la procedura di aggiunta di un blocco in un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. aggiunge un blocco di automazione (Gmail/Calendar/Pastebin) già configurato, trascinandolo nell'area drag and drop.
+   1. aggiunge un blocco di automazione già configurato, trascinandolo nell'area drag and drop.
  - Sistema:
    1. gestisce l'input dell'utente;
    2. aggiorna il workflow.
