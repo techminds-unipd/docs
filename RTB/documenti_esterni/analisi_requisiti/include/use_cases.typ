@@ -634,7 +634,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato:
     1. inserisce il nome del workflow.
   - Sistema:
-    1. verifica che il nome del workflow sia univoco;
+    1. associa il nome immesso al workflow;
     2. continua la procedura di creazione del workflow.
 - *Post-condizioni*:
   - Il nome del workflow è stato inserito.
