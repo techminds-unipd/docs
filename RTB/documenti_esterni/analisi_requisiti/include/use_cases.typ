@@ -902,14 +902,26 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     label-size: 8pt,
     node-inset: 10pt,
     node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
-    node((2,0), align(center)[
+    node((1.8,0), align(center)[
             @visualizzazione-workflow Visualizzazione workflow
     ], name: <a>),
 
-    node(enclose: (<a>,),
+    node((1.2,0.8), align(center)[
+            @visualizzazione-blocchi-workflow Visualizzazione \ blocchi workflow
+    ], name: <b>),
+
+    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+
+    node((2.5,0.8), align(center)[
+            @visualizzazione-archi-workflow Visualizzazione \ archi workflow
+    ], name: <c>),
+
+    edge(<a>, <c>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<a>,<b>,<c>,),
         align(top + right)[Sistema],
         width: 150pt,
         height: 150pt,
@@ -925,13 +937,46 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. visualizza tutti i nodi, archi e descrizioni delle automazioni del workflow selezionato.
+   1. visualizza i nodi del workflow (@visualizzazione-blocchi-workflow);
+   2. visualizza gli archi del workflow (@visualizzazione-archi-workflow).
  - Sistema:
    1. mostra il workflow selezionato dall'utente.
 - *Pre-condizioni*:
    - L'utente ha creato almeno un workflow.
 - *Post-condizioni*:
    - Viene mostrato il workflow selezionato dall'utente.
+
+==== Visualizzazione blocchi workflow <visualizzazione-blocchi-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dei blocchi presenti in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. visualizza il nome del servizio in ogni blocco presente nel workflow.
+  - Sistema:
+    1. mostra i blocchi presenti nel workflow.
+- *Pre-condizioni*:
+  - L'utente ha creato almeno un workflow.
+- *Post-condizioni*:
+  - L'utente visualizza i blocchi presenti nel workflow.
+
+==== Visualizzazione archi workflow <visualizzazione-archi-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione degli archi presenti in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. visualizza gli archi che collegano i blocchi presenti nel workflow;
+    2. visualizza la descrizione dell'automazione su ogni arco.
+  - Sistema:
+    1. mostra gli archi e le descrizioni presenti nel workflow.
+- *Pre-condizioni*:
+  - L'utente ha creato almeno un workflow.
+- *Post-condizioni*:
+  - L'utente visualizza gli archi e le descrizioni presenti nel workflow.
+
 
 === Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
 
