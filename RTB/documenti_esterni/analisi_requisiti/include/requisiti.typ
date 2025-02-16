@@ -38,7 +38,7 @@
 
         [FMR10], [L'utente autenticato deve poter aggiungere e modificare una descrizione dell'automazione tra due blocchi collegati.], [@aggiunta-descrizione, @modifica-descrizione],
 
-        [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-blocchi-configurati, @avviso-servizi-non-collegati],
+        [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
        
         [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @errore-connessione-database],
 
