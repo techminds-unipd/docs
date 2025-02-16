@@ -1466,7 +1466,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. visualizza la risposta testuale dell'agente, contenente l'esito dell'esecuzione.
+    1. visualizza la risposta testuale dell'agente, contenente l'esito dei passi dell'esecuzione e link delle risorse generate.
   - Sistema:
     1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
     2. mostra il risultato all'utente.
