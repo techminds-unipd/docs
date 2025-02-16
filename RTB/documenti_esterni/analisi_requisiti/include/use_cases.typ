@@ -253,6 +253,46 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - L'utente viene autenticato ed ottiene una sessione.
 
+=== Logout <logout>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((1,0), align(center)[
+            @logout Logout
+    ], shape: ellipse, name: <a>),
+
+    
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Logout UC diagram.]
+) <logout-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di logout di un utente.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. seleziona l'opzione per fare il logout;
+   2. conferma il logout.
+ - Sistema:
+   1. fa visualizzare la schermata di conferma del logout;
+   2. attende la conferma dell'utente;
+   3. disconnette l'account dall'applicativo.
+- *Post-condizioni*:
+   - L'utente non è più autenticato.
+
 === Registrazione <registrazione>
 
 #figure(
@@ -535,351 +575,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente ha associato un account Google.
 - *Post-condizioni*:
    - L'utente non ha più un account Google associato.
-
-=== Esecuzione workflow <esecuzione-workflow>
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-shape: ellipse,
-    node-inset: 10pt,
-
-    node((-0.5,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
-    edge(<utente-autenticato>, <esecuzione-workflow>),
-
-    node((3,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <esecuzione-workflow>),
-
-
-
-    node((1.25,0), align(center)[
-            @esecuzione-workflow Esecuzione workflow 
-    ],  name: <esecuzione-workflow>),
-
-    node((1,1.5), align(center)[
-            @vis-errore-workflow Vis. errore workflow
-    ],  name: <vis-errore-workflow>),
-
-    edge(<vis-errore-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
-
-    node((.6,0.5), align(center)[
-            Il workflow non è valido
-    ], shape: uc_comment, name: <post-it>),
-
-    node((1.15,0.5), align(center)[
-    ], name: <nf>, width: 1pt, height: 1pt),
-    edge(<post-it>, <nf>, "--"),
-
-    node((1.7,1.25), align(center)[
-            @vis-errore-runtime Vis. errore runtime
-    ],  name: <vis-errore-runtime>),
-    edge(<vis-errore-runtime>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
-    
-    node((2,0.8), align(center)[
-            L'agente non riesce a #linebreak() completare l'operazione
-    ], shape: uc_comment, name: <post-it2>),
-
-    node((1.53,0.8), align(center)[
-    ], name: <nf2>, width: 1pt, height: 1pt),
-    edge(<post-it2>, <nf2>, "--"),
-
-    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
-        align(top + right)[Sistema],
-        width: 200pt,
-        height: 200pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Esecuzione workflow UC diagram.]
-) <esecuzione-diagram>
-
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di esecuzione di un workflow e i suoi scenari alternativi.
-- *Attori principali*:
-  - Utente autenticato.
-- *Attori secondari*:
-  - LLM.
-- *Scenario principale*:
- - Utente autenticato:
-   1. esegue il workflow.
- - Sistema:
-   1. controlla che il workflow sia valido;
-   2. inoltra i dati all'agente che si interfaccia ad un LLM;
-   3. restituisce il risultato dell'operazione.
-- *Pre-condizioni*:
-   - L'utente ha creato un workflow con almeno due blocchi.
-- *Post-condizioni*:
-  - L'esecuzione del workflow termina con successo.
-- *Estensioni*:
-  - Visualizzazione errore runtime (@vis-errore-runtime).
-  - Visualizzazione errore workflow (@vis-errore-workflow).
-  
-
-=== Visualizzazione errore workflow <vis-errore-workflow>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. ha avviato l'esecuzione del workflow.
-  - Sistema:
-    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
-    2. mostra un messaggio d'errore all'utente;
-    3. termina l'esecuzione.
-- *Pre-condizioni*:
-  - L'utente ha creato un workflow senza rispettare i vincoli.
-- *Post-condizioni*:
-  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
-
-=== Visualizzazione errore runtime <vis-errore-runtime>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione dell'errore di runtime durante l'esecuzione di un workflow.
-- *Attori principali*:
-  - Utente autenticato.
-- *Attori secondari*:
-  - LLM.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. ha avviato l'esecuzione di un workflow valido.
-  - Sistema:
-    1. riscontra un problema durante l'esecuzione del workflow;
-    2. non conclude l'operazione;
-    3. mostra un messaggio d'errore all'utente.
-- *Pre-condizioni*:
-  - L'utente ha creato un workflow valido.
-- *Post-condizioni*:
-  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
-
-=== Esecuzione del workflow (frontend #sym.arrow backend)<esecuzione-workflow-backend>          
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
-
-    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
-
-    node((2,0.5), align(center)[
-            @esecuzione-workflow-backend Esecuzione workflow
-    ],  name: <esecuzione-workflow-backend>),
-    edge(<frontend>, <esecuzione-workflow-backend>),
-    edge(<agente>, <esecuzione-workflow-backend>),
-
-    node((2,1), align(center)[
-            @frontend-invio-dati-workflow Invio dati workflow
-    ], name: <frontend-invio-dati-workflow>),
-    edge(<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
-
-    node(enclose: (<esecuzione-workflow-backend>, <frontend-invio-dati-workflow>),
-        align(top + right)[Backend],
-        width: 240pt,
-        height: 200pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Esecuzione del workflow (frontend #sym.arrow backend) UC diagram.]
-) <esecuzione-workflow-frontend-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni che le singole parti del sistema compiono nell'esecuzione di un workflow, approfondendo @esecuzione-workflow.
-- *Attori principali*:
-  - Frontend.
-- *Scenario principale*:
-  - Frontend:
-    1. invia la richiesta di esecuzione del workflow;
-    2. invia i dati necessari al backend (@frontend-invio-dati-workflow).
-  - Backend:
-    1. riceve la richiesta di esecuzione del workflow;
-    2. invia i dati all'agente (@esecuzione-workflow-agente);
-    3. riceve un risultato dall'agente;
-    4. restituisce il risultato al frontend.
-- *Pre-condizioni*:
-   - L'esecuzione del workflow è stata avviata.
-- *Post-condizioni*:
-  - Il frontend riceve il risultato dell'esecuzione del workflow.
-
-==== Invio dati workflow (frontend) <frontend-invio-dati-workflow>
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del frontend verso il backend per l'esecuzione di un workflow.
-- *Attori principali*:
-  - Frontend.
-- *Scenario principale*:
-  - Frontend:
-    1. invia la lista dei blocchi del workflow;
-    2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
-  - Backend:
-    1. riceve i dati necessari per l'esecuzione del workflow.
-- *Pre-condizioni*:
-   - L'esecuzione del workflow è stata avviata.
-- *Post-condizioni*:
-  - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
-
-
-=== Esecuzione del workflow (backend #sym.arrow agente)<esecuzione-workflow-agente>
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
-    edge(<back-end>, <esecuzione-workflow-agente>),
-
-    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <esecuzione-workflow-agente>),
-
-    node((4.5,1), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
-    edge(<ggl>, <esecuzione-workflow-agente>),
-
-    node((3.5,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
-    edge(<pstb>, <esecuzione-workflow-agente>),
-
-    node((2,0.5), align(center)[
-            @esecuzione-workflow-agente Esecuzione workflow agente
-    ],  name: <esecuzione-workflow-agente>),
-
-    node((1.8,1.4), align(center)[
-            @errore-workflow-llm Ricezione errore time-out
-    ],  name: <errore-workflow-llm>),
-    edge(<errore-workflow-llm>, <esecuzione-workflow-agente>, "--straight", [\<\<extend\>\>]),
-
-    node((1.3,1), align(center)[
-            Il time-out #linebreak() raggiunge il limite
-    ], shape: uc_comment, name: <post-it>),
-    node((1.88,1), align(center)[
-    ], name: <nf>, width: 1pt, height: 1pt),
-    edge(<post-it>, <nf>, "--"),
-
-    node((2.4,1), align(center)[
-            @backend-invio-dati-workflow Invio dati workflow
-    ], name: <backend-invio-dati-workflow>),
-    edge(<esecuzione-workflow-agente>, <backend-invio-dati-workflow>, "--straight", [\<\<include\>\>]),
-
-    node(enclose: (<esecuzione-workflow-agente>,<errore-workflow-llm>,<nf>,<post-it>,<backend-invio-dati-workflow>,),
-        align(top + right)[Agente],
-        width: 240pt,
-        height: 200pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Esecuzione del workflow (backend #sym.arrow agente) UC diagram.]
-) <esecuzione-workflow-agente-diagram>
-
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di esecuzione del backend e dell'agente durante la procedura di esecuzione di un workflow, approfondendo @esecuzione-workflow.
-- *Attori principali*:
-  - Backend.
-- *Attori secondari*:
-  - LLM;
-  - Google;
-  - Pastebin.
-- *Scenario principale*:
- - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente (@backend-invio-dati-workflow).
- - Agente:
-   1. riceve i dati;
-   2. esegue le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
-   3. termina l'esecuzione;
-   4. comunica la terminazione dell'esecuzione al backend.
-- *Pre-condizioni*:
-   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
-- *Post-condizioni*:
-  - L'esecuzione del workflow termina con successo.
-- *Estensioni*:
-  - Ricezione errore time-out (@errore-workflow-llm).
-
-==== Invio dati workflow (backend) <backend-invio-dati-workflow>
-- *Descrizione*:
-  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow.
-- *Attori principali*:
-  - Backend.
-- *Scenario principale*:
-  - Backend:
-    1. invia i dati ricevuti dal frontend (@frontend-invio-dati-workflow);
-    2. invia i token di autorizzazione necessari.
-  - Agente:
-    1. riceve i dati necessari per l'esecuzione del workflow.
-- *Pre-condizioni*:
-  - L'esecuzione del workflow è stata avviata.
-- *Post-condizioni*:
-  - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
-
-=== Ricezione errore time-out <errore-workflow-llm>
-- *Descrizione*:
-  - Questo caso d'uso descrive la ricezione dell'errore provocato dal time-out durante l'esecuzione di un workflow.
-- *Attori principali*:
-  - Backend.
-- *Attori secondari*:
-  - LLM;
-  - Google;
-  - Pastebin.
-- *Scenario principale*:
- - Backend:
-   1. invia i dati necessari per l'esecuzione del workflow all'agente.
- - Agente:
-   1. riceve i dati;
-   2. inizia ad eseguire le automazioni interfacciandosi con un LLM esterno, con i servizi Google configurati e con Pastebin;
-   3. il time-out raggiunge il limite;
-   4. termina l'esecuzione;
-   5. comunica l'errore di esecuzione del workflow al backend.
-- *Pre-condizioni*:
-   - Il backend ha ricevuto il segnale di avviare l'esecuzione di un workflow.
-- *Post-condizioni*:
-  - L'esecuzione termina e il backend riceve un messaggio d'errore.
-
-=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-shape: ellipse,
-    node-inset: 10pt,
-
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
-    edge(<utente-autenticato>, <vis-risultato-esecuzione-workflow>),
-
-    node((2,0), align(center)[
-            @vis-risultato-esecuzione-workflow Vis. risultato esecuzione #linebreak() workflow
-    ],  name: <vis-risultato-esecuzione-workflow>),
-
-    node(enclose: (<vis-risultato-esecuzione-workflow>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione risultato dell'esecuzione del workflow.]
-) <vis-risultato-esecuzione-workflow-diagram> 
-
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione del risultato dell'esecuzione di un workflow.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. ha eseguito il workflow (@esecuzione-workflow).
-  - Sistema:
-    1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
-    2. mostra il risultato all'utente.
-- *Pre-condizioni*:
-  - L'esecuzione del workflow (@esecuzione-workflow) è terminata senza errori.
-- *Post-condizioni*:
-  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
 
 
 === Creazione nuovo workflow vuoto <creazione-nuovo-workflow>
@@ -1534,46 +1229,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Calendar.
 
-=== Logout <logout>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((1,0), align(center)[
-            @logout Logout
-    ], shape: ellipse, name: <a>),
-
-    
-    node(enclose: (<a>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Logout UC diagram.]
-) <logout-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la procedura di logout di un utente.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-   1. seleziona l'opzione per fare il logout;
-   2. conferma il logout.
- - Sistema:
-   1. fa visualizzare la schermata di conferma del logout;
-   2. attende la conferma dell'utente;
-   3. disconnette l'account dall'applicativo.
-- *Post-condizioni*:
-   - L'utente non è più autenticato.
-
 === Eliminazione workflow <eliminazione-workflow>
 #figure(
     diagram(
@@ -1627,3 +1282,266 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - Il workflow selezionato è stato eliminato dal database e non è più disponibile.
 - *Estensioni*:
    - Errore connessione database (@errore-connessione-database).
+
+=== Esecuzione workflow <esecuzione-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
+
+    node((-0.6,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <esecuzione-workflow>),
+
+    node((3.9,0.2), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    edge(<llm>, <esecuzione-workflow>),
+    
+    node((3.3,0.55), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
+    edge(<ggl>, <esecuzione-workflow>),
+
+    node((3.9,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
+    edge(<pstb>, <esecuzione-workflow>),
+
+
+    node((1.25,0), align(center)[
+            @esecuzione-workflow Esecuzione workflow 
+    ],  name: <esecuzione-workflow>),
+
+    node((1,1.5), align(center)[
+            @vis-errore-workflow Vis. errore workflow
+    ],  name: <vis-errore-workflow>),
+
+    edge(<vis-errore-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
+
+    node((.6,0.5), align(center)[
+            Il workflow non è valido
+    ], shape: uc_comment, name: <post-it>),
+
+    node((1.15,0.5), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<post-it>, <nf>, "--"),
+
+    node((1.7,1.25), align(center)[
+            @vis-errore-runtime Vis. errore runtime
+    ],  name: <vis-errore-runtime>),
+    edge(<vis-errore-runtime>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
+    
+    node((2,0.8), align(center)[
+            L'agente non riesce a #linebreak() completare l'operazione
+    ], shape: uc_comment, name: <post-it2>),
+
+    node((1.53,0.8), align(center)[
+    ], name: <nf2>, width: 1pt, height: 1pt),
+    edge(<post-it2>, <nf2>, "--"),
+
+    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
+        align(top + right)[Sistema],
+        width: 200pt,
+        height: 200pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Esecuzione workflow UC diagram.]
+) <esecuzione-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di esecuzione di un workflow e i suoi scenari alternativi.
+- *Attori principali*:
+  - Utente autenticato.
+- *Attori secondari*:
+  - LLM;
+  - Google;
+  - Pastebin.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. esegue il workflow.
+ - Sistema:
+   1. controlla che il workflow sia valido;
+   2. inoltra i dati all'agente che si interfaccia ad un LLM, il quale utilizza i servizi di Google e Pastebin;
+   3. restituisce il risultato dell'operazione.
+- *Pre-condizioni*:
+   - L'utente ha creato un workflow con almeno due blocchi.
+- *Post-condizioni*:
+  - L'esecuzione del workflow termina con successo.
+- *Estensioni*:
+  - Visualizzazione errore runtime (@vis-errore-runtime);
+  - Visualizzazione errore workflow (@vis-errore-workflow).
+  
+
+=== Visualizzazione errore workflow <vis-errore-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. ha avviato l'esecuzione del workflow.
+  - Sistema:
+    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
+    2. mostra un messaggio d'errore all'utente;
+    3. termina l'esecuzione.
+- *Pre-condizioni*:
+  - L'utente ha creato un workflow senza rispettare i vincoli.
+- *Post-condizioni*:
+  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
+
+=== Visualizzazione errore runtime <vis-errore-runtime>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione dell'errore di runtime durante l'esecuzione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Attori secondari*:
+  - LLM.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. ha avviato l'esecuzione di un workflow valido.
+  - Sistema:
+    1. riscontra un problema durante l'esecuzione del workflow;
+    2. non conclude l'operazione;
+    3. mostra un messaggio d'errore all'utente.
+- *Pre-condizioni*:
+  - L'utente ha creato un workflow valido.
+- *Post-condizioni*:
+  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
+
+
+=== Visualizzazione risultato esecuzione workflow <vis-risultato-esecuzione-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-shape: ellipse,
+    node-inset: 10pt,
+
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <utente-autenticato>),
+    edge(<utente-autenticato>, <vis-risultato-esecuzione-workflow>),
+
+    node((2,0), align(center)[
+            @vis-risultato-esecuzione-workflow Vis. risultato esecuzione #linebreak() workflow
+    ],  name: <vis-risultato-esecuzione-workflow>),
+
+    node(enclose: (<vis-risultato-esecuzione-workflow>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione risultato dell'esecuzione del workflow.]
+) <vis-risultato-esecuzione-workflow-diagram> 
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione del risultato dell'esecuzione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. ha eseguito il workflow (@esecuzione-workflow).
+  - Sistema:
+    1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
+    2. mostra il risultato all'utente.
+- *Pre-condizioni*:
+  - L'esecuzione del workflow (@esecuzione-workflow) è terminata senza errori.
+- *Post-condizioni*:
+  - Viene mostrato un messaggio all'utente con il risultato dell'operazione.
+
+
+=== Invio dati workflow (frontend #sym.arrow backend)<invio-dati-frontend-backend>          
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
+
+    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
+
+    node((2,0.5), align(center)[
+            @invio-dati-frontend-backend Invio dati workflow
+    ],  name: <invio-dati-frontend-backend>),
+    edge(<frontend>, <invio-dati-frontend-backend>),
+    edge(<agente>, <invio-dati-frontend-backend>),
+
+    node(enclose: (<invio-dati-frontend-backend>,),
+        align(top + right)[Backend],
+        width: 200pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Invio dati workflow (frontend #sym.arrow backend) UC diagram.]
+) <invio-dati-frontend-backend-diagram>
+- *Descrizione*:
+  - Questo caso d’uso descrive le operazioni di invio dei dati necessari da parte del frontend al backend per l’esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Frontend.
+- *Attori secondari*:
+  - Agente.
+- *Scenario principale*:
+  - Frontend:
+    1. invia la lista dei blocchi e degli archi del workflow. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
+  - Backend:
+    1. riceve i dati necessari per l'esecuzione del workflow;
+    2. invia i dati all'agente (@invio-dati-backend-agente).
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata.
+- *Post-condizioni*:
+  - Il backend riceve i dati necessari dal frontend per l'esecuzione del workflow.
+
+=== Invio dati workflow (backend #sym.arrow agente)<invio-dati-backend-agente>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
+    edge(<back-end>, <invio-dati-backend-agente>),
+
+    node((2,0.5), align(center)[
+            @invio-dati-backend-agente Invio dati workflow
+    ],  name: <invio-dati-backend-agente>),
+
+
+    node(enclose: (<invio-dati-backend-agente>,),
+        align(top + right)[Agente],
+        width: 200pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Invio dati workflow (backend #sym.arrow agente) UC diagram.]
+) <invio-dati-backend-agente-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow, approfondendo @esecuzione-workflow.
+- *Attori principali*:
+  - Backend.
+- *Scenario principale*:
+ - Backend:
+    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend), ed i token di autorizzazione necessari.
+ - Agente:
+   1. riceve i dati necessari per l'esecuzione del workflow.
+- *Pre-condizioni*:
+   - L'esecuzione del workflow è stata avviata;
+   - Il backend ha ricevuto i dati relativi al workflow dal frontend.
+- *Post-condizioni*:
+  - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
+
+
+
+
