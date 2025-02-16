@@ -39,7 +39,26 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
   - Altro
     - #link("https://github.com/techminds-unipd/docs/issues/234")[Issue \#234] #footnote(link("https://github.com/techminds-unipd/docs/issues/234")): Scrivere lettera di presentazione per RTB;
     - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235] #footnote(link("https://github.com/techminds-unipd/docs/issues/235")): Uniformare date in tutti i documenti.
+- Issue aggiuntive:
+  - Piano di progetto:
+  
+    - #link("https://github.com/techminds-unipd/docs/issues/281")[Issue \#281]: Aggiornamento PdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/327")[Issue \#327]: Redazione consuntivo sprint 5;
+    - #link("https://github.com/techminds-unipd/docs/issues/326")[Issue \#326]: Redazione consuntivo di periodo RTB;
+    - #link("https://github.com/techminds-unipd/docs/issues/325")[Issue \#325]: Documentare preventivo a finire in struttura sprint;
+    - #link("https://github.com/techminds-unipd/docs/issues/324")[Issue \#324]: Ridondanza diagramma di Gantt.
+  - Piano di qualifica:
+    - #link("https://github.com/techminds-unipd/docs/issues/287")[Issue \#287]: Test di sistema.
+  - Norme di progetto:
+    - #link("https://github.com/techminds-unipd/docs/issues/276")[Issue \#276]: Documentare aggiornamento cruscotto in NdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/309")[Issue \#309]: Gestione link e footnote;
+    - #link("https://github.com/techminds-unipd/docs/issues/311")[Issue \#311]: Mettere la milestone, quando viene create una issue.
+  - Glossario:
+    - #link("https://github.com/techminds-unipd/docs/issues/285")[Issue \#285]: Aggiornamento Glossari.
+  - Altro:
+    - #link("https://github.com/techminds-unipd/docs/issues/313")[Issue \#313]: Mettere il numero di versione sui documenti nel sito web.
 
+    
 ==== Diagramma di Gantt
 Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
 Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
