@@ -1,6 +1,7 @@
 #import "/template/template.typ": glossario,team, tabellaSprint, pieChartSprint
 #import "@preview/timeliney:0.1.0"
 #import "../costi.typ": getSprintCostsSection
+#show figure: set block(breakable: true)
 
 === Sprint 2
 - Durata: 09/12/2024 - 20/12/2024
@@ -52,7 +53,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
 
 ==== Diagramma di Gantt
 #figure(
-timeliney.timeline(
+    [#timeliney.timeline(
   show-grid: true,
   {
     import timeliney: *
@@ -90,6 +91,19 @@ timeliney.timeline(
         task(align(center, [Redigere 'Pianificazione' #linebreak() in piano di progetto]), (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
 
+  })
+
+#timeliney.timeline(
+  show-grid: true,
+  {
+    import timeliney: *
+
+    headerline(group(([*Dicembre 2024*], 10)))
+    headerline(
+      group(..range(5).map(n => strong(str(n + 9)))),
+      group(..range(5).map(n => strong(str(n + 9+7)))),
+    )
+
     taskgroup(title: [*Piano di qualifica*], {
         task("Fix piano di qualifica", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
         task("Redigere nuove sezioni piano di qualifica", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
@@ -109,7 +123,7 @@ timeliney.timeline(
         task("Creazione checklist per i verificatori", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
     })
   }
-),
+)],
 caption: [Diagramma Gantt sprint 2.]
 )<diagramma-gantt-sprint2>
 
