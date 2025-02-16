@@ -51,16 +51,6 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
 
 
 ==== Diagramma di Gantt
-Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
-Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
-#linebreak()I colori sono significativi:
-#list(
-    indent: 10pt,
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
-[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
-)
-
 #figure(
 timeliney.timeline(
   show-grid: true,
