@@ -587,17 +587,23 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     label-size: 8pt,
     node-inset: 10pt,
     node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
     node((2,0), align(center)[
             @creazione-nuovo-workflow Creazione workflow vuoto
     ], name: <a>),
 
-    node(enclose: (<a>,),
+    node((2,0.7), align(center)[
+            @inserimento-nome-workflow Inserimento nome workflow
+    ], name: <b>),
+
+    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<a>,<b>,),
         align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
+        width: 210pt,
+        height: 170pt,
         snap: -1,
         name: <group>)
     ),
@@ -610,7 +616,8 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
  - Utente autenticato:
    1. naviga nella pagina workflow;
-   2. seleziona l'opzione per creare un nuovo workflow.
+   2. inserisce il nome del workflow (@inserimento-nome-workflow);   
+   3. seleziona l'opzione per creare un nuovo workflow.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
    2. crea un nuovo workflow vuoto;
@@ -618,48 +625,21 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene creato il workflow vuoto.
 
-=== Visualizzazione workflow <visualizzazione-workflow>
-
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @visualizzazione-workflow Visualizzazione workflow
-    ], name: <a>),
-
-    node(enclose: (<a>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione workflow UC diagram.]
-) <visualizzazione-workflow-diagram>
-
+==== Inserimento nome workflow <inserimento-nome-workflow>
 - *Descrizione*:
-  - Questo caso d'uso descrive la procedura di visualizzazione di un workflow.
+  - Questo caso d'uso descrive la procedura di inserimento del nome di un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
- - Utente autenticato:
-   1. seleziona il workflow da visualizzare.
- - Sistema:
-   1. mostra il workflow selezionato dall'utente.
-- *Pre-condizioni*:
-   - L'utente ha creato almeno un workflow.
+  - Utente autenticato:
+    1. inserisce il nome del workflow.
+  - Sistema:
+    1. associa il nome immesso al workflow;
+    2. continua la procedura di creazione del workflow.
 - *Post-condizioni*:
-   - Viene mostrato il workflow selezionato dall'utente.
+  - Il nome del workflow è stato inserito.
 
-=== Aggiunta di un blocco (Gmail/Calendar/Pastebin) <aggiunta-blocco>
+=== Aggiunta di un blocco <aggiunta-blocco>
 #figure(
     diagram(
     debug: false,
@@ -682,16 +662,16 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Aggiunta di un blocco (Gmail/Calendar/Pastebin) UC diagram.]
+    caption: [Aggiunta di un blocco UC diagram.]
 ) <aggiunta-blocco-diagram>
 
 - *Descrizione*:
-  - Questo caso d'uso descrive la procedura di aggiunta di un blocco (Gmail/Calendar/Pastebin) in un workflow.
+  - Questo caso d'uso descrive la procedura di aggiunta di un blocco in un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. aggiunge un blocco di automazione (Gmail/Calendar/Pastebin) già configurato, trascinandolo nell'area drag and drop.
+   1. aggiunge un blocco di automazione già configurato, trascinandolo nell'area drag and drop.
  - Sistema:
    1. gestisce l'input dell'utente;
    2. aggiorna il workflow.
@@ -911,6 +891,92 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - L'utente ha creato un workflow con una descrizione in almeno un arco orientato.
 - *Post-condizioni*:
    - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
+
+=== Visualizzazione workflow <visualizzazione-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((1.8,0), align(center)[
+            @visualizzazione-workflow Visualizzazione workflow
+    ], name: <a>),
+
+    node((1.2,0.8), align(center)[
+            @visualizzazione-blocco-workflow Visualizzazione \ blocco workflow
+    ], name: <b>),
+
+    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+
+    node((2.5,0.8), align(center)[
+            @visualizzazione-arco-workflow Visualizzazione \ arco workflow
+    ], name: <c>),
+
+    edge(<a>, <c>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<a>,<b>,<c>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione workflow UC diagram.]
+) <visualizzazione-workflow-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. visualizza l'insieme di nodi del workflow (@visualizzazione-blocco-workflow);
+   2. visualizza l'insieme di archi del workflow (@visualizzazione-arco-workflow).
+ - Sistema:
+   1. mostra il workflow selezionato dall'utente.
+- *Pre-condizioni*:
+   - L'utente ha creato almeno un workflow.
+- *Post-condizioni*:
+   - Viene mostrato il workflow selezionato dall'utente.
+
+==== Visualizzazione blocco workflow <visualizzazione-blocco-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un blocco presente in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. visualizza il nome del servizio all'interno del blocco presente nel workflow.
+  - Sistema:
+    1. mostra il blocco presente nel workflow.
+- *Pre-condizioni*:
+  - L'utente ha creato almeno un workflow.
+- *Post-condizioni*:
+  - L'utente visualizza il blocco presente nel workflow.
+
+==== Visualizzazione arco workflow <visualizzazione-arco-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un arco presente in un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. visualizza l'arco che collega i blocchi presenti nel workflow;
+    2. visualizza la descrizione dell'automazione sull'arco.
+  - Sistema:
+    1. mostra l'arco e la descrizione presente nel workflow.
+- *Pre-condizioni*:
+  - L'utente ha creato almeno un workflow.
+- *Post-condizioni*:
+  - L'utente visualizza l'arco e la descrizione presente nel workflow.
+
 
 === Visualizzazione blocchi configurati <visualizzazione-blocchi-configurati>
 
@@ -1395,7 +1461,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
-  - LLM.
+  - LLM;
+  - Google;
+  - Pastebin.
 - *Scenario principale*:
   - Utente autenticato:
     1. ha avviato l'esecuzione di un workflow valido.
@@ -1443,7 +1511,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. ha eseguito il workflow (@esecuzione-workflow).
+    1. visualizza la risposta testuale dell'agente, contenente l'esito dei passi dell'esecuzione e link delle risorse generate.
   - Sistema:
     1. riceve il risultato della corretta esecuzione del workflow da @esecuzione-workflow;
     2. mostra il risultato all'utente.
