@@ -106,9 +106,7 @@ Sono stati completati tutti i task tranne #link("https://github.com/techminds-un
 ==== Restrospettiva
 Non ci sono state particolari difficoltà durante questo periodo, quindi non è stato deciso alcun cambiamento al way of working.
 
-==== Costi
-
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 3)
 
@@ -124,7 +122,7 @@ Non ci sono state particolari difficoltà durante questo periodo, quindi non è 
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(3, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)

@@ -129,9 +129,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     [Talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro a contribuire ad un ruolo che non è il
     proprio, dando comunque priorità al ruolo deciso nello sprint planning.],
 )
-==== Costi
-
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 2)
 
@@ -147,7 +145,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(2, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)

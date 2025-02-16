@@ -92,9 +92,8 @@ caption: [Diagramma Gantt sprint 5.]
 
 ==== Retrospettiva
 Dalla retrospettiva abbiamo deciso che nel piano di progetto documenteremo le nuove issue create in seguito alla pianificazione iniziale.
-==== Costi
 
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 5)
 
@@ -109,7 +108,7 @@ Dalla retrospettiva abbiamo deciso che nel piano di progetto documenteremo le nu
 #if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
-  ===== Consuntivo
+  ==== Consuntivo
   I numeri tra parentesi indicano le variazioni rispetto al preventivo.
   #tabellaSprint(5, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
   <tabella-ConsuntivoSprint5> \

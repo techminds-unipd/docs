@@ -85,9 +85,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     [si cercherà di automatizzare il controllo dei termini del glossario presenti nei vari documenti, visto che verificare che i termini siano correttamente indicati richiede una quantità di tempo molto onerosa.]
 )
 
-==== Costi
-
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 1)
 
@@ -103,7 +101,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
