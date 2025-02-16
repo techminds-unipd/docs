@@ -1512,9 +1512,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node((0.3,0.5), [#image("../assets/actor.jpg") Backend], stroke: 0pt, name: <back-end>),
     edge(<back-end>, <invio-dati-backend-agente>),
 
-    node((3.5,0.5), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
-    edge(<llm>, <invio-dati-backend-agente>),
-
     node((2,0.5), align(center)[
             @invio-dati-backend-agente Invio dati workflow
     ],  name: <invio-dati-backend-agente>),
@@ -1534,14 +1531,11 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Questo caso d'uso descrive le operazioni di invio dei dati necessari da parte del backend all'agente per l'esecuzione di un workflow, approfondendo @esecuzione-workflow.
 - *Attori principali*:
   - Backend.
-- *Attori secondari*:
-  - LLM.
 - *Scenario principale*:
  - Backend:
     1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend), ed i token di autorizzazione necessari.
  - Agente:
-   1. riceve i dati necessari per l'esecuzione del workflow;
-   2. esegue le automazioni interfacciandosi con un LLM esterno.
+   1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:
    - L'esecuzione del workflow è stata avviata;
    - Il backend ha ricevuto i dati relativi al workflow dal frontend.
