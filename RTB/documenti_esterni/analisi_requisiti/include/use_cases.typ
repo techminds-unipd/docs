@@ -1368,7 +1368,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
   - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
-  - Visualizzazione errore runtime (@vis-errore-runtime).
+  - Visualizzazione errore runtime (@vis-errore-runtime);
   - Visualizzazione errore workflow (@vis-errore-workflow).
   
 
