@@ -1416,7 +1416,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Attori principali*:
   - Utente autenticato.
 - *Attori secondari*:
-  - LLM.
+  - LLM;
+  - Google;
+  - Pastebin.
 - *Scenario principale*:
   - Utente autenticato:
     1. ha avviato l'esecuzione di un workflow valido.
