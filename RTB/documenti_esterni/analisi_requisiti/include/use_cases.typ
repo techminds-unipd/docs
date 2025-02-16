@@ -550,10 +550,10 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node((-0.6,0.5), [#image("../assets/actor.jpg") Utente #linebreak() autenticato], stroke: 0pt, name: <utente-autenticato>),
     edge(<utente-autenticato>, <esecuzione-workflow>),
 
-    node((3.9,0), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
+    node((3.9,0.2), [#image("../assets/actor.jpg") LLM], stroke: 0pt, name: <llm>),
     edge(<llm>, <esecuzione-workflow>),
     
-    node((3.5,0.55), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
+    node((3.3,0.55), [#image("../assets/actor.jpg") Google], stroke: 0pt, name: <ggl>),
     edge(<ggl>, <esecuzione-workflow>),
 
     node((3.9,1.2), [#image("../assets/actor.jpg") Pastebin], stroke: 0pt, name: <pstb>),
@@ -1485,15 +1485,15 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Questo caso d’uso descrive le operazioni di invio dei dati necessari da parte del frontend al backend per l’esecuzione di un workflow, approfondendo @esecuzione-workflow.
 - *Attori principali*:
   - Frontend.
+- *Attori secondari*:
+  - Agente.
 - *Scenario principale*:
   - Frontend:
     1. invia la lista dei blocchi del workflow;
     2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
   - Backend:
-    1. riceve i dati necessari per l'esecuzione del workflow.
-    2. invia i dati all'agente (@invio-dati-backend-agente);
-    //3. riceve un risultato dall'agente;
-    //4. restituisce il risultato al frontend.
+    1. riceve i dati necessari per l'esecuzione del workflow;
+    2. invia i dati all'agente (@invio-dati-backend-agente).
 - *Pre-condizioni*:
    - L'esecuzione del workflow è stata avviata.
 - *Post-condizioni*:
@@ -1543,11 +1543,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Agente:
    1. riceve i dati necessari per l'esecuzione del workflow;
    2. esegue le automazioni interfacciandosi con un LLM esterno.
-   //3. termina l'esecuzione;
-   //4. comunica la terminazione dell'esecuzione al backend.
 - *Pre-condizioni*:
    - L'esecuzione del workflow è stata avviata;
-   - Il backend ha ricevuto ha ricevuto i dati relativi al workflow dal frontend.
+   - Il backend ha ricevuto i dati relativi al workflow dal frontend.
 - *Post-condizioni*:
   - L'agente riceve i dati necessari dal backend per l'esecuzione del workflow.
 
