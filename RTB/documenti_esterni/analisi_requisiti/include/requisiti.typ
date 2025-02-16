@@ -98,7 +98,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
-#pagebreak()
+
 == Riepilogo
 #set par(justify: false)
 #figure(
