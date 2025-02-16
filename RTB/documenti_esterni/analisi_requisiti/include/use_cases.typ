@@ -1489,8 +1489,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Agente.
 - *Scenario principale*:
   - Frontend:
-    1. invia la lista dei blocchi del workflow;
-    2. invia la lista degli archi. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
+    1. invia la lista dei blocchi e degli archi del workflow. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
   - Backend:
     1. riceve i dati necessari per l'esecuzione del workflow;
     2. invia i dati all'agente (@invio-dati-backend-agente).
@@ -1538,8 +1537,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - LLM.
 - *Scenario principale*:
  - Backend:
-    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend);
-    2. invia i token di autorizzazione necessari.
+    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend), ed i token di autorizzazione necessari.
  - Agente:
    1. riceve i dati necessari per l'esecuzione del workflow;
    2. esegue le automazioni interfacciandosi con un LLM esterno.
