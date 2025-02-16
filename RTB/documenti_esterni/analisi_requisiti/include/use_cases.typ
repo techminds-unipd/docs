@@ -636,8 +636,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Sistema:
     1. verifica che il nome del workflow sia univoco;
     2. continua la procedura di creazione del workflow.
-- *Pre-condizioni*:
-  - L'utente ha scelto di creare un nuovo workflow.
 - *Post-condizioni*:
   - Il nome del workflow è stato inserito.
 
