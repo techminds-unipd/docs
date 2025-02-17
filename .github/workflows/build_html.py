@@ -5,13 +5,18 @@ if 'GITHUB_WORKSPACE' in os.environ:
     REPO_DIR = os.environ['GITHUB_WORKSPACE']
 
 def build_link(path):
+    version = ""
+    if len(path.split("::")) >= 2:
+        version = path.split("::")[1]
+    path = path.split("::")[0]
+
     link = os.path.abspath(path)
     if 'GITHUB_WORKSPACE' in os.environ:
         link = os.path.abspath(path).replace(REPO_DIR, "").replace("/build/", "")
     name = os.path.basename(path).replace(".pdf","")
     name = name[0].upper() + name[1:]
     name = format_name(name)
-    return "<a href=\"{}\" target=\"_blank\" >{}</a> <i class=\"fa-solid fa-arrow-up-right-from-square\"></i>\n".format(link, name)
+    return "<li><a href=\"{}\" target=\"_blank\" >{}</a> <i class=\"fa-solid fa-arrow-up-right-from-square\"></i> {}\n</li>".format(link, name, version)
 
 #Questa funzione funziona solo se teniamo i nomi dei documenti come sono ora.
 def format_name(name):
@@ -30,8 +35,11 @@ for i in re.findall("{.*}", content):
     lists = ""
     add = []
     for pdf in pdfs:
-        if i[1:-1] in pdf:
-            add.append(pdf)
+        if i[1:-1].split("::")[0] in pdf:
+            if len(i[1:-1].split("::")) >= 2:
+                add.append(pdf + "::" +i[1:-1].split("::")[1])
+            else:
+                add.append(pdf)
     add.sort(reverse=True)
     for pdf in add:
         lists = lists + build_link(pdf)
