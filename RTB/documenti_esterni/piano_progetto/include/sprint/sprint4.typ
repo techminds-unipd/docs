@@ -26,15 +26,15 @@ In questo quarto sprint ci concentreremo sulla redazione dei documenti necessari
     - #link("https://github.com/techminds-unipd/docs/issues/188")[Issue \#188] #footnote(link("https://github.com/techminds-unipd/docs/issues/188")): Redigere preventivo sprint 4.
 
   - Piano di qualifica
-    - #link("https://github.com/techminds-unipd/docs/issues/192")[Issue \#192] #footnote(link("https://github.com/techminds-unipd/docs/issues/192")): Redigere sezione qualità di prodotto;
-    - #link("https://github.com/techminds-unipd/docs/issues/193")[Issue \#193] #footnote(link("https://github.com/techminds-unipd/docs/issues/193")): Redigere sezione qualità di processo;
-    - #link("https://github.com/techminds-unipd/docs/issues/194")[Issue \#194] #footnote(link("https://github.com/techminds-unipd/docs/issues/194")): Redigere sezione qualità per obiettivo (processi primari);
-    - #link("https://github.com/techminds-unipd/docs/issues/195")[Issue \#195] #footnote(link("https://github.com/techminds-unipd/docs/issues/195")): Redigere sezione qualità per obiettivo (processi di supporto);
-    - #link("https://github.com/techminds-unipd/docs/issues/196")[Issue \#196] #footnote(link("https://github.com/techminds-unipd/docs/issues/196")): Redigere sezione qualità per obiettivo (processi organizzativi).
+    - #link("https://github.com/techminds-unipd/docs/issues/192")[Issue \#192] #footnote(link("https://github.com/techminds-unipd/docs/issues/192")): Redigere sezione "Qualità di prodotto";
+    - #link("https://github.com/techminds-unipd/docs/issues/193")[Issue \#193] #footnote(link("https://github.com/techminds-unipd/docs/issues/193")): Redigere sezione "Qualità di processo";
+    - #link("https://github.com/techminds-unipd/docs/issues/194")[Issue \#194] #footnote(link("https://github.com/techminds-unipd/docs/issues/194")): Redigere sezione "Qualità per obiettivo" (processi primari);
+    - #link("https://github.com/techminds-unipd/docs/issues/195")[Issue \#195] #footnote(link("https://github.com/techminds-unipd/docs/issues/195")): Redigere sezione "Qualità per obiettivo" (processi di supporto);
+    - #link("https://github.com/techminds-unipd/docs/issues/196")[Issue \#196] #footnote(link("https://github.com/techminds-unipd/docs/issues/196")): Redigere sezione "Qualità per obiettivo" (processi organizzativi).
 
   - Norme di progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/197")[Issue \#197] #footnote(link("https://github.com/techminds-unipd/docs/issues/197")): Redigere sezione gestione operativa;
-    - #link("https://github.com/techminds-unipd/docs/issues/198")[Issue \#198] #footnote(link("https://github.com/techminds-unipd/docs/issues/198")): Redigere sezione accertamento della qualità.
+    - #link("https://github.com/techminds-unipd/docs/issues/197")[Issue \#197] #footnote(link("https://github.com/techminds-unipd/docs/issues/197")): Redigere sezione "Gestione operativa";
+    - #link("https://github.com/techminds-unipd/docs/issues/198")[Issue \#198] #footnote(link("https://github.com/techminds-unipd/docs/issues/198")): Redigere sezione "Accertamento della qualità".
 
 ==== Diagramma di Gantt
 #figure(
@@ -62,15 +62,15 @@ timeliney.timeline(
     })
 
     taskgroup(title: [*Piano di qualifica*], {
-      task(align(center, [Redigere sezione qualità #linebreak() di prodotto]), (from: 8, to: 11, style: (stroke: 8pt + gray)), (from: 8, to: 11, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi primari)]), (from: 11, to: 15, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi di supporto)]), (from: 9, to: 11, style: (stroke: 8pt + gray)), (from: 9, to: 11, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione qualità #linebreak() per obiettivo (processi organizzativi)]), (from: 12, to: 14, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione "Qualità #linebreak() di prodotto"]), (from: 8, to: 11, style: (stroke: 8pt + gray)), (from: 8, to: 11, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione "Qualità #linebreak() per obiettivo" (processi primari)]), (from: 11, to: 15, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione "Qualità #linebreak() per obiettivo" (processi di supporto)]), (from: 9, to: 11, style: (stroke: 8pt + gray)), (from: 9, to: 11, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione "Qualità #linebreak() per obiettivo" (processi organizzativi)]), (from: 12, to: 14, style: (stroke: 8pt + gray)), (from: 12, to: 15, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Norme di progetto*], {
-      task("Redigere sezione gestione operativa", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
-      task(align(center, [Redigere sezione accertamento #linebreak() della qualità]), (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 15, style: (stroke: 2pt + red)))
+      task("Redigere sezione \"Gestione operativa\"", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Redigere sezione "Accertamento #linebreak() della qualità"]), (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 15, style: (stroke: 2pt + red)))
     })
   }
 ),

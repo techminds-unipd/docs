@@ -31,7 +31,7 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
     - #link("https://github.com/techminds-unipd/docs/issues/236")[Issue \#236] #footnote(link("https://github.com/techminds-unipd/docs/issues/236")): Aggiornamento cruscotto;
     - #link("https://github.com/techminds-unipd/docs/issues/237")[Issue \#237] #footnote(link("https://github.com/techminds-unipd/docs/issues/237")): Metriche pianificazione e miglioramento;
     - #link("https://github.com/techminds-unipd/docs/issues/238")[Issue \#238] #footnote(link("https://github.com/techminds-unipd/docs/issues/238")): Uniformare la caption delle tabelle in piano di qualifica;
-    - #link("https://github.com/techminds-unipd/docs/issues/239")[Issue \#239] #footnote(link("https://github.com/techminds-unipd/docs/issues/239")): Macrosezione miglioramenti in piano di qualifica.
+    - #link("https://github.com/techminds-unipd/docs/issues/239")[Issue \#239] #footnote(link("https://github.com/techminds-unipd/docs/issues/239")): Macrosezione "Miglioramenti" in piano di qualifica.
 
   - Norme di progetto
     - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote(link("https://github.com/techminds-unipd/docs/issues/226")): Modificare identificativi metriche in piano di qualifica e norme di progetto;
@@ -70,7 +70,7 @@ timeliney.timeline(
       task("Aggiornamento cruscotto", (from: 1, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 6, style: (stroke: 2pt + red)))
       task("Metriche pianificazione e miglioramento", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
       task(align(center, [Uniformare le caption delle #linebreak() tabelle in piano di qualifica]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
-      task(align(center, [Macrosezione miglioramenti #linebreak() in piano di qualifica]), (from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Macrosezione "Miglioramenti" #linebreak() in piano di qualifica]), (from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Norme di progetto*], {

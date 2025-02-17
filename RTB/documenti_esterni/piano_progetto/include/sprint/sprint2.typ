@@ -31,7 +31,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
 
     - Piano di progetto
         - #link("https://github.com/techminds-unipd/docs/issues/83")[Issue \#83] #footnote(link("https://github.com/techminds-unipd/docs/issues/83")): Sistemare il paragrafo spiegazioni;
-        - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106] #footnote(link("https://github.com/techminds-unipd/docs/issues/106")): Aggiornare piano di progetto (sezione sprint 1);
+        - #link("https://github.com/techminds-unipd/docs/issues/106")[Issue \#106] #footnote(link("https://github.com/techminds-unipd/docs/issues/106")): Aggiornare piano di progetto (sezione "Sprint 1");
         - #link("https://github.com/techminds-unipd/docs/issues/110")[Issue \#110] #footnote(link("https://github.com/techminds-unipd/docs/issues/110")): Aggiungere info sprint 2.
         - #link("https://github.com/techminds-unipd/docs/issues/112")[Issue \#112] #footnote(link("https://github.com/techminds-unipd/docs/issues/112")): Redigere "Pianificazione" in piano di progetto.
 
@@ -85,10 +85,10 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
     })
 
     taskgroup(title: [*Piano di progetto*], {
-        task(align(center, [Aggiornare piano di #linebreak() progetto [sezione sprint 1]]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task(align(center, [Aggiornare piano di #linebreak() progetto [sezione "Sprint 1"]]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
         task("Aggiungere info sprint 2", (from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
         task("Sistemare il paragrafo spiegazioni", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-        task(align(center, [Redigere 'Pianificazione' #linebreak() in piano di progetto]), (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere "Pianificazione" #linebreak() in piano di progetto]), (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
 
   })
@@ -110,8 +110,8 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
     })
 
     taskgroup(title: [*Norme di progetto*], {
-        task(align(center, [Redigere Processi primari #linebreak() in norme di progetto]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
-        task(align(center, [Redigere Processi organizzativi #linebreak() in norme di progetto]), (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere "Processi primari" #linebreak() in norme di progetto]), (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 5, style: (stroke: 2pt + red)))
+        task(align(center, [Redigere "Processi organizzativi" #linebreak() in norme di progetto]), (from: 4, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Automazione*], {
