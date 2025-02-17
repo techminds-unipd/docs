@@ -67,6 +67,7 @@ Si dividono in:
         table.header([*Codice*], [*Descrizione*], [*Documento*],[*Fonti*] ),
         align: horizon + center,
         [QMR1],[Documentare le criticità e i limiti delle soluzioni individuate.],[],[Capitolato],
+        //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
         [QMR2],[Documentare i bug presenti.],[],[Capitolato],
         [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[],[Capitolato],
         [QMR4],[Copertura dei #glossario[test di unità] pari ad almeno il 70% del codice prodotto.],[],[Capitolato],
