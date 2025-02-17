@@ -50,7 +50,7 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
     - #link("https://github.com/techminds-unipd/docs/issues/309")[Issue \#309] #footnote(link("https://github.com/techminds-unipd/docs/issues/309")): Gestione link e footnote;
     - #link("https://github.com/techminds-unipd/docs/issues/311")[Issue \#311] #footnote(link("https://github.com/techminds-unipd/docs/issues/311")): Mettere la milestone, quando viene create una issue.
   - Glossario:
-    - #link("https://github.com/techminds-unipd/docs/issues/285")[Issue \#285] #footnote(link("https://github.com/techminds-unipd/docs/issues/285")): Aggiornamento Glossari.
+    - #link("https://github.com/techminds-unipd/docs/issues/285")[Issue \#285] #footnote(link("https://github.com/techminds-unipd/docs/issues/285")): Aggiornamento Glossario.
   - Altro:
     - #link("https://github.com/techminds-unipd/docs/issues/313")[Issue \#313] #footnote(link("https://github.com/techminds-unipd/docs/issues/313")): Mettere il numero di versione sui documenti nel sito web.
 
