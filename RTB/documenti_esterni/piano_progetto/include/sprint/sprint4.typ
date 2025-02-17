@@ -37,16 +37,6 @@ In questo quarto sprint ci concentreremo sulla redazione dei documenti necessari
     - #link("https://github.com/techminds-unipd/docs/issues/198")[Issue \#198] #footnote(link("https://github.com/techminds-unipd/docs/issues/198")): Redigere sezione accertamento della qualità.
 
 ==== Diagramma di Gantt
-Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
-Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
-#linebreak()I colori sono significativi:
-#list(
-    indent: 10pt,
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
-[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
-)
-
 #figure(
 timeliney.timeline(
   show-grid: true,
@@ -94,9 +84,7 @@ Sono state completate tutte le task previste per questo sprint. La #link("https:
 Osservando i documenti abbiamo notato la mancanza di una sezione dedicata ai dati forniti dalle metriche, vanificando l'utilità delle stesse. Per questo motivo il prossimo sprint sarà dedicato alla realizzazione di un cruscotto che permetta di monitorare la qualità dei prodotti e dei processi, sfruttando i dati forniti dalle metriche già individuate.#linebreak()
 Durante questo sprint ci siamo anche accorti di non aver impostato delle milestone dettagliate per monitorare l'avanzamento dei documenti in vista dell'RTB. Abbiamo quindi deciso che nel prossimo sprint sarà creata una milestone per ogni documento, ad eccezione del glossario che, per sua natura, viene aggiornato quando necessario durante lo svolgimento delle task.
 
-==== Costi
-
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 4)
 
@@ -112,7 +100,7 @@ Durante questo sprint ci siamo anche accorti di non aver impostato delle milesto
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(4, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)

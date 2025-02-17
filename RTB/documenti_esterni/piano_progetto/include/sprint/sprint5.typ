@@ -41,16 +41,6 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
     - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235] #footnote(link("https://github.com/techminds-unipd/docs/issues/235")): Uniformare date in tutti i documenti.
 
 ==== Diagramma di Gantt
-Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
-Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
-#linebreak()I colori sono significativi:
-#list(
-    indent: 10pt,
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
-[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
-)
-
 #figure(
 timeliney.timeline(
   show-grid: true,
@@ -102,9 +92,8 @@ caption: [Diagramma Gantt sprint 5.]
 
 ==== Retrospettiva
 Dalla retrospettiva abbiamo deciso che nel piano di progetto documenteremo le nuove issue create in seguito alla pianificazione iniziale.
-==== Costi
 
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 5)
 
@@ -119,7 +108,7 @@ Dalla retrospettiva abbiamo deciso che nel piano di progetto documenteremo le nu
 #if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
-  ===== Consuntivo
+  ==== Consuntivo
   I numeri tra parentesi indicano le variazioni rispetto al preventivo.
   #tabellaSprint(5, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
   <tabella-ConsuntivoSprint5> \
