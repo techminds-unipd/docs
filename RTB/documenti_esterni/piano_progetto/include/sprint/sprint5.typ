@@ -15,27 +15,27 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
   - verificatore: #team.T, #team.M.
 
 - Issue:
-  - Analisi dei Requisiti
-    - #link("https://github.com/techminds-unipd/docs/issues/229")[Issue \#229] #footnote(link("https://github.com/techminds-unipd/docs/issues/229")): Refactoring Analisi dei Requisiti.
+  - Analisi dei requisiti
+    - #link("https://github.com/techminds-unipd/docs/issues/229")[Issue \#229] #footnote(link("https://github.com/techminds-unipd/docs/issues/229")): Refactoring analisi dei requisiti.
 
-  - Piano di Progetto
+  - Piano di progetto
     - #link("https://github.com/techminds-unipd/docs/issues/232")[Issue \#232] #footnote(link("https://github.com/techminds-unipd/docs/issues/232")): Scrivere consuntivo sprint 4;
     - #link("https://github.com/techminds-unipd/docs/issues/233")[Issue \#233] #footnote(link("https://github.com/techminds-unipd/docs/issues/233")): Scrivere pianificazione sprint 5;
-    - #link("https://github.com/techminds-unipd/docs/issues/139")[Issue \#139] #footnote(link("https://github.com/techminds-unipd/docs/issues/139")): Documentare la struttura dei periodi in PdP;
-    - #link("https://github.com/techminds-unipd/docs/issues/240")[Issue \#240] #footnote(link("https://github.com/techminds-unipd/docs/issues/240")): Documentare in PdP le milestone.
+    - #link("https://github.com/techminds-unipd/docs/issues/139")[Issue \#139] #footnote(link("https://github.com/techminds-unipd/docs/issues/139")): Documentare la struttura dei periodi in piano di progetto;
+    - #link("https://github.com/techminds-unipd/docs/issues/240")[Issue \#240] #footnote(link("https://github.com/techminds-unipd/docs/issues/240")): Documentare in piano di progetto le milestone.
 
-  - Piano di Qualifica
-    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote(link("https://github.com/techminds-unipd/docs/issues/226")): Modificare identificativi metriche in PdQ e NdP;
-    - #link("https://github.com/techminds-unipd/docs/issues/227")[Issue \#227] #footnote(link("https://github.com/techminds-unipd/docs/issues/227")): Refactoring dati metriche in PdQ;
+  - Piano di qualifica
+    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote(link("https://github.com/techminds-unipd/docs/issues/226")): Modificare identificativi metriche in piano di qualifica e norme di progetto;
+    - #link("https://github.com/techminds-unipd/docs/issues/227")[Issue \#227] #footnote(link("https://github.com/techminds-unipd/docs/issues/227")): Refactoring dati metriche in piano di qualifica;
     - #link("https://github.com/techminds-unipd/docs/issues/231")[Issue \#231] #footnote(link("https://github.com/techminds-unipd/docs/issues/231")): Scrivere descrizione metriche con TODO;
     - #link("https://github.com/techminds-unipd/docs/issues/236")[Issue \#236] #footnote(link("https://github.com/techminds-unipd/docs/issues/236")): Aggiornamento cruscotto;
     - #link("https://github.com/techminds-unipd/docs/issues/237")[Issue \#237] #footnote(link("https://github.com/techminds-unipd/docs/issues/237")): Metriche pianificazione e miglioramento;
-    - #link("https://github.com/techminds-unipd/docs/issues/238")[Issue \#238] #footnote(link("https://github.com/techminds-unipd/docs/issues/238")): Uniformare la caption delle tabelle in PdQ;
-    - #link("https://github.com/techminds-unipd/docs/issues/239")[Issue \#239] #footnote(link("https://github.com/techminds-unipd/docs/issues/239")): Macrosezione miglioramenti in PdQ.
+    - #link("https://github.com/techminds-unipd/docs/issues/238")[Issue \#238] #footnote(link("https://github.com/techminds-unipd/docs/issues/238")): Uniformare la caption delle tabelle in piano di qualifica;
+    - #link("https://github.com/techminds-unipd/docs/issues/239")[Issue \#239] #footnote(link("https://github.com/techminds-unipd/docs/issues/239")): Macrosezione miglioramenti in piano di qualifica.
 
-  - Norme di Progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote(link("https://github.com/techminds-unipd/docs/issues/226")): Modificare identificativi metriche in PdQ e NdP;
-    - #link("https://github.com/techminds-unipd/docs/issues/230")[Issue \#230] #footnote(link("https://github.com/techminds-unipd/docs/issues/230")): Nascondere sezioni non scritte in NdP.
+  - Norme di progetto
+    - #link("https://github.com/techminds-unipd/docs/issues/226")[Issue \#226] #footnote(link("https://github.com/techminds-unipd/docs/issues/226")): Modificare identificativi metriche in piano di qualifica e norme di progetto;
+    - #link("https://github.com/techminds-unipd/docs/issues/230")[Issue \#230] #footnote(link("https://github.com/techminds-unipd/docs/issues/230")): Nascondere sezioni non scritte in norme di progetto.
   - Altro
     - #link("https://github.com/techminds-unipd/docs/issues/234")[Issue \#234] #footnote(link("https://github.com/techminds-unipd/docs/issues/234")): Scrivere lettera di presentazione per RTB;
     - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235] #footnote(link("https://github.com/techminds-unipd/docs/issues/235")): Uniformare date in tutti i documenti.
@@ -53,34 +53,34 @@ timeliney.timeline(
     )
 
     taskgroup(title: [*Analisi dei requisiti*],{
-      task("Refactoring Analisi dei Requisiti", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+      task("Refactoring analisi dei requisiti", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Piano di Progetto*], {
+    taskgroup(title: [*Piano di progetto*], {
       task("Scrivere consuntivo sprint 4", (from: 1, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
       task("Scrivere pianificazione sprint 5", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 2, to: 4, style: (stroke: 2pt + red)))
-      task("Documentare la struttura dei periodi in PdP", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
-      task("Documentare in PdP le milestone", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare la struttura dei periodi #linebreak() in piano di progetto]), (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Documentare in piano di progetto le milestone", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Piano di Qualifica*], {
-      task(align(center, [Modificare identificativi metriche #linebreak() in PdQ e PdP]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
-      task("Refactoring dati metriche in PdQ", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+    taskgroup(title: [*Piano di qualifica*], {
+      task(align(center, [Modificare identificativi metriche #linebreak() in piano di qualifica e piano di progetto]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Refactoring dati metriche in piano di qualifica", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
       task("Scrivere descrizione metriche con TODO", (from: 1, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
       task("Aggiornamento cruscotto", (from: 1, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 6, style: (stroke: 2pt + red)))
       task("Metriche pianificazione e miglioramento", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
-      task("Uniformare le caption delle tabelle in PdQ", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
-      task("Macrosezione miglioramenti in PdQ", (from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Uniformare le caption delle #linebreak() tabelle in piano di qualifica]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Macrosezione miglioramenti #linebreak() in piano di qualifica]), (from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Norme di Progetto*], {
-      task(align(center, [Modificare identificativi metriche #linebreak() in PdQ e PdP]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
-      task("Nascondere sezioni non scritte in NdP", (from: 0, to: 3, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+    taskgroup(title: [*Norme di progetto*], {
+      task(align(center, [Modificare identificativi metriche #linebreak() in piano di qualifica e piano di progetto]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Nascondere sezioni non scritte #linebreak() in norme di progetto]), (from: 0, to: 3, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Altro*], {
       task(align(center, [Scrivere lettera di presentazione #linebreak() per RTB]), (from: 3, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
-      task("Uniformare dati in tutti i documenti", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Uniformare date in tutti i documenti", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
     })
   }
 ),

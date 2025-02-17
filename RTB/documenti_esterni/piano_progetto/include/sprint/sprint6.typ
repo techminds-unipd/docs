@@ -6,7 +6,7 @@
 - Durata: 17/02/2025 - 21/02/2025
 
 ==== Pianificazione
-Questo sesto sprint ha l'obiettivo primario di correggere il documento di Analisi dei Requisiti a seguito di quanto riportato dal professor Cardin nella valutazione RTB. La durata sarà di una settimana in quanto ritenuta sufficiente per portare a termine quanto di seguito preventivato.
+Questo sesto sprint ha l'obiettivo primario di correggere il documento di analisi dei requisiti a seguito di quanto riportato dal professor Cardin nella valutazione RTB. La durata sarà di una settimana in quanto ritenuta sufficiente per portare a termine quanto di seguito preventivato.
 
 - Ruoli:
   - responsabile: #team.C\;
@@ -15,7 +15,7 @@ Questo sesto sprint ha l'obiettivo primario di correggere il documento di Analis
   - verificatore: #team.G, #team.S.
 
 - Issue:
-  - Analisi dei Requisiti
+  - Analisi dei requisiti
     - #link("https://github.com/techminds-unipd/docs/issues/342")[Issue \#342] #footnote(link("https://github.com/techminds-unipd/docs/issues/342")): Aggiungere nuova tabella Tracciamento;
     - #link("https://github.com/techminds-unipd/docs/issues/341")[Issue \#341] #footnote(link("https://github.com/techminds-unipd/docs/issues/341")): Rendere atomici i requisiti funzionali;
     - #link("https://github.com/techminds-unipd/docs/issues/340")[Issue \#340] #footnote(link("https://github.com/techminds-unipd/docs/issues/340")): Aggiungere nuovi requisiti funzionali;
@@ -27,7 +27,7 @@ Questo sesto sprint ha l'obiettivo primario di correggere il documento di Analis
     - #link("https://github.com/techminds-unipd/docs/issues/334")[Issue \#334] #footnote(link("https://github.com/techminds-unipd/docs/issues/334")): Risoluzione struttura UC;
     - #link("https://github.com/techminds-unipd/docs/issues/333")[Issue \#333] #footnote(link("https://github.com/techminds-unipd/docs/issues/333")): Aggiungere numeri di versione e ultima visita nei link.
 
-  - Piano di Progetto
+  - Piano di progetto
     - #link("https://github.com/techminds-unipd/docs/issues/343")[Issue \#343] #footnote(link("https://github.com/techminds-unipd/docs/issues/343")): Pianificazione sprint 6;
     - #link("https://github.com/techminds-unipd/docs/issues/330")[Issue \#330] #footnote(link("https://github.com/techminds-unipd/docs/issues/330")): Aggiungere issue non inizialmente pianificate in sprint 5;
     - #link("https://github.com/techminds-unipd/docs/issues/325")[Issue \#325] #footnote(link("https://github.com/techminds-unipd/docs/issues/325")): Documentare preventivo a finire in struttura sprint;
@@ -61,7 +61,7 @@ timeliney.timeline(
       task(align(center, [Aggiungere numeri di versione #linebreak() e ultima visita nei link]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Piano di Progetto*], {
+    taskgroup(title: [*Piano di progetto*], {
       task("Pianificazione sprint 6", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
       task(align(center, [Aggiungere issue non inizialmente #linebreak() pianificate in sprint 5]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
       task(align(center, [Documentare preventivo a finire #linebreak()in struttura sprint]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
