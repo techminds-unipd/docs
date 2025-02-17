@@ -68,6 +68,8 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #include "sprint/sprint4.typ"
 #pagebreak()
 #include "sprint/sprint5.typ"
+#pagebreak()
+#include "sprint/sprint6.typ"
 
 
 #linebreak()
