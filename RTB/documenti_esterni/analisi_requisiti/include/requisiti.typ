@@ -46,7 +46,9 @@
 
         [FMR14], [L'utente autenticato deve poter fare il logout.], [@logout],
 
-        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow]
+        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow],
+        
+        [FMR16],[L'utente deve poter utilizzare almeno tre blocchi diversi.],[Capitolato],
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
@@ -60,22 +62,23 @@ Si dividono in:
 #set par(justify: false)
 #figure(
     table(
-        columns: (1fr, 5fr, 2fr),
+        columns: (1fr, 4fr, 2fr),
         fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }}, 
         inset: 10pt, 
-        table.header([*Codice*], [*Descrizione*], [*Fonti*]),
+        table.header([*Codice*], [*Descrizione*], [*Fonti*] ),
         align: horizon + center,
-        [QMR1],[Documentare le criticità e i limiti delle soluzioni individuate.],[Capitolato],
-        [QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[Capitolato],
-        [QMR3],[Documentare i bug presenti.],[Capitolato],
-        [QMR4],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
-        [QMR5],[Copertura dei #glossario[test di unità] pari ad almeno il 70% del codice prodotto.],[Capitolato],
-        [QMR6],[Documentare i casi d'uso.],[Capitolato],
-        [QMR7],[Documentare le classi attraverso #glossario[diagrammi UML].],[Capitolato],
-        [QMR8],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[Norme di progetto],
-        [QDR1],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger].],[Formazione col proponente],
-        [QMR9],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica].],[Piano di qualifica §2.2],
-        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint].],[Decisione interna]
+        [QMR1],[Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],[Capitolato],
+        //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
+        [QMR2],[Documentare nel #glossario[piano di qualifica] i bug presenti.],[Capitolato],
+        [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
+        [QMR4],[Documentare nel piano di qualifica la copertura dei #glossario[test di unità] (almeno il 70% del codice prodotto).],[Capitolato],
+        //Questo è un link ricorsivo
+        [QMR5],[Documentare nell'#glossario[analisi dei requisiti] i casi d'uso.],[Capitolato],
+        [QMR6],[Documentare nella specifica tecnica le classi attraverso #glossario[diagrammi UML].],[Capitolato],
+        //[QMR7],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[],[Norme di progetto],
+        [QMR7],[La documentazione deve rispettare le metriche descritte nel piano di qualifica.],[Piano di qualifica §2.2],
+        [QDR1],[Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],[Formazione col proponente],
+        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna, Formazione col proponente]
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
@@ -92,9 +95,11 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt, 
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        [CMR1],[Il prodotto deve prevedere almeno tre blocchi.],[Capitolato],
+        
         [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
-        [CMR2],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP.],[Decisione interna]
+        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP.],[Decisione interna],
+        [CMR2], [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.], [Decisione interna],
+        [CMR3], [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.], [Decisione interna],
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
