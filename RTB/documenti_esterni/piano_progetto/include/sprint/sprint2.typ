@@ -1,7 +1,6 @@
 #import "/template/template.typ": glossario,team, tabellaSprint, pieChartSprint
 #import "@preview/timeliney:0.1.0"
 #import "../costi.typ": getSprintCostsSection
-#show figure: set block(breakable: true)
 
 === Sprint 2
 - Durata: 09/12/2024 - 20/12/2024
@@ -51,6 +50,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
         - #link("https://github.com/techminds-unipd/docs/issues/115")[Issue \#115] #footnote(link("https://github.com/techminds-unipd/docs/issues/115")): Creazione checklist per i verificatori.
 
 
+#show figure: set block(breakable: true)
 ==== Diagramma di Gantt
 #figure(
     [#timeliney.timeline(
@@ -126,6 +126,7 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
 )],
 caption: [Diagramma Gantt sprint 2.]
 )<diagramma-gantt-sprint2>
+#show figure: set block(breakable: false)
 
 ==== Conclusioni
 Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/PoC/issues/3")[#underline("#3 Inizio implementazione agenti nel backend")] #footnote(link("https://github.com/techminds-unipd/PoC/issues/3")) riguardante il PoC, e due rivolte al piano di qualifica, ossia #link("https://github.com/techminds-unipd/docs/issues/109")[#underline("#109 Fix piano di qualifica")]#footnote(link("https://github.com/techminds-unipd/docs/issues/109")) e #link("https://github.com/techminds-unipd/docs/issues/111")[#underline("#111 Redigere nuove sezioni piano di qualifica")] #footnote(link("https://github.com/techminds-unipd/docs/issues/111")).
@@ -143,6 +144,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     [Talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro a contribuire ad un ruolo che non è il
     proprio, dando comunque priorità al ruolo deciso nello sprint planning.],
 )
+
 ==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 2)

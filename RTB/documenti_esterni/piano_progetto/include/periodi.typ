@@ -38,19 +38,19 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 
 - *Durata*: le date di inizio e fine dello sprint;
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
-- *Issue aggiuntive* (Opzionale): Attività non pianificate e aggiunte durante lo svolgersi dello sprint;
+- *Issue aggiuntive* (Opzionale): attività non pianificate e aggiunte durante lo svolgersi dello sprint;
 - *Ruoli*: elenca i ruoli assegnati ai membri del team in quel determinato sprint;
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]\;
 - #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Il diagramma conteggia solamente i giorni produttivi. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore #underline("grigio", stroke: 1pt + gray, evade: false)) e il tempo effettivamente impiegato (colore #underline("rosso", stroke: 1pt + red, evade: false)) per completare ogni issue. Inoltre le attività sono divise in macrosezioni, la cui linea (colore #underline("nero", stroke: 1pt + black, evade: false)) indica il tempo complessivo.
 - *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso;
 - #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
 - *Preventivo*:
-  - Tabella contenente le ore e i costi preventivati per ciascun ruolo e persona;
-  - Grafico a torta che mostra la distribuzione delle ore preventivate per ruolo.
+  - tabella contenente le ore e i costi preventivati per ciascun ruolo e persona;
+  - grafico a torta che mostra la distribuzione delle ore preventivate per ruolo.
 - *Consuntivo*:
-  - Tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
-  - Grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
-- *Aggiornamento Preventivo a Finire* (Opzionale): Testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
+  - tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
+  - grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
+- *Aggiornamento Preventivo a Finire* (Opzionale): testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;
