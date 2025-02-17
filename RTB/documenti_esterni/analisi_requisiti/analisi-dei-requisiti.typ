@@ -7,7 +7,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
-    "1.0.6", "17/02/2025", "Fix tabelle dei requisiti", team.T, "Qualcuno",
+    "1.0.6", "17/02/2025", "Fix tabelle dei requisiti", team.T, team.S,
     "1.0.5", "17/02/2025", "Fix use case errore operazione workflow", team.M, team.G,
     "1.0.4", "17/02/2025", "Fix use case visualizzazione blocchi configurati", team.M, team.G,
     "1.0.3", "17/02/2025", "Fix use case creazione e visualizzazione workflow", team.M, team.S,
