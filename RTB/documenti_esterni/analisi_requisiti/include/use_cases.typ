@@ -1076,7 +1076,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-    node-inset: 10pt,
+    node-inset: 12pt,
     node-shape: ellipse,
     node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
@@ -1085,13 +1085,13 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
             @salvataggio-workflow Salvataggio workflow
     ], name: <a>),
 
-    node((2,1), align(center)[
-            @errore-connessione-database Errore connessione database
+    node((1.999,1), align(center)[
+            @vis-errore-operazione-workflow Visualizzazione errore \ operazione workflow
     ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
     node((2.7,0.6), align(center)[
-            Database non disponibile
+            Errore operazione workflow
     ], shape: uc_comment, name: <c>),
 
     node((2,0.6), align(center)[
@@ -1121,22 +1121,22 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
-   - Errore connessione database (@errore-connessione-database).
+   - Errore connessione database (@vis-errore-operazione-workflow).
 
-=== Errore connessione database <errore-connessione-database>
+=== Visualizzazione errore operazione workflow <vis-errore-operazione-workflow>
 - *Descrizione*:
-  - Questo caso d'uso descrive la procedura di gestione dell'errore di connessione al database.
+  - Questo caso d'uso descrive la visualizzazione di un errore durante un'operazione svolta su un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. esegue un'operazione che richiede l'accesso ai dati sul database.
+   1. esegue un'operazione su un workflow.
  - Sistema:
-   1. interagisce con il database;
-   2. il database non è disponibile;
+   1. esegue l'operazione richiesta;
+   2. l'operazione fallisce;
    3. viene visualizzato un messaggio d'errore.
 - *Post-condizioni*:
-   - Viene segnalato all'utente che non è possibile connettersi al database.
+   - Viene segnalato all'utente che c'è stato un errore in seguito all'operazione richiesta.
 
 === Visualizzazione informazioni blocco <funzionalità-blocco>
 #figure(
@@ -1320,7 +1320,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-    node-inset: 10pt,
+    node-inset: 12pt,
     node-shape: ellipse,
     node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
@@ -1330,7 +1330,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ], name: <a>),
 
     node((2.7,0.6), align(center)[
-            Database non disponibile
+            Errore operazione workflow
     ], shape: uc_comment, name: <c>),
 
     node((2,0.6), align(center)[
@@ -1338,7 +1338,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge(<c>, <d>, "--"),
 
     node((2,1), align(center)[
-            @errore-connessione-database Errore connessione database
+            @vis-errore-operazione-workflow Visualizzazione errore \ operazione workflow
     ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
@@ -1365,7 +1365,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Il workflow selezionato è stato eliminato dal database e non è più disponibile.
 - *Estensioni*:
-   - Errore connessione database (@errore-connessione-database).
+   - Errore connessione database (@vis-errore-operazione-workflow).
 
 === Esecuzione workflow <esecuzione-workflow>
 

@@ -40,7 +40,7 @@
 
         [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
        
-        [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @errore-connessione-database],
+        [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @vis-errore-operazione-workflow],
 
         [FMR13], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar.], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
