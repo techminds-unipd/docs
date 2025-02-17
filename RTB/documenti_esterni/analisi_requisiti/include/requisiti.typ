@@ -95,7 +95,8 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         
         [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
         [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP.],[Decisione interna],
-        [CMR2], []
+        [CMR2], [Il prodotto deve funzionare correttamente su Firefox 129.x o verisioni successive], [Decisione interna],
+        [CMR3], [Il prodotto deve funzionare correttamente su Chromium 133.x o versioni successive], [Decisione interna],
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
