@@ -24,7 +24,7 @@
 
         [FMR3], [L'utente autenticato deve poter associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow.], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
 
-        [FMR4], [L'utente autenticato deve poter eseguire un workflow.], [@esecuzione-workflow, @vis-errore-workflow, @vis-errore-runtime, (Approfondimento: TODO)],
+        [FMR4], [L'utente autenticato deve poter eseguire un workflow.], [@esecuzione-workflow, @vis-errore-struttura-workflow, @vis-errore-runtime, (Approfondimento: TODO)],
 
         [FMR5], [L'utente autenticato deve poter vedere il risultato dell'esecuzione del workflow.], [@vis-risultato-esecuzione-workflow],
 
@@ -40,13 +40,14 @@
 
         [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
        
-        [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @errore-connessione-database],
+        [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @vis-errore-operazione-workflow],
 
         [FMR13], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar.], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
 
         [FMR14], [L'utente autenticato deve poter fare il logout.], [@logout],
 
-        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow],
+        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow],
+        
         [FMR16],[L'utente deve poter utilizzare almeno tre blocchi diversi.],[Capitolato],
     ),
     caption: [Tabella dei requisiti funzionali.],
