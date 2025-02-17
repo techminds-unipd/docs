@@ -50,19 +50,10 @@ In questo secondo sprint ci concentreremo principalmente sulla scrittura dei cas
         - #link("https://github.com/techminds-unipd/docs/issues/115")[Issue \#115] #footnote(link("https://github.com/techminds-unipd/docs/issues/115")): Creazione checklist per i verificatori.
 
 
+#show figure: set block(breakable: true)
 ==== Diagramma di Gantt
-Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
-Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
-#linebreak()I colori sono significativi:
-#list(
-    indent: 10pt,
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
-[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
-)
-
 #figure(
-timeliney.timeline(
+    [#timeliney.timeline(
   show-grid: true,
   {
     import timeliney: *
@@ -100,6 +91,19 @@ timeliney.timeline(
         task(align(center, [Redigere 'Pianificazione' #linebreak() in piano di progetto]), (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 10, style: (stroke: 2pt + red)))
     })
 
+  })
+
+#timeliney.timeline(
+  show-grid: true,
+  {
+    import timeliney: *
+
+    headerline(group(([*Dicembre 2024*], 10)))
+    headerline(
+      group(..range(5).map(n => strong(str(n + 9)))),
+      group(..range(5).map(n => strong(str(n + 9+7)))),
+    )
+
     taskgroup(title: [*Piano di qualifica*], {
         task("Fix piano di qualifica", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
         task("Redigere nuove sezioni piano di qualifica", (from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
@@ -119,9 +123,10 @@ timeliney.timeline(
         task("Creazione checklist per i verificatori", (from: 8, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
     })
   }
-),
+)],
 caption: [Diagramma Gantt sprint 2.]
 )<diagramma-gantt-sprint2>
+#show figure: set block(breakable: false)
 
 ==== Conclusioni
 Sono stati completati tutti i task tranne #link("https://github.com/techminds-unipd/PoC/issues/3")[#underline("#3 Inizio implementazione agenti nel backend")] #footnote(link("https://github.com/techminds-unipd/PoC/issues/3")) riguardante il PoC, e due rivolte al piano di qualifica, ossia #link("https://github.com/techminds-unipd/docs/issues/109")[#underline("#109 Fix piano di qualifica")]#footnote(link("https://github.com/techminds-unipd/docs/issues/109")) e #link("https://github.com/techminds-unipd/docs/issues/111")[#underline("#111 Redigere nuove sezioni piano di qualifica")] #footnote(link("https://github.com/techminds-unipd/docs/issues/111")).
@@ -139,9 +144,8 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     [Talvolta alcuni ruoli possono essere più scarni di lavoro di altri, abbiamo quindi deciso che i componenti del gruppo possono dedicare una parte delle proprie ore lavoro a contribuire ad un ruolo che non è il
     proprio, dando comunque priorità al ruolo deciso nello sprint planning.],
 )
-==== Costi
 
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 2)
 
@@ -157,7 +161,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(2, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
