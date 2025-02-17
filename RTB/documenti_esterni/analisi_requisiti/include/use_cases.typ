@@ -644,7 +644,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Scenario principale*:
   - Utente autenticato:
       1. visualizza il nome del servizio del blocco configurato;
-      2. visualizza un opzione all'interno del blocco per visualizzare maggiori informazioni.
+      2. visualizza un'opzione all'interno del blocco per visualizzare maggiori informazioni.
   - Sistema:
       1. mostra il blocco configurato.
 - *Post-condizioni*:
