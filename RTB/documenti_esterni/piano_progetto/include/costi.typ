@@ -90,7 +90,7 @@
     bressan_preventivo.push(   (0, 6, 0, 0, 0, 0) )
     corradin_preventivo.push(  (0, 0, 0, 0, 0, 7) )
     lazzarin_preventivo.push(  (0, 0, 4, 0, 0, 0) )
-    salviato_preventivo.push(  (6, 0, 2, 0, 0, 0) )
+    salviato_preventivo.push(  (0, 0, 2, 0, 0, 0) )
     squarzoni_preventivo.push( (0, 0, 5, 0, 0, 0) )
     tutino_preventivo.push(    (0, 0, 0, 0, 0, 7) )
     vallotto_preventivo.push(  (3, 0, 0, 0, 0, 0) )
