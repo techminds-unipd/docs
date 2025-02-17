@@ -46,7 +46,7 @@
 
         [FMR14], [L'utente autenticato deve poter fare il logout.], [@logout],
 
-        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow]
+        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow]
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>

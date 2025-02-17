@@ -1121,7 +1121,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
-   - Errore connessione database (@vis-errore-operazione-workflow).
+   - Visualizzazione errore operazione workflow (@vis-errore-operazione-workflow).
 
 === Visualizzazione errore operazione workflow <vis-errore-operazione-workflow>
 - *Descrizione*:
@@ -1365,7 +1365,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Il workflow selezionato è stato eliminato dal database e non è più disponibile.
 - *Estensioni*:
-   - Errore connessione database (@vis-errore-operazione-workflow).
+   - Visualizzazione errore operazione workflow (@vis-errore-operazione-workflow).
 
 === Esecuzione workflow <esecuzione-workflow>
 
