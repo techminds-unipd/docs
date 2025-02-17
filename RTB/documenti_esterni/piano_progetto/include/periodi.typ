@@ -69,6 +69,8 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #include "sprint/sprint4.typ"
 #pagebreak()
 #include "sprint/sprint5.typ"
+#pagebreak()
+#include "sprint/sprint6.typ"
 
 
 #linebreak()
@@ -78,7 +80,7 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #let totale = oreConsumate.zip((30, 20, 25, 25, 15, 15)).map(x => x.at(0) * x.at(1)).sum()
 
 === Consuntivo di periodo RTB
-I costi effettivamente sostenuti durante il periodo RTB sono stati i seguenti:
+I costi effettivamente sostenuti durante il periodo RTB sono esposti nella @tabella-totaleRTB. Tale consuntivo è aggiornato allo sprint 5 e non comprende quindi lo sprint 6 in quanto non ancora terminato.
 #figure(
     table(
         columns: (1fr,)*4,
@@ -94,5 +96,5 @@ I costi effettivamente sostenuti durante il periodo RTB sono stati i seguenti:
         table.cell([*Totale*], colspan: 3, fill: white), table.cell([*#totale #sym.euro*], fill: white)
     ),
     caption: "Consuntivo di periodo RTB."
-)
+) <tabella-totaleRTB>
 

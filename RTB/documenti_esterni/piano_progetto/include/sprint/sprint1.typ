@@ -58,10 +58,10 @@ timeliney.timeline(
       task("Fix use case", (from: 14, to: 15, style: (stroke: 8pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
     })
 
-    task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
+    task("Aggiornamento norme di progetto", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
     task("Sostituire termini glossario", (from: 1, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 4, style: (stroke: 2pt + red)))
     task("Inizio analisi dei rischi", (from: 4, to: 5, style: (stroke: 8pt + gray)), (from: 4, to: 5, style: (stroke: 2pt + red)))
-    task("Redazione sprint 1 in PdP", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 11, style: (stroke: 2pt + red)))
+    task("Redazione sprint 1 in piano di progetto", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 11, style: (stroke: 2pt + red)))
     task("Miglioramenti grafici documentazione", (from: 10, to: 11, style: (stroke: 8pt + gray)), (from: 10, to: 11, style: (stroke: 2pt + red)))
     task("Rifinitura pagina HTML", (from: 14, to: 15, style: (stroke: 8pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
   }
