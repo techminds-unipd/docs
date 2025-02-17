@@ -71,14 +71,14 @@ Si dividono in:
         //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
         [QMR2],[Documentare nel #glossario[piano di qualifica] i bug presenti.],[Capitolato],
         [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
-        [QMR4],[Copertura dei #glossario[test di unità] pari ad almeno il 70% del codice prodotto.],[Capitolato],
+        [QMR4],[Documentare nel piano di qualifica la copertura dei #glossario[test di unità] (almeno il 70% del codice prodotto).],[Capitolato],
         //Questo è un link ricorsivo
-        [QMR5],[Documentare i casi d'uso nel documento di #glossario[analisi dei requisiti].],[Capitolato],
-        [QMR6],[Documentare nel documento di specifica tecnica le classi attraverso #glossario[diagrammi UML].],[Capitolato],
+        [QMR5],[Documentare nell'#glossario[analisi dei requisiti] i casi d'uso.],[Capitolato],
+        [QMR6],[Documentare nella specifica tecnica le classi attraverso #glossario[diagrammi UML].],[Capitolato],
         //[QMR7],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[],[Norme di progetto],
-        [QMR7],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica].],[Piano di qualifica §2.2],
-        [QDR1],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger].],[Formazione col proponente],
-        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna]
+        [QMR7],[La documentazione deve rispettare le metriche descritte nel piano di qualifica.],[Piano di qualifica §2.2],
+        [QDR1],[Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],[Formazione col proponente],
+        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna, Formazione col proponente]
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
