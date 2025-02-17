@@ -1130,7 +1130,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. esegue un'operazione su un workflow.
+   1. visualizza un messaggio di errore che indica il fallimento di una operazione sul workflow.
  - Sistema:
    1. esegue l'operazione richiesta;
    2. l'operazione fallisce;
