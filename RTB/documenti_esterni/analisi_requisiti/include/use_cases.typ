@@ -668,6 +668,180 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    - Viene segnalato all'utente che non ha nessun servizio collegato;
    - L'utente viene rediretto alla pagina per collegare i servizi.
 
+=== Visualizzazione informazioni blocco <funzionalità-blocco>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((1,0.5), align(center)[
+            @funzionalità-blocco Vis. informazioni blocco
+    ], name: <a>),
+
+    node((1.7,0), align(center)[
+            @funzionalità-blocco-gmail Vis. informazioni blocco Gmail
+    ], name: <b>),
+    edge(<b>, <a>, marks: (none,empty-dash)),
+
+    node((2,0.5), align(center)[
+            @funzionalità-blocco-pastebin Vis. informazioni blocco Pastebin
+    ], name: <d>),
+    edge(<d>, <a>, marks: (none,empty-dash)),
+
+    node((1.7,1), align(center)[
+            @funzionalità-blocco-calendar Vis. informazioni blocco Calendar
+    ], name: <c>),
+    edge(<c>, <a>, marks: (none,empty-dash)),
+
+    node(enclose: (<a>,<b>,<c>,<d>),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni blocco UC diagram.]
+) <visualizzazione-informazioni-blocco-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni di un blocco.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. seleziona un blocco;
+    2. visualizza le informazioni disponibili.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco selezionato;
+    2. fa visualizzare la lista delle funzioni disponibili.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco selezionato.
+
+=== Visualizzazione informazioni del blocco Gmail <funzionalità-blocco-gmail>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 12pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-gmail Visualizzazione informazioni blocco Gmail
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni del blocco Gmail UC diagram.]
+) <visualizzazione-informazioni-blocco-gmail-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Gmail.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. seleziona blocco Gmail;
+    2. visualizza le informazioni relative al blocco.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Gmail;
+    2. fa visualizzare la lista delle funzioni disponibili: ricerca di una mail, ottenere una specifica mail, creazione di una bozza.
+- *Pre-condizioni*:
+    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.
+
+=== Visualizzazione informazioni del blocco Pastebin <funzionalità-blocco-pastebin>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 12pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-pastebin Visualizzazione informazioni blocco Pastebin
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni del blocco Pastebin UC diagram.]
+) <visualizzazione-funzionali-blocco-pastebin-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Pastebin.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. seleziona blocco Pastebin;
+    2. visualizza le informazioni relative al blocco.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Pastebin;
+    2. fa visualizzare la lista delle funzioni disponibili: creare e scrivere su un documento.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Pastebin.
+
+=== Visualizzazione informazioni del blocco Calendar <funzionalità-blocco-calendar>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 12pt,
+    node-shape: ellipse,
+    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @funzionalità-blocco-calendar Visualizzazione informazioni blocco Calendar
+    ], name: <a>),
+
+    node(enclose: (<a>,),
+        align(top + right)[Sistema],
+        width: 150pt,
+        height: 150pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione informazioni del blocco Calendar UC diagram.]
+) <visualizzazione-informazioni-blocco-calendar-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Calendar.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. seleziona blocco Calendar;
+    2. visualizza le informazioni relative al blocco.
+ - Sistema:
+    1. fa visualizzare all'utente una breve descrizione del blocco Calendar;
+    2. fa visualizzare la lista delle funzioni disponibili: creare un evento, cercare tra gli eventi creati.
+- *Pre-condizioni*:
+    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
+- *Post-condizioni*:
+   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Calendar.
 
 === Creazione nuovo workflow vuoto <creazione-nuovo-workflow>
 
@@ -1138,180 +1312,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - Viene segnalato all'utente che c'è stato un errore in seguito all'operazione richiesta.
 
-=== Visualizzazione informazioni blocco <funzionalità-blocco>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((1,0.5), align(center)[
-            @funzionalità-blocco Vis. informazioni blocco
-    ], name: <a>),
-
-    node((1.7,0), align(center)[
-            @funzionalità-blocco-gmail Vis. informazioni blocco Gmail
-    ], name: <b>),
-    edge(<b>, <a>, marks: (none,empty-dash)),
-
-    node((2,0.5), align(center)[
-            @funzionalità-blocco-pastebin Vis. informazioni blocco Pastebin
-    ], name: <d>),
-    edge(<d>, <a>, marks: (none,empty-dash)),
-
-    node((1.7,1), align(center)[
-            @funzionalità-blocco-calendar Vis. informazioni blocco Calendar
-    ], name: <c>),
-    edge(<c>, <a>, marks: (none,empty-dash)),
-
-    node(enclose: (<a>,<b>,<c>,<d>),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione informazioni blocco UC diagram.]
-) <visualizzazione-informazioni-blocco-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione delle informazioni di un blocco.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-    1. seleziona un blocco;
-    2. visualizza le informazioni disponibili.
- - Sistema:
-    1. fa visualizzare all'utente una breve descrizione del blocco selezionato;
-    2. fa visualizzare la lista delle funzioni disponibili.
-- *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco selezionato.
-
-=== Visualizzazione informazioni del blocco Gmail <funzionalità-blocco-gmail>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 12pt,
-    node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @funzionalità-blocco-gmail Visualizzazione informazioni blocco Gmail
-    ], name: <a>),
-
-    node(enclose: (<a>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione informazioni del blocco Gmail UC diagram.]
-) <visualizzazione-informazioni-blocco-gmail-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Gmail.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-    1. seleziona blocco Gmail;
-    2. visualizza le informazioni relative al blocco.
- - Sistema:
-    1. fa visualizzare all'utente una breve descrizione del blocco Gmail;
-    2. fa visualizzare la lista delle funzioni disponibili: ricerca di una mail, ottenere una specifica mail, creazione di una bozza.
-- *Pre-condizioni*:
-    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
-- *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Gmail.
-
-=== Visualizzazione informazioni del blocco Pastebin <funzionalità-blocco-pastebin>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 12pt,
-    node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @funzionalità-blocco-pastebin Visualizzazione informazioni blocco Pastebin
-    ], name: <a>),
-
-    node(enclose: (<a>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione informazioni del blocco Pastebin UC diagram.]
-) <visualizzazione-funzionali-blocco-pastebin-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Pastebin.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-    1. seleziona blocco Pastebin;
-    2. visualizza le informazioni relative al blocco.
- - Sistema:
-    1. fa visualizzare all'utente una breve descrizione del blocco Pastebin;
-    2. fa visualizzare la lista delle funzioni disponibili: creare e scrivere su un documento.
-- *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Pastebin.
-
-=== Visualizzazione informazioni del blocco Calendar <funzionalità-blocco-calendar>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 12pt,
-    node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @funzionalità-blocco-calendar Visualizzazione informazioni blocco Calendar
-    ], name: <a>),
-
-    node(enclose: (<a>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Visualizzazione informazioni del blocco Calendar UC diagram.]
-) <visualizzazione-informazioni-blocco-calendar-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione delle informazioni del blocco Calendar.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-    1. seleziona blocco Calendar;
-    2. visualizza le informazioni relative al blocco.
- - Sistema:
-    1. fa visualizzare all'utente una breve descrizione del blocco Calendar;
-    2. fa visualizzare la lista delle funzioni disponibili: creare un evento, cercare tra gli eventi creati.
-- *Pre-condizioni*:
-    - L'utente ha associato l'account di Google collegato ai servizi offerti dai blocchi.
-- *Post-condizioni*:
-   - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Calendar.
 
 === Eliminazione workflow <eliminazione-workflow>
 #figure(
@@ -1551,13 +1551,11 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     node-shape: ellipse,
     node((0.2,0.5), [#image("../assets/actor.jpg") Frontend], stroke: 0pt, name: <frontend>),
 
-    node((3.5,0.5), [#image("../assets/actor.jpg") Agente], stroke: 0pt, name: <agente>),
-
     node((2,0.5), align(center)[
             @invio-dati-frontend-backend Invio dati workflow
     ],  name: <invio-dati-frontend-backend>),
     edge(<frontend>, <invio-dati-frontend-backend>),
-    edge(<agente>, <invio-dati-frontend-backend>),
+
 
     node(enclose: (<invio-dati-frontend-backend>,),
         align(top + right)[Backend],
@@ -1572,14 +1570,11 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Questo caso d’uso descrive le operazioni di invio dei dati necessari da parte del frontend al backend per l’esecuzione di un workflow, approfondendo @esecuzione-workflow.
 - *Attori principali*:
   - Frontend.
-- *Attori secondari*:
-  - Agente.
 - *Scenario principale*:
   - Frontend:
-    1. invia la lista dei blocchi e degli archi del workflow. Ogni arco contiene la stringa che descrive l'automazione da svolgere.
+    1. invia la lista dei blocchi, degli archi e delle automazioni del workflow.
   - Backend:
-    1. riceve i dati necessari per l'esecuzione del workflow;
-    2. invia i dati all'agente (@invio-dati-backend-agente).
+    1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:
    - L'esecuzione del workflow è stata avviata.
 - *Post-condizioni*:
