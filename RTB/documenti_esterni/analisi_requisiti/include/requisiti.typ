@@ -62,23 +62,23 @@ Si dividono in:
 #set par(justify: false)
 #figure(
     table(
-        columns: (1fr, 4fr, 2fr, 1fr),
+        columns: (1fr, 4fr, 2fr),
         fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }}, 
         inset: 10pt, 
-        table.header([*Codice*], [*Descrizione*], [*Documento*],[*Fonti*] ),
+        table.header([*Codice*], [*Descrizione*], [*Fonti*] ),
         align: horizon + center,
-        [QMR1],[Documentare le criticità e i limiti delle soluzioni individuate.],[],[Capitolato],
+        [QMR1],[Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],[Capitolato],
         //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
-        [QMR2],[Documentare i bug presenti.],[],[Capitolato],
-        [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[],[Capitolato],
-        [QMR4],[Copertura dei #glossario[test di unità] pari ad almeno il 70% del codice prodotto.],[],[Capitolato],
+        [QMR2],[Documentare nel piano di qualifica i bug presenti.],[Capitolato],
+        [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
+        [QMR4],[Copertura dei #glossario[test di unità] pari ad almeno il 70% del codice prodotto.],[Capitolato],
         //Questo è un link ricorsivo
-        [QMR5],[Documentare i casi d'uso.],[#link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")[Analisi dei requisiti]#footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf"))],[Capitolato],
-        [QMR6],[Documentare le classi attraverso #glossario[diagrammi UML].],[],[Capitolato],
+        [QMR5],[Documentare i casi d'uso nel documento di analisi dei requisiti.],[Capitolato],
+        [QMR6],[Documentare nel documento di specifica tecnica le classi attraverso #glossario[diagrammi UML].],[Capitolato],
         //[QMR7],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[],[Norme di progetto],
-        [QDR1],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger].],[],[Formazione col proponente],
-        [QMR7],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica].],[#link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_qualifica/piano-di-qualifica.pdf")[Piano di qualifica]#footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_qualifica/piano-di-qualifica.pdf"))],[Piano di qualifica §2.2],
-        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint].],[],[Decisione interna]
+        [QMR7],[La documentazione deve rispettare le metriche descritte nel #glossario[piano di qualifica].],[Piano di qualifica §2.2],
+        [QDR1],[Le #glossario[API] devono essere documentate in formato #glossario[Swagger].],[Formazione col proponente],
+        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna]
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
