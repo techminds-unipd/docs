@@ -41,16 +41,16 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
     - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235] #footnote(link("https://github.com/techminds-unipd/docs/issues/235")): Uniformare date in tutti i documenti.
 ==== Issue aggiuntive:
   - Piano di progetto:
-    - #link("https://github.com/techminds-unipd/docs/issues/281")[Issue \#281] #footnote(link("https://github.com/techminds-unipd/docs/issues/281")): Aggiornamento PdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/281")[Issue \#281] #footnote(link("https://github.com/techminds-unipd/docs/issues/281")): Aggiornamento piano di progetto;
     - #link("https://github.com/techminds-unipd/docs/issues/326")[Issue \#326] #footnote(link("https://github.com/techminds-unipd/docs/issues/326")): Redazione consuntivo di periodo RTB;
     - #link("https://github.com/techminds-unipd/docs/issues/325")[Issue \#325]#footnote(link("https://github.com/techminds-unipd/docs/issues/325")): Documentare preventivo a finire in struttura sprint;
     - #link("https://github.com/techminds-unipd/docs/issues/324")[Issue \#324] #footnote(link("https://github.com/techminds-unipd/docs/issues/324")): Ridondanza diagramma di Gantt.
   - Norme di progetto:
-    - #link("https://github.com/techminds-unipd/docs/issues/276")[Issue \#276] #footnote(link("https://github.com/techminds-unipd/docs/issues/276")): Documentare aggiornamento cruscotto in NdP;
+    - #link("https://github.com/techminds-unipd/docs/issues/276")[Issue \#276] #footnote(link("https://github.com/techminds-unipd/docs/issues/276")): Documentare aggiornamento cruscotto in norme di progetto;
     - #link("https://github.com/techminds-unipd/docs/issues/309")[Issue \#309] #footnote(link("https://github.com/techminds-unipd/docs/issues/309")): Gestione link e footnote;
     - #link("https://github.com/techminds-unipd/docs/issues/311")[Issue \#311] #footnote(link("https://github.com/techminds-unipd/docs/issues/311")): Mettere la milestone, quando viene create una issue.
   - Glossario:
-    - #link("https://github.com/techminds-unipd/docs/issues/285")[Issue \#285] #footnote(link("https://github.com/techminds-unipd/docs/issues/285")): Aggiornamento Glossario.
+    - #link("https://github.com/techminds-unipd/docs/issues/285")[Issue \#285] #footnote(link("https://github.com/techminds-unipd/docs/issues/285")): Aggiornamento glossario.
   - Altro:
     - #link("https://github.com/techminds-unipd/docs/issues/313")[Issue \#313] #footnote(link("https://github.com/techminds-unipd/docs/issues/313")): Mettere il numero di versione sui documenti nel sito web.
 
