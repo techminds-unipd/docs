@@ -38,6 +38,7 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 
 - *Durata*: le date di inizio e fine dello sprint;
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
+- *Issue aggiuntive* (Opzionale): Attività non pianificate e aggiunte durante lo svolgersi dello sprint;
 - *Ruoli*: elenca i ruoli assegnati ai membri del team in quel determinato sprint;
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]\;
 - #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Il diagramma conteggia solamente i giorni produttivi. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore #underline("grigio", stroke: 1pt + gray, evade: false)) e il tempo effettivamente impiegato (colore #underline("rosso", stroke: 1pt + red, evade: false)) per completare ogni issue. Inoltre le attività sono divise in macrosezioni, la cui linea (colore #underline("nero", stroke: 1pt + black, evade: false)) indica il tempo complessivo.
