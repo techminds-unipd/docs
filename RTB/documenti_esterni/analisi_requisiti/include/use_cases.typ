@@ -1396,16 +1396,16 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ],  name: <esecuzione-workflow>),
 
     node((1,1.5), align(center)[
-            @vis-errore-workflow Vis. errore workflow
-    ],  name: <vis-errore-workflow>),
+            @vis-errore-struttura-workflow Vis. errore \ struttura workflow
+    ],  name: <vis-errore-struttura-workflow>),
 
-    edge(<vis-errore-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
+    edge(<vis-errore-struttura-workflow>, <esecuzione-workflow>, "--straight", [\<\<extend\>\>]),
 
     node((.6,0.5), align(center)[
             Il workflow non è valido
     ], shape: uc_comment, name: <post-it>),
 
-    node((1.15,0.5), align(center)[
+    node((1.142,0.5), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<post-it>, <nf>, "--"),
 
@@ -1422,7 +1422,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ], name: <nf2>, width: 1pt, height: 1pt),
     edge(<post-it2>, <nf2>, "--"),
 
-    node(enclose: (<esecuzione-workflow>,<vis-errore-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
+    node(enclose: (<esecuzione-workflow>,<vis-errore-struttura-workflow>,<vis-errore-runtime>,<nf>,<nf2>,<post-it2>,<post-it>,),
         align(top + right)[Sistema],
         width: 200pt,
         height: 200pt,
@@ -1453,10 +1453,10 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - L'esecuzione del workflow termina con successo.
 - *Estensioni*:
   - Visualizzazione errore runtime (@vis-errore-runtime);
-  - Visualizzazione errore workflow (@vis-errore-workflow).
+  - Visualizzazione errore workflow (@vis-errore-struttura-workflow).
   
 
-=== Visualizzazione errore workflow <vis-errore-workflow>
+=== Visualizzazione errore struttura workflow <vis-errore-struttura-workflow>
 - *Descrizione*:
   - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
 - *Attori principali*:
