@@ -576,6 +576,128 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - L'utente non ha più un account Google associato.
 
+=== Visualizzazione lista workflow creati <visualizzazione-lista-workflow>
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @visualizzazione-lista-workflow Visualizzazione lista workflow creati
+    ], name: <a>),
+
+    node((2,0.7), align(center)[
+            @visualizzazione-singolo-workflow Visualizzazione singolo workflow
+    ], name: <b>),
+
+    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<a>,<b>,),
+        align(top + right)[Sistema],
+        width: 210pt,
+        height: 170pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Visualizzazione lista workflow creati UC diagram.]
+) <visualizzazione-lista-workflow-diagram>
+
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione della lista di workflow creati dall'utente.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. visualizza la lista contenente tutti i workflow creati;
+   2. visualizza ogni workflow presente nella lista (@visualizzazione-singolo-workflow).
+ - Sistema:
+   1. recupera tutti i workflow creati dall'utente;
+   2. mostra una lista dei workflow creati all'utente.
+- *Post-condizioni*:
+   - Viene mostrata all'utente la lista di workflow che ha creato.
+
+==== Visualizzazione singolo workflow <visualizzazione-singolo-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un singolo workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. visualizza il nome del workflow sotto forma di link;
+   2. visualizza accanto al nome un'opzione per eliminare il workflow.
+ - Sistema:
+   1. mostra il singolo workflow.
+- *Post-condizioni*:
+   - Viene mostrato all'utente il singolo workflow.
+
+=== Creazione nuovo workflow vuoto <creazione-nuovo-workflow>
+
+#figure(
+    diagram(
+    debug: false,
+    node-stroke: 1pt,
+    edge-stroke: 1pt,
+    label-size: 8pt,
+    node-inset: 10pt,
+    node-shape: ellipse,
+    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <a>),
+
+    node((2,0), align(center)[
+            @creazione-nuovo-workflow Creazione workflow vuoto
+    ], name: <a>),
+
+    node((2,0.7), align(center)[
+            @inserimento-nome-workflow Inserimento nome workflow
+    ], name: <b>),
+
+    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<a>,<b>,),
+        align(top + right)[Sistema],
+        width: 210pt,
+        height: 170pt,
+        snap: -1,
+        name: <group>)
+    ),
+    caption: [Creazione nuovo workflow vuoto UC diagram.]
+) <creazione-nuovo-workflow-diagram>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow vuoto.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+   1. naviga nella pagina workflow;
+   2. inserisce il nome del workflow (@inserimento-nome-workflow);   
+   3. seleziona l'opzione per creare un nuovo workflow.
+ - Sistema:
+   1. porta l'utente nella pagina per la creazione del workflow;
+   2. crea un nuovo workflow vuoto;
+   3. mostra il nuovo workflow vuoto creato.
+- *Post-condizioni*:
+   - Viene creato il workflow vuoto.
+
+==== Inserimento nome workflow <inserimento-nome-workflow>
+- *Descrizione*:
+  - Questo caso d'uso descrive la procedura di inserimento del nome di un workflow.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+  - Utente autenticato:
+    1. inserisce il nome del workflow.
+  - Sistema:
+    1. associa il nome immesso al workflow;
+    2. continua la procedura di creazione del workflow.
+- *Post-condizioni*:
+  - Il nome del workflow è stato inserito.
+
 === Visualizzazione lista blocchi configurati <visualizzazione-lista-blocchi-configurati>
 
 #figure(
@@ -843,67 +965,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - L'utente visualizza una breve descrizione e le funzionalità offerte dal blocco Calendar.
 
-=== Creazione nuovo workflow vuoto <creazione-nuovo-workflow>
 
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @creazione-nuovo-workflow Creazione workflow vuoto
-    ], name: <a>),
-
-    node((2,0.7), align(center)[
-            @inserimento-nome-workflow Inserimento nome workflow
-    ], name: <b>),
-
-    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
-
-    node(enclose: (<a>,<b>,),
-        align(top + right)[Sistema],
-        width: 210pt,
-        height: 170pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Creazione nuovo workflow vuoto UC diagram.]
-) <creazione-nuovo-workflow-diagram>
-- *Descrizione*:
-  - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow vuoto.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-   1. naviga nella pagina workflow;
-   2. inserisce il nome del workflow (@inserimento-nome-workflow);   
-   3. seleziona l'opzione per creare un nuovo workflow.
- - Sistema:
-   1. porta l'utente nella pagina per la creazione del workflow;
-   2. crea un nuovo workflow vuoto;
-   3. mostra il nuovo workflow vuoto creato.
-- *Post-condizioni*:
-   - Viene creato il workflow vuoto.
-
-==== Inserimento nome workflow <inserimento-nome-workflow>
-- *Descrizione*:
-  - Questo caso d'uso descrive la procedura di inserimento del nome di un workflow.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
-  - Utente autenticato:
-    1. inserisce il nome del workflow.
-  - Sistema:
-    1. associa il nome immesso al workflow;
-    2. continua la procedura di creazione del workflow.
-- *Post-condizioni*:
-  - Il nome del workflow è stato inserito.
 
 === Aggiunta di un blocco <aggiunta-blocco>
 #figure(
@@ -940,7 +1002,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    1. aggiunge un blocco di automazione già configurato, trascinandolo nell'area drag and drop.
  - Sistema:
    1. gestisce l'input dell'utente;
-   2. aggiorna il workflow.
+   2. aggiorna la vista del workflow.
 - *Pre-condizioni*:
    - L'utente ha creato almeno un workflow.
 - *Post-condizioni*:
@@ -982,7 +1044,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. elimina il blocco di automazione selezionato.
  - Sistema:
    1. gestisce gli input dell'utente;
-   2. aggiorna il workflow.
+   2. aggiorna la vista del workflow.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno un blocco.
 - *Post-condizioni*:
@@ -1024,7 +1086,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. collega i due blocchi attraverso un arco orientato.
  - Sistema:
    1. gestisce l'input dell'utente;
-   2. aggiorna il workflow.
+   2. aggiorna la vista del workflow.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno due blocchi;
    - I blocchi da collegare sono scollegati tra loro.
@@ -1067,14 +1129,14 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
    2. scollega i due blocchi scelti eliminando l'arco orientato che li collegava.
  - Sistema:
    1. gestisce l'input dell'utente;
-   2. aggiorna il workflow.
+   2. aggiorna la vista del workflow.
 - *Pre-condizioni*:
    - L'utente ha creato un workflow con almeno due blocchi;
    - I blocchi da scollegare sono collegati tra loro.
 - *Post-condizioni*:
    - Viene eliminato l'arco orientato tra i due blocchi selezionati dall'utente.
 
-=== Aggiunta descrizione <aggiunta-descrizione>
+=== Inserimento descrizione automazione <inserimento-descrizione>
 #figure(
     diagram(
     debug: false,
@@ -1087,7 +1149,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge(<user>, <a>),
 
     node((2,0), align(center)[
-            @aggiunta-descrizione Aggiunta descrizione
+            @inserimento-descrizione Inserimento descrizione automazione
     ], name: <a>),
 
     node(enclose: (<a>,),
@@ -1097,68 +1159,26 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Aggiunta descrizione UC diagram.]
-) <aggiunta-descrizione-diagram>
+    caption: [Inserimento descrizione automazione UC diagram.]
+) <inserimento-descrizione-diagram>
 
 - *Descrizione*:
-  - Questo caso d'uso descrive la procedura di aggiunta della descrizione dell'automazione tra due blocchi collegati.
+  - Questo caso d'uso descrive la procedura di inserimento della descrizione dell'automazione tra due blocchi collegati.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-   1. sceglie l'arco in cui vuole aggiungere la descrizione;
-   2. aggiunge la descrizione dell'automazione in linguaggio naturale sopra l'arco scelto.
- - Sistema:
-   1. gestisce l'input dell'utente;
-   2. aggiorna il workflow.
-- *Pre-condizioni*:
-   - L'utente ha creato un workflow con almeno due blocchi collegati tramite un arco che non specifica alcuna descrizione.
-- *Post-condizioni*:
-   - Viene aggiunta la descrizione dell'automazione relativa all'arco selezionato dall'utente.
-
-=== Modifica descrizione <modifica-descrizione>
-#figure(
-    diagram(
-    debug: false,
-    node-stroke: 1pt,
-    edge-stroke: 1pt,
-    label-size: 8pt,
-    node-inset: 10pt,
-    node-shape: ellipse,
-    node((0,0), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @modifica-descrizione Modifica descrizione
-    ], name: <a>),
-
-    node(enclose: (<a>,),
-        align(top + right)[Sistema],
-        width: 150pt,
-        height: 150pt,
-        snap: -1,
-        name: <group>)
-    ),
-    caption: [Modifica descrizione UC diagram.]
-) <modifica-descrizione-diagram>
-
-- *Descrizione*:
-  - Questo caso d'uso descrive la procedura di modifica della descrizione dell'automazione tra due blocchi collegati.
-- *Attori principali*:
-  - Utente autenticato.
-- *Scenario principale*:
- - Utente autenticato:
-   1. seleziona la descrizione da modificare;
-   2. modifica la descrizione dell'automazione scelta indicando in linguaggio naturale la nuova azione che deve fare il sistema.
+   1. seleziona l'arco in cui scrivere l'automazione;
+   2. scrive la descrizione dell'automazione scelta indicandola in linguaggio naturale.
  - Sistema:
    1. gestisce gli input dell'utente;
-   2. aggiorna il workflow.
+   2. aggiorna la vista del workflow.
 - *Pre-condizioni*:
-   - L'utente ha creato un workflow con una descrizione in almeno un arco orientato.
+   - Il workflow contiene almeno un arco.
 - *Post-condizioni*:
-   - Viene modificata la descrizione dell'automazione relativa all'arco selezionato dall'utente.
+   - L'arco selezionato contiene la descrizione inserita dall'utente.
 
-=== Visualizzazione workflow <visualizzazione-workflow>
+=== Visualizzazione struttura workflow <visualizzazione-struttura-workflow>
 
 #figure(
     diagram(
@@ -1172,7 +1192,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     edge(<user>, <a>),
 
     node((1.8,0), align(center)[
-            @visualizzazione-workflow Visualizzazione workflow
+            @visualizzazione-struttura-workflow Visualizzazione struttura workflow
     ], name: <a>),
 
     node((1.2,0.8), align(center)[
@@ -1194,11 +1214,11 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
         snap: -1,
         name: <group>)
     ),
-    caption: [Visualizzazione workflow UC diagram.]
-) <visualizzazione-workflow-diagram>
+    caption: [Visualizzazione struttura workflow UC diagram.]
+) <visualizzazione-struttura-workflow-diagram>
 
 - *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione di un workflow.
+  - Questo caso d'uso descrive la visualizzazione della struttura di un workflow.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
@@ -1210,7 +1230,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Pre-condizioni*:
    - L'utente ha creato almeno un workflow.
 - *Post-condizioni*:
-   - Viene mostrato il workflow selezionato dall'utente.
+   - Viene mostrata la struttura del workflow selezionato dall'utente.
 
 ==== Visualizzazione blocco workflow <visualizzazione-blocco-workflow>
 - *Descrizione*:
