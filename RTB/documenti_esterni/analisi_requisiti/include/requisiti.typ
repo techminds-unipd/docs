@@ -51,7 +51,7 @@
 
         [FMR16], [L'utente autenticato deve poter scollegare due blocchi in un workflow.], [@scollegamento-arco],
 
-        [FMR17], [L'utente autenticato deve poter inserire una descrizione dell'automazione tra due blocchi collegati.], [@inserimento-descrizione],
+        [FMR17], [L'utente autenticato deve poter inserire una descrizione dell'automazione tra due blocchi collegati.], [Capitolato, @inserimento-descrizione],
 
         [FMR18], [L'utente autenticato deve poter visualizzare la struttura del workflow.], [@visualizzazione-struttura-workflow, @visualizzazione-blocco-workflow, @visualizzazione-arco-workflow],
 
@@ -59,13 +59,16 @@
 
         [FMR20], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow],
 
-        [FMR21], [L'utente autenticato deve poter mandare in esecuzione un workflow.], [Capitolato, @esecuzione-workflow, @vis-errore-struttura-workflow, @vis-errore-runtime],
+        [FMR21], [L'utente autenticato deve poter mandare in esecuzione un workflow.], [@esecuzione-workflow, @vis-errore-struttura-workflow, @vis-errore-runtime],
 
         [FMR22], [L'utente autenticato deve poter vedere il risultato dell'esecuzione del workflow.], [@vis-risultato-esecuzione-workflow],
 
         [FMR23], [Il frontend deve poter inviare i dati del workflow al backend.], [@invio-dati-frontend-backend],
-        [FMR34], [Il backend deve poter inviare i dati del workflow all'agente.], [@invio-dati-backend-agente],
-        
+        [FMR24], [Il backend deve poter inviare i dati del workflow all'agente.], [@invio-dati-backend-agente],
+        [FMR25], [Il sistema deve eseguire il workflow attraverso l'uso di un agente AI.], [Capitolato],
+        [FMR26], [Il sistema deve esporre un'interfaccia drag-and-drop per poter inserire i blocchi.], [Capitolato],
+        [FMR27], [Il sistema deve interfacciarsi con i servizi di Google.],[Capitolato, Riunione col proponente],
+        [FMR28], [Il sistema deve interfacciarsi con i servizi di Pastebin.], [Capitolato, Riunione col proponente]
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
@@ -114,7 +117,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         align: horizon + center,
         
         [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
-        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP.],[Decisione interna],
+        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP usando il formato JSON.],[Decisione interna],
         [CMR2], [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.], [Decisione interna],
         [CMR3], [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.], [Decisione interna],
     ),
