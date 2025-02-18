@@ -1,6 +1,6 @@
 #import "/template/template.typ": glossario
 #show figure: set block(breakable: true)
-= Requisiti e tracciamento
+= Requisiti
 
 == Requisiti funzionali
 
@@ -15,40 +15,57 @@
         inset: 10pt,
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        [FMR1], [L'utente deve poter effettuare il login.],
-        [@login, @login-interno, @inserimento-username, @inserimento-password, @credenziali-errate],
+
+        [FMR1],[Il sistema deve offrire almeno tre blocchi di automazione diversi.],[Capitolato],
+
+        [FMR2], [L'utente deve poter effettuare il login.], [@login, @login-interno, @inserimento-username, @inserimento-password, @credenziali-errate],
 
         [FOR1], [L'utente deve poter fare il login con Google.], [@login-google],
+
+        [FMR3], [L'utente autenticato deve poter fare il logout.], [@logout],
         
-        [FMR2], [L'utente deve potersi registrare.], [@registrazione, @creazione-username, @inserimento-email, @creazione-password, @conferma-password, @errore-registrazione],
+        [FMR4], [L'utente deve potersi registrare.], [@registrazione, @creazione-username, @inserimento-email, @creazione-password, @conferma-password, @errore-registrazione],
 
-        [FMR3], [L'utente autenticato deve poter associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow.], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
+        [FMR5], [L'utente autenticato deve poter associare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow.], [@aggiunta-account-google-associato, @errore-comunicazione-google],
 
-        [FMR4], [L'utente autenticato deve poter eseguire un workflow.], [@esecuzione-workflow, @vis-errore-struttura-workflow, @vis-errore-runtime, (Approfondimento: TODO)],
+        [FMR6], [L'utente autenticato deve poter scollegare l'account Google precedentemente collegato.],[@rimozione-account-google-associato],
 
-        [FMR5], [L'utente autenticato deve poter vedere il risultato dell'esecuzione del workflow.], [@vis-risultato-esecuzione-workflow],
+        [FMR7], [L'utente autenticato deve poter visualizzare i workflow creati.], [@visualizzazione-lista-workflow, @visualizzazione-singolo-workflow],
 
-        [FMR6], [L'utente autenticato deve poter creare un workflow.], [@creazione-nuovo-workflow],
+        [FMR8], [L'utente autenticato deve poter creare un nuovo workflow.], [@creazione-nuovo-workflow, @inserimento-nome-workflow],
 
-        [FMR7], [L'utente autenticato deve poter visualizzare un workflow.], [@visualizzazione-workflow],
+        [FMR9], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
 
-        [FMR8], [L'utente autenticato deve poter aggiungere ed eliminare un blocco in un workflow.], [@aggiunta-blocco, @eliminazione-blocco],
+        [FMR10], [L'utente autenticato deve poter visualizzare le informazioni relative al blocco Gmail.], [@funzionalità-blocco, @funzionalità-blocco-gmail],
 
-        [FMR9], [L'utente autenticato deve poter collegare e scollegare due blocchi in un workflow.], [@collegamento-arco, @scollegamento-arco],
+        [FMR11], [L'utente autenticato deve poter visualizzare le informazioni relative al blocco Pastebin.], [@funzionalità-blocco, @funzionalità-blocco-pastebin],
 
-        [FMR10], [L'utente autenticato deve poter aggiungere e modificare una descrizione dell'automazione tra due blocchi collegati.], [@aggiunta-descrizione, @modifica-descrizione],
+        [FMR12], [L'utente autenticato deve poter visualizzare le informazioni relative al blocco Calendar.], [@funzionalità-blocco, @funzionalità-blocco-calendar],
 
-        [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
-       
-        [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @vis-errore-operazione-workflow],
 
-        [FMR13], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar.], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
+        [FMR13], [L'utente autenticato deve poter aggiungere un blocco in un workflow.], [@aggiunta-blocco],
 
-        [FMR14], [L'utente autenticato deve poter fare il logout.], [@logout],
+        [FMR14], [L'utente autenticato deve poter eliminare un blocco in un workflow.], [@eliminazione-blocco],
 
-        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow],
+        [FMR15], [L'utente autenticato deve poter collegare due blocchi in un workflow.], [@collegamento-arco],
+
+        [FMR16], [L'utente autenticato deve poter scollegare due blocchi in un workflow.], [@scollegamento-arco],
+
+        [FMR17], [L'utente autenticato deve poter inserire una descrizione dell'automazione tra due blocchi collegati.], [@inserimento-descrizione],
+
+        [FMR18], [L'utente autenticato deve poter visualizzare la struttura del workflow.], [@visualizzazione-struttura-workflow, @visualizzazione-blocco-workflow, @visualizzazione-arco-workflow],
+
+        [FMR19], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @vis-errore-operazione-workflow],
+
+        [FMR20], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow],
+
+        [FMR21], [L'utente autenticato deve poter mandare in esecuzione un workflow.], [Capitolato, @esecuzione-workflow, @vis-errore-struttura-workflow, @vis-errore-runtime],
+
+        [FMR22], [L'utente autenticato deve poter vedere il risultato dell'esecuzione del workflow.], [@vis-risultato-esecuzione-workflow],
+
+        [FMR23], [Il frontend deve poter inviare i dati del workflow al backend.], [@invio-dati-frontend-backend],
+        [FMR34], [Il backend deve poter inviare i dati del workflow all'agente.], [@invio-dati-backend-agente],
         
-        [FMR16],[L'utente deve poter utilizzare almeno tre blocchi diversi.],[Capitolato],
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
@@ -113,9 +130,9 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt,
         table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Opzionale*], [*Complessivo*]),
         align: horizon + center,
-        [Funzionale], [15], [0], [1],[16],
-        [Di qualità], [9], [2], [0], [11],
-        [Di vincolo], [2], [1], [0], [3],
+        [Funzionale], [], [], [],[],
+        [Di qualità], [], [], [], [],
+        [Di vincolo], [], [], [], [],
         [*Totale*], [*26*], [*3*], [*1*], [*30*],
     ),
     caption: [Tabella di riepilogo dei requisiti.]
