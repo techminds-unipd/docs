@@ -24,15 +24,13 @@
 
     FR.push(("FMR" + str(FMR),
         [Il sistema deve interfacciarsi con i servizi di Google.],
-        [Capitolato,
-            Riunione col proponente],
+        [Riunione col proponente],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
         [Il sistema deve interfacciarsi con i servizi di Pastebin.],
-        [Capitolato,
-            Riunione col proponente]
+        [Riunione col proponente]
     ))
     FMR+=1
 
