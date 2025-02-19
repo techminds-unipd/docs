@@ -1,4 +1,5 @@
 #import "/template/template.typ": glossario
+#import "definizione_requisiti.typ": getFR
 #show figure: set block(breakable: true)
 = Requisiti
 
@@ -15,7 +16,7 @@
         inset: 10pt,
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-
+        /*
         [FMR1],[Il sistema deve offrire almeno tre blocchi di automazione diversi.],[Capitolato],
 
         [FMR2], [L'utente deve poter effettuare il login.], [@login, @login-interno, @inserimento-username, @inserimento-password, @credenziali-errate],
@@ -69,6 +70,9 @@
         [FMR26], [Il sistema deve esporre un'interfaccia drag-and-drop per poter inserire i blocchi.], [Capitolato],
         [FMR27], [Il sistema deve interfacciarsi con i servizi di Google.],[Capitolato, Riunione col proponente],
         [FMR28], [Il sistema deve interfacciarsi con i servizi di Pastebin.], [Capitolato, Riunione col proponente]
+        */
+        ..getFR(1),
+        ..getFR(2),
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
