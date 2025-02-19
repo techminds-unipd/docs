@@ -86,7 +86,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.],
-        [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
+        [@visualizzazione-lista-blocchi-configurati, @visualizzazione-singolo-blocco-configurato, @avviso-servizi-non-collegati],
     ))
     FMR+=1
 
