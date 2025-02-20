@@ -3,6 +3,7 @@
 #let getFR(getLen: bool) = {
     let FR = ()
     let FMR = 1
+    let FDR = 1
     let FOR = 1
 
     FR.push(  ("FMR" + str(FMR),
@@ -181,7 +182,7 @@
     FMR+=1
 
     if getLen {
-        return (FMR, FOR)
+        return (FMR -1, FDR -1, FOR -1)
     }
     return FR
 }
@@ -190,6 +191,7 @@
     let QR = ()
     let QMR = 1
     let QDR = 1
+    let QOR = 1
 
     QR.push(("QMR" + str(QMR),
         [Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],
@@ -246,7 +248,7 @@
     QDR+=1
 
     if getLen {
-        return (QMR, QDR)
+        return (QMR -1, QDR -1, QOR -1)
     }
     return QR
 }
@@ -256,6 +258,7 @@
     let CR = ()
     let CMR = 1
     let CDR = 1
+    let COR = 1
 
     CR.push(("CDR" + str(CDR),
         [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).],
@@ -282,7 +285,7 @@
     CMR+=1
 
     if getLen {
-        return (FMR, FOR)
+        return (CMR -1, CDR -1, COR -1)
     }
     return CR
 

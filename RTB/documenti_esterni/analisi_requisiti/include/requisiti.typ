@@ -78,6 +78,10 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
 
+
+#let numReqFunzionali = getFR(getLen: true)
+#let numReqQualita = getQR(getLen: true)
+#let numReqVincolo = getCR(getLen: true)
 == Riepilogo
 #set par(justify: false)
 #figure(
@@ -87,10 +91,10 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt,
         table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Opzionale*], [*Complessivo*]),
         align: horizon + center,
-        [Funzionale], [], [], [],[],
-        [Di qualità], [], [], [], [],
-        [Di vincolo], [], [], [], [],
-        [*Totale*], [*26*], [*3*], [*1*], [*30*],
+        [Funzionale], [#numReqFunzionali.at(0)], [#numReqFunzionali.at(1)], [#numReqFunzionali.at(2)],[#numReqFunzionali.sum()],
+        [Di qualità], [#numReqQualita.at(0)], [#numReqQualita.at(1)], [#numReqQualita.at(2)], [#numReqQualita.sum()],
+        [Di vincolo], [#numReqVincolo.at(0)], [#numReqVincolo.at(1)], [#numReqVincolo.at(2)], [#numReqVincolo.sum()],
+        [*Totale*], [**], [**], [**], [**],
     ),
     caption: [Tabella di riepilogo dei requisiti.]
 )<tabella-riepilogo>
