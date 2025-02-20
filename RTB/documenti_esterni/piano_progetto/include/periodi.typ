@@ -38,18 +38,19 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 
 - *Durata*: le date di inizio e fine dello sprint;
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
+- *Issue aggiuntive* (Opzionale): attività non pianificate e aggiunte durante lo svolgersi dello sprint;
 - *Ruoli*: elenca i ruoli assegnati ai membri del team in quel determinato sprint;
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]\;
-- #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore grigio) e il tempo effettivamente impiegato (colore rosso) per completare ogni issue;
+- #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Il diagramma conteggia solamente i giorni produttivi. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore #underline("grigio", stroke: 1pt + gray, evade: false)) e il tempo effettivamente impiegato (colore #underline("rosso", stroke: 1pt + red, evade: false)) per completare ogni issue. Inoltre le attività sono divise in macrosezioni, la cui linea (colore #underline("nero", stroke: 1pt + black, evade: false)) indica il tempo complessivo.
 - *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso;
 - #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
-- *Costi*:
-  - *Preventivo*:
-    - Tabella contenente le ore e i costi preventivati per ciascun ruolo e persona;
-    - Grafico a torta che mostra la distribuzione delle ore preventivate per ruolo.
-  - *Consuntivo*:
-    - Tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
-    - Grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
+- *Preventivo*:
+  - tabella contenente le ore e i costi preventivati per ciascun ruolo e persona;
+  - grafico a torta che mostra la distribuzione delle ore preventivate per ruolo.
+- *Consuntivo*:
+  - tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
+  - grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
+- *Aggiornamento Preventivo a Finire* (Opzionale): testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;
@@ -68,6 +69,8 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #include "sprint/sprint4.typ"
 #pagebreak()
 #include "sprint/sprint5.typ"
+#pagebreak()
+#include "sprint/sprint6.typ"
 
 
 #linebreak()
@@ -77,7 +80,7 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #let totale = oreConsumate.zip((30, 20, 25, 25, 15, 15)).map(x => x.at(0) * x.at(1)).sum()
 
 === Consuntivo di periodo RTB
-I costi effettivamente sostenuti durante il periodo RTB sono stati i seguenti:
+I costi effettivamente sostenuti durante il periodo RTB sono esposti nella @tabella-totaleRTB. Tale consuntivo è aggiornato allo sprint 5 e non comprende quindi lo sprint 6 in quanto non ancora terminato.
 #figure(
     table(
         columns: (1fr,)*4,
@@ -93,5 +96,5 @@ I costi effettivamente sostenuti durante il periodo RTB sono stati i seguenti:
         table.cell([*Totale*], colspan: 3, fill: white), table.cell([*#totale #sym.euro*], fill: white)
     ),
     caption: "Consuntivo di periodo RTB."
-)
+) <tabella-totaleRTB>
 
