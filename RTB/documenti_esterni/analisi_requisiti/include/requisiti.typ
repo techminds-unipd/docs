@@ -98,6 +98,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
 }
 #fonte-requisito.insert(2, fonte-requisito.pop())
 #fonte-requisito.insert(3, fonte-requisito.pop())
+#fonte-requisito.insert(4, fonte-requisito.pop())
 
 
 === Fonte - Requisito

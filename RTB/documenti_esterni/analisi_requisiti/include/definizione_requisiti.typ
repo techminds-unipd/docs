@@ -231,7 +231,7 @@
 
     QR.push(("QMR" + str(QMR),
         [La documentazione deve rispettare le metriche descritte nel piano di qualifica.],
-        [Piano di qualifica §2.2],
+        [Piano di qualifica],
     ))
     QMR+=1
 
