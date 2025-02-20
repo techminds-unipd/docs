@@ -75,6 +75,43 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
     caption: [Tabella tracciamento requisito-fonte.]
 )<tabella-tracciamento-requisito-fonte>
 
+#let fonte-requisito = getFR(getLen: false).map(x => (x.at(2),x.at(0))) + getQR(getLen: false).map(x => (x.at(2),x.at(0))) + getCR(getLen: false).map(x => (x.at(2),x.at(0)))
+
+#let formatted-fonte-requisito = fonte-requisito.map(x => {
+    let item = x.at(0)
+    if item.has("text") {
+        return (item.text.split(",").map(z => (z.trim(), x.at(1))))
+    }
+    else if item.has("children") {
+        let refs = item.children.filter(x => x.has("target"))
+        return refs.map(y => (y, x.at(1)))
+    }
+    else if item.has("target"){
+        return x
+    }
+}).flatten().chunks(2)
+
+#let unique-requisiti = formatted-fonte-requisito.map(x => x.at(0)).flatten().dedup()
+#let fonte-requisito = ()
+#for item in unique-requisiti {
+    fonte-requisito.push((item, formatted-fonte-requisito.filter(x => x.at(0) == item).map(x => x.at(1)).join(", ")))
+}
+#fonte-requisito.insert(2, fonte-requisito.pop())
+#fonte-requisito.insert(3, fonte-requisito.pop())
+
+
+=== Fonte - Requisito
+#figure(
+    table(
+        columns: (5cm, 5.5cm),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }}, 
+        inset: 10pt, 
+        table.header([*Fonte*], [*Requisito*]),
+        align: horizon + center,
+        ..fonte-requisito.flatten()
+    ),
+    caption: [Tabella tracciamento fonte-requisito.]
+)<tabella-tracciamento-fonte-requisito>
 
 #let numReqFunzionali = getFR(getLen: true)
 #let numReqQualita = getQR(getLen: true)

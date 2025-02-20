@@ -1485,7 +1485,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato:
     1. ha avviato l'esecuzione del workflow.
   - Sistema:
-    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
+    1. rileva che almeno un requisito nella struttura del workflow non è stato soddisfatto;
     2. mostra un messaggio d'errore all'utente;
     3. termina l'esecuzione.
 - *Pre-condizioni*:
