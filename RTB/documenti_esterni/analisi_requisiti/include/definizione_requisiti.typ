@@ -186,6 +186,71 @@
     return FR
 }
 
+#let getQR(getLen: bool) = {
+    let QR = ()
+    let QMR = 1
+    let QDR = 1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nel #glossario[piano di qualifica] i bug presenti.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nel piano di qualifica la copertura dei #glossario[test di unità] (almeno il 70% del codice prodotto).],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nell'#glossario[analisi dei requisiti] i casi d'uso.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nella specifica tecnica le classi attraverso #glossario[diagrammi UML].],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [La documentazione deve rispettare le metriche descritte nel piano di qualifica.],
+        [Piano di qualifica §2.2],
+    ))
+    QMR+=1
+
+    QR.push(("QDR" + str(QDR),
+        [Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],
+        [Formazione col proponente],
+    ))
+    QDR+=1
+
+    QR.push(("QDR" + str(QDR),
+        [Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],
+        [Decisione interna, Formazione col proponente],
+    ))
+    QDR+=1
+
+    if getLen {
+        return (QMR, QDR)
+    }
+    return QR
+}
+
 
 #let getCR(getLen: bool) = {
     let CR = ()

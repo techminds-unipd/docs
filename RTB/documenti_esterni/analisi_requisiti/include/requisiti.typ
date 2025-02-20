@@ -1,5 +1,5 @@
 #import "/template/template.typ": glossario
-#import "definizione_requisiti.typ": getFR, getCR
+#import "definizione_requisiti.typ": getFR, getQR, getCR
 #show figure: set block(breakable: true)
 = Requisiti
 
@@ -36,6 +36,8 @@ Si dividono in:
         inset: 10pt, 
         table.header([*Codice*], [*Descrizione*], [*Fonti*] ),
         align: horizon + center,
+        ..getQR(getLen: false).flatten(),
+        /*
         [QMR1],[Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],[Capitolato],
         //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
         [QMR2],[Documentare nel #glossario[piano di qualifica] i bug presenti.],[Capitolato],
@@ -48,6 +50,7 @@ Si dividono in:
         [QMR7],[La documentazione deve rispettare le metriche descritte nel piano di qualifica.],[Piano di qualifica §2.2],
         [QDR1],[Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],[Formazione col proponente],
         [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna, Formazione col proponente]
+        */
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
