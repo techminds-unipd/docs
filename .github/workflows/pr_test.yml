@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Install typst
       run: |
-        wget $(curl -s https://api.github.com/repos/typst/typst/releases/latest | grep browser_download_url |grep -E "x86.*linux" | cut -d '"' -f 4)
+        wget https://github.com/typst/typst/releases/download/v0.12.0/typst-x86_64-unknown-linux-musl.tar.xz
         tar xf typst*.tar.xz -C /tmp
         sudo mv /tmp/typst*/typst /bin/typst
     - name: Check Glossario

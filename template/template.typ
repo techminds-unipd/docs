@@ -55,7 +55,7 @@
         ..changelog
     )
 
-    outline(title: "Indice", indent: auto)
+    outline(title: "Indice", indent: true)
 
     if title != "Glossario" {
         outline(title: "Lista delle figure", target: figure)
@@ -110,7 +110,7 @@
         ..changelog
     )
 
-    outline(title: "Indice", indent: auto)
+    outline(title: "Indice", indent: true)
 
     pagebreak()
     set par(justify: true)
