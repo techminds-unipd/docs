@@ -8,6 +8,7 @@
 - FMR (Functional Mandatory Requirement): irrinunciabili per qualcuno degli #glossario[stakeholder] ;
 - FDR (Functional Desirable Requirement): non strettamente necessari ma a valore aggiunto riconoscibile;
 - FOR (Functional Optional Requirement): relativamente utili oppure contrattabili anche in fasi avanzate nel progetto.
+
 #set par(justify: false)
 #figure(
     table(
@@ -16,35 +17,7 @@
         inset: 10pt,
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        ..getFR(1),
-        ..getFR(2),
-        ..getFR(3),
-        ..getFR(4),
-        ..getFR(5),
-        ..getFR(6),
-        ..getFR(7),
-        ..getFR(8),
-        ..getFR(9),
-        ..getFR(10),
-        ..getFR(11),
-        ..getFR(12),
-        ..getFR(13),
-        ..getFR(14),
-        ..getFR(15),
-        ..getFR(16),
-        ..getFR(17),
-        ..getFR(18),
-        ..getFR(19),
-        ..getFR(20),
-        ..getFR(21),
-        ..getFR(22),
-        ..getFR(23),
-        ..getFR(24),
-        ..getFR(25),
-        ..getFR(26),
-        ..getFR(27),
-        ..getFR(28),
-        ..getFR(29),
+        ..getFR(getLen: false).flatten(),
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>

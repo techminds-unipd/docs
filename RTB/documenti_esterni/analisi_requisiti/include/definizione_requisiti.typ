@@ -1,6 +1,6 @@
 #import "/template/template.typ": glossario
 
-#let getFR(number) = {
+#let getFR(getLen: bool) = {
     let FR = ()
     let FMR = 1
     let FOR = 1
@@ -180,5 +180,8 @@
     ))
     FMR+=1
 
-    return FR.at(number - 1)
+    if getLen {
+        return (FMR, FOR)
+    }
+    return FR
 }
