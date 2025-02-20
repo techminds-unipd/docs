@@ -2,6 +2,8 @@
 //#glossario[verifica]
 //#glossario[llm]
 //#glossario[label]
+//#glossario[push]
+//#glossario[tracciamento]
 
 #show: documento.with(
   title: "Analisi dei requisiti",
