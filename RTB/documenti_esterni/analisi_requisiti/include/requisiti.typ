@@ -1,6 +1,7 @@
 #import "/template/template.typ": glossario
+#import "definizione_requisiti.typ": getFR
 #show figure: set block(breakable: true)
-= Requisiti e tracciamento
+= Requisiti
 
 == Requisiti funzionali
 
@@ -15,40 +16,35 @@
         inset: 10pt,
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        [FMR1], [L'utente deve poter effettuare il login.],
-        [@login, @login-interno, @inserimento-username, @inserimento-password, @credenziali-errate],
-
-        [FOR1], [L'utente deve poter fare il login con Google.], [@login-google],
-        
-        [FMR2], [L'utente deve potersi registrare.], [@registrazione, @creazione-username, @inserimento-email, @creazione-password, @conferma-password, @errore-registrazione],
-
-        [FMR3], [L'utente autenticato deve poter associare e dissociare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow.], [@aggiunta-account-google-associato, @errore-comunicazione-google, @rimozione-account-google-associato],
-
-        [FMR4], [L'utente autenticato deve poter eseguire un workflow.], [@esecuzione-workflow, @vis-errore-struttura-workflow, @vis-errore-runtime, (Approfondimento: TODO)],
-
-        [FMR5], [L'utente autenticato deve poter vedere il risultato dell'esecuzione del workflow.], [@vis-risultato-esecuzione-workflow],
-
-        [FMR6], [L'utente autenticato deve poter creare un workflow.], [@creazione-nuovo-workflow],
-
-        [FMR7], [L'utente autenticato deve poter visualizzare un workflow.], [@visualizzazione-workflow],
-
-        [FMR8], [L'utente autenticato deve poter aggiungere ed eliminare un blocco in un workflow.], [@aggiunta-blocco, @eliminazione-blocco],
-
-        [FMR9], [L'utente autenticato deve poter collegare e scollegare due blocchi in un workflow.], [@collegamento-arco, @scollegamento-arco],
-
-        [FMR10], [L'utente autenticato deve poter aggiungere e modificare una descrizione dell'automazione tra due blocchi collegati.], [@aggiunta-descrizione, @modifica-descrizione],
-
-        [FMR11], [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.], [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
-       
-        [FMR12], [L'utente autenticato deve poter salvare un workflow.], [@salvataggio-workflow, @vis-errore-operazione-workflow],
-
-        [FMR13], [L'utente autenticato deve poter visualizzare le informazioni relative ai blocchi Gmail, Pastebin e Calendar.], [@funzionalità-blocco, @funzionalità-blocco-gmail, @funzionalità-blocco-pastebin, @funzionalità-blocco-calendar],
-
-        [FMR14], [L'utente autenticato deve poter fare il logout.], [@logout],
-
-        [FMR15], [L'utente autenticato deve poter cancellare un workflow.], [@eliminazione-workflow, @vis-errore-operazione-workflow],
-        
-        [FMR16],[L'utente deve poter utilizzare almeno tre blocchi diversi.],[Capitolato],
+        ..getFR(1),
+        ..getFR(2),
+        ..getFR(3),
+        ..getFR(4),
+        ..getFR(5),
+        ..getFR(6),
+        ..getFR(7),
+        ..getFR(8),
+        ..getFR(9),
+        ..getFR(10),
+        ..getFR(11),
+        ..getFR(12),
+        ..getFR(13),
+        ..getFR(14),
+        ..getFR(15),
+        ..getFR(16),
+        ..getFR(17),
+        ..getFR(18),
+        ..getFR(19),
+        ..getFR(20),
+        ..getFR(21),
+        ..getFR(22),
+        ..getFR(23),
+        ..getFR(24),
+        ..getFR(25),
+        ..getFR(26),
+        ..getFR(27),
+        ..getFR(28),
+        ..getFR(29),
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
@@ -97,7 +93,7 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         align: horizon + center,
         
         [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
-        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP.],[Decisione interna],
+        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP contenenti oggetti in formato JSON.],[Decisione interna],
         [CMR2], [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.], [Decisione interna],
         [CMR3], [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.], [Decisione interna],
     ),
@@ -113,9 +109,9 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt,
         table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Opzionale*], [*Complessivo*]),
         align: horizon + center,
-        [Funzionale], [15], [0], [1],[16],
-        [Di qualità], [9], [2], [0], [11],
-        [Di vincolo], [2], [1], [0], [3],
+        [Funzionale], [], [], [],[],
+        [Di qualità], [], [], [], [],
+        [Di vincolo], [], [], [], [],
         [*Totale*], [*26*], [*3*], [*1*], [*30*],
     ),
     caption: [Tabella di riepilogo dei requisiti.]

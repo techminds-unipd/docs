@@ -15,7 +15,7 @@ Le sezioni principali includono una dettagliata analisi delle qualità di prodot
 - Portabilità.
 ==== Funzionalità
 Misura se e quanto il prodotto software soddisfa i requisiti essenziali, desiderabili e opzionali, garantendo che le funzionalità principali siano completamente implementate.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -33,11 +33,11 @@ Misura se e quanto il prodotto software soddisfa i requisiti essenziali, desider
   ), 
   caption: [Funzionalità - Metriche e indici di qualità.]
 ) <tabella-MF>
-#set par (justify: true)
+#set par(justify: true)
 
 ==== Affidabilità
 Misura della stabilità e leggibilità del software.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -55,11 +55,11 @@ Misura della stabilità e leggibilità del software.
   ), 
   caption: [Affidabilità - Metriche e indici di qualità.]
 ) <tabella-MAF>
-#set par (justify: true)
+#set par(justify: true)
 
 ==== Manutenibilità
 Indica quanto è semplice aggiornare, correggere e migliorare il software.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -82,11 +82,11 @@ Indica quanto è semplice aggiornare, correggere e migliorare il software.
   ), 
   caption: [Manutenibilità - Metriche e indici di qualità.]
 ) <tabella-MM>
-#set par (justify: true)
+#set par(justify: true)
 
 ==== Efficienza
 Misura delle prestazioni del software in termini di utilizzo delle risorse (es. tempo di esecuzione) rispetto a soglie accettabili e ottimali.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -104,11 +104,11 @@ Misura delle prestazioni del software in termini di utilizzo delle risorse (es. 
   ), 
   caption: [Efficienza - Metriche e indici di qualità.]
 ) <tabella-ME>
-#set par (justify: true)
+#set par(justify: true)
 
 ==== Usabilità
 Valuta quanto è facile per gli utenti interagire con il prodotto software.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -127,12 +127,12 @@ Valuta quanto è facile per gli utenti interagire con il prodotto software.
   ), 
   caption: [Usabilità - Metriche e indici di qualità.]
 ) <tabella-MU>
-#set par (justify: true)
+#set par(justify: true)
 
 
 ==== Accessibilità
 Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti possibile.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -151,11 +151,11 @@ Capacità del prodotto di essere utilizzabile dalla più vasta gamma di utenti p
   ), 
   caption: [Accessibilità - Metriche e indici di qualità.]
 ) <tabella-MAC>
-#set par (justify: true)
+#set par(justify: true)
 
 ==== Portabilità
 Analizza la capacità del software di funzionare su diverse piattaforme e ambienti.
-#set par (justify: false)
+#set par(justify: false)
 #figure(
   table(
     columns: (auto, auto, auto, auto, auto),
@@ -173,4 +173,4 @@ Analizza la capacità del software di funzionare su diverse piattaforme e ambien
   ), 
   caption: [Portabilità - Metriche e indici di qualità.]
 ) <tabella-MP>
-#set par (justify: true)
+#set par(justify: true)
