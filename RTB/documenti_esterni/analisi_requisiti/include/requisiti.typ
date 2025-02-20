@@ -37,20 +37,6 @@ Si dividono in:
         table.header([*Codice*], [*Descrizione*], [*Fonti*] ),
         align: horizon + center,
         ..getQR(getLen: false).flatten(),
-        /*
-        [QMR1],[Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],[Capitolato],
-        //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
-        [QMR2],[Documentare nel #glossario[piano di qualifica] i bug presenti.],[Capitolato],
-        [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
-        [QMR4],[Documentare nel piano di qualifica la copertura dei #glossario[test di unità] (almeno il 70% del codice prodotto).],[Capitolato],
-        //Questo è un link ricorsivo
-        [QMR5],[Documentare nell'#glossario[analisi dei requisiti] i casi d'uso.],[Capitolato],
-        [QMR6],[Documentare nella specifica tecnica le classi attraverso #glossario[diagrammi UML].],[Capitolato],
-        //[QMR7],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[],[Norme di progetto],
-        [QMR7],[La documentazione deve rispettare le metriche descritte nel piano di qualifica.],[Piano di qualifica §2.2],
-        [QDR1],[Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],[Formazione col proponente],
-        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna, Formazione col proponente]
-        */
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
@@ -68,15 +54,26 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
         ..getCR(getLen: false).flatten(),
-        /*
-        [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
-        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP contenenti oggetti in formato JSON.],[Decisione interna],
-        [CMR2], [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.], [Decisione interna],
-        [CMR3], [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.], [Decisione interna],
-        */
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
+
+
+== Tracciamento
+=== Requisito - Fonte
+#figure(
+    table(
+        columns: (auto, auto),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }}, 
+        inset: 10pt, 
+        table.header([*Requisito*], [*Fonte*]),
+        align: horizon + center,
+        ..getFR(getLen: false).map(x => (x.at(0),x.at(2))).flatten(),
+        ..getQR(getLen: false).map(x => (x.at(0),x.at(2))).flatten(),
+        ..getCR(getLen: false).map(x => (x.at(0),x.at(2))).flatten(),
+    ),
+    caption: [Tabella tracciamento requisito-fonte.]
+)<tabella-tracciamento-requisito-fonte>
 
 
 #let numReqFunzionali = getFR(getLen: true)
