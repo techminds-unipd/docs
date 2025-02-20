@@ -1,5 +1,5 @@
 #import "/template/template.typ": glossario
-#import "definizione_requisiti.typ": getFR
+#import "definizione_requisiti.typ": getFR, getCR
 #show figure: set block(breakable: true)
 = Requisiti
 
@@ -64,11 +64,13 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt, 
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        
+        ..getCR(getLen: false).flatten(),
+        /*
         [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
         [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP contenenti oggetti in formato JSON.],[Decisione interna],
         [CMR2], [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.], [Decisione interna],
         [CMR3], [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.], [Decisione interna],
+        */
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>

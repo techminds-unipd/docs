@@ -185,3 +185,40 @@
     }
     return FR
 }
+
+
+#let getCR(getLen: bool) = {
+    let CR = ()
+    let CMR = 1
+    let CDR = 1
+
+    CR.push(("CDR" + str(CDR),
+        [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).],
+        [Capitolato, Riunione col proponente],
+    ))
+    CDR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP contenenti oggetti in formato JSON.],
+        [Decisione interna],
+    ))
+    CMR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.],
+        [Decisione interna],
+    ))
+    CMR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.],
+        [Decisione interna],
+    ))
+    CMR+=1
+
+    if getLen {
+        return (FMR, FOR)
+    }
+    return CR
+
+}
