@@ -1634,7 +1634,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Backend.
 - *Scenario principale*:
  - Backend:
-    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend), ed i token di autorizzazione necessari.
+    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend) e i token di autorizzazione necessari.
  - Agente:
    1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:
