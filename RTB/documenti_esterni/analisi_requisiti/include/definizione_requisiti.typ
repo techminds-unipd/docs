@@ -55,7 +55,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente deve potersi registrare.],
-        [@registrazione, @creazione-username, @inserimento-email, @creazione-password, @conferma-password, @errore-registrazione],
+        [@registrazione, @creazione-username, @creazione-password, @conferma-password, @errore-registrazione],
     ))
     FMR+=1
 
