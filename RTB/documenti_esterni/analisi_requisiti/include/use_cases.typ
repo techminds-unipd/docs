@@ -39,8 +39,7 @@ descrivere nel dettaglio le operazioni che l'utente può compiere
 all'interno dell'applicativo, offrendo una panoramica completa 
 delle funzionalità disponibili. Inoltre, permettono di definire 
 chiaramente le interazioni tra l'utente e il sistema, evidenziando come avviene il 
-dialogo tra questi due. Infine, si occupano anche di delineare le modalità di interazione 
-tra il sistema e i servizi esterni, garantendo così una comprensione precisa delle connessioni e delle dipendenze tecnologiche.
+dialogo tra questi due. Infine, si occupano anche di delineare le modalità di interazione tra il sistema e i servizi esterni.
 == Attori
 - *Attori principali*:
   - Utente non autenticato;
@@ -320,29 +319,26 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
     ], name: <d>),
     edge(<b>, <d>, "--straight", [\<\<include\>\>]),
 
-    node((1.5,1.3), align(center)[
-            @inserimento-email Inserimento email
-    ], name: <e>),
-    edge(<b>, <e>, "--straight", [\<\<include\>\>]),
+    
 
-    node((1.91,1), align(center)[
+    node((1.7,1.2), align(center)[
             @creazione-password Creazione password
     ], name: <f>),
     edge(<b>, <f>, "--straight", [\<\<include\>\>]),
 
-    node((2.7,1.3), align(center)[
+    node((2.5,1), align(center)[
             @conferma-password Conferma password
     ], name: <g>),
     edge(<b>, <g>, "--straight", [\<\<include\>\>]),
 
-    node((2.6,0.35), align(center)[
+    node((2.7,0.35), align(center)[
             Utente inserisce #linebreak() dati non validi
     ], shape: uc_comment, name: <le>),
     node((2.1,0.025), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
 
-    node(enclose: (<b>,<c>,<d>,<e>,<f>,<g>),
+    node(enclose: (<b>,<c>,<d>,<f>,<g>),
         align(top + right)[Sistema],
         width: 200pt,
         height: 250pt,
@@ -359,11 +355,10 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
  - Utente non autenticato:
    1. seleziona voce di registrazione;
    2. crea un username univoco nel sistema (@creazione-username);
-   3. inserisce un'email valida (@inserimento-email);
-   4. crea una password valida (@creazione-password);
-   5. conferma la password (@conferma-password).
+   3. crea una password valida (@creazione-password);
+   4. conferma la password (@conferma-password).
  - Sistema:
-   1. attende l'esito di @creazione-username, @inserimento-email, @creazione-password e @conferma-password;
+   1. attende l'esito di @creazione-username, @creazione-password e @conferma-password;
    2. tutte le verifiche hanno successo;
    3. crea un nuovo account;
    4. salva nel database i dati del nuovo account.
@@ -389,21 +384,6 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
 - *Post-condizioni*:
    - L'utente ha inserito un username.
 
-
-==== Inserimento email <inserimento-email>
-- *Descrizione*:
-  - Questo caso d'uso descrive la procedura di inserimento di un'email da parte di un utente.
-- *Attori principali*:
-  - Utente non autenticato.
-- *Scenario principale*:
-  - Utente non autenticato:
-    1. inserisce un'email.
-  - Sistema:
-    1. verifica che l'email sia valida.
-- *Pre-condizioni*:
-  - L'utente non possiede un account.
-- *Post-condizioni*:
-  - L'utente ha inserito un'email.
 
 ==== Creazione password <creazione-password>
 - *Descrizione*:
@@ -442,9 +422,9 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente non autenticato.
 - *Scenario principale*:
   - Utente non autenticato:
-    1. inserisce username, email, o password non validi.
+    1. inserisce username o password non validi.
   - Sistema:
-    1. l'esito della verifica da @creazione-username, @inserimento-email, @creazione-password o @conferma-password è negativo;
+    1. l'esito della verifica da @creazione-username, @creazione-password o @conferma-password è negativo;
     2. mostra un messaggio d'errore all'utente;
     3. offre la possibilità all'utente di correggere i campi errati.
 - *Pre-condizioni*:
@@ -1485,7 +1465,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Utente autenticato:
     1. ha avviato l'esecuzione del workflow.
   - Sistema:
-    1. rileva che almeno un requisito nella struttura del workflow non è stato soddifatto;
+    1. rileva che almeno un requisito nella struttura del workflow non è stato soddisfatto;
     2. mostra un messaggio d'errore all'utente;
     3. termina l'esecuzione.
 - *Pre-condizioni*:
@@ -1634,7 +1614,7 @@ tra il sistema e i servizi esterni, garantendo così una comprensione precisa de
   - Backend.
 - *Scenario principale*:
  - Backend:
-    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend), ed i token di autorizzazione necessari.
+    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend) e i token di autorizzazione necessari.
  - Agente:
    1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:

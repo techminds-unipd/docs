@@ -20,7 +20,7 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/PoC/issues/3")[Issue \#3] #footnote(link("https://github.com/techminds-unipd/PoC/issues/3")): Inizio implementazione agenti nel backend (non completata durante lo sprint 2);
         - #link("https://github.com/techminds-unipd/PoC/issues/8")[Issue \#8] #footnote(link("https://github.com/techminds-unipd/PoC/issues/8")): Gestione collegamento servizi Google.
     
-    - Analisi dei Requisiti
+    - Analisi dei requisiti
         - #link("https://github.com/techminds-unipd/docs/issues/149")[Issue \#149] #footnote(link("https://github.com/techminds-unipd/docs/issues/149")): UC blocco calendar;
         - #link("https://github.com/techminds-unipd/docs/issues/150")[Issue \#150] #footnote(link("https://github.com/techminds-unipd/docs/issues/150")): UC blocco pastebin;
         - #link("https://github.com/techminds-unipd/docs/issues/151")[Issue \#151] #footnote(link("https://github.com/techminds-unipd/docs/issues/151")): UC approfondimento esecuzione workflow;
@@ -29,15 +29,15 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
         - #link("https://github.com/techminds-unipd/docs/issues/154")[Issue \#154] #footnote(link("https://github.com/techminds-unipd/docs/issues/154")): Fix UC visualizzazione blocchi configurati e avviso servizi collegati.
     
 
-    - Piano di Progetto
+    - Piano di progetto
         - #link("https://github.com/techminds-unipd/docs/issues/155")[Issue \#155] #footnote(link("https://github.com/techminds-unipd/docs/issues/155")): Preventivo sprint 3;
         - #link("https://github.com/techminds-unipd/docs/issues/156")[Issue \#156] #footnote(link("https://github.com/techminds-unipd/docs/issues/156")): Consuntivo sprint 2.
 
-    - Piano di Qualifica
+    - Piano di qualifica
         - #link("https://github.com/techminds-unipd/docs/issues/109")[Issue \#109] #footnote(link("https://github.com/techminds-unipd/docs/issues/109")): Fix piano di qualifica (non completata durante lo sprint 2);
         - #link("https://github.com/techminds-unipd/docs/issues/111")[Issue \#111] #footnote(link("https://github.com/techminds-unipd/docs/issues/111")): Redigere nuove sezioni piano di qualifica (non completata durante lo sprint 2).
 
-    - Norme di Progetto
+    - Norme di progetto
        - #link("https://github.com/techminds-unipd/docs/issues/157")[Issue \#157] #footnote(link("https://github.com/techminds-unipd/docs/issues/157")): Redigere sezione 2.2 norme di progetto;
        - #link("https://github.com/techminds-unipd/docs/issues/158")[Issue \#158] #footnote(link("https://github.com/techminds-unipd/docs/issues/158")): Redigere sezione 3.4, 3.5;
        - #link("https://github.com/techminds-unipd/docs/issues/159")[Issue \#159] #footnote(link("https://github.com/techminds-unipd/docs/issues/159")): Aggiornamento norme di progetto.
@@ -47,16 +47,6 @@ In questo terzo sprint continueremo a concentrarci principalmente sulla scrittur
       - #link("https://github.com/techminds-unipd/docs/issues/160")[Issue \#160] #footnote(link("https://github.com/techminds-unipd/docs/issues/160")): Fix script python.
 
 ==== Diagramma di Gantt
-Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
-Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
-#linebreak()I colori sono significativi:
-#list(
-    indent: 10pt,
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
-[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
-)
-
 #figure(
 timeliney.timeline(
   show-grid: true,
@@ -85,17 +75,17 @@ timeliney.timeline(
       task("Fix UC visualizzazione blocchi", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Piano di Progetto*], {
+    taskgroup(title: [*Piano di progetto*], {
       task("Preventivo sprint 3", (from: 3, to: 7, style: (stroke: 8pt + gray)), (from: 3, to: 7, style: (stroke: 2pt + red)))
       task("Consuntivo sprint 2", (from: 3, to: 6, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Piano di Qualifica*], {
+    taskgroup(title: [*Piano di qualifica*], {
       task("Fix piano di qualifica", (from: 9, to: 12, style: (stroke: 8pt + gray)), (from: 9, to: 10, style: (stroke: 2pt + red)))
       task("Redigere nuove sezioni piano di qualifica", (from: 0, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
     })
 
-    taskgroup(title: [*Norme di Progetto*], {
+    taskgroup(title: [*Norme di progetto*], {
       task("Redigere sezione 2.2 norme di progetto", (from: 2, to: 6, style: (stroke: 8pt + gray)), (from: 2, to: 6, style: (stroke: 2pt + red)))
       task("Redigere sezione 3.4, 3.5", (from: 5, to: 10, style: (stroke: 8pt + gray)), (from: 5, to: 9, style: (stroke: 2pt + red)))
       task("Aggiornamento norme di progetto", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 9, style: (stroke: 2pt + red)))
@@ -116,9 +106,7 @@ Sono stati completati tutti i task tranne #link("https://github.com/techminds-un
 ==== Restrospettiva
 Non ci sono state particolari difficoltà durante questo periodo, quindi non è stato deciso alcun cambiamento al way of working.
 
-==== Costi
-
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 3)
 
@@ -134,7 +122,7 @@ Non ci sono state particolari difficoltà durante questo periodo, quindi non è 
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(3, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)

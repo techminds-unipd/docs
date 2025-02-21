@@ -1,5 +1,5 @@
 #import "/template/template.typ": glossario
-#import "definizione_requisiti.typ": getFR
+#import "definizione_requisiti.typ": getFR, getQR, getCR
 #show figure: set block(breakable: true)
 = Requisiti
 
@@ -8,6 +8,7 @@
 - FMR (Functional Mandatory Requirement): irrinunciabili per qualcuno degli #glossario[stakeholder] ;
 - FDR (Functional Desirable Requirement): non strettamente necessari ma a valore aggiunto riconoscibile;
 - FOR (Functional Optional Requirement): relativamente utili oppure contrattabili anche in fasi avanzate nel progetto.
+
 #set par(justify: false)
 #figure(
     table(
@@ -16,35 +17,7 @@
         inset: 10pt,
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        ..getFR(1),
-        ..getFR(2),
-        ..getFR(3),
-        ..getFR(4),
-        ..getFR(5),
-        ..getFR(6),
-        ..getFR(7),
-        ..getFR(8),
-        ..getFR(9),
-        ..getFR(10),
-        ..getFR(11),
-        ..getFR(12),
-        ..getFR(13),
-        ..getFR(14),
-        ..getFR(15),
-        ..getFR(16),
-        ..getFR(17),
-        ..getFR(18),
-        ..getFR(19),
-        ..getFR(20),
-        ..getFR(21),
-        ..getFR(22),
-        ..getFR(23),
-        ..getFR(24),
-        ..getFR(25),
-        ..getFR(26),
-        ..getFR(27),
-        ..getFR(28),
-        ..getFR(29),
+        ..getFR(getLen: false).flatten(),
     ),
     caption: [Tabella dei requisiti funzionali.],
 )<tabella-dei-requisiti>
@@ -63,18 +36,7 @@ Si dividono in:
         inset: 10pt, 
         table.header([*Codice*], [*Descrizione*], [*Fonti*] ),
         align: horizon + center,
-        [QMR1],[Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],[Capitolato],
-        //[QMR2], [Dotarsi di un design modulare per agevolare la creazione di nuovi blocchi.],[],[Capitolato],
-        [QMR2],[Documentare nel #glossario[piano di qualifica] i bug presenti.],[Capitolato],
-        [QMR3],[Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],[Capitolato],
-        [QMR4],[Documentare nel piano di qualifica la copertura dei #glossario[test di unità] (almeno il 70% del codice prodotto).],[Capitolato],
-        //Questo è un link ricorsivo
-        [QMR5],[Documentare nell'#glossario[analisi dei requisiti] i casi d'uso.],[Capitolato],
-        [QMR6],[Documentare nella specifica tecnica le classi attraverso #glossario[diagrammi UML].],[Capitolato],
-        //[QMR7],[Rispettare quanto scritto nel documento "Norme di progetto" durante lo sviluppo del prodotto e della documentazione.],[],[Norme di progetto],
-        [QMR7],[La documentazione deve rispettare le metriche descritte nel piano di qualifica.],[Piano di qualifica §2.2],
-        [QDR1],[Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],[Formazione col proponente],
-        [QDR2],[Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],[Decisione interna, Formazione col proponente]
+        ..getQR(getLen: false).flatten(),
     ),
     caption: [Tabella dei requisiti di qualità.]
 )<tabella-requisiti-di-qualita>
@@ -91,15 +53,71 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt, 
         table.header([*Codice*], [*Descrizione*], [*Fonti*]),
         align: horizon + center,
-        
-        [CDR1], [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).], [Capitolato, Riunione col proponente],
-        [CMR1],[Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP contenenti oggetti in formato JSON.],[Decisione interna],
-        [CMR2], [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.], [Decisione interna],
-        [CMR3], [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.], [Decisione interna],
+        ..getCR(getLen: false).flatten(),
     ),
     caption: [Tabella dei requisiti di vincolo.]
 )<tabella-requisiti-di-vincolo>
 
+
+== Tracciamento
+=== Requisito - Fonte
+#figure(
+    table(
+        columns: (auto, auto),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }}, 
+        inset: 10pt, 
+        table.header([*Requisito*], [*Fonte*]),
+        align: horizon + center,
+        ..getFR(getLen: false).map(x => (x.at(0),x.at(2))).flatten(),
+        ..getQR(getLen: false).map(x => (x.at(0),x.at(2))).flatten(),
+        ..getCR(getLen: false).map(x => (x.at(0),x.at(2))).flatten(),
+    ),
+    caption: [Tabella tracciamento requisito-fonte.]
+)<tabella-tracciamento-requisito-fonte>
+
+#let fonte-requisito = getFR(getLen: false).map(x => (x.at(2),x.at(0))) + getQR(getLen: false).map(x => (x.at(2),x.at(0))) + getCR(getLen: false).map(x => (x.at(2),x.at(0)))
+
+#let formatted-fonte-requisito = fonte-requisito.map(x => {
+    let item = x.at(0)
+    if item.has("text") {
+        return (item.text.split(",").map(z => (z.trim(), x.at(1))))
+    }
+    else if item.has("children") {
+        let refs = item.children.filter(x => x.has("target"))
+        return refs.map(y => (y, x.at(1)))
+    }
+    else if item.has("target"){
+        return x
+    }
+}).flatten().chunks(2)
+
+#let unique-requisiti = formatted-fonte-requisito.map(x => x.at(0)).flatten().dedup()
+#let fonte-requisito = ()
+#for item in unique-requisiti {
+    fonte-requisito.push((item, formatted-fonte-requisito.filter(x => x.at(0) == item).map(x => x.at(1)).join(", ")))
+}
+#fonte-requisito.insert(2, fonte-requisito.pop())
+#fonte-requisito.insert(3, fonte-requisito.pop())
+#fonte-requisito.insert(4, fonte-requisito.pop())
+
+
+=== Fonte - Requisito
+#figure(
+    table(
+        columns: (5cm, 5.5cm),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }}, 
+        inset: 10pt, 
+        table.header([*Fonte*], [*Requisito*]),
+        align: horizon + center,
+        ..fonte-requisito.flatten()
+    ),
+    caption: [Tabella tracciamento fonte-requisito.]
+)<tabella-tracciamento-fonte-requisito>
+
+#let numReqFunzionali = getFR(getLen: true)
+#let numReqQualita = getQR(getLen: true)
+#let numReqVincolo = getCR(getLen: true)
+#let numReqTotali = numReqFunzionali.sum() + numReqQualita.sum() + numReqVincolo.sum()
 == Riepilogo
 #set par(justify: false)
 #figure(
@@ -109,10 +127,13 @@ I requisiti di vincolo rappresentano delle restrizioni o dei limiti che il siste
         inset: 10pt,
         table.header([*Tipologia*], [*Obbligatorio*], [*Desiderabile*], [*Opzionale*], [*Complessivo*]),
         align: horizon + center,
-        [Funzionale], [], [], [],[],
-        [Di qualità], [], [], [], [],
-        [Di vincolo], [], [], [], [],
-        [*Totale*], [*26*], [*3*], [*1*], [*30*],
+        [Funzionale], [#numReqFunzionali.at(0)], [#numReqFunzionali.at(1)], [#numReqFunzionali.at(2)],[#numReqFunzionali.sum()],
+        [Di qualità], [#numReqQualita.at(0)], [#numReqQualita.at(1)], [#numReqQualita.at(2)], [#numReqQualita.sum()],
+        [Di vincolo], [#numReqVincolo.at(0)], [#numReqVincolo.at(1)], [#numReqVincolo.at(2)], [#numReqVincolo.sum()],
+        [*Totale*], [*#numReqFunzionali.zip(numReqQualita, numReqVincolo).at(0).sum()*],
+        [*#numReqFunzionali.zip(numReqQualita, numReqVincolo).at(1).sum()*],
+        [*#numReqFunzionali.zip(numReqQualita, numReqVincolo).at(2).sum()*],
+        [*#numReqTotali*],
     ),
     caption: [Tabella di riepilogo dei requisiti.]
 )<tabella-riepilogo>

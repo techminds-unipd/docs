@@ -28,16 +28,6 @@ Data la scarsa conoscenza del dominio, il primo sprint avrà una durata maggiore
   - #link("https://github.com/techminds-unipd/docs/issues/70")[Issue \#70] #footnote(link("https://github.com/techminds-unipd/docs/issues/70")): Aggiornamento norme di progetto.
 
 ==== Diagramma di Gantt
-Questo diagramma mostra come sono avvenute le attività nell'arco temporale dello sprint.
-Il diagramma conteggia solamente i giorni produttivi, tralasciando quindi le festività e i fine settimana.
-#linebreak()I colori sono significativi:
-#list(
-    indent: 10pt,
-[il #underline("grigio", stroke: 1pt + gray, evade: false) indica l'arco di tempo preventivato;],
-[il #underline("rosso", stroke: 1pt + red, evade: false) indica l'arco di tempo effettivo;],
-[il #underline("nero", stroke: 1pt + black, evade: false) indica il range complessivo di un gruppo di task.]
-)
-
 #figure(
 timeliney.timeline(
   show-grid: true,
@@ -68,10 +58,10 @@ timeliney.timeline(
       task("Fix use case", (from: 14, to: 15, style: (stroke: 8pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
     })
 
-    task("Aggiornamento NdP", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
+    task("Aggiornamento norme di progetto", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
     task("Sostituire termini glossario", (from: 1, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 4, style: (stroke: 2pt + red)))
     task("Inizio analisi dei rischi", (from: 4, to: 5, style: (stroke: 8pt + gray)), (from: 4, to: 5, style: (stroke: 2pt + red)))
-    task("Redazione sprint 1 in PdP", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 11, style: (stroke: 2pt + red)))
+    task("Redazione sprint 1 in piano di progetto", (from: 7, to: 11, style: (stroke: 8pt + gray)), (from: 7, to: 11, style: (stroke: 2pt + red)))
     task("Miglioramenti grafici documentazione", (from: 10, to: 11, style: (stroke: 8pt + gray)), (from: 10, to: 11, style: (stroke: 2pt + red)))
     task("Rifinitura pagina HTML", (from: 14, to: 15, style: (stroke: 8pt + gray)), (from: 14, to: 15, style: (stroke: 2pt + red)))
   }
@@ -95,9 +85,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
     [si cercherà di automatizzare il controllo dei termini del glossario presenti nei vari documenti, visto che verificare che i termini siano correttamente indicati richiede una quantità di tempo molto onerosa.]
 )
 
-==== Costi
-
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 1)
 
@@ -113,7 +101,7 @@ L'analisi delle difficoltà incontrate durante questo sprint ha portato alle seg
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(1, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)

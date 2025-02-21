@@ -27,7 +27,7 @@ Il server è suddiviso in canali testuali e canali vocali:
 + Sezione dubbi, che contiene:
    + diario-di-bordo, riguardante i dubbi da discutere ai diari di bordo;
    + analisi-dei-requisiti, riguardante i dubbi per l'analisi;
-   + #glossario[poc], riguardante i dubbi per il poc;
+   + #glossario[poc], riguardante i dubbi per il PoC;
    + proponente, riguandante i dubbi da discutere con il proponente.
 + Vari canali vocali, per svolgere meeting e lavorare in gruppo.
 

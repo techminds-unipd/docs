@@ -1,8 +1,9 @@
 #import "/template/template.typ": glossario
 
-#let getFR(number) = {
+#let getFR(getLen: bool) = {
     let FR = ()
     let FMR = 1
+    let FDR = 1
     let FOR = 1
 
     FR.push(  ("FMR" + str(FMR),
@@ -54,7 +55,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente deve potersi registrare.],
-        [@registrazione, @creazione-username, @inserimento-email, @creazione-password, @conferma-password, @errore-registrazione],
+        [@registrazione, @creazione-username, @creazione-password, @conferma-password, @errore-registrazione],
     ))
     FMR+=1
 
@@ -180,5 +181,112 @@
     ))
     FMR+=1
 
-    return FR.at(number - 1)
+    if getLen {
+        return (FMR -1, FDR -1, FOR -1)
+    }
+    return FR
+}
+
+#let getQR(getLen: bool) = {
+    let QR = ()
+    let QMR = 1
+    let QDR = 1
+    let QOR = 1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nella specifica tecnica le criticità e i limiti delle soluzioni individuate.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nel #glossario[piano di qualifica] i bug presenti.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Fornire il codice sorgente del prodotto attraverso un sistema di versionamento.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nel piano di qualifica la copertura dei #glossario[test di unità] (almeno il 70% del codice prodotto).],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nell'#glossario[analisi dei requisiti] i casi d'uso.],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [Documentare nella specifica tecnica le classi attraverso #glossario[diagrammi UML].],
+        [Capitolato],
+    ))
+    QMR+=1
+
+    QR.push(("QMR" + str(QMR),
+        [La documentazione deve rispettare le metriche descritte nel piano di qualifica.],
+        [Piano di qualifica],
+    ))
+    QMR+=1
+
+    QR.push(("QDR" + str(QDR),
+        [Le #glossario[API] devono essere documentate attraverso #glossario[Swagger].],
+        [Formazione col proponente],
+    ))
+    QDR+=1
+
+    QR.push(("QDR" + str(QDR),
+        [Il codice #glossario[TypeScript] deve essere formattato secondo le regole #glossario[ESLint] descritte nelle norme di progetto.],
+        [Decisione interna, Formazione col proponente],
+    ))
+    QDR+=1
+
+    if getLen {
+        return (QMR -1, QDR -1, QOR -1)
+    }
+    return QR
+}
+
+
+#let getCR(getLen: bool) = {
+    let CR = ()
+    let CMR = 1
+    let CDR = 1
+    let COR = 1
+
+    CR.push(("CDR" + str(CDR),
+        [Il prodotto deve essere sviluppato in container #glossario[Docker], facilitando così il rilascio su vari ambienti cloud (ad esempio #glossario[AWS]).],
+        [Capitolato, Riunione col proponente],
+    ))
+    CDR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Le parti del sistema devono comunicare tra di loro attraverso #glossario[API] che usano il protocollo HTTP contenenti oggetti in formato JSON.],
+        [Decisione interna],
+    ))
+    CMR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.],
+        [Decisione interna],
+    ))
+    CMR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.],
+        [Decisione interna],
+    ))
+    CMR+=1
+
+    if getLen {
+        return (CMR -1, CDR -1, COR -1)
+    }
+    return CR
+
 }
