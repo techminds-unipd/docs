@@ -2,11 +2,21 @@
 //#glossario[verifica]
 //#glossario[llm]
 //#glossario[label]
+//#glossario[push]
+//#glossario[tracciamento]
 
 #show: documento.with(
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+      "1.2.0", "20/02/2025", "Aggiunte tabelle tracciamento", team.M, team.S,
+    "1.1.0", "20/02/2025", "Aggiunti requisiti e resi atomici", team.T, team.G,
+    "1.0.6", "19/02/2025", "Fix tabelle dei requisiti", team.T, team.S,
+    "1.0.5", "19/02/2025", "Fix use case errore operazione workflow", team.M, team.G,
+    "1.0.4", "18/02/2025", "Fix use case visualizzazione blocchi configurati", team.M, team.G,
+    "1.0.3", "18/02/2025", "Fix use case creazione e visualizzazione workflow", team.M, team.S,
+    "1.0.2", "17/02/2025", "Refactoring use case approfondimento invio dati dei workflow", team.M, team.G,
+    "1.0.1", "17/02/2025", "Inseriti numeri di versione dei documenti riferiti", team.M, team.S,
     "1.0.0", "06/02/2025", "Revisione documento", team.S, team.M,
     "0.23.0", "05/02/2025", "Aggiunta tabella riepilogo + fix codice tabella requisiti", team.G, team.M,
     "0.22.0", "23/01/2025", "Fix UC19 e aggiunta UC29", team.S, team.C,

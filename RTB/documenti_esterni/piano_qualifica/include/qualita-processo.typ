@@ -3,7 +3,7 @@
 
 == Qualità di processo
 #{
-set par (justify: false)
+set par(justify: false)
 show figure: set block(breakable: true)
 figure(
   table(
@@ -35,4 +35,4 @@ figure(
   caption: [Qualità di processo - Metriche e indici di qualità.]
 )} <tabella-qualita-processo>
 
-#set par (justify: true)
+#set par(justify: true)
