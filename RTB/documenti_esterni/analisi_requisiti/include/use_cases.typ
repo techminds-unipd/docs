@@ -422,7 +422,7 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
   - Utente non autenticato.
 - *Scenario principale*:
   - Utente non autenticato:
-    1. inserisce username, email, o password non validi.
+    1. inserisce username o password non validi.
   - Sistema:
     1. l'esito della verifica da @creazione-username, @creazione-password o @conferma-password è negativo;
     2. mostra un messaggio d'errore all'utente;
