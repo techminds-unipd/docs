@@ -2,7 +2,7 @@
 = Introduzione
 
 == Scopo del documento
-Il documento che descrive la specifica tecnica nasce con l'intenzione di documentare le scelte tecnologiche e architetturali adottate per la realizzazione del prodotto, spiegando i design pattern utilizzati e le motivazioni che hanno portato a tali scelte. Successivamente vengono tracciati i requisiti e il loro stato per comprendere se sono stati soddisfatti. Infine il documento avrà lo scopo di guidare la codifica del prodotto.
+Il documento che descrive la specifica tecnica nasce con l'intenzione di documentare le scelte tecnologiche e architetturali adottate per la realizzazione del prodotto, spiegando i design pattern utilizzati e le motivazioni che hanno portato a tali scelte. Successivamente vengono tracciati i #glossario[requisiti] e il loro stato per comprendere se sono stati soddisfatti. Infine il documento avrà lo scopo di guidare la codifica del prodotto.
 
 == Glossario
 Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.

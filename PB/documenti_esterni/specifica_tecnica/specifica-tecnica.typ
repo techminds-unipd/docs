@@ -4,7 +4,8 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
   changelog: (
-    "0.1.0", "12/11/2024", "Struttura documento", team.M, "",
+    "0.2.0", "24/02/2024", "Aggiunta sezione introduzione", team.M, "",
+    "0.1.0", "24/02/2024", "Struttura documento", team.M, "",
   )
 )
 
