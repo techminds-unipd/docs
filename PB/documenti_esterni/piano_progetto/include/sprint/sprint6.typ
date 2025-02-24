@@ -76,10 +76,19 @@ timeliney.timeline(
 caption: [Diagramma Gantt sprint 6.]
 )<diagramma-gantt-sprint6>
 
-//==== Conclusioni
+==== Conclusioni
+Il team è riuscito a completare tutte le attività, spesso con largo anticipo.
+Durante il terzo giorno dello sprint ci siamo riuniti per svolgere la riunione RTB col prof. Vardanega, che ha avuto esito positivo.
 
 
-//==== Retrospettiva
+==== Retrospettiva
+Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso di attuare i seguenti miglioramenti:
+- Rendere il contenuto più procedurale che narrativo;
+- Aggiungere una sezione dedicata ai rischi nei prossimi sprint;
+- Includere il preventivo a finire in ogni sprint;
+- Approfondire la discussione degli andamenti delle metriche nel Piano di qualifica;
+- Togliere il changelog nei verbali.
+- Impegnarci a contattare l'azienda più spesso.
 
 ===== Preventivo
 
@@ -105,3 +114,23 @@ caption: [Diagramma Gantt sprint 6.]
     #pieChartSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
     <grafico-ConsuntivoSprint6> \
 ]
+
+==== Aggiornamento preventivo a finire
+Durante la retrospettiva dello sprint 6 abbiamo concordato che l'attuale preventivo a finire, modificato nello sprint precedente, non ha bisogno di modifiche.
+Questo PaF viene riportato nella sottostante @tabella-paf-sprint-6.
+#figure(
+    table(
+        columns: (1fr,)*5,
+        align: center+horizon,
+            fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*],[*Costo orario*],[*Stima oraria*],[*Percentuale*],[*Stima costo*]),
+        [Responsabile], [30 #sym.euro], [40], [6%], [1.200 #sym.euro],
+        [Amministratore], [20 #sym.euro], [100], [15%], [2.000 #sym.euro],
+        [Analista], [25 #sym.euro], [55], [8%], [1.375 #sym.euro],
+        [Progettista], [25 #sym.euro], [100], [15%], [2.500 #sym.euro],
+        [Programmatore], [15 #sym.euro], [190], [29%], [2.850 #sym.euro],
+        [Verificatore], [15 #sym.euro], [180], [27%], [2.700 #sym.euro],
+        table.cell([*Costo Totale*], colspan: 4, fill: white), table.cell([*12.625 #sym.euro*], fill: white)
+    ),
+    caption: "Preventivo a finire sprint 6."
+)<tabella-paf-sprint-6>
