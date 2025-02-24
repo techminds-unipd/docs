@@ -19,7 +19,7 @@
 - *Versione*: 3;
 - *Documentazione*: https://www.w3schools.com/css/ [visitato il: 24/02/2025].
 === YAML
-- *Utilizzo*: per la configurazione di #glossario[Docker];
+- *Utilizzo*: per la configurazione di #glossario[Docker]\;
 - *Versione*: 1.2;
 - *Documentazione*: https://yaml.org/spec/1.2/spec.html [visitato il: 24/02/2025].
 === JSON
