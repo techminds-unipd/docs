@@ -5,7 +5,7 @@
   title: "Verbale interno del 29/10/2024",
   sommario: "Questo verbale riassume l’incontro del 29/10/2024.",
   autore: team.S,
-  verificatore: team.A + linebreak() + team.C,
+  verificatore: team.A,
   durata_luogo: ("15:00", "17:00", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A),
   ordine_giorno: ("Finalizzazione stesura del documento di revisione dei capitolati;", "Scrivere la lettera di presentazione della candidatura."),

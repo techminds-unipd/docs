@@ -4,7 +4,7 @@
   title: "Verbale interno del 11/11/2024",
   sommario: "Discussione sulla redazione dei documenti per RTB.",
   autore: team.M,
-  verificatore: team.A + linebreak() + team.C,
+  verificatore: team.A,
   durata_luogo: ("16:00", "16:30", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A, team.S),
   ordine_giorno: ("Divisione dei compiti per redazione documenti", "Revisione diario di bordo"),

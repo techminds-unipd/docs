@@ -5,7 +5,7 @@
   title: "Verbale interno del 17/10/2024",
   sommario: "Verbale dell’incontro del 17 ottobre per discutere dei capitolati proposti.",
   autore: team.T,
-  verificatore: team.G + linebreak() + team.C,
+  verificatore: team.G,
   durata_luogo: ("14:45", "16:30", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A, team.S),
   ordine_giorno: ("Confrontarci con le domande da fare alle aziende;", "Inviare mail per chiedere i colloqui alle aziende;", "Inviare mail alle aziende per risolvere dubbi sul contenuto dei capitolati;", "Creare un documento condiviso su Google Drive per valutare tutte le proposte."),
