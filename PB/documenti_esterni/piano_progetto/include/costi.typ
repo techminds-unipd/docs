@@ -160,8 +160,14 @@
 #let getSprintCostsSection(
     sprint_number: int,
 ) = {
-    let bilancioConsuntivo = 12975
-    let bilancioPreventivo = 12975
+    let bilancioConsuntivo = 12625
+    let bilancioPreventivo = 12625
+    if(sprint_number<=5){
+        bilancioConsuntivo = 12975
+        bilancioPreventivo = 12975
+    }
+    //Ogni futuro aggiornamento al preventivo a finire deve essere aggiunto qua.
+
 
     let (preventivo, consuntivo) = getSprintData()
 

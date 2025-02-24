@@ -66,7 +66,7 @@
         metriche_accettabili += int(cv >= 0)
         metriche_accettabili += int(sv >= 0)
         metriche_accettabili += int(cpi >= 1)
-        metriche_accettabili += int(eac >= 12975 +0.5*12975 or eac >= 12975 -0.5*12975)
+        metriche_accettabili += int(eac >= 12625 +0.5*12625 or eac >= 12625 -0.5*12625)
         metriche_accettabili += int(etc >= 0)
         metriche_accettabili += int(spi >= 1)
         metriche_accettabili += int(caption_figure == 100)
@@ -87,11 +87,11 @@
 
         metriche_ottime += int(ev <= eac)
         metriche_ottime += int(ac <= eac)
-        metriche_ottime += int(pv <= 12975)
+        metriche_ottime += int(pv <= 12625)
         metriche_ottime += int(cv >= 0)
         metriche_ottime += int(sv >= 0)
         metriche_ottime += int(cpi >= 1)
-        metriche_ottime += int(eac == 12975)
+        metriche_ottime += int(eac == 12625)
         metriche_ottime += int(etc >= eac)
         metriche_ottime += int(spi >= 1)
         metriche_ottime += int(caption_figure == 100)
@@ -115,7 +115,11 @@
 #for i in range(1, sprint_number+1) {
     let (preventivo, _) = getSprintCostsSection(sprint_number: i)
     let bilancio  = preventivo.bilancioPreventivo
+    if(i<=5){
     tot_spesa_preventivata.push(12975 - tot_spesa_preventivata.sum(default: 0) - bilancio)
+    }else{
+    tot_spesa_preventivata.push(12625 - tot_spesa_preventivata.sum(default: 0) - bilancio)
+    }
 }
 
 #let num_metriche = 12
@@ -137,14 +141,19 @@
 #let metriche_accettabili = ()
 #let metriche_ottime = ()
 
-#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66))
-#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76))
-#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58))
-#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68))
-#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58))
+//Indice di Gulpease
+#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,94))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58))
 
 #for i in range(1, sprint_number+1) {
+    if(i<=5){
     costo_totale_stimato.push(12975)
+    } else{
+    costo_totale_stimato.push(12625)
+    }
 
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
