@@ -49,27 +49,27 @@ timeliney.timeline(
     )
 
     taskgroup(title: [*Analisi dei requisiti*],{
-      task("Aggiungere nuova tabella Tracciamento", (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Rendere atomici i requisiti funzionali", (from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Aggiungere nuovi requisiti funzionali", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Correzione requisiti qualità e vincolo", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Correzione salvataggio workflow", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Correzione visualizzazione blocchi configurati", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Correzione visualizzazione, creazione #linebreak() e risultato workflow]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Correzione esecuzione del workflow", (from: 0, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Risoluzione struttura UC", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Aggiungere numeri di versione #linebreak() e ultima visita nei link]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
+      task("Aggiungere nuova tabella Tracciamento", (from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
+      task("Rendere atomici i requisiti funzionali", (from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 4, style: (stroke: 2pt + red)))
+      task("Aggiungere nuovi requisiti funzionali", (from: 1, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 4, style: (stroke: 2pt + red)))
+      task("Correzione requisiti qualità e vincolo", (from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Correzione salvataggio workflow", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Correzione visualizzazione blocchi configurati", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Correzione visualizzazione, creazione #linebreak() e risultato workflow]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Correzione esecuzione del workflow", (from: 0, to: 3, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
+      task("Risoluzione struttura UC", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Aggiungere numeri di versione #linebreak() e ultima visita nei link]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Piano di progetto*], {
-      task("Pianificazione sprint 6", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Aggiungere issue non inizialmente #linebreak() pianificate in sprint 5]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare preventivo a finire #linebreak()in struttura sprint]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task("Ridondanza diagramma di Gantt", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
+      task("Pianificazione sprint 6", (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Aggiungere issue non inizialmente #linebreak() pianificate in sprint 5]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare preventivo a finire #linebreak()in struttura sprint]), (from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Ridondanza diagramma di Gantt", (from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
     })
 
     taskgroup(title: [*Altro*], {
-      task(align(center, [Mettere il numero di versione sui #linebreak() documenti nel sito web]), (from: 4, to: 5, style: (stroke: 8pt + gray)), (from: 4, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Mettere il numero di versione sui #linebreak() documenti nel sito web]), (from: 4, to: 5, style: (stroke: 8pt + gray)), (from: 4, to: 5, style: (stroke: 2pt + red)))
     })
   }
 ),
@@ -93,15 +93,15 @@ caption: [Diagramma Gantt sprint 6.]
 #pieChartSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint4> \
 
-/*#if consuntivo != none [
+#if consuntivo != none [
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
     ===== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
-    #tabellaSprint(4, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
-    <tabella-ConsuntivoSprint4> \
-    #pieChartSprint(4, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
-    <grafico-ConsuntivoSprint4> \
-]*/
+    #tabellaSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
+    <tabella-ConsuntivoSprint6> \
+    #pieChartSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
+    <grafico-ConsuntivoSprint6> \
+]
