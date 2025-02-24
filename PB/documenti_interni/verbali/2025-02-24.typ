@@ -23,7 +23,7 @@
       [#link("https://github.com/techminds-unipd/docs/issues/360")[Issue \#360]: redazione consuntivo sprint 6],
       [#link("https://github.com/techminds-unipd/docs/issues/361")[Issue \#361]: redazione preventivo sprint 7],
       [#link("https://github.com/techminds-unipd/docs/issues/374")[Issue \#374]: documentare nuove milestone],
-      [#link("https://github.com/techminds-unipd/docs/issues/361")[Issue \#361]: creare funzione ore_persona],
+      [#link("https://github.com/techminds-unipd/docs/issues/376")[Issue \#376]: creare funzione ore_persona],
     ),
     ([Nome di progetto],
       [#link("https://github.com/techminds-unipd/docs/issues/362")[Issue \#362]: inserire sezione "Strumenti e tecnologie"],
