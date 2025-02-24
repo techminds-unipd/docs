@@ -4,11 +4,8 @@
 #show: verbale.with(
   title: "Verbale interno del 17/10/2024",
   sommario: "Verbale dell’incontro del 17 ottobre per discutere dei capitolati proposti.",
-  changelog: (
-    "1.2", "05/11/2024", "Modifica posizione e struttura changelog", team.M, team.G + linebreak() + team.C,
-    "1.1", "27/10/2024", "Aggiunto ordine del giorno", team.T, team.G + linebreak() + team.C,
-    "1.0", "17/10/2024", "Prima versione", team.T, team.G + linebreak() + team.C
-  ),
+  autore: team.T,
+  verificatore: team.G + linebreak() + team.C,
   durata_luogo: ("14:45", "16:30", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A, team.S),
   ordine_giorno: ("Confrontarci con le domande da fare alle aziende;", "Inviare mail per chiedere i colloqui alle aziende;", "Inviare mail alle aziende per risolvere dubbi sul contenuto dei capitolati;", "Creare un documento condiviso su Google Drive per valutare tutte le proposte."),

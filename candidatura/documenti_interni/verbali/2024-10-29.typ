@@ -4,10 +4,8 @@
 #show: verbale.with(
   title: "Verbale interno del 29/10/2024",
   sommario: "Questo verbale riassume l’incontro del 29/10/2024.",
-  changelog: (
-    "1.1", "05/11/2024", "Modifica posizione e struttura changelog ", team.G, team.C,
-    "1.0", "29/10/2024", "Prima versione", team.T, team.G + linebreak() + team.C
-  ),
+  autore: team.S,
+  verificatore: team.A + linebreak() + team.C,
   durata_luogo: ("15:00", "17:00", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A),
   ordine_giorno: ("Finalizzazione stesura del documento di revisione dei capitolati;", "Scrivere la lettera di presentazione della candidatura."),
