@@ -2,7 +2,7 @@ import re, glob, os, sys
 
 REPO_DIR = '../../'
 if 'GITHUB_WORKSPACE' in os.environ:
-    REPO_DIR = os.environ['GITHUB_WORKSPACE'] + '/RTB'
+    REPO_DIR = os.environ['GITHUB_WORKSPACE'] + '/PB'
 
 def gulpease_index(text):
     n_lettere = len(list(filter(lambda x: x.isalpha(), text)))
@@ -87,8 +87,8 @@ if __name__ == "__main__":
         res = gulpease_index(source_text)
 
         if res < 40:
-            print("{} \t {}".format(res, os.path.abspath(source).split("RTB/")[1]))
+            print("{} \t {}".format(res, os.path.abspath(source).split("PB/")[1]))
             print(source_text)
             sys.exit(1)
         if res > 40:
-            print("{} \t {}".format(res, os.path.abspath(source).split("RTB/")[1]))
+            print("{} \t {}".format(res, os.path.abspath(source).split("PB/")[1]))
