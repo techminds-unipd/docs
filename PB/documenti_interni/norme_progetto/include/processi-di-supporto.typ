@@ -281,7 +281,7 @@ I risultati di tali revisioni sono poi documentati tramite i verbali esterni, i 
 //TODO Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi <risoluzioneproblemi>
-Mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti, riconoscendo le cause scatenanti.
+Il processo "Risoluzione dei problemi" mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti, riconoscendo le cause scatenanti.
 
 Il processo di risoluzione dei problemi ha l’obiettivo di garantire un approccio rapido, responsabile e ben documentato per analizzare e risolvere le criticità riscontrate durante l’intero ciclo di vita del prodotto. Questo processo non si limita a gestire i problemi nell’immediato, ma punta anche a riconoscere eventuali tendenze e a comprendere le cause profonde delle non conformità, adottando misure preventive per evitarne il ripetersi in futuro.
 
@@ -290,6 +290,15 @@ L’intento principale è affrontare ogni problematica in modo efficace, promuov
 Per garantire risultati concreti, è fondamentale adottare metodologie strutturate e strumenti adeguati, come la raccolta sistematica dei dati, l’analisi delle cause, la valutazione degli impatti e la definizione di piani d’azione correttivi e preventivi.
 
 Infine, la gestione accurata della documentazione relativa ai problemi riscontrati e alle soluzioni adottate è cruciale per assicurare trasparenza, tracciabilità e la possibilità di effettuare revisioni periodiche, contribuendo così a un costante miglioramento della qualità.
+
+=== Attività
+Il processo di risoluzione dei problemi prevede le seguenti attività:
++ *Implementazione del processo*: il processo di risoluzione dei problemi deve essere definito e implementato in modo da:
+  - assicurare il tracciamento, la gestione e la risoluzione di ogni problema;
+  - categorizzare i problemi e priorizzarne la gestione;
+  - individuare delle tendenze nei problemi riscontrati;
+  - valutare il grado di implementazione e l'efficacia dei cambiamenti adottati per risolvere i problemi, con particolare attenzione all'individuazione degli eventuali nuovi problemi da essi introdotti;
++ *Risoluzione del problema*, che inizia con la stesura di un report per descrivere il problema riscontrato. Ogni problema deve essere poi analizzato e risolto secondo le procedure e con le accortezze identificate in fase di implementazione del processo.
 
 === Gestione dei rischi
 All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")) \[versione 1.0.0\]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
