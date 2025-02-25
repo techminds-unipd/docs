@@ -82,6 +82,7 @@ Durante il terzo giorno dello sprint ci siamo riuniti per svolgere la riunione R
 
 
 ==== Retrospettiva
+Durante questo sprint il team ha lavorato bene ed è riuscito a concludere i compiti assegnati in un tempo minore di quanto preventivato. Questo è dovuto al fatto che gran parte delle issue riguardava la correzione dell'analisi dei requisiti, su cui il team ha fatto molta pratica negli sprint precedenti. Altri punti che hanno contributito sono la suddivisione efficace dei compiti e che la lista delle correzioni da effettuare, fosse molto dettagliata. \
 Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso di attuare i seguenti miglioramenti:
 - Rendere il contenuto più procedurale che narrativo in norme di progetto;
 - Aggiungere una sezione dedicata ai rischi nei prossimi sprint in piano di progetto;
@@ -116,7 +117,7 @@ Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso d
 ]
 
 ==== Aggiornamento preventivo a finire
-Durante la retrospettiva dello sprint 6 abbiamo concordato che l'attuale preventivo a finire, modificato nello sprint precedente, non ha bisogno di modifiche.
+Durante la retrospettiva dello sprint 6 abbiamo concordato che l'attuale #glossario[preventivo a finire], modificato nello sprint precedente, non ha bisogno di modifiche.
 Questo PaF viene riportato nella sottostante @tabella-paf-sprint-6.
 #figure(
     table(
