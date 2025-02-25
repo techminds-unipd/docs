@@ -15,6 +15,7 @@ Obiettivi principali di tale processo sono:
 
 I risultati di tutto ciò si concretizzano nel piano di progetto, documento utile per il gruppo ma anche per il committente e per il proponente in quanto funge da presentazione dei processi organizzativi del team.
 
+=== Attività
 === Organizzazione dei ruoli
 In conformità a quanto descritto nel regolamento del progetto didattico offerto dal committente e come indicato in @resp-ruoli, ogni persona che svolge un determinato ruolo deve assumersi diverse responsabilità.
 #figure(
