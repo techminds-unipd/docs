@@ -35,14 +35,6 @@ Come descrive lo standard ISO/IEC 12207:1995, il processo primario di fornitura 
 6. *Revisione e valutazione*: effettuiamo #glossario[verifiche] periodiche per dimostrare che i prodotti software e i processi soddisfino pienamente i requisiti individuati; 
 7. *Consegna e completamento*: consegniamo il prodotto software al proponente secondo quanto accordato in precedenza.
 
-
-=== Strumenti e tecnologie
-A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
-- Canva per la realizzazione dei diari di bordo;
-- Microsoft Teams per gli incontri esterni;
-- #glossario[Slack] per le comunicazioni testuali con il proponente;
-- #glossario[Typst] per la stesura della documentazione, compresi i vari diagrammi (#glossario[casi d'uso], #glossario[diagrammi di gantt] ecc.) e le tabelle.
-
 === Rapporti con il proponente
 I rapporti con il proponente sono un elemento che riteniamo fondamentale per il progetto in quanto:
 - Guidano il corretto svolgimento dei processi;
@@ -61,6 +53,13 @@ La documentazione che forniamo al proponente e al committente è la seguente:
     - studio dei capitolati: documento che racchiude l'analisi approfondita di ogni proposta, con relativi vantaggi e svantaggi, tecnologie richieste e considerazioni;
     - glossario: documento utile per definire termini rilevanti nell'ambito del progetto, al fine di uniformare la conoscenza dei membri del gruppo ed evitare incomprensioni e ambiguità;
     - #glossario[norme di progetto]: il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
+
+=== Strumenti e tecnologie
+A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
+- Canva per la realizzazione dei diari di bordo;
+- Microsoft Teams per gli incontri esterni;
+- #glossario[Slack] per le comunicazioni testuali con il proponente;
+- #glossario[Typst] per la stesura della documentazione, compresi i vari diagrammi (#glossario[casi d'uso], #glossario[diagrammi di gantt] ecc.) e le tabelle.
 
 == Sviluppo
 Questa sezione stabilisce le linee guida e le regole che dobbiamo seguire per il processo di sviluppo del prodotto software. L'obiettivo è quello di fornire una struttura ben definita per la realizzazione del prodotto, in modo tale da garantire un'implementazione corretta e coerente con i requisiti del proponente.

@@ -18,10 +18,6 @@ In particolare lo standard definisce quattro attività principali:
 
 Per la natura di questo progetto, la prima e ultima attività non verranno svolte interamente.
 
-=== Strumenti e tecnologie
-Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
-- #glossario[Typst]: linguaggio simile a #glossario[LaTeX] ma che permette di comporre documenti in modo più semplice e intuitivo.
-
 === Filosofia "Docs as code" <docsascode>
 Abbiamo scelto di usare la filosofia "Docs as code" che si prescrive di trattare tutta la documentazione come se fosse del vero e proprio codice sorgente. \ Questo porta i seguenti vantaggi:
 + Supporto agli #glossario[issue tracking system]\;
@@ -74,6 +70,10 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
 === Sito web
 Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle GitHub Action. Ogni volta che avviene un cambiamento nel branch main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
 
+=== Strumenti e tecnologie
+Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
+- #glossario[Typst]: linguaggio simile a #glossario[LaTeX] ma che permette di comporre documenti in modo più semplice e intuitivo.
+
 == Gestione della configurazione
 La gestione della configurazione è un #glossario[processo] fondamentale per monitorare e controllare le modifiche ai componenti software durante il loro ciclo di vita. Il prodotto SW non è mai un monolite, infatti è composto da più componenti, ognuno dei quali è caratterizzato da un proprio ciclo di vita. Ogni singolo componente ha una storia individuale che viene gestita tramite controllo di versione, che aiuta a non perdere traccia di questa storia e a poter avanzare o retrocedere nelle versioni. Il processo di gestione della configurazione, dunque, aiuta a mantenere la coerenza e l'integrità del software, facilitando la collaborazione tra i membri del team.
 
@@ -85,9 +85,6 @@ Secondo lo standard ISO/IEC 12207:1995, questo processo include le seguenti atti
 + *Registrazione dello stato della configurazione*: prepara i registri di gestione, i quali mostrano lo stato e la storia completa degli elementi relativi al progetto;
 + *Valutazione della configurazione*: valuta la completezza degli elementi relativi al progetto rispetto ai requisiti;
 + *Gestione e consegna delle versioni*: assicura che tutte le versioni degli elementi software e della documentazione siano correttamente gestite, conservate e distribuite in modo tracciabile.
-
-=== Strumenti e tecnologie
-Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.
 
 === Versionamento (Identificazione della configurazione)
 La procedura di versionamento in un progetto software è fondamentale per gestire le modifiche e garantire la collaborazione tra sviluppatori. In ogni documento è possibile trovare, prima ancora dell'indice, un registro delle modifiche (changelog), necessario per comprenderne il ciclo di vita dal suo concepimento fino all'ultima versione disponibile. All'interno del changelog si fa riferimento alla versione del documento rappresentato da un numero di versione così composto: \
@@ -115,7 +112,10 @@ Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
 \
-All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions]. 
+All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions].
+
+=== Strumenti e tecnologie
+Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.
 
 == Accertamento della qualità
 L'accertamento della qualità è un processo che ha lo scopo di garantire che il prodotto software soddisfi i requisiti concordati con il proponente e che sia conforme agli standard di qualità prefissati. Questo processo è fondamentale per garantire che il prodotto finale sia affidabile, sicuro e soddisfi le aspettative del cliente.
