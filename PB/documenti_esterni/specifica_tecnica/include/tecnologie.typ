@@ -86,14 +86,14 @@ Framework per la creazione di applicazioni server-side in TypeScript.
   - offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili;
   - implementa la Dependency Injection, un design pattern che permette di iniettare le dipendenze di un componente esternamente;
   - offre un sistema di middleware per l'elaborazione delle richieste HTTP. I middleware possono essere utilizzati per eseguire operazioni comuni come l'autenticazione, la registrazione delle richieste e la gestione degli errori;
-  - integra Mongoose per la gestione dei dati e la comunicazione con MongoDB;
+  - integra Mongoose per la gestione dei dati e la comunicazione con #glossario[MongoDB];
   - utilizza i decorators per definire i controller, i moduli e i provider. I decorators sono funzioni speciali che possono essere applicate a classi o metodi per modificare il loro comportamento. \ \
-- *Utilizzo*: codifica in TypeScript del backend e delle API REST;
+- *Utilizzo*: codifica in TypeScript del backend e delle #glossario[API]\;
 - *Versione*: 11.0.0;
 - *Documentazione*: https://docs.nestjs.com [visitato il: 25/02/2025].
 
 === Flask
-Framework per la creazione di applicazioni web in Python.
+Framework per la creazione di applicazioni web in #glossario[Python].
 
 - *Utilizzo*: codifica in Python del server utilizzato dall'agente AI; 
 - *Versione*: 3.1.0;
@@ -103,7 +103,7 @@ Framework per la creazione di applicazioni web in Python.
 Framework per la creazione di agenti AI in Python.
 
 - *Funzionalità*:
-  - permette di integrare LLM da diversi produttori;
+  - permette di integrare #glossario[LLM] da diversi produttori;
   - permette di creare o utilizzare un insieme di tool da fornire agli agenti AI;
   - attraverso la libreria LangGraph, permette di creare degli agenti AI. \ \
 - *Utilizzo*: creazione dell'agente AI;
