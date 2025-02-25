@@ -3,11 +3,8 @@
 #show: verbale.with(
   title: "Verbale interno del 24/02/2025",
   sommario: "Verbale che riassume la riunione del 24/02/2025.",
-  changelog: (
-    "1.0.0", "08/11/2024", "Prima versione", team.S, team.M + linebreak() + team.G 
-  ),
-  //autore: team.T,
-  //verificatore: "q",
+  autore: team.T,
+  verificatore: "q",
   durata_luogo: ("9:30", "12:15", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
   ordine_giorno: ("Discussione valutazione prof. Vardanega",
