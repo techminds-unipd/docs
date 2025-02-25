@@ -82,7 +82,7 @@ Durante il terzo giorno dello sprint ci siamo riuniti per svolgere la riunione R
 
 
 ==== Retrospettiva
-Durante questo sprint il team ha lavorato bene ed è riuscito a concludere i compiti assegnati in un tempo minore di quanto preventivato. Questo è dovuto al fatto che gran parte delle issue riguardava la correzione dell'analisi dei requisiti, su cui il team ha fatto molta pratica negli sprint precedenti. Altri punti che hanno contributito sono la suddivisione efficace dei compiti e che la lista delle correzioni da effettuare, fosse molto dettagliata. \
+Durante questo sprint il team ha lavorato bene ed è riuscito a concludere i compiti assegnati in un tempo minore di quanto preventivato. Questo è dovuto al fatto che gran parte delle issue riguardava la correzione dell'analisi dei requisiti, su cui il team ha fatto molta pratica negli sprint precedenti. Altri fattori che hanno contribuito sono la suddivisione efficace dei compiti e la presenza di una lista dettagliata delle correzioni da apportare. \
 Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso di attuare i seguenti miglioramenti:
 - Rendere il contenuto più procedurale che narrativo in norme di progetto;
 - Aggiungere una sezione dedicata ai rischi nei prossimi sprint in piano di progetto;
