@@ -5,13 +5,13 @@
 === TypeScript
 Linguaggio di programmazione che aggiunge a JavaScript funzionalità come il supporto per i tipi, le interfacce e le classi.
 
-- *Utilizzo*: codifica in #glossario[React] e NestJS;
+- *Utilizzo*: codifica in #glossario[React] e #glossario[NestJS];
 - *Versione*: 5.7.3;
 - *Documentazione*: https://www.typescriptlang.org/docs/ [visitato il: 24/02/2025].
 === Python
 Linguaggio di programmazione interpretato e multi-paradigma.
 
-- *Utilizzo*: codifica dell'agente AI, dato che riteniamo sia il linguaggio più adatto per il framework LangChain;
+- *Utilizzo*: codifica dell'agente AI, dato che riteniamo sia il linguaggio più adatto per il framework #glossario[LangChain];
 - *Versione*: 3.13.0;
 - *Documentazione*: https://docs.python.org/3/ [visitato il: 24/02/2025].
 
@@ -38,7 +38,7 @@ Linguaggio di serializzazione di dati human-readable.
 === JSON
 Linguaggio di serializzazione di dati human-readable.
 
-- *Utilizzo*: configurazione di #glossario[ESLint], #glossario[TypeScript] e dei package di NodeJS;
+- *Utilizzo*: configurazione di #glossario[ESLint], #glossario[TypeScript] e dei package di #glossario[Node.js];
 - *Documentazione*: https://www.json.org/json-en.html [visitato il: 24/02/2025].
 
 == Librerie e framework
@@ -141,7 +141,7 @@ Database NoSQL orientato ai documenti.
 - *Documentazione*: https://www.mongodb.com/docs/ [visitato il: 25/02/2025]. 
 
 == Strumenti di supporto
-=== NodeJS
+=== Node.js
 - *Utilizzo*: esecuzione del codice TypeScript;
 - *Versione*: 22.14.0;
 - *Documentazione*: https://nodejs.org/docs/latest-v22.x/api/documentation.html [visitato il: 25/02/2025].
@@ -169,6 +169,6 @@ Piattaforma che attraverso la virtualizzazione a livello di sistema operativo pe
 #set par(justify: false)
 - *Immagini utilizzate per il prodotto*:
   - MongoDB: https://hub.docker.com/layers/library/mongo/8.0.0/images/sha256-b07755058fd9ee3478bdef0a2614e51f7b73a91c85e221233444456e4ad9671e [visitato il: 25/02/2025];
-  - NodeJS: https://hub.docker.com/layers/library/node/22.14.0/images/sha256-bfcb378574ec15a95d04a2b9a4df2690124cde268cf13a783775063e99af706f [visitato il: 25/02/2025];
+  - Node.js: https://hub.docker.com/layers/library/node/22.14.0/images/sha256-bfcb378574ec15a95d04a2b9a4df2690124cde268cf13a783775063e99af706f [visitato il: 25/02/2025];
   - Python: https://hub.docker.com/layers/library/python/3.13.0/images/sha256-94fbc9474bfd40b1231988d5afa08ac83eebf792dc9f89760c7b799c8101c2eb [visitato il: 25/02/2025].
 #set par(justify: true)
