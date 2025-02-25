@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "1.1.0", "25/02/2025", "Aggiunta definizione preventivo a finire", team.T, "qualcuno",
     "1.0.0", "11/02/2025", "Piccoli fix e aggiunta parole al glossario", team.A, team.T,
     "0.5.0", "08/02/2025", "Aggiunta definizione dei test", team.S, team.T,
     "0.4.0", "22/01/2025", "Aggiunta definizione di Docker", team.T, team.C,
