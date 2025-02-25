@@ -4,7 +4,7 @@
   title: "Verbale interno del 24/02/2025",
   sommario: "Verbale che riassume la riunione del 24/02/2025.",
   autore: team.T,
-  verificatore: "q",
+  verificatore: team.C,
   durata_luogo: ("9:30", "12:15", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
   ordine_giorno: ("Discussione valutazione prof. Vardanega",
