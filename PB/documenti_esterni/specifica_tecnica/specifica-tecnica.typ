@@ -9,6 +9,10 @@
   )
 )
 
+// #glossario[progetto]
+// #glossario[ai]
+// #glossario[glossario]
+// #glossario[agente]
 
 #include "include/introduzione.typ"
 #include "include/tecnologie.typ"
