@@ -55,6 +55,6 @@ Questa repo contiene la documentazione del gruppo Tech Minds del progetto di SWE
 │   └── documenti_interni/verbali
 ├── template/
 ├── .gitignore
-└── README.MD
+└── README.md
 ```
 Albero delle cartelle creato con [https://tree.nathanfriend.com](https://tree.nathanfriend.com)
