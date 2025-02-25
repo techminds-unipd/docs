@@ -1,7 +1,7 @@
 import re, glob, os, sys
 
-REPO_DIR = '../../'
-FILE_GLOSSARIO = REPO_DIR + 'PB/documenti_interni/glossario/glossario.typ'
+REPO_DIR = '../../PB'
+FILE_GLOSSARIO = REPO_DIR + '/documenti_interni/glossario/glossario.typ'
 
 if 'GITHUB_WORKSPACE' in os.environ:
     REPO_DIR = os.environ['GITHUB_WORKSPACE'] + '/PB'
