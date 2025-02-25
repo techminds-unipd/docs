@@ -20,7 +20,7 @@ Secondo lo standard ISO/IEC 12207:1995 la gestione dei processi prevede le segue
 + *Avvio e definizione dell'ambito del processo*, che consiste nella definizione, da parte del responsabile, dei bisogni che saranno soddisfatti dal processo e nell'individuazione delle risorse adeguate all'esecuzione e alla gestione del processo;
 + *Pianificazione*, nella quale il responsabile definisce un piano per l'attuazione del processo. Il piano deve contentere una lista delle attività che saranno svolte e dei prodotti forniti in uscita. Ogni processo deve essere corredato da una stima dei costi, dall'assegnazione delle responsabilità e da una pianificazione temporale;
 + *Esecuzione e controllo*, che consiste nell'attuazione del piano e nel monitoraggio delle attività svolte da parte del responsabile. La risoluzione dei problemi può portare alla modifica del piano e deve perciò essere documentata;
-+ *Revisione e valutazione*, nella quale il manager valuta l'adeguatezza dei prodotti e della pianificazione ai bisogni che il processo deve soddisfare.
++ *Revisione e valutazione*, nella quale il manager valuta l'adeguatezza dei prodotti e della pianificazione ai bisogni che il processo deve soddisfare;
 + *Chiusura*, che avviene una volta che i prodotti e le attività del processo sono completate. Il responsabile deve archiviare adeguatamente i risultati.
 
 === Organizzazione dei ruoli
