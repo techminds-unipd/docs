@@ -19,7 +19,6 @@ Lo standard, all'interno dei processi primari, definisce 5 categorie:
 I processi di acquisizione, manutenzione e gestione operativa non saranno descritti a causa della natura di questo progetto.
 
 == Fornitura
-=== Scopo 
 Il processo primario di fornitura è focalizzato sulle attività che coinvolgono noi e il proponente durante la fornitura del prodotto software e sulle risorse necessarie per completare il progetto con successo.
 
 Questa sezione elenca tutte le regole che dobbiamo seguire e rispettare per mantenere una relazione efficace e trasparente con il proponente e i committenti durante l'intero progetto.
@@ -28,13 +27,13 @@ Per ottenere una visione costante e aggiornata dello stato del progetto e del bi
 
 === Attività
 Come descrive lo standard ISO/IEC 12207:1995, il processo primario di fornitura è composto dalle seguenti attività:
-1. Avvio: eseguiamo una revisione dei requisiti studiando a fondo i capitolati, decidendo poi di fare una proposta per un determinato capitolato;
-2. Preparazione della risposta: definiamo e prepariamo la proposta, una sorta di "risposta alla richiesta avanzata";
-3. Contrattazione: accordo sui requisiti e consegna del progetto;
-4. Pianificazione: revisioniamo i requisiti di acquisizione per definire la gestione del progetto e per assicurare la #glossario[qualità] del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
-5. Esecuzione e controllo: implementiamo il piano di gestione del progetto, controllando i progressi e la qualità del prodotto software e della relativa documentazione durante tutte le fasi del progetto;
-6. Revisione e valutazione: effettuiamo #glossario[verifiche] periodiche per dimostrare che i prodotti software e i processi soddisfino pienamente i requisiti individuati; 
-7. Consegna e completamento: consegniamo il prodotto software al proponente secondo quanto accordato in precedenza.
+1. *Avvio*: eseguiamo una revisione dei requisiti studiando a fondo i capitolati, decidendo poi di fare una proposta per un determinato capitolato;
+2. *Preparazione della risposta*: definiamo e prepariamo la proposta, una sorta di "risposta alla richiesta avanzata";
+3. *Contrattazione*: accordo sui requisiti e consegna del progetto;
+4. *Pianificazione*: revisioniamo i requisiti di acquisizione per definire la gestione del progetto e per assicurare la #glossario[qualità] del prodotto offerto. Tale pianificazione contiene anche le esigenze di risorse e il coinvolgimento del proponente;
+5. *Esecuzione e controllo*: implementiamo il piano di gestione del progetto, controllando i progressi e la qualità del prodotto software e della relativa documentazione durante tutte le fasi del progetto;
+6. *Revisione e valutazione*: effettuiamo #glossario[verifiche] periodiche per dimostrare che i prodotti software e i processi soddisfino pienamente i requisiti individuati; 
+7. *Consegna e completamento*: consegniamo il prodotto software al proponente secondo quanto accordato in precedenza.
 
 === Rapporti con il proponente
 I rapporti con il proponente sono un elemento che riteniamo fondamentale per il progetto in quanto:
@@ -63,9 +62,9 @@ A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti str
 - #glossario[Typst] per la stesura della documentazione, compresi i vari diagrammi (#glossario[casi d'uso], #glossario[diagrammi di gantt] ecc.) e le tabelle.
 
 == Sviluppo
-=== Scopo
 Questa sezione stabilisce le linee guida e le regole che dobbiamo seguire per il processo di sviluppo del prodotto software. L'obiettivo è quello di fornire una struttura ben definita per la realizzazione del prodotto, in modo tale da garantire un'implementazione corretta e coerente con i requisiti del proponente.
 
+=== Attività
 Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo include le seguenti attività:
 1. Analisi dei requisiti;
 2. Progettazione;
