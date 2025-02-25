@@ -4,6 +4,11 @@
 //#glossario[label]
 //#glossario[push]
 //#glossario[tracciamento]
+// #glossario[workflow]
+// #glossario[ai]
+// #glossario[glossario]
+// #glossario[arco]
+// #glossario[agente]
 
 #show: documento.with(
   title: "Analisi dei requisiti",

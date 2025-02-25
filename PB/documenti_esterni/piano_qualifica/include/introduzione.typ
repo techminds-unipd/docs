@@ -1,4 +1,7 @@
 #import "/template/template.typ": glossario
+#import "/template/template.typ": sezione_glossario
+#import "/template/template.typ": sezione_scopo_prodotto
+
 = Introduzione
 == Scopo del documento
 Il #glossario[Piano di Qualifica] è un documento di riferimento che guida le attività di #glossario[verifica] e #glossario[validazione] durante tutto il ciclo di vita del software, assicurando che il prodotto finale soddisfi i #glossario[requisiti] e gli standard di #glossario[qualità] definiti. Il documento permette di tenere traccia dei progressi, identificare i punti critici e garantire che la qualità venga perseguita attivamente durante l'intero #glossario[progetto].
@@ -10,14 +13,10 @@ Sono inoltre incluse anche le metriche di riferimento e gli obiettivi metrici ch
 Inoltre tale documento include anche le strategie di test che saranno applicate al prodotto software. Questo facilita il #glossario[tracciamento] dei requisiti e delle attività di verifica, garantendo che ogni requisito sia soddisfatto e che non vi siano funzionalità superflue.
 
 == Glossario
-Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
-Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la stessa base di conoscenza e per sua natura è in continuo aggiornamento.
-I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
+#sezione_glossario
 
 == Scopo del prodotto
-Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
-Il prodotto sarà una web app che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno l'automazione da effettuare in linguaggio naturale.
-Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale e le eseguirà.
+#sezione_scopo_prodotto
 
 == Redazione del documento
 L'approccio che abbiamo deciso di adottare per questo documento è di tipo incrementale dato che alcune necessità future non sono tracciabili fin dall'inizio. Nel momento in cui affronteremo le varie fasi del progetto andremo ad aggiornare questo documento, tenendo conto sia degli obiettivi di qualità interni al gruppo, sia di quelli richiesti dall'azienda.
