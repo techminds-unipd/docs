@@ -50,7 +50,7 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 - *Consuntivo*:
   - tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
   - grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
-- *Aggiornamento Preventivo a Finire*: testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
+- *Aggiornamento #glossario[Preventivo a Finire]*: testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;

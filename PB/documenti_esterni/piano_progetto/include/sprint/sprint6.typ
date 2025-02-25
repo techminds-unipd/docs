@@ -117,7 +117,7 @@ Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso d
 ]
 
 ==== Aggiornamento preventivo a finire
-Durante la retrospettiva dello sprint 6 abbiamo concordato che l'attuale #glossario[preventivo a finire], modificato nello sprint precedente, non ha bisogno di modifiche.
+Durante la retrospettiva dello sprint 6 abbiamo concordato che l'attuale preventivo a finire, modificato nello sprint precedente, non ha bisogno di modifiche.
 Questo PaF viene riportato nella sottostante @tabella-paf-sprint-6.
 #figure(
     table(
