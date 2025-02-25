@@ -3,9 +3,8 @@
 #show: verbale.with(
   title: "Verbale interno del 18/11/2024",
   sommario: "Primo sprint planning.",
-  changelog: (
-    "1.0.0", "18/11/2024", "Prima versione", team.T, team.C
-  ),
+  autore: team.T,
+  verificatore: team.C,
   durata_luogo: ("14:45", "16:15", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A, team.S),
   ordine_giorno: ("Gestione delle parole del " + glossario[glossario], 

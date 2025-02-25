@@ -4,10 +4,8 @@
 #show: verbale.with(
   title: "Verbale interno del 25/10/2024",
   sommario: "Verbale relativo all’incontro in presenza del 25/10/2024.",
-  changelog: (
-    "1.1", "05/11/2024", "Modifica posizione e struttura changelog", team.M, team.G + linebreak() + team.C,
-    "1.0", "25/10/2024", "Prima versione", team.T, team.G + linebreak() + team.C
-  ),
+  autore: team.L,
+  verificatore: team.M,
   durata_luogo: ("10:20", "12:00", "Aula 2AB40 Torre Archimede"),
   partecipanti: (team.T, team.S, team.L, team.G, team.A, team.M),
   ordine_giorno: ("Discussione sui capitolati e revisione tra pari del documento delle valutazioni;", "Creazione delle diapositive necessarie per il diario di bordo;", "Stesura del documento di valutazione dei capitolati in linguaggio LaTeX;", "Varie ed eventuali."),
