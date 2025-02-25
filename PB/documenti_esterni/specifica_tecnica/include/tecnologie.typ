@@ -30,7 +30,6 @@
 === React
 - *Funzionalità*:
   - componenti: React suddivide l'interfaccia utente in componenti autonomi e riutilizzabili. Ogni componente corrisponde a una funzione o a una classe che accetta dati in input (props) e restituisce elementi React;
-  - Virtual DOM: React utilizza un "DOM virtuale", una rappresentazione virtuale dell'interfaccia utente mantenuta in memoria. Quando lo stato dell'applicazione cambia, React aggiorna prima il Virtual DOM e poi confronta le differenze con il DOM reale, cambiando solo le parti necessarie, migliorando notevolmente le prestazioni;
   - TSX (TypeScript XML): React permette di scrivere componenti usando TSX, una sintassi che combina HTML e TypeScript. TSX rende il codice più leggibile e facile da scrivere, poiché consente di definire la struttura e il comportamento dell'interfaccia nello stesso posto;
   - gestione dello stato (State): ogni componente React può mantenere il proprio stato, consentendo di aggiornare dinamicamente l'interfaccia utente;
   - React Hooks: i React Hooks sono funzioni che permettono di gestire lo stato e il ciclo di vita dei componenti. Hooks base come useState, useEffect e useContext facilitano la gestione dello stato, degli effetti collaterali e del contesto in modo più semplice e conciso. \ \
@@ -40,7 +39,7 @@
 
 === ReactFlow
 - *Funzionalità*:
-  - diagrammi: ReactFlow è una libreria React per la creazione di diagrammi interattivi. Offre una vasta gamma di componenti per la creazione di diagrammi di flusso, organigrammi e mappe concettuali;
+  - diagrammi: ReactFlow è una libreria che utilizza React per la creazione di diagrammi interattivi. Offre una vasta gamma di componenti per la creazione di diagrammi di flusso, organigrammi e mappe concettuali;
   - personalizzazione: ReactFlow permette di personalizzare l'aspetto e il comportamento dei diagrammi;
   - interattività: ReactFlow supporta l'interattività, consentendo agli utenti di spostare, collegare e modificare i nodi e i collegamenti del diagramma.
 - *Utilizzo*: libreria per la creazione dei workflow tramite nodi e archi;
@@ -51,7 +50,7 @@
 
 === NestJS
 - *Funzionalità*:
-  - architettura: NestJS è un framework Node.js che offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili;
+  - architettura: NestJS è un framework che offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili;
   - Dependency Injection: NestJS supporta la Dependency Injection, un design pattern che permette di iniettare le dipendenze di un componente esternamente;
   - middleware: NestJS offre un sistema di middleware per l'elaborazione delle richieste HTTP. I middleware possono essere utilizzati per eseguire operazioni comuni come l'autenticazione, la registrazione delle richieste e la gestione degli errori;
   - Mongoose: NestJS integra Mongoose per la gestione dei dati e la comunicazione con MongoDB;
