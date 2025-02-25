@@ -124,7 +124,7 @@ L'accertamento della qualità è un processo che ha lo scopo di garantire che il
 Secondo lo standard ISO/IEC 12207:1995, l'accertamento della qualità include le seguenti attività:
 + *Implementazione del processo*: definisce un piano per l'accertamento della qualità, che descrive metodologie, procedure e strumenti da utilizzare. È necessario definire anche il coordinamento con le attività di verifica e validazione;
 + *Garanzia di prodotto*: definisce le garanzie di qualità che il prodotto software deve soddisfare;
-+ *Garanzia di processo*: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare;
++ *Garanzia di processo*: definisce le garanzie di qualità che i processi di ciclo di vita del software devono soddisfare.
 
 === PDCA
 Il ciclo #glossario[PDCA], noto anche come ciclo di Deming, è stato scelto come approccio per il miglioramento continuo di processi e prodotti, con l'obiettivo di attuare manutenzione migliorativa al proprio way of working. Per ottenere risultati concreti, è fondamentale seguire con attenzione le quattro fasi che lo compongono:
