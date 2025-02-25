@@ -3,9 +3,8 @@
 #show: verbale.with(
   title: "Verbale interno del 13/01/2025",
   sommario: "Verbale che riassume la riunione del 13/01/2025.",
-  changelog: (
-    "1.0.0", "13/01/2025", "Prima versione", team.S, team.G
-  ),
+  autore: team.S,
+  verificatore: team.G,
   durata_luogo: ("09:30", "12:00", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
   ordine_giorno: ("Sprint retrospective", "Sprint plan"),

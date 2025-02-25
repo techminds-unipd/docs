@@ -96,7 +96,8 @@
 #let verbale(
     title: str,
     sommario: str,
-    changelog: array,
+    autore: str,
+    verificatore: str,
     durata_luogo: array,
     partecipanti: array,
     ordine_giorno: array,
@@ -123,21 +124,21 @@
     text(10pt, "Sommario", weight: "bold")
     linebreak()
     text(10pt, sommario)
+    linebreak()
+    linebreak()
+    text(10pt, "Autore", weight: "bold")
+    linebreak()
+    text(10pt, autore)
+    linebreak()
+    text(10pt, "Verificatore", weight: "bold")
+    linebreak()
+    text(10pt, verificatore)
 
     pagebreak()
 
     set align(left)
 
-    text("Changelog", weight: "bold")
-
-    table(
-        columns: 5,
-        align: center+horizon,
-        table.header([*Versione*],[*Data*],[*Descrizione*],[*Autore*],[*Verificatore*]),
-        ..changelog
-    )
-
-    outline(title: "Indice", indent: true)
+    outline(title: "Indice")
 
     pagebreak()
     set par(justify: true)

@@ -4,9 +4,8 @@
 #show: verbale.with(
   title: "Verbale interno del 04/11/2024",
   sommario: "Cambiamenti a seguito della valutazione del preventivo.",
-  changelog: (
-    "1.0", "05/11/2024", "Prima versione", team.A, team.S
-  ),
+  autore: team.A,
+  verificatore: team.S,
   durata_luogo: ("16:00", "17:30", "chiamata Discord"),
   partecipanti: (team.T, team.L, team.M, team.C, team.G, team.A, team.S),
   ordine_giorno: ("Revisione candidatura;", "Assegnazione issue."),
