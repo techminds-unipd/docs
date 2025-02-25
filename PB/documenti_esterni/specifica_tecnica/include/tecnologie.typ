@@ -5,13 +5,13 @@
 === TypeScript
 Linguaggio di programmazione che aggiunge a JavaScript funzionalità come il supporto per i tipi, le interfacce e le classi.
 
-- *Utilizzo*: codifica in #glossario[React] e #glossario[NestJS];
+- *Utilizzo*: codifica in #glossario[React] e #glossario[NestJS]\;
 - *Versione*: 5.7.3;
 - *Documentazione*: https://www.typescriptlang.org/docs/ [visitato il: 24/02/2025].
 === Python
 Linguaggio di programmazione interpretato e multi-paradigma.
 
-- *Utilizzo*: codifica dell'agente AI, dato che riteniamo sia il linguaggio più adatto per il framework #glossario[LangChain];
+- *Utilizzo*: codifica dell'agente AI, dato che riteniamo sia il linguaggio più adatto per il framework #glossario[LangChain]\;
 - *Versione*: 3.13.0;
 - *Documentazione*: https://docs.python.org/3/ [visitato il: 24/02/2025].
 
@@ -38,7 +38,7 @@ Linguaggio di serializzazione di dati human-readable.
 === JSON
 Linguaggio di serializzazione di dati human-readable.
 
-- *Utilizzo*: configurazione di #glossario[ESLint], #glossario[TypeScript] e dei package di #glossario[Node.js];
+- *Utilizzo*: configurazione di #glossario[ESLint], #glossario[TypeScript] e dei package di #glossario[Node.js]\;
 - *Documentazione*: https://www.json.org/json-en.html [visitato il: 24/02/2025].
 
 == Librerie e framework
@@ -86,7 +86,7 @@ Framework per la creazione di applicazioni server-side in TypeScript.
   - offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili;
   - implementa la Dependency Injection, un design pattern che permette di iniettare le dipendenze di un componente esternamente;
   - offre un sistema di middleware per l'elaborazione delle richieste HTTP. I middleware possono essere utilizzati per eseguire operazioni comuni come l'autenticazione, la registrazione delle richieste e la gestione degli errori;
-  - integra Mongoose per la gestione dei dati e la comunicazione con #glossario[MongoDB];
+  - integra Mongoose per la gestione dei dati e la comunicazione con #glossario[MongoDB]\;
   - utilizza i decorators per definire i controller, i moduli e i provider. I decorators sono funzioni speciali che possono essere applicate a classi o metodi per modificare il loro comportamento. \ \
 - *Utilizzo*: codifica in TypeScript del backend e delle #glossario[API]\;
 - *Versione*: 11.0.0;
