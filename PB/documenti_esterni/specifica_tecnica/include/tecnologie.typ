@@ -33,7 +33,7 @@ Linguaggio di stile utilizzato per definire l'aspetto e il layout delle pagine w
 Linguaggio di serializzazione di dati human-readable.
 
 - *Utilizzo*: configurazione di #glossario[Docker]\;
-- *Versione*: 1.2;
+- *Versione*: 1.2.2;
 - *Documentazione*: https://yaml.org/spec/1.2/spec.html [visitato il: 24/02/2025].
 === JSON
 Linguaggio di serializzazione di dati human-readable.
@@ -84,7 +84,7 @@ Framework per la creazione di applicazioni server-side in TypeScript.
 
 - *Funzionalità*:
   - offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili;
-  - implementa la Dependency Injection, un design pattern che permette di iniettare le dipendenze di un componente esternamente;
+  - implementa la Dependency Injection, un design pattern che permette di iniettare le dipendenze di una componente esternamente;
   - offre un sistema di middleware per l'elaborazione delle richieste HTTP. I middleware possono essere utilizzati per eseguire operazioni comuni come l'autenticazione, la registrazione delle richieste e la gestione degli errori;
   - integra Mongoose per la gestione dei dati e la comunicazione con #glossario[MongoDB]\;
   - utilizza i decorators per definire i controller, i moduli e i provider. I decorators sono funzioni speciali che possono essere applicate a classi o metodi per modificare il loro comportamento. \ \
