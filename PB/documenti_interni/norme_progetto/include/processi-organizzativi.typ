@@ -16,6 +16,13 @@ Obiettivi principali di tale processo sono:
 I risultati di tutto ciò si concretizzano nel piano di progetto, documento utile per il gruppo ma anche per il committente e per il proponente in quanto funge da presentazione dei processi organizzativi del team.
 
 === Attività
+Secondo lo standard ISO/IEC 12207:1995 la gestione dei processi prevede le seguenti attività:
++ *Avvio e definizione dell'ambito del processo*, che consiste nella definizione, da parte del responsabile, dei bisogni che saranno soddisfatti dal processo e nell'individuazione delle risorse adeguate all'esecuzione e alla gestione del processo;
++ *Pianificazione*, nella quale il responsabile definisce un piano per l'attuazione del processo. Il piano deve contentere una lista delle attività che saranno svolte e dei prodotti forniti in uscita. Ogni processo deve essere corredato da una stima dei costi, dall'assegnazione delle responsabilità e da una pianificazione temporale;
++ *Esecuzione e controllo*, che consiste nell'attuazione del piano e nel monitoraggio delle attività svolte da parte del responsabile. La risoluzione dei problemi può portare alla modifica del piano e deve perciò essere documentata;
++ *Revisione e valutazione*, nella quale il manager valuta l'adeguatezza dei prodotti e della pianificazione ai bisogni che il processo deve soddisfare.
++ *Chiusura*, che avviene una volta che i prodotti e le attività del processo sono completate. Il responsabile deve archiviare adeguatamente i risultati.
+
 === Organizzazione dei ruoli
 In conformità a quanto descritto nel regolamento del progetto didattico offerto dal committente e come indicato in @resp-ruoli, ogni persona che svolge un determinato ruolo deve assumersi diverse responsabilità.
 #figure(
@@ -248,9 +255,9 @@ La gestione delle infrastrutture ha lo scopo di stabilire e mantenere l'infrastr
 
 === Attività
 Secondo lo standard ISO/IEC 12207:1995 questo processo è formato dalle seguenti attività, che ci impegniamo a rispettare:
-1. Attuazione del processo: definizione e documentazione dell'infrastuttura, tenendo in considerazione le procedure descritte per ogni attività e gli standard da adottare;
-2. Realizzazione dell'infrastruttura: l'infrastuttura adottata deve essere installata, configurata o attuata (in base alla sua natura) in tempo per l'esecuzione del processo pertinente, tenendo conto dei suoi costi, della sicurezza e dell'eventuale spazio richiesto;
-3. Manutenzione dell'infrastruttura: è importante che monitoriamo, manteniamo adatta e modifichiamo in caso di necessità l'architettura scelta, in modo da soddisfare i requisiti del processo in corso.
+1. *Attuazione del processo*: definizione e documentazione dell'infrastuttura, tenendo in considerazione le procedure descritte per ogni attività e gli standard da adottare;
+2. *Realizzazione dell'infrastruttura*: l'infrastuttura adottata deve essere installata, configurata o attuata (in base alla sua natura) in tempo per l'esecuzione del processo pertinente, tenendo conto dei suoi costi, della sicurezza e dell'eventuale spazio richiesto;
+3. *Manutenzione dell'infrastruttura*: è importante che monitoriamo, manteniamo adatta e modifichiamo in caso di necessità l'architettura scelta, in modo da soddisfare i requisiti del processo in corso.
 
 === Strumenti e tecnologie
 In questa sezione approfondiamo le tecnologie e gli strumenti che formano la nostra architettura a supporto dei processi organizzativi.
@@ -270,9 +277,9 @@ Il miglioramento del processo ha lo scopo di stabilire, valutare, misurare, cont
 
 === Attività
 Questo processo consiste nelle seguenti attività:
-1. Definizione del processo: con l'organizzazione abbiamo definito una serie di processi organizzativi da applicare alle varie attività e la loro applicazione deve essere documentata;
-2. Valutazione del processo: sviluppare, documentare ed applicare una procedura di valutazione del processo. Tale valutazione deve essere registrata. È necessario pianificare ed effettuare revisioni dei processi a intervalli regolari per garantire la loro continua idoneità ed efficacia alla luce dei risultati della valutazione;
-3. Miglioramento dei processi: a seguito della valutazione e revisione del processo è fondamentale apportare gli eventuali miglioramenti che riteniamo necessari. La documentazione del processo deve essere aggiornata per rispecchiare il suo miglioramento. Inoltre è importante svolgere le seguenti azioni:
+1. *Definizione del processo*: con l'organizzazione abbiamo definito una serie di processi organizzativi da applicare alle varie attività e la loro applicazione deve essere documentata;
+2. *Valutazione del processo*: sviluppare, documentare ed applicare una procedura di valutazione del processo. Tale valutazione deve essere registrata. È necessario pianificare ed effettuare revisioni dei processi a intervalli regolari per garantire la loro continua idoneità ed efficacia alla luce dei risultati della valutazione;
+3. *Miglioramento dei processi*: a seguito della valutazione e revisione del processo è fondamentale apportare gli eventuali miglioramenti che riteniamo necessari. La documentazione del processo deve essere aggiornata per rispecchiare il suo miglioramento. Inoltre è importante svolgere le seguenti azioni:
   - raccogliere dati storici, tecnici e di valutazione per ottenere una maggiore comprensione dei punti di forza e delle debolezze dei processi impiegati;
   - utilizzare l'analisi come feedback per migliorare i processi e raccomandare cambiamenti in una direzione più efficiente;
   - documentare i costi per il miglioramento dell'organizzazione.
@@ -288,9 +295,9 @@ Con lo scopo di adattarci alle esigenze dei vari processi, il gruppo si impegna 
 L'acquisizione, la fornitura, lo sviluppo, il funzionamento o la manutenzione dei prodotti software dipendono in gran parte da personale esperto e qualificato. È importante che ognuno acquisisca una competenza adeguata per utilizzare le tecnologie scelte.
 
 === Attività
-1. Attuazione del processo: analisi dei requisiti del progetto per individuare risorse e competenze necessarie, creazione di un piano di auto-formazione;
-2. Sviluppo del materiale di formazione: ricerca e ordinamento di guide, manuali o mini-progetti di prova da mettere a disposizione di tutto il gruppo;
-3. Attuazione del piano di formazione: realizzazione del piano di formazione.
+1. *Attuazione del processo*: analisi dei requisiti del progetto per individuare risorse e competenze necessarie, creazione di un piano di auto-formazione;
+2. *Sviluppo del materiale di formazione*: ricerca e ordinamento di guide, manuali o mini-progetti di prova da mettere a disposizione di tutto il gruppo;
+3. *Attuazione del piano di formazione*: realizzazione del piano di formazione.
 
 Questo processo di formazione è importante si svolga per l'intera durata del progetto, ovviamente con obiettivi diversi di fase in fase. Per il primo sprint la formazione si è concentrata sullo studio delle tecnologie da utilizzare ed è stata organizzata nel seguente modo:
 1. Attuazione del processo: abbiamo individuato, in accordo con il proponente, le tecnologie da studiare attraverso un approfondimento del capitolato. Abbiamo poi creato un piano di formazione;
