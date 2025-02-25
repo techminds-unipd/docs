@@ -87,7 +87,7 @@ Secondo lo standard ISO/IEC 12207:1995, questo processo include le seguenti atti
 + *Gestione e consegna delle versioni*: assicura che tutte le versioni degli elementi software e della documentazione siano correttamente gestite, conservate e distribuite in modo tracciabile.
 
 === Strumenti e tecnologie
-Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma GitHub per la gestione della configurazione.
+Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.
 
 === Versionamento (Identificazione della configurazione)
 La procedura di versionamento in un progetto software è fondamentale per gestire le modifiche e garantire la collaborazione tra sviluppatori. In ogni documento è possibile trovare, prima ancora dell'indice, un registro delle modifiche (changelog), necessario per comprenderne il ciclo di vita dal suo concepimento fino all'ultima versione disponibile. All'interno del changelog si fa riferimento alla versione del documento rappresentato da un numero di versione così composto: \
