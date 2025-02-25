@@ -83,11 +83,11 @@ Durante il terzo giorno dello sprint ci siamo riuniti per svolgere la riunione R
 
 ==== Retrospettiva
 Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso di attuare i seguenti miglioramenti:
-- Rendere il contenuto più procedurale che narrativo;
-- Aggiungere una sezione dedicata ai rischi nei prossimi sprint;
-- Includere il preventivo a finire in ogni sprint;
-- Approfondire la discussione degli andamenti delle metriche nel Piano di qualifica;
-- Togliere il changelog nei verbali.
+- Rendere il contenuto più procedurale che narrativo in norme di progetto;
+- Aggiungere una sezione dedicata ai rischi nei prossimi sprint in piano di progetto;
+- Includere il preventivo a finire in ogni sprint nel piano di progetto;
+- Approfondire la discussione degli andamenti delle metriche nel piano di qualifica;
+- Togliere il changelog nei verbali;
 - Impegnarci a contattare l'azienda più spesso.
 
 ===== Preventivo
