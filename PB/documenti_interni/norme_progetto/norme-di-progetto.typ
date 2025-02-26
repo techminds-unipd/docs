@@ -4,6 +4,9 @@
 //#glossario[Diagrammi UML]
 //#glossario[tracciamento]
 //#glossario[label]
+// #glossario[ai]
+// #glossario[glossario]
+// #glossario[archi]
 
 #show: documento.with(
   title: "Norme di progetto",

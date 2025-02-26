@@ -1,4 +1,6 @@
 #import "/template/template.typ": glossario
+#import "/template/template.typ": sezione_glossario
+#import "/template/template.typ": sezione_scopo_prodotto
 = Introduzione
 == Scopo del documento
 Questo documento nasce con l'intenzione di documentare il #glossario[way of working] del gruppo al fine di gestire ed organizzare le attività di #glossario[progetto] nella maniera più efficiente possibile. Tutte le modifiche effettuate all'interno dei documenti saranno riportate nel registro delle modifiche (#glossario[changelog]).
@@ -9,14 +11,10 @@ La scelta di aderire ad uno standard è dovuta al fatto che ci fornisce delle re
 Il documento è organizzato secondo tali processi, ognuno dei quali presenta delle attività composte da procedure. Queste indicano gli strumenti, le convenzioni e gli obiettivi che ci impegniamo a seguire e adottare. 
 
 == Glossario
-Uno dei documenti interni prodotti dal gruppo è il così detto #glossario[glossario], ovvero una lista di termini inerenti alle attività progettuali con la relativa definizione.
-Il suo scopo è quello di garantire che tutti i membri del gruppo abbiano la stessa base di conoscenza e, per sua natura, è in continuo aggiornamento.
-I termini che sono presenti all'interno del glossario, verranno scritti #glossario[in questo stile].
+#sezione_glossario
 
 == Scopo del prodotto
-Il progetto ha lo scopo di realizzare un prodotto che, utilizzando l'#glossario[intelligenza artificiale] generativa, vada ad automatizzare molte delle routine digitali che gli utenti svolgono manualmente.#linebreak()
-Il prodotto sarà una web app che permetterà di costruire dei #glossario[workflow] i cui nodi sono dei servizi esterni (ad esempio un servizio Mail o un programma di videoscrittura) e gli #glossario[archi] indicheranno l'automazione da effettuare in linguaggio naturale.
-Successivamente, un #glossario[agente] prenderà il workflow, interpreterà le istruzioni fornite in linguaggio naturale e le eseguirà.
+#sezione_scopo_prodotto
 
 == Riferimenti
 #set par(justify: false)

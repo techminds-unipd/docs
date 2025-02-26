@@ -2,6 +2,9 @@
 //#glossario[user story]
 //#glossario[requisiti]
 //#glossario[push]
+//#glossario[progetto]
+//#glossario[ai]
+//#glossario[glossario]
 
 #set outline(depth: 3)
 #show: documento.with(
