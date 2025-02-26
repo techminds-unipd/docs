@@ -9,8 +9,7 @@ Linguaggio di programmazione che aggiunge a JavaScript funzionalità come il sup
 - *Versione*: 5.7.3;
 - *Documentazione*: https://www.typescriptlang.org/docs/ [visitato il: 24/02/2025].
 === Python
-Linguaggio di programmazione interpretato e multi-paradigma.
-
+Linguaggio di programmazione interpretato e multi-paradigma, ovvero capace di supportare diversi paradigmi di programmazione come quello orientato agli oggetti, quello funzionale e quello imperativo.
 - *Utilizzo*: codifica dell'agente AI, dato che riteniamo sia il linguaggio più adatto per il framework #glossario[LangChain]\;
 - *Versione*: 3.13.0;
 - *Documentazione*: https://docs.python.org/3/ [visitato il: 24/02/2025].
@@ -30,13 +29,13 @@ Linguaggio di stile utilizzato per definire l'aspetto e il layout delle pagine w
 - *Documentazione*: https://www.w3schools.com/css/ [visitato il: 24/02/2025].
 
 === YAML
-Linguaggio di serializzazione di dati human-readable.
+Linguaggio per lo scambio e il salvataggio di dati in un formato comprensibile per l'uomo.
 
 - *Utilizzo*: configurazione di #glossario[Docker]\;
 - *Versione*: 1.2.2;
 - *Documentazione*: https://yaml.org/spec/1.2/spec.html [visitato il: 24/02/2025].
 === JSON
-Linguaggio di serializzazione di dati human-readable.
+Linguaggio per lo scambio e il salvataggio di dati basato su delle coppie chiave-valore, oggetti o array.
 
 - *Utilizzo*: configurazione di #glossario[ESLint], #glossario[TypeScript] e dei package di #glossario[Node.js]\;
 - *Documentazione*: https://www.json.org/json-en.html [visitato il: 24/02/2025].
