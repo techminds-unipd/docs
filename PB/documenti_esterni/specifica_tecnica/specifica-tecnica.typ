@@ -14,6 +14,8 @@
 // #glossario[ai]
 // #glossario[glossario]
 // #glossario[agente]
+// #glossario[workflow]
+// #glossario[archi]
 
 #include "include/introduzione.typ"
 #include "include/tecnologie.typ"
