@@ -38,10 +38,12 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 
 - *Durata*: le date di inizio e fine dello sprint;
 - *Pianificazione*: descrive gli obiettivi principali dello sprint, le attività previste e le motivazioni delle scelte fatte;
-- *Issue aggiuntive* (Opzionale): attività non pianificate e aggiunte durante lo svolgersi dello sprint;
 - *Ruoli*: elenca i ruoli assegnati ai membri del team in quel determinato sprint;
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]\;
+- *Issue aggiuntive* (opzionale): attività non pianificate e aggiunte durante lo svolgersi dello sprint;
 - #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Il diagramma conteggia solamente i giorni produttivi. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore #underline("grigio", stroke: 1pt + gray, evade: false)) e il tempo effettivamente impiegato (colore #underline("rosso", stroke: 1pt + red, evade: false)) per completare ogni issue. Inoltre le attività sono divise in macrosezioni, la cui linea (colore #underline("nero", stroke: 1pt + black, evade: false)) indica il tempo complessivo.
+- *Rischi previsti* (da sprint 7): contiene una lista di rischi che potrebbero accadere durante lo sprint come conseguenza degli obiettivi pianificati;
+- *Rischi occorsi* (da sprint 7): documenta i rischi che si sono concretizzati durante uno sprint e le tecniche usate per mitigarli;
 - *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso;
 - #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
 - *Preventivo*:
@@ -50,7 +52,7 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 - *Consuntivo*:
   - tabella contenente le ore e i costi a consuntivo per ciascun ruolo e persona. Viene data enfasi nel mostrare la differenza tra le ore preventivate e quelle effettivamente consumate;
   - grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
-- *Aggiornamento #glossario[Preventivo a Finire]*: testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
+- *Aggiornamento #glossario[Preventivo a Finire]* (da sprint 5): testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
 == RTB
 Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;
@@ -98,3 +100,7 @@ I costi effettivamente sostenuti durante il periodo RTB sono esposti nella @tabe
     caption: "Consuntivo di periodo RTB."
 ) <tabella-totaleRTB>
 
+== PB
+La seconda fase del progetto, chiamata Product Baseline, si concentra sulla progettazione e lo sviluppo del #glossario[MVP] da parte del gruppo. Questa fase è caratterizzata da un maggiore tempo a disposizione da parte di molti membri del gruppo che hanno finito le lezioni.
+
+#include "sprint/sprint7.typ"

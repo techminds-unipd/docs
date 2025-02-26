@@ -91,23 +91,23 @@ Dopo aver ricevuto la valutazione dell'RTB da parte del docente abbiamo deciso d
 - Togliere il changelog nei verbali;
 - Impegnarci a contattare l'azienda più spesso.
 
-===== Preventivo
+==== Preventivo
 
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 6)
 
 #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo) = preventivo
 
 #tabellaSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
-<tabella-PreventivoSprint4> \
+<tabella-PreventivoSprint6> \
 
 #pieChartSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
-<grafico-PreventivoSprint4> \
+<grafico-PreventivoSprint6> \
 
 #if consuntivo != none [
 
     #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
 
-    ===== Consuntivo
+    ==== Consuntivo
     I numeri tra parentesi indicano le variazioni rispetto al preventivo.
 
     #tabellaSprint(6, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
