@@ -42,7 +42,7 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
 - *Issue*: elenco delle attività da svolgere, suddivise per categoria, con riferimenti a #glossario[GitHub]\;
 - *Issue aggiuntive* (opzionale): attività non pianificate e aggiunte durante lo svolgersi dello sprint;
 - #glossario[Diagramma di Gantt]: un grafico che mostra la distribuzione temporale delle attività pianificate e svolte. Il diagramma conteggia solamente i giorni produttivi. Viene data enfasi nel mostrare le differenze tra il tempo preventivato (colore #underline("grigio", stroke: 1pt + gray, evade: false)) e il tempo effettivamente impiegato (colore #underline("rosso", stroke: 1pt + red, evade: false)) per completare ogni issue. Inoltre le attività sono divise in macrosezioni, la cui linea (colore #underline("nero", stroke: 1pt + black, evade: false)) indica il tempo complessivo.
-- *Rischi previsti* (da sprint 7): contiene una lista di richi che potrebbero accadere durante lo sprint come conseguenza delle obiettivi pianificati;
+- *Rischi previsti* (da sprint 7): contiene una lista di rischi che potrebbero accadere durante lo sprint come conseguenza degli obiettivi pianificati;
 - *Rischi occorsi* (da sprint 7): documenta i rischi che si sono concretizzati durante uno sprint e le tecniche usate per mitigarli;
 - *Conclusioni*: riassume i risultati raggiunti e i task completati o rimasti in sospeso;
 - #glossario[Retrospettiva]: analizza le difficoltà incontrate e le decisioni prese per migliorare il lavoro nei successivi sprint;
