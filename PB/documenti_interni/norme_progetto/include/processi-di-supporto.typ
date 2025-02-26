@@ -161,11 +161,14 @@ dove:
   - *Valore accettabile*: valore minimo accettabile della metrica per essere conforme agli standard di qualità stabiliti;
   - *Valore ottimale:* valore ideale della metrica;
 
-=== Strumenti e tecnologie
-Il team ha deciso di utilizzare Typst per la redazione del piano di qualifica e per la generazione e la gestione del cruscotto in esso contenuto. Ogni volta che viene compilato, il documento riprende tutti i valori aggiornati degli sprint da una funzione apposita (definita in costi.typ nella directory contenente il piano di progetto).
+=== Aggiornamento del cruscotto
+Il cruscotto è realizzato usando Typst. Ogni volta che viene compilato, il documento riprende tutti i valori aggiornati degli sprint da una funzione apposita (definita in costi.typ nella directory contenente il piano di progetto).
 I valori ottenuti vengono usati per calcolare le varie metriche, che saranno successivamente visualizzate attraverso dei grafici, sempre generati in Typst con la libreria CeTZ.
 C'è da precisare che questa è una procedura semi-automatica, ad esempio alcuni dati per le metriche devono essere inseriti a mano ad ogni sprint.
 I dati in questione riguardano l'indice di Gulpease, rischi non previsti e l'#glossario[Earned Value].
+
+=== Strumenti e tecnologie
+Il team ha deciso di utilizzare Typst per la redazione del piano di qualifica e per la generazione e la gestione del cruscotto in esso contenuto.
 
 == Verifica e validazione
 La verifica e la validazione sono due processi fondamentali per garantire la qualità e la correttezza del prodotto finale. La verifica viene eseguita su tutte le componenti del prodotto, siano esse documentazione o codice, durante tutta la durata del progetto, in modo tale da confermare che il lavoro svolto fino a quel momento sia corretto e rispetti gli standard prefissati. La validazione, invece, agisce solo a fine progetto, poiché si occupa di confermare che il prodotto finale nel suo complesso soddisfi le aspettative e i requisiti concordati con il proponente. La validazione rispecchia quindi l'insieme di tutte le verifiche effettuate durante il progetto, e per questo motivo la verifica è ciò che permette alla validazione di essere eseguita con successo.
