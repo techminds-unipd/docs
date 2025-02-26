@@ -12,7 +12,7 @@ L'obiettivo principale di questo sprint è iniziare a comporre il documento di s
   - responsabile: #team.T\;
   - amministratore: #team.L\;
   - progettista: #team.G, #team.M, #team.S\;
-  - programmatore: #team.T;
+  - programmatore: #team.T\;
   - verificatore: #team.C, #team.A.
 - Issue:
   - Norme di progetto
