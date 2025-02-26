@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "1.1.0", "25/02/2025", "Aggiunta definizione preventivo a finire", team.T, team.A,
     "1.0.0", "11/02/2025", "Piccoli fix e aggiunta parole al glossario", team.A, team.T,
     "0.5.0", "08/02/2025", "Aggiunta definizione dei test", team.S, team.T,
     "0.4.0", "22/01/2025", "Aggiunta definizione di Docker", team.T, team.C,
@@ -286,6 +287,9 @@ Acronimo di _Proof of Concept_. É una baseline tecnologica che usa le tecnologi
 == PodMan
 Podman è un tool per la gestione di container simile a Docker.
 Permette di creare ambienti isolati di esecuzione chiamati container con un uso meno estensivo di risorse rispetto ad una macchina virtuale.
+
+== Preventivo a finire // {PaF}
+Il preventivo a finire è una tabella che mostra la ripartizione delle ore per ruolo in un determinato momento, il loro costo e la stima del costo dell'intero progetto.
 
 == Processo // {Processi}
 Insieme di attività correlate e coese che, consumando risorse, trasformano ingressi (bisogni) in uscite (prodotti). Ogni processo deve svolgersi secondo le indicazioni fornite dalle Norme di Progetto.

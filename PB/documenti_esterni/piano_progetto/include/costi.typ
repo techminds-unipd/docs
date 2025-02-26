@@ -95,6 +95,14 @@
     tutino_preventivo.push(    (0, 0, 0, 0, 0, 7) )
     vallotto_preventivo.push(  (3, 0, 0, 0, 0, 0) )
 
+    bressan_consuntivo.push(   (0, "2 (-4)", 0, 0, 0, 0) )
+    corradin_consuntivo.push(  (0, 0, 0, 0, 0, "6 (-1)") )
+    lazzarin_consuntivo.push(  (0, 0, 4, 0, 0, 0) )
+    salviato_consuntivo.push(  (0, 0, "1 (-1)", 0, 0, 0) )
+    squarzoni_consuntivo.push( (0, 0, 5, 0, 0, 0) )
+    tutino_consuntivo.push(    (0, 0, 0, 0, 0, 7) )
+    vallotto_consuntivo.push(  (3, 0, 0, 0, 0, 0) )
+
     let preventivo = (
         bressan: bressan_preventivo,
         corradin: corradin_preventivo,
@@ -152,8 +160,14 @@
 #let getSprintCostsSection(
     sprint_number: int,
 ) = {
-    let bilancioConsuntivo = 12975
-    let bilancioPreventivo = 12975
+    let bilancioConsuntivo = 12625
+    let bilancioPreventivo = 12625
+    if(sprint_number<=5){
+        bilancioConsuntivo = 12975
+        bilancioPreventivo = 12975
+    }
+    //Ogni futuro aggiornamento al preventivo a finire deve essere aggiunto qua.
+
 
     let (preventivo, consuntivo) = getSprintData()
 

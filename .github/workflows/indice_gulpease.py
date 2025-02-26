@@ -1,6 +1,6 @@
 import re, glob, os, sys
 
-REPO_DIR = '../../'
+REPO_DIR = '../../PB'
 if 'GITHUB_WORKSPACE' in os.environ:
     REPO_DIR = os.environ['GITHUB_WORKSPACE'] + '/PB'
 
