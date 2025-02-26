@@ -101,6 +101,6 @@ I costi effettivamente sostenuti durante il periodo RTB sono esposti nella @tabe
 ) <tabella-totaleRTB>
 
 == PB
-La seconda fase del progetto, chiamata Product Baseline, si concentra sulla progettazione e lo sviluppo del MVP da parte del gruppo. Questa fase è caratterizzata da un maggiore tempo a disposizione da parte di molti membri del gruppo che hanno finito le lezioni.
+La seconda fase del progetto, chiamata Product Baseline, si concentra sulla progettazione e lo sviluppo del #glossario[MVP] da parte del gruppo. Questa fase è caratterizzata da un maggiore tempo a disposizione da parte di molti membri del gruppo che hanno finito le lezioni.
 
 #include "sprint/sprint7.typ"
