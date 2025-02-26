@@ -39,10 +39,10 @@ Oltre ai canali di comunicazione interni abbiamo un canale #glossario[Slack] in 
 Visto che utilizziamo la metodologia Agile le nostre attività sono divise in periodi della durata di 2-3 settimane circa, chiamati sprint.
 L'intera durata del progetto è inoltre divisa in milestone, che rappresentano un progresso significativo.
 Le prime milestone che naturalmente abbiamo individuato sono #glossario[RTB] e #glossario[PB]. Nel periodo riguardante la RTB ad ogni documento è associata una milestone. I documenti in questione sono:
-- #glossario[Analisi dei requisiti]\;
-- #glossario[Piano di progetto]\;
-- #glossario[Piano di qualifica]\;
-- Norme di progetto.
+- RTB: #glossario[Analisi dei requisiti]\;
+- RTB: #glossario[Piano di progetto]\;
+- RTB: #glossario[Piano di qualifica]\;
+- RTB: Norme di progetto.
 Anche per PB abbiamo definito una milestone per ogni documento:
 - PB: Analisi dei requisiti;
 - PB: Piano di progetto;
