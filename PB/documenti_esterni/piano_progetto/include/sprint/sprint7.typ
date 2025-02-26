@@ -93,7 +93,12 @@ caption: [Diagramma Gantt sprint 7.]
 )<diagramma-gantt-sprint7>
 
 ==== Rischi previsti
-//TODO
+Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sprint:
+- RP1 - Impegno di un membro del team inferiore a quanto dichiarato (descritto in @tabella-RP1);
+- RP2 - Malattia di un membro del team (descritto in @tabella-RP2);
+- RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3);
+- ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
+
 //==== Rischi occorsi
 
 //==== Conclusioni
