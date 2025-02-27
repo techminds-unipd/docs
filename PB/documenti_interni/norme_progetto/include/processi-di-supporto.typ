@@ -143,12 +143,12 @@ Il piano di qualifica è un documento che definisce le strategie e le metodologi
 - *Codice:* identificativo univoco della metrica;
 #align(center, block[
   #set align(center)
-  M[abc][numero]
+  M[PROC/PROD][numero]
 ])
 dove:
 #set list(indent: 1em)
 - M: indica che si tratta di una metrica;
-- abc: indica le prime 3 lettere della categoria di appartenenza della metrica (se ritenuto necessario è possibile inserire le prime 4 lettere);
+- PROC/PROD: indica se la metrica è relativa ai processi (PROC) o al prodotto (PROD);
 - numero: numero progressivo della metrica.
 #set list(indent: 0em)
 - *Nome:* specifica il nome della metrica;

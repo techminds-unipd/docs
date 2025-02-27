@@ -4,4 +4,3 @@
 
 #include "qualita-processo.typ"
 #include "qualita-prodotto.typ"
-#include "qualita-obiettivo.typ"

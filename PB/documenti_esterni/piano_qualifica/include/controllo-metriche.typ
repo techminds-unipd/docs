@@ -208,7 +208,7 @@
 #pagebreak()
 
 = Cruscotto
-== MPRO2 (AC), MPRO8 (ETC), MPRO7 (EAC)
+== MPROC2 (AC), MPROC8 (ETC), MPRO7 (EAC)
 #linebreak()
 
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
@@ -231,7 +231,7 @@ In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC
 Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
 EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 
-== MPRO3 (PV), MPRO1 (EV)
+== MPROC3 (PV), MPROC1 (EV)
 #linebreak()
 
 #lineChart(lines: (ev_fun,pv_fun),
@@ -253,7 +253,7 @@ In questo periodo abbiamo rispettato abbastanza bene i costi preventivati, scost
 In generale i costi sono bassi perchè in questo periodo erano presenti molti impegni fra lezioni e esami che non permettevano di allocare molto tempo.
 
 #pagebreak()
-== MPRO4 (CV), MPRO5 (SV)
+== MPROC4 (CV), MPROC5 (SV)
 #linebreak()
 
 #lineChart(lines: (cv_fun,sv_fun),
@@ -276,7 +276,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 
 #pagebreak()
 
-== MPRO6 (CPI), MPRO9 (SPI)
+== MPROC6 (CPI), MPROC9 (SPI)
 #linebreak()
 
 #lineChart(lines: (cpi_fun,spi_fun),
@@ -300,7 +300,7 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 
 #pagebreak()
 
-== MAFF1 (Indice di Gulpease)
+== MPROC11 (Indice di Gulpease)
 #linebreak()
 
 #let x_axis = ((1,36),)
@@ -326,7 +326,7 @@ Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti d
 #linebreak()
 I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabile (ovvero 40). In alcuni documenti, come Analisi dei requisiti, il valore dell'indice è rimasto abbastanza stabile. Si sono riscontrati dei notevoli incrementi in Norme di progetto e Piano di progetto, dovuti dalla maggiore cura e attenzione da parte del gruppo nella formulazione delle frasi. Infine, anche se in Glossario e Piano di qualifica ci sono stati dei peggioramenti, tra lo sprint 3 e lo sprint 4 si è registrato un impegno nel migliorare il valore dell'indice.
 
-== MACC1 (Caption in tabelle e figure)
+== MPROC12 (Caption in tabelle e figure)
 #linebreak()
 
 #let x_axis = ((1,0),)
@@ -350,7 +350,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
 
 #pagebreak()
 
-== MPRO11 (Rischi non previsti)
+== MPROC15 (Rischi non previsti)
 #linebreak()
 
 #let point = ((1,9),)
@@ -374,7 +374,7 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
 
 #pagebreak()
 
-==  MPRO14 (Metriche accettabili)
+==  MPROC16 (Metriche accettabili)
 #linebreak()
 
 #let point = ((1,0),)
@@ -399,7 +399,7 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
 
 #pagebreak()
 
-==  MPRO15 (Metriche ottimali)
+==  MPROC17 (Metriche ottimali)
 #linebreak()
 
 #let point = ((1,0),)
