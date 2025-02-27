@@ -23,7 +23,7 @@ Il processo di fornitura si occupa sia della gestione delle attività in cui il 
 #set par(justify: true)
 
 ==== Sviluppo
-Il processo di sviluppo si occupa della controllo e della gestione di tutto le fasi del ciclo di vita del prodotto software.
+Il processo di sviluppo si occupa della controllo e della gestione di tutte le fasi del ciclo di vita del prodotto software.
 #set par(justify: false)
 #figure(
   table(
