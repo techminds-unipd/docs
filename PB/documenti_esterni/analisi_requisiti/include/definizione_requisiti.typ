@@ -156,6 +156,12 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
+        [L'utente autenticato deve visualizzare un avviso che indica la non validità del nome del workflow inserito durante la sua creazione.],
+        [@creazione-nuovo-workflow, @avviso-nome-uguale],
+    ))
+    FMR+=1
+
+    FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.],
         [@visualizzazione-lista-blocchi-configurati],
     ))
@@ -301,7 +307,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [LL'utente autenticato visualizza un messaggio che informa del fallimento nell'eliminazione del workflow.],
+        [L'utente autenticato visualizza un messaggio che informa del fallimento nell'eliminazione del workflow.],
         [@eliminazione-workflow,
             @vis-errore-operazione-workflow],
     ))

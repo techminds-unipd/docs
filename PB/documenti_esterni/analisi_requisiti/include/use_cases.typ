@@ -634,14 +634,14 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
     ], name: <b>),
 
     node((1.7,1.3), align(center)[
-            @avviso-nome-uguale Visualizzazione avviso nome non valido
+            @avviso-nome-uguale Visualizzazione avviso nome non accettabile
     ], name: <c>),
     edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((0.9,0.7), align(center)[
-            Nome già #linebreak() utilizzato
+            Nome non valido #linebreak() o non univoco
     ], shape: uc_comment, name: <le>),
-    node((1.49,0.7), align(center)[
+    node((1.48,0.7), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
     edge(<le>, <nf>, "--"),
 
@@ -671,7 +671,7 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
    3. seleziona l'opzione per creare un nuovo workflow.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. verifica che il nome inserito sia univoco;
+   2. verifica che il nome inserito sia valido e univoco;
    3. la verifica ha successo;
    4. crea un nuovo workflow vuoto;
    5. mostra il nuovo workflow vuoto creato.
@@ -694,17 +694,17 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
 - *Post-condizioni*:
   - Il nome del workflow è stato inserito.
 
-=== Visualizzazione avviso nome non valido
+=== Visualizzazione avviso nome non accettabile
 <avviso-nome-uguale>
 - *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che ha inserito un nome per il workflow già utilizzato.
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che ha inserito un nome per il workflow non valido o non univoco.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
     1. visualizza un avviso che segnala l'inserimento di un nome non valido.
  - Sistema:
-   1. verifica che il nome inserito sia univoco; 
+   1. verifica che il nome inserito sia valido e univoco;
    2. la verifica non ha successo;
    3. mostra un messaggio di errore.
 - *Post-condizioni*:

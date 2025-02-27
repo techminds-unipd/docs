@@ -14,7 +14,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
-    "1.3.0", "27/02/2025", "Aggiunti nuovi requisiti funzionali e UC avviso nome non valido", team.C, "",
+    "1.3.0", "27/02/2025", "Aggiunti nuovi requisiti funzionali e UC avviso nome non accettabile", team.C, "",
     "1.2.0", "20/02/2025", "Aggiunte tabelle tracciamento", team.M, team.S,
     "1.1.0", "20/02/2025", "Aggiunti requisiti e resi atomici", team.T, team.G,
     "1.0.6", "19/02/2025", "Fix tabelle dei requisiti", team.T, team.S,
