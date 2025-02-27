@@ -36,31 +36,31 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve poter effettuare il login interno.],
+        [L'utente non autenticato deve poter effettuare il login interno.],
         [@login, @login-interno],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve poter inserire il proprio username per effettuare il login interno.],
+        [L'utente non autenticato deve poter inserire il proprio username per effettuare il login interno.],
         [@login, @login-interno, @inserimento-username],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve poter inserire la propria password per effettuare il login interno.],
+        [L'utente non autenticato deve poter inserire la propria password per effettuare il login interno.],
         [@login, @login-interno, @inserimento-password],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve ricevere un messaggio di errore in caso abbia inserito credenziali errate per il login interno.],
+        [L'utente non autenticato deve ricevere un messaggio di errore in caso abbia inserito credenziali errate per il login interno.],
         [@login, @login-interno, @credenziali-errate],
     ))
     FMR+=1
 
     FR.push(("FOR" + str(FOR),
-        [L'utente deve poter fare il login con Google.],
+        [L'utente non autenticato deve poter fare il login con Google.],
         [@login, @login-google],
     ))
     FOR+=1
@@ -72,31 +72,31 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve potersi registrare.],
+        [L'utente non autenticato deve potersi registrare.],
         [@registrazione],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve poter inserire lo username con cui vuole registrarsi.],
+        [L'utente non autenticato deve poter inserire lo username con cui vuole registrarsi.],
         [@registrazione, @creazione-username],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve poter inserire la password per la registrazione.],
+        [L'utente non autenticato deve poter inserire la password per la registrazione.],
         [@registrazione, @creazione-password],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve poter confermare la password precedentemente inserita per la registrazione.],
+        [L'utente non autenticato deve poter inserire nuovamente la password precedentemente inserita per la registrazione.],
         [@registrazione, @conferma-password],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente deve ricevere un messaggio di errore in caso abbia inserito credenziali non valide per la registrazione.],
+        [L'utente non autenticato deve ricevere un messaggio di errore in caso abbia inserito credenziali non valide per la registrazione.],
         [@registrazione, @errore-registrazione],
     ))
     FMR+=1
@@ -132,7 +132,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato, visualizzando la lista dei workflow, deve poter visualizzare per ogni workflow nella liste un'opzione per eliminarlo.],
+        [L'utente autenticato, visualizzando la lista dei workflow, deve poter visualizzare per ogni workflow nella lista un'opzione per eliminarlo.],
         [@visualizzazione-lista-workflow, @visualizzazione-singolo-workflow],
     ))
     FMR+=1
@@ -283,7 +283,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato visualizza un messaggio che lo avvisi del fallimento del salvataggio del workflow.],
+        [L'utente autenticato visualizza un messaggio di avviso che informa del fallimento nel salvataggio del workflow.],
         [@salvataggio-workflow, @vis-errore-operazione-workflow],
     ))
     FMR+=1
@@ -295,7 +295,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato visualizza un messaggio che lo avvisi del fallimento dell'eliminazione del workflow.],
+        [LL'utente autenticato visualizza un messaggio che informa del fallimento nell'eliminazione del workflow.],
         [@eliminazione-workflow,
             @vis-errore-operazione-workflow],
     ))
