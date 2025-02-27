@@ -31,6 +31,8 @@
   )
 )
 //#glossario[processo]
+//#glossario[ai]
+//#glossario[glossario]
 
 #include "include/introduzione.typ"
 #include "include/metriche-qualita.typ"

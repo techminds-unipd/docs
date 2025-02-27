@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "1.2.0", "25/02/2025", "Aggiunta definizione alcune tecnologie", team.S, team.C,
     "1.1.0", "25/02/2025", "Aggiunta definizione preventivo a finire", team.T, team.A,
     "1.0.0", "11/02/2025", "Piccoli fix e aggiunta parole al glossario", team.A, team.T,
     "0.5.0", "08/02/2025", "Aggiunta definizione dei test", team.S, team.T,
@@ -172,6 +173,9 @@ Va periodicamente confrontato con:
 - #link(<PV>)[PV] per valutare se il progetto è in linea con la pianificazione dal punto di vista dell'andamento temporale dei costi. Ciò avviene tramite le metriche #link(<SV>)[SV] e #link(<SPI>)[SPI].
 
 = F
+== Flask
+Flask è un framework per Python che permette di creare applicazioni web in modo semplice e veloce.
+
 = G
 
 == Git
@@ -220,6 +224,9 @@ Acronimo di _Issues Tracking System_, è uno strumento che gestisce e mantiene u
 == Label
 In GitHub, una label è un'etichetta che può essere applicata a un issue o a una pull request per fornire informazioni aggiuntive, come lo stato, la priorità, o il tipo di problema. Le label sono utili per organizzare e categorizzare facilmente gli elementi nel repository.
 
+== LangChain
+Framework per la creazione di agenti AI in Python. Permette di integrare LLM da diversi produttori e di creare o utilizzare un insieme di tool da fornire agli agenti AI.
+
 == LaTeX
 LaTeX è un linguaggio di markup utilizzato per la scrittura di documenti scientifici e tecnici. 
 
@@ -244,6 +251,9 @@ MongoDB è un database NoSQL orientato ai documenti. Utilizza un formato di dati
 Acronimo di _Minimum Viable Product_. Prodotto software ridotto nelle funzionalità che soddisfa i requisiti essenziali. É utilizzato a scopo esplorativo per ricevere feedback e valutare la bontà della visione di prodotto, in modo da prendere decisioni consapevoli sul completamento del software.
 
 = N
+
+== NestJS
+NestJS è un framework per la creazione di applicazioni server-side in TypeScript. Offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili.
 
 == Node.js
 Node.js è un ambiente di esecuzione JavaScript lato server. Permette di eseguire codice JavaScript al di fuori di un browser, ed è utilizzato per costruire applicazioni server-side come API, servizi web e applicazioni real-time.

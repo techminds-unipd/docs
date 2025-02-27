@@ -2,12 +2,17 @@
 //#glossario[user story]
 //#glossario[requisiti]
 //#glossario[push]
+//#glossario[progetto]
+//#glossario[ai]
+//#glossario[glossario]
 
 #set outline(depth: 3)
 #show: documento.with(
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
+    "1.4.0", "26/02/2025", "Documentate nuove milestone", team.C, team.A,
+    "1.3.0", "25/02/2025", "Aggiunta preventivo sprint 7 e modifica struttura sprint", team.T, team.A,
     "1.2.0", "24/02/2025", "Aggiunta consuntivo sprint 6", team.T, team.C,
     "1.1.0", "17/02/2025", "Aggiunta preventivo sprint 6", team.C, team.G,
     "1.0.0", "14/02/2025", "Aggiunta sezione issue non inizialmente preventivate", team.A,team.G,
