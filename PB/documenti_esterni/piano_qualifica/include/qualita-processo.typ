@@ -5,7 +5,7 @@
 === Processi primari
 
 ==== Fornitura
-Il processo di fornitura si occupa sia della gestione delle attività in cui il proponente è coinvolto sia della gestione delle risorse necessarie a consegnare al proponente un prodotto che soddisfi i requisiti.
+Il processo di fornitura si occupa sia della gestione delle attività in cui il proponente è coinvolto, sia della gestione delle risorse necessarie a consegnare al proponente un prodotto che soddisfi i requisiti.
 #set par(justify: false)
 #figure(
   table(
