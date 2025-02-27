@@ -624,30 +624,42 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
     node-stroke: 1pt,
     edge-stroke: 1pt,
     label-size: 8pt,
-    node-inset: 10pt,
+    node-inset: 13pt,
     node-shape: ellipse,
-    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
-    edge(<user>, <a>),
-
-    node((2,0), align(center)[
-            @creazione-nuovo-workflow Creazione workflow vuoto
-    ], name: <a>),
-
-    node((2,0.7), align(center)[
-            @inserimento-nome-workflow Inserimento nome workflow
+    node((0,0.3), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    edge(<user>, <b>),
+    
+    node((1.3,0), align(center)[
+        @creazione-nuovo-workflow Creazione workflow vuoto
     ], name: <b>),
 
-    edge(<a>, <b>, "--straight", [\<\<include\>\>]),
+    node((1.7,1.3), align(center)[
+            @avviso-nome-uguale Visualizzazione avviso nome non valido
+    ], name: <c>),
+    edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
-    node(enclose: (<a>,<b>,),
+    node((0.9,0.7), align(center)[
+            Nome già #linebreak() utilizzato
+    ], shape: uc_comment, name: <le>),
+    node((1.49,0.7), align(center)[
+    ], name: <nf>, width: 1pt, height: 1pt),
+    edge(<le>, <nf>, "--"),
+
+    node((2.5,0.5), align(center)[
+            @inserimento-nome-workflow Inserimento \ nome workflow
+    ], name: <d>),
+    edge(<b>, <d>, "--straight", [\<\<include\>\>]),
+
+    node(enclose: (<b>,<c>,<le>,<nf>,<d>),
         align(top + right)[Sistema],
-        width: 210pt,
-        height: 170pt,
+        width: 150pt,
+        height: 150pt,
         snap: -1,
         name: <group>)
     ),
     caption: [Creazione nuovo workflow vuoto UC diagram.]
 ) <creazione-nuovo-workflow-diagram>
+
 - *Descrizione*:
   - Questo caso d'uso descrive la procedura di creazione di un nuovo workflow vuoto.
 - *Attori principali*:
@@ -659,10 +671,14 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
    3. seleziona l'opzione per creare un nuovo workflow.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. crea un nuovo workflow vuoto;
-   3. mostra il nuovo workflow vuoto creato.
+   2. verifica che il nome inserito sia univoco;
+   3. la verifica ha successo;
+   4. crea un nuovo workflow vuoto;
+   5. mostra il nuovo workflow vuoto creato.
 - *Post-condizioni*:
    - Viene creato il workflow vuoto.
+- *Estensioni*:
+   - Visualizzazione nome non valido (@avviso-nome-uguale).
 
 ==== Inserimento nome workflow <inserimento-nome-workflow>
 - *Descrizione*:
@@ -677,6 +693,22 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
     2. continua la procedura di creazione del workflow.
 - *Post-condizioni*:
   - Il nome del workflow è stato inserito.
+
+=== Visualizzazione avviso nome non valido
+<avviso-nome-uguale>
+- *Descrizione*:
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che ha inserito un nome per il workflow già utilizzato.
+- *Attori principali*:
+  - Utente autenticato.
+- *Scenario principale*:
+ - Utente autenticato:
+    1. visualizza un avviso che segnala l'inserimento di un nome non valido.
+ - Sistema:
+   1. verifica che il nome inserito sia univoco; 
+   2. la verifica non ha successo;
+   3. mostra un messaggio di errore.
+- *Post-condizioni*:
+  - Viene segnalato all'utente che il nome inserito non è valido.
 
 === Visualizzazione lista blocchi configurati <visualizzazione-lista-blocchi-configurati>
 

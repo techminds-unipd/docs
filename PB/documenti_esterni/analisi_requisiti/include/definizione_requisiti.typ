@@ -150,6 +150,12 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
+        [L'utente autenticato deve visualizzare un avviso che indica la non univocità del nome del workflow inserito durante la sua creazione.],
+        [@creazione-nuovo-workflow, @avviso-nome-uguale],
+    ))
+    FMR+=1
+
+    FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare quali blocchi (servizi) sono stati configurati.],
         [@visualizzazione-lista-blocchi-configurati],
     ))
