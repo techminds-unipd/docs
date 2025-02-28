@@ -671,7 +671,7 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
    3. seleziona l'opzione per creare un nuovo workflow.
  - Sistema:
    1. porta l'utente nella pagina per la creazione del workflow;
-   2. verifica che il nome inserito sia valido e univoco;
+   2. verifica che il nome inserito sia valido e univoco (tra tutti i workflow dell'utente);
    3. la verifica ha successo;
    4. crea un nuovo workflow vuoto;
    5. mostra il nuovo workflow vuoto creato.
@@ -704,7 +704,7 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
  - Utente autenticato:
     1. visualizza un avviso che segnala l'inserimento di un nome non valido.
  - Sistema:
-   1. verifica che il nome inserito sia valido e univoco;
+   1. verifica che il nome inserito sia valido e univoco (tra tutti i workflow dell'utente);
    2. la verifica non ha successo;
    3. mostra un messaggio di errore.
 - *Post-condizioni*:

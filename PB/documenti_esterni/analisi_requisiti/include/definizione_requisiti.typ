@@ -78,7 +78,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente non autenticato deve poter inserire lo username con cui vuole registrarsi.],
+        [L'utente non autenticato deve poter inserire lo username per la registrazione.],
         [@registrazione, @creazione-username],
     ))
     FMR+=1
@@ -108,7 +108,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve ricevere un messaggio in caso di errore nell'associazione dell'account Google.],
+        [L'utente autenticato deve ricevere un messaggio in caso di errore nell'associazione dell'account Google per i servizi offerti dai blocchi del workflow.],
         [@errore-comunicazione-google],
     ))
     FMR+=1
@@ -180,7 +180,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve ricevere un avviso in caso non abbia collegato nessun servizio.],
+        [L'utente autenticato deve ricevere un avviso in caso non abbia collegato nessun servizio associato ai blocchi.],
         [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
     ))
     FMR+=1
@@ -489,7 +489,7 @@
     CMR+=1
 
     CR.push(("CMR" + str(CMR),
-        [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium.],
+        [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium 133.],
         [Decisione interna],
     ))
     CMR+=1
