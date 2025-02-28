@@ -368,6 +368,11 @@
     return FR
 }
 
+#let getFRByNumber(number) = {
+    let FR = getFR(getLen: false)
+    return FR.at(number - 1).slice(0, 1)
+}
+
 #let getQR(getLen: bool) = {
     let QR = ()
     let QMR = 1
