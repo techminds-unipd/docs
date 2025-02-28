@@ -6,35 +6,6 @@
     let FDR = 1
     let FOR = 1
 
-    FR.push(  ("FMR" + str(FMR),
-        [Il sistema deve offrire almeno tre blocchi di automazione diversi.],
-        [Capitolato]))
-    FMR+=1
-
-    FR.push(("FMR" + str(FMR),
-        [Il sistema deve eseguire il workflow attraverso l'uso di un agente AI.],
-        [Capitolato],
-    ))
-    FMR+=1
-
-    FR.push(("FMR" + str(FMR),
-        [Il sistema deve esporre un'interfaccia drag-and-drop per poter inserire i blocchi.],
-        [Capitolato],
-    ))
-    FMR+=1
-
-    FR.push(("FMR" + str(FMR),
-        [Il sistema deve interfacciarsi con i servizi di Google.],
-        [Riunione col proponente],
-    ))
-    FMR+=1
-
-    FR.push(("FMR" + str(FMR),
-        [Il sistema deve interfacciarsi con i servizi di Pastebin.],
-        [Riunione col proponente]
-    ))
-    FMR+=1
-
     FR.push(("FMR" + str(FMR),
         [L'utente non autenticato deve poter effettuare il login interno.],
         [@login, @login-interno],
@@ -103,7 +74,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter associare un account Google da utilizzare per i servizi offerti dai blocchi dei workflow.],
-        [@aggiunta-account-google-associato],
+        [Riunione col proponente, @aggiunta-account-google-associato],
     ))
     FMR+=1
 
@@ -187,37 +158,37 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare una breve descrizione relativa al blocco Gmail.],
-        [@funzionalità-blocco, @funzionalità-blocco-gmail],
+        [Capitolato, @funzionalità-blocco, @funzionalità-blocco-gmail],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare le funzioni offerte dal blocco Gmail.],
-        [@funzionalità-blocco, @funzionalità-blocco-gmail],
+        [Capitolato, @funzionalità-blocco, @funzionalità-blocco-gmail],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare una breve descrizione relativa al blocco Pastebin.],
-        [@funzionalità-blocco, @funzionalità-blocco-pastebin],
+        [Capitolato, Riunione col proponente, @funzionalità-blocco, @funzionalità-blocco-pastebin],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare le funzioni offerte dal blocco Pastebin.],
-        [@funzionalità-blocco, @funzionalità-blocco-pastebin],
+        [Capitolato, Riunione col proponente, @funzionalità-blocco, @funzionalità-blocco-pastebin],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare una breve descrizione relativa al blocco Calendar.],
-        [@funzionalità-blocco, @funzionalità-blocco-calendar],
+        [Capitolato, @funzionalità-blocco, @funzionalità-blocco-calendar],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter visualizzare le funzioni offerte dal blocco Calendar.],
-        [@funzionalità-blocco, @funzionalità-blocco-calendar],
+        [Capitolato, @funzionalità-blocco, @funzionalità-blocco-calendar],
     ))
     FMR+=1
 
@@ -229,7 +200,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato, per poter aggiungere un blocco in un workflow, deve trascinarlo nell'area drag and drop.],
-        [@aggiunta-blocco],
+        [Capitolato, @aggiunta-blocco],
     ))
     FMR+=1
 
@@ -315,7 +286,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato deve poter mandare in esecuzione un workflow.],
-        [@esecuzione-workflow],
+        [Capitolato, @esecuzione-workflow],
     ))
     FMR+=1
 
