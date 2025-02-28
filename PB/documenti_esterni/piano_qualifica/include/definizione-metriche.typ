@@ -138,8 +138,24 @@
 }
 
 //Restituisce le metriche di processo relative al processo specificato
-#let getMPROCByProcess(process) = {
-    return MPROC.filter(x => (x.at(5) == lower(process))).map((x) => x.slice(0, 5))
+//Se description è true, restituisce anche la descrizione della metrica
+// Se boundaries è true, restituisce anche i valori accettabili e ottimali
+#let getMPROCByProcess(process, description, boundaries) = {
+    let res = ();
+    for m in MPROC{
+        if(m.at(5) == lower(process)){
+            let e = ()
+            e.push(m.slice(0, 2))
+            if(description){
+                e.push(m.slice(2, 3))
+            }
+            if(boundaries){
+                e.push(m.slice(3, 5))
+            }
+            res.push(e)
+        }
+    }
+    return res;
 }
 
 #let MPROD = ()
@@ -263,6 +279,22 @@
 }
 
 //Restituisce le metriche di prodotto relative alla caratteristica specificata
-#let getMPRODByCharcteristic(characteristic) = {
-    return MPROD.filter(x => (x.at(5) == lower(characteristic))).map((x) => x.slice(0, 5))
+//Se description è true, restituisce anche la descrizione della metrica
+// Se boundaries è true, restituisce anche i valori accettabili e ottimali
+#let getMPRODByCharcteristic(characteristic, description, boundaries) = {
+    let res = ();
+    for m in MPROD{
+        if(m.at(5) == lower(characteristic)){
+            let e = ()
+            e.push(m.slice(0, 2))
+            if(description){
+                e.push(m.slice(2, 3))
+            }
+            if(boundaries){
+                e.push(m.slice(3, 5))
+            }
+            res.push(e)
+        }
+    }
+    return res;
 }

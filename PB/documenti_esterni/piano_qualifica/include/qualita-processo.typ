@@ -16,7 +16,7 @@ Il processo di fornitura si occupa sia della gestione delle attività in cui il 
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPROCByProcess("fornitura").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPROCByProcess("fornitura", false, true).flatten()
   ), 
   caption: [Fornitura - Metriche e indici di qualità.]
 ) <tabella-MetricheFornitura>
@@ -34,7 +34,7 @@ Il processo di sviluppo si occupa della controllo e della gestione di tutte le f
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPROCByProcess("sviluppo").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPROCByProcess("sviluppo", false, true).flatten()
   ), 
   caption: [Sviluppo - Metriche e indici di qualità.]
 ) <tabella-MetricheSviluppo>
@@ -54,7 +54,7 @@ L'obiettivo principale della documentazione è quello di fornire una descrizione
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ), 
-    ..getMPROCByProcess("documentazione").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPROCByProcess("documentazione", false, true).flatten()
   ), 
   caption: [Documentazione - Metriche e indici di qualità.]
 ) <tabella-MetricheDocumentazione>
@@ -74,7 +74,7 @@ La verifica è un processo che si occupa di accertare che non vengano introdotti
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPROCByProcess("verifica").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPROCByProcess("verifica", false, true).flatten()
   ), 
   caption: [Verifica - Metriche e indici di qualità.]
 ) <tabella-MetricheVerifica>
@@ -92,7 +92,7 @@ Il processo di gestione dei rischi ha lo scopo di identificare, analizzare e ges
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-  ..getMPROCByProcess("gestione rischi").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+  ..getMPROCByProcess("gestione rischi", false, true).flatten()
   ), 
   caption: [Gestione dei rischi - Metriche e indici di qualità.]
 ) <tabella-MetricheGestioneRischi>
@@ -110,7 +110,7 @@ Il processo di gestione della qualità ha lo scopo di garantire che il prodotto 
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPROCByProcess("gestione qualità").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPROCByProcess("gestione qualità", false, true).flatten()
   ), 
   caption: [Gestione della qualità - Metriche e indici di qualità.]
 ) <tabella-MetricheGestioneQualita>
