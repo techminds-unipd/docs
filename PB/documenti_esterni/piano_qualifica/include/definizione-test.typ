@@ -423,12 +423,22 @@
     let accettazione = ()
 
     accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il prodotto sia un webapp.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
         [Verificare che il sistema utilizzi un agente AI.],
         [NI],
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che gli utenti possano disegnare un workflow.],
+        [Verificare che il sistema offra almeno 3 blocchi di automazione.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che l'interfaccia del prodotto sia drag and drop.],
         [NI],
     ))
 
@@ -448,11 +458,6 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il prodotto sia un webapp.],
-        [NI],
-    ))
-
-    accettazione.push(("TA" + str(accettazione.len()+1),
         [Verificare che il sistema comprenda dei blocchi che offrono delle funzionalità attraverso delle chiamate API.],
         [NI],
     ))
@@ -463,12 +468,7 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il sistema offra almeno 3 blocchi di automazione.],
-        [NI],
-    ))
-
-    accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che l'interfaccia del prodotto sia drag and drop.],
+        [Verificare che gli utenti possano disegnare un workflow.],
         [NI],
     ))
 
@@ -478,7 +478,7 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il team abbia documentato le criticità, i limiti del prodotto e i bug rilevati.],
+        [Verificare che l'utente possa eseguire operazioni CRUD sui workflow.],
         [NI],
     ))
 
@@ -518,6 +518,16 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che le API siano documentate attraverso Swagger.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che le componenti del prodotto siano sviluppate in container Docker.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
         [Verificare che il 70% del codice sorgente sia coperto da test di unità.],
         [NI],
     ))
@@ -526,9 +536,10 @@
         [Verificare che il codice sorgente sia gestito utilizzando sistemi di versionamento e repository online.],
         [NI],
     ))
-    
+
+
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che l'utente possa eseguire operazioni CRUD sui workflow.],
+        [Verificare che il team abbia documentato le criticità, i limiti del prodotto e i bug rilevati.],
         [NI],
     ))
 
@@ -542,15 +553,6 @@
         [NI],
     ))
 
-    accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che le API siano documentate attraverso Swagger.],
-        [NI],
-    ))
-
-    accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che le componenti del prodotto siano sviluppate in container Docker.],
-        [NI],
-    ))
 
     return accettazione
 }
