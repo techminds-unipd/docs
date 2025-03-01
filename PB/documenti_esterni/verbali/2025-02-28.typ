@@ -26,7 +26,7 @@
   ),
   riassunto: [
     Il team ha deciso di programmare una riunione con l'azienda per discutere dello stato di avanzamento del progetto e di alcuni dubbi sorti a monte della progettazione. \
-    Di seguito vengono riportato un breve riassunto per ogni punto trattato nell'ordine del giorno:
+    Di seguito viene riportato un breve riassunto per ogni punto trattato nell'ordine del giorno:
     1. Per la documentazione dei componenti React è stato concordato è sufficiente fornire una descrizione testuale di ogni componente;
     2. L'agente esegue workflow composto da blocchi con un solo input e output. Nel caso in cui lo sviluppo finisca prima della data prevista di consegna (4 aprile) si può valutare di introdurre anche 
   ],
