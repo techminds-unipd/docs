@@ -228,36 +228,71 @@
     return (preventivo,consuntivo)
 }
 
-#let getOreConsumatePersona(sprintNumber: int) ={
+#let getOreConsumatePersona(sprintNumber, defalut: getSprintNumber()) ={
     let (_, consuntivo) = getSprintData()
     let roleNumber = consuntivo.bressan.len()
-    let sprintNumber = getSprintNumber()
-    let oreConsumateBressan = 0
-    let oreConsumateCorradin = 0
-    let oreConsumateLazzarin = 0
-    let oreConsumateSalviato = 0
-    let oreConsumateSquarzoni = 0
-    let oreConsumateTutino = 0
-    let oreConsumateVallotto = 0
-    let result = ()
+
+    
+//Ore totali per persona
+    let oreTotaliBressan = 0
+    let oreTotaliCorradin = 0
+    let oreTotaliLazzarin = 0
+    let oreTotaliSalviato = 0
+    let oreTotaliSquarzoni = 0
+    let oreTotaliTutino = 0
+    let oreTotaliVallotto = 0
+    // Array del numero di ore totali consumate per ogni sprint
+    let oreTotaliSprintBressan = ()
+    let oreTotaliSprintCorradin = ()
+    let oreTotaliSprintLazzarin = ()
+    let oreTotaliSprintSalviato = ()
+    let oreTotaliSprintSquarzoni = ()
+    let oreTotaliSprintTutino = ()
+    let oreTotaliSprintVallotto = ()
+   
 
     for i in range(0, sprintNumber) {
+        //variabile momentanea per il salvataggio delle ore totali per ogni singolo sprint  
+        let oreSprintBressan = 0
+        let oreSprintCorradin = 0
+        let oreSprintLazzarin = 0
+        let oreSprintSalviato = 0
+        let oreSprintSquarzoni = 0
+        let oreSprintTutino = 0
+        let oreSprintVallotto = 0
         for j in range(0,roleNumber){
-            oreConsumateBressan +=  getNumber(consuntivo.bressan.at(i).at(j))
-            oreConsumateCorradin += getNumber(consuntivo.corradin.at(i).at(j))
-            oreConsumateLazzarin += getNumber(consuntivo.lazzarin.at(i).at(j))
-            oreConsumateSalviato += getNumber(consuntivo.salviato.at(i).at(j))
-            oreConsumateSquarzoni += getNumber(consuntivo.squarzoni.at(i).at(j))
-            oreConsumateTutino +=   getNumber(consuntivo.tutino.at(i).at(j))
-            oreConsumateVallotto += getNumber(consuntivo.vallotto.at(i).at(j))
+            oreSprintBressan +=  getNumber(consuntivo.bressan.at(i).at(j))
+            oreSprintCorradin += getNumber(consuntivo.corradin.at(i).at(j))
+            oreSprintLazzarin += getNumber(consuntivo.lazzarin.at(i).at(j))
+            oreSprintSalviato += getNumber(consuntivo.salviato.at(i).at(j))
+            oreSprintSquarzoni += getNumber(consuntivo.squarzoni.at(i).at(j))
+            oreSprintTutino +=   getNumber(consuntivo.tutino.at(i).at(j))
+            oreSprintVallotto += getNumber(consuntivo.vallotto.at(i).at(j))
         }
-        result.push([Nello sprint numero #i,
-        le ore consumate da Bress sono: #oreConsumateBressan])
-        /*le ore consumate da Corradin sono: #oreConsumateCorradin, 
-        le ore consumate da Lazzarin sono: #oreConsumateLazzarin, 
-        le ore consumate da Salviato sono: oreConsumateSalviato, le ore consumate da Squarzoni sono: #stringoreConsumateSquarzoni, le ore consumate da Tutino sono:(oreConsumateTutino), le ore consumate da Vallotto sono: #oreConsumateVallotto]*/
+
+
+        oreTotaliBressan+=oreSprintBressan
+        oreTotaliSprintBressan.push(oreTotaliBressan)
+
+        oreTotaliCorradin+=oreSprintCorradin
+        oreTotaliSprintCorradin.push(oreTotaliCorradin)
+
+        oreTotaliLazzarin+=oreSprintLazzarin
+        oreTotaliSprintLazzarin.push(oreTotaliLazzarin)
+
+        oreTotaliSalviato+=oreSprintSalviato
+        oreTotaliSprintSalviato.push(oreTotaliSalviato)
+
+        oreTotaliSquarzoni+=oreSprintSquarzoni
+        oreTotaliSprintSquarzoni.push(oreTotaliSquarzoni)
+
+        oreTotaliTutino+=oreSprintTutino
+        oreTotaliSprintTutino.push(oreTotaliTutino)
+
+        oreTotaliVallotto+=oreSprintVallotto
+        oreTotaliSprintVallotto.push(oreTotaliVallotto)
     }
-        let oreConsumatePersona = (oreConsumateBressan, oreConsumateCorradin, oreConsumateLazzarin, oreConsumateSalviato, oreConsumateSquarzoni, oreConsumateTutino, oreConsumateVallotto)
-        
-        return oreConsumatePersona
+        let oreTotaliSprintPersona = (oreTotaliSprintBressan, oreTotaliSprintCorradin, oreTotaliSprintLazzarin, oreTotaliSprintSalviato, oreTotaliSprintSquarzoni, oreTotaliSprintTutino, oreTotaliSprintVallotto)
+
+        return oreTotaliSprintPersona
 }
