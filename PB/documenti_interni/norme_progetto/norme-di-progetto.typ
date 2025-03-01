@@ -39,3 +39,4 @@
 #include "include/processi-primari.typ"
 #include "include/processi-di-supporto.typ"
 #include "include/processi-organizzativi.typ"
+#include "include/metriche.typ"
