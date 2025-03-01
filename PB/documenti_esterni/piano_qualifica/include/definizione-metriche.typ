@@ -6,7 +6,7 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Earned Value] (EV)],
-            [Misura il valore del lavoro effettivamente completato in un dato momento.],
+            [Misura il valore del lavoro effettivamente completato in un dato momento],
             [Earned Value = Budget at Completion \* Percentuale di lavoro completato],
             [\u{2A7E}0],
             [\u{2264} EAC],
@@ -15,7 +15,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Actual Cost] (AC)],
             [Misura i costi effettivamente sostenuti per svolgere le attività completate],
-            [AC = costo sostento in euro],
+            [Actual Cost = Costo sostenuto in euro],
             [\u{2A7E}0],
             [\u{2264} EAC],
             "fornitura"))
@@ -46,8 +46,10 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Cost Performance Index] (CPI)],
-            [Valuta l'efficienza dei costi di un progetto fino a un determinato momento mettendo in relazione il valore prodotto e i costi sostenuti],
-            [Cost Perfomance Index = Earned Value/Actual Cost],
+            [Valuta l'efficienza dei costi di un progetto fino a un determinato momento mettendo in relazione il valore prodotto e i costi sostenuti. #linebreak()Se CPI = 1 il 
+            progetto è costato esattamente quanto pianificato; se CPI < 1 il costo del lavoro svolto è superiore a quanto pianificato; se CPI > 1 il costo del progetto è 
+            sotto al budget pianificato],
+            [Cost Perfomance Index = Earned Value / Actual Cost],
             [\u{2A7E}1],
             [\u{2A7E}1],
             "fornitura"))
@@ -70,7 +72,8 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Schedule Performance Index] (SPI)],
-            [Misura l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato],
+            [Misura l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.#linebreak()Se SPI = 1 il lavoro completato corrisponde con quello pianificato;
+             se SPI < 1 il progetto è in ritardo rispetto alla pianificazione; se SPI > 1 il progetto è in anticipo rispetto a quanto pianificato],
             [Schedule Performance Index = Earned Value / Planned Value],
             [\u{2A7E}1],
             [\u{2A7E}1],
@@ -78,8 +81,8 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Requirements Stability Index] (RSI)],
-            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti],
-            [$"Requirements Stability Index" &= 1 - ("NRA"+"NRM"+"NRC")/"NRI" * 100$ dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
+            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino a 1, più i requisiti sono stabili],
+            [$"Requirements Stability Index" &= 1 - ("NRA"+"NRM"+"NRC")/"NRI" * 100$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
             [\u{2A7E}80%],
             [100%],
             "sviluppo"))
@@ -87,7 +90,8 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Indice di Gulpease]],
-            [Misura la leggibilità di un testo in base alla lunghezza delle parole e delle frasi],
+            [Misura la leggibilità di un testo in base alla lunghezza delle parole e delle frasi. #linebreak()I documenti con un indice inferiore a 80 sono difficili da comprendere per chi ha la licenza elementare; 
+            quelli con un indice inferiore a 60 sono difficili da comprendere per chi ha la licenzia media; quelli con un indice inferiore a 40 sono difficili da comprendere per chi ha un diploma superiore],
             [$"Indice di Gulpease" &= 89 - "Numero di lettere"/"Numero di parole" *10 +"Numero di frasi"/"Numero di parole"*300$],
             [40],
             [70],
@@ -96,7 +100,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Caption in tabelle e figure],
             [Indica quante figure e tabelle hanno un titolo descrittivo associato],
-            [$"Caption in tabelle e figure" &= "TFC"/"TF"$ dove: #list("TFC: numero di tabelle e figure con caption nel documento", spacing: 12pt)#box(list("TF: numero totale di tabelle e figure nel documento"))],
+            [$"Caption in tabelle e figure" &= "TFC"/"TF"$, dove: #list("TFC: numero di tabelle e figure con caption nel documento", spacing: 12pt)#box(list("TF: numero totale di tabelle e figure nel documento"))],
             [100%],
             [100%],
             "documentazione"))
@@ -120,7 +124,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Rischi non previsti],
             [Misura la quantità di rischi non previsti, che hanno causato problemi durante lo svolgimento del progetto],
-            [Numero di rischi non previsti nel periodo in esame],
+            [Rischi non previsti = Numero di rischi non previsti nel periodo in esame],
             [\u{2A7D}4],
             [0],
             "gestione rischi"))
@@ -213,7 +217,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Complessità ciclomatica per metodo],
             [Rappresenta la complessità di un metodo in base ai percorsi possibili],
-            [$"Complessità ciclomatica" &= "A - N + P"$ dove: #list(..("A: numero di archi nel grafo;", "N: numero di nodi nel grafo;", "P: numero di componenti connesse nel grafo"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
+            [$"Complessità ciclomatica" &= "A - N + P"$, dove: #list(..("A: numero di archi nel grafo;", "N: numero di nodi nel grafo;", "P: numero di componenti connesse nel grafo"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
             [\u{2A7D}7],
             [\u{2A7D}5],
             "manutenibilità"))
@@ -237,7 +241,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Attributi per classe],
             [Numero massimo di attributi per classe],
-            [Numero di attributi di una classe],
+            [Attributi per classe = Numero di attributi di una classe],
             [\u{2A7D}4],
             [\u{2A7D}3],
             "manutenibilità"))
@@ -245,7 +249,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Profondità della gerarchie],
             [Metrica che misura il numero di livelli tra una classe base (superclasse) e le sue sottoclassi (classi derivate)],
-            [Numero di livelli tra una classe e la sua radice della gerarchia],
+            [$"Profondità della gerarchia" &= max("livelli tra una classe e la sua radice nella gerarchia")$],
             [\u{2A7D}5],
             [\u{2A7D}3],
             "manutenibilità"))
@@ -253,7 +257,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Tempo medio di esecuzione di un workflow],
             [Misura il tempo medio di esecuzione di un workflow],
-            [$"Tempo medio di esecuzione" &= 1/"N" sum_(i = 1)^N T_i$ dove: #list("N: numero di esecuzioni;", spacing: 12pt)#box(list($T_i$ + ": tempo dell'esecuzione i-esima"))],
+            [$"Tempo medio di esecuzione" &= 1/"N" sum_(i = 1)^N T_i$, dove: #list("N: numero di esecuzioni;", spacing: 12pt)#box(list($T_i$ + ": tempo dell'esecuzione i-esima"))],
             [\u{2A7D}20 secondi (tempo timeout)],
             [\u{2A7D}10 secondi],
             "efficienza"))
@@ -261,7 +265,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Click per utilizzare una funzionalità],
             [Metrica che misura il numero di click minimi necessari per poter utilizzare una funzionalità],
-            [Numero di click necessari per l'uso di una funzionalità],
+            [Click per utilizzare una funzionalità = Numero di click necessari per l'uso di una funzionalità],
             [⩽7 click],
             [⩽5 click],
             "usabilità"))
@@ -277,7 +281,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Versioni dei browser supportate],
             [Calcola la percentuale di versioni di browser compatibili rispetto al totale disponibile sul mercato],
-            [$"Versioni dei browser supportate" &= ("SC" + "SF") / 2 * 100$ dove: #list("SC: funzionamento corretto su Chrome (ultima versione stable di Chromium 133);", spacing: 12pt)#box(list("SF: funzionamento corretto con Firefox 128 ESR"))],
+            [$"Versioni dei browser supportate" &= ("SC" + "SF") / 2 * 100$, dove: #list("SC: funzionamento corretto su Chrome (ultima versione stable di Chromium 133);", spacing: 12pt)#box(list("SF: funzionamento corretto con Firefox 128 ESR"))],
             [⩾75%],
             [100%],
             "portabilità"))
