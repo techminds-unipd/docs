@@ -228,7 +228,7 @@
     return (preventivo,consuntivo)
 }
 
-#let getOreConsumatePersona(sprintNumber, defalut: getSprintNumber()) ={
+#let getOreConsumatePersona(sprintNumber: getSprintNumber() ) ={
     let (_, consuntivo) = getSprintData()
     let roleNumber = consuntivo.bressan.len()
 
@@ -241,15 +241,18 @@
     let oreTotaliSquarzoni = 0
     let oreTotaliTutino = 0
     let oreTotaliVallotto = 0
-    // Array del numero di ore totali consumate per ogni sprint
-    let oreTotaliSprintBressan = ()
-    let oreTotaliSprintCorradin = ()
-    let oreTotaliSprintLazzarin = ()
-    let oreTotaliSprintSalviato = ()
-    let oreTotaliSprintSquarzoni = ()
-    let oreTotaliSprintTutino = ()
-    let oreTotaliSprintVallotto = ()
-   
+
+    // Array del numero di ore totali consumate all'aumentare degli sprint.
+    //L'ultimo elemento dell'array è quindi il totale delle ore consumate fino all'ULTIMO sprint del quale si ha il consuntivo (o al numero dello sprint passato alla funzione pe esempio così: getOreConsumatePersona(sprintNumber:5) restituisce le ore totali fino allo sprint 5)
+    let oreTotaliSprintPersona = (
+        bressan:(), 
+        corradin:(), 
+        lazzarin:(), 
+        salviato:(), 
+        squarzoni:(), 
+        tutino:(), 
+        vallotto:()
+        ) 
 
     for i in range(0, sprintNumber) {
         //variabile momentanea per il salvataggio delle ore totali per ogni singolo sprint  
@@ -260,7 +263,8 @@
         let oreSprintSquarzoni = 0
         let oreSprintTutino = 0
         let oreSprintVallotto = 0
-        for j in range(0,roleNumber){
+
+        for j in range(0,roleNumber){        
             oreSprintBressan +=  getNumber(consuntivo.bressan.at(i).at(j))
             oreSprintCorradin += getNumber(consuntivo.corradin.at(i).at(j))
             oreSprintLazzarin += getNumber(consuntivo.lazzarin.at(i).at(j))
@@ -269,30 +273,22 @@
             oreSprintTutino +=   getNumber(consuntivo.tutino.at(i).at(j))
             oreSprintVallotto += getNumber(consuntivo.vallotto.at(i).at(j))
         }
-
-
+       
         oreTotaliBressan+=oreSprintBressan
-        oreTotaliSprintBressan.push(oreTotaliBressan)
-
         oreTotaliCorradin+=oreSprintCorradin
-        oreTotaliSprintCorradin.push(oreTotaliCorradin)
-
         oreTotaliLazzarin+=oreSprintLazzarin
-        oreTotaliSprintLazzarin.push(oreTotaliLazzarin)
-
         oreTotaliSalviato+=oreSprintSalviato
-        oreTotaliSprintSalviato.push(oreTotaliSalviato)
-
         oreTotaliSquarzoni+=oreSprintSquarzoni
-        oreTotaliSprintSquarzoni.push(oreTotaliSquarzoni)
-
         oreTotaliTutino+=oreSprintTutino
-        oreTotaliSprintTutino.push(oreTotaliTutino)
-
         oreTotaliVallotto+=oreSprintVallotto
-        oreTotaliSprintVallotto.push(oreTotaliVallotto)
-    }
-        let oreTotaliSprintPersona = (oreTotaliSprintBressan, oreTotaliSprintCorradin, oreTotaliSprintLazzarin, oreTotaliSprintSalviato, oreTotaliSprintSquarzoni, oreTotaliSprintTutino, oreTotaliSprintVallotto)
 
-        return oreTotaliSprintPersona
+        oreTotaliSprintPersona.bressan.push(oreTotaliBressan)
+        oreTotaliSprintPersona.corradin.push(oreTotaliCorradin)
+        oreTotaliSprintPersona.lazzarin.push(oreTotaliLazzarin)
+        oreTotaliSprintPersona.salviato.push(oreTotaliSalviato)
+        oreTotaliSprintPersona.squarzoni.push(oreTotaliSquarzoni)
+        oreTotaliSprintPersona.tutino.push(oreTotaliTutino)
+        oreTotaliSprintPersona.vallotto.push(oreTotaliVallotto) 
+    }
+    return oreTotaliSprintPersona
 }
