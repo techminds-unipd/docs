@@ -416,3 +416,77 @@
 
     return sistema
 }
+
+
+// test accettazione
+#let getAccettazione() = {
+    let accettazione = ()
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il sistema utilizzi un servizio di agenti.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che gli utenti possano disegnare un workflow.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il sistema possa ricevere dati locali.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il sistema possa produrre delle automazioni.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che le automazioni prodotte dal sistema vengano eseguite tramite API ai servizi finali.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il prodotto sia un webapp.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il sistema comprenda dei blocchi funzionali che accedono alle API applicative.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che, dato in input dall'utente l'attività logica in linguaggio naturale, il sistema crei la logica di automazione in autonomia.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il prodotto offra almeno 3 blocchi di automazione.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che l'interfaccia del prodotto sia drag and drop.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che l'utente possa esprimere in linguaggio naturale la logica funzionale desiderata per ogni step del processo.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il team abbia mappato le criticità e i limiti del prodotto.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il 70% del prodotto sia testato.],
+        [NI],
+    ))
+
+
+    return accettazione
+}
