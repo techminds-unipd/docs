@@ -7,7 +7,7 @@
   verificatore: "qualcunoo",
   durata_luogo: ("11:30", "12:00", "incontro su piattaforma Microsoft Teams"),
   partecipanti: 
-    (text(weight: "bold", "Samuele de Simone") + " (Var Group)", 
+    (text(weight: "bold", "Samuele De Simone") + " (Var Group)", 
     (text(weight: "bold", "Battistella Francesco") + " (Var Group)"), 
     team.T, 
     team.L, 
