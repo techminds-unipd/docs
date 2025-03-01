@@ -28,7 +28,9 @@
     Il team ha deciso di programmare una riunione con l'azienda per discutere dello stato di avanzamento del progetto e di alcuni dubbi sorti a monte della progettazione. \
     Di seguito viene riportato un breve riassunto per ogni punto trattato nell'ordine del giorno:
     1. Per la documentazione dei componenti React è stato concordato è sufficiente fornire una descrizione testuale di ogni componente;
-    2. L'agente esegue workflow composto da blocchi con un solo input e output. Nel caso in cui lo sviluppo finisca prima della data prevista di consegna (4 aprile) si può valutare di introdurre anche 
+    2. L'agente esegue workflow composto da blocchi con un solo input e output (da documentare in Analisi dei Requisiti). Nel caso in cui lo sviluppo finisca prima della data prevista di consegna (4 aprile) si può valutare di introdurre anche l'esecuzione in parallelo;
+    3. I test di accettazione verranno scritti dal gruppo basandosi su ciò che è scritto nel capitolato e validati assieme al proponente;
+    4. Sono state programmate 3 riunioni periodiche, una per ogni fine sprint fino alla data prevista di consegna. Queste date sono 7 Marzo, 21 Marzo e 4 Aprile.
   ],
   decisioni: (
     ([Norme di progetto], [#link("https://github.com/techminds-unipd/docs/issues/401")[Issue \#401]: Documentare le riunioni periodiche]),
