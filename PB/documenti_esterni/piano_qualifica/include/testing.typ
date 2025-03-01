@@ -44,7 +44,13 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     caption: [Test di sistema.]
 ) <tabella-test-sistema>
 
-=== Tracciamento
+== Test di accettazione
+Si concentrano sulla validazione del software rispetto ai requisiti utente, coinvolgendo il committente. Sono fondamentali per:
+- Dimostrare la conformità del prodotto alle attese del committente attraverso casi di prova specifici;
+- Portare, con buon esito, al rilascio finale del prodotto con supervisione del committente.
+
+== Tracciamento
+=== Test di sistema - Requisito
 #figure(
     table(
         columns: (auto, auto),
@@ -56,10 +62,3 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     ),
     caption: [Tabella tracciamento codice test-requisito.]
 )<tabella-tracciamento-test-requisito>
-
-
-== Test di accettazione
-Si concentrano sulla validazione del software rispetto ai requisiti utente, coinvolgendo il committente. Sono fondamentali per:
-- Dimostrare la conformità del prodotto alle attese del committente attraverso casi di prova specifici;
-- Portare, con buon esito, al rilascio finale del prodotto con supervisione del committente.
-
