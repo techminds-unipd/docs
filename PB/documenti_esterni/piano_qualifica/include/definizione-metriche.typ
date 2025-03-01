@@ -180,15 +180,15 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Requisiti obbligatori soddisfatti],
             [Metrica che valuta quanto del lavoro svolto durante lo sviluppo corrisponda ai requisiti essenziali o obbligatori definiti in fase di analisi dei requisiti],
-            ["Formula"],
+            [$"Requisiti obbligatori soddisfatti" &= "Numero di requisiti obbligatori soddisfatti"/"Numero di requisiti totali"*100$],
             [100%],
             [100%],
             "funzionalità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Percentuale di requisiti desiderabili soddisfatti],
+            [Requisiti desiderabili soddisfatti],
             [Metrica usata per valutare quanti requisiti opzionali, che potrebbero migliorare l'esperienza dell'utente o offrire vantaggi aggiuntivi non strettamente necessari, sono stati effettivamente implementati nel prodotto],
-            ["Formula"],
+            [$"Requisiti desiderabili soddisfatti" &= "Numero di requisiti desiderabili soddisfatti"/"Numero di requisiti totali"*100$],
             [\u{2A7E}0%],
             [100%],
             "funzionalità"))
@@ -197,27 +197,23 @@
             [Percentuale di requisiti opzionali soddisfatti],
             [Metrica per valutare quanti dei requisiti aggiuntivi, non essenziali o
             di bassa priorità, sono stati implementati o soddisfatti nel prodotto],
-            ["Formula"],
+            [$"Requisiti opzionali soddisfatti" &= "Numero di requisiti opzionali soddisfatti"/"Numero di requisiti totali"*100$],
             [\u{2A7E}0%],
             [100%],
             "funzionalità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Accoppiamento tra
-            classi],
-            [Misura della dipendenza e dell’interconnessione tra le classi all’interno di
-            un sistema software],
-            ["Formula"],
+            [Accoppiamento tra classi],
+            [Misura della dipendenza e dell’interconnessione tra le classi all’interno di un sistema software],
+            [$"Accoppiamento tra classi" &= "Numero di dipendenze"/"Numero di componenti"$],
             [\u{2A7D}9],
             [\u{2A7D}6],
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Complessità ciclomatica
-            per metodo],
-            [Rappresenta la complessità di un metodo in
-            base ai percorsi possibili],
-            ["Formula"],
+            [Complessità ciclomatica per metodo],
+            [Rappresenta la complessità di un metodo in base ai percorsi possibili],
+            [$"Complessità ciclomatica" &= "A - N + P"$ dove: #list(..("A: numero di archi nel grafo;", "N: numero di nodi nel grafo;", "P: numero di componenti connesse nel grafo"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
             [\u{2A7D}7],
             [\u{2A7D}5],
             "manutenibilità"))
@@ -225,16 +221,15 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Parametri per metodo],
             [Numero massimo di parametri per metodo],
-            ["Formula"],
+            [Numero di parametri di un metodo],
             [\u{2A7D}6],
             [\u{2A7D}5],
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Linee di codice per
-            metodo],
+            [Linee di codice per metodo],
             [Numero massimo di linee di codice per metodo],
-            ["Formula"],
+            [Numero di linee di codice di un metodo],
             [\u{2A7D}30],
             [\u{2A7D}20],
             "manutenibilità"))
@@ -242,16 +237,15 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Attributi per classe],
             [Numero massimo di attributi per classe],
-            ["Formula"],
+            [Numero di attributi di una classe],
             [\u{2A7D}4],
             [\u{2A7D}3],
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Profondità della gerarchie],
-            [Metrica che misura il numero di livelli tra una
-            classe base (superclasse) e le sue sottoclassi (classi derivate)],
-            ["Formula"],
+            [Metrica che misura il numero di livelli tra una classe base (superclasse) e le sue sottoclassi (classi derivate)],
+            [Numero di livelli tra una classe e la sua radice della gerarchia],
             [\u{2A7D}5],
             [\u{2A7D}3],
             "manutenibilità"))
@@ -259,7 +253,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Tempo medio di esecuzione di un workflow],
             [Misura il tempo medio di esecuzione di un workflow],
-            ["Formula"],
+            [$"Tempo medio di esecuzione" &= 1/"N" sum_(i = 1)^N T_i$ dove: #list("N: numero di esecuzioni;", spacing: 12pt)#box(list($T_i$ + ": tempo dell'esecuzione i-esima"))],
             [\u{2A7D}20 secondi (tempo timeout)],
             [\u{2A7D}10 secondi],
             "efficienza"))
@@ -267,7 +261,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Click per utilizzare una funzionalità],
             [Metrica che misura il numero di click minimi necessari per poter utilizzare una funzionalità],
-            ["Formula"],
+            [Numero di click necessari per l'uso di una funzionalità],
             [⩽7 click],
             [⩽5 click],
             "usabilità"))
@@ -283,7 +277,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Versioni dei browser supportate],
             [Calcola la percentuale di versioni di browser compatibili rispetto al totale disponibile sul mercato],
-            ["Formula"],
+            [$"Versioni dei browser supportate" &= ("SC" + "SF") / 2 * 100$ dove: #list("SC: funzionamento corretto su Chrome (ultima versione stable di Chromium 133);", spacing: 12pt)#box(list("SF: funzionamento corretto con Firefox 128 ESR"))],
             [⩾75%],
             [100%],
             "portabilità"))
