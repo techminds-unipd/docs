@@ -227,3 +227,68 @@
 
     return (preventivo,consuntivo)
 }
+
+#let getOreConsumatePersona(sprintNumber: getSprintNumber() ) ={
+    let (_, consuntivo) = getSprintData()
+    let roleNumber = consuntivo.bressan.len()
+
+    
+//Ore totali per persona
+    let oreTotaliBressan = 0
+    let oreTotaliCorradin = 0
+    let oreTotaliLazzarin = 0
+    let oreTotaliSalviato = 0
+    let oreTotaliSquarzoni = 0
+    let oreTotaliTutino = 0
+    let oreTotaliVallotto = 0
+
+    // Array del numero di ore totali consumate all'aumentare degli sprint.
+    //L'ultimo elemento dell'array è quindi il totale delle ore consumate fino all'ULTIMO sprint del quale si ha il consuntivo (o al numero dello sprint passato alla funzione pe esempio così: getOreConsumatePersona(sprintNumber:5) restituisce le ore totali fino allo sprint 5)
+    let oreTotaliSprintPersona = (
+        bressan:(), 
+        corradin:(), 
+        lazzarin:(), 
+        salviato:(), 
+        squarzoni:(), 
+        tutino:(), 
+        vallotto:()
+        ) 
+
+    for i in range(0, sprintNumber) {
+        //variabile momentanea per il salvataggio delle ore totali per ogni singolo sprint  
+        let oreSprintBressan = 0
+        let oreSprintCorradin = 0
+        let oreSprintLazzarin = 0
+        let oreSprintSalviato = 0
+        let oreSprintSquarzoni = 0
+        let oreSprintTutino = 0
+        let oreSprintVallotto = 0
+
+        for j in range(0,roleNumber){        
+            oreSprintBressan +=  getNumber(consuntivo.bressan.at(i).at(j))
+            oreSprintCorradin += getNumber(consuntivo.corradin.at(i).at(j))
+            oreSprintLazzarin += getNumber(consuntivo.lazzarin.at(i).at(j))
+            oreSprintSalviato += getNumber(consuntivo.salviato.at(i).at(j))
+            oreSprintSquarzoni += getNumber(consuntivo.squarzoni.at(i).at(j))
+            oreSprintTutino +=   getNumber(consuntivo.tutino.at(i).at(j))
+            oreSprintVallotto += getNumber(consuntivo.vallotto.at(i).at(j))
+        }
+       
+        oreTotaliBressan+=oreSprintBressan
+        oreTotaliCorradin+=oreSprintCorradin
+        oreTotaliLazzarin+=oreSprintLazzarin
+        oreTotaliSalviato+=oreSprintSalviato
+        oreTotaliSquarzoni+=oreSprintSquarzoni
+        oreTotaliTutino+=oreSprintTutino
+        oreTotaliVallotto+=oreSprintVallotto
+
+        oreTotaliSprintPersona.bressan.push(oreTotaliBressan)
+        oreTotaliSprintPersona.corradin.push(oreTotaliCorradin)
+        oreTotaliSprintPersona.lazzarin.push(oreTotaliLazzarin)
+        oreTotaliSprintPersona.salviato.push(oreTotaliSalviato)
+        oreTotaliSprintPersona.squarzoni.push(oreTotaliSquarzoni)
+        oreTotaliSprintPersona.tutino.push(oreTotaliTutino)
+        oreTotaliSprintPersona.vallotto.push(oreTotaliVallotto) 
+    }
+    return oreTotaliSprintPersona
+}
