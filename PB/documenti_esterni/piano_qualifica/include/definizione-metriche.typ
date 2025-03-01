@@ -38,7 +38,7 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Schedule Variance] (SV)],
-            [Misura il valore del lavoro completato rispetto a quanto pianificato. Indica se il progetto è in anticipo, in ritardo o in linea rispetto alla pianificazione],
+            [Misura il valore del lavoro completato rispetto a quanto pianificato.#linebreak() Se SV > 0 il progetto è in anticipo; se SV < 0 il progetto è in ritardo; se SV = 0 il progetto è in linea rispetto alla pianificazione],
             [Schedule Variance = Earned Value - Planned Value],
             [\u{2A7E}0],
             [\u{2A7E}0],
@@ -48,7 +48,7 @@
             [#glossario[Cost Performance Index] (CPI)],
             [Valuta l'efficienza dei costi di un progetto fino a un determinato momento mettendo in relazione il valore prodotto e i costi sostenuti. #linebreak()Se CPI = 1 il 
             progetto è costato esattamente quanto pianificato; se CPI < 1 il costo del lavoro svolto è superiore a quanto pianificato; se CPI > 1 il costo del progetto è 
-            sotto al budget pianificato],
+            inferiore al budget pianificato],
             [Cost Perfomance Index = Earned Value / Actual Cost],
             [\u{2A7E}1],
             [\u{2A7E}1],
@@ -72,7 +72,7 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Schedule Performance Index] (SPI)],
-            [Misura l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.#linebreak()Se SPI = 1 il lavoro completato corrisponde con quello pianificato;
+            [Misura l’efficienza del progetto mettendo in relazione il lavoro completato con quello pianificato.#linebreak()Se SPI = 1 il lavoro completato corrisponde a quello pianificato;
              se SPI < 1 il progetto è in ritardo rispetto alla pianificazione; se SPI > 1 il progetto è in anticipo rispetto a quanto pianificato],
             [Schedule Performance Index = Earned Value / Planned Value],
             [\u{2A7E}1],
@@ -81,7 +81,7 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Requirements Stability Index] (RSI)],
-            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino a 1, più i requisiti sono stabili],
+            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino a 1, più i requisiti sono stabili; più è vicino a 0, più i requisiti sono cambiati],
             [$"Requirements Stability Index" &= 1 - ("NRA"+"NRM"+"NRC")/"NRI" * 100$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
             [\u{2A7E}80%],
             [100%],
@@ -100,7 +100,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Caption in tabelle e figure],
             [Indica quante figure e tabelle hanno un titolo descrittivo associato],
-            [$"Caption in tabelle e figure" &= "TFC"/"TF"$, dove: #list("TFC: numero di tabelle e figure con caption nel documento", spacing: 12pt)#box(list("TF: numero totale di tabelle e figure nel documento"))],
+            [$"Caption in tabelle e figure" &= "TFC"/"TF"$, dove: #list("TFC: numero di tabelle e figure con caption nel documento;", spacing: 12pt)#box(list("TF: numero totale di tabelle e figure nel documento"))],
             [100%],
             [100%],
             "documentazione"))
@@ -123,7 +123,7 @@
 
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Rischi non previsti],
-            [Misura la quantità di rischi non previsti, che hanno causato problemi durante lo svolgimento del progetto],
+            [Misura la quantità di rischi non previsti che hanno avuto un impatto sullo svolgimento del progetto],
             [Rischi non previsti = Numero di rischi non previsti nel periodo in esame],
             [\u{2A7D}4],
             [0],
@@ -132,7 +132,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Metriche accettabili],
             [Misura la percentuale di metriche che hanno raggiunto il valore accettabile],
-            [$"Metriche accettabili" &= "Numero di metriche soddisfatte" / "Numero di metriche" * 100$],
+            [$"Metriche accettabili" &= "Numero di metriche soddisfatte" / "Numero totale di metriche" * 100$],
             [\u{2A7E}90%],
             [100%],
             "gestione qualità"))
@@ -140,7 +140,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Metriche ottimali],
             [Misura la percentuale di metriche che hanno raggiunto il valore ottimale],
-            [$"Metriche accettabili" &= "Numero di metriche soddisfatte all'ottimo" / "Numero di metriche" * 100$],
+            [$"Metriche accettabili" &= "Numero di metriche soddisfatte all'ottimo" / "Numero totale di metriche" * 100$],
             [\u{2A7E}30%],
             [100%],
             "gestione qualità"))
@@ -183,25 +183,24 @@
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Requisiti obbligatori soddisfatti],
-            [Metrica che valuta quanto del lavoro svolto durante lo sviluppo corrisponda ai requisiti essenziali o obbligatori definiti in fase di analisi dei requisiti],
-            [$"Requisiti obbligatori soddisfatti" &= "Numero di requisiti obbligatori soddisfatti"/"Numero di requisiti totali"*100$],
+            [Metrica che valuta la percentuale di requisiti essenziali o obbligatori soddisfatti dal prodotto],
+            [$"Requisiti obbligatori soddisfatti" &= "Numero di requisiti obbligatori soddisfatti"/"Numero di requisiti obbligatori totali"*100$],
             [100%],
             [100%],
             "funzionalità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Requisiti desiderabili soddisfatti],
-            [Metrica usata per valutare quanti requisiti opzionali, che potrebbero migliorare l'esperienza dell'utente o offrire vantaggi aggiuntivi non strettamente necessari, sono stati effettivamente implementati nel prodotto],
-            [$"Requisiti desiderabili soddisfatti" &= "Numero di requisiti desiderabili soddisfatti"/"Numero di requisiti totali"*100$],
+            [Metrica che valuta la percentuale di requisiti desiderabili soddisfatti dal prodotto],
+            [$"Requisiti desiderabili soddisfatti" &= "Numero di requisiti desiderabili soddisfatti"/"Numero di requisiti desiderabili totali"*100$],
             [\u{2A7E}0%],
             [100%],
             "funzionalità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Percentuale di requisiti opzionali soddisfatti],
-            [Metrica per valutare quanti dei requisiti aggiuntivi, non essenziali o
-            di bassa priorità, sono stati implementati o soddisfatti nel prodotto],
-            [$"Requisiti opzionali soddisfatti" &= "Numero di requisiti opzionali soddisfatti"/"Numero di requisiti totali"*100$],
+            [Metrica per valutare la percentuale di requisiti aggiuntivi, non essenziali o di bassa priorità che sono soddisfatti dal prodotto],
+            [$"Requisiti opzionali soddisfatti" &= "Numero di requisiti opzionali soddisfatti"/"Numero di requisiti opzionali totali"*100$],
             [\u{2A7E}0%],
             [100%],
             "funzionalità"))
@@ -217,7 +216,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Complessità ciclomatica per metodo],
             [Rappresenta la complessità di un metodo in base ai percorsi possibili],
-            [$"Complessità ciclomatica" &= "A - N + P"$, dove: #list(..("A: numero di archi nel grafo;", "N: numero di nodi nel grafo;", "P: numero di componenti connesse nel grafo"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali"))],
+            [$"Complessità ciclomatica" &= "A - N + P"$, dove: #list(..("A: numero di archi nel grafo;", "N: numero di nodi nel grafo;"), spacing: 12pt)#box(list("P: numero di componenti connesse nel grafo"))],
             [\u{2A7D}7],
             [\u{2A7D}5],
             "manutenibilità"))
@@ -225,7 +224,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Parametri per metodo],
             [Numero massimo di parametri per metodo],
-            [Numero di parametri di un metodo],
+            [Parametri per metodo = Numero di parametri del metodo in esame],
             [\u{2A7D}6],
             [\u{2A7D}5],
             "manutenibilità"))
@@ -233,7 +232,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Linee di codice per metodo],
             [Numero massimo di linee di codice per metodo],
-            [Numero di linee di codice di un metodo],
+            [Linee di codice per metodo =  Numero di linee di codice del metodo in esame],
             [\u{2A7D}30],
             [\u{2A7D}20],
             "manutenibilità"))
@@ -249,7 +248,7 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Profondità della gerarchie],
             [Metrica che misura il numero di livelli tra una classe base (superclasse) e le sue sottoclassi (classi derivate)],
-            [$"Profondità della gerarchia" &= max("livelli tra una classe e la sua radice nella gerarchia")$],
+            [$"Profondità della gerarchie" &= max("livelli tra una classe e la sua radice nella gerarchia")$],
             [\u{2A7D}5],
             [\u{2A7D}3],
             "manutenibilità"))
@@ -280,7 +279,7 @@
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Versioni dei browser supportate],
-            [Calcola la percentuale di versioni di browser compatibili rispetto al totale disponibile sul mercato],
+            [Calcola la percentuale di versioni di browser compatibili rispetto al totale richiesto in fase di analisi.],
             [$"Versioni dei browser supportate" &= ("SC" + "SF") / 2 * 100$, dove: #list("SC: funzionamento corretto su Chrome (ultima versione stable di Chromium 133);", spacing: 12pt)#box(list("SF: funzionamento corretto con Firefox 128 ESR"))],
             [⩾75%],
             [100%],
