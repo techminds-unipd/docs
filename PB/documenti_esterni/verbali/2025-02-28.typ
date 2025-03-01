@@ -5,7 +5,7 @@
   sommario: "Riunione di allineamnento con l'azienda.",
   autore: team.T,
   verificatore: "qualcunoo",
-  durata_luogo: ("11:30", "12:00", "Incontro su piattaforma Microsoft Teams"),
+  durata_luogo: ("11:30", "12:00", "incontro su piattaforma Microsoft Teams"),
   partecipanti: 
     (text(weight: "bold", "Samuele de Simone") + " (Var Group)", 
     (text(weight: "bold", "Battistella Francesco") + " (Var Group)"), 
