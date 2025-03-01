@@ -35,7 +35,7 @@
   decisioni: (
     ([Norme di progetto], [#link("https://github.com/techminds-unipd/docs/issues/401")[Issue \#401]#footnote(link("https://github.com/techminds-unipd/docs/issues/401")): Documentare le riunioni periodiche]),
     ([Analisi dei requisiti], [#link("https://github.com/techminds-unipd/docs/issues/404")[Issue \#404]#footnote(link("https://github.com/techminds-unipd/docs/issues/404")): Aggiungere requisito sequenzialità workflow]),
-    ([Piano di qualifica], [#link("https://github.com/techminds-unipd/docs/issues/402")[Issue \#402]#footnote(link("https://github.com/techminds-unipd/docs/issues/402")): Documentare il miglioramento nel Piano di Qualifica])
+    ([Piano di qualifica], [#link("https://github.com/techminds-unipd/docs/issues/402")[Issue \#402]#footnote(link("https://github.com/techminds-unipd/docs/issues/402")): Documentare il miglioramento nel piano di qualifica])
   ),
   firma: true
 )
