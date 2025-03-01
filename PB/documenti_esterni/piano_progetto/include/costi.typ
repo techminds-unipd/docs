@@ -227,3 +227,37 @@
 
     return (preventivo,consuntivo)
 }
+
+#let getOreConsumatePersona(sprintNumber: int) ={
+    let (_, consuntivo) = getSprintData()
+    let roleNumber = consuntivo.bressan.len()
+    let sprintNumber = getSprintNumber()
+    let oreConsumateBressan = 0
+    let oreConsumateCorradin = 0
+    let oreConsumateLazzarin = 0
+    let oreConsumateSalviato = 0
+    let oreConsumateSquarzoni = 0
+    let oreConsumateTutino = 0
+    let oreConsumateVallotto = 0
+    let result = ()
+
+    for i in range(0, sprintNumber) {
+        for j in range(0,roleNumber){
+            oreConsumateBressan +=  getNumber(consuntivo.bressan.at(i).at(j))
+            oreConsumateCorradin += getNumber(consuntivo.corradin.at(i).at(j))
+            oreConsumateLazzarin += getNumber(consuntivo.lazzarin.at(i).at(j))
+            oreConsumateSalviato += getNumber(consuntivo.salviato.at(i).at(j))
+            oreConsumateSquarzoni += getNumber(consuntivo.squarzoni.at(i).at(j))
+            oreConsumateTutino +=   getNumber(consuntivo.tutino.at(i).at(j))
+            oreConsumateVallotto += getNumber(consuntivo.vallotto.at(i).at(j))
+        }
+        result.push([Nello sprint numero #i,
+        le ore consumate da Bress sono: #oreConsumateBressan])
+        /*le ore consumate da Corradin sono: #oreConsumateCorradin, 
+        le ore consumate da Lazzarin sono: #oreConsumateLazzarin, 
+        le ore consumate da Salviato sono: oreConsumateSalviato, le ore consumate da Squarzoni sono: #stringoreConsumateSquarzoni, le ore consumate da Tutino sono:(oreConsumateTutino), le ore consumate da Vallotto sono: #oreConsumateVallotto]*/
+    }
+        let oreConsumatePersona = (oreConsumateBressan, oreConsumateCorradin, oreConsumateLazzarin, oreConsumateSalviato, oreConsumateSquarzoni, oreConsumateTutino, oreConsumateVallotto)
+        
+        return oreConsumatePersona
+}
