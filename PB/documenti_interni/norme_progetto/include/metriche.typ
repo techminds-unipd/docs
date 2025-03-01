@@ -1,4 +1,4 @@
-#import "../../../documenti_esterni/piano_qualifica/include/definizione-metriche.typ": getAllMPROC, getMPROCByProcess
+#import "../../../documenti_esterni/piano_qualifica/include/definizione-metriche.typ": getMPRODByCharcteristic, getMPROCByProcess
 
 #let displayMetrics(metrics) = {
   for m in metrics{
@@ -28,3 +28,18 @@
 === Gestione della qualità
 #displayMetrics(getMPROCByProcess("gestione qualità", true, true, false))
 
+== Qualità di prodotto
+=== Funzionalità
+#displayMetrics(getMPRODByCharcteristic("funzionalità", true, true, false))
+
+=== Manutenibilità
+#displayMetrics(getMPRODByCharcteristic("manutenibilità", true, true, false))
+
+=== Efficienza
+#displayMetrics(getMPRODByCharcteristic("efficienza", true, true, false))
+
+=== Usabilità
+#displayMetrics(getMPRODByCharcteristic("usabilità", true, true, false))
+
+=== Portabilità
+#displayMetrics(getMPRODByCharcteristic("portabilità", true, true, false))
