@@ -4,7 +4,7 @@
   title: "Verbale esterno del 28/02/2025",
   sommario: "Riunione di allineamnento con l'azienda.",
   autore: team.T,
-  verificatore: "qualcunoo",
+  verificatore: team.C,
   durata_luogo: ("11:30", "12:00", "incontro su piattaforma Microsoft Teams"),
   partecipanti: 
     (text(weight: "bold", "Samuele De Simone") + " (Var Group)", 
