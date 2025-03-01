@@ -423,7 +423,7 @@
     let accettazione = ()
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il sistema utilizzi un servizio di agenti.],
+        [Verificare che il sistema utilizzi un agente AI.],
         [NI],
     ))
 
@@ -433,17 +433,17 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il sistema possa ricevere dati locali.],
+        [Verificare che il sistema possa ricevere i dati del workflow.],
         [NI],
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il sistema possa produrre delle automazioni.],
+        [Verificare che il sistema possa eseguire delle automazioni.],
         [NI],
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che le automazioni prodotte dal sistema vengano eseguite tramite API ai servizi finali.],
+        [Verificare che le automazioni eseguite dal sistema facciano delle chiamate API ai servizi finali.],
         [NI],
     ))
 
@@ -453,17 +453,17 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il sistema comprenda dei blocchi funzionali che accedono alle API applicative.],
+        [Verificare che il sistema comprenda dei blocchi che offrono delle funzionalità attraverso delle chiamate API.],
         [NI],
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che, dato in input dall'utente l'attività logica in linguaggio naturale, il sistema crei la logica di automazione in autonomia.],
+        [Verificare che, data in input dall'utente l'automazione in linguaggio naturale, il sistema la esegua in autonomia.],
         [NI],
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il prodotto offra almeno 3 blocchi di automazione.],
+        [Verificare che il sistema offra almeno 3 blocchi di automazione.],
         [NI],
     ))
 
@@ -478,15 +478,79 @@
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il team abbia mappato le criticità e i limiti del prodotto.],
+        [Verificare che il team abbia documentato le criticità, i limiti del prodotto e i bug rilevati.],
         [NI],
     ))
 
     accettazione.push(("TA" + str(accettazione.len()+1),
-        [Verificare che il 70% del prodotto sia testato.],
+        [Verificare che l'agente sia implementato in Python.],
         [NI],
     ))
 
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il database sia implementato in MongoDB.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il frontend sia implementato in React.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il backend sia implementato in NestJS.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il backend utilizzi il linguaggio TypeScript.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che sia utilizzato NodeJS come runtime JavaScript.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che le componenti del prodotto comunichino tramite API Restful JSON.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il 70% del codice sorgente sia coperto da test di unità.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il codice sorgente sia gestito utilizzando sistemi di versionamento e repository online.],
+        [NI],
+    ))
+    
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che l'utente possa eseguire operazioni CRUD sui workflow.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il team abbia documentato i casi d'uso.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che il team abbia documentato le classi attraverso diagrammi UML.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che le API siano documentate attraverso Swagger.],
+        [NI],
+    ))
+
+    accettazione.push(("TA" + str(accettazione.len()+1),
+        [Verificare che le componenti del prodotto siano sviluppate in container Docker.],
+        [NI],
+    ))
 
     return accettazione
 }
