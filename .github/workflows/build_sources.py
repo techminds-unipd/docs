@@ -4,6 +4,10 @@ REPO_DIR = '../../../docs'
 if 'GITHUB_WORKSPACE' in os.environ:
     REPO_DIR = os.environ['GITHUB_WORKSPACE']
 
+build_dir = os.path.join(REPO_DIR, 'build')
+if os.path.exists(build_dir):
+    shutil.rmtree(build_dir)
+
 sources = glob.glob("{}/**/*.typ".format(REPO_DIR), recursive=True)
 pdfs = glob.glob("{}/**/*.pdf".format(REPO_DIR), recursive=True)
 
