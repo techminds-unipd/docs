@@ -88,7 +88,7 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [#glossario[Indice di Gulpease]],
             [Misura la leggibilità di un testo in base alla lunghezza delle parole e delle frasi. In particolare: #linebreak()#list(..("i documenti con un indice inferiore a 80 sono difficili da comprendere per chi ha la licenza elementare;","i documenti con un indice inferiore a 60 sono difficili da comprendere per chi ha la licenzia media;"), spacing: 12pt)#box(list("i documenti con un indice inferiore a 40 sono difficili da comprendere per chi ha un diploma di scuola superiore"))],
-            [$"Indice di Gulpease" &= 89 + (300*"Numero di frasi" + 10*"Numero di lettere")/"Numero di parole"$],
+            [$"Indice di Gulpease" &= 89 + (300*"Numero di frasi" - 10*"Numero di lettere")/"Numero di parole"$],
             [40],
             [70],
             "documentazione"))
