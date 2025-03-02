@@ -51,5 +51,11 @@ f.close()
 
 # CSS and Logos
 shutil.copyfile("{}/template/style.css".format(REPO_DIR), "{}/build/style.css".format(REPO_DIR))
-shutil.copyfile("{}/template/assets/logo.png".format(REPO_DIR), "{}/build/logo.png".format(REPO_DIR))
-shutil.copyfile("{}/template/assets/logo_favicon.png".format(REPO_DIR), "{}/build/logo_favicon.png".format(REPO_DIR))
+
+assetsDestination = "{}/build/assets".format(REPO_DIR)
+
+# Se la cartella esiste già, la rimuoviamo per evitare errori
+if os.path.exists(assetsDestination):
+    shutil.rmtree(assetsDestination)
+
+shutil.copytree("{}/template/assets".format(REPO_DIR), assetsDestination)
