@@ -49,6 +49,7 @@ f = open("{}/build/index.html".format(REPO_DIR), "w")
 f.write(content)
 f.close()
 
-# CSS and Logo
+# CSS and Logos
 shutil.copyfile("{}/template/style.css".format(REPO_DIR), "{}/build/style.css".format(REPO_DIR))
 shutil.copyfile("{}/template/assets/logo.png".format(REPO_DIR), "{}/build/logo.png".format(REPO_DIR))
+shutil.copyfile("{}/template/assets/logo_favicon.png".format(REPO_DIR), "{}/build/logo_favicon.png".format(REPO_DIR))
