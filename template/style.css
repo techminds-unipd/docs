@@ -107,11 +107,14 @@ a:hover {
 }
 
 .sidepanel {
-    width: 200px;
+    width: 350px;
     margin-top: 30px;
     background-color: #fff;
     overflow-x: hidden;
-    position: fixed;
+    position: sticky;
+    top: 10px; 
+    max-height: calc(100vh - 20px); 
+    overflow-y: auto;
 }
 
 .sidepanel a.title {
@@ -169,17 +172,16 @@ a:hover {
     margin-left: 220px;
 }
 
-.right-col h1 {
+.right-col h1:first-of-type {
+    margin-top: 0px;
+}
+.right-col h1{
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 24px;
     text-transform: uppercase; 
     color: #595959;
-    margin-top: 3em;
-}
-
-#rtb {
-    margin-top: 0;
+    margin-top: 50px;
 }
 
 .right-col h2 {
