@@ -39,10 +39,18 @@ Oltre ai canali di comunicazione interni abbiamo un canale #glossario[Slack] in 
 Visto che utilizziamo la metodologia Agile le nostre attività sono divise in periodi della durata di 2-3 settimane circa, chiamati sprint.
 L'intera durata del progetto è inoltre divisa in milestone, che rappresentano un progresso significativo.
 Le prime milestone che naturalmente abbiamo individuato sono #glossario[RTB] e #glossario[PB]. Nel periodo riguardante la RTB ad ogni documento è associata una milestone. I documenti in questione sono:
-- #glossario[Analisi dei requisiti]\;
-- #glossario[Piano di progetto]\;
-- #glossario[Piano di qualifica]\;
-- Norme di progetto.
+- RTB: #glossario[Analisi dei requisiti]\;
+- RTB: #glossario[Piano di progetto]\;
+- RTB: #glossario[Piano di qualifica]\;
+- RTB: Norme di progetto.
+Anche per PB abbiamo definito una milestone per ogni documento:
+- PB: Analisi dei requisiti;
+- PB: Piano di progetto;
+- PB: Piano di qualifica;
+- PB: Norme di progetto;
+- PB: Specifica tecnica.
+Inoltre è presente anche la milestone #glossario[MVP] per rappresentare il progresso del prodotto software finale.
+
 === Issue
 Uno sprint è composto da varie #glossario[issue] che rappresentano un'attività da svolgere. Una issue non dovrebbe essere troppo lunga e complicata, ma al contrario dovrebbe poter essere gestita da una singola persona e completata entro tempi brevi (entro fine sprint nel caso peggiore).
 Se una issue richiede più impiego di tempo allora viene spezzata in sotto-issue di complessità ridotta in modo da agevolare il team e la suddivisione del lavoro.

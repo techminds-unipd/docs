@@ -66,7 +66,7 @@
         metriche_accettabili += int(cv >= 0)
         metriche_accettabili += int(sv >= 0)
         metriche_accettabili += int(cpi >= 1)
-        metriche_accettabili += int(eac >= 12975 +0.5*12975 or eac >= 12975 -0.5*12975)
+        metriche_accettabili += int(eac >= 12625 +0.5*12625 or eac >= 12625 -0.5*12625)
         metriche_accettabili += int(etc >= 0)
         metriche_accettabili += int(spi >= 1)
         metriche_accettabili += int(caption_figure == 100)
@@ -87,11 +87,11 @@
 
         metriche_ottime += int(ev <= eac)
         metriche_ottime += int(ac <= eac)
-        metriche_ottime += int(pv <= 12975)
+        metriche_ottime += int(pv <= 12625)
         metriche_ottime += int(cv >= 0)
         metriche_ottime += int(sv >= 0)
         metriche_ottime += int(cpi >= 1)
-        metriche_ottime += int(eac == 12975)
+        metriche_ottime += int(eac == 12625)
         metriche_ottime += int(etc >= eac)
         metriche_ottime += int(spi >= 1)
         metriche_ottime += int(caption_figure == 100)
@@ -115,7 +115,11 @@
 #for i in range(1, sprint_number+1) {
     let (preventivo, _) = getSprintCostsSection(sprint_number: i)
     let bilancio  = preventivo.bilancioPreventivo
+    if(i<=5){
     tot_spesa_preventivata.push(12975 - tot_spesa_preventivata.sum(default: 0) - bilancio)
+    }else{
+    tot_spesa_preventivata.push(12625 - tot_spesa_preventivata.sum(default: 0) - bilancio)
+    }
 }
 
 #let num_metriche = 12
@@ -137,14 +141,19 @@
 #let metriche_accettabili = ()
 #let metriche_ottime = ()
 
-#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66))
-#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76))
-#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58))
-#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68))
-#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58))
+//Indice di Gulpease
+#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,94))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58))
 
 #for i in range(1, sprint_number+1) {
+    if(i<=5){
     costo_totale_stimato.push(12975)
+    } else{
+    costo_totale_stimato.push(12625)
+    }
 
     ac.push((i, tot_spesa.slice(0,i).sum()))
     etc.push((i, costo_totale_stimato.at(i - 1) - tot_spesa.slice(0,i).sum()))
@@ -199,7 +208,7 @@
 #pagebreak()
 
 = Cruscotto
-== MPRO2 (AC), MPRO8 (ETC), MPRO7 (EAC)
+== MPROC2 (AC), MPROC8 (ETC), MPRO7 (EAC)
 #linebreak()
 
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
@@ -222,7 +231,7 @@ In questo periodo abbiamo un incremento di AC proporzionale al decremento di ETC
 Inoltre in questo periodo erano presenti altri impegni importanti come le lezioni e gli esami.
 EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 
-== MPRO3 (PV), MPRO1 (EV)
+== MPROC3 (PV), MPROC1 (EV)
 #linebreak()
 
 #lineChart(lines: (ev_fun,pv_fun),
@@ -244,7 +253,7 @@ In questo periodo abbiamo rispettato abbastanza bene i costi preventivati, scost
 In generale i costi sono bassi perchè in questo periodo erano presenti molti impegni fra lezioni e esami che non permettevano di allocare molto tempo.
 
 #pagebreak()
-== MPRO4 (CV), MPRO5 (SV)
+== MPROC4 (CV), MPROC5 (SV)
 #linebreak()
 
 #lineChart(lines: (cv_fun,sv_fun),
@@ -267,7 +276,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 
 #pagebreak()
 
-== MPRO6 (CPI), MPRO9 (SPI)
+== MPROC6 (CPI), MPROC9 (SPI)
 #linebreak()
 
 #lineChart(lines: (cpi_fun,spi_fun),
@@ -291,7 +300,7 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 
 #pagebreak()
 
-== MAFF1 (Indice di Gulpease)
+== MPROC11 (Indice di Gulpease)
 #linebreak()
 
 #let x_axis = ((1,36),)
@@ -317,7 +326,7 @@ Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti d
 #linebreak()
 I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabile (ovvero 40). In alcuni documenti, come Analisi dei requisiti, il valore dell'indice è rimasto abbastanza stabile. Si sono riscontrati dei notevoli incrementi in Norme di progetto e Piano di progetto, dovuti dalla maggiore cura e attenzione da parte del gruppo nella formulazione delle frasi. Infine, anche se in Glossario e Piano di qualifica ci sono stati dei peggioramenti, tra lo sprint 3 e lo sprint 4 si è registrato un impegno nel migliorare il valore dell'indice.
 
-== MACC1 (Caption in tabelle e figure)
+== MPROC12 (Caption in tabelle e figure)
 #linebreak()
 
 #let x_axis = ((1,0),)
@@ -341,7 +350,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
 
 #pagebreak()
 
-== MPRO11 (Rischi non previsti)
+== MPROC15 (Rischi non previsti)
 #linebreak()
 
 #let point = ((1,9),)
@@ -365,7 +374,7 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
 
 #pagebreak()
 
-==  MPRO14 (Metriche accettabili)
+==  MPROC16 (Metriche accettabili)
 #linebreak()
 
 #let point = ((1,0),)
@@ -390,7 +399,7 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
 
 #pagebreak()
 
-==  MPRO15 (Metriche ottimali)
+==  MPROC17 (Metriche ottimali)
 #linebreak()
 
 #let point = ((1,0),)
