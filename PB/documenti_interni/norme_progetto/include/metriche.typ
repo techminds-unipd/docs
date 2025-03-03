@@ -3,7 +3,7 @@
 #let displayMetrics(metrics) = {
   for m in metrics{
     heading(offset: 3, m.at(1).at(0))
-    list(text(weight: "bold", "Codice: ")+m.at(0))
+    list(text(weight: "bold", "Codice: ")+m.at(0)+";")
     list(text(weight: "bold", "Formula: ")+m.at(3).join())
     list(text(weight: "bold", "Descrizione: ")+m.at(2).join())
   }
