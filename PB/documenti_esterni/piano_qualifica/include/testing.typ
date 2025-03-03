@@ -1,5 +1,6 @@
 #import "/template/template.typ": glossario
 #import "definizione-test.typ": getSistema
+#import "definizione-test.typ": getAccettazione
 #show figure: set block(breakable: true)
 = Specifica dei test
 Nelle successive sezioni andremo ad individuare varie tipologie di test.
@@ -43,11 +44,28 @@ In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare c
     ),
     caption: [Test di sistema.]
 ) <tabella-test-sistema>
+#set par(justify: true)
 
 == Test di accettazione
 Si concentrano sulla validazione del software rispetto ai requisiti utente, coinvolgendo il committente. Sono fondamentali per:
 - Dimostrare la conformità del prodotto alle attese del committente attraverso casi di prova specifici;
 - Portare, con buon esito, al rilascio finale del prodotto con supervisione del committente.
+
+#set par(justify: false)
+#figure(
+    table(
+        columns: (auto, auto, auto),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white}},
+        inset: 10pt,
+        align: horizon,
+        table.header(
+          [*Codice test*], [*Descrizione*], [*Stato test*],
+        ),
+        ..getAccettazione().flatten(),
+    ),
+    caption: [Test di accettazione.]
+) <tabella-test-accettazione>
+#set par(justify: true)
 
 == Tracciamento
 === Test di sistema - Requisito
