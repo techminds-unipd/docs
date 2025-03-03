@@ -321,43 +321,37 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [Il frontend deve poter inviare la lista dei blocchi del workflow al backend.],
+        [Il frontend deve poter inviare l'insieme dei blocchi del workflow al backend.],
         [@invio-dati-frontend-backend],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [Il frontend deve poter inviare la lista degli archi del workflow al backend.],
+        [Il frontend deve poter inviare l'insieme degli archi del workflow al backend.],
         [@invio-dati-frontend-backend],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [Il frontend deve poter inviare la lista delle automazioni del workflow al backend.],
+        [Il frontend deve poter inviare l'insieme delle automazioni del workflow al backend.],
         [@invio-dati-frontend-backend],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [Il backend deve poter inviare la lista dei blocchi del workflow all'agente.],
+        [Il backend deve poter inviare l'insieme dei blocchi ordinati del workflow all'agente.],
         [@invio-dati-backend-agente],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [Il backend deve poter inviare la lista degli archi del workflow all'agente.],
+        [Il backend deve poter inviare l'insieme delle automazioni del workflow all'agente.],
         [@invio-dati-backend-agente],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [Il backend deve poter inviare la lista delle automazioni del workflow all'agente.],
-        [@invio-dati-backend-agente],
-    ))
-    FMR+=1
-
-    FR.push(("FMR" + str(FMR),
-        [Il backend deve poter inviare i token di autorizzazione necessari all'agente.],
+        [Il backend deve poter inviare l'insieme dei token di autorizzazione necessari all'agente.],
         [@invio-dati-backend-agente],
     ))
     FMR+=1
@@ -459,14 +453,20 @@
     CMR+=1
 
     CR.push(("CMR" + str(CMR),
-        [Il prodotto deve funzionare correttamente su Firefox 128 ESR o versioni successive.],
+        [Il prodotto deve funzionare correttamente su Firefox 128 ESR.],
         [Decisione interna],
     ))
     CMR+=1
 
     CR.push(("CMR" + str(CMR),
-        [Il prodotto deve funzionare correttamente sull'ultima versione stable di Chromium 133.],
+        [Il prodotto deve funzionare correttamente sulla versione stable di Chromium 133.],
         [Decisione interna],
+    ))
+    CMR+=1
+
+    CR.push(("CMR" + str(CMR),
+        [Un workflow è composto da una serie di blocchi ognuno con al massimo un input e un output.],
+        [Riunione col proponente],
     ))
     CMR+=1
 
