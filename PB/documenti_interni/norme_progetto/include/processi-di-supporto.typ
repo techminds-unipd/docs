@@ -28,7 +28,7 @@ Abbiamo scelto di usare la filosofia "Docs as code" che si prescrive di trattare
 === Organizzazione dei documenti
 - Nomi dei file: i file iniziano sempre con lettera minuscola o con una data del tipo yyyy-mm-dd[-info] nel caso di #glossario[verbali] (info è un campo opzionale che contiene informazioni aggiuntive);
 - Organizzazione delle cartelle: nel caso in cui il documento sia composto da più file, questi sono contenuti in una cartella chiamata ```/include```;
-- Elenchi: in tutti gli elenchi gli elementi terminano con ";" tranne l'ultimo che termina con ".". Inoltre la prima lettera di ogni punto deve essere maiuscola, mentre se si tratta di un sottoelenco deve essere minuscola;
+- Elenchi: in tutti gli elenchi e sottoelenchi gli elementi terminano con ";" tranne l'ultimo che termina con ".". Inoltre la prima lettera di ogni punto deve essere maiuscola, mentre se si tratta di un sottoelenco deve essere minuscola;
 - Sezioni: viene seguita la convenzione di Typst, ovvero la sezione principale avrà un numero "X" e tutte le sottosezioni aggiungeranno ricorsivamente un altro ".X";
 - Figure: ogni figura deve essere dotata di caption che ne spieghi brevemente il contenuto;
 - Tabelle: ogni tabella deve essere dotata di caption che ne spieghi il contenuto;
