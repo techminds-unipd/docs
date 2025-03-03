@@ -8,7 +8,7 @@
     list(text(weight: "bold", "Descrizione: ")+m.at(2).join())
   }
 }
-= Metriche di Qualità
+= Metriche di qualità
 ==   Qualità di processo
 ===   Fornitura
 #displayMetrics(getMPROCByProcess("fornitura", true, true, false, false))
