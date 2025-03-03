@@ -80,7 +80,7 @@ L'attività di analisi dei requisiti è fondamentale per:
 - Facilitare la comprensione dei requisiti a tutti gli #glossario[stakeholder]#h(1pt)\;
 - Garantire che la progettazione riceva dei requisiti chiari e semplici da comprendere.
 
-In questa fase il nostro compito è quindi quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
+Nello svolgimento di quest'attività il nostro compito è quindi quello di raccogliere, analizzare e documentare i requisiti del prodotto (requisiti software).
 
 In generale, l'analisi studia a fondo i bisogni, con particolare attenzione al "cosa" deve succedere nel prodotto che verrà sviluppato, ovvero alla sua struttura funzionale. I requisiti riflettono la prospettiva dell'utente nel passaggio dalla situazione senza, a quella con il prodotto. Uno dei modi più efficaci per individuare i requisiti è attraverso la scrittura dei casi d'uso.
 
@@ -275,7 +275,7 @@ Ogni requisito è costituito da:
 In linea con la nostra filosofia "Docs as Code" (si veda @docsascode), tutti i diagrammi dei casi d'uso sono creati con Typst.
 
 === Progettazione
-L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Questa fase viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi le esigenze di tutti gli stakeholder coinvolti nel progetto.
+L'attività di progettazione è fondamentale per la corretta realizzazione del prodotto software. Quest'attività viene naturalmente svolta in seguito a quella di analisi, in quanto si basa sui requisiti individuati in precedenza, per definire come fare ciò di cui c'è bisogno. L'obiettivo è quello di fornire una soluzione realizzativa che stabilisca l'architettura per la successiva attività di codifica e che soddisfi le esigenze di tutti gli stakeholder coinvolti nel progetto.
 
 Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona progettazione sono:
 - Tracciabilità rispetto ai requisiti dell'elemento software;
@@ -285,14 +285,14 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona prog
 - Fattibilità della progettazione dettagliata (se è realizzabile con le risorse disponibili);
 - Fattibilità delle operazioni e della manutenzione.
 
-A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura per la futura fase di implementazione.
+A supporto dell'attività di progettazione verranno utilizzati i diagrammi delle classi, vista la loro utilità nel documentare in modo conciso l'architettura.
 
 ==== Diagrammi delle classi
-I diagrammi delle classi sono uno strumento molto utile nella fase di progettazione del software, poiché permettono di rappresentare graficamente la struttura statica del sistema, mostrando le classi che lo compongono, i loro attributi, i metodi e le relazioni tra di esse. 
+I diagrammi delle classi sono uno strumento molto utile per la progettazione del software, poiché permettono di rappresentare graficamente la struttura statica del sistema, mostrando le classi che lo compongono, i loro attributi, i metodi e le relazioni tra di esse. 
 
 I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 - Aiutano a identificare le responsabilità delle singole classi e a definire chiaramente i confini tra di esse;
-- Consentono di individuare potenziali problemi di progettazione prima di iniziare la fase di codifica, riducendo così di molto il costo di modifiche o future correzioni;
+- Consentono di individuare potenziali problemi di progettazione prima di iniziare la codifica, riducendo così di molto il costo di modifiche o future correzioni;
 - Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
 - Offrono un linguaggio comune (#glossario[UML]) che permette di seguire uno standard riconosciuto a livello internazionale.
 
@@ -301,7 +301,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 //==== Strumenti e tecnologie
 
 === Codifica e testing
-L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. Durante questa fase, il codice viene scritto e testato per garantire che il prodotto soddisfi i requisiti individuati in fase di analisi e rispetti la progettazione definita al passo precedente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati in fase di fornitura.
+L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. La codifica prevede che il codice sia scritto e testato per garantire che il prodotto soddisfi i requisiti individuati dall'analisi e rispetti la progettazione definita al precedentemente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati con il proponente.
 
 Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codifica/testing sono: 
 - Tracciabilità rispetto ai requisiti e alla progettazione dell'elemento software;
