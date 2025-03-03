@@ -370,46 +370,37 @@
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il frontend possa inviare la lista dei blocchi del
-        workflow al backend.],
+        [Verificare che il frontend possa inviare l'insieme dei blocchi del workflow al backend.],
         (..getFRByNumber(sistema.len()+1)),
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il frontend possa inviare la lista degli archi del
-        workflow al backend.],
+        [Verificare che il frontend possa inviare l'insieme degli archi del workflow al backend.],
         (..getFRByNumber(sistema.len()+1)),
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il frontend possa inviare la lista delle automazioni del
-        workflow al backend.],
+        [Verificare che il frontend possa inviare l'insieme delle automazioni del workflow al backend.],
         (..getFRByNumber(sistema.len()+1)),
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il backend possa inviare la lista dei blocchi del workflow all'agente.],
+        [Verificare che il backend possa inviare l'insieme dei blocchi ordinati del workflow all'agente.],
         (..getFRByNumber(sistema.len()+1)),
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il backend possa inviare la lista degli archi del workflow all'agente.],
+        [Verificare che il backend possa inviare l'insieme delle automazioni del workflow all'agente.],
         (..getFRByNumber(sistema.len()+1)),
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il backend possa inviare la lista delle automazioni del workflow all'agente.],
-        (..getFRByNumber(sistema.len()+1)),
-        [NI],
-    ))
-
-    sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che il backend possa inviare i token di autorizzazione necessari all'agente.],
+        [Verificare che il backend possa inviare l'insieme dei token di autorizzazione necessari all'agente.],
         (..getFRByNumber(sistema.len()+1)),
         [NI],
     ))

@@ -25,7 +25,7 @@ Misura se e quanto il prodotto software soddisfa i requisiti essenziali, desider
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPRODByCharcteristic("funzionalità").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPRODByCharcteristic("funzionalità", false, false, true, true).flatten()
   ), 
   caption: [Funzionalità - Metriche e indici di qualità.]
 ) <tabella-MF>
@@ -43,7 +43,7 @@ Indica quanto è semplice aggiornare, correggere e migliorare il software.
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPRODByCharcteristic("manutenibilità").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPRODByCharcteristic("manutenibilità", false, false, true, true).flatten()
   ), 
   caption: [Manutenibilità - Metriche e indici di qualità.]
 ) <tabella-MM>
@@ -61,7 +61,7 @@ Misura delle prestazioni del software in termini di utilizzo delle risorse (es. 
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPRODByCharcteristic("efficienza").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPRODByCharcteristic("efficienza", false, false, true, true).flatten()
   ), 
   caption: [Efficienza - Metriche e indici di qualità.]
 ) <tabella-ME>
@@ -81,7 +81,7 @@ Valuta quanto è facile per gli utenti interagire con il prodotto software.
       #linebreak()
       ottimale*]
     ),
-    ..getMPRODByCharcteristic("usabilità").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPRODByCharcteristic("usabilità", false, false, true, true).flatten()
   ), 
   caption: [Usabilità - Metriche e indici di qualità.]
 ) <tabella-MU>
@@ -99,7 +99,7 @@ Analizza la capacità del software di funzionare su diverse piattaforme e ambien
     table.header(
       [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
-    ..getMPRODByCharcteristic("portabilità").map((x) => (x.slice(0, 2), x.slice(3,5))).flatten()
+    ..getMPRODByCharcteristic("portabilità", false, false, true, true).flatten()
   ), 
   caption: [Portabilità - Metriche e indici di qualità.]
 ) <tabella-MP>

@@ -1604,7 +1604,7 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
   - Frontend.
 - *Scenario principale*:
   - Frontend:
-    1. invia la lista dei blocchi, degli archi e delle automazioni del workflow.
+    1. invia l'insieme dei blocchi, degli archi e delle automazioni del workflow.
   - Backend:
     1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:
@@ -1646,7 +1646,7 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
   - Backend.
 - *Scenario principale*:
  - Backend:
-    1. invia i dati ricevuti dal frontend relativi al workflow (@invio-dati-frontend-backend) e i token di autorizzazione necessari.
+    1. invia l'insieme dei blocchi processati e ordinati, delle automazioni in linguaggio naturale e dei token di autorizzazione necessari.
  - Agente:
    1. riceve i dati necessari per l'esecuzione del workflow.
 - *Pre-condizioni*:

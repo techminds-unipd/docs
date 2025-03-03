@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css?">
-    <link rel="shortcut icon" href="./assets/round_logo.png">
+    <link rel="shortcut icon" type ="image/png" href="./assets/logo_favicon.png">
 
 </head>
 
@@ -23,7 +23,7 @@
 
     <div class="navbar clear nav-top">
         <div class="row content">
-            <a href="#"><img class="logo" src="./logo.png"></a>
+            <a href="#"><img class="logo" src="./assets/logo.png"></a>
             <a class="right" href="https://github.com/techminds-unipd/docs"><i class="fa-brands fa-github"></i> GitHub</a>
             <a class="right" href="mailto:techminds.unipd@gmail.com" target="_blank"><i class="fas fa-paper-plane"></i>&nbsp;
                 techminds.unipd@gmail.com</a>
@@ -34,6 +34,12 @@
         <div class="row wrapper">
 
             <div class="sidepanel">
+                <a class="title" href="#pb">Product baseline</a>
+                <a class="section" href="#pb-documenti-esterni">Documenti esterni</a>
+                <a class="section" href="#pb-documenti-interni">Documenti interni</a>
+                <a class="section" href="#pb-verbali-esterni">Verbali esterni</a>
+                <a class="section" href="#pb-verbali-interni">Verbali interni</a>
+                <div class="divider left"></div>
 
                 <a class="title" href="#rtb">Requirements and Technology baseline</a>
                 <a class="section" href="#rtb-lettera">Lettera di presentazione</a>
@@ -56,6 +62,29 @@
             </div>
 
             <div class="right-col">
+                <h1 id="pb">Product baseline</h1>
+                <div class="divider"></div>
+                <h2 id="pb-documenti-esterni">Documenti esterni</h2>
+                <ul>
+                    {PB/documenti_esterni/analisi_requisiti}
+                    {PB/documenti_esterni/piano_progetto}
+                    {PB/documenti_esterni/piano_qualifica}
+                    {PB/documenti_esterni/specifica_tecnica}
+                </ul>
+                <h2 id="pb-documenti-interni">Documenti interni</h2>
+                <ul>
+                    {PB/documenti_interni/glossario}
+                    {PB/documenti_interni/norme_progetto}
+                </ul>
+                <h2 id="pb-verbali-esterni">Verbali esterni</h2>
+                <ul>
+                    {PB/documenti_esterni/verbali}
+                </ul>
+                <h2 id="pb-verbali-interni">Verbali interni</h2>
+                <ul>
+                    {PB/documenti_interni/verbali}
+                </ul>
+
                 <h1 id="rtb">Requirements and Technology Baseline</h1>
                 <div class="divider"></div>
                 <h2 id="rtb-lettera">Lettera di presentazione</h2>
@@ -81,6 +110,7 @@
                 <ul>
                     {RTB/documenti_interni/verbali}
                 </ul>
+
                 <h1 id="fase-di-candidatura">Fase di candidatura</h1>
                 <div class="divider"></div>
                 <h2 id="candidatura">Candidatura</h2>

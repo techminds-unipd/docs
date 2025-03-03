@@ -12,6 +12,8 @@
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
+    "1.2.0", "03/03/2025", "Aggiunta sezione metriche di qualità", team.L, team.C,
+    "1.1.2", "01/03/2025", "Aggiornamento struttura elenchi verbale", team.T, team.C,
     "1.1.1", "27/02/2025", "Aggiornamento struttura metriche", team.L, team.A,
     "1.1.0", "25/02/2025", "Aggiunta strumenti e tecnologie e aggiornamento struttura", team.L, team.C,
     "1.0.0", "12/02/2025", "Fix grafici termini glossario e UML", team.G, team.M,
@@ -38,3 +40,4 @@
 #include "include/processi-primari.typ"
 #include "include/processi-di-supporto.typ"
 #include "include/processi-organizzativi.typ"
+#include "include/metriche.typ"
