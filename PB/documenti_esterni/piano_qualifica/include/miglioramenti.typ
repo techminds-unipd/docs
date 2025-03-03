@@ -34,3 +34,19 @@ I miglioramenti rappresentano una componente fondamentale per la raggiunta degli
   ), 
   caption: [Miglioramento per il rischio RP4.]
 )
+
+#figure(
+  table(
+    columns: (auto, auto, auto),
+    fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white}},
+    inset: 10pt,
+    align: horizon,
+    table.header(
+      [*Problema*], [*Codice rischio*], [*Soluzione*],
+    ),
+    [Comunicazioni con l'azienda poco frequenti.],
+    [ROE1],
+    [Organizzazione di incontri regolari e programmati ad ogni fine sprint. Questo permette di chiarire eventuali dubbi o problemi e di allinearsi con il proponente sullo stato di avanzamento del progetto.]
+  ), 
+  caption: [Miglioramento per il rischio ROE1.]
+)
