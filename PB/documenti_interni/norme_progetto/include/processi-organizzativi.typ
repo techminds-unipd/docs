@@ -168,6 +168,8 @@ I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del proget
 
 Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (delegabile all'amministratore) e lo invia al proponente per l'approvazione tramite una firma.
 
+Il 28/02/2025 è stato concordato con il proponente di effettuare una riunione periodica l'ultimo giorno di ogni sprint. In queste riunioni verrà mostrato ciò che è stato prodotto finora e chiariti gli eventuali dubbi che entrambe le parti potrebbero avere.
+
 ==== Strumenti e tecnologie
 Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
 - Slack;
