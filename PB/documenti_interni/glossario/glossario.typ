@@ -374,7 +374,7 @@ Si ha che:
 Periodo di tempo prefissato, di durata massima di un mese, in cui il team sviluppa un piccolo incremento di prodotto finale.
 
 == Sprint planning
-È una pratica agile in cui pianifichiamo le attività da completare durante uno sprint. In questa fase, vengono scelti i task da affrontare in base alla priorità e alla disponibilità di ogni membro del team.
+È una pratica agile in cui pianifichiamo le attività da completare durante uno sprint. Durante questa cerimonia vengono scelti i task da affrontare in base alla priorità e alla disponibilità di ogni membro del team.
 
 == Stakeholder
 Persona o gruppo di persone che hanno interesse nel progetto, e lo influenzano o vengono influenzati da esso, come il committente o il fornitore.
@@ -396,7 +396,7 @@ Insieme di strumenti che permette di documentare le API contestualmente alla lor
 = T
 
 == Test di accettazione
-Test che verifica che il sistema soddisfi i requisiti utente specificati nel capitolato e concordati con il proponente. Corrisponde all'ultima fase di test prima del possibile rilascio del prodotto.
+Test che verifica che il sistema soddisfi i requisiti utente specificati nel capitolato e concordati con il proponente. Sono gli ultimi test effettuati prima del possibile rilascio del prodotto.
 
 == Test di integrazione
 Test che verifica che le varie componenti o unità del sistema funzionino correttamente quando vengono integrate tra loro. Si svolge dopo i test di unità e prima dei test di sistema.
