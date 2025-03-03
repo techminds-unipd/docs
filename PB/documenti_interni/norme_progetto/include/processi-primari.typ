@@ -40,7 +40,7 @@ I rapporti con il proponente sono un elemento che riteniamo fondamentale per il 
 - Guidano il corretto svolgimento dei processi;
 - Facilitano lo scambio di feedback e dubbi, da entrambi i lati (noi nei confronti del proponente e viceversa);
 - Garantiscono il rispetto di quanto pattuito.
-Sono stati quindi concordati dei canali di comunicazione che permettono il raggiungimento degli obiettivi sopra descritti, per ulteriori approfondimenti vedi @proponente.
+Sono stati quindi concordati dei canali di comunicazione che permettono il raggiungimento degli obiettivi sopra descritti, per ulteriori approfondimenti vedi @revisioni-congiunte-implementazione e @proponente.
 
 === Documentazione fornita
 La documentazione che forniamo al proponente e al committente è la seguente:
@@ -89,7 +89,7 @@ Un caso d'uso è un insieme di scenari (sequenze di azioni) che hanno in comune 
 
 Ogni caso d'uso è composto da:
 - Identificativo e nomenclatura: 
-#align(center)[UC.a.b Nome]dove "a" è il numero del caso d'uso, "b" è il numero del sotto caso d'uso, se presente, e "Nome" è il nome del caso d'uso (esplicativo del suo scopo);
+#align(center)[UCa.b Nome]dove "a" è il numero del caso d'uso, "b" è il numero del sotto caso d'uso, se presente, e "Nome" è il nome del caso d'uso (esplicativo del suo scopo);
 - Diagramma: rappresentazione grafica del caso d'uso;
 - Descrizione: breve descrizione del caso d'uso;
 - Attori principali: elenco degli attori principali (entità esterne che interagiscono attivamente con il sistema) coinvolti;

@@ -276,11 +276,12 @@ Questo processo si compone delle seguenti attività:
 + Revisioni della gestione del progetto;
 + Revisioni tecniche.
 
-=== Implementazione del processo
-Vengono programmate delle revisioni con il proponente quando lo svolgimento del lavoro ha raggiunto un buon grado di avanzamento rispetto all'incontro precedente. Durante tali revisioni rappresentiamo la parte revisionata, mentre il proponente rappresenta la parte revisionante. Oltre a concentrarsi sugli avanzamenti raggiunti, si discutono eventuali problematiche e le corrispettive azioni correttive necessarie.
-
+=== Implementazione del processo <revisioni-congiunte-implementazione>
+Vengono programmate delle revisioni con il proponente in cui rappresentiamo la parte revisionata, mentre il proponente rappresenta la parte revisionante. Oltre a concentrarsi sugli avanzamenti raggiunti, si discutono eventuali problematiche e le corrispettive azioni correttive necessarie.\
 I risultati di tali revisioni sono poi documentati tramite i verbali esterni, i quali verranno firmati dalla parte revisionante per garantire l'approvazione di quanto revisionato e discusso.
 
+Nella fase iniziale del progetto non sono stati svolti degli incontri di revisione in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Sono però stati svolti degli incontri di formazione in presenza, offerti dal proponente. Dal periodo natalizio in poi invece vengono svolti degli incontri quando una delle due parti (noi in quanto gruppo o il proponente) lo ritengono necessario, ovvero quando sono stati raggiunti degli obiettivi di avanzamento considerevoli.\
+All'inizio della #glossario[PB] è stato concordato con il proponente di effettuare delle riunioni periodiche l'ultimo giorno di ogni sprint fino alla fine del progetto. In queste riunioni viene mostrato ciò che è stato prodotto fino a quel momento e vengono chiariti gli eventuali dubbi che entrambe le parti potrebbero avere. Questo permette di mantenere un allineamento maggiore con il proponente e allo stesso tempo di ricevere dei feedback sul lavoro svolto.
 //TODO Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi <risoluzioneproblemi>
