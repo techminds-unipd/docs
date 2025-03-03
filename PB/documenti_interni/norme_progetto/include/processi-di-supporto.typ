@@ -64,7 +64,7 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
   + tutte le informazioni dei verbali interni;
   + lo spazio per la firma di chi non fa parte del gruppo.
 - Scelte tipografiche specifiche dei verbali:
-  - gli elenchi e le liste possono non terminare col punto e virgola;
+  - tutti gli elenchi fuori dalla sezione \"Riassunto\" non vanno chiusi;
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
 
 === Sito web
