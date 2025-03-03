@@ -100,6 +100,9 @@ Descrizione dettagliata di come un attore interagisce con il sistema nel compier
 == Changelog
 Si veda #link(<registro_delle_modifiche>)[Registro delle modifiche].
 
+== Code Coverage
+Metrica che misura la percentuale di righe di codice coperte dai test. Si calcola come: $"Code Coverage" &= "Numero di linee di codice testate"/"Numero di linee di codice totali" * 100$.
+
 == Commit
 Operazione che registra le modifiche apportate al codice in un repository. Ogni commit rappresenta uno snapshot del progetto in un determinato momento.
 
@@ -346,7 +349,7 @@ Persona che ha il compito di coordinare le attività di gruppo, l'elaborazione d
 Attività che si svolge al termine di uno sprint, in cui il team riflette sul lavoro svolto, individua i punti di forza e debolezza e propone azioni di miglioramento per lo sprint successivo.
 
 == RSI // {Requirements Stability Index}
-Acronimo di _Requirements Stability Index_. É un indice che misura la stabilità dei requisiti durante il ciclo di vita del progetto. Indica quindi quanto i requisiti cambiano nel tempo. Un valore alto indica che i requisiti cambiano frequentemente e costituisce un segnale d'allarme.#linebreak()Si calcola come  $ "RSI" &= "Numero di requisiti modificati" / "Numero totale di requisiti"$.
+Acronimo di _Requirements Stability Index_. É un indice che misura la stabilità dei requisiti durante il ciclo di vita del progetto. Indica quindi quanto i requisiti cambiano nel tempo. Un valore vicino a 1 indica che i requisiti cambiano frequentemente e costituisce un segnale d'allarme.#linebreak()Si calcola come  $"RSI" &= ("NRA"+"NRM"+"NRC")/"NRI"$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;", "NRI: numero di requisiti iniziali."))
 
 == RTB // {Requirements and Technology Baseline}
 Acronimo di _Requirements and Technology Baseline_. Baseline il cui oggetto principale sono i requisiti e l'adeguatezza delle tecnologie, valutata tramite il PoC. I requisiti sono concordati con il proponente e raccolti nel documento Analisi dei Requisiti. Una tecnologia è considerata adeguata se permette di raggiungere l'obiettivo per cui è stata scelta e se è integrabile con le altre.
