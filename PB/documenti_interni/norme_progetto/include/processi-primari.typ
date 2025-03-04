@@ -301,7 +301,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 //==== Strumenti e tecnologie
 
 === Codifica e testing
-L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. La codifica prevede che il codice sia scritto e testato per garantire che il prodotto soddisfi i requisiti individuati dall'analisi e rispetti la progettazione definita al precedentemente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati con il proponente.
+L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. La codifica prevede che il codice sia scritto e testato per garantire che il prodotto soddisfi i requisiti individuati durante l'analisi e rispetti la progettazione definita al precedentemente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati con il proponente.
 
 Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codifica/testing sono: 
 - Tracciabilità rispetto ai requisiti e alla progettazione dell'elemento software;

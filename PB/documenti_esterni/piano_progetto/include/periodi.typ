@@ -6,7 +6,7 @@
 In questa sezione elenchiamo i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello Scrum. Inoltre analizziamo la variazione del costo stimato di completamento del progetto e l'assegnazione delle ore ai ruoli. Tale analisi risulta fondamentale per comprendere al meglio se le previsioni effettuate al momento della candidatura risultino poi adatte e congruenti alla realtà dei fatti.
 
 == Preventivo candidatura
-La stima delle ore che saranno dedicate ad ogni ruolo formulata al momento della candidatura è la seguente:
+La stima delle ore che saranno dedicate ad ogni ruolo, formulata al momento della candidatura, è la seguente:
 #figure(
     table(
         columns: (1fr,)*5,
