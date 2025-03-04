@@ -164,9 +164,9 @@ Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni te
 Il proponente ha aggiunto in questo canale diverse figure professionali esperte nelle tecnologie da utilizzare nel progetto, per poter rispondere in maniera esaustiva ai diversi tipi di dubbi e problematiche che possono sorgere.
 
 ==== Incontri
-I meeting esterni si svolgono su Microsoft Teams. Nella fase iniziale del progetto non sono stati svolti degli incontri di revisione in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Sono però stati svolti degli incontri di formazione in presenza, offerti dal proponente. Dal periodo natalizio in poi invece vengono svolti degli incontri quando una delle due parti (noi in quanto gruppo o il proponente) lo ritengono necessario, ovvero quando sono stati raggiunti degli obiettivi di avanzamento considerevoli.
+Durante lo sviluppo del progetto, è fondamentale organizzare incontri periodici con il proponente per monitorare l'avanzamento del lavoro e risolvere eventuali dubbi o problematiche (vedi sezione @revisioni-congiunte-implementazione).
 
-Anche in questo caso è il responsabile a mediare l'incontro e, quando necessario, lascia la parola agli altri membri del gruppo. Per ogni incontro esterno redige il relativo verbale (delegabile all'amministratore) e lo invia al proponente per l'approvazione tramite una firma.
+I meeting si svolgono su Microsoft Teams. Il responsabile si occupa di mediare l'incontro presentando i punti previsti nell'ordine del giorno al proponente. Quando necessario lascia la parola agli altri membri del gruppo. Questo metodo favorisce una comunicazione chiara tra le parti coinvolte, ottimizzando il tempo e assicurando una corretta registrazione delle informazioni emerse. Per ogni incontro esterno, infatti, il responsabile redige il relativo verbale (delegabile all'amministratore) e lo invia al proponente sul canale Slack per l'approvazione tramite una firma.
 
 ==== Strumenti e tecnologie
 Per i rapporti con il proponente utilizziamo le seguenti tecnologie e strumenti:
