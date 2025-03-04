@@ -3,10 +3,10 @@
 #import "costi.typ": getOreConsumateRuoli
 
 = Periodi
-In questa sezione elenchiamo i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello Scrum. Inoltre analizziamo la variazione del costo stimato di completamento del progetto e l'assegnazione delle ore ai ruoli. Tale analisi risulta fondamentale per comprendere al meglio se le previsioni effettuate durante la fase di candidatura risultino poi adatte e congruenti alla realtà dei fatti.
+In questa sezione elenchiamo i periodi di lavoro suddivisi per le milestone più rilevanti del progetto didattico. Ogni periodo è composto da più sprint dato che abbiamo deciso di utilizzare una metodologia di lavoro agile, prendendo come riferimento il modello Scrum. Inoltre analizziamo la variazione del costo stimato di completamento del progetto e l'assegnazione delle ore ai ruoli. Tale analisi risulta fondamentale per comprendere al meglio se le previsioni effettuate al momento della candidatura risultino poi adatte e congruenti alla realtà dei fatti.
 
-== Preventivo Candidatura
-Durante la fase di Candidatura, la ripartizione oraria per i vari ruoli è stata la seguente:
+== Preventivo candidatura
+La stima delle ore che saranno dedicate ad ogni ruolo, formulata al momento della candidatura, è la seguente:
 #figure(
     table(
         columns: (1fr,)*5,
@@ -54,7 +54,7 @@ Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta.
   - grafico a torta che mostra la distribuzione delle ore consumate per ruolo.
 - *Aggiornamento #glossario[Preventivo a Finire]* (da sprint 5): testo e tabella che descrivono la variazione oraria e di costo del preventivo a finire.
 == RTB
-Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa fase iniziale, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
+Subito dopo l'assegnazione del capitolato, abbiamo ritenuto opportuno non avviare il primo sprint senza un incontro preliminare con il proponente del progetto. Durante questa settimana, in attesa del confronto con l'azienda VarGroup, ci siamo focalizzati su:
 - Stesura della struttura dei documenti del progetto;
 - Definizione dei ruoli all'interno del team per il primo sprint.
 
@@ -101,6 +101,6 @@ I costi effettivamente sostenuti durante il periodo RTB sono esposti nella @tabe
 ) <tabella-totaleRTB>
 
 == PB
-La seconda fase del progetto, chiamata Product Baseline, si concentra sulla progettazione e lo sviluppo del #glossario[MVP] da parte del gruppo. Questa fase è caratterizzata da un maggiore tempo a disposizione da parte di molti membri del gruppo che hanno finito le lezioni.
+La seconda milestone del progetto, chiamata Product Baseline, si concentra sulla progettazione e lo sviluppo del #glossario[MVP] da parte del gruppo. Questo periodo è caratterizzato da un maggiore tempo a disposizione da parte di molti membri del gruppo che hanno finito le lezioni.
 
 #include "sprint/sprint7.typ"

@@ -58,7 +58,7 @@ Lo scopo che ci poniamo riguardo la rotazione dei ruoli è permettere ed assicur
 
 La politica di rotazione è determinata in accordo tra tutto il gruppo, tenendo ovviamente conto dei ruoli che non sono ancora stati coperti da ogni membro. Poniamo particolare attenzione al fatto che l'assegnazione dei ruoli è fluida, ovvero che privilegiamo le attività da compiere piuttosto che il mantenimento fisso del ruolo. Questo significa che in caso di necessità potremmo svolgere compiti afferenti a un ruolo diverso da quello assegnato per lo sprint corrente.
 
-Infine, durante la fase di scambio dei ruoli, chi lascia un ruolo deve condividere la conoscenza acquisita per facilitare la transizione. Per fare questo è fondamentale:
+Infine, durante lo scambio dei ruoli, chi lascia un ruolo deve condividere la conoscenza acquisita per facilitare la transizione. Per fare questo è fondamentale:
 - Utilizzare canali vocali (privilegiando i canali #glossario[Discord]) per uno scambio più immediato;
 - Utilizzare documenti informali per velocizzare il passaggio di conoscenza;
 - Documentare in modo chiaro e dettagliato ogni azione che è reputata non banale.
@@ -92,7 +92,7 @@ In particolare:
 - Comprende a fondo i bisogni impliciti ed espliciti.
 
 ==== Progettista
-Partendo dal lavoro dell'analista effettua scelte progettuali per definire il "come" devono essere implementati i requisiti individuati durante la fase di analisi. Effettua quindi decisioni di natura tecnica e tecnologica, andando in particolare a:
+Partendo dal lavoro dell'analista effettua scelte progettuali per definire il "come" devono essere implementati i requisiti individuati durante l'analisi. Effettua quindi decisioni di natura tecnica e tecnologica, andando in particolare a:
 - Effettuare scelte tecnologiche e strutturali per soddisfare i requisiti;
 - Progettare l'architettura del prodotto.
 
@@ -123,7 +123,7 @@ Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiam
 Per raggiungere una buona efficienza nello svolgimento del progetto è fondamentale un ottimo coordinamento interno, che permetta di collaborare e comunicare in modo rapido e semplice.
 
 ==== Reperibilità dei membri
-Per far sì che tutti i membri siano a conoscenza degli impegni altrui, ciascun membro ha indicato i propri orari di disponibilità durante l'arco della settimana in un foglio Google condiviso. Il documento è modificabile in caso vi siano nuovi impegni sorti tra l'inizio del progetto e la fase attuale.
+Per far sì che tutti i membri siano a conoscenza degli impegni altrui, ciascun membro ha indicato i propri orari di disponibilità durante l'arco della settimana in un foglio Google condiviso. Il documento è modificabile in caso vi siano nuovi impegni sorti dall'inizio del progetto.
 
 Ogni membro inoltre si assume l'impegno di portare a termine le proprie task principalmente in modo asincrono e, in caso di necessità collaborative, anche in modo sincrono. La gestione individuale di tali attività è totalmente libera, tenendo comunque in considerazione l'impegno preso nei confronti del gruppo.
 
@@ -159,7 +159,7 @@ Come evidenziato sopra, gli strumenti e tecnologie di supporto scelte sono:
 Un frequente coordinamento tra il gruppo e il proponente è fondamentale per assicurare che il prodotto evolva coerentemente con le richieste del proponente. Inoltre, ricevere dei feedback periodici sul lavoro svolto ci indica se è conforme agli obiettivi fissati.
 
 ==== Comunicazioni testuali
-Nella fase iniziale abbiamo utilizzato il servizio Gmail per le comunicazioni testuali; dopo l'aggiudicazione dell'appalto, invece, il proponente ha creato un canale Slack in cui possiamo fare delle domande e scambiare file, risorse e materiali. Gli scopi di questo canale sono rispondere ai dubbi in modo veloce e mirato e facilitare lo scambio di informazioni.
+Inizialmente abbiamo utilizzato il servizio Gmail per le comunicazioni testuali; dopo l'aggiudicazione dell'appalto, invece, il proponente ha creato un canale Slack in cui possiamo fare delle domande e scambiare file, risorse e materiali. Gli scopi di questo canale sono rispondere ai dubbi in modo veloce e mirato e facilitare lo scambio di informazioni.
 
 Il proponente ha aggiunto in questo canale diverse figure professionali esperte nelle tecnologie da utilizzare nel progetto, per poter rispondere in maniera esaustiva ai diversi tipi di dubbi e problematiche che possono sorgere.
 
@@ -237,7 +237,7 @@ Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di 
   - No Status: vengono inserite le issue che non hanno una particolare urgenza; solo una volta terminate le issue relative allo sprint verranno completate anche quelle presenti in questa colonna;
   - Sprint Backlog: presenta tutte le issue che devono essere completate entro fine sprint, organizzate in ordine di priorità;
   - In progress: raccoglie le issue che sono state iniziate ma non ancora terminate;
-  - In review: raccoglie le issue che si trovano in fase di revisione;
+  - In review: raccoglie le issue che si trovano in revisione;
   - Done: raccoglie le issue terminate.
   Ogni membro del gruppo è tenuto a controllare frequentemente la dashboard per avere una panoramica della situazione dello sprint e a gestire le attività che ha preso in carico;
 
