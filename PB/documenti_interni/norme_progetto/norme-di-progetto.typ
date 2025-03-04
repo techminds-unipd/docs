@@ -12,6 +12,7 @@
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
+    "1.2.3", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.A,
     "1.2.2", "03/03/2025", "Aggiunta documentazione riunioni periodiche", team.T, team.C,
     "1.2.1", "03/03/2025", "Aggiornamento sottoelenchi", team.C, team.A,
     "1.2.0", "03/03/2025", "Aggiunta sezione metriche di qualità", team.L, team.C,
