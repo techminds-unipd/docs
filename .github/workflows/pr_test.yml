@@ -16,7 +16,7 @@ jobs:
         tar xf typst*.tar.xz -C /tmp
         sudo mv /tmp/typst*/typst /bin/typst
     - name: Check Glossario
-      run: python .github/workflows/check_glossario.py
+      run: python .github/workflows/check_glossario.py > /dev/null
     - name: Indice di Gulpease
       run: python .github/workflows/indice_gulpease.py
     - name: Check ordinamento glossario

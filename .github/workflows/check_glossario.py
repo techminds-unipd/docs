@@ -49,8 +49,8 @@ def check_single_term(termine, text):
 
 # Controllo dei termini nel file
 def check(f, text, termini_glossario, termini_contenuti):
-    print("-----------------------------")
-    print("Searching terms in {}".format(f))
+    print("-----------------------------", file=sys.stderr)
+    print("Searching terms in {}".format(f), file=sys.stderr)
     return_value = 0
     for termine in termini_glossario:
         if len(termine) == 1:
