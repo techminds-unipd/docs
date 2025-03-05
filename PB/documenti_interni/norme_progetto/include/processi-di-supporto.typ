@@ -67,7 +67,7 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
   - tutti gli elenchi fuori dalla sezione \"Riassunto\" non vanno chiusi;
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
 
-=== Sito web
+=== Sito web <sito-web>
 Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle GitHub Action. Ogni volta che avviene un cambiamento nel branch main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
 
 === Strumenti e tecnologie
@@ -101,18 +101,58 @@ spiegazione:
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software git sulla piattaforma #glossario[GitHub].
 
 === Gestione Repository (Controllo della configurazione e registrazione dello stato)
-La struttura del #glossario[repository] è composta da:
+Il team ha creato due repository all'interno dell'organizzazione GitHub:
+- docs, https://github.com/techminds-unipd/docs, che contiene tutta la documentazione del progetto;
+- mvp, https://github.com/techminds-unipd/mvp, che contiene il codice eseguibile del MVP realizzato durante il progetto.
+
+==== Repository docs
+*Organizzazione dei files*
+
+La repository docs contiene solamente i sorgenti di Typst in formato #text(".typ", style: "italic"), ad eccezione dei verbali esterni firmati dal proponente che non sono modificabili e sono quindi in formato #text(".pdf", style: "italic").#linebreak()
+Le cartelle sono organizzate come segue:
+- *.github*, che contiene gli script per l'analisi statica, per la generazione dei documenti PDF a partire dai file di Typst e per l'analisi statica della documentazione;
+- *candidatura*, che organizza i sorgenti dei documenti redatti per la candidatura in:
+  - *documenti_esterni*, che contiene a sua volta:
+    - *presentazione_candidatura*, con all'interno la dichiarazione degli impegni, la lettera di presentazione e lo studio dei capitolati;
+    - *verbali*, con all'interno i sorgenti dei verbali esterni e, nella sottocartella firmati, la loro versione firmata.
+  - *documenti_interni*, che contiene i verbali interni nell'unica sottocartella verbali.
+- *RTB*, che organizza i sorgenti dei documenti redatti per la Requirements and Tecnology Baseline in:
+  - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
+    - *analisi_requisiti*, che contiene i sorgenti del documento di analisi dei requisiti;
+    - *piano_progetto*, che contiene i sorgenti del piano di progetto;
+    - *piano_qualifica*, che contiene i sorgenti del piano di qualifica;
+    - *verbali*, che contiene i verbali esterni redatti dalla candidatura alla RTB.
+  - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
+    - *glossario*, che contiene i sorgenti del glossario;
+    - *norme_progetto*, che contiene i sorgenti delle norme di progetto;
+    - *verbali*, che contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
+- *PB*, che organizza i sorgenti dei documenti redatti per la Product Baseline in:
+  - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:
+    - *analisi_requisiti*, che contiene i sorgenti del documento di analisi dei requisiti;
+    - *piano_progetto*, che contiene i sorgenti del piano di progetto;
+    - *piano_qualifica*, che contiene i sorgenti del piano di qualifica;
+    - *specifica_tecnica*, che contiene i sorgenti del documento di specifica tecnica;
+    - *verbali*, che contiene i verbali esterni redatti dalla candidatura alla RTB.
+  - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
+    - *glossario*, che contiene i sorgenti del glossario;
+    - *norme_progetto*, che contiene i sorgenti delle norme di progetto;
+    - *verbali*, che contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
+- *template*, che contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
+
+*Struttura e gestione dei branch*
+
+La struttura del #glossario[repository] docs è composta da:
 - *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo #glossario[branch] è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
 - *Branch di feature* creati secondo la pratica #glossario[GitHub Flow].
-\
-Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal nostro team per lo sviluppo. Si compone di cinque fasi principali:
+
+Il gruppo ha deciso di utilizzare il GitHub Flow per l'organizzazione di questa repository. GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal nostro team per lo sviluppo della documetazione. Si compone di cinque fasi principali:
 	1.	*Creare un branch di feature*: iniziare creando un nuovo branch dal main per lavorare su nuove funzionalità senza influenzare il codice principale;
 	2.	*Modificare i file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
 	3.	*Creare una #glossario[Pull Request]*: una volta effettuati i commit e il #glossario[push], aprire una pull request per avviare la revisione del codice;
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
-\
-All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions].
+
+All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions] (vedi @sito-web per maggiori informazioni).
 
 === Strumenti e tecnologie
 Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.
