@@ -10,6 +10,11 @@ Le maggiori considerazioni sono:
 Questa scelta ovviamente porta anche dei lati negativi, come per esempio la facilità di sviluppo e di testing.
 
 === Diagramma delle classi
+#figure(
+    image("../assets/backend_diagramma_classi.svg", width: 55%),
+  caption: [Diagramma delle classi della componente backend.],
+)
+
 === Business Logic
 === Application Logic
 === Persistence Logic
