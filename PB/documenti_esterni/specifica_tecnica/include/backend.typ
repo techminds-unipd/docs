@@ -1,13 +1,16 @@
 == Backend
 
 === Introduzione
-Come architettura logica del backend si è deciso di mettere a confronto l'architettura layered e l'architettura esagonale.
-Dopo le seguenti considerazioni si è arrivati alla decisione di utilizzare un'architettura esagonale.
-Le maggiori considerazioni sono:
-- architettura più "pulita" rispetto alla layered, visto che la business logic viene resa indipendente dal resto;
-- vista la struttura rigida probabilmente permette di ottenere codice più pulito e comprensibile.
+Come architettura logica del backend abbiamo scelto di usare l'architettura esagonale dopo averla confrontata con l'architettura layered.
 
-Questa scelta ovviamente porta anche dei lati negativi, come per esempio la facilità di sviluppo e di testing.
+L'architettura esagonale ci permette di avere i seguenti vantaggi:
+- la business logic non ha dipendenze da altri layer ed è isolata;
+- la struttura rigida ben definita permette di ottenere, in teoria, codice più \"pulito\" e comprensibile;
+- facile da testare, visto che ogni layer è isolato (vale anche per la layered in questo caso).
+
+Questa scelta ha anche dei lati negativi, ad esempio:
+- la struttura rigida potrebbe richiedere più ore di codifica.
+- presenza di più codice \"boilerplate\".
 
 === Diagramma delle classi
 #figure(
