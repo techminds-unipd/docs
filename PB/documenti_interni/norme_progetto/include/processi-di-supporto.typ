@@ -284,7 +284,7 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 + #glossario[Test di integrazione]: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
 + #glossario[Test di sistema]: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
 + #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto difetti in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
-+ #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono l'ultima fase di test prima del possibile rilascio del prodotto.
++ #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono gli ultimi test eseguiti prima del possibile rilascio del prodotto.
 
 //Ogni test è costituito da:
 // TODO: completare con l'identificazione dei test
@@ -294,7 +294,7 @@ In generale, il processo di verifica include le seguenti fasi:
 + *Apertura della pull request e assegnazione dei verificatori*: il redattore o sviluppatore apre una pull request per sottoporre il proprio lavoro a revisione, aggiungendo un titolo e una breve descrizione del lavoro svolto. Successivamente, assegna i due verificatori scelti durante la pianificazione dello sprint in corso. Se necessario, è possibile aggiungere un terzo verificatore o sostituire uno dei verificatori già assegnati;
 + *Conflitti*: se sono presenti conflitti con il ramo di destinazione, è compito del redattore risolverli prima di procedere con la verifica;
 + *GitHub Actions*: se sono presenti automazioni, queste vengono eseguite automaticamente una volta aperta la pull request. È compito del redattore verificare che tutte abbiano successo prima di procedere con la verifica. In caso di fallimento di una o più automazioni, il redattore deve correggere gli errori e ripetere l'operazione fino a quando tutte le automazioni non avranno esito positivo;
-+ *Verifica*: ogni verificatore esegue un'attenta fase di verifica del lavoro svolto, seguendo norme precise a seconda del tipo di lavoro sottoposto a revisione. In caso di errori o dubbi, il verificatore può richiedere modifiche al redattore, aggiungendo commenti che citino parti specifiche del lavoro, in modo da facilitare la discussione e l'eventuale correzione;
++ *Verifica*: ogni verificatore esegue un'attenta verifica del lavoro svolto, seguendo norme precise a seconda del tipo di lavoro sottoposto a revisione. In caso di errori o dubbi, il verificatore può richiedere modifiche al redattore, aggiungendo commenti che citino parti specifiche del lavoro, in modo da facilitare la discussione e l'eventuale correzione;
 + *Discussione*: se necessario, il redattore e i verificatori possono discutere le modifiche richieste o i dubbi tramite la sezione apposita della pull request. Quando un dubbio viene chiarito, è compito del redattore marcare la conversazione come risolta, in modo da mantenere ordine nelle conversazioni ancora aperte;
 + *Correzione*: il redattore apporta le modifiche richieste dai verificatori, se presenti, e richiede nuovamente la verifica. In caso di necessità o di correzioni banali, anche il verificatore può modificare il lavoro, in modo da velocizzare il più possibile questa fase. Questo processo può essere ripetuto più volte, fino a quando i verificatori non approvano la pull request;
 + *Chiusura della pull request*: una volta che tutti i verificatori hanno approvato la pull request, è loro compito apportare l'ultima modifica al changelog, in modo da tracciare il lavoro svolto. Successivamente la pull request viene chiusa e il ramo di feature viene unito al ramo destinazione, concludendo così il processo di verifica.
@@ -312,7 +312,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno della repository.
 
 ===== Strumenti e tecnologie
-A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.
+A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la verifica il più efficace ed efficiente possibile.
 Gli script in questione si occupano di controllare:
 - che le parole da glossario siano ben indicate nei documenti;
 - che tutti i documenti ottengano il punteggio accettabile per l'indice di Gulpease;
@@ -378,7 +378,7 @@ Il processo di risoluzione dei problemi prevede le seguenti attività:
   - categorizzare i problemi e priorizzarne la gestione;
   - individuare delle tendenze nei problemi riscontrati;
   - valutare il grado di implementazione e l'efficacia dei cambiamenti adottati per risolvere i problemi, con particolare attenzione all'individuazione degli eventuali nuovi problemi da essi introdotti;
-+ *Risoluzione del problema*, che inizia con la stesura di un report per descrivere il problema riscontrato. Ogni problema deve essere poi analizzato e risolto secondo le procedure e con le accortezze identificate in fase di implementazione del processo.
++ *Risoluzione del problema*, che inizia con la stesura di un report per descrivere il problema riscontrato. Ogni problema deve essere poi analizzato e risolto secondo le procedure e con le accortezze identificate durante l'implementazione del processo.
 
 === Gestione dei rischi
 All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")) \[versione 1.0.0\]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 

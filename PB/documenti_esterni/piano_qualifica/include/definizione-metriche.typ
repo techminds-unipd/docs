@@ -299,7 +299,7 @@
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Versioni dei browser supportate],
-            [Calcola la percentuale di versioni di browser compatibili rispetto al totale richiesto in fase di analisi.],
+            [Calcola la percentuale di versioni di browser compatibili rispetto al totale individuato durante l'analisi.],
             [$"Versioni dei browser supportate" &= ("SC" + "SF") / 2 * 100$, dove: #list("SC: funzionamento corretto su Chrome (ultima versione stable di Chromium 133);", spacing: 12pt)#box(list("SF: funzionamento corretto con Firefox 128 ESR."))],
             [⩾75%],
             [100%],
