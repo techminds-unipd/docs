@@ -101,6 +101,7 @@ spiegazione:
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software git sulla piattaforma #glossario[GitHub].
 
 === Gestione repository (Controllo della configurazione e registrazione dello stato)
+//#glossario[mvp]
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
 - #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
 - #link("https://github.com/techminds-unipd/mvp")[#glossario[mvp]] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
