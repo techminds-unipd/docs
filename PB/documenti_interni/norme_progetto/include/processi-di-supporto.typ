@@ -68,7 +68,7 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
 
 === Sito web <sito-web>
-Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle GitHub Action. Ogni volta che avviene un cambiamento nel #glossario[branch] main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
+Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle #glossario[GitHub Actions]. Ogni volta che avviene un cambiamento nel #glossario[branch] main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
 
 === Strumenti e tecnologie
 Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
@@ -153,7 +153,7 @@ Il gruppo ha deciso di utilizzare il flusso di lavoro GitHub Flow; un flusso sem
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere la repository pulita.
 
-Inoltre, per la repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions] (vedi @sito-web per maggiori informazioni).
+Inoltre, per la repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle GitHub Actions (vedi @sito-web per maggiori informazioni).
 
 ==== Repository mvp
 *Organizzazione dei file*
@@ -309,7 +309,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Conformità agli standard: il documento deve rispettare le norme stilistiche e strutturali prestabilite;
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
-La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
+La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno della repository.
 
 ===== Strumenti e tecnologie
 A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la fase di verifica il più efficace ed efficiente possibile.

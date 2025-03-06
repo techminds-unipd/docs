@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "1.3.0", "06/03/2025", "Aggiunta definizione Vite", team.L, team.C,
     "1.2.0", "25/02/2025", "Aggiunta definizione alcune tecnologie", team.S, team.C,
     "1.1.0", "25/02/2025", "Aggiunta definizione preventivo a finire", team.T, team.A,
     "1.0.0", "11/02/2025", "Piccoli fix e aggiunta parole al glossario", team.A, team.T,
@@ -187,7 +188,7 @@ Software per il controllo di versione distribuito.
 == GitHub
 Servizio di hosting per progetti software, il nome deriva dal fatto che è una implementazione dello strumento di controllo di versione distribuito Git.
 
-== GitHub Actions
+== GitHub Actions // {GitHub Action}
 Piattaforma di continuous integration e continuous delivery che permette di automatizzare la build, i test e il rilascio di un prodotto.
 
 == GitHub Flow
