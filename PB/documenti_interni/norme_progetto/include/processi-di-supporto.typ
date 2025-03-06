@@ -102,15 +102,15 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 
 === Gestione repository (Controllo della configurazione e registrazione dello stato)
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
-- docs, https://github.com/techminds-unipd/docs, che contiene tutta la documentazione del progetto;
-- #glossario[mvp], https://github.com/techminds-unipd/mvp, che contiene il codice eseguibile del MVP realizzato durante il progetto.
+- docs #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
+- #glossario[mvp] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei file*
 
 La repository docs contiene solamente i sorgenti di Typst in formato #text(".typ", style: "italic"), ad eccezione dei verbali esterni firmati dal proponente che sono in formato #text(".pdf", style: "italic"), dato che non devono essere modificabili.#linebreak()
 Le cartelle sono organizzate come segue:
-- *.github* contiene gli script per l'analisi statica, per la generazione dei documenti PDF a partire dai file di Typst e per l'analisi statica della documentazione;
+- *.github* contiene gli script per l'analisi statica, per la generazione dei documenti PDF a partire dai file di Typst e per la creazione del sito;
 - *candidatura* organizza i sorgenti dei documenti redatti per la candidatura in:
   - *documenti_esterni*, che contiene a sua volta:
     - *presentazione_candidatura*, con all'interno la dichiarazione degli impegni, la lettera di presentazione e lo studio dei capitolati;
@@ -129,6 +129,7 @@ Le cartelle sono organizzate come segue:
 - *PB* organizza i sorgenti dei documenti redatti per la #glossario[Product Baseline] in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:
     - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
+    - *manuale_utente* contiene i sorgenti del manuale utente;
     - *piano_progetto* contiene i sorgenti del piano di progetto;
     - *piano_qualifica* contiene i sorgenti del piano di qualifica;
     - *specifica_tecnica* contiene i sorgenti del documento di specifica tecnica;
@@ -161,13 +162,13 @@ Inoltre, per la repository della documentazione è disponibile una pagina web st
 La repository mvp contiene solamente il codice eseguibile del MVP.#linebreak()
 Le cartelle sono organizzate come segue:
 - *.github* contiene gli script per la Continuos Integration;
-- *agente* contiene i file per il container #glossario[Docker] dell'agente e le sottocartelle:
+- *agente* contiene il file requirements.txt per la gestione delle dipendenze con #glossario[PIP], il file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
-- *backend* contiene i file per il #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend e le sottocartelle:
+- *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
-- *frontend* contiene i file per il #glossario[ESLint], per Node, per #glossario[Vite], per il container Docker del frontend e le sottocartelle:
+- *frontend* contiene i file per #glossario[ESLint], per Node.js, per #glossario[Vite], per il container Docker del frontend e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
@@ -176,18 +177,18 @@ Inoltre, all'interno della repository si trova un file README.md in cui sono des
 
 Per l'organizzazione di questa repository il team ha deciso di utilizzare i branch:
 - *main*: il branch predefinito dove risiede il codice in produzione;
-- *develop*: il branch in cui risiedono le feature sviluppate che non sono state necessariamente rilasciate in produzione;
-- *Branch di feature*, creati a partire da develop per lo sviluppo di una feature.
+- *dev*: il branch in cui risiedono le feature sviluppate che non sono state necessariamente rilasciate in produzione;
+- *Branch di feature*, creati a partire da dev per lo sviluppo di una feature.
 
 Il gruppo ha deciso di utilizzare un flusso di lavoro articolato come segue:
 - *Sviluppo di una feature*:
-	1.	*Creazione di un branch di feature*: creare un branch da develop su cui lavorare per lo sviluppo di una nuova funzionalità;
+	1.	*Creazione di un branch di feature*: creare un branch da dev su cui lavorare per lo sviluppo di una nuova funzionalità;
 	2.	*Modifica dei file nel nuovo branch*: effettuare modifiche e aggiungere commit per tenere traccia dei progressi;
 	3.	*Creazione di una Pull Request*: una volta sviluppata la funzionalità, effettuando i commit e il push, aprire una pull request per avviare la revisione del codice;
-	4.	*Merge della Pull Request*: dopo la revisione, fare il merge del branch di feature in develop;
+	4.	*Merge della Pull Request*: dopo la revisione, fare il merge del branch di feature in dev;
 	5.	*Eliminazione il branch*: eliminare il branch di feature per mantenere la repository pulita.
 - *Deploy dell'applicazione e release*:
-	+	*Creazione di una Pull Request*: aprire una pull request per richiedere una revisione finalizzata al merge di develop in main;
+	+	*Creazione di una Pull Request*: aprire una pull request per richiedere una revisione finalizzata al merge di dev in main;
 	+	*Merge della Pull Request*: dopo la revisione, fare il merge;
 
 === Strumenti e tecnologie

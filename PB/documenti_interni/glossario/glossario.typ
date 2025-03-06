@@ -287,6 +287,9 @@ Il piano di progetto è un documento che descrive gli obiettivi, le risorse, i t
 == Piano di qualifica // {PdQ}
 Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi. Nel documento è presente anche il cruscotto di qualità attraverso il quale si tiene traccia dell'andamento del progetto e si valutano le performance.
 
+== PIP
+PIP è un package manager per i pacchetti Python.
+
 == PoC // {Proof of Concept}
 Acronimo di _Proof of Concept_. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.
 
