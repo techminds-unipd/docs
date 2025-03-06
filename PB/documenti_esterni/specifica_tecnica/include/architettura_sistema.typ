@@ -14,10 +14,7 @@ Il frontend è l'interfaccia grafica sviluppata in React che permette all'utente
 L'agente è sviluppato in LangChain e comunica con il backend tramite un server #glossario[Flask]. Esso si occupa di eseguire i workflow mediante un #glossario[LLM] che interagisce con dei tool che si interfacciano con il mondo esterno. Infine, il database #glossario[MongoDB] è utilizzato per memorizzare i dati relativi ai workflow e agli utenti. Tutta l'infrastuttura è organizzata a container tramite Docker.
 
 
-== Frontend
-
-== Backend
-
-== Agente
-
-== Database
+#include "frontend.typ"
+#include "backend.typ"
+#include "agente.typ"
+#include "database.typ"
