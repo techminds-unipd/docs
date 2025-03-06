@@ -102,8 +102,8 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 
 === Gestione repository (Controllo della configurazione e registrazione dello stato)
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
-- docs #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
-- #glossario[mvp] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
+- #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
+- #link("https://github.com/techminds-unipd/mvp")[#glossario[mvp]] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei file*
