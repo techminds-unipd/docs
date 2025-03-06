@@ -67,8 +67,8 @@ I verbali hanno informazioni aggiuntive oltre a quelle descritte precedentemente
   - tutti gli elenchi fuori dalla sezione \"Riassunto\" non vanno chiusi;
   - i termini presenti del glossario presenti nei verbali verranno evidenziati dalla sezione "Contenuto della riunione" in poi.
 
-=== Sito web
-Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle GitHub Action. Ogni volta che avviene un cambiamento nel branch main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
+=== Sito web <sito-web>
+Utilizziamo un sito web per esporre pubblicamente la nostra documentazione, in modo da fornire un'interfaccia più adatta ad un pubblico non tecnico. Il sito (https://techminds-unipd.github.io/docs) è generato automaticamente con delle #glossario[GitHub Actions]. Ogni volta che avviene un cambiamento nel #glossario[branch] main tutti i documenti vengono compilati e poi viene generata una pagina web che sarà messa online dalla action delle GitHub Pages.
 
 === Strumenti e tecnologie
 Il team ha scelto di usare le seguenti tecnologie per redigere i documenti:
@@ -100,19 +100,97 @@ spiegazione:
 \
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software git sulla piattaforma #glossario[GitHub].
 
-=== Gestione Repository (Controllo della configurazione e registrazione dello stato)
-La struttura del #glossario[repository] è composta da:
-- *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo #glossario[branch] è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
+=== Gestione repository (Controllo della configurazione e registrazione dello stato)
+//#glossario[mvp]
+Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
+- #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
+- #link("https://github.com/techminds-unipd/mvp")[#glossario[mvp]] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
+
+==== Repository docs
+*Organizzazione dei file*
+
+La repository docs contiene solamente i sorgenti di Typst in formato #text(".typ", style: "italic"), ad eccezione dei verbali esterni firmati dal proponente che sono in formato #text(".pdf", style: "italic"), dato che non devono essere modificabili.#linebreak()
+Le cartelle sono organizzate come segue:
+- *.github* contiene gli script per l'analisi statica, per la generazione dei documenti PDF a partire dai file di Typst e per la creazione del sito;
+- *candidatura* organizza i sorgenti dei documenti redatti per la candidatura in:
+  - *documenti_esterni*, che contiene a sua volta:
+    - *presentazione_candidatura*, con all'interno la dichiarazione degli impegni, la lettera di presentazione e lo studio dei capitolati;
+    - *verbali*, con all'interno i sorgenti dei verbali esterni e, nella sottocartella firmati, la loro versione firmata.
+  - *documenti_interni*, che contiene i verbali interni nell'unica sottocartella verbali.
+- *RTB* organizza i sorgenti dei documenti redatti per la #glossario[Requirements and Technology Baseline] in:
+  - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
+    - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
+    - *piano_progetto* contiene i sorgenti del piano di progetto;
+    - *piano_qualifica* contiene i sorgenti del piano di qualifica;
+    - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB.
+  - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
+    - *glossario* contiene i sorgenti del glossario;
+    - *norme_progetto* contiene i sorgenti delle norme di progetto;
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
+- *PB* organizza i sorgenti dei documenti redatti per la #glossario[Product Baseline] in:
+  - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:
+    - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
+    - *manuale_utente* contiene i sorgenti del manuale utente;
+    - *piano_progetto* contiene i sorgenti del piano di progetto;
+    - *piano_qualifica* contiene i sorgenti del piano di qualifica;
+    - *specifica_tecnica* contiene i sorgenti del documento di specifica tecnica;
+    - *verbali* contiene i verbali esterni redatti dalla RTB alla PB.
+  - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
+    - *glossario* contiene i sorgenti del glossario;
+    - *norme_progetto* contiene i sorgenti delle norme di progetto;
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB.
+- *template* contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
+Inoltre, all'interno della repository si trova un file README.md in cui è descritta la struttura delle cartelle. 
+
+*Struttura dei branch e flusso di lavoro*
+
+La struttura dei branch della repository docs è composta da:
+- *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo branch è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
 - *Branch di feature* creati secondo la pratica #glossario[GitHub Flow].
-\
-Il GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal nostro team per lo sviluppo. Si compone di cinque fasi principali:
+
+Il gruppo ha deciso di utilizzare il flusso di lavoro GitHub Flow; un flusso semplice e leggero, considerato ideale dal nostro team per lo sviluppo della documentazione. Si compone di cinque fasi principali:
 	1.	*Creare un branch di feature*: iniziare creando un nuovo branch dal main per lavorare su nuove funzionalità senza influenzare il codice principale;
 	2.	*Modificare i file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
 	3.	*Creare una #glossario[Pull Request]*: una volta effettuati i commit e il #glossario[push], aprire una pull request per avviare la revisione del codice;
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
-	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
-\
-All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions].
+	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere la repository pulita.
+
+Inoltre, per la repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle GitHub Actions (vedi @sito-web per maggiori informazioni).
+
+==== Repository mvp
+*Organizzazione dei file*
+
+La repository mvp contiene solamente il codice eseguibile del MVP.#linebreak()
+Le cartelle sono organizzate come segue:
+- *.github* contiene gli script per la Continuos Integration;
+- *agente* contiene il file requirements.txt per la gestione delle dipendenze con #glossario[PIP], il file per il container #glossario[Docker] dell'agente e le sottocartelle:
+  - *src* per il codice sorgente;
+  - *test* per il codice dei test.
+- *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend e le sottocartelle:
+  - *src* per il codice sorgente;
+  - *test* per il codice dei test.
+- *frontend* contiene i file per #glossario[ESLint], per Node.js, per #glossario[Vite], per il container Docker del frontend e le sottocartelle:
+  - *src* per il codice sorgente;
+  - *test* per il codice dei test.
+Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
+
+*Struttura dei branch e flusso di lavoro*
+
+Per l'organizzazione di questa repository il team ha deciso di utilizzare i branch:
+- *main*: il branch predefinito dove risiede il codice in produzione;
+- *dev*: il branch in cui risiedono le feature sviluppate che non sono state necessariamente rilasciate in produzione;
+- *Branch di feature*, creati a partire da dev per lo sviluppo di una feature.
+
+Il gruppo ha deciso di utilizzare un flusso di lavoro articolato come segue:
+- *Sviluppo di una feature*:
+	1.	*Creazione di un branch di feature*: creare un branch da dev su cui lavorare per lo sviluppo di una nuova funzionalità;
+	2.	*Modifica dei file nel nuovo branch*: effettuare modifiche e aggiungere commit per tenere traccia dei progressi;
+	3.	*Creazione di una Pull Request*: una volta sviluppata la funzionalità, effettuando i commit e il push, aprire una pull request per avviare la revisione del codice;
+	4.	*Merge della Pull Request*: dopo la revisione, fare il merge del branch di feature in dev;
+	5.	*Eliminazione il branch*: eliminare il branch di feature per mantenere la repository pulita.
+- *Deploy dell'applicazione e release*:
+	+	*Creazione di una Pull Request*: aprire una pull request per richiedere una revisione finalizzata al merge di dev in main;
+	+	*Merge della Pull Request*: dopo la revisione, fare il merge;
 
 === Strumenti e tecnologie
 Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.
@@ -233,7 +311,7 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 - Conformità agli standard: il documento deve rispettare le norme stilistiche e strutturali prestabilite;
 - Correttezza ortografica e grammaticale: il documento deve essere privo di errori ortografici e grammaticali.
 
-La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno del repository.
+La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno della repository.
 
 ===== Strumenti e tecnologie
 A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la verifica il più efficace ed efficiente possibile.

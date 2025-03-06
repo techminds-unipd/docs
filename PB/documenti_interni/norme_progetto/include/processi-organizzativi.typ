@@ -190,7 +190,7 @@ Alla base delle strategie di tipo agile vi è l'adozione della pratica di Contin
 
 Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano mediamente due settimane (salvo eccezioni) e durante i quali il gruppo si impegna a svolgere le seguenti attività:
 - Daily scrum: ogni membro del gruppo ogni giorno comunica agli altri le attività svolte il giorno precedente, quelle che ha intenzione di svolgere nel giorno corrente ed eventuali dubbi. Questo aiuta la comunicazione interna del gruppo e consente un minimo allineamento interno giornaliero;
-- Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo il repository GitHub con le #glossario[issue] necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
+- Sprint planning: all'inizio di ogni sprint, guidati dal responsabile, definiamo cosa dovremo consegnare al termine del tempo programmato e predisponiamo la repository GitHub con le #glossario[issue] necessarie per svolgere le attività individuate. Inoltre preventiviamo le ore che ognuno pensa saranno necessarie per portare a termine i propri compiti, informazioni che poi il responsabile inserisce nel piano di progetto;
 - Sprint retrospective: avviene al termine dello sprint ed è finalizzata ad analizzare l'andamento dello sprint. Ispezionamo cosa non ha funzionato e cosa è andato bene per apprendere e migliorare. É anche un evento propedeutico allo sprint successivo in quanto volto a migliorare le performance future.
 
 ==== Milestone e sprint
@@ -217,7 +217,7 @@ Nel caso in cui una issue sia assegnabile fin da subito ad un membro del gruppo 
 
 ===== Ciclo di vita
 Di seguito descriviamo il ciclo di vita di una issue:
-1. L'amministratore (o chi di competenza) accede al repository GitHub e crea la issue seguendo quanto descritto in @creazione;
+1. L'amministratore (o chi di competenza) accede alla repository GitHub e crea la issue seguendo quanto descritto in @creazione;
 2. Accedendo poi alla dashboard di progetto sposta la issue dalla colonna "No Status" alla colonna "Sprint #glossario[Backlog]";
 3. L'assegnatario, quando prende in carico la issue, deve svolgere le seguenti azioni:
   - accedere alla dashboard e spostare la issue nella colonna "In progress". In alternativa può cambiare lo stato della issue modificando il campo "Status";

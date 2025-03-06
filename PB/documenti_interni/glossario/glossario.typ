@@ -9,6 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
+    "1.3.0", "06/03/2025", "Aggiunta definizione Vite", team.L, team.C,
     "1.2.1", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.A,
     "1.2.0", "25/02/2025", "Aggiunta definizione alcune tecnologie", team.S, team.C,
     "1.1.0", "25/02/2025", "Aggiunta definizione preventivo a finire", team.T, team.A,
@@ -188,7 +189,7 @@ Software per il controllo di versione distribuito.
 == GitHub
 Servizio di hosting per progetti software, il nome deriva dal fatto che è una implementazione dello strumento di controllo di versione distribuito Git.
 
-== GitHub Actions
+== GitHub Actions // {GitHub Action}
 Piattaforma di continuous integration e continuous delivery che permette di automatizzare la build, i test e il rilascio di un prodotto.
 
 == GitHub Flow
@@ -285,6 +286,9 @@ Il piano di progetto è un documento che descrive gli obiettivi, le risorse, i t
 
 == Piano di qualifica // {PdQ}
 Documento che specifica gli obiettivi, indicati in modo quantitativo, di qualità dei prodotti e dei processi. Nel documento è presente anche il cruscotto di qualità attraverso il quale si tiene traccia dell'andamento del progetto e si valutano le performance.
+
+== PIP
+PIP è un package manager per i pacchetti Python.
 
 == PoC // {Proof of Concept}
 Acronimo di _Proof of Concept_. É una baseline tecnologica che usa le tecnologie proposte per lo sviluppo dei requisiti. Il suo scopo è acquisire conoscenza, valutare l'adeguatezza e la compatibilità di tali tecnologie. Deve richiedere un basso costo di sviluppo.
@@ -446,6 +450,9 @@ Il verbale è un documento che registra in dettaglio ciò che è stato discusso 
 
 == Verifica // {Verifiche}
 Si occupa di accertare che lo svolgimento delle attività di sviluppo non introduca errori (Did I build the system right?) quindi pone l'attenzione sul way of working.
+
+== Vite
+Vite è un build tool che velocizza lo sviluppo di applicazioni web monitorando i file durante la loro modifica e facendo sì che il browser ricarchi la pagina ogni volta che uno o più file vengono modificati. Vite supporta React.
 
 = W
 == Way of working // {WoW}
