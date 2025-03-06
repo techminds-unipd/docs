@@ -103,7 +103,7 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 === Gestione Repository (Controllo della configurazione e registrazione dello stato)
 Il team ha creato due repository all'interno dell'organizzazione GitHub:
 - docs, https://github.com/techminds-unipd/docs, che contiene tutta la documentazione del progetto;
-- mvp, https://github.com/techminds-unipd/mvp, che contiene il codice eseguibile del MVP realizzato durante il progetto.
+- #glossario[mvp], https://github.com/techminds-unipd/mvp, che contiene il codice eseguibile del MVP realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei files*
@@ -116,7 +116,7 @@ Le cartelle sono organizzate come segue:
     - *presentazione_candidatura*, con all'interno la dichiarazione degli impegni, la lettera di presentazione e lo studio dei capitolati;
     - *verbali*, con all'interno i sorgenti dei verbali esterni e, nella sottocartella firmati, la loro versione firmata.
   - *documenti_interni*, che contiene i verbali interni nell'unica sottocartella verbali.
-- *RTB* organizza i sorgenti dei documenti redatti per la Requirements and Tecnology Baseline in:
+- *#glossario[RTB]* organizza i sorgenti dei documenti redatti per la Requirements and Tecnology #glossario[Baseline] in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
     - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
     - *piano_progetto* contiene i sorgenti del piano di progetto;
@@ -126,7 +126,7 @@ Le cartelle sono organizzate come segue:
     - *glossario* contiene i sorgenti del glossario;
     - *norme_progetto* contiene i sorgenti delle norme di progetto;
     - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
-- *PB* organizza i sorgenti dei documenti redatti per la Product Baseline in:
+- *#glossario[PB]* organizza i sorgenti dei documenti redatti per la Product Baseline in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:
     - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
     - *piano_progetto* contiene i sorgenti del piano di progetto;
@@ -140,10 +140,10 @@ Le cartelle sono organizzate come segue:
 - *template* contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
 Inoltre, all'interno della repository si trova un file README.md in cui è descritta la struttura delle cartelle. 
 
-*Struttura dei branch e flusso di lavoro*
+*Struttura dei #glossario[branch] e flusso di lavoro*
 
 La struttura dei branch della #glossario[repository] docs è composta da:
-- *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo #glossario[branch] è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
+- *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo branch è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
 - *Branch di feature* creati secondo la pratica #glossario[GitHub Flow].
 
 Il gruppo ha deciso di utilizzare il flusso di lavoro GitHub Flow; un flusso semplice e leggero, considerato ideale dal nostro team per lo sviluppo della documentazione. Si compone di cinque fasi principali:
@@ -161,7 +161,7 @@ Inoltre, per la repository della documentazione è disponibile una pagina web st
 La repository mvp contiene solamente il codice eseguibile del MVP.#linebreak()
 Le cartelle sono organizzate come segue:
 - *.github* contiene gli script per la Continuos Integration;
-- *agente* contiene i file per il container Docker dell'agente e le sottocartelle:
+- *#glossario[agente]* contiene i file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test;
 - *backend* contiene i file per il linter, per Node, per il container Docker del backend e le sottocartelle:
@@ -182,12 +182,12 @@ Per l'organizzazione di questa repository il team ha deciso di utilizzare i bran
 Il gruppo ha deciso di utilizzare un flusso di lavoro articolato come segue:
 - *Sviluppo di una feature*:
 	1.	*Creazione di un branch di feature*: creare un branch da develop su cui lavorare per lo sviluppo di una nuova funzionalità;
-	2.	*Modifica dei file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
-	3.	*Creazione di una #glossario[Pull Request]*: una volta sviluppata la funzionalità, effettuando i commit e il #glossario[push], aprire una pull request per avviare la revisione del codice;
+	2.	*Modifica dei file nel nuovo branch*: effettuare modifiche e aggiungere commit per tenere traccia dei progressi;
+	3.	*Creazione di una Pull Request*: una volta sviluppata la funzionalità, effettuando i commit e il push, aprire una pull request per avviare la revisione del codice;
 	4.	*Merge della Pull Request*: dopo la revisione, fare il merge del branch di feature in develop;
 	5.	*Eliminazione il branch*: eliminare il branch di feature per mantenere il repository pulito.
 - *Deploy dell'applicazione e release*:
-	+	*Creazione di una #glossario[Pull Request]*: aprire una pull request per richiedere una revisione finalizzata al merge di develop in main;
+	+	*Creazione di una Pull Request*: aprire una pull request per richiedere una revisione finalizzata al merge di develop in main;
 	+	*Merge della Pull Request*: dopo la revisione, fare il merge;
 
 === Strumenti e tecnologie
