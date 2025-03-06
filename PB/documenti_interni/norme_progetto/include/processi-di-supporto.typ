@@ -100,13 +100,13 @@ spiegazione:
 \
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software git sulla piattaforma #glossario[GitHub].
 
-=== Gestione Repository (Controllo della configurazione e registrazione dello stato)
+=== Gestione repository (Controllo della configurazione e registrazione dello stato)
 Il team ha creato due repository all'interno dell'organizzazione GitHub:
 - docs, https://github.com/techminds-unipd/docs, che contiene tutta la documentazione del progetto;
 - #glossario[mvp], https://github.com/techminds-unipd/mvp, che contiene il codice eseguibile del MVP realizzato durante il progetto.
 
 ==== Repository docs
-*Organizzazione dei files*
+*Organizzazione dei file*
 
 La repository docs contiene solamente i sorgenti di Typst in formato #text(".typ", style: "italic"), ad eccezione dei verbali esterni firmati dal proponente che sono in formato #text(".pdf", style: "italic"), dato che non devono essere modificabili.#linebreak()
 Le cartelle sono organizzate come segue:
@@ -156,27 +156,27 @@ Il gruppo ha deciso di utilizzare il flusso di lavoro GitHub Flow; un flusso sem
 Inoltre, per la repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions] (vedi @sito-web per maggiori informazioni).
 
 ==== Repository mvp
-*Organizzazione dei files*
+*Organizzazione dei file*
 
 La repository mvp contiene solamente il codice eseguibile del MVP.#linebreak()
 Le cartelle sono organizzate come segue:
 - *.github* contiene gli script per la Continuos Integration;
 - *#glossario[agente]* contiene i file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test;
+  - *test* per il codice dei test.
 - *backend* contiene i file per il #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test;
+  - *test* per il codice dei test.
 - *frontend* contiene i file per il linter, per Node, per #glossario[Vite], per il container Docker del frontend e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test;
+  - *test* per il codice dei test.
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
 
 *Struttura dei branch e flusso di lavoro*
 
 Per l'organizzazione di questa repository il team ha deciso di utilizzare i branch:
 - *main*: il branch predefinito dove risiede il codice in produzione;
-- *develop*: il branch in cui risiedono le features sviluppate che non sono state necessariamente rilasciate in produzione;
+- *develop*: il branch in cui risiedono le feature sviluppate che non sono state necessariamente rilasciate in produzione;
 - *Branch di feature*, creati a partire da develop per lo sviluppo di una feature.
 
 Il gruppo ha deciso di utilizzare un flusso di lavoro articolato come segue:
