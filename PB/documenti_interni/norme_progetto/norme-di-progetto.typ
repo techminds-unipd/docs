@@ -7,6 +7,10 @@
 // #glossario[ai]
 // #glossario[glossario]
 // #glossario[archi]
+// #glossario[agente]
+// #glossario[PB]
+// #glossario[branch]
+// #glossario[RTB]
 
 #show: documento.with(
   title: "Norme di progetto",
