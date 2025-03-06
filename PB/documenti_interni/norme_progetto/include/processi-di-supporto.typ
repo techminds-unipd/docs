@@ -108,51 +108,87 @@ Il team ha creato due repository all'interno dell'organizzazione GitHub:
 ==== Repository docs
 *Organizzazione dei files*
 
-La repository docs contiene solamente i sorgenti di Typst in formato #text(".typ", style: "italic"), ad eccezione dei verbali esterni firmati dal proponente che non sono modificabili e sono quindi in formato #text(".pdf", style: "italic").#linebreak()
+La repository docs contiene solamente i sorgenti di Typst in formato #text(".typ", style: "italic"), ad eccezione dei verbali esterni firmati dal proponente che sono in formato #text(".pdf", style: "italic"), dato che non devono essere modificabili.#linebreak()
 Le cartelle sono organizzate come segue:
-- *.github*, che contiene gli script per l'analisi statica, per la generazione dei documenti PDF a partire dai file di Typst e per l'analisi statica della documentazione;
-- *candidatura*, che organizza i sorgenti dei documenti redatti per la candidatura in:
+- *.github* contiene gli script per l'analisi statica, per la generazione dei documenti PDF a partire dai file di Typst e per l'analisi statica della documentazione;
+- *candidatura* organizza i sorgenti dei documenti redatti per la candidatura in:
   - *documenti_esterni*, che contiene a sua volta:
     - *presentazione_candidatura*, con all'interno la dichiarazione degli impegni, la lettera di presentazione e lo studio dei capitolati;
     - *verbali*, con all'interno i sorgenti dei verbali esterni e, nella sottocartella firmati, la loro versione firmata.
   - *documenti_interni*, che contiene i verbali interni nell'unica sottocartella verbali.
-- *RTB*, che organizza i sorgenti dei documenti redatti per la Requirements and Tecnology Baseline in:
+- *RTB* organizza i sorgenti dei documenti redatti per la Requirements and Tecnology Baseline in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
-    - *analisi_requisiti*, che contiene i sorgenti del documento di analisi dei requisiti;
-    - *piano_progetto*, che contiene i sorgenti del piano di progetto;
-    - *piano_qualifica*, che contiene i sorgenti del piano di qualifica;
-    - *verbali*, che contiene i verbali esterni redatti dalla candidatura alla RTB.
+    - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
+    - *piano_progetto* contiene i sorgenti del piano di progetto;
+    - *piano_qualifica* contiene i sorgenti del piano di qualifica;
+    - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB.
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
-    - *glossario*, che contiene i sorgenti del glossario;
-    - *norme_progetto*, che contiene i sorgenti delle norme di progetto;
-    - *verbali*, che contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
-- *PB*, che organizza i sorgenti dei documenti redatti per la Product Baseline in:
+    - *glossario* contiene i sorgenti del glossario;
+    - *norme_progetto* contiene i sorgenti delle norme di progetto;
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
+- *PB* organizza i sorgenti dei documenti redatti per la Product Baseline in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:
-    - *analisi_requisiti*, che contiene i sorgenti del documento di analisi dei requisiti;
-    - *piano_progetto*, che contiene i sorgenti del piano di progetto;
-    - *piano_qualifica*, che contiene i sorgenti del piano di qualifica;
-    - *specifica_tecnica*, che contiene i sorgenti del documento di specifica tecnica;
-    - *verbali*, che contiene i verbali esterni redatti dalla candidatura alla RTB.
+    - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
+    - *piano_progetto* contiene i sorgenti del piano di progetto;
+    - *piano_qualifica* contiene i sorgenti del piano di qualifica;
+    - *specifica_tecnica* contiene i sorgenti del documento di specifica tecnica;
+    - *verbali* contiene i verbali esterni redatti dalla RTB alla PB.
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
-    - *glossario*, che contiene i sorgenti del glossario;
-    - *norme_progetto*, che contiene i sorgenti delle norme di progetto;
-    - *verbali*, che contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
-- *template*, che contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
+    - *glossario* contiene i sorgenti del glossario;
+    - *norme_progetto* contiene i sorgenti delle norme di progetto;
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB.
+- *template* contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
+Inoltre, all'interno della repository si trova un file README.md in cui è descritta la struttura delle cartelle. 
 
-*Struttura e gestione dei branch*
+*Struttura dei branch e flusso di lavoro*
 
-La struttura del #glossario[repository] docs è composta da:
+La struttura dei branch della #glossario[repository] docs è composta da:
 - *main*: è il ramo predefinito dove risiede la versione stabile del prodotto, su questo #glossario[branch] è stata impostata una regola di protezione per evitare che venga introdotto del codice non funzionante o non approvato;
 - *Branch di feature* creati secondo la pratica #glossario[GitHub Flow].
 
-Il gruppo ha deciso di utilizzare il GitHub Flow per l'organizzazione di questa repository. GitHub Flow è un flusso di lavoro semplice e leggero, considerato ideale dal nostro team per lo sviluppo della documetazione. Si compone di cinque fasi principali:
+Il gruppo ha deciso di utilizzare il flusso di lavoro GitHub Flow; un flusso semplice e leggero, considerato ideale dal nostro team per lo sviluppo della documentazione. Si compone di cinque fasi principali:
 	1.	*Creare un branch di feature*: iniziare creando un nuovo branch dal main per lavorare su nuove funzionalità senza influenzare il codice principale;
 	2.	*Modificare i file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
 	3.	*Creare una #glossario[Pull Request]*: una volta effettuati i commit e il #glossario[push], aprire una pull request per avviare la revisione del codice;
 	4.	*Unire la Pull Request*: dopo la revisione, unire il branch al main facendo il merge;
 	5.	*Eliminare il branch*: infine, eliminare il branch di feature per mantenere il repository pulito.
 
-All'interno del branch main si trova un file README.md dove è possibile visionare la struttura delle cartelle del repository. Inoltre, per il repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions] (vedi @sito-web per maggiori informazioni).
+Inoltre, per la repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle #glossario[GitHub Actions] (vedi @sito-web per maggiori informazioni).
+
+==== Repository mvp
+*Organizzazione dei files*
+
+La repository mvp contiene solamente il codice eseguibile del MVP.#linebreak()
+Le cartelle sono organizzate come segue:
+- *.github* contiene gli script per la Continuos Integration;
+- *agente* contiene i file per il container Docker dell'agente e le sottocartelle:
+  - *src* per il codice sorgente;
+  - *test* per il codice dei test;
+- *backend* contiene i file per il linter, per Node, per il container Docker del backend e le sottocartelle:
+  - *src* per il codice sorgente;
+  - *test* per il codice dei test;
+- *frontend* contiene i file per il linter, per Node, per Vite, per il container Docker del frontend e le sottocartelle:
+  - *src* per il codice sorgente;
+  - *test* per il codice dei test;
+Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
+
+*Struttura dei branch e flusso di lavoro*
+
+Per l'organizzazione di questa repository il team ha deciso di utilizzare i branch:
+- *main*: il branch predefinito dove risiede il codice in produzione;
+- *develop*: il branch in cui risiedono le features sviluppate che non sono state necessariamente rilasciate in produzione;
+- *Branch di feature*, creati a partire da develop per lo sviluppo di una feature.
+
+Il gruppo ha deciso di utilizzare un flusso di lavoro articolato come segue:
+- *Sviluppo di una feature*:
+	1.	*Creazione di un branch di feature*: creare un branch da develop su cui lavorare per lo sviluppo di una nuova funzionalità;
+	2.	*Modifica dei file nel nuovo branch*: effettuare modifiche e aggiungere #glossario[commit] per tenere traccia dei progressi;
+	3.	*Creazione di una #glossario[Pull Request]*: una volta sviluppata la funzionalità, effettuando i commit e il #glossario[push], aprire una pull request per avviare la revisione del codice;
+	4.	*Merge della Pull Request*: dopo la revisione, fare il merge del branch di feature in develop;
+	5.	*Eliminazione il branch*: eliminare il branch di feature per mantenere il repository pulito.
+- *Deploy dell'applicazione e release*:
+	+	*Creazione di una #glossario[Pull Request]*: aprire una pull request per richiedere una revisione finalizzata al merge di develop in main;
+	+	*Merge della Pull Request*: dopo la revisione, fare il merge;
 
 === Strumenti e tecnologie
 Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.
