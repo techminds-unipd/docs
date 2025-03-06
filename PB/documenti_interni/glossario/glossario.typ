@@ -446,6 +446,9 @@ Il verbale è un documento che registra in dettaglio ciò che è stato discusso 
 == Verifica // {Verifiche}
 Si occupa di accertare che lo svolgimento delle attività di sviluppo non introduca errori (Did I build the system right?) quindi pone l'attenzione sul way of working.
 
+== Vite
+Vite è un build tool che velocizza lo sviluppo di applicazioni web monitorando i file durante la loro modifica e facendo sì che il browser ricarchi la pagina ogni volta che uno o più file vengono modificati. Vite supporta React.
+
 = W
 == Way of working // {WoW}
 Insieme di regole e pratiche che stabiliscono come devono avvenire i processi del progetto.

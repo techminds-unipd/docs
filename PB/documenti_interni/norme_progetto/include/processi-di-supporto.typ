@@ -164,10 +164,10 @@ Le cartelle sono organizzate come segue:
 - *#glossario[agente]* contiene i file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test;
-- *backend* contiene i file per il linter, per Node, per il container Docker del backend e le sottocartelle:
+- *backend* contiene i file per il #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test;
-- *frontend* contiene i file per il linter, per Node, per Vite, per il container Docker del frontend e le sottocartelle:
+- *frontend* contiene i file per il linter, per Node, per #glossario[Vite], per il container Docker del frontend e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test;
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
