@@ -4,7 +4,7 @@
   title: "Piano di qualifica",
   sommario: "Il documento riporta le attività di verifica e validazione, affidandosi a delle metriche per garantire la qualità del prodotto.",
   changelog: (
-    "1.4.2", "06/03/2025", "Modifica metriche qualità per prodotto", team.S, "",
+    "1.4.2", "06/03/2025", "Modifica metriche qualità di prodotto", team.S, team.A,
     "1.4.1", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.C,
     "1.4.0", "03/03/2025", "Aggiunta test di accettazione", team.C, team.A,
     "1.3.0", "03/03/2025", "Aggiunta miglioramento", team.C, team.A,
