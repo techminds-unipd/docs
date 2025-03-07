@@ -1,6 +1,6 @@
 #import "/template/template.typ": glossario,team, tabellaSprint, pieChartSprint
 #import "@preview/timeliney:0.1.0"
-#import "../costi.typ": getSprintCostsSection
+#import "../costi.typ": getSprintCostsSection, getOreConsumatePersona, getOreConsumateRuoli
 
 === Sprint 7
 - Durata: 24/02/2025 - 07/03/2025
@@ -115,7 +115,8 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 #pieChartSprint(7, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint7> \
 
-/*#if consuntivo != none [
+
+#if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
   ==== Consuntivo
@@ -124,6 +125,8 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
   <tabella-ConsuntivoSprint7> \
   #pieChartSprint(7, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
   <grafico-ConsuntivoSprint7> \
-]*/
+]
 
+//#getOreConsumatePersona(sprintNumber: 7)
+//#getOreConsumateRuoli(sprintNumber: 7)
 //==== Aggiornamento preventivo a finire
