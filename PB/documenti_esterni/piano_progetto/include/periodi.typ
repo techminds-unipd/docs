@@ -78,7 +78,7 @@ Questa settimana, chiamata “pre-sprint”, è stata essenziale per:
 #linebreak()
 #linebreak()
 #linebreak()
-#let oreConsumate = getOreConsumateRuoli(5)
+#let oreConsumate = getOreConsumateRuoli(sprintNumber: 5)
 #let totale = oreConsumate.zip((30, 20, 25, 25, 15, 15)).map(x => x.at(0) * x.at(1)).sum()
 
 === Consuntivo di periodo RTB

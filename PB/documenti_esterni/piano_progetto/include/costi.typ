@@ -153,12 +153,13 @@
     return int(data)
 }
 
-#let getOreConsumateRuoli(end_sprint) = {
+#let getOreConsumateRuoli(sprintNumber: -1) = {
     let (_, consuntivo) = getSprintData()
-    let sprintNumber = getSprintNumber()
-
+    if (sprintNumber == -1){
+        sprintNumber = getSprintNumber()
+    }
     let ruoli = ()
-    for i in range(0, end_sprint+1) {
+    for i in range(0, 6) {
         let oreRuolo = 0;
         for j in range(0, sprintNumber) {
             oreRuolo += getNumber(consuntivo.bressan.at(j).at(i))
