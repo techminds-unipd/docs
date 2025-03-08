@@ -1,13 +1,13 @@
 == Backend
-#set list(marker: ([•], [-], [‣]))
+#set list(marker: ([-], [•], [‣]))
 #let arrow = sym.arrow.r
 #let declaration(str) = {text(str, fill:rgb("#0920cf"))}
 
 === RegisterUser
-// #figure(
-//     image("../assets/backend_register_user_diagramma_classi.svg", width: 90%),
-//     caption: [Diagramma delle classi riguardante la funzionalità RegisterUser del backend.],
-// )
+#figure(
+    image("../assets/backend_register_user_diagramma_classi.svg", width: 90%),
+    caption: [Diagramma delle classi riguardante la funzionalità RegisterUser del backend.],
+)
 
 #linebreak()
 *Classi e interfacce*
@@ -22,7 +22,6 @@
         - per le altre eccezioni ritorna status http 500;
         - la richiesta per registerUser viene validata attraverso le validation pipe di NestJS.
         - è utile avere dei metodi helper privati per convertire da _UserDTO_ ad _User_ e viceversa.
-
 
 - *RegisterUserUseCase* (interfaccia)
     - Operazioni:
@@ -49,23 +48,9 @@
     - Note:
         - è utile avere dei metodi helper privati per convertire da _User_ ad _UserEntity_ e viceversa.
 
-- UserRepository
-  // - Proprietà: TODO: c'è il modello di mongo, ma bisogna metterlo anche nel diagramma
-      - Proprietà:
-        -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria mongoose che si interfaccia con il database.
+- *UserRepository*
+    - Proprietà:
+        -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getUserByUsername(in username:string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_ esegue una query sul database che ritorna una _UserEntity_ specificando lo username.
+        - #declaration("+ getUserByUsername(in username:string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_ esegue una query sul database che ritorna una _UserEntity_ specificando lo username;
         - #declaration("+ registerUser(in user:UserEntity): UserEntity") #arrow attraverso il metodo _create_ salva l'utente sul database e lo ritorna come _UserEntity_.
-
-
-La classe RegisterUserController gestisce le richieste dall'eserno.
-Il metodo registerUser accetta uno UserDTO che contiene lo username e la password dell'utente che si vuole registrare.
-Dopo aver validato lo UserDTO lo converte in User (business logic) e lo passa al metodo registerUser dell'interfaccia RegisterUserUseCase.
-
-
-La classe RegisterUserService implementa la porta di input RegisterUseCase.
-Nel metodo registerUser verifica che non esistà già un altro utente registrato con lo stesso username (attraverso la GetUserPort) e si assicura che la password sia convertita in hash.
-Se le operazioni precedenti hanno successo procede a registrare l'utente attraverso il metodo registerUser di RegisterUserPort.
-
-
-UserPortAdapter implementa le porte di output citate precedentemente e interfacciandosi con UserRepository va ad effettuare le operazioni sul database.
