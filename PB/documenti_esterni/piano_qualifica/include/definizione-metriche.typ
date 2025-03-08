@@ -274,8 +274,8 @@
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Numero di dichiarazioni per funzione],
-            [Misura il massimo numero di dichiarazioni in una funzione.],
+            [Numero di variabili dichiarate per funzione],
+            [Misura il massimo numero di dichiarazioni di variabili in una funzione.],
             [Numero dichiarazioni = Numero di dichiarazioni per funzione;],
             [\u{2A7D}8],
             [\u{2A7D}5],
