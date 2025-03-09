@@ -4,7 +4,7 @@
   title: "Verbale esterno del 07/03/2025",
   sommario: "Riunione periodica con l'azienda proponente.",
   autore: team.T,
-  verificatore: "",
+  verificatore: team.C,
   durata_luogo: ("11:30", "12:00", "incontro su piattaforma Microsoft Teams"),
   partecipanti: 
     (text(weight: "bold", "Samuele De Simone") + " (Var Group)", 
