@@ -146,3 +146,42 @@ timeliney.timeline(
 ),
 caption: [Diagramma Gantt repository mvp sprint 8.]
 )<diagramma-gantt-mvp-sprint8>
+
+==== Rischi previsti
+Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sprint:
+- RP1 - Impegno di un membro del team inferiore a quanto dichiarato (descritto in @tabella-RP1);
+- RP2 - Malattia di un membro del team (descritto in @tabella-RP2);
+- RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3);
+- ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
+
+//==== Rischi occorsi
+//Nessuno dei rischi previsti si è concretizzato.
+
+//==== Conclusioni
+
+//==== Retrospettiva
+
+==== Preventivo
+#let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 8)
+
+#let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo) = preventivo
+#tabellaSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
+<tabella-PreventivoSprint8> \
+
+#pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
+<grafico-PreventivoSprint8> \
+
+/*
+#if consuntivo != none [
+
+  #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
+  ==== Consuntivo
+  I numeri tra parentesi indicano le variazioni rispetto al preventivo.
+  #tabellaSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
+  <tabella-ConsuntivoSprint8> \
+  #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
+  <grafico-ConsuntivoSprint8> \
+]
+*/
+
+//==== Aggiornamento preventivo a finire
