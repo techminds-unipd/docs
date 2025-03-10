@@ -42,7 +42,7 @@ L'obiettivo principale di questo sprint è iniziare a comporre il documento di s
     - #link("https://github.com/techminds-unipd/docs/issues/371")[Issue \#371]#footnote(link("https://github.com/techminds-unipd/docs/issues/371")): Creare funzioni \"sezione_glossario\" e \"sezione_scopo_prodotto\";
     - #link("https://github.com/techminds-unipd/docs/issues/373")[Issue \#373]#footnote(link("https://github.com/techminds-unipd/docs/issues/373")): Aggiornamento sito web;
 
-==== Issue non previste
+==== Issue aggiuntive
 In seguito alla valutazione del prof. Cardin e alla riunione con il proponente, sono state individuate alcune correzioni da apportare alla documentazione. Queste correzioni sono state inserite come issue non previste:
 - #link("https://github.com/techminds-unipd/docs/issues/398")[Issue \#398]#footnote(link("https://github.com/techminds-unipd/docs/issues/398")): Approfondimento requisiti;
 - #link("https://github.com/techminds-unipd/docs/issues/401")[Issue \#401]#footnote(link("https://github.com/techminds-unipd/docs/issues/401")): Riunioni periodiche in norme di progetto;
@@ -104,10 +104,11 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3);
 - ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
 
-//==== Rischi occorsi
+==== Rischi occorsi
+Nessuno dei rischi previsti si è concretizzato.
 
 ==== Conclusioni
-Il team è riuscito a completare le attività previste in questo sprint, inoltre nessuno dei rischi previsti si è concretizzato. La issue di progettazione logica è stata suddivisa in sub-issue per agevolare il lavoro. Ci sono stati 2 colloqui con il proponente per chiarire alcuni dubbi riguardanti la progettazione del prodotto. Inoltre, è stata completata la correzione degli errori presenti nella documentazione che ci sono stati comunicati nella valutazione RTB.
+Il team è riuscito a completare le attività previste in questo sprint. La issue di progettazione logica è stata suddivisa in sub-issue per agevolare il lavoro. Ci sono stati 2 colloqui con il proponente per chiarire alcuni dubbi riguardanti la progettazione del prodotto. Inoltre, è stata completata la correzione degli errori presenti nella documentazione che ci sono stati comunicati nella valutazione RTB.
 
 ==== Retrospettiva
 In questo sprint non si sono verificati problemi significativi. Il team ha lavorato bene e ha completato tutte le attività previste. Al fine di migliorare la progettazione futura, abbiamo deciso di rendere ancora più atomiche le issue, in modo che siano facilmente completabili da un singolo membro del gruppo. Inoltre, dal prossimo sprint i ruoli saranno meno rigidi dando priorità allo svuotamento del backlog, dato che dal consuntivo di questo sprint è emerso che vari membri del gruppo hanno svolto attività assegnate a ruoli differenti.
