@@ -12,6 +12,7 @@
 // #glossario[branch]
 // #glossario[RTB]
 // #glossario[github actions]
+// #glossario[blocchi]
 
 #show: documento.with(
   title: "Norme di progetto",
