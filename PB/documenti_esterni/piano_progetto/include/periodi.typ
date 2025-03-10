@@ -104,3 +104,4 @@ I costi effettivamente sostenuti durante il periodo RTB sono esposti nella @tabe
 La seconda milestone del progetto, chiamata Product Baseline, si concentra sulla progettazione e lo sviluppo del #glossario[MVP] da parte del gruppo. Questo periodo è caratterizzato da un maggiore tempo a disposizione da parte di molti membri del gruppo che hanno finito le lezioni.
 
 #include "sprint/sprint7.typ"
+#include "sprint/sprint8.typ"
