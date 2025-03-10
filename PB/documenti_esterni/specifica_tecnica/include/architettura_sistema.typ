@@ -15,6 +15,6 @@ L'agente è sviluppato in LangChain e comunica con il backend tramite un server 
 
 
 #include "frontend.typ"
-#include "backend.typ"
+#include "backend/backend.typ"
 #include "agente.typ"
 #include "database.typ"
