@@ -58,7 +58,7 @@ L'obiettivo principale di questo sprint è completare la progettazione logica e 
     - #link("https://github.com/techminds-unipd/mvp/issues/17")[Issue \#17]#footnote(link("https://github.com/techminds-unipd/mvp/issues/17")): Codifica frontend Home;
     - #link("https://github.com/techminds-unipd/mvp/issues/18")[Issue \#18]#footnote(link("https://github.com/techminds-unipd/mvp/issues/18")): Codifica frontend AboutUs;
     - #link("https://github.com/techminds-unipd/mvp/issues/19")[Issue \#19]#footnote(link("https://github.com/techminds-unipd/mvp/issues/19")): Codifica frontend SignIn;
-    - #link("https://github.com/techminds-unipd/mvp/issues/20")[Issue \#20]#footnote(link("https://github.com/techminds-unipd/mvp/issues/20")): Codifica frontend SignUp;
+    - #link("https://github.com/techminds-unipd/mvp/issues/20")[Issue \#20]#footnote(link("https://github.com/techminds-unipd/mvp/issues/20")): Codifica frontend SignUp.
 
 //==== Issue aggiuntive
 
