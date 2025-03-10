@@ -32,7 +32,7 @@
 === Funzionalità
 #displayMetrics(getMPRODByCharcteristic("funzionalità", true, true, false, false))
 
-=== Manutenibilità
+=== Manutenibilità <manutenibilità-prodotto>
 #displayMetrics(getMPRODByCharcteristic("manutenibilità", true, true, false, false))
 
 === Efficienza
