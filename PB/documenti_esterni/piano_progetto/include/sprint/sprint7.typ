@@ -56,36 +56,36 @@ timeliney.timeline(
       group(..range(5).map(n=>strong(str(n+3))))
     )
     taskgroup(title:[*Norme di progetto*],{
-      task("Inserire sezione \"Strumenti e tecnologie\"",(from: 0, to: 2, style: (stroke: 8pt + gray)))
-      task("Uniformare nomi attività allo standard",(from: 2, to: 4, style: (stroke: 8pt + gray)))
-      task("Definizione metriche in norme di progetto",(from: 4, to: 6, style: (stroke: 8pt + gray)))
-      task(align(center)[Gestione della configurazione #linebreak() MVP in norme di progetto],(from: 6, to: 8, style: (stroke: 8pt + gray)))
+      task("Inserire sezione \"Strumenti e tecnologie\"",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Uniformare nomi attività allo standard",(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 4, style: (stroke: 2pt + red)))
+      task("Definizione metriche in norme di progetto",(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
+      task(align(center)[Gestione della configurazione #linebreak() MVP in norme di progetto],(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 6, to: 8, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Piano di progetto*],{
-      task("Redazione consuntivo sprint 6",(from: 0, to: 1, style: (stroke: 8pt + gray)))
-      task("Redazione preventivo sprint 7",(from: 1, to: 3, style: (stroke: 8pt + gray)))
-      task("Documentare nuove milestone",(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task("Creare funzione ore_persona",(from: 5, to: 7, style: (stroke: 8pt + gray)))
+      task("Redazione consuntivo sprint 6",(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Redazione preventivo sprint 7",(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
+      task("Documentare nuove milestone",(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task("Creare funzione ore_persona",(from: 5, to: 7, style: (stroke: 8pt + gray)), (from: 5, to: 6, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Piano di qualifica*],{
-      task("Redigere test di accettazione",(from: 4, to: 7, style: (stroke: 8pt + gray)))
-      task("Ridondanza piano di qualifica",(from: 0, to: 4, style: (stroke: 8pt + gray)))
-      task("Sistemare test di sistema",(from: 7, to: 10, style: (stroke: 8pt + gray)))
+      task("Redigere test di accettazione",(from: 4, to: 7, style: (stroke: 8pt + gray)), (from: 4, to: 8, style: (stroke: 2pt + red)))
+      task("Ridondanza piano di qualifica",(from: 0, to: 4, style: (stroke: 8pt + gray)), (from: 0, to: 3, style: (stroke: 2pt + red)))
+      task("Sistemare test di sistema",(from: 7, to: 10, style: (stroke: 8pt + gray)), (from: 7, to: 10, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Specifica tecnica*],{
-      task("Definire struttura generale specifica tecnica",(from: 0, to: 1, style: (stroke: 8pt + gray)))
-      task("Redigere l'introduzione specifica tecnica",(from: 1, to: 2, style: (stroke: 8pt + gray)))
-      task("Progettazione logica",(from: 2, to: 10, style: (stroke: 8pt + gray)))
+      task("Definire struttura generale specifica tecnica",(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Redigere l'introduzione specifica tecnica",(from: 1, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Progettazione logica",(from: 2, to: 10, style: (stroke: 8pt + gray)), (from: 2, to: 10, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*MVP*],{
-      task("Struttura generale delle componenti",(from: 4, to: 6, style: (stroke: 8pt + gray)))
-      task("Setup container",(from: 6, to: 7, style: (stroke: 8pt + gray)))
+      task("Struttura generale delle componenti",(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
+      task("Setup container",(from: 6, to: 7, style: (stroke: 8pt + gray)), (from: 6, to: 8, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Altro*],{
-      task("Togliere changelog dal template dei verbali",(from: 0, to: 1, style: (stroke: 8pt + gray)))
-      task(align(center)[Creare funzioni \"sezione_glossario\"#linebreak() e \"sezione_scopo_prodotto\"],(from: 1, to: 2, style: (stroke: 8pt + gray)))
-      task("Controllare l'uso della parola \"fase\"",(from: 2, to: 3, style: (stroke: 8pt + gray)))
-      task("Aggiornamento sito web",(from: 3, to: 4, style: (stroke: 8pt + gray)))
+      task("Togliere changelog dal template dei verbali",(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center)[Creare funzioni \"sezione_glossario\"#linebreak() e \"sezione_scopo_prodotto\"],(from: 1, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Controllare l'uso della parola \"fase\"",(from: 2, to: 3, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
+      task("Aggiornamento sito web",(from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 4, style: (stroke: 2pt + red)))
     })
   }
 ),
@@ -101,9 +101,11 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 
 //==== Rischi occorsi
 
-//==== Conclusioni
+==== Conclusioni
+Il team è riuscito a completare le attività previste in questo sprint, inoltre nessuno dei rischi previsti si è concretizzato. Ci sono stati 2 colloqui con il proponente per chiarire alcuni dubbi riguardanti la progettazione del prodotto. Inoltre, è stata completata la correzione degli errori presenti nella documentazione che ci sono stati comunicati nella valutazione RTB.
 
-//==== Retrospettiva
+==== Retrospettiva
+In questo sprint non si sono verificati problemi significativi. Il team ha lavorato bene e ha completato tutte le attività previste. Al fine di migliorare la progettazione futura, abbiamo deciso di rendere ancora più atomiche le issue, in modo che siano facilmente completabili da un singolo membro del gruppo.
 
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 7)
@@ -129,4 +131,22 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 
 //#getOreConsumatePersona(sprintNumber: 7)
 //#getOreConsumateRuoli(sprintNumber: 7)
-//==== Aggiornamento preventivo a finire
+==== Aggiornamento preventivo a finire
+Durante la retrospettiva dello sprint 7 abbiamo deciso di modificare il preventivo a finire, dato che alcuni ruoli avevano quasi terminato le ore preventivate.
+Di seguito il nuovo PaF nella sottostante @tabella-paf-sprint-7.
+#figure(
+    table(
+        columns: (1fr,)*5,
+        align: center+horizon,
+            fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*],[*Costo orario*],[*Stima oraria*],[*Percentuale*],[*Stima costo*]),
+        [Responsabile], [30 #sym.euro], [40], [6%], [1.200 #sym.euro],
+        [Amministratore], [20 #sym.euro], [135 #text(rgb("#204680"))[(+35)]], [20%], [2.700 #sym.euro],
+        [Analista], [25 #sym.euro], [60 #text(rgb("#204680"))[(+5)]], [9%], [1.500 #sym.euro],
+        [Progettista], [25 #sym.euro], [90 #text(rgb("#204680"))[(-10)]], [14%], [2.250 #sym.euro],
+        [Programmatore], [15 #sym.euro], [160 #text(rgb("#204680"))[(-30)]], [24%], [2.400 #sym.euro],
+        [Verificatore], [15 #sym.euro], [180], [27%], [2.700 #sym.euro],
+        table.cell([*Costo Totale*], colspan: 4, fill: white), table.cell([*12.750 #sym.euro*], fill: white)
+    ),
+    caption: "Preventivo a finire sprint 7."
+)<tabella-paf-sprint-7>
