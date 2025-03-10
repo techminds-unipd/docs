@@ -21,7 +21,7 @@
 // legends :: [content, content]
 // hlines  :: [number]
 #let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, y-tick-step: int, caption: content) = {
-
+    let colours = (black, yellow, lime, teal, purple, orange, green, red, blue)
     if y-tick-step <= 0 {
         y-tick-step = auto
     }
@@ -38,9 +38,9 @@
 
                     for data in lines.zip(legends) {
                         if (data.at(1) == []) {
-                            plot.add(data.at(0)(offset: 0), line: "linear")
+                            plot.add(data.at(0)(offset: 0), line: "linear", style: (stroke: (paint: colours.pop())))
                         } else {
-                            plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1))
+                            plot.add(data.at(0)(offset: 0), line: "linear", label: data.at(1), style: (stroke: (paint: colours.pop())))
                         }
                     }
 
@@ -142,17 +142,20 @@
 #let metriche_ottime = ()
 
 //Indice di Gulpease
-#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,94))
-#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85))
-#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58))
-#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68))
-#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58))
+#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,68),(7,68))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85),(7,80))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58),(7,58))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68),(7,68))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58),(7,58))
+#let g_st = ((7,53),)
 
 #for i in range(1, sprint_number+1) {
     if(i<=5){
     costo_totale_stimato.push(12975)
-    } else{
+    } else if(i<=7){
     costo_totale_stimato.push(12625)
+    } else {
+    costo_totale_stimato.push(12750)    
     }
 
     ac.push((i, tot_spesa.slice(0,i).sum()))
@@ -201,6 +204,7 @@
 #let g_pdq_fun(offset: 0) = g_pdq
 #let g_ndp_fun(offset: 0) = g_ndp
 #let g_gloss_fun(offset: 0) = g_gloss
+#let g_st_fun(offset: 0) = g_st
 #let rischi_fun(offset: 0) = rischi
 #let metriche_accettabili_fun(offset:0) = metriche_accettabili
 #let metriche_ottime_fun(offset:0) = metriche_ottime
@@ -306,20 +310,21 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 #let x_axis = ((1,36),)
 #let x_axis_fun(offset: 0) = x_axis
 
-#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, x_axis_fun),
-    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[]),
+#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, g_st_fun, x_axis_fun),
+    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[ST],[]),
     hlines: ((40,40)),
     x-label: "sprint",
     y-label: "indice",
     y-tick-step: -1,
-    caption: [Indice di Gulpease in AdR, PdP, PdQ, Glossario e NdP.])
+    caption: [Indice di Gulpease in AdR, PdP, PdQ, ST, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
 - #glossario[Analisi dei requisiti] ;
 - Piano di progetto;
 - Piano di qualifica;
 - Glossario;
-- Norme di progetto.
+- Norme di progetto;
+- Specifica Tecnica.
 
 #linebreak()
 *RTB*
