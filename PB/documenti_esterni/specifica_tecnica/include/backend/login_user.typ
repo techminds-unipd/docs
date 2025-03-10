@@ -13,17 +13,17 @@
     - Proprietà:
         - #declaration("- loginUserService: LoginUserUseCase") #arrow porta di input per il servizio di business dedicato al login dell'utente.
     - Operazioni:
-        - #declaration("+ loginUser(req: UserDTO): JWT") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo _loginUser_ definito in _LoginUserUseCase_ e, se non vengono lanciate eccezioni, crea e ritorna il token di autenticazione attraverso un _JWT_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ login(req: UserDTO): JWT") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo _loginUser_ definito in _LoginUserUseCase_ e, se non vengono lanciate eccezioni, crea e ritorna il token di autenticazione attraverso un _JWT_, altrimenti gestisce le eccezioni sollevate.
 
 - *LoginUserUseCase* (interfaccia)
     - Operazioni:
-        - #declaration("+ loginUser(user: User): User").
+        - #declaration("+ login(user: User): User").
 
 - *LoginUserService*
     - Proprietà:
         - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di uno user dal database.
     - Operazioni:
-        - #declaration("+ loginUser(user: User): User") #arrow riprende lo _user_ dalla persistenza attraverso la _GetUserPort_. Successivamente utilizza il metodo _compare_ della libreria _bcrypt_ per controllare che gli hash delle password dei due _user_ corrispondano. Se il controllo va a buon fine ritorna lo stesso _user_ della richiesta, altrimenti se non si trova lo _user_ o la password non corrisponde vengono lanciati rispettivamente _UserNotFoundError_ e _WrongPasswordError_.
+        - #declaration("+ login(user: User): User") #arrow riprende lo _user_ dalla persistenza attraverso la _GetUserPort_. Successivamente utilizza il metodo _compare_ della libreria _bcrypt_ per controllare che gli hash delle password dei due _user_ corrispondano. Se il controllo va a buon fine ritorna lo stesso _user_ della richiesta, altrimenti se non si trova lo _user_ o la password non corrisponde vengono lanciati rispettivamente _UserNotFoundError_ e _WrongPasswordError_.
 
 - *GetUserPort* (interfaccia)
     - #declaration("+ getUserByUsername(username: string): User[0..1]").
