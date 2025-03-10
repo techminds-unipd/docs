@@ -300,17 +300,44 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 
 UML definisce vari elementi grafici per rappresentare le classi e le relazioni tra di esse. I principali elementi utilizzati nei diagrammi delle classi sono:
 - Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). I metodi sono definiti con la seguente sintassi: \ nomeMetodo(parametri: tipoParametri): tipoRitorno;
+#figure(
+    image("../assets/classe.svg", width: 32%), caption: "Esempio classe UML",
+)
 - Classe astratta: rappresenta una classe che non può essere istanziata, ma che viene utilizzata come superclasse per la generalizzazione di altre classi. È rappresentata come una classe, ma con il nome in #text("corsivo" , style: "italic")\;
+#figure(
+    image("../assets/classe_astratta.svg", width: 30%), caption: "Esempio classe astratta UML",
+)
 - Interfaccia: rappresenta una classe priva di attributi e implementazione dei metodi, i quali devono essere implementati dalle classi che la realizzano. È rappresentata come un cerchio con il nome dell'interfaccia al di sotto.
+#figure(
+    image("../assets/interfaccia.svg", width: 30%), caption: "Esempio interfaccia UML",
+)
 
 Le relazioni tra questi elementi possono essere di vario tipo:
 - Associazione: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe (spesso interscambiabile con un attributo). È rappresentata da una linea continua direzionata tra le classi coinvolte;
+#figure(
+    image("../assets/associazione.svg", width: 35%), caption: "Esempio associazione UML",
+)
 - Aggregazione: rappresenta una relazione tra due classi in cui un oggetto di una classe è \"parte di\" un oggetto di un'altra classe e può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo vuoto sul lato della classe che contiene l'oggetto;
+#figure(
+    image("../assets/aggregazione.svg", width: 35%), caption: "Esempio aggregazione UML",
+)
 - Composizione: rappresenta una relazione tra due classi simile all'aggregazione, con l'unica differenza che l'oggetto contenuto appartiene solo all'oggetto contenitore, quindi non può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo pieno sul lato della classe che contiene l'oggetto;
+#figure(
+    image("../assets/composizione.svg", width: 35%), caption: "Esempio composizione UML",
+)
 - Generalizzazione: rappresenta una relazione tra una superclasse e una sottoclasse, indicando che la sottoclasse generalizza la superclasse. L'oggetto della sottoclasse quindi è anche un oggetto della superclasse e ne eredita gli attributi/metodi. È rappresentata da una linea continua con una freccia vuota dalla sottoclasse alla superclasse;
+#figure(
+    image("../assets/generalizzazione.svg", width: 40%), caption: "Esempio generalizzazione UML",
+)
 - Realizzazione: rappresenta una relazione tra una classe e un'interfaccia, indicando che la classe implementa i metodi dell'interfaccia. È rappresentata da una linea continua tra la classe e l'interfaccia;
+#figure(
+    image("../assets/realizzazione.svg", width: 35%), caption: "Esempio realizzazione UML",
+)
 - Dipendenza: rappresenta una relazione tra due classi in cui un cambiamento in una classe può influenzare l'altra e quindi richiedere una modifica. È rappresentata da una linea tratteggiata direzionata dalla classe che dipende all'altra.
-
+#figure(
+    image("../assets/dipendenza.svg", width: 35%), caption: "Esempio dipendenza UML",
+)
+\
 Per una maggiore chiarezza e comprensione, alcune classi possono essere colorate in modo diverso per evidenziare, ad esempio, la loro appartenza a una libreria esterna e quindi non modellata dal gruppo.
 
 ==== Strumenti e tecnologie
