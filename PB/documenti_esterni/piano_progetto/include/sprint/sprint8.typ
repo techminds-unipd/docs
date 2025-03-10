@@ -160,7 +160,6 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 //==== Conclusioni
 
 //==== Retrospettiva
-
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 8)
 

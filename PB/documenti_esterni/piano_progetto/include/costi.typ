@@ -121,13 +121,13 @@
     vallotto_consuntivo.push(  (0, "5 (+5)", "3 (+3)", "4 (+4)", 0, "7 (-8)") )
 
     //Sprint 8
-    bressan_preventivo.push(   (0, 0, 0, 0, 0, 15) )
-    corradin_preventivo.push(  (0, 0, 0, 15, 0, 0) )
-    lazzarin_preventivo.push(  (6, 0, 0, 0, 5, 0) )
-    salviato_preventivo.push(  (0, 15, 0, 0, 0, 0) )
-    squarzoni_preventivo.push( (0, 0, 0, 15, 0, 0) )
-    tutino_preventivo.push(    (0, 0, 0, 15, 0, 0) )
-    vallotto_preventivo.push(  (0, 0, 0, 0, 0, 15) )
+    bressan_preventivo.push(   (0, 0, 0, 8, 11, 3) )
+    corradin_preventivo.push(  (0, 4, 0, 4, 7, 2) )
+    lazzarin_preventivo.push(  (0, 0, 0, 10, 6, 3) )
+    salviato_preventivo.push(  (0, 0, 0, 8, 11, 4) )
+    squarzoni_preventivo.push( (4, 0, 0, 4, 6, 2) )
+    tutino_preventivo.push(    (0, 0, 0, 5, 10, 4) )
+    vallotto_preventivo.push(  (0, 0, 0, 8, 8, 2) )
 
     // bressan_consuntivo.push(   (0, 0, 0, "2 (+2)", 0, 15) )
     // corradin_consuntivo.push(  (0, 0, 0, "11 (-4)", "6 (+6)", 0) )
