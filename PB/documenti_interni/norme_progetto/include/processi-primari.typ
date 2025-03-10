@@ -312,9 +312,29 @@ Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codi
 - Fattibilità dell'integrazione e del testing del software;
 - Fattibilità delle operazioni e della manutenzione.
 
-// qui si dovranno mettere le regole che decidiamo di seguire per il codice, ad esempio come indentare, come scrivere i commenti, lunghezza metodi ecc.
+==== Norme di codifica
+Per garantire la qualità del codice prodotto, è necessario stabilire delle regole e delle linee guida che i membri del gruppo devono seguire durante l'attività di codifica. Queste regole riguardano principalmente la formattazione del codice e la struttura dei metodi. 
+\ Riguardo la formattazione del codice le regole da seguire sono:
+- Indentazione: utilizzare 4 spazi per l'indentazione;
+- Virgolette: utilizzare le virgolette doppie per le stringhe;
+- Virgole: non mettere la virgola alla fine di una struttura dati;
+- Parentesi graffe: aggiungere uno spazio tra le parentesi graffe e il codice interno;
+- Commenti: evitare commenti superflui, se necessari non inserirli in linea;
+- Convenzione nomenclatura: utilizzare la notazione camelCase per i nomi delle variabili e delle funzioni, mentre per le classi utilizzare la notazione PascalCase.
 
-//==== Strumenti e tecnologie
+Riguardo la struttura dei metodi le regole da seguire per mantenere il codice leggibile e manutenibile sono:
+- Complessità ciclomatica: ricercare una complessità ciclomatica ridotta, in modo da evitare troppi percorsi difficili da testare;
+- Parametri per metodo: mantenere il minimo numero di parametri per metodo, evitando di inserire parametri superflui;
+- Lunghezza del metodo: ricercare la minima lunghezza di un metodo, in modo da evitare metodi troppo lunghi e difficili da comprendere, preferire un numero maggiore di metodi brevi e facilmente comprensibili;
+- Lunghezza del file: mantenere la lunghezza del file entro un limite ragionevole, in modo da evitare file troppo grandi e non organizzati, cercare invece di avere un file per ogni classe (backend) o componente (frontend);
+- Profondità di annidamento: ricercare la minima profondità di annidamento di blocchi di codice, in modo da evitare strutture troppo complesse;
+- Variabili per funzione: mantenere il minimo numero di variabili per funzione, evitando di creare variabili superflue;
+- Duplicazione del codice: evitare la duplicazione del codice, in modo da mantenere il codice manutenibile e ridurre il rischio di errori, cercare invece di creare funzioni o metodi riutilizzabili.
+
+Tutte queste regole verranno applicate durante l'attività di codifica e saranno verificate tramite l'utilizzo di strumenti di analisi statica del codice, inoltre verranno misurate alcune metriche definite in @manutenibilità-prodotto per valutare la manutenibilità del codice prodotto.  
+
+==== Strumenti
+- Emacs e Visual Studio Code per la codifica del software.
 
 === Integrazione
 L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
