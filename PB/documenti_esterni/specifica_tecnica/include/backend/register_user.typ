@@ -49,5 +49,5 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getUserByUsername(in username:string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_ esegue una query sul database che ritorna una _UserEntity_ specificando lo username;
-        - #declaration("+ registerUser(in user:UserEntity): UserEntity") #arrow attraverso il metodo _create_ salva l'utente sul database e lo ritorna come _UserEntity_.
+        - #declaration("+ getUserByUsername(in username:string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_, passandogli lo _username_, esegue una query sul database che ritorna una _UserEntity_;
+        - #declaration("+ registerUser(user:UserEntity): UserEntity") #arrow attraverso il metodo _create_ salva l'utente sul database e lo ritorna come _UserEntity_.

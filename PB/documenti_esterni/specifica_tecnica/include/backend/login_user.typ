@@ -21,9 +21,9 @@
 
 - *LoginUserService*
     - Proprietà:
-        - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di un utente dal database.
+        - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di uno user dal database.
     - Operazioni:
-        - #declaration("+ loginUser(user: User): User") #arrow riprende lo user dalla persistenza attraverso la _GetUserPort_. Successivamente utilizza il metodo _compare_ della libreria _bcrypt_ per controllare che gli hash delle password dei due user corrispondano. Se il controllo va a buon fine ritorna lo stesso user della richiesta, altrimenti se non si trova l'utente o la password non corrisponde vengono lanciati rispettivamente _UserNotFoundError_ e _WrongPasswordError_.
+        - #declaration("+ loginUser(user: User): User") #arrow riprende lo _user_ dalla persistenza attraverso la _GetUserPort_. Successivamente utilizza il metodo _compare_ della libreria _bcrypt_ per controllare che gli hash delle password dei due _user_ corrispondano. Se il controllo va a buon fine ritorna lo stesso _user_ della richiesta, altrimenti se non si trova lo _user_ o la password non corrisponde vengono lanciati rispettivamente _UserNotFoundError_ e _WrongPasswordError_.
 
 - *GetUserPort* (interfaccia)
     - #declaration("+ getUserByUsername(username: string): User[0..1]").
@@ -32,15 +32,15 @@
     - Proprietà:
         -  #declaration("- userRepository: UserRepository") #arrow oggetto di persistence che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getUserByUsername(username: string): User[0..1]") #arrow metodo dichiarato nella porta _GetUserPort_. Chiama il metodo _getUserByUsername_ del repository e poi, se l'output non è null, lo converte in _User_ e lo ritorna, altrimenti ritorna null.
+        - #declaration("+ getUserByUsername(username: string): User[0..1]") #arrow metodo dichiarato nella porta _GetUserPort_. Chiama il metodo _getUserByUsername_ del repository e poi, se l'output non è _null_, lo converte in _User_ e lo ritorna, altrimenti ritorna _null_.
     - Note:
-        - Sono state descritte solamente le operazioni utilizzate in questa funzionalità;
+        - sono state descritte solamente le operazioni utilizzate in questa funzionalità;
         - è utile avere dei metodi helper privati per convertire da _User_ ad _UserEntity_ e viceversa.
 
 - *UserRepository*
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getUserByUsername(in username:string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_ esegue una query sul database che ritorna una _UserEntity_ specificando lo username;
+        - #declaration("+ getUserByUsername(in username:string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_, passandogli lo _username_, esegue una query sul database che ritorna una _UserEntity_.
     - Note:
-        - Sono state descritte solamente le operazioni utilizzate in questa funzionalità.
+        - sono state descritte solamente le operazioni utilizzate in questa funzionalità.
