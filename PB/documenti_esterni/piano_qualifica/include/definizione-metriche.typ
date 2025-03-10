@@ -252,25 +252,33 @@
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Linee di codice per metodo],
             [Numero massimo di linee di codice per metodo.],
-            [Linee di codice per metodo =  Numero di linee di codice del metodo in esame;],
+            [Linee di codice per metodo = Numero di linee di codice del metodo in esame;],
             [\u{2A7D}30],
             [\u{2A7D}20],
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Attributi per classe],
-            [Numero massimo di attributi per classe.],
-            [Attributi per classe = Numero di attributi di una classe;],
+            [Linee di codice per file],
+            [Numero massimo di linee di codice per file.],
+            [Linee di codice per file = Numero di linee di codice del file in esame;],
+            [\u{2A7D}300],
+            [\u{2A7D}200],
+            "manutenibilità"))
+
+#MPROD.push(  ("MPROD" + str(MPROD.len()+1),
+            [Profondità blocchi di codice innestati],
+            [Misura la profondità massima di blocchi di codice innestati.],
+            [Profondità massima = Numero di livelli innestati tra il blocco più esterno e quello più interno;],
             [\u{2A7D}4],
             [\u{2A7D}3],
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Profondità della gerarchie],
-            [Metrica che misura il numero di livelli tra una classe base (superclasse) e le sue sottoclassi (classi derivate).],
-            [$"Profondità della gerarchie" &= max("livelli tra una classe e la sua radice nella gerarchia")$;],
+            [Numero di variabili dichiarate per funzione],
+            [Misura il massimo numero di dichiarazioni di variabili in una funzione.],
+            [Numero dichiarazioni = Numero di dichiarazioni per funzione;],
+            [\u{2A7D}8],
             [\u{2A7D}5],
-            [\u{2A7D}3],
             "manutenibilità"))
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
