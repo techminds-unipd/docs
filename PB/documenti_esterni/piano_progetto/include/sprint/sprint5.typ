@@ -39,7 +39,7 @@ Nel quinto sprint intendiamo focalizzarci sulla realizzazione del cruscotto per 
   - Altro
     - #link("https://github.com/techminds-unipd/docs/issues/234")[Issue \#234] #footnote(link("https://github.com/techminds-unipd/docs/issues/234")): Scrivere lettera di presentazione per RTB;
     - #link("https://github.com/techminds-unipd/docs/issues/235")[Issue \#235] #footnote(link("https://github.com/techminds-unipd/docs/issues/235")): Uniformare date in tutti i documenti.
-==== Issue aggiuntive:
+==== Issue aggiuntive
   - Piano di progetto:
     - #link("https://github.com/techminds-unipd/docs/issues/281")[Issue \#281] #footnote(link("https://github.com/techminds-unipd/docs/issues/281")): Aggiornamento piano di progetto;
     - #link("https://github.com/techminds-unipd/docs/issues/326")[Issue \#326] #footnote(link("https://github.com/techminds-unipd/docs/issues/326")): Redazione consuntivo di periodo RTB;
