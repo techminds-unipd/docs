@@ -13,7 +13,7 @@
     - Proprietà:
         - #declaration("- loginUserService: LoginUserUseCase") #arrow porta di input per il servizio di business dedicato al login dell'utente.
     - Operazioni:
-        - #declaration("+ login(req: UserDTO): JWT") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo _loginUser_ definito in _LoginUserUseCase_ e, se non vengono lanciate eccezioni, crea e ritorna il token di autenticazione attraverso un _JWT_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ login(req: UserDTO): JWT") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo _login_ definito in _LoginUserUseCase_ e, se non vengono lanciate eccezioni, crea e ritorna il token di autenticazione attraverso un _JWT_, altrimenti gestisce le eccezioni sollevate.
 
 - *LoginUserUseCase* (interfaccia)
     - Operazioni:
