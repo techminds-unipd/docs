@@ -130,8 +130,6 @@ timeliney.timeline(
       task("Codifica funzionalità WorkflowNameList",(from: 6, to: 7, style: (stroke: 8pt + gray)))
       task("Codifica funzionalità ExecuteWorkflow",(from: 7, to: 10, style: (stroke: 8pt + gray)))
       task(align(center, [Codifica funzionalità #linebreak() ConnectionGoogleAccount]),(from: 7, to: 10, style: (stroke: 8pt + gray)))
-
-
     })
     taskgroup(title:[*Frontend*],{
       task("Codifica Navbar",(from: 3, to: 5, style: (stroke: 8pt + gray)))
