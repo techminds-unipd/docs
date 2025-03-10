@@ -296,9 +296,25 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 - Forniscono una visione d'insieme del sistema, facilitando la comprensione e la comunicazione interna tra i membri del gruppo e con gli stakeholder;
 - Offrono un linguaggio comune (#glossario[UML]) che permette di seguire uno standard riconosciuto a livello internazionale.
 
-//*Diagrammi UML* // da aggiungere quando si saprà come fare i diagrammi con Typst
+*Diagrammi UML*
 
-//==== Strumenti e tecnologie
+UML definisce vari elementi grafici per rappresentare le classi e le relazioni tra di esse. I principali elementi utilizzati nei diagrammi delle classi sono:
+- Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). I metodi sono definiti con la seguente sintassi: \ nomeMetodo(parametri: tipoParametri): tipoRitorno;
+- Classe astratta: rappresenta una classe che non può essere istanziata, ma che viene utilizzata come superclasse per la generalizzazione di altre classi. È rappresentata come una classe, ma con il nome in #text("corsivo" , style: "italic")\;
+- Interfaccia: rappresenta una classe priva di attributi e implementazione dei metodi, i quali devono essere implementati dalle classi che la realizzano. È rappresentata come un cerchio con il nome dell'interfaccia al di sotto.
+
+Le relazioni tra questi elementi possono essere di vario tipo:
+- Associazione: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe (spesso interscambiabile con un attributo). È rappresentata da una linea continua direzionata tra le classi coinvolte;
+- Aggregazione: rappresenta una relazione tra due classi in cui un oggetto di una classe è \"parte di\" un oggetto di un'altra classe e può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo vuoto sul lato della classe che contiene l'oggetto;
+- Composizione: rappresenta una relazione tra due classi simile all'aggregazione, con l'unica differenza che l'oggetto contenuto appartiene solo all'oggetto contenitore, quindi non può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo pieno sul lato della classe che contiene l'oggetto;
+- Generalizzazione: rappresenta una relazione tra una superclasse e una sottoclasse, indicando che la sottoclasse generalizza la superclasse. L'oggetto della sottoclasse quindi è anche un oggetto della superclasse e ne eredita gli attributi/metodi. È rappresentata da una linea continua con una freccia vuota dalla sottoclasse alla superclasse;
+- Realizzazione: rappresenta una relazione tra una classe e un'interfaccia, indicando che la classe implementa i metodi dell'interfaccia. È rappresentata da una linea continua tra la classe e l'interfaccia;
+- Dipendenza: rappresenta una relazione tra due classi in cui un cambiamento in una classe può influenzare l'altra e quindi richiedere una modifica. È rappresentata da una linea tratteggiata direzionata dalla classe che dipende all'altra.
+
+Per una maggiore chiarezza e comprensione, alcune classi possono essere colorate in modo diverso per evidenziare, ad esempio, la loro appartenza a una libreria esterna e quindi non modellata dal gruppo.
+
+==== Strumenti e tecnologie
+Per la progettazione del software tramite diagrammi delle classi è stato utilizzato StarUML, mentre per la progettazione dell'interfaccia grafica è stato utilizzato Figma.
 
 === Codifica e testing
 L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. La codifica prevede che il codice sia scritto e testato per garantire che il prodotto soddisfi i requisiti individuati durante l'analisi e rispetti la progettazione definita al precedentemente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati con il proponente.
