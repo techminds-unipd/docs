@@ -5,7 +5,7 @@
 
 // === Diagrammi delle classi
 
-==== Componenti personalizzare
+==== Componenti personalizzate
 ===== Footer
 In ogni pagina è presente un componente Footer che utilizza i seguenti componenti di MaterialUI:
 - Grid2 per il layout;
