@@ -369,7 +369,7 @@ Riguardo la struttura dei metodi le regole da seguire per mantenere il codice le
 - Complessità ciclomatica: ricercare una complessità ciclomatica ridotta, in modo da evitare troppi percorsi difficili da testare;
 - Parametri per metodo: mantenere il minimo numero di parametri per metodo, evitando di inserire parametri superflui;
 - Lunghezza del metodo: ricercare la minima lunghezza di un metodo, in modo da evitare metodi troppo lunghi e difficili da comprendere, preferire un numero maggiore di metodi brevi e facilmente comprensibili;
-- Lunghezza del file: mantenere la lunghezza del file entro un limite ragionevole, in modo da evitare file troppo grandi e non organizzati, cercare invece di avere un file per ogni classe (backend) o componente (frontend);
+- Lunghezza del file: mantenere la lunghezza del file entro un limite ragionevole, in modo da evitare file troppo grandi e non organizzati, cercare invece di avere un file per ogni classe (backend/agente) o componente (frontend);
 - Profondità di annidamento: ricercare la minima profondità di annidamento di blocchi di codice, in modo da evitare strutture troppo complesse;
 - Variabili per funzione: mantenere il minimo numero di variabili per funzione, evitando di creare variabili superflue;
 - Duplicazione del codice: evitare la duplicazione del codice, in modo da mantenere il codice manutenibile e ridurre il rischio di errori, cercare invece di creare funzioni o metodi riutilizzabili.
