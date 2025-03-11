@@ -25,3 +25,4 @@ Questa scelta ha anche dei lati negativi, ad esempio:
 === Funzionalità
 #include("register_user.typ")
 #include("login_user.typ")
+#include("get_workflow.typ")
