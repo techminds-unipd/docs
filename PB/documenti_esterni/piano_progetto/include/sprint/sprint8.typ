@@ -6,7 +6,7 @@
 - Durata: 10/03/2025 - 21/03/2025
 
 ==== Pianificazione
-L'obiettivo principale di questo sprint è completare la progettazione logica e di dettaglio. In seguito, verrà iniziata l'implementazione del prodotto e i relativi test.
+L'obiettivo principale di questo sprint è quello di ultimare la progettazione logica. In seguito, verrà svolta la progettazione di dettaglio e l'implementazione del prodotto accompagnata da relativi test di unità.
 
 - Ruoli:
   - responsabile: #team.M\;
