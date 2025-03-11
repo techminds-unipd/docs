@@ -7,7 +7,7 @@
 
 ==== Componenti personalizzate
 ===== Footer
-In ogni pagina è presente un componente Footer che utilizza i seguenti componenti di MaterialUI:
+In ogni pagina è presente un componente Footer che utilizza i seguenti componenti di MUI:
 - Grid2 per il layout;
 - GitHubIcon per l'icona di GitHub;
 - Link per il link all'organizzazione GitHub del gruppo;
