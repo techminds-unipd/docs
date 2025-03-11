@@ -17,10 +17,10 @@ L'obiettivo principale di questo sprint è completare la progettazione logica e 
 - Issue:
   - Piano di progetto
     - #link("https://github.com/techminds-unipd/docs/issues/429")[Issue \#429]#footnote(link("https://github.com/techminds-unipd/docs/issues/429")): Consuntivo sprint 7 e aggiornamento preventivo a finire;
-    - #link("https://github.com/techminds-unipd/docs/issues/433")[Issue \#433]#footnote(link("https://github.com/techminds-unipd/docs/issues/433")): Preventivo sprint 8;
+    - #link("https://github.com/techminds-unipd/docs/issues/433")[Issue \#433]#footnote(link("https://github.com/techminds-unipd/docs/issues/433")): Preventivo sprint 8.
   - Norme di progetto
     - #link("https://github.com/techminds-unipd/docs/issues/434")[Issue \#434]#footnote(link("https://github.com/techminds-unipd/docs/issues/434")): Documentare progettazione in norme di progetto;
-    - #link("https://github.com/techminds-unipd/docs/issues/435")[Issue \#435]#footnote(link("https://github.com/techminds-unipd/docs/issues/435")): Documentare codifica in norme di progetto;
+    - #link("https://github.com/techminds-unipd/docs/issues/435")[Issue \#435]#footnote(link("https://github.com/techminds-unipd/docs/issues/435")): Documentare codifica in norme di progetto.
   - Specifica tecnica
     - #link("https://github.com/techminds-unipd/docs/issues/436")[Issue \#436]#footnote(link("https://github.com/techminds-unipd/docs/issues/436")): Descrizione funzionalità backend login;
     - #link("https://github.com/techminds-unipd/docs/issues/437")[Issue \#437]#footnote(link("https://github.com/techminds-unipd/docs/issues/437")): Descrizione funzionalità backend CreateWorkflow;
@@ -41,7 +41,7 @@ L'obiettivo principale di questo sprint è completare la progettazione logica e 
     - #link("https://github.com/techminds-unipd/docs/issues/452")[Issue \#452]#footnote(link("https://github.com/techminds-unipd/docs/issues/452")): Descrizione frontend SignIn;
     - #link("https://github.com/techminds-unipd/docs/issues/453")[Issue \#453]#footnote(link("https://github.com/techminds-unipd/docs/issues/453")): Descrizione frontend SignUp;
     - #link("https://github.com/techminds-unipd/docs/issues/454")[Issue \#454]#footnote(link("https://github.com/techminds-unipd/docs/issues/454")): Descrizione frontend Workflow;
-    - #link("https://github.com/techminds-unipd/docs/issues/455")[Issue \#455]#footnote(link("https://github.com/techminds-unipd/docs/issues/455")): Descrizione frontend Services;
+    - #link("https://github.com/techminds-unipd/docs/issues/455")[Issue \#455]#footnote(link("https://github.com/techminds-unipd/docs/issues/455")): Descrizione frontend Services.
   - MVP
     - #link("https://github.com/techminds-unipd/mvp/issues/4")[Issue \#4]#footnote(link("https://github.com/techminds-unipd/mvp/issues/4")): Codifica agente;
     - #link("https://github.com/techminds-unipd/mvp/issues/5")[Issue \#5]#footnote(link("https://github.com/techminds-unipd/mvp/issues/5")): Codifica funzionalità backend ConnectionGoogleAccount;
