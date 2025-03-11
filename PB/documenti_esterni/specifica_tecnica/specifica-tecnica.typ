@@ -4,6 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "0.8.0", "11/03/2025", "Aggiunta sezione frontend", team.C, "",
     "0.7.0", "08/03/2025", "Aggiunta funzionalità backend LoginUser", team.G, team.S,
     "0.6.0", "07/03/2025", "Aggiunta funzionalità backend registrazione", team.G, team.C,
     "0.5.0", "06/03/2025", "Aggiunta sezione introduzione e diagramma delle classi per il backend", team.G, team.A,
