@@ -17,7 +17,6 @@
     - Note:
         - la richiesta viene controllata dalla _AuthGuard_ offerta da NestJS che controlla la validità del JWT. Successivamente crea l'argomento _request_ che contiene lo _username_ per il metodo _getWorkflow_ del _GetWorkflowController_;
         - in caso di eccezione _WorkflowNotFoundError_ ritorna status http 404;
-        - in caso di eccezione _InvalidTokenError_ ritorna status http 401;
         - per le altre eccezioni ritorna status http 500;
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e viceversa.
 
