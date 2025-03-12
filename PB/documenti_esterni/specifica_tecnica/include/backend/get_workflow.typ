@@ -1,4 +1,4 @@
-#import "functions.typ": declaration, arrow
+#import "funzioni_ausiliarie.typ": *
 
 ==== GetWorkflow
 #figure(
@@ -26,20 +26,19 @@
 
 - *GetWorkflowService*
     - Proprietà:
-        - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di un _workflow_ dal database.
+        #service_proprietà_get_workflow_port
     - Operazioni:
         - #declaration("+ getWorkflow(cmd: GetWorkflowCommand): Workflow") #arrow riprende il _workflow_ dalla persistenza attraverso la _GetWorkflowPort_. Successivamente ritorna il _workflow_ se non è _null_, altrimenti lancia un'eccezione _WorkflowNotFoundError_.
     - Note:
         - GetWorkflowCommand è un oggetto che contiene lo _username_ e il _workflowName_.
 
-- *GetWorkflowPort* (interfaccia)
-    - #declaration("+ getWorkflowByName(username: string, workflowName: string): Workflow[0..1]").
+#get_user_port_interfaccia
 
 - *WorkflowPortAdapter*
     - Proprietà:
         -  #declaration("- workflowRepository: WorkflowRepository") #arrow oggetto di persistence che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getWorkflowByName(username: string, workflowName: string): Workflow[0..1]") #arrow metodo dichiarato nella porta _GetWorkflowPort_. Chiama il metodo _getWorkflowByName_ del repository e poi, se l'output non è _null_, lo converte in _Workflow_ e lo ritorna, altrimenti ritorna _null_.
+        #adapter_operazioni_get_workflow
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità;
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowEntity_ e viceversa.
@@ -48,6 +47,6 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getWorkflowByName(username: string, workflowName: string): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_, passandogli lo _username_ e il _workflowName_, esegue una query sul database che ritorna un oggetto contenente una _WorkflowEntity_.
+        #repository_operazioni_get_workflow
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.
