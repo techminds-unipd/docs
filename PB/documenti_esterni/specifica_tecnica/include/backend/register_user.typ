@@ -1,4 +1,4 @@
-#import "functions.typ": declaration, arrow
+#import "functions.typ": *
 
 ==== RegisterUser
 #figure(
@@ -27,12 +27,11 @@
 - *RegisterUserService*
     - Proprietà:
         - #declaration("- registerUserPort: RegisterUserPort") #arrow porta di output per la registrazione utente sul database;
-        - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di un utente dal database.
+        #service_proprietà_get_user_port
     - Operazioni:
         - #declaration("- registerUser(user: User): User") #arrow controlla che lo _username_ utente che si vuole registrare non esista già, in caso contrario lancia una eccezione di tipo _UserAlreadyExistsError_. Successivamente, con il metodo _hashPassword_ di _User_, esegue l'hash della password e poi procede a salvarlo tramite la _RegisterUserPort_. Infine ritorna lo _user_ che ha appena salvato.
 
-- *GetUserPort* (interfaccia)
-    - #declaration("+ getUserByUsername(username: string): User[0..1]").
+#get_user_port_interfaccia
 - *RegisterUserPort* (interfaccia)
     - #declaration("+ registerUser(user: User): User").
 
@@ -40,7 +39,7 @@
     - Proprietà:
         -  #declaration("- userRepository: UserRepository") #arrow oggetto di persistence che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getUserByUsername(username: string): User[0..1]") #arrow metodo dichiarato nella porta _GetUserPort_. Chiama il metodo _getUserByUsername_ del repository e poi, se l'output non è null, lo converte in _User_ e lo ritorna, altrimenti ritorna null.
+        #adapter_operazioni_get_user
         - #declaration("+ registerUser(user: User): User") #arrow metodo dichiarato nella porta _RegisterUserPort_. Converte lo _user_ in input in uno _UserEntity_ e chiama il metodo _registerUser_ del repository. Successivamente converte l'output del metodo in _User_ e lo ritorna.
     - Note:
         - è utile avere dei metodi helper privati per convertire da _User_ ad _UserEntity_ e viceversa.
@@ -49,5 +48,5 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getUserByUsername(username: string): UserEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_, passandogli lo _username_, esegue una query sul database che ritorna una _UserEntity_;
-        - #declaration("+ registerUser(user: UserEntity): UserEntity") #arrow attraverso il metodo _create_ salva l'utente sul database e lo ritorna come _UserEntity_.
+        - #declaration("+ registerUser(user: UserEntity): UserEntity") #arrow attraverso il metodo _create_ salva l'utente sul database e lo ritorna come _UserEntity_;
+        #repository_operazioni_get_user
