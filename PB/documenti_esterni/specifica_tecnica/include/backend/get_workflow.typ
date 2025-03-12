@@ -13,7 +13,7 @@
     - Proprietà:
         - #declaration("- getWorkflowUseCase: GetWorkflowUseCase") #arrow porta di input per il servizio di business dedicato al recupero di un workflow.
     - Operazioni:
-        - #declaration("+ getWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente chiama il metodo _getWorkflow_ definito in _getWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow ottenuto per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ getWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _GetWorkflowCommand_ necessario per chiamare il metodo _getWorkflow_ definito in _getWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow ottenuto per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
         - la richiesta viene controllata dalla _AuthGuard_ offerta da NestJS che controlla la validità del JWT. Successivamente crea l'argomento _request_ che contiene lo _username_ per il metodo _getWorkflow_ del _GetWorkflowController_;
         - in caso di eccezione _WorkflowNotFoundError_ ritorna status http 404;
