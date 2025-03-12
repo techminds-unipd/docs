@@ -25,11 +25,11 @@
 
 - *WorkflowNameListService*
     - Proprietà:
-        - #declaration("- getUserWorkflowPort: GetUserWorkflowPort") #arrow porta di output per il recupero di tutti i workflow di un utente dal database.
+        - #declaration("- getUserWorkflowsPort: GetUserWorkflowsPort") #arrow porta di output per il recupero di tutti i workflow di un utente dal database.
     - Operazioni:
-        - #declaration("+ getWorkflowNameList(username: string): string*") #arrow implementa _getWorkflowNameList_ di _WorkflowNameListUseCase_. Chiama il metodo _getAllWorkflowByUsername_ della porta _GetUserWorkflowPort_, se restituisce null viene sollevata un'eccezione di tipo _UserNotFoundError_, altrimenti restituisce la lista dei _workflow_ dell'utente. Successivamente, per ogni _workflow_, ne recupera il nome e lo aggiunge alla lista di _string_ che verrà ritornata.
+        - #declaration("+ getWorkflowNameList(username: string): string*") #arrow implementa _getWorkflowNameList_ di _WorkflowNameListUseCase_. Chiama il metodo _getAllWorkflowByUsername_ della porta _GetUserWorkflowsPort_, se restituisce null viene sollevata un'eccezione di tipo _UserNotFoundError_, altrimenti restituisce la lista dei _workflow_ dell'utente. Successivamente, per ogni _workflow_, ne recupera il nome e lo aggiunge alla lista di _string_ che verrà ritornata.
 
-- *GetUserWorkflowPort* (interfaccia)
+- *GetUserWorkflowsPort* (interfaccia)
     - #declaration("+ getAllWorkflowByUsername(username: string): Workflow[0..1]").
 
 
@@ -37,7 +37,7 @@
     - Proprietà:
         -  #declaration("- workflowRepository: WorkflowRepository") #arrow oggetto di persistence che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getAllWorkflowByUsername(username: string): Workflow[0..1]") #arrow metodo dichiarato nella porta _GetUserWorkflowPort_. Chiama il metodo _getAllWorkflowByUsername_ del repository e poi, se l'output non è null, converte la lista di _WorkflowEntity_ in una lista di _Workflow_ e la ritorna, altrimenti ritorna null.
+        - #declaration("+ getAllWorkflowByUsername(username: string): Workflow[0..1]") #arrow metodo dichiarato nella porta _GetUserWorkflowsPort_. Chiama il metodo _getAllWorkflowByUsername_ del repository e poi, se l'output non è null, converte la lista di _WorkflowEntity_ in una lista di _Workflow_ e la ritorna, altrimenti ritorna null.
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità;
         - è utile avere dei metodi helper privati per convertire da _Workflow_ ad _WorkflowEntity_ e viceversa.
