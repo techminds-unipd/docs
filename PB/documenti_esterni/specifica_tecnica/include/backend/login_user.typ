@@ -11,9 +11,12 @@
 
 - *LoginUserController*
     - Proprietà:
-        - #declaration("- loginUserService: LoginUserUseCase") #arrow porta di input per il servizio di business dedicato al login dell'utente.
+        - #declaration("- loginUserUseCase: LoginUserUseCase") #arrow porta di input per il servizio di business dedicato al login dell'utente.
     - Operazioni:
         - #declaration("+ login(req: UserDTO): JWT") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo _login_ definito in _LoginUserUseCase_ e, se non vengono lanciate eccezioni, crea e ritorna il token di autenticazione attraverso un _JWT_, altrimenti gestisce le eccezioni sollevate.
+    - Note:
+        - in caso di eccezione _UserNotFoundError_ o _WrongPasswordError_ ritorna status http 400;
+        - per le altre eccezioni ritorna status http 500;
 
 - *LoginUserUseCase* (interfaccia)
     - Operazioni:
