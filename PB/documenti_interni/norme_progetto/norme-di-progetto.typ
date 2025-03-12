@@ -12,11 +12,13 @@
 // #glossario[branch]
 // #glossario[RTB]
 // #glossario[github actions]
+// #glossario[blocchi]
 
 #show: documento.with(
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
+    "1.5.0", "10/03/2025", "Completata sezione codifica e testing", team.S, "",
     "1.4.0", "10/03/2025", "Completata sezione progettazione", team.S, team.G,
     "1.3.0", "06/03/2025", "Documentata struttura e gestione repo", team.L, team.C,
     "1.2.3", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.A,
