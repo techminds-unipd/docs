@@ -27,7 +27,7 @@
 
 - *GetWorkflowService*
     - Proprietà:
-        - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di uno _user_ dal database.
+        - #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di un _workflow_ dal database.
     - Operazioni:
         - #declaration("+ getWorkflow(cmd: GetWorkflowCommand): Workflow") #arrow riprende il _workflow_ dalla persistenza attraverso la _GetWorkflowPort_. Successivamente ritorna il _workflow_ se non è _null_, altrimenti lancia un'eccezione _WorkflowNotFoundError_.
     - Note:
