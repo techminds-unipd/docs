@@ -22,14 +22,14 @@
 
 - *CreateWorkflowUseCase* (interfaccia)
     - Operazioni:
-        - #declaration("- createWorkflow(cmd: CreateWorkflowCommand): Workflow").
+        - #declaration("+ createWorkflow(cmd: CreateWorkflowCommand): Workflow").
 
 - *CreateWorkflowService*
     - Proprietà:
         - #declaration("- createWorkflowPort: CreateWorkflowPort") #arrow porta di output per la creazione di un _workflow_ vuoto sul database;
         #service_proprietà_get_workflow_port
     - Operazioni:
-        - #declaration("- createWorkflow(cmd: CreateWorkflowCommand): Workflow") #arrow controlla che il _workflow_ non esista già tramite la porta _getWorkflowPort_, in caso contrario lancia un'eccezione di tipo _WorkflowAlreadyExistsError_. Successivamente, crea il _workflow_ vuoto e procede a salvarlo tramite la _createWorkflowPort_. Nel caso in cui il salvataggio non andasse a buon fine lancia un'eccezione di tipo _WorkflowNotAddedError_, altrimenti ritorna il _workflow_ aggiunto.
+        - #declaration("+ createWorkflow(cmd: CreateWorkflowCommand): Workflow") #arrow controlla che il _workflow_ non esista già tramite la porta _getWorkflowPort_, in caso contrario lancia un'eccezione di tipo _WorkflowAlreadyExistsError_. Successivamente, crea il _workflow_ vuoto e procede a salvarlo tramite la _createWorkflowPort_. Nel caso in cui il salvataggio non andasse a buon fine lancia un'eccezione di tipo _WorkflowNotAddedError_, altrimenti ritorna il _workflow_ aggiunto.
 
 - *CreateWorkflowPort* (interfaccia)
     - #declaration("+ addWorkflow(username: string, workflow: Workflow): Workflow[0..1]").

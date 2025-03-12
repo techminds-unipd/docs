@@ -22,14 +22,14 @@
 
 - *RegisterUserUseCase* (interfaccia)
     - Operazioni:
-        - #declaration("- registerUser(user: User): User").
+        - #declaration("+ registerUser(user: User): User").
 
 - *RegisterUserService*
     - Proprietà:
         - #declaration("- registerUserPort: RegisterUserPort") #arrow porta di output per la registrazione utente sul database;
         #service_proprietà_get_user_port
     - Operazioni:
-        - #declaration("- registerUser(user: User): User") #arrow controlla che lo _username_ utente che si vuole registrare non esista già, in caso contrario lancia una eccezione di tipo _UserAlreadyExistsError_. Successivamente, con il metodo _hashPassword_ di _User_, esegue l'hash della password e poi procede a salvarlo tramite la _RegisterUserPort_. Infine ritorna lo _user_ che ha appena salvato.
+        - #declaration("+ registerUser(user: User): User") #arrow controlla che lo _username_ utente che si vuole registrare non esista già, in caso contrario lancia una eccezione di tipo _UserAlreadyExistsError_. Successivamente, con il metodo _hashPassword_ di _User_, esegue l'hash della password e poi procede a salvarlo tramite la _RegisterUserPort_. Infine ritorna lo _user_ che ha appena salvato.
 
 #get_user_port_interfaccia
 - *RegisterUserPort* (interfaccia)
