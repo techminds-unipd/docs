@@ -6,7 +6,7 @@
 // funzioni per getUser
 #let service_proprietà_get_user_port = [- #declaration("- getUserPort: GetUserPort") #arrow porta di output per il recupero di uno _user_ dal database.]
 
-#let get_user_port_interfaccia = [- *GetUserPort* (interfaccia) \ - #declaration("+ getUserByUsername(username: string): User[0..1]").]
+#let get_user_port_interfaccia = [- *GetUserPort* (interfaccia) \ • #declaration(" + getUserByUsername(username: string): User[0..1]").]
 
 #let adapter_operazioni_get_user = [- #declaration("+ getUserByUsername(username: string): User[0..1]") #arrow metodo dichiarato nella porta _GetUserPort_. Chiama il metodo _getUserByUsername_ del repository e poi, se l'output non è _null_, lo converte in _User_ e lo ritorna, altrimenti ritorna _null_.]
 
@@ -15,7 +15,7 @@
 // funzioni per getWorkflow
 #let service_proprietà_get_workflow_port = [- #declaration("- getWorkflowPort: GetWorkflowPort") #arrow porta di output per il recupero di un _workflow_ dal database.]
 
-#let get_workflow_port_interfaccia = [- *GetWorkflowPort* (interfaccia) \ - #declaration("+ getWorkflowByName(username: string, workflowName: string): Workflow[0..1]").]
+#let get_workflow_port_interfaccia = [- *GetWorkflowPort* (interfaccia) \ • #declaration(" + getWorkflowByName(username: string, workflowName: string): Workflow[0..1]").]
 
 #let adapter_operazioni_get_workflow = [- #declaration("+ getWorkflowByName(username: string, workflowName: string): Workflow[0..1]") #arrow metodo dichiarato nella porta _GetWorkflowPort_. Chiama il metodo _getWorkflowByName_ del repository e poi, se l'output non è _null_, lo converte in _Workflow_ e lo ritorna, altrimenti ritorna _null_.]
 
