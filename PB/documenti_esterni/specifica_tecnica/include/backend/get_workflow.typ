@@ -2,7 +2,7 @@
 
 ==== GetWorkflow
 #figure(
-    image("../../assets/backend_login_user_diagramma_classi.svg", width: 70%),
+    image("../../assets/backend_get_workflow_diagramma_classi.svg", width: 100%),
     caption: [Diagramma delle classi riguardante la funzionalità GetWorkflow del backend.],
 )
 
@@ -13,9 +13,9 @@
     - Proprietà:
         - #declaration("- getWorkflowUseCase: GetWorkflowUseCase") #arrow porta di input per il servizio di business dedicato al recupero di un workflow.
     - Operazioni:
-        - #declaration("+ getWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando la validità del JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente chiama il metodo _getWorkflow_ definito in _getWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow ottenuto per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ getWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente chiama il metodo _getWorkflow_ definito in _getWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow ottenuto per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - la richiesta viene controllata dalla _AuthGuard_ offerta da NestJS che controlla la validità del JWT.
+        - la richiesta viene controllata dalla _AuthGuard_ offerta da NestJS che controlla la validità del JWT. Successivamente crea l'argomento _request_ che contiene lo _username_ per il metodo _getWorkflow_ del _GetWorkflowController_;
         - in caso di eccezione _WorkflowNotFoundError_ ritorna status http 404;
         - in caso di eccezione _InvalidTokenError_ ritorna status http 401;
         - per le altre eccezioni ritorna status http 500;
@@ -49,6 +49,6 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getWorkflowByName(username: string, workflowName: string): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_, passandogli lo _username_ e il _workflowName_, esegue una query sul database che ritorna un oggetto che contiene una _WorkflowEntity_.
+        - #declaration("+ getWorkflowByName(username: string, workflowName: string): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOne_ di _userEntityModel_, passandogli lo _username_ e il _workflowName_, esegue una query sul database che ritorna un oggetto contenente una _WorkflowEntity_.
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.
