@@ -1,5 +1,4 @@
-//#import "funzioni_ausiliarie.typ": *
-#import "functions.typ": declaration, arrow
+#import "funzioni_ausiliarie.typ": *
 
 ==== WorkflowNameList
 #figure(

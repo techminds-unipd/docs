@@ -4,6 +4,8 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "0.10.0", "13/03/2025", "Aggiunta funzionalità backend WorkflowNameList", team.M, "someone",
+    "0.9.0", "12/03/2025", "Aggiunta funzionalità backend CreateWorkflow", team.S, team.G,
     "0.8.0", "11/03/2025", "Aggiunta sezione frontend", team.C, team.T,
     "0.7.0", "08/03/2025", "Aggiunta funzionalità backend LoginUser", team.G, team.S,
     "0.6.0", "07/03/2025", "Aggiunta funzionalità backend registrazione", team.G, team.C,
