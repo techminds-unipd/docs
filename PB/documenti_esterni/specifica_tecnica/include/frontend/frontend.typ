@@ -8,7 +8,7 @@
 ==== Componenti personalizzate
 #include("componenti.typ")
 
-// ==== Pagine
-// #include("pagine.typ")
+==== Pagine
+#include("pagine.typ")
 
 // ==== Design Pattern
