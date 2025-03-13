@@ -39,7 +39,7 @@
         - #declaration("+ getAllWorkflowByUsername(username: string): Workflow[0..1]") #arrow metodo dichiarato nella porta _GetUserWorkflowsPort_. Chiama il metodo _getAllWorkflowByUsername_ del repository e poi, se l'output non è null, converte la lista di _WorkflowEntity_ in una lista di _Workflow_ e la ritorna, altrimenti ritorna null.
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità;
-        - è utile avere dei metodi helper privati per convertire da _Workflow_ ad _WorkflowEntity_ e viceversa.
+        - è utile avere dei metodi helper privati per convertire _WorkflowEntity_ in _Workflow_.
 
 - *WorkflowRepository*
     - Proprietà:
