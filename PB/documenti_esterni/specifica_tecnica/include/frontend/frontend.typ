@@ -3,12 +3,12 @@
 
 // === Introduzione
 
-// === Diagrammi delle classi
+=== Diagrammi delle classi
 
 ==== Componenti personalizzate
 #include("componenti.typ")
 
-// ==== Pagine
-// #include("pagine.typ")
+==== Pagine
+#include("pagine.typ")
 
 // ==== Design Pattern
