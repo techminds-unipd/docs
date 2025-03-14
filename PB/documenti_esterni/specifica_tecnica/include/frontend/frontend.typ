@@ -4,7 +4,7 @@
 // === Introduzione
 
 === Diagrammi delle classi
-
+// TODO
 ==== Componenti personalizzate
 #include("componenti.typ")
 
