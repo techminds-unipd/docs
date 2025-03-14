@@ -11,9 +11,10 @@
 
 - *SaveWorkflowController*
     - Proprietà:
-        - #declaration("- saveWorkflowUseCase: SaveWorkflowUseCase, workflowDTOValidator: WorkflowDTOValidator") #arrow porta di input per il servizio di business dedicato al salvataggio di un workflow.
+        - #declaration("- saveWorkflowUseCase: SaveWorkflowUseCase") #arrow porta di input per il servizio di business dedicato al salvataggio di un workflow;
+        - #declaration("- workflowDTOValidator: WorkflowDTOValidator") #arrow oggetto per la validazione di un _WorkflowDTO_. 
     - Operazioni:
-        - #declaration("+ saveWorkflow(workflow: WorkflowDTO, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Prosegue con la validazione del _WorkflowDTO_ passato nel corpo della richiesta, se non ha successo solleva un eccezione. Successivamente crea un _SaveWorkflowCommand_ necessario per chiamare il metodo _saveWorkflow_ definito in _saveWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow salvato per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ saveWorkflow(workflow: WorkflowDTO, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Prosegue con la validazione del _WorkflowDTO_ passato nel corpo della richiesta tramite l'oggetto _workflowDTOValidator_, se non ha successo solleva un eccezione. Successivamente crea un _SaveWorkflowCommand_ necessario per chiamare il metodo _saveWorkflow_ definito in _saveWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow salvato per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
         - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status http 404;
         - in caso di eccezione che occorre durante la validazione del _WorkflowDTO_ ritorna status http 412;
