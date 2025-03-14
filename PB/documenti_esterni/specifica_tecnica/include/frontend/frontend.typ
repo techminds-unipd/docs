@@ -3,8 +3,8 @@
 
 // === Introduzione
 
-// === Diagrammi delle classi
-
+=== Diagrammi delle classi
+// TODO
 ==== Componenti personalizzate
 #include("componenti.typ")
 
