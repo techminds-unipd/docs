@@ -1,5 +1,5 @@
 ===== Home
-La pagina Home ha il compito di presentare l'applicazione all'utente.
+La pagina Home ha il compito di presentare le funzionalità dell'applicazione all'utente.
 
 In particolare contiene:
 - Due componenti Typography, uno per il nome dell'applicazione e uno per il motto;
