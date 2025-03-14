@@ -72,7 +72,7 @@ Le voci della Navbar cambiano in base allo stato di autenticazione:
 ===== PersonCard
 #figure(
     image("../../assets/frontend/PersonCard.svg", width: 65%),
-  caption: [Componente LogoutMenuItem.],
+  caption: [Componente PersonCard.],
 )
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 

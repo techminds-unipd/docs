@@ -1,6 +1,10 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 ===== About us
+#figure(
+    image("../../assets/frontend/AboutUs.svg", width: 65%),
+  caption: [Pagina About us.],
+)
 Questa pagina si trova nel percorso \"/aboutus\" e mostra le persone che hanno partecipato alla costruzione del sito, nonché un link alla pagina GitHub del gruppo.
 
 La pagina è composta dai seguenti componenti React:
