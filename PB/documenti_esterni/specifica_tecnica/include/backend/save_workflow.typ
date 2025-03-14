@@ -27,7 +27,7 @@
 
 - *SaveWorkflowService*
     - Proprietà:
-        - #declaration("- saveWorkflowPort: SaveWorkflowPort") #arrow porta di output per il salvataggio di un _workflow_ sul database;
+        - #declaration("- saveWorkflowPort: SaveWorkflowPort") #arrow porta di output per il salvataggio di un _workflow_ sul database.
     - Operazioni:
         - #declaration("+ saveWorkflow(cmd: CreateWorkflowCommand): Workflow") #arrow implementa il metodo _saveWorkflow_ di _SaveWorkFlowUseCase_. Chiama il metodo _saveWorkflow_ di _saveWorkflowPort_ e ritorna il _workflow_ salvato, se invece non trova un workflow creato in precedenza con quel nome ritorna un'eccezione di tipo _WorkflowNotFoundError_.
 
