@@ -77,8 +77,8 @@ Le voci della Navbar cambiano in base allo stato di autenticazione:
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 
 Il componente accetta due props:
-- Il nome della persona;
-- Uno username esistente di GitHub.
+- name: il nome della persona;
+- GitHubUsername: uno username esistente di GitHub.
 
 Il componente PersonCard è composto da:
 - Un Box che racchiude tutti gli altri componenti;

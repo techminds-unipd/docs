@@ -23,5 +23,5 @@ La pagina è composta dai seguenti componenti React:
 - Un'immagine con il logo del gruppo;
 - Sette PersonCard con i nostri nomi e i link ai nostri profili GitHub;
 - Un Typography con del testo che parla del gruppo;
-- Un Link che punta al profilo GitHub;
+- Un Link che punta al profilo GitHub del gruppo Tech Minds;
 - Grid per impaginare.
