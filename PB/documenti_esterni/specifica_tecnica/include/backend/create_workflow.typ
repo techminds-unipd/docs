@@ -40,7 +40,7 @@
     - Proprietà:
         -  #declaration("- workflowRepository: WorkflowRepository") #arrow oggetto di persistence che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ addWorkflow(username: string, workflow: Workflow): Workflow[0..1]") #arrow metodo dichiarato nella porta _CreateWorkflowPort_. Chiama il metodo _addWorkflow_ del repository e poi, se l'output non è null, converte la _WorkflowEntity_ in _Workflow_ e lo ritorna, altrimenti ritorna null.
+        - #declaration("+ addWorkflow(username: string, workflow: Workflow): Workflow[0..1]") #arrow metodo dichiarato nella porta _CreateWorkflowPort_. Chiama il metodo _addWorkflow_ del repository e poi, se l'output non è null, converte la _WorkflowEntity_ in _Workflow_ e lo ritorna, altrimenti ritorna null;
         #adapter_operazioni_get_workflow
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità;
@@ -50,7 +50,7 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ addWorkflow(username: string, workflow: WorkflowEntity): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOneAndUpdate_ di _userEntityModel_ e lo _username_, esegue una query sul database che cerca una _UserEntity_ con quel _username_ e, se la trova, aggiunge il _workflow_ alla lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se non trova la _UserEntity_ o non riesce ad aggiungere il _workflow_ ritorna null.
+        - #declaration("+ addWorkflow(username: string, workflow: WorkflowEntity): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOneAndUpdate_ di _userEntityModel_ e lo _username_, esegue una query sul database che cerca una _UserEntity_ con quel _username_ e, se la trova, aggiunge il _workflow_ alla lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se non trova la _UserEntity_ o non riesce ad aggiungere il _workflow_ ritorna null;
         #repository_operazioni_get_workflow
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.
