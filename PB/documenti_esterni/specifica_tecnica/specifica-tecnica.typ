@@ -4,7 +4,12 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
-    "0.11.0", "14/03/2025", "Aggiunta funzionalità backend SaveWorkflow", team.M, "someone",
+    "0.16.0", "14/03/2025", "Aggiunta funzionalità backend SaveWorkflow", team.M, team.S,
+    "0.15.0", "14/03/2025", "Aggiunta funzionalità backend WorkflowNameList", team.M, team.G,
+    "0.14.0", "14/03/2025", "Aggiunta funzionalità backend GetWorkflow", team.M, team.S,
+    "0.13.0", "14/03/2025", "Aggiunta funzionalità backend DeleteWorkflow", team.S, team.G,
+    "0.12.0", "14/03/2025", "Aggiunta descrizione componente Home", team.L, team.C,
+    "0.11.0", "13/03/2025", "Aggiunta componente PersonCard e pagina About us", team.T, team.A,
     "0.10.0", "13/03/2025", "Aggiunta componenti personalizzati per Navbar", team.C, team.T,
     "0.9.0", "12/03/2025", "Aggiunta funzionalità backend CreateWorkflow", team.S, team.G,
     "0.8.0", "11/03/2025", "Aggiunta sezione frontend", team.C, team.T,
