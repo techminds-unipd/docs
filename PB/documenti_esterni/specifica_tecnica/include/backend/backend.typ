@@ -29,3 +29,4 @@ Questa scelta ha anche dei lati negativi, ad esempio:
 #include("create_workflow.typ")
 #include("workflow_name_list.typ")
 #include("delete_workflow.typ")
+#include("execute_workflow.typ")
