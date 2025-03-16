@@ -11,7 +11,7 @@
 
 - *RegisterUserController*
     - Proprietà:
-        - #declaration("- registerUserService: RegisterUserUseCase") #arrow porta di input per il servizio di business dedicato alla registrazione utente.
+        - #declaration("- registerUserUseCase: RegisterUserUseCase") #arrow porta di input per il servizio di business dedicato alla registrazione utente.
     - Operazioni:
         - #declaration("+ registerUser(req: UserDTO): UserDTO") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo registerUser definito in _RegisterUserUseCase_ e, se non vengono lanciate eccezioni, ritorna lo user registrato come _UserDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
