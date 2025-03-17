@@ -14,7 +14,7 @@
     - Operazioni:
         - #declaration("+ googleAuth(): string") #arrow valida la richiesta verificando il _JWT_. Successivamente chiama il metodo _googleAuth_ di _connectionGoogleRequestUseCase_ e fa il redirect verso la stringa che ritorna.
 
-- *ConnectionGoogleRequestUseCase*
+- *ConnectionGoogleRequestUseCase* (interfaccia)
     - #declaration("+ googleAuth(): string").
 
 - *ConnectionGoogleRequestService*
@@ -23,7 +23,7 @@
     - Operazioni:
         - #declaration("- getOAuth2ClientUrl(): string") #arrow chiama il metodo _getOAuthClientUrl_ di _connectionGoogleRequestPort_ e ritorna il risultato.
 
-- *ConnectionGoogleRequestPort*
+- *ConnectionGoogleRequestPort* (interfaccia)
     - #declaration("+ getOAuthClientUrl(): string").
 
 - *GoogleTokenPortAdapter*
@@ -31,6 +31,8 @@
         - #declaration("- googleAuthRepository: GoogleAuthRepository") #arrow oggetto di persistence che si interfaccia con le librerie di Google.
     - Operazioni:
         - #declaration("+ getOAuthClientUrl(): string") #arrow chiama il metodo _getOAuthClientUrl_ di _googleAuthRepository_ e ritorna il risultato.
+  - Note:
+      - sono state descritte solamente le operazioni utilizzate in questa funzionalità.
 
 - *GoogleAuthRepository*
     - Proprietà:
