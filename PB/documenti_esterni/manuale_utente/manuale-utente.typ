@@ -9,3 +9,5 @@
 )
 
 #include "include/introduzione.typ"
+#include "include/requisiti.typ"
+#include "include/istruzioni.typ"
