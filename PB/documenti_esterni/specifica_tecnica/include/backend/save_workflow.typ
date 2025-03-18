@@ -22,8 +22,7 @@
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e viceversa.
 
 - *SaveWorkflowUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ saveWorkflow(cmd: SaveWorkflowCommand): Workflow").
+    - #declaration("+ saveWorkflow(cmd: SaveWorkflowCommand): Workflow").
 
 - *SaveWorkflowService*
     - Proprietà:

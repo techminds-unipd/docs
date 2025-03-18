@@ -19,8 +19,7 @@
         - in caso di altre eccezioni ritorna status http 500.
 
 - *WorkflowNameListUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ getWorkflowNameList(username: string): string*").
+    - #declaration("+ getWorkflowNameList(username: string): string*").
 
 - *WorkflowNameListService*
     - Proprietà:

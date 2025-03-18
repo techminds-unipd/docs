@@ -21,8 +21,7 @@
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e per creare il _CreateWorkflowCommand_.
 
 - *CreateWorkflowUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ createWorkflow(cmd: CreateWorkflowCommand): Workflow").
+    - #declaration("+ createWorkflow(cmd: CreateWorkflowCommand): Workflow").
 
 - *CreateWorkflowService*
     - Proprietà:

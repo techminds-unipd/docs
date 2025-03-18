@@ -19,8 +19,7 @@
         - per le altre eccezioni ritorna status http 500;
 
 - *LoginUserUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ login(user: User): User").
+    - #declaration("+ login(user: User): User").
 
 - *LoginUserService*
     - Proprietà:

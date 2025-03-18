@@ -20,8 +20,7 @@
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_.
 
 - *DeleteWorkflowUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ deleteWorkflow(cmd: DeleteWorkflowCommand): Workflow").
+    - #declaration("+ deleteWorkflow(cmd: DeleteWorkflowCommand): Workflow").
 
 - *DeleteWorkflowService*
     - Proprietà:
