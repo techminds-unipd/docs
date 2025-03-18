@@ -28,7 +28,9 @@ Questa scelta ha anche dei lati negativi, ad esempio:
 #include("create_workflow.typ")
 #include("workflow_name_list.typ")
 #include("delete_workflow.typ")
+#include("workflow_name_list.typ")
 #include("get_workflow.typ")
 #include("save_workflow.typ")
 #include("execute_workflow.typ")
-
+#include("connection_google_request.typ")
+#include("connection_google_response.typ")
