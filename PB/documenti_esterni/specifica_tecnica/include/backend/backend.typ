@@ -64,6 +64,9 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
 - *RequestHeader*, rappresenta l'header di una richiesta http, da cui si estrare lo _username_ dell'utente:
   - username: string.
 
+- *JWT*, alias di tipo per il token JWT:
+  - accessToken: string.
+
 ==== Business logic
 
 - *User*, rappresenta un utente:
@@ -93,9 +96,6 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - token: string;
   - refreshToken: string;
   - expireDate: Date.
-
-- *JWT*, alias di tipo per il token JWT:
-  - accessToken: string.
 
 - *BusinessError*, classe astratta da cui derivano tutti gli errori di business:
   - name: string;
