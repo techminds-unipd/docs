@@ -21,14 +21,14 @@
     - Proprietà:
         - #declaration("- connectionGoogleRequestPort: ConnectionGoogleRequestPort") #arrow porta di output per la creazione dell'url per il redirect verso Google.
     - Operazioni:
-        - #declaration("- getOAuth2ClientUrl(): string") #arrow chiama il metodo _getOAuthClientUrl_ di _connectionGoogleRequestPort_ e ritorna il risultato.
+        - #declaration("+ getOAuth2ClientUrl(): string") #arrow chiama il metodo _getOAuthClientUrl_ di _connectionGoogleRequestPort_ e ritorna il risultato.
 
 - *ConnectionGoogleRequestPort* (interfaccia)
     - #declaration("+ getOAuthClientUrl(): string").
 
 - *GoogleTokenPortAdapter*
     - Proprietà:
-        - #declaration("- googleAuthRepository: GoogleAuthRepository") #arrow oggetto di persistence che si interfaccia con le librerie di Google.
+        - #declaration("- googleAuthRepository: GoogleAuthRepository") #arrow oggetto che si interfaccia con le librerie di Google.
     - Operazioni:
         - #declaration("+ getOAuthClientUrl(): string") #arrow chiama il metodo _getOAuthClientUrl_ di _googleAuthRepository_ e ritorna il risultato.
   - Note:
@@ -36,7 +36,7 @@
 
 - *GoogleAuthRepository*
     - Proprietà:
-      - #declaration("- scopesAPI: string*") #arrow lista degli scopes da richiedere alle API di Google.
+      - #declaration("- scopesAPI: string*") #arrow lista degli scopes, ovvero la lista degli ambiti delle varie funzionalità da richiedere alle API di Google;
       - #declaration("- credentialsPath: string") #arrow path del file contenente le varie credenziali necessarie per le Google API.
   - Operazioni:
       - #declaration("+ getOAuthClientUrl(): string") #arrow crea un oggetto di tipo _OAuth2Client_ con le credenziali lette dal file in _credentialsPath_. Successivamente chiama il metodo _getAuthUrl_ sull'oggetto creato precendentemente e ritorna il suo risultato.
