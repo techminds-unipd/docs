@@ -59,9 +59,9 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - expireDate: Date.
 
 - *WorkflowDTOValidator*, rappresenta la classe che si occupa della validazione della struttura di un _WorkflowDTO_:
-  - validate(workflow: WorkflowDTO), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con http status 412 nel caso in cui una regola non sia soddisfatta.
+  - validate(workflow: WorkflowDTO), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con http status 412 nel caso in cui il workflow sia invalido.
 
-- *RequestHeader*, rappresenta l'header di una richiesta http, da cui si estrare lo _username_ dell'utente:
+- *RequestHeader*, rappresenta l'header di una richiesta http, da cui si estrae lo _username_ dell'utente:
   - username: string.
 
 - *JWT*, alias di tipo per il token JWT:
@@ -80,7 +80,7 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
 
 - *Node*, rappresenta un nodo di un workflow:
   - type: NodeType;
-  - action: string, fa riferimento all'azione da eseguire dal nodo corrente a quello successivo, per questo motivo l'ultimo nodo della lista non ha un'azione associata;;
+  - action: string, fa riferimento all'azione da eseguire dal nodo corrente a quello successivo, per questo motivo l'ultimo nodo della lista non ha un'azione associata;
   - position: Point.
 
 - *NodeType*, enumerazione che rappresenta il tipo di nodo:
@@ -101,11 +101,11 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - name: string;
   - message: string.
   Gli errori di business personalizzati sono:
-  - *UserAlreadyExistsError*, errore che viene lanciato quando un utente è gia presente nel database;
+  - *UserAlreadyExistsError*, errore che viene lanciato quando un utente è già presente nel database;
   - *UserNotFoundError*, errore che viene lanciato quando un utente non è presente nel database;
   - *WrongPasswordError*, errore che viene lanciato quando la password non è corretta;
   - *WorkflowNotAddedError*, errore che viene lanciato quando un workflow non è stato aggiunto correttamente al database;
-  - *WorkflowAlreadyExistsError*, errore che viene lanciato quando un workflow è gia presente nel database;
+  - *WorkflowAlreadyExistsError*, errore che viene lanciato quando un workflow è già presente nel database;
   - *WorkflowNotFoundError*, errore che viene lanciato quando un workflow non è presente nel database.
 
 ==== Persistence logic
