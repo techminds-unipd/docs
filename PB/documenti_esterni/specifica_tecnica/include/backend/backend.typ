@@ -137,7 +137,9 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
 #include("create_workflow.typ")
 #include("workflow_name_list.typ")
 #include("delete_workflow.typ")
+#include("workflow_name_list.typ")
 #include("get_workflow.typ")
 #include("save_workflow.typ")
 #include("execute_workflow.typ")
-
+#include("connection_google_request.typ")
+#include("connection_google_response.typ")
