@@ -111,3 +111,21 @@ Il componente accetta due prop:
 Grazie all’hook personalizzato #declaration("useDeleteWorkflow()"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un Link di MUI, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
 
 Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow()"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
+
+===== WorkflowList
+// TODO inserire immagine
+
+Il componente WorkflowList è un componente React personalizzato che visualizza la lista dei workflow dell'utente. Viene utilizzato all’interno della pagina Dashboard.
+
+Il componente accetta due prop:
+- shouldReload: valore booleano che indica se la lista dei workflow deve essere ricaricata;
+- setShouldReload: funzione per aggiornare lo stato e ricaricare la lista dei workflow dopo modifiche come l'aggiunta o l'eliminazione di un workflow.
+Grazie all’hook personalizzato #declaration("useAllWorkflow()"), il componente può recuperare l'elenco dei workflow dell'utente. Quando shouldReload è attivo, la funzione #declaration("refetch()") viene chiamata per aggiornare i dati e  setShouldReload viene impostato su false per evitare richiami ripetuti.
+
+L’interfaccia mostra:
+- Un titolo che introduce la sezione;
+- Un Box di MUI contenente la lista dei workflow;
+- Un messaggio informativo se l'utente non ha workflow disponibili;
+- Un CircularProgress durante il caricamento;
+- Un messaggio di errore se si verifica un problema nel recupero dei dati;
+- L'elenco dei workflow, ciascuno rappresentato da un componente WorkflowItem.
