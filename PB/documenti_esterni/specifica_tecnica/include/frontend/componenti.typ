@@ -97,3 +97,17 @@ Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la
 Quest'ultimo ha quindi due varianti:
 - success: se la creazione è andata a buon fine;
 - error: se si è verificato un problema (ad esempio, nome duplicato o errore generico).
+
+
+===== WorkflowItem 
+// TODO inserire immagine
+
+Il componente WorkflowItem è un componente React personalizzato che rappresenta un singolo workflow all’interno della lista dei workflow. Viene utilizzato all’interno della pagina Dashboard.
+
+Il componente accetta due prop:
+- name: il nome del workflow da visualizzare;
+- setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo l'eliminazione di un elemento.
+
+Grazie all’hook personalizzato #declaration("useDeleteWorkflow()"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un Link di MUI, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
+
+Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow()"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
