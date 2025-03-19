@@ -1,6 +1,144 @@
 #import "/template/template.typ": glossario
 #import "../../analisi_requisiti/include/definizione_requisiti.typ": getFRByNumber
 
+// test di unità
+#let getUnità() = {
+    let unitàBackend = ()
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ ritorni un DTO con l'utente registrato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _UserAlreadyExistsError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserService_ ritorni l'utente registrato con la password sotto forma di hash.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserService_ lanci un'eccezione di tipo _UserAlreadyExistsError_ poiché lo _username_ è già utilizzato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ ritorni un token jwt.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 401 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 401 poiché il service lancia un'eccezione di tipo _WrongPasswordError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserService_ ritorni l'utente che ha eseguito l'accesso con credenziali corrette.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserService_ lanci un'eccezione di tipo _UserNotFoundError_ poiché la porta di output ritorna null.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserService_ lanci un'eccezione di tipo _WrongPasswordError_ poiché la password non combacia.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserPortAdapter_ ritorni un oggetto di business con l'utente avente lo _username_ specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserPortAdapter_ ritorni null poiché il repository ritorna null.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _UserPortAdapter_ ritorni un oggetto di business con l'utente registrato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserRepository_ ritorni una entity del database con l'utente avente lo _username_ specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserRepository_ ritorni null poiché l'utente con quel _username_ non è stato trovato all'interno del database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _UserRepository_ ritorni una entity del database con l'utente registrato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuth_ della classe _ConnectionGoogleRequestController_ ritorni un oggetto contenente la risposta del service.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuth_ della classe _ConnectionGoogleRequestService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ ritorni un DTO con la risposta del service.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ lanci un'eccezione con http status 500 poiché è stato lanciato un errore.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getToken_ della classe _ConnectionGoogleResponseService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getOauth2ClientUrl_ della classe _GoogleTokenPortAdapter_ ritorni il risultato del repository.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getAuthClientData_ della classe _GoogleTokenPortAdapter_ ritorni un oggetto di business contenente il risultato del repository.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getOauth2ClientUrl_ della classe _GoogleAuthRepository_ ritorni l'url per il reindirizzamento.],
+        [S],
+    ))
+
+}
+
+
+// test di sistema
 #let getSistema() = {
     let sistema = ()
 
@@ -409,7 +547,7 @@
 }
 
 
-// test accettazione
+// test di accettazione
 #let getAccettazione() = {
     let accettazione = ()
 
