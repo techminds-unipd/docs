@@ -8,15 +8,13 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ===== CustomLink
-#figure(
-    image("../../assets/frontend/CustomLink.svg", width: 55%),
-  caption: [Componente CustomLink.],
-)
+// da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
 Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
-- link: l'URL di destinazione.
+- link: l'URL di destinazione;
+- color: il colore da applicare al link. Questo può avere tre valori: "black", "white" o "main-color".
 Grazie all'hook #declaration("useLocation()") di React Router, il componente può ottenere il percorso corrente dell'utente. Se il valore del link corrisponde al percorso attuale, CustomLink ritorna un componente Typography, evitando di generare un link cliccabile.
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 

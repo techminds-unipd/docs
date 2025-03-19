@@ -11,4 +11,7 @@
 ==== Pagine
 #include("pagine.typ")
 
+==== Funzionalità
+
+
 // ==== Design Pattern

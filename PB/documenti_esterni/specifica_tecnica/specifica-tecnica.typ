@@ -4,6 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "0.20.0", "19/03/2025", "Aggiunta descrizione dashboard, suoi componenti e sue funzionalità", team.C, "",
     "0.19.0", "18/03/2025", "Aggiunta descrizione dati backend", team.S, team.M,
     "0.18.0", "17/03/2025", "Aggiunta funzionalità backend ConnectionGoogleRequest e ConnectionGoogleResponse", team.G, team.S,
     "0.17.0", "17/03/2025", "Aggiunta funzionalità backend ExecuteWorkflow", team.S, team.M,
