@@ -2,13 +2,13 @@
 == Agente
 
 === Introduzione
-Come architettura logica dell'agente abbiamo scelto di usare un architettura layered, ritendendola la più adatta per il nostro caso di utilizzo.
+Come architettura logica dell'agente abbiamo scelto di usare un'architettura layered, ritenendola più adatta per il nostro caso di utilizzo.
 Data la complessità del backend e la scelta dell'architettura esagonale per esso, l'agente è stato progettato per essere più semplice, in modo da non appesantire in maniera significativa la codifica.
 
 I layer che compongono l'architettura sono:
 - *Application*: si occupa di gestire la validazione della richiesta;
 - *Business*: contiene la logica di business dell'agente;
-- *Persistence*: contiene i vari tool, i quali si interfacciano con gli attori esterni, che l'agente utilizza durante l'esecuzione dei workflow;
+- *Persistence*: contiene i vari tool, i quali si interfacciano con gli attori esterni, che l'agente utilizza durante l'esecuzione dei workflow.
 
 === Diagramma delle classi
 // #figure(
@@ -40,20 +40,20 @@ Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
     - Proprietà:
         - #declaration("- workflowService: WorkflowService") #arrow servizio di business dedicato all'esecuzione dei workflow.
     - Operazioni:
-        - #declaration("+ executeWorkflow(req: Request): string") #arrow crea un oggetto di tipo _WorkflowDTO_ a partire dalla richiesta ricevuta, se la richiesta non è valida ritorna un errore, altrimenti chiama il metodo _executeWorkflow_ definito in _workflowService_ e ritorna il risultato ottenuto.
+        - #declaration("+ executeWorkflow(req: Request): string") #arrow crea un oggetto di tipo _WorkflowDTO_ a partire dalla richiesta ricevuta, se la richiesta non è valida ritorna un errore, altrimenti chiama il metodo _run_ definito in _workflowService_ e ritorna il risultato ottenuto.
     - Note:
         - nel caso la richiesta sia invalida oppure il workflow contenuto nella richiesta non sia valido ritorna status http 400;
         - in caso di altre eccezioni ritorna status http 500;
         - è utile avere dei metodi privati per la validazione della richiesta e del workflow.
 
 === Business logic
-- *AgentResponse*, rappresenta la risposta dell'agente:
+- *AgentResponse*, type alias per rappresentare la risposta dell'agente:
     - result: string;
 - *WorkflowService*
     - Proprietà:
         - #declaration("- llm: BaseLanguageModel") #arrow modello di linguaggio base.
     - Operazioni:
-        - #declaration("- run(workflowData: WorkflowDTO): AgentResponse") #arrow crea un token file temporaneo, recupera le credenziali per accedere ai servizi Google, crea i tools necessari per l'esecuzione del workflow. Successivamente itera su ogni coppia di nodi selezionando i tool adatti, dopodiché crea l'agente e lo esegue. Infine ritorna il risultato ottenuto.
+        - #declaration("- run(workflowData: WorkflowDTO): AgentResponse") #arrow crea un token file temporaneo, recupera le credenziali per accedere ai servizi Google e crea i tools necessari per l'esecuzione del workflow. Successivamente itera su ogni coppia di nodi selezionando i tool adatti, dopodiché crea l'agente e lo esegue. Infine ritorna il risultato ottenuto.
     - Note:
         - è utile avere dei metodi privati per la creazione del token file e per la creazione dell'agente;
         - _BaseLanguageModel_ è un tipo fornito dalla libreria LangChain.
@@ -102,7 +102,7 @@ Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
     - Proprietà:
         - #declaration("- query: string") #arrow query di ricerca;
         - #declaration("- timeMin: string") #arrow data minima di inizio della ricerca;
-        - #declaration("- timeMax: string") #arrow data massima di fine della ricerca;
+        - #declaration("- timeMax: string") #arrow data massima di fine della ricerca.
     - Note:
         - deriva da _BaseModel_, tipo fornito dalla libreria LangChain.
 
@@ -111,9 +111,9 @@ Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
         - #declaration("- name: string") #arrow nome del tool;
         - #declaration("- description: string") #arrow descrizione del tool;
         - #declaration("- args_schema: SearchEventSchema") #arrow schema degli argomenti del tool;
-        - #declaration("- creds: Credentials") #arrow credenziali di autenticazione per l'accesso ai servizi di Google Calendar;
+        - #declaration("- creds: Credentials") #arrow credenziali di autenticazione per l'accesso ai servizi di Google Calendar.
     - Operazioni:
-        - #declaration("# _run(query: string, timeMin: string, timeMax: string): string") #arrow esegue la ricerca di eventi su Google Calendar;
+        - #declaration("# _run(query: string, timeMin: string, timeMax: string): string") #arrow esegue la ricerca di eventi su Google Calendar.
     - Note:
         - la classe deriva da _BaseTool_, tipo offerto dalla libreria LangChain.
 
