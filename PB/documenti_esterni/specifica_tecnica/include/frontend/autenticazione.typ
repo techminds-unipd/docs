@@ -1,3 +1,4 @@
+#import "funzioni_ausiliarie.typ": declaration
 ===== Autenticazione
 L'autenticazione è realizzata da tre unità:
 - LoginService, che interagisce con il backend per richiedere il login;
@@ -6,7 +7,12 @@ L'autenticazione è realizzata da tre unità:
 
 *LoginService*
 
-LoginService è una classe dotata di un unico metodo asincrono: login. Tale metodo prende come parametri due stringhe, una per l'username e una per la password, e ritorna una Promise di tipo LoginReponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede alla funzionalità LoginUser del backend (vedi @login-user) di effettuare il login. Se le credenziali sono corrette la Promise viene risolta e il token ricevuto dal backend viene ritornato tramite LoginResponse. Nel caso in cui le credenziali siano errate, ci sia un errore lato server o il frontend non riesca a contattare il backend, il metodo lancia un Error contenente un apposito messaggio e la Promise viene rifiutata.
+LoginService è una classe dotata di un unico metodo asincrono #declaration("login(username: string, password: string): Promise<LoginResponse>"). Tale metodo prende come parametri due stringhe, una per l'username e una per la password, e ritorna una Promise di tipo LoginReponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede di effetturare il login all'endpoint API offerto dalla funzionalità LoginUser del backend (vedi @login-user).
+L'esecuzione prosegue in base al codice di risposta ricevuto:
+- Se le credenziali sono corrette (codice HTTP 201) la Promise viene risolta e il token ricevuto dal backend viene ritornato tramite LoginResponse; 
+- Se le credenziali sono errate (codice HTTP 401), viene lanciato un Error con il messaggio "wrong username or password";
+- Se c'è stato un errore lato server (codice HTTP 500), viene lanciato un Error con il messaggio "Server error" e la Promise viene rifiutata;
+- Se c'è stato un errore generico nell'esecuzione della richiesta, il metodo lancia un Error con il messaggio "Generic error" e la Promise viene rifiutata.
 
 *AuthContext e AuthProvider*
 
