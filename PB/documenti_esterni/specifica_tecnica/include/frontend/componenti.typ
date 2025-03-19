@@ -91,12 +91,9 @@ Il componente PersonCard è composto da:
     image("../../assets/frontend/CustomNode.svg", width: 65%),
   caption: [Componente PersonCard.],
 )
-Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
-- #declaration[PastebinNode]; 
-- #declaration[CalendarNode];
-- #declaration[GmailNode].
-Ogni nodo a seguito di un click su di esso mostra su schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
-Ogni nodo può essere di input (in), output (out) o input-output (in-out), ciò è necessario per l'uso nella pagina di creazione del workflow.
+Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. 
+Ogni nodo, a seguito di un click su di esso, mostra su schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
+Ogni nodo può essere di input (in), output (out) o entrambi (in-out), ciò è necessario per l'uso nella pagina di creazione del workflow.
 Ogni nodo può essere trascinabile o meno, utile a seconda della pagina di destinazione.
 Il nodo può assumere un'estetica differente se è disabilitato.
 
@@ -108,7 +105,20 @@ Il componente accetta le seguenti props:
 - disabled: un booleano che indica se il servizio è disabilitato;
 - draggable: un booleano che indica se il blocco è trascinabile.
 
+/*I valori di default per le props sono:
+- nodeTitle: "nodeTitle";
+- dialogTitle: "Description";
+- dialogContent: le informazioni del servizio mostrate dalla Dialog;
+- type: "in-out";
+- disabled: false;
+- draggable: false.*/
+
 Il componente CustomNode è composto da:
-- Un bottone decorato dall'icona info(#declaration[InfoOutlinedIcon]);
-- Una Dialog con titolo(#declaration[DialogTitle]), contenuto(#declaration[DialogContent]) e un bottone all'interno delle #declaration[DialogActions] utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];
+- Un bottone decorato dall'icona #declaration[InfoOutlinedIcon];
+- Una Dialog con titolo(#declaration[DialogTitle]), contenuto(#declaration[DialogContent]) e un bottone all'interno delle #declaration[DialogActions] utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
 - Il contenuto della Dialog è composto da un #declaration[Typography] e un #declaration[Divider].
+
+I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
+- #declaration[PastebinNode]\;
+- #declaration[CalendarNode]\;
+- #declaration[GmailNode].
