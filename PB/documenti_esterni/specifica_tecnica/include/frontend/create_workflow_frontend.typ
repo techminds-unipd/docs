@@ -23,3 +23,5 @@ All’interno dell’hook vengono utilizzate due variabili di stato:
 - isLoading, che indica se l’operazione è in corso;
 - error, che memorizza eventuali messaggi di errore.
 L'hook recupera anche le informazioni dell’utente tramite useAuth(), assicurandosi che la richiesta venga inviata solo se l’utente è autenticato. In questo caso crea un’istanza di NewWorkflowService con il token di accesso dell'utente. Invoca poi il metodo #declaration("newWorkflow(name)") che, in caso di successo, restituisce i dati al chiamante; altrimenti aggiorna lo stato d'errore con il messaggio di errore corrispondente.
+
+L'hook restituisce la funzione #declaration("createWorkflow") per invocare la cancellazione, insieme ai valori di stato isLoading e error per la gestione della UI.
