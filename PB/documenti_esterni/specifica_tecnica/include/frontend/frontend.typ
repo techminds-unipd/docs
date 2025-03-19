@@ -11,4 +11,7 @@
 ==== Pagine
 #include("pagine.typ")
 
+==== Funzionalità
+#include("autenticazione.typ")
+
 // ==== Design Pattern
