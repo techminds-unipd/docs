@@ -143,3 +143,12 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
 #include("execute_workflow.typ")
 #include("connection_google_request.typ")
 #include("connection_google_response.typ")
+
+
+=== Design pattern utilizzati
+- *Object Adapter*: il suo utilizzo è previsto in seguito alla scelta dell'architettura esagonale, in quanto permette di adattare gli oggetti tra i vari layer dell'applicazione. Le porte parlano ad oggetti di business logic, mentre gli adapter si occupano dell'adattamento dei dati, in particolare nel layer di application si hanno i _DTO_ mentre nel layer di persistence le _Entity_.
+- *Parameter Object*: in alcuni casi si è scelto di utilizzare un oggetto per passare i parametri ad un metodo, in modo da rendere più leggibile il codice. Un esempio di utilizzo è la creazione di alcuni oggetti come _SaveWorkflowCommand_ che contiene i parametri necessari per il salvataggio di un workflow.
+- *Decorator*: implementato da _NestJS_ per aggiungere metadati a classi, metodi e proprietà. I decorator vengono inoltre utilizzati per definire i vari componenti dell'applicazione, come i moduli e i controller. Vengono utilizzati anche per definire i vari endpoint delle API REST.
+- *Module*: implementato da _NestJS_ attraverso il decoratore _\@Module_. Ogni modulo contiene i vari componenti dell'applicazione, come i controller, i service e i repository al fine di semplificare la gestione delle dipendenze e promuovere il riutilizzo del codice.
+- *Dependency Injection*: viene implementato da _NestJS_, il framework utilizzato per lo sviluppo del backend, e permette di iniettare le dipendenze in modo automatico attraverso i decoratori _\@Injectable_ e _\@Inject_. La dipendenza viene iniettata nel costruttore della classe, in modo che il framework possa gestire la creazione dell'oggetto.
+- *Schema*: utilizzato da _Moongose_ al fine di assicurare integrità e strutture dati consistenti oltre a garantire la validità dei dati. Ogni schema è associato ad una collezione del database e contiene i vari campi che la compongono. In _NestJS_ con _Mongoose_ questo pattern viene implementato dai decoratori _\@Schema_ e _\@Prop_. 
