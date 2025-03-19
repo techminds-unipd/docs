@@ -129,3 +129,30 @@ L’interfaccia mostra:
 - Un CircularProgress durante il caricamento;
 - Un messaggio di errore se si verifica un problema nel recupero dei dati;
 - L'elenco dei workflow, ciascuno rappresentato da un componente WorkflowItem.
+
+
+===== PrivateRoute
+// non credo serva l'immagine
+
+Il componente PrivateRoute è un componente React personalizzato che viene utilizzato all'interno della configurazione di React Router per gestire la navigazione protetta.
+
+Il componente si basa sull'hook personalizzato #declaration("useAuth()") per verificare se l'utente è autenticato. In tal caso, viene renderizzato il componente figlio attraverso Outlet.
+Se l'utente non è autenticato, viene eseguito un reindirizzamento automatico alla pagina di SignIn tramite il componente Navigate di React Router. \
+Viene utilizzato per proteggere le seguenti pagine:
+- Dashboard;
+- Workflow;
+- Services.
+
+===== AnonymousRoute
+// non credo serva l'immagine
+
+Il componente AnonymousRoute è un componente React personalizzato che impedisce agli utenti autenticati di accedere a determinate pagine pubbliche.
+
+Il componente tilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
+Se l'utente non è autenticato, viene renderizzato il componente figlio attraverso Outlet.
+Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dashboard tramite Navigate di React Router. \
+AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:
+- SignIn;
+- SignUp.
+
+
