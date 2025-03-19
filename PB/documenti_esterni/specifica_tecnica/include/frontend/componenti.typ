@@ -8,7 +8,7 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ===== CustomLink
-// da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
+// TODO da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
 Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
@@ -83,3 +83,17 @@ Il componente PersonCard è composto da:
 - Un Avatar che applica una maschera a cerchio sull'immagine del profilo GitHub;
 - Un Typography che contiene il nome della persona;
 - Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
+
+===== AddWorkflow
+// TODO inserire immagine
+
+Il componente AddWorkflow è un componente React personalizzato che permette agli utenti di creare un nuovo workflow. Viene utilizzato all’interno della pagina Dashboard.
+
+Il componente accetta una prop:
+- setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo la creazione di un nuovo elemento.
+Grazie all’hook personalizzato #declaration("useCreateWorkflow()"), il componente può accedere al servizio per creare un nuovo workflow. L'input dell'utente viene gestito attraverso un campo di testo (TextField di MUI), e la creazione avviene al click dell'IconButton, che utilizza l'icona di aggiunta fornita da MUI.
+
+Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow()"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
+Quest'ultimo ha quindi due varianti:
+- success: se la creazione è andata a buon fine;
+- error: se si è verificato un problema (ad esempio, nome duplicato o errore generico).

@@ -5,7 +5,7 @@
 
 === Diagrammi delle classi
 // TODO
-==== Componenti personalizzate
+==== Componenti personalizzati
 #include("componenti.typ")
 
 ==== Pagine
