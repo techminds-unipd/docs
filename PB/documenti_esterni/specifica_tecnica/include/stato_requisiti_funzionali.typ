@@ -1,10 +1,11 @@
 #import "../../analisi_requisiti/include/definizione_requisiti.typ": getFR, getFRByNumber
+#show figure: set block(breakable: true)
 
 = Stato requisiti funzionali
 Viene riportata la tabella definita nell'#link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")[analisi dei requisiti]#footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")) che descrive i requisiti funzionali del sistema. In aggiunta viene riportata una colonna che definisce lo stato di avanzamento di ciascun requisito.
 
 #let requisiti = getFR(getLen: false)
-
+#let codice_requisiti_da_soddisfare = ("FOR1", "FMR31", "FMR32", "FMR33", "FMR34", "FMR35", "FMR36", "FMR37", "FMR38", "FMR39", "FMR40", "FMR41", "FMR42", "FMR43", "FMR46", "FMR47", "FMR48", "FMR49", "FMR50", "FMR51", "FMR52", "FMR53", "FMR54")
 #set par(justify: false)
 #figure(
   table(
@@ -15,40 +16,7 @@ Viene riportata la tabella definita nell'#link("https://techminds-unipd.github.i
     table.header(
       [*Codice*], [*Descrizione metrica*], [*Stato*]
     ),
-    [#requisiti.at(0).at(0)], [#requisiti.at(0).at(1)], [Soddisfatto],
-    [#requisiti.at(1).at(0)], [#requisiti.at(1).at(1)], [Soddisfatto],
-    [#requisiti.at(2).at(0)], [#requisiti.at(2).at(1)], [Soddisfatto],
-    [#requisiti.at(3).at(0)], [#requisiti.at(3).at(1)], [Soddisfatto],
-    [#requisiti.at(4).at(0)], [#requisiti.at(4).at(1)], [Soddisfatto],
-    [#requisiti.at(5).at(0)], [#requisiti.at(5).at(1)], [Soddisfatto],
-    [#requisiti.at(6).at(0)], [#requisiti.at(6).at(1)], [Soddisfatto],
-    [#requisiti.at(7).at(0)], [#requisiti.at(7).at(1)], [Soddisfatto],
-    [#requisiti.at(8).at(0)], [#requisiti.at(8).at(1)], [Soddisfatto],
-    [#requisiti.at(9).at(0)], [#requisiti.at(9).at(1)], [Soddisfatto],
-    [#requisiti.at(10).at(0)], [#requisiti.at(10).at(1)], [Soddisfatto],
-    [#requisiti.at(11).at(0)], [#requisiti.at(11).at(1)], [Soddisfatto],
-    [#requisiti.at(12).at(0)], [#requisiti.at(12).at(1)], [Soddisfatto],
-    [#requisiti.at(13).at(0)], [#requisiti.at(13).at(1)], [Soddisfatto],
-    [#requisiti.at(14).at(0)], [#requisiti.at(14).at(1)], [Soddisfatto],
-    [#requisiti.at(15).at(0)], [#requisiti.at(15).at(1)], [Soddisfatto],
-    [#requisiti.at(16).at(0)], [#requisiti.at(16).at(1)], [Soddisfatto],
-    [#requisiti.at(17).at(0)], [#requisiti.at(17).at(1)], [Soddisfatto],
-    [#requisiti.at(18).at(0)], [#requisiti.at(18).at(1)], [Soddisfatto],
-    [#requisiti.at(19).at(0)], [#requisiti.at(19).at(1)], [Soddisfatto],
-    [#requisiti.at(20).at(0)], [#requisiti.at(20).at(1)], [Soddisfatto],
-    [#requisiti.at(21).at(0)], [#requisiti.at(21).at(1)], [Soddisfatto],
-    [#requisiti.at(22).at(0)], [#requisiti.at(22).at(1)], [Soddisfatto],
-    [#requisiti.at(23).at(0)], [#requisiti.at(23).at(1)], [Soddisfatto],
-    [#requisiti.at(24).at(0)], [#requisiti.at(24).at(1)], [Soddisfatto],
-    [#requisiti.at(25).at(0)], [#requisiti.at(25).at(1)], [Soddisfatto],
-    [#requisiti.at(26).at(0)], [#requisiti.at(26).at(1)], [Soddisfatto],
-    [#requisiti.at(27).at(0)], [#requisiti.at(27).at(1)], [Soddisfatto],
-    [#requisiti.at(28).at(0)], [#requisiti.at(28).at(1)], [Soddisfatto],
-    [#requisiti.at(29).at(0)], [#requisiti.at(29).at(1)], [Soddisfatto],
-    [#requisiti.at(30).at(0)], [#requisiti.at(30).at(1)], [Soddisfatto],
-    [#requisiti.at(31).at(0)], [#requisiti.at(31).at(1)], [Soddisfatto],
-    [#requisiti.at(32).at(0)], [#requisiti.at(32).at(1)], [Soddisfatto],
-    [#requisiti.at(33).at(0)], [#requisiti.at(33).at(1)], [Soddisfatto],
+    ..getFR(getLen: false).map(x => {if (x.at(0) in codice_requisiti_da_soddisfare) {(x.at(0), x.at(1), "Non soddisfatto")} else {{(x.at(0), x.at(1), "Soddisfatto")}}}).flatten()
     
   ),
   caption: [Tabella stato requisiti funzionali.]
