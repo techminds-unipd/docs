@@ -1,6 +1,5 @@
 #import "/template/template.typ": glossario
-#import "definizione-test.typ": getSistema
-#import "definizione-test.typ": getAccettazione
+#import "definizione-test.typ": getSistema, getUnità, getAccettazione
 #show figure: set block(breakable: true)
 = Specifica dei test
 Nelle successive sezioni andremo ad individuare varie tipologie di test.
@@ -22,6 +21,27 @@ Si concentrano sulla verifica delle singole unità del software. Questi test son
 - Verificano la correttezza del codice "as implemented";
 - Consentono un alto grado di parallelismo e automazione nello svolgimento, rendendoli efficienti;
 - Accertano la correttezza del codice a livello più basso, verificando che ogni singola parte funzioni come previsto.
+
+Codici:
+- TUB: test di unità del backend;
+- TUA: test di unità dell'agente;
+- TUF: test di unità del frontend.
+
+#set par(justify: false)
+#figure(
+    table(
+        columns: (auto, auto, auto),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white}},
+        inset: 10pt,
+        align: horizon,
+        table.header(
+          [*Codice test*], [*Descrizione*], [*Stato test*],
+        ),
+        ..getUnità().flatten(),
+    ),
+    caption: [Test di unità.]
+) <tabella-test-unità>
+#set par(justify: true)
 
 == Test di integrazione
 Hanno lo scopo di verificare il corretto funzionamento delle interfacce e dei flussi di controllo tra le componenti del software, rilevando eventuali difetti di progettazione architetturale o problemi causati da test di unità non adeguati.
