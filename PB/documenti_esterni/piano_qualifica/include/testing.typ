@@ -24,7 +24,7 @@ Si concentrano sulla verifica delle singole unità del software. Questi test son
 
 Codici:
 - TUB: test di unità del backend;
-- TUA: test di unità dell'#glossario[agente];
+- TUA: test di unità dell'#glossario[agente]\;
 - TUF: test di unità del frontend.
 
 #set par(justify: false)
