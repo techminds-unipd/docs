@@ -4,7 +4,7 @@
 // test di unità
 #let getUnità() = {
     let unitàBackend = ()
-
+    let unitàAgente = ()
     // RegisterUserController
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
         [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ ritorni un DTO con l'utente registrato.],
@@ -510,7 +510,36 @@
         [S],
     ))
 
-    return unitàBackend
+
+    // WorkflowController (AGENTE)
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ ritorni una stringa che contiene il risultato dell'esecuzione dell'agente.],
+        [S],
+    ))
+
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione con http status 400 se la richiesta è invalida a causa dell'errato schema JSON.],
+        [S],
+    ))
+
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione http status 400 se la richiesta è invalida a causa di un campo action vuoto in uno dei nodi del workflow che non sia l'ultimo.],
+        [S],
+    ))
+
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione http status 400 se la richiesta è invalida a causa del campo action non vuoto nell'ultimo nodo del workflow.],
+        [S],
+    ))
+
+    // WorkflowService (AGENTE)
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _run_ della classe _WorkflowService_ ritorni un oggetto di tipo _AgentResponse_ che contiene la risposta generata da un agente AI che utilizza un LLM.],
+        [S],
+    ))
+
+
+    return unitàBackend + unitàAgente
 }
 
 
