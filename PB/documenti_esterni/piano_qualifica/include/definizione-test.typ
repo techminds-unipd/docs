@@ -510,6 +510,16 @@
         [S],
     ))
 
+    // WorkflowAdapterImplementation
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _toDTO_ della classe _WorkflowAdapterImplementation_ adatti un oggetto di tipo _Workflow_ in un oggetto di tipo _WorkflowDTO_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _toDomain_ della classe _WorkflowAdapterImplementation_ adatti un oggetto di tipo _WorkflowDTO_ in un oggetto di tipo _Workflow_.],
+        [S],
+    ))
 
     // WorkflowController (AGENTE)
     unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
