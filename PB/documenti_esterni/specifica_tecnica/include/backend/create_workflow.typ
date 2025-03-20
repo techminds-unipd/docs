@@ -2,7 +2,7 @@
 
 ==== CreateWorkflow
 #figure(
-    image("../../assets/backend_register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
     caption: [Diagramma delle classi riguardante la funzionalità CreateWorkflow del backend.],
 )
 
