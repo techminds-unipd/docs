@@ -87,14 +87,16 @@ Il componente PersonCard è composto da:
 - Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
 
 ===== CustomNode
-#figure(
+/*#figure(
     image("../../assets/frontend/CustomNode.svg", width: 65%),
   caption: [Componente PersonCard.],
-)
+)*/
+----------------------------------------------------------IMMAGINE DA INSERIRE----------------------------------------------------------
+
 Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. 
 Ogni nodo, a seguito di un click su di esso, mostra su schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
 Ogni nodo può essere di input (in), output (out) o entrambi (in-out), ciò è necessario per l'uso nella pagina di creazione del workflow.
-Ogni nodo può essere trascinabile o meno, utile a seconda della pagina di destinazione.
+Ogni nodo può essere trascinabile, utile nella pagina di creazione dei workflow.
 Il nodo può assumere un'estetica differente se è disabilitato.
 
 Il componente accetta le seguenti props:
@@ -104,14 +106,6 @@ Il componente accetta le seguenti props:
 - type: il tipo di blocco, che può essere "in", "out" o "in-out";
 - disabled: un booleano che indica se il servizio è disabilitato;
 - draggable: un booleano che indica se il blocco è trascinabile.
-
-/*I valori di default per le props sono:
-- nodeTitle: "nodeTitle";
-- dialogTitle: "Description";
-- dialogContent: le informazioni del servizio mostrate dalla Dialog;
-- type: "in-out";
-- disabled: false;
-- draggable: false.*/
 
 Il componente CustomNode è composto da:
 - Un bottone decorato dall'icona #declaration[InfoOutlinedIcon];
