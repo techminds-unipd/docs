@@ -63,8 +63,6 @@ Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
 - *BinSchema*
     - Proprietà:
         - #declaration("- message: string") #arrow schema che descrive il messaggio all'interno di un bin.
-    - Note:
-        - deriva da _BaseModel_, tipo fornito dalla libreria LangChain.
     
 - *PastebinCreateBinTool*
     - Proprietà:
@@ -84,8 +82,6 @@ Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
         - #declaration("- description: string") #arrow descrizione dell'evento;
         - #declaration("- startDateTime: string") #arrow data di inizio dell'evento;
         - #declaration("- endDateTime: string") #arrow data di fine dell'evento.
-    - Note:
-        - deriva da _BaseModel_, tipo fornito dalla libreria LangChain.
 
 - *GCalendarCreateEventTool*
     - Proprietà:
@@ -103,8 +99,6 @@ Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
         - #declaration("- query: string") #arrow query di ricerca;
         - #declaration("- timeMin: string") #arrow data minima di inizio della ricerca;
         - #declaration("- timeMax: string") #arrow data massima di fine della ricerca.
-    - Note:
-        - deriva da _BaseModel_, tipo fornito dalla libreria LangChain.
 
 - *GCalendarSearchEventTool*
     - Proprietà:
