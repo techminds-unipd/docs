@@ -11,10 +11,10 @@ I layer che compongono l'architettura sono:
 - *Persistence*: contiene i vari tool, i quali si interfacciano con gli attori esterni, che l'agente utilizza durante l'esecuzione dei workflow.
 
 === Diagramma delle classi
-// #figure(
-//     image("../../assets/agent_diagramma_classi.svg", width: 55%),
-//   caption: [Diagramma delle classi della componente agente.],
-// )
+#figure(
+    image("../assets/diagramma-agente.svg", width: 130%),
+  caption: [Diagramma delle classi della componente agente.],
+)
 Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
 
 === Application logic
