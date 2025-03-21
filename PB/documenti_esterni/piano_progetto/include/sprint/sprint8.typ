@@ -66,7 +66,7 @@ Durante lo sprint sono state individuate delle issue aggiuntive che non erano st
 - #link("https://github.com/techminds-unipd/docs/issues/475")[Issue \#475]#footnote(link("https://github.com/techminds-unipd/docs/issues/475")): Descrizione frontend Dashboard;
 - #link("https://github.com/techminds-unipd/docs/issues/482")[Issue \#482]#footnote(link("https://github.com/techminds-unipd/docs/issues/482")): Documentare test di unità backend sul piano di qualifica;
 - #link("https://github.com/techminds-unipd/docs/issues/483")[Issue \#483]#footnote(link("https://github.com/techminds-unipd/docs/issues/483")): Documentare test di unità agente sul piano di qualifica;
-- #link("https://github.com/techminds-unipd/docs/issues/487")[Issue \#487]#footnote(link("https://github.com/techminds-unipd/docs/issues/487")): Documentare design patterns backend;
+- #link("https://github.com/techminds-unipd/docs/issues/487")[Issue \#487]#footnote(link("https://github.com/techminds-unipd/docs/issues/487")): Documentare design pattern backend;
 - #link("https://github.com/techminds-unipd/docs/issues/489")[Issue \#489]#footnote(link("https://github.com/techminds-unipd/docs/issues/489")): Stato requisiti funzionali in specifica tecnica.
 
 ==== Diagramma di Gantt
