@@ -162,13 +162,13 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
 
 ==== Rischi occorsi
-Durante lo svolgimento dello sprint è occorso il rischio RP4 che non era stato previsto, ovvero la scarsa conoscenza delle tecnologie utilizzate. In particolare sono stati riscontrati alcuni problemi riguardanti la codifica di alcuni unit testing per fare il mock di alcuni servizi di Google che hanno richiesto più tempo del previsto. Il rischio è stato gestito in modo efficace grazie alla collaborazione tra i membri del team che si sono documentati tempestivamente sulla tecnologia utilizzata.
+Durante lo svolgimento dello sprint è occorso il rischio RP4 che non era stato previsto, ovvero la scarsa conoscenza delle tecnologie utilizzate. In particolare sono stati riscontrati alcuni problemi riguardanti la codifica di alcuni unit test per fare il mock di alcuni servizi di Google che hanno richiesto più tempo del previsto. Il rischio è stato gestito in modo efficace grazie alla collaborazione tra i membri del team che si sono documentati tempestivamente sulla tecnologia utilizzata.
 
 ==== Conclusioni
 In questo sprint sono state completate quasi tutte le attività previste. In particolare, sono state completate le attività di progettazione di dettaglio e le attività di codifica del backend e dell'agente. Le attività non completate riguardano la progettazione di dettaglio e la codifica di alcuni parti del frontend. Queste attività verranno completate nello sprint successivo.
 
 ==== Retrospettiva
-Il team ha lavorato ha lavorato in modo collaborativo e ha risolto i problemi che sono sorti durante lo sprint in modo efficace. Dati i progressi significativi fatti, si prevede di poter rispettare le scadenze e i costi attesi. 
+Il team ha lavorato in modo collaborativo e ha risolto i problemi che sono sorti durante lo sprint in modo efficace. Dati i progressi significativi fatti, si prevede di poter rispettare le scadenze e i costi attesi. 
 
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 8)
