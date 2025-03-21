@@ -115,4 +115,4 @@ Il componente CustomNode è composto da:
 I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
 - PastebinNode;
 - CalendarNode;
-- #declaration[GmailNode].
+- GmailNode.
