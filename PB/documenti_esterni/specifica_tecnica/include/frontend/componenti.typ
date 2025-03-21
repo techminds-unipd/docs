@@ -108,7 +108,7 @@ Il componente accetta le seguenti props:
 - draggable: un booleano che indica se il blocco è trascinabile.
 
 Il componente CustomNode è composto da:
-- Un bottone decorato dall'icona #declaration[InfoOutlinedIcon];
+- Un bottone decorato dall'icona InfoOutlinedIcon;
 - Una Dialog con titolo(#declaration[DialogTitle]), contenuto(#declaration[DialogContent]) e un bottone all'interno delle #declaration[DialogActions] utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
 - Il contenuto della Dialog è composto da un #declaration[Typography] e un #declaration[Divider].
 
