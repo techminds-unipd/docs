@@ -4,7 +4,7 @@
 ===== DeleteWorkflow
 // TODO inserire le immagini
 
-*deleteWorkflowService*
+*DeleteWorkflowService*
 
 DeleteWorkflowService è una classe TypeScript che gestisce l'eliminazione di un workflow inviando una richiesta DELETE a un'API REST.
 
@@ -13,7 +13,7 @@ Quando viene istanziata, la classe richiede un token di accesso, necessario per 
 Durante l'elaborazione, il servizio gestisce vari scenari di risposta:
 - Se la cancellazione ha successo (200), restituisce il nome del workflow eliminato;
 - Se il workflow non viene trovato (404), genera un errore specifico;
-- Se si verifica un problema lato server (500), restituisce un errore generico;
+- Se si verifica un problema lato server (>=500), restituisce un errore generico;
 - In qualsiasi altro caso, restituisce un errore predefinito.
 
 *useDeleteWorkflow*

@@ -14,7 +14,7 @@ Il componente CustomLink è un componente React personalizzato che gestisce la n
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
 - link: l'URL di destinazione;
-- color: il colore da applicare al link. Questo può avere tre valori: "black", "white" o "main-color".
+- color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color".
 Grazie all'hook #declaration("useLocation()") di React Router, il componente può ottenere il percorso corrente dell'utente. Se il valore del link corrisponde al percorso attuale, CustomLink ritorna un componente Typography, evitando di generare un link cliccabile.
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 
@@ -96,7 +96,7 @@ Grazie all’hook personalizzato #declaration("useCreateWorkflow()"), il compone
 Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow()"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
 Quest'ultimo ha quindi due varianti:
 - success: se la creazione è andata a buon fine;
-- error: se si è verificato un problema (ad esempio, nome duplicato o errore generico).
+- error: se si è verificato un problema (ad esempio nome duplicato o errore generico).
 
 
 ===== WorkflowItem 
@@ -134,9 +134,9 @@ L’interfaccia mostra:
 ===== PrivateRoute
 // non credo serva l'immagine
 
-Il componente PrivateRoute è un componente React personalizzato che viene utilizzato all'interno della configurazione di React Router per gestire la navigazione protetta.
+Il componente PrivateRoute è un componente React personalizzato che viene utilizzato all'interno della configurazione di React Router per gestire l'area dedicata all'utente autenticato.
 
-Il componente si basa sull'hook personalizzato #declaration("useAuth()") per verificare se l'utente è autenticato. In tal caso, viene renderizzato il componente figlio attraverso Outlet.
+Il componente si basa sull'hook personalizzato #declaration("useAuth()") per verificare se l'utente ha effettuato il login. In tal caso, viene renderizzato il componente figlio attraverso Outlet.
 Se l'utente non è autenticato, viene eseguito un reindirizzamento automatico alla pagina di SignIn tramite il componente Navigate di React Router. \
 Viene utilizzato per proteggere le seguenti pagine:
 - Dashboard;

@@ -3,14 +3,14 @@
 ===== WorkflowNameList
 // TODO inserire immagine
 
-*allWorkflowsService*
+*AllWorkflowsService*
 
 AllWorkflowsService è una classe TypeScript che si occupa di recuperare la lista di tutti i workflow disponibili inviando una richiesta GET a un'API REST.
 
 Quando viene istanziata, riceve un token di accesso necessario per autenticare la richiesta. Il metodo principale, #declaration("allWorkflows(): Promise<Array<string>>"), effettua una chiamata all'endpoint API corrispondente e gestisce i diversi casi di risposta:
 - Se la richiesta ha successo (200), restituisce un array contenente i nomi dei workflow disponibili;
 - Se l'utente non è valido o non è autorizzato (400), genera un errore specifico;
-- Se si verifica un problema lato server (500), restituisce un errore generico;
+- Se si verifica un problema lato server (>=500), restituisce un errore generico;
 - In qualsiasi altro caso, restituisce un errore predefinito.
 
 *useAllWorkflows*
