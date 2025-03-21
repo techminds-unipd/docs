@@ -154,12 +154,13 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3);
 - ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
 
-//==== Rischi occorsi
-//Nessuno dei rischi previsti si è concretizzato.
+==== Rischi occorsi
+//mettere rischio tecnologie (metterlo anche nei rischi previsti)
 
 //==== Conclusioni
 
 //==== Retrospettiva
+
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 8)
 
@@ -170,7 +171,6 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint8> \
 
-/*
 #if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
@@ -181,6 +181,21 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
   #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
   <grafico-ConsuntivoSprint8> \
 ]
-*/
 
-//==== Aggiornamento preventivo a finire
+==== Aggiornamento preventivo a finire
+#figure(
+    table(
+        columns: (1fr,)*5,
+        align: center+horizon,
+            fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*],[*Costo orario*],[*Stima oraria*],[*Percentuale*],[*Stima costo*]),
+        [Responsabile], [30 #sym.euro], [40], [6%], [1.200 #sym.euro],
+        [Amministratore], [20 #sym.euro], [125 #text(rgb("#204680"))[(-10)]], [19%], [2.500 #sym.euro],
+        [Analista], [25 #sym.euro], [60], [9%], [1.500 #sym.euro],
+        [Progettista], [25 #sym.euro], [100 #text(rgb("#204680"))[(+10)]], [15%], [2.500 #sym.euro],
+        [Programmatore], [15 #sym.euro], [150 #text(rgb("#204680"))[(-10)]], [23%], [2.250 #sym.euro],
+        [Verificatore], [15 #sym.euro], [190 #text(rgb("#204680"))[(+10)]], [29%], [2.850 #sym.euro],
+        table.cell([*Costo Totale*], colspan: 4, fill: white), table.cell([*12.800 #sym.euro*], fill: white)
+    ),
+    caption: "Preventivo a finire sprint 8."
+)<tabella-paf-sprint-8>
