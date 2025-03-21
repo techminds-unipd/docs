@@ -1,5 +1,5 @@
 #import "funzioni_ausiliarie.typ": declaration
-===== Autenticazione
+===== LoginUser
 L'autenticazione è realizzata da tre unità:
 - LoginService, che interagisce con il backend per richiedere il login;
 - AuthContext e AuthProvider, che rendono disponibili le informazioni e le funzioni per l'autenticazione all'interno della web app;
@@ -17,14 +17,14 @@ L'esecuzione prosegue in base al codice di risposta ricevuto:
 *AuthContext e AuthProvider*
 
 AuthContext fornisce un contesto che, tramite l'uso dell'hook createContext di React, memorizza e rende disponibili le informazioni descritte dall'interfaccia AuthContextType, che contiene i dati:
-- User, che può essere:
+- user, che può essere:
   - null se l'utente non è autenticato;
   - di tipo User se l'utente è autenticato. User è un'interfaccia che memorizza due stringhe: l'username e l'access token;
-- LoginUser, una funzione per effettuare il login;
-- LogoutUser, una funzione per effettuare il logout;
-- Error, che contiene i messaggi di errore relativi all'autenticazione.
+- loginUser, una funzione per effettuare il login;
+- logoutUser, una funzione per effettuare il logout;
+- error, che contiene i messaggi di errore relativi all'autenticazione.
 Per poter accedere a tale contesto, un componente deve essere figlio di AuthProvider e utilizzare l'hook personalizzato useAuth. Data la necessità di inviare l'access token per l'utilizzo di molte funzionalità offerte dal backend, è stato deciso di rendere AuthProvider genitore del componente App, che a sua volta contiene tutti i componenti della web app.
 
 *useAuth*
 
-useAuth è un hook personalizzato da utilizzare nei componenti che necessitano delle informazioni e delle funzioni relative all'autenticazione dell'utente. useAuth restituisce un oggetto AuthContextType se il componente in cui è invocato è figlio di AuthProvider, altrimenti lancia un Errore con un messaggio che informa della necessità di avere il Provider come genitore.
+useAuth è un hook personalizzato da utilizzare nei componenti che necessitano delle informazioni e delle funzioni relative all'autenticazione dell'utente. useAuth restituisce un oggetto AuthContextType se il componente in cui è invocato è figlio di AuthProvider, altrimenti lancia un Error con un messaggio che informa della necessità di avere il Provider come genitore.
