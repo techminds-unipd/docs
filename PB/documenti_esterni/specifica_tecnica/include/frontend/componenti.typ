@@ -113,6 +113,6 @@ Il componente CustomNode è composto da:
 - Il contenuto della Dialog è composto da un Typography e un Divider.
 
 I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
-- #declaration[PastebinNode]\;
+- PastebinNode;
 - #declaration[CalendarNode]\;
 - #declaration[GmailNode].
