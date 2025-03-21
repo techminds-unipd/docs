@@ -108,7 +108,7 @@ Il componente accetta due prop:
 - name: il nome del workflow da visualizzare;
 - setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo l'eliminazione di un elemento.
 
-Grazie all’hook personalizzato #declaration("useDeleteWorkflow()"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un Link di MUI, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
+Grazie all’hook personalizzato #declaration("useDeleteWorkflow()"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un CustomLink, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
 
 Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow()"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
 
