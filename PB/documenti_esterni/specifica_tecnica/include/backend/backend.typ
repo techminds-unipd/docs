@@ -18,7 +18,7 @@ Questa scelta ha anche dei lati negativi, ad esempio:
 
 === Diagramma delle classi
 #figure(
-    image("../../assets/backend_diagramma_classi.svg", width: 55%),
+    image("../../assets/backend/diagramma_classi.svg", width: 55%),
   caption: [Diagramma delle classi della componente backend.],
 )
 
