@@ -103,7 +103,7 @@ Il componente accetta le seguenti props:
 - nodeTitle: il nome del servizio;
 - dialogTitle: il titolo della Dialog;
 - dialogContent: le informazioni del servizio mostrate dalla Dialog;
-- type: il tipo di blocco, che può essere "in", "out" o "in-out";
+- type: il tipo di blocco, che può essere \"in\", \"out\" o \"in-out\";
 - disabled: un booleano che indica se il servizio è disabilitato;
 - draggable: un booleano che indica se il blocco è trascinabile.
 
