@@ -63,11 +63,11 @@ L'obiettivo principale di questo sprint è quello di ultimare la progettazione l
 ==== Issue aggiuntive
 Durante lo sprint sono state individuate delle issue aggiuntive che non erano state preventivate:
 - #link("https://github.com/techminds-unipd/mvp/issues/40")[Issue \#40]#footnote(link("https://github.com/techminds-unipd/mvp/issues/40")): Codifica frontend Dashboard;
-- #link("https://github.com/techminds-unipd/docs/issues/475")[Issue \#475]#footnote("https://github.com/techminds-unipd/docs/issues/475"): Descrizione frontend Dashboard;
-- #link("https://github.com/techminds-unipd/docs/issues/482")[Issue \#482]#footnote("https://github.com/techminds-unipd/docs/issues/482"): Documentare test di unità backend sul piano di qualifica;
-- #link("https://github.com/techminds-unipd/docs/issues/483")[Issue \#483]#footnote("https://github.com/techminds-unipd/docs/issues/483"): Documentare test di unità agente sul piano di qualifica;
-- #link("https://github.com/techminds-unipd/docs/issues/487")[Issue \#487]#footnote("https://github.com/techminds-unipd/docs/issues/487"): Documentare design patterns backend;
-- #link("https://github.com/techminds-unipd/docs/issues/489")[Issue \#489]#footnote("https://github.com/techminds-unipd/docs/issues/489"): Stato requisiti funzionali in specifica tecnica.
+- #link("https://github.com/techminds-unipd/docs/issues/475")[Issue \#475]#footnote(link("https://github.com/techminds-unipd/docs/issues/475")): Descrizione frontend Dashboard;
+- #link("https://github.com/techminds-unipd/docs/issues/482")[Issue \#482]#footnote(link("https://github.com/techminds-unipd/docs/issues/482")): Documentare test di unità backend sul piano di qualifica;
+- #link("https://github.com/techminds-unipd/docs/issues/483")[Issue \#483]#footnote(link("https://github.com/techminds-unipd/docs/issues/483")): Documentare test di unità agente sul piano di qualifica;
+- #link("https://github.com/techminds-unipd/docs/issues/487")[Issue \#487]#footnote(link("https://github.com/techminds-unipd/docs/issues/487")): Documentare design patterns backend;
+- #link("https://github.com/techminds-unipd/docs/issues/489")[Issue \#489]#footnote(link("https://github.com/techminds-unipd/docs/issues/489")): Stato requisiti funzionali in specifica tecnica.
 
 ==== Diagramma di Gantt
 #figure(
@@ -192,6 +192,7 @@ Il team ha lavorato ha lavorato in modo collaborativo e ha risolto i problemi ch
 ]
 
 ==== Aggiornamento preventivo a finire
+In seguito al consuntivo dello sprint 8, il nuovo preventivo a finire ha subito dei piccoli scostamenti in termini di ore e costi.
 #figure(
     table(
         columns: (1fr,)*5,
