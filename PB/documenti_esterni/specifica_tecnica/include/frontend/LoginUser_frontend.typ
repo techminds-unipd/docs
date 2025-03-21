@@ -27,4 +27,4 @@ Per poter accedere a tale contesto, un componente deve essere figlio di AuthProv
 
 *useAuth*
 
-#declaration("useAuth()") è un hook personalizzato da utilizzare nei componenti che necessitano delle informazioni e delle funzioni relative all'autenticazione dell'utente. useAuth restituisce un oggetto AuthContextType se il componente in cui è invocato è figlio di AuthProvider, altrimenti lancia un Error con un messaggio che informa della necessità di avere il Provider come genitore.
+#declaration("useAuth()") è un hook personalizzato da utilizzare nei componenti che necessitano delle informazioni e delle funzioni relative all'autenticazione dell'utente. #declaration("useAuth") restituisce un oggetto AuthContextType se il componente in cui è invocato è figlio di AuthProvider, altrimenti lancia un Error con un messaggio che informa della necessità di avere il Provider come genitore.
