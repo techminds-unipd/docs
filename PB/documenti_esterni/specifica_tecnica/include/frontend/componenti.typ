@@ -109,7 +109,7 @@ Il componente accetta le seguenti props:
 
 Il componente CustomNode è composto da:
 - Un bottone decorato dall'icona InfoOutlinedIcon;
-- Una Dialog con titolo(#declaration[DialogTitle]), contenuto(#declaration[DialogContent]) e un bottone all'interno delle #declaration[DialogActions] utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
+- Una Dialog con titolo (DialogTitle), contenuto (DialogContent) e un bottone all'interno delle DialogActions utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
 - Il contenuto della Dialog è composto da un #declaration[Typography] e un #declaration[Divider].
 
 I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
