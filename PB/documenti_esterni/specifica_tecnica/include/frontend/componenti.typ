@@ -47,10 +47,8 @@ Il componente accetta una prop:
 - #declaration("handleCloseMenu()"): funzione che chiude il menu in cui è contenuto il pulsante di logout.
 
 Il componente utilizza l'hook #declaration("useState()") per gestire l'apertura e la chiusura della finestra di dialogo. Quando l'utente clicca su \"Logout\", viene aperto un dialogo di conferma con due pulsanti:
-- \"No\" chiude il dialogo senza effettuare il logout;
-- \"Yes\" esegue il logout (#declaration("onClick(handleLogout: function)")) e reindirizza l'utente alla pagina principale utilizzando l'hook #declaration("useNavigate()") di React Router.
-
-// DA AGGIORNARE CON LA LOGICA DI LOGOUT
+- \"No\", che chiude il dialogo senza effettuare il logout quando cliccato;
+- \"Yes\", che quando cliccato esegue il logout chiamando la funzione #declaration("handleLogout()"). Quest'ultima invoca le funzioni #declaration("logoutUser()") e #declaration("removeGoogleToken()") fornite dai rispettivi context e reindirizza l'utente alla pagina principale utilizzando l'hook #declaration("useNavigate()") di React Router.
 
 ===== Navbar <navbar>
 // SECONDO ME L'IMMAGINE DEL DIAGRAMMA VA INSERITO PIù AVANTI PER CAPIRE MEGLIO COSA METTERE PER LA GESTIONE DELL'AUTENTICAZIONE
@@ -63,11 +61,9 @@ Il componente Navbar include:
 - Una serie di link e bottoni di navigazione (gestiti con i componenti CustomLink e CustomButton);
 - Un'icona che apre un menu a tendina con opzioni aggiuntive.
 
-Le voci della Navbar cambiano in base allo stato di autenticazione:
+Le voci della Navbar cambiano in base allo stato di autenticazione fornito dal contesto AuthContext:
 - Utente non autenticato: vengono mostrati i pulsanti \"Sign In\" e \"Sign Up\" (gestiti con CustomButton);
 - Utente autenticato: viene mostrato il link \"Dashboard\" e un'icona utente con menu a tendina. Quest'ultimo contiene un'opzione per accedere alla pagina \"Services\" e un'opzione di logout, gestita dal componente LogoutMenuItem.
-
-// INSERIRE LA LOGICA DI NAVBAR LOGIN E NAVBAR LOGOUT
 
 ===== PersonCard
 #figure(
