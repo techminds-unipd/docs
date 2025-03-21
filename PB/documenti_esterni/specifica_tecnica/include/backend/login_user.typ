@@ -2,7 +2,7 @@
 
 ==== LoginUser <login-user>
 #figure(
-    image("../../assets/backend_login_user_diagramma_classi.svg", width: 70%),
+    image("../../assets/backend/login_user_diagramma_classi.svg", width: 70%),
     caption: [Diagramma delle classi riguardante la funzionalità LoginUser del backend.],
 )
 
