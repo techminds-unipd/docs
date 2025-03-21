@@ -25,4 +25,4 @@ L'hook utilizza due variabili di stato:
 - error, che memorizza eventuali messaggi di errore.
 L'hook recupera le informazioni dell'utente tramite #declaration("useAuth()"), assicurandosi che la richiesta venga inviata solo se l'utente è autenticato. Se l'utente è autenticato, crea un'istanza di DeleteWorkflowService utilizzando il token di accesso dell'utente. Invoca poi il metodo #declaration("deleteWorkflowByName(name)") per inviare la richiesta di eliminazione del workflow. In caso di successo, restituisce il risultato; in caso di errore, aggiorna lo stato error con il messaggio di errore corrispondente.
 
-L'hook restituisce la funzione #declaration("deleteWorkflow") per invocare la cancellazione, insieme ai valori di stato isLoading e error per la gestione della UI.
+L'hook restituisce la funzione #declaration("deleteWorkflow(name: string)") per invocare la cancellazione, insieme ai valori di stato isLoading e error per la gestione della UI.

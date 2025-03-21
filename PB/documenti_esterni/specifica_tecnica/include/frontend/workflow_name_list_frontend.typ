@@ -24,6 +24,6 @@ L'hook utilizza tre variabili di stato:
 
 L'hook recupera le informazioni dell’utente tramite #declaration("useAuth()"), assicurandosi che la richiesta venga eseguita solo se l’utente è autenticato. Se l’utente è autenticato, crea un'istanza di AllWorkflowsService con il token di accesso e invoca il metodo #declaration("allWorkflows()"). Se la richiesta ha successo, aggiorna lo stato con la lista dei workflow; altrimenti, aggiorna error con il messaggio corrispondente.
 
-Al momento della prima visualizzazione del componente, l'hook avvia automaticamente il recupero dei workflow tramite #declaration("useEffect()"). Inoltre, fornisce la funzione #declaration("refetch"), che consente di eseguire nuovamente il recupero dei dati su richiesta.
+Al momento della prima visualizzazione del componente, l'hook avvia automaticamente il recupero dei workflow tramite #declaration("useEffect()"). Inoltre, fornisce la funzione #declaration("fetchWorkflows()"), che consente di eseguire nuovamente il recupero dei dati su richiesta.
 
-L'hook restituisce quindi la funzione #declaration("useAllWorkflow") per invocare il recupero del nome dei workflow dell'utente, insieme ai valori di stato isLoading e error e la funzione #declaration("refetch") per la gestione della UI.
+L'hook restituisce quindi l'array workflowList contenente la lista dei workflow, insieme ai valori di stato isLoading e error e la funzione #declaration("fetchWorkflows()") per la gestione della UI.
