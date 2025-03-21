@@ -91,7 +91,7 @@ Il componente PersonCard è composto da:
     image("../../assets/frontend/CustomNode.svg", width: 65%),
   caption: [Componente PersonCard.],
 )*/
-----------------------------------------------------------IMMAGINE DA INSERIRE----------------------------------------------------------
+// TODO inserire immagine
 
 Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. 
 Ogni nodo, a seguito di un click su di esso, mostra sullo schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
