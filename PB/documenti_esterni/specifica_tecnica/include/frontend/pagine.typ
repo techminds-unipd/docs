@@ -29,14 +29,4 @@ La pagina è composta dai seguenti componenti React:
 ===== Sign in
 Questa pagina si trova nel percorso \"/signin\" e contiene il form per l'autenticazione.
 
-La pagina contiene un unico componente SignInForm, che contiene il form per effettuare il login. Quest'ultimo utilizza a sua volta i componenti di MIUI:
-- Card, per racchiudere tutto in una card grafica;
-- Typography, per mostrare il titolo e il testo \"Don't have an account?\";
-- Alert, per mostrare gli eventuali messaggi d'errore;
-- Box, per contenere gli input del form;
-- FormControl, FormLabel e TextField, per le label e gli input dello username e della password;
-- Button, per il bottone di submit;
-- Divider, per visualizzare una linea orizzontale tra il form e il link alla registrazione.
-Inoltre, sono usati i componenti da noi creati:
-- CustomLink, per il link alla registrazione;
-- SignInContainer, per la grafica del container del form.
+La pagina contiene un unico componente SignInForm, che contiene il form per effettuare il login.
