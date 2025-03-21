@@ -85,3 +85,34 @@ Il componente PersonCard è composto da:
 - Un Avatar che applica una maschera a cerchio sull'immagine del profilo GitHub;
 - Un Typography che contiene il nome della persona;
 - Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
+
+===== CustomNode
+/*#figure(
+    image("../../assets/frontend/CustomNode.svg", width: 65%),
+  caption: [Componente PersonCard.],
+)*/
+// TODO inserire immagine
+
+Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. 
+Ogni nodo, a seguito di un click su di esso, mostra sullo schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
+Ogni nodo può essere di input (in), output (out) o entrambi (in-out), ciò è necessario per l'uso nella pagina di creazione del workflow.
+Ogni nodo può essere trascinabile, utile nella pagina di creazione dei workflow.
+Il nodo può assumere un'estetica differente se è disabilitato.
+
+Il componente accetta le seguenti props:
+- nodeTitle: il nome del servizio;
+- dialogTitle: il titolo della Dialog;
+- dialogContent: le informazioni del servizio mostrate dalla Dialog;
+- type: il tipo di blocco, che può essere \"in\", \"out\" o \"in-out\";
+- disabled: un booleano che indica se il servizio è disabilitato;
+- draggable: un booleano che indica se il blocco è trascinabile.
+
+Il componente CustomNode è composto da:
+- Un bottone decorato dall'icona InfoOutlinedIcon;
+- Una Dialog con titolo (DialogTitle), contenuto (DialogContent) e un bottone all'interno delle DialogActions utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
+- Il contenuto della Dialog è composto da un Typography e un Divider.
+
+I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
+- PastebinNode;
+- CalendarNode;
+- GmailNode.
