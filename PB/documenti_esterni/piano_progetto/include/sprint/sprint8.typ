@@ -159,11 +159,10 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - RP1 - Impegno di un membro del team inferiore a quanto dichiarato (descritto in @tabella-RP1);
 - RP2 - Malattia di un membro del team (descritto in @tabella-RP2);
 - RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3);
-- RP4 - Scarsa conoscenza delle tecnologie utilizzate (descritto in @tabella-RP4);
 - ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
 
 ==== Rischi occorsi
-Durante lo svolgimento dello sprint è occorso il rischio RP4, ovvero la scarsa conoscenza delle tecnologie utilizzate. In particolare sono stati riscontrati alcuni problemi riguardanti la codifica di alcuni unit testing per fare il mock di alcuni servizi di Google che hanno richiesto più tempo del previsto. Il rischio è stato gestito in modo efficace grazie alla collaborazione tra i membri del team che si sono documentati tempestivamente sulla tecnologia utilizzata.
+Durante lo svolgimento dello sprint è occorso il rischio RP4 che non era stato previsto, ovvero la scarsa conoscenza delle tecnologie utilizzate. In particolare sono stati riscontrati alcuni problemi riguardanti la codifica di alcuni unit testing per fare il mock di alcuni servizi di Google che hanno richiesto più tempo del previsto. Il rischio è stato gestito in modo efficace grazie alla collaborazione tra i membri del team che si sono documentati tempestivamente sulla tecnologia utilizzata.
 
 ==== Conclusioni
 In questo sprint sono state completate quasi tutte le attività previste. In particolare, sono state completate le attività di progettazione di dettaglio e le attività di codifica del backend e dell'agente. Le attività non completate riguardano la progettazione di dettaglio e la codifica di alcuni parti del frontend. Queste attività verranno completate nello sprint successivo.
