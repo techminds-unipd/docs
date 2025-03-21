@@ -85,3 +85,19 @@ Il componente PersonCard è composto da:
 - Un Avatar che applica una maschera a cerchio sull'immagine del profilo GitHub;
 - Un Typography che contiene il nome della persona;
 - Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
+
+===== SignInForm
+SignInForm è un componente React che mostra il form per il login.
+
+Il componente usa i componenti di MIUI:
+- Card, per racchiudere tutto in una card grafica;
+- Typography, per mostrare il titolo e il testo \"Don't have an account?\";
+- Alert, per mostrare gli eventuali messaggi d'errore;
+- Box, per contenere gli input del form;
+- FormControl, FormLabel e TextField, per le label e gli input dello username e della password;
+- Button, per il bottone di submit;
+- Divider, per visualizzare una linea orizzontale tra il form e il link alla registrazione.
+
+I componenti personalizzati usati sono invece:
+- CustomLink, per il link alla registrazione;
+- SignInContainer, per la grafica del container del form.
