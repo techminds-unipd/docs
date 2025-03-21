@@ -29,4 +29,4 @@ La pagina è composta dai seguenti componenti React:
 ===== Sign in
 Questa pagina si trova nel percorso \"/signin\" e contiene il form per l'autenticazione.
 
-La pagina contiene un unico componente SignInForm, che contiene il form per effettuare il login.
+La pagina contiene un unico componente personalizzato SignInForm, che contiene il form per effettuare il login.

@@ -89,7 +89,7 @@ Il componente PersonCard è composto da:
 ===== SignInForm
 SignInForm è un componente React che mostra il form per il login.
 
-Il componente usa i componenti di MIUI:
+Il componente usa i componenti di MUI:
 - Card, per racchiudere tutto in una card grafica;
 - Typography, per mostrare il titolo e il testo \"Don't have an account?\";
 - Alert, per mostrare gli eventuali messaggi d'errore;
