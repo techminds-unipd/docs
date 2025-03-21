@@ -10,7 +10,7 @@
   ordine_giorno: ("Sprint retrospective",
                   "Preparazione per l'incontro con il proponente",
   ),
-  riassunto: [Il gruppo si è riunito per celebrare la retrospettiva dello sprint 8 e per la preparazione per l'incontro con il proponente. \ Durante la retrospettiva il team ha condiviso i progressi svolti durante lo sprint 7, in particolare riguardo l'avanzamento della progettazione e della codifica. \ La retrospettiva è terminata con la rendicontazione delle ore produttive consumute da ogni membro del team. \ Infine è stato aggiornato il preventivo a finire in vista del prossimo sprint entro il quale il team prevede di portare a termine il progetto.
+  riassunto: [Il gruppo si è riunito per celebrare la retrospettiva dello sprint 8 e per la preparazione per l'incontro con il proponente. \ Durante la retrospettiva il team ha condiviso i progressi svolti durante lo sprint 7, in particolare riguardo l'avanzamento della progettazione e della codifica. \ La retrospettiva è terminata con la rendicontazione delle ore produttive consumute da ogni membro del team, che non hanno subito grandi scostamenti da quanto preventivato. \ Infine è stato aggiornato il preventivo a finire in vista del prossimo sprint entro il quale il team prevede di portare a termine il progetto.
   ],
   decisioni: (
     ([Piano di progetto],
