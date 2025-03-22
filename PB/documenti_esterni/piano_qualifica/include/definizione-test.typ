@@ -25,12 +25,12 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/create*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_, lo crei e salvi all'interno del database e ritorni il _workflow_ creato.],
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_, lo crei e salvi all'interno del database e ritorni il _workflow_ creato.],
         [S],
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/create*. Verificare che il backend lanci un'eccezione con http status 400 poiché il _workflow_ avente quel nome è già presente nel database.],
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 400 poiché il _workflow_ avente quel nome è già presente nel database.],
         [S],
     ))
 
@@ -45,12 +45,12 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/get*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_ da ottenere, lo recuperi dal database e lo ritorni.],
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_ da ottenere, lo recuperi dal database e lo ritorni.],
         [S],
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/get*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
         [S],
     ))
 
@@ -70,12 +70,12 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/delete*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_ da eliminare, lo elimini dal database e ritorni il _workflow_ eliminato.],
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_ da eliminare, lo elimini dal database e ritorni il _workflow_ eliminato.],
         [S],
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/delete*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
         [S],
     ))
 
