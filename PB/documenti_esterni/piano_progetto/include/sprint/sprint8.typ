@@ -60,7 +60,14 @@ L'obiettivo principale di questo sprint è quello di ultimare la progettazione l
     - #link("https://github.com/techminds-unipd/mvp/issues/19")[Issue \#19]#footnote(link("https://github.com/techminds-unipd/mvp/issues/19")): Codifica frontend SignIn;
     - #link("https://github.com/techminds-unipd/mvp/issues/20")[Issue \#20]#footnote(link("https://github.com/techminds-unipd/mvp/issues/20")): Codifica frontend SignUp.
 
-//==== Issue aggiuntive
+==== Issue aggiuntive
+Durante lo sprint sono state individuate delle issue aggiuntive che non erano state preventivate:
+- #link("https://github.com/techminds-unipd/mvp/issues/40")[Issue \#40]#footnote(link("https://github.com/techminds-unipd/mvp/issues/40")): Codifica frontend Dashboard;
+- #link("https://github.com/techminds-unipd/docs/issues/475")[Issue \#475]#footnote(link("https://github.com/techminds-unipd/docs/issues/475")): Descrizione frontend Dashboard;
+- #link("https://github.com/techminds-unipd/docs/issues/482")[Issue \#482]#footnote(link("https://github.com/techminds-unipd/docs/issues/482")): Documentare test di unità backend sul piano di qualifica;
+- #link("https://github.com/techminds-unipd/docs/issues/483")[Issue \#483]#footnote(link("https://github.com/techminds-unipd/docs/issues/483")): Documentare test di unità agente sul piano di qualifica;
+- #link("https://github.com/techminds-unipd/docs/issues/487")[Issue \#487]#footnote(link("https://github.com/techminds-unipd/docs/issues/487")): Documentare design pattern backend;
+- #link("https://github.com/techminds-unipd/docs/issues/489")[Issue \#489]#footnote(link("https://github.com/techminds-unipd/docs/issues/489")): Stato requisiti funzionali in specifica tecnica.
 
 ==== Diagramma di Gantt
 #figure(
@@ -75,32 +82,32 @@ timeliney.timeline(
       group(..range(5).map(n=>strong(str(n + 17))))
     )
     taskgroup(title:[*Norme di progetto*],{
-      task("Documentare progettazione",(from: 0, to: 2, style: (stroke: 8pt + gray)))
-      task("Documentare codifica",(from: 2, to: 4, style: (stroke: 8pt + gray)))
+      task("Documentare progettazione",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+      task("Documentare codifica",(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Piano di progetto*],{
-      task(align(center, [Consuntivo sprint 7 e #linebreak() aggiornamento preventivo a finire]),(from: 0, to: 1, style: (stroke: 8pt + gray)))
-      task("Preventivo sprint 8",(from: 1, to: 3, style: (stroke: 8pt + gray)))
+      task(align(center, [Consuntivo sprint 7 e #linebreak() aggiornamento preventivo a finire]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Preventivo sprint 8",(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Specifica tecnica*],{
-      task("Descrizione funzionalità backend login",(from: 0, to: 1, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend CreateWorkflow]),(from: 1, to: 3, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend GetWorkflow]),(from: 2, to: 4, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend SaveWorkflow]),(from: 2, to: 4, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend DeleteWorkflow]),(from: 2, to: 4, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend WorkflowNameList]),(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend ExecuteWorkflow]),(from: 5, to: 8, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione funzionalità #linebreak() backend ConnectionGoogleAccount]),(from: 6, to: 9, style: (stroke: 8pt + gray)))
-      task(align(center, [Descrizione dati di application, #linebreak() business e persistence]),(from: 0, to: 2, style: (stroke: 8pt + gray)))
-      task("Descrizione agente",(from: 6, to: 10, style: (stroke: 8pt + gray)))
-      task("Descrizione database",(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend CustomNodes",(from: 0, to: 2, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend Navbar",(from: 1, to: 3, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend Footer",(from: 1, to: 3, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend Home",(from: 2, to: 4, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend AboutUs",(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend SignIn",(from: 4, to: 6, style: (stroke: 8pt + gray)))
-      task("Descrizione frontend SignUp",(from: 4, to: 6, style: (stroke: 8pt + gray)))
+      task("Descrizione funzionalità backend login",(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend CreateWorkflow]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend GetWorkflow]),(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend SaveWorkflow]),(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend DeleteWorkflow]),(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend WorkflowNameList]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 4, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend ExecuteWorkflow]),(from: 5, to: 8, style: (stroke: 8pt + gray)), (from: 5, to: 9, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione funzionalità #linebreak() backend ConnectionGoogleAccount]),(from: 6, to: 9, style: (stroke: 8pt + gray)), (from: 6, to: 9, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione dati di application, #linebreak() business e persistence]),(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
+      task("Descrizione agente",(from: 6, to: 10, style: (stroke: 8pt + gray)), (from: 6, to: 9, style: (stroke: 2pt + red)))
+      task("Descrizione database",(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task("Descrizione frontend CustomNodes",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task("Descrizione frontend Navbar",(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
+      task("Descrizione frontend Footer",(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
+      task("Descrizione frontend Home",(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 5, style: (stroke: 2pt + red)))
+      task("Descrizione frontend AboutUs",(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task("Descrizione frontend SignIn",(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 5, to: 7, style: (stroke: 2pt + red)))
+      task("Descrizione frontend SignUp",(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 5, to: 7, style: (stroke: 2pt + red)))
       task("Descrizione frontend Workflow",(from: 6, to: 8, style: (stroke: 8pt + gray)))
       task("Descrizione frontend Services",(from: 7, to: 9, style: (stroke: 8pt + gray)))
     })
@@ -121,26 +128,26 @@ timeliney.timeline(
       group(..range(5).map(n=>strong(str(n + 17))))
     )
     taskgroup(title:[*Backend*],{
-      task("Codifica funzionalità login",(from: 1, to: 2, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità RegisterUser",(from: 1, to: 2, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità CreateWorkflow",(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità GetWorkflow",(from: 4, to: 5, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità SaveWorkflow",(from: 4, to: 6, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità DeleteWorkflow",(from: 4, to: 6, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità WorkflowNameList",(from: 6, to: 7, style: (stroke: 8pt + gray)))
-      task("Codifica funzionalità ExecuteWorkflow",(from: 7, to: 10, style: (stroke: 8pt + gray)))
-      task(align(center, [Codifica funzionalità #linebreak() ConnectionGoogleAccount]),(from: 7, to: 10, style: (stroke: 8pt + gray)))
+      task("Codifica funzionalità login",(from: 1, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità RegisterUser",(from: 1, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità CreateWorkflow",(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità GetWorkflow",(from: 4, to: 5, style: (stroke: 8pt + gray)), (from: 5, to: 6, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità SaveWorkflow",(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 5, to: 7, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità DeleteWorkflow",(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità WorkflowNameList",(from: 6, to: 7, style: (stroke: 8pt + gray)), (from: 5, to: 6, style: (stroke: 2pt + red)))
+      task("Codifica funzionalità ExecuteWorkflow",(from: 7, to: 10, style: (stroke: 8pt + gray)), (from: 8, to: 10, style: (stroke: 2pt + red)))
+      task(align(center, [Codifica funzionalità #linebreak() ConnectionGoogleAccount]),(from: 7, to: 10, style: (stroke: 8pt + gray)), (from: 7, to: 10, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Frontend*],{
-      task("Codifica Navbar",(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task("Codifica Footer",(from: 3, to: 5, style: (stroke: 8pt + gray)))
-      task("Codifica Home",(from: 4, to: 7, style: (stroke: 8pt + gray)))
-      task("Codifica AboutUs",(from: 5, to: 7, style: (stroke: 8pt + gray)))
-      task("Codifica SignIn",(from: 6, to: 9, style: (stroke: 8pt + gray)))
-      task("Codifica SignUp",(from: 6, to: 9, style: (stroke: 8pt + gray)))
+      task("Codifica Navbar",(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task("Codifica Footer",(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task("Codifica Home",(from: 4, to: 7, style: (stroke: 8pt + gray)), (from: 5, to: 7, style: (stroke: 2pt + red)))
+      task("Codifica AboutUs",(from: 5, to: 7, style: (stroke: 8pt + gray)), (from: 5, to: 7, style: (stroke: 2pt + red)))
+      task("Codifica SignIn",(from: 6, to: 9, style: (stroke: 8pt + gray)), (from: 6, to: 9, style: (stroke: 2pt + red)))
+      task("Codifica SignUp",(from: 6, to: 9, style: (stroke: 8pt + gray)), (from: 6, to: 10, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Agente*],{
-      task("Codifica agente",(from: 6, to: 10, style: (stroke: 8pt + gray)))
+      task("Codifica agente",(from: 6, to: 10, style: (stroke: 8pt + gray)), (from: 7, to: 10, style: (stroke: 2pt + red)))
     })
   }
 ),
@@ -154,12 +161,15 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3);
 - ROE1 - Tempi di risposta da parte del proponente (descritto in @tabella-ROE1).
 
-//==== Rischi occorsi
-//Nessuno dei rischi previsti si è concretizzato.
+==== Rischi occorsi
+Durante lo svolgimento dello sprint è occorso il rischio RP4 (descritto in @tabella-RP4) che non era stato previsto, ovvero la scarsa conoscenza delle tecnologie utilizzate. In particolare sono stati riscontrati alcuni problemi riguardanti la codifica di alcuni unit test per fare il mock di alcuni servizi di Google che hanno richiesto più tempo del previsto; sono state riscontrate anche delle difficoltà per codificare alcuni unit test sul frontend. Il rischio è stato gestito in modo efficace grazie alla collaborazione tra i membri del team che si sono documentati tempestivamente sulla tecnologia utilizzata.
 
-//==== Conclusioni
+==== Conclusioni
+In questo sprint sono state completate quasi tutte le attività previste. In particolare, sono state completate le attività di progettazione di dettaglio e le attività di codifica del backend e dell'agente. Le attività non completate riguardano la progettazione di dettaglio e la codifica di alcuni parti del frontend. Queste attività verranno completate nello sprint successivo.
 
-//==== Retrospettiva
+==== Retrospettiva
+Il team ha lavorato in modo collaborativo e ha risolto i problemi che sono sorti durante lo sprint in modo efficace. Dati i progressi significativi fatti, si prevede di poter rispettare le scadenze e i costi attesi. 
+
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 8)
 
@@ -170,7 +180,6 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
 <grafico-PreventivoSprint8> \
 
-/*
 #if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
@@ -181,6 +190,22 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
   #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
   <grafico-ConsuntivoSprint8> \
 ]
-*/
 
-//==== Aggiornamento preventivo a finire
+==== Aggiornamento preventivo a finire
+In seguito al consuntivo dello sprint 8, il nuovo preventivo a finire ha subito dei piccoli scostamenti in termini di ore e costi.
+#figure(
+    table(
+        columns: (1fr,)*5,
+        align: center+horizon,
+            fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*],[*Costo orario*],[*Stima oraria*],[*Percentuale*],[*Stima costo*]),
+        [Responsabile], [30 #sym.euro], [40], [6%], [1.200 #sym.euro],
+        [Amministratore], [20 #sym.euro], [125 #text(rgb("#204680"))[(-10)]], [19%], [2.500 #sym.euro],
+        [Analista], [25 #sym.euro], [60], [9%], [1.500 #sym.euro],
+        [Progettista], [25 #sym.euro], [100 #text(rgb("#204680"))[(+10)]], [15%], [2.500 #sym.euro],
+        [Programmatore], [15 #sym.euro], [150 #text(rgb("#204680"))[(-10)]], [23%], [2.250 #sym.euro],
+        [Verificatore], [15 #sym.euro], [190 #text(rgb("#204680"))[(+10)]], [29%], [2.850 #sym.euro],
+        table.cell([*Costo Totale*], colspan: 4, fill: white), table.cell([*12.800 #sym.euro*], fill: white)
+    ),
+    caption: "Preventivo a finire sprint 8."
+)<tabella-paf-sprint-8>

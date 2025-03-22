@@ -11,4 +11,7 @@
 ==== Pagine
 #include("pagine.typ")
 
+==== Funzionalità
+#include("LoginUser_frontend.typ")
+
 // ==== Design Pattern
