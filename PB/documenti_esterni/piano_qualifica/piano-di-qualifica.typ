@@ -5,6 +5,7 @@
   sommario: "Il documento riporta le attività di verifica e validazione, affidandosi a delle metriche per garantire la qualità del prodotto.",
   changelog: (
     "1.6.0", "21/03/2025", "Descritti test di integrazione backend", team.S, "",
+    "1.6.0", "21/03/2025", "Aggiornamento cruscotto", team.M, team.L,
     "1.5.0", "10/03/2025", "Aggiornamento cruscotto", team.M, team.C,
     "1.4.2", "06/03/2025", "Modifica metriche qualità di prodotto", team.S, team.A,
     "1.4.1", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.C,

@@ -25,3 +25,8 @@ La pagina è composta dai seguenti componenti React:
 - Un Typography con del testo che parla del gruppo;
 - Un Link che punta al profilo GitHub del gruppo Tech Minds;
 - Grid per impaginare.
+
+===== Sign in
+Questa pagina si trova nel percorso \"/signin\" e contiene il form per l'autenticazione.
+
+La pagina contiene un unico componente personalizzato SignInForm, che contiene il form per effettuare il login.
