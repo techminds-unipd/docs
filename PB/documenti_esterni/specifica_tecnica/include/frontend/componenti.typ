@@ -95,9 +95,15 @@ Il componente PersonCard è composto da:
 
 Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. 
 Ogni nodo, a seguito di un click su di esso, mostra sullo schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
-Ogni nodo può essere di input (in), output (out) o entrambi (in-out), ciò è necessario per l'uso nella pagina di creazione del workflow.
-Ogni nodo può essere trascinabile, utile nella pagina di creazione dei workflow.
-Il nodo può assumere un'estetica differente se è disabilitato.
+
+I vari CustomNode avranno due possibili pagine di destinazione:
+- Workflow, dove i custumNode verranno visualizzati e usati per creare un workflow;
+- Services, dove i CustomNode verranno solo visualizzati.
+
+Ogni nodo può essere:
+- di input (in), output (out) o entrambi (in-out);
+- trascinabile;
+- disabilitato (modifica solamente l'estetica del nodo).
 
 Il componente accetta le seguenti props:
 - nodeTitle: il nome del servizio;
