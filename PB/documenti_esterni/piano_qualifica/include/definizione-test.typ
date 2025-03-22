@@ -109,7 +109,7 @@
 
     // ConnectionGoogleRequestController
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _googleAuth_ della classe _ConnectionGoogleRequestController_ ritorni un oggetto contenente la risposta del service.],
+        [Verificare che il metodo _googleAuth_ della classe _ConnectionGoogleRequestController_ ritorni un _RedirectUrlDTO_ con la risposta del service.],
         [S],
     ))
 
@@ -121,7 +121,7 @@
 
     // ConnectionGoogleResponseController
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ ritorni un DTO con la risposta del service.],
+        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ ritorni un _RedirectUrlDTO_ con la risposta del service.],
         [S],
     ))
 
