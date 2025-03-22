@@ -1,6 +1,5 @@
 #import "/template/template.typ": glossario
-#import "definizione-test.typ": getSistema
-#import "definizione-test.typ": getAccettazione
+#import "definizione-test.typ": getSistema, getAccettazione, getIntegrazione
 #show figure: set block(breakable: true)
 = Specifica dei test
 Nelle successive sezioni andremo ad individuare varie tipologie di test.
@@ -25,6 +24,26 @@ Si concentrano sulla verifica delle singole unità del software. Questi test son
 
 == Test di integrazione
 Hanno lo scopo di verificare il corretto funzionamento delle interfacce e dei flussi di controllo tra le componenti del software, rilevando eventuali difetti di progettazione architetturale o problemi causati da test di unità non adeguati.
+
+Codici:
+- TIB: test di integrazione del backend;
+- TIF: test di integrazione del frontend.
+
+#set par(justify: false)
+#figure(
+    table(
+        columns: (auto, auto, auto),
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white}},
+        inset: 10pt,
+        align: horizon,
+        table.header(
+          [*Codice test*], [*Descrizione*], [*Stato test*],
+        ),
+        ..getIntegrazione().flatten(),
+    ),
+    caption: [Test di integrazione.]
+) <tabella-test-integrazione>
+#set par(justify: true)
 
 == Test di sistema
 In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare come l'esecuzione del sistema soddisfi i requisiti funzionali individuati durante l'#glossario[analisi dei requisiti] (vedi 
