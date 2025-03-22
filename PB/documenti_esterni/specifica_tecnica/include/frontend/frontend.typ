@@ -12,6 +12,7 @@
 #include("pagine.typ")
 
 ==== Funzionalità
+#include("LoginUser_frontend.typ")
 #include("create_workflow_frontend.typ")
 #include("delete_workflow_frontend.typ")
 #include("workflow_name_list_frontend.typ")
