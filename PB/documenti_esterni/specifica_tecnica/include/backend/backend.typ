@@ -1,4 +1,5 @@
 #set list(marker: ([-], [•], [‣]))
+#import "funzioni_ausiliarie.typ": *
 
 == Backend
 
@@ -59,7 +60,11 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - expireDate: Date.
 
 - *WorkflowDTOValidator*, rappresenta la classe che si occupa della validazione della struttura di un _WorkflowDTO_:
-  - validate(workflow: WorkflowDTO), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con http status 412 nel caso in cui il workflow sia invalido.
+  - #declaration("+ validate(workflow: WorkflowDTO)"), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con http status 412 nel caso in cui il workflow sia invalido.
+
+- *WorkflowAdapterImplementation*, rappresenta la classe che si occupa della logica di adattamento tra _WorkflowDTO_ e _Workflow_, utilizzata poi dai vari controller:
+  - #declaration("+ toDomain(workflow: WorkflowDTO): Workflow"), metodo che converte un _WorkflowDTO_ in un _Workflow_;
+  - #declaration("+ toDTO(workflow: Workflow): WorkflowDTO"), metodo che converte un _Workflow_ in un _WorkflowDTO_.
 
 - *RequestHeader*, rappresenta l'header di una richiesta http, da cui si estrae lo _username_ dell'utente:
   - username: string.

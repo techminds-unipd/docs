@@ -12,14 +12,14 @@
 - *SaveWorkflowController*
     - Proprietà:
         - #declaration("- saveWorkflowUseCase: SaveWorkflowUseCase") #arrow porta di input per il servizio di business dedicato al salvataggio di un workflow;
-        - #declaration("- workflowDTOValidator: WorkflowDTOValidator") #arrow oggetto per la validazione di un _WorkflowDTO_. 
+        - #declaration("- workflowDTOValidator: WorkflowDTOValidator") #arrow oggetto per la validazione di un _WorkflowDTO_;
+        - #declaration("- workflowAdapterImplementation: WorkflowAdapterImplementation") #arrow oggetto che si occupa della conversione tra _WorkflowDTO_ e _Workflow_.
     - Operazioni:
-        - #declaration("+ saveWorkflow(workflow: WorkflowDTO, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Prosegue con la validazione del _WorkflowDTO_ passato nel corpo della richiesta tramite l'oggetto _workflowDTOValidator_, se non ha successo solleva un'eccezione. Successivamente crea un _SaveWorkflowCommand_ necessario per chiamare il metodo _saveWorkflow_ definito in _saveWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow salvato per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ saveWorkflow(workflow: WorkflowDTO, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Prosegue con la validazione del _WorkflowDTO_ passato nel corpo della richiesta tramite l'oggetto _workflowDTOValidator_, se non ha successo solleva un'eccezione. Successivamente crea un _SaveWorkflowCommand_ necessario per chiamare il metodo _saveWorkflow_ definito in _saveWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow salvato attraverso l'oggetto _workflowAdapterImplementation_ per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
         - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status http 404;
         - in caso di eccezione che occorre durante la validazione del _WorkflowDTO_ ritorna status http 412;
-        - in caso di altre eccezioni ritorna status http 500;
-        - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e viceversa.
+        - in caso di altre eccezioni ritorna status http 500.
 
 - *SaveWorkflowUseCase* (interfaccia)
     - #declaration("+ saveWorkflow(cmd: SaveWorkflowCommand): Workflow").

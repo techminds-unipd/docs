@@ -11,13 +11,13 @@
 
 - *DeleteWorkflowController*
     - Proprietà:
-        - #declaration("- deleteWorkflowUseCase: DeleteWorkflowUseCase") #arrow porta di input per il servizio di business dedicato all'eliminazione di un workflow.
+        - #declaration("- deleteWorkflowUseCase: DeleteWorkflowUseCase") #arrow porta di input per il servizio di business dedicato all'eliminazione di un workflow;
+        - #declaration("- workflowAdapterImplementation: WorkflowAdapterImplementation") #arrow oggetto che si occupa della conversione tra _Workflow_ e _WorkflowDTO_.
     - Operazioni:
-        - #declaration("+ deleteWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _DeleteWorkflowCommand_ necessario per chiamare il metodo _deleteWorkflow_ definito in _deleteWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow creato per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ deleteWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _DeleteWorkflowCommand_ necessario per chiamare il metodo _deleteWorkflow_ definito in _deleteWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow creato attraverso l'oggetto _workflowAdapterImplementation_ per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
         - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status http 400;
-        - in caso di altre eccezioni ritorna status http 500;
-        - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_.
+        - in caso di altre eccezioni ritorna status http 500.
 
 - *DeleteWorkflowUseCase* (interfaccia)
     - #declaration("+ deleteWorkflow(cmd: DeleteWorkflowCommand): Workflow").
