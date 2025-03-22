@@ -30,3 +30,20 @@ La pagina è composta dai seguenti componenti React:
 Questa pagina si trova nel percorso \"/signin\" e contiene il form per l'autenticazione.
 
 La pagina contiene un unico componente personalizzato SignInForm, che contiene il form per effettuare il login.
+
+===== Dashboard
+// TODO inserire immagine
+
+Il componente Dashboard rappresenta la pagina principale per gli utenti autenticati. Qui, gli utenti possono aggiungere o eliminare un workflow, viualizzare quelli esistenti e selezionare un singolo workflow da poter modificare o eseguire.
+
+Il componente utilizza #declaration("useState()") per gestire il ricaricamento della lista dei workflow:
+- shouldReload: stato booleano che determina se la lista dei workflow deve essere aggiornata;
+- setShouldReload: funzione per modificare lo stato, permettendo il refresh della lista dopo la creazione o eliminazione di un workflow.
+\
+L'interfaccia della Dashboard è strutturata in due sezioni principali, entrambe centrate grazie al sistema Grid di MUI:
+- Sezione di benvenuto e creazione workflow:
+  - mostra un messaggio di benvenuto personalizzato; 
+  - contiene il componente AddWorkflow, che permette di aggiungere un nuovo workflow e aggiorna la lista tramite setShouldReload.
+- Sezione della lista dei workflow:
+  - contiene il componente WorkflowList, che visualizza tutti i workflow dell'utente;
+  - si aggiorna in base al valore di shouldReload.

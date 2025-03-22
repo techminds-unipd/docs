@@ -5,7 +5,7 @@
 
 === Diagrammi delle classi
 // TODO
-==== Componenti personalizzate
+==== Componenti personalizzati
 #include("componenti.typ")
 
 ==== Pagine
@@ -13,5 +13,8 @@
 
 ==== Funzionalità
 #include("LoginUser_frontend.typ")
+#include("create_workflow_frontend.typ")
+#include("delete_workflow_frontend.typ")
+#include("workflow_name_list_frontend.typ")
 
 // ==== Design Pattern
