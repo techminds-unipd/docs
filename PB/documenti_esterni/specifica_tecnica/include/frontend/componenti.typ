@@ -96,7 +96,7 @@ I CustomNode vengono utilizzati nelle seguenti pagine:
 - Services, dove i CustomNode vengono solo visualizzati.
 
 Ogni nodo può essere:
-- di input (in), output (out) o entrambi (in-out);
+- Di input (in), output (out) o entrambi (in-out);
 - trascinabile;
 - disabilitato (modifica solamente l'estetica del nodo).
 
