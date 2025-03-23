@@ -98,7 +98,7 @@ I CustomNode vengono utilizzati nelle seguenti pagine:
 Ogni nodo può essere:
 - Di input (in), output (out) o entrambi (in-out);
 - Trascinabile;
-- disabilitato (modifica solamente l'estetica del nodo).
+- Disabilitato (modifica solamente l'estetica del nodo).
 
 Il componente accetta le seguenti props:
 - nodeTitle: il nome del servizio;
