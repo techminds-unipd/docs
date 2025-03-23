@@ -85,7 +85,7 @@ Il componente PersonCard è composto da:
 - Un Box che racchiude tutti gli altri componenti;
 - Un Avatar che applica una maschera a cerchio sull'immagine del profilo GitHub;
 - Un Typography che contiene il nome della persona;
-- Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
+- Un Link che contiene l'Avatar e il Typography e ha come attributo #declaration[href] il profilo GitHub.
 
 ===== CustomNode
 #figure(
