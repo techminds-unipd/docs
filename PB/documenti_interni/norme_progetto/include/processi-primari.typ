@@ -43,16 +43,193 @@ I rapporti con il proponente sono un elemento che riteniamo fondamentale per il 
 Sono stati quindi concordati dei canali di comunicazione che permettono il raggiungimento degli obiettivi sopra descritti, per ulteriori approfondimenti vedi @revisioni-congiunte-implementazione e @proponente.
 
 === Documentazione fornita
-La documentazione che forniamo al proponente e al committente è la seguente:
-- *Documentazione esterna*:
-    - lettera di presentazione: documento di presentazione per ogni revisione del progetto;
-    - #glossario[piano di progetto]: documento che ha lo scopo di raccogliere la pianificazione delle attività progettuali, compresi la gestione dei ruoli e il bilancio di #glossario[sprint] in sprint;
-    -  #glossario[piano di qualifica]: documento che contiene le metriche e le normative che abbiamo individuato e adottato;
-    - #glossario[analisi dei requisiti]: documento che raccoglie i requisiti del prodotto software.
-- #text(weight: "bold")[Documentazione interna al gruppo]:
-    - studio dei capitolati: documento che racchiude l'analisi approfondita di ogni proposta, con relativi vantaggi e svantaggi, tecnologie richieste e considerazioni;
-    - glossario: documento utile per definire termini rilevanti nell'ambito del progetto, al fine di uniformare la conoscenza dei membri del gruppo ed evitare incomprensioni e ambiguità;
-    - #glossario[norme di progetto]: il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
+Di seguito elenchiamo la documentazione che forniamo al proponente e al committente.
+
+==== Lettera di candidatura
+Documento ufficiale di presentazione per la candidatura al capitolato C3, proposto dall'azienda VarGroup. 
+
+*Struttura*:
+- Motivazione della candidatura: ragioni che stanno alla base della scelta del capitolato C3;
+- Piano di lavoro: dichiarazione dell'intensità di lavoro, data presunta di terminazione del progetto e costi presunti;
+- Conclusione.
+
+*Uso*: esterno.
+
+*Redattore*: responsabile.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/lettera-di-presentazione.pdf")[lettera di candidatura] #footnote(link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/lettera-di-presentazione.pdf")).
+
+==== Studio dei capitolati
+Studio e analisi di ogni capitolato proposto, evidenziando le tecnologie da utilizzare, le funzionalità richieste, gli aspetti positivi, gli aspetti negativi e l'aiuto che l'azienda offre. 
+
+*Struttura*:
+- Introduzione: scopo del documento e scelta del capitolato;
+- Valutazioni: analisi di ogni capitolato.
+
+*Uso*: esterno.
+
+*Redattore*: responsabile.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/studio-capitolati.pdf")[studio dei capitolati] #footnote(link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/studio-capitolati.pdf")) [versione 1.0.0].
+
+==== Dichiarazione degli impegni
+Dichiarazione dell'impegno orario di ogni membro del gruppo e conseguente suddivisione oraria per i ruoli. 
+
+*Struttura*:
+- Valutazione orari e costi;
+- Scadenza prevista.
+
+*Uso*: esterno.
+
+*Redattore*: responsabile.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/studio-capitolati.pdf")[dichiarazione degli impegni] #footnote(link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/studio-capitolati.pdf")) [versione 1.0.0].
+
+==== Lettera di presentazione
+Documento formale di presentazione per ogni revisione di progetto:
+- Lettera di presentazione RTB;
+- Lettera di presentazione PB.
+
+*Uso*: esterno.
+
+*Redattore*: responsabile.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[lettera di presentazione RTB] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")), #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")[lettera di presentazione PB] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")). //TODO da controllare questo link quando creeremo la lettera di presentazione
+
+==== Norme di progetto
+Il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
+
+*Struttura*: il documento è suddiviso in base ai processi individuati dallo standard ISO/IEC 12207:1995.
+
+*Uso*: interno.
+
+*Redattore*: amministratore.
+
+==== Glossario
+Documento utile per definire termini rilevanti nell'ambito del progetto, al fine di uniformare la conoscenza dei membri del gruppo ed evitare incomprensioni e ambiguità.
+
+*Struttura*: organizzato in ordine alfabetico.
+
+*Uso*: interno.
+
+*Redattore*: amministratore.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_interni/glossario/glossario.pdf")[glossario] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_interni/glossario/glossario.pdf")) [versione 2.0.0].
+
+==== Analisi dei requisiti
+Documento che raccoglie i requisiti obbligatori, desiderabili e opzionali del prodotto software, frutto del lavoro svolto con l'attività di analisi dei requisiti.
+
+*Struttura*:
+- Introduzione: scopo del documento;
+- Descrizione: obiettivi e scopo del prodotto;
+- Casi d'uso: identificazione degli #glossario[attori], del sistema e definizione dei casi d'uso individuati;
+- Requisiti: requisiti funzionali, di qualità, di vincolo e relativo tracciamento.
+
+*Uso*: esterno.
+
+*Redattore*: analista.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")[analisi dei requisiti] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")) [versione 2.0.0].
+
+==== Piano di progetto
+Documento che ha lo scopo di raccogliere la pianificazione delle attività progettuali, compresi la gestione dei ruoli e il bilancio di #glossario[sprint] in sprint. Presenta inoltre i rischi previsti, quelli occorsi e, se necessario, l'aggiornamento del #glossario[preventivo a finire].
+
+*Struttura*:
+- Introduzione: scopo del documento;
+- #glossario[Analisi dei rischi]: analisi dei possibili rischi che possono verificarsi durante lo svolgimento delle attività progettuali;
+- Pianificazione: indica il metodo di lavoro adottato per la pianificazione;
+- Periodi: per ogni sprint individua:
+    - durata;
+    - pianificazione (ruoli e #glossario[issue] pianificate);
+    - issue aggiuntive;
+    - #glossario[diagramma di Gantt]\;
+    - rischi previsti;
+    - rischi occorsi;
+    - conclusioni;
+    - retropsettiva;
+    - preventivo;
+    - consuntivo.
+
+*Uso*: esterno.
+
+*Redattore*: responsabile.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf")[piano di progetto] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf")) [versione 2.0.0].
+
+==== Piano di qualifica
+Il #glossario[piano di qualifica] ha lo scopo di fissare gli obiettivi per le metriche individuate nel presente documento, individuando un valore acettabile e un valore ottimale. Presenta inoltre i test effettuati sul prodotto e gli esiti di tale test, indicando:
+- NI: Non Implementato;
+- S: Superato;
+- NS: Non Superato.
+
+*Struttura*:
+- Introduzione: scopo del documento;
+- Metriche per la qualità: obiettivi per le metriche relative alla qualità di processo e di prodotto;
+- Specifica dei test: elenca i test sul prodotto e il loro stato;
+- Miglioramenti: sezione dedicata ai miglioramenti, adottati in seguito al verificarsi di uno dei rischi previsti nel #glossario[piano di progetto];
+- Cruscotto: rilevazioni delle metriche individuate, con analisi dell'andamento di tali misurazioni.
+
+*Uso*: esterno.
+
+*Redattore*: amministratore.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_qualifica/piano-di-qualifica.pdf")[piano di qualifica] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_qualifica/piano-di-qualifica.pdf")) [versione 2.0.0].
+
+==== Specifica tecnica
+Elenca le tecnologie utilizzate per lo sviluppo del prodotto e documenta le scelte progettuali effettuate durante l'attività di progettazione.
+
+*Struttura*:
+- Introduzione: scopo del documento;
+- Tecnologie: linguaggi, librerie, framework e altri strumenti utilizzati per lo sviluppo del prodotto; 
+- Architettura di sistema: architettura adottata per frontend, backend, agente e database;
+- Architettura di deployment;
+- Stato requisiti funzionali: stato di ogni requisito funzionale individuato durante l'attività di analisi dei requisiti, tracciato con una tra le seguenti indicazioni:
+    - Soddisfatto;
+    - Non soddisfatto.
+- Criticità e limiti del prodotto: analisi delle critictà e dei limiti riscontrati durante lo sviluppo del prodotto.
+
+*Uso*: esterno.
+
+*Redattore*: progettista.
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/specifica_tecnica/specifica-tecnica.pdf")[specifica tecnica] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/specifica_tecnica/specifica-tecnica.pdf")) [versione 1.0.0].
+
+==== Manuale utente
+Documento che funge da guida all'utilizzo del prodotto per tutte le tipologie di utenti, indipendentemente dalla loro qualifica.
+
+*Struttura*:
+- Introduzione: scopo del documento;
+- Requisiti: requisiti hardware e di sistema;
+- Istruzioni all'uso: istruzioni per l'utilizzo del prodotto. 
+
+*Uso*: esterno.
+
+*Redattore*: programmatore. // programmatore ???
+
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")[manuale utente] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")) [versione 1.0.0]. // da controllare il link quando ci sarà il documento
+
+==== Verbale interno
+#glossario[Verbale] delle riunioni svolte internamente al gruppo.
+
+*Struttura*:
+- Informazioni introduttive (durata, luogo e partecipanti);
+- Contenuto della riunione (ordine del giorno, riassunto e decisione prese).
+
+*Uso*: interno.
+
+*Redattore*: responsabile.
+
+==== Verbale esterno
+Verbale delle riunioni svolte con il proponente.
+
+*Struttura*:
+- Informazioni introduttive (durata, luogo e partecipanti);
+- Contenuto della riunione (ordine del giorno, riassunto e decisione prese);
+- Firma del proponente.
+
+*Uso*: interno.
+
+*Redattore*: responsabile.
 
 === Strumenti e tecnologie
 A supporto del processo di fornitura abbiamo deciso di utilizzare i seguenti strumenti e tecnologie:
