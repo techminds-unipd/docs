@@ -93,7 +93,7 @@ Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le inf
 
 I CustomNode vengono utilizzati nelle seguenti pagine:
 - Workflow, dove i CustumNode vengono visualizzati e usati per creare un workflow;
-- Services, dove i CustomNode verranno solo visualizzati.
+- Services, dove i CustomNode vengono solo visualizzati.
 
 Ogni nodo può essere:
 - di input (in), output (out) o entrambi (in-out);
