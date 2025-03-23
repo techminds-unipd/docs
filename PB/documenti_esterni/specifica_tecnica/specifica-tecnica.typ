@@ -4,6 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "0.25.0", "23/03/2025", "Aggiunta descrizione CustomNode", team.A, team.T,
     "0.24.0", "21/03/2025", "Aggiunta descrizione WorkflowAdapterImplementation", team.M, team.G,
     "0.23.0", "21/03/2025", "Aggiunta descrizione dashboard, suoi componenti e sue funzionalità", team.C, team.A,
     "0.22.0", "21/03/2025", "Aggiunta descrizione funzionalità autenticazione frontend e relativi componenti", team.L, team.C,

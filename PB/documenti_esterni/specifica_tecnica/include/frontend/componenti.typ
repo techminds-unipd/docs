@@ -64,10 +64,11 @@ Le voci della Navbar cambiano in base allo stato di autenticazione fornito dal c
 - Utente autenticato: viene mostrato il link \"Dashboard\" e un'icona utente con menu a tendina. Quest'ultimo contiene un'opzione per accedere alla pagina \"Services\" e un'opzione di logout, gestita dal componente LogoutMenuItem.
 
 ===== PersonCard
-#figure(
+/*#figure(
     image("../../assets/frontend/PersonCard.svg", width: 65%),
   caption: [Componente PersonCard.],
-)
+)*/
+// TODO inserire immagine
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 
 Il componente accetta due props:
@@ -78,7 +79,44 @@ Il componente PersonCard è composto da:
 - Un Box che racchiude tutti gli altri componenti;
 - Un Avatar che applica una maschera a cerchio sull'immagine del profilo GitHub;
 - Un Typography che contiene il nome della persona;
-- Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
+- Un Link che contiene l'Avatar e il Typography e ha come attributo #declaration[href] il profilo GitHub.
+
+===== CustomNode
+/*#figure(
+    image("../../assets/frontend/CustomNode.svg", width: 65%),
+  caption: [Componente PersonCard.],
+)*/
+// TODO inserire immagine
+
+Il componente CustomNode è un componente React personalizzato che rappresenta un servizio tra Pastebin, Calendar e Gmail. 
+Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
+
+I CustomNode vengono utilizzati nelle seguenti pagine:
+- Workflow, dove i CustumNode vengono visualizzati e usati per creare un workflow;
+- Services, dove i CustomNode vengono solo visualizzati.
+
+Ogni nodo può essere:
+- Di input (in), output (out) o entrambi (in-out);
+- Trascinabile;
+- Disabilitato (modifica solamente l'estetica del nodo).
+
+Il componente accetta le seguenti props:
+- nodeTitle: il nome del servizio;
+- dialogTitle: il titolo della Dialog;
+- dialogContent: le informazioni del servizio mostrate dalla Dialog;
+- type: il tipo di nodo, che può essere \"in\", \"out\" o \"in-out\";
+- disabled: un booleano che indica se il nodo è disabilitato;
+- draggable: un booleano che indica se il nodo è trascinabile.
+
+Il componente CustomNode è composto da:
+- Un Button decorato dall'icona InfoOutlinedIcon;
+- Una Dialog con titolo (DialogTitle), contenuto (DialogContent) e un bottone all'interno delle DialogActions utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
+- Il contenuto della Dialog è composto da un Typography e un Divider.
+
+I componenti che utilizzano CustomNode sono:
+- PastebinNode;
+- CalendarNode;
+- GmailNode.
 
 ===== SignInForm
 SignInForm è un componente React che mostra il form per il login.
@@ -166,5 +204,3 @@ Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dash
 AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:
 - SignIn;
 - SignUp.
-
-
