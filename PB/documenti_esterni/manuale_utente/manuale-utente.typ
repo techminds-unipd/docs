@@ -9,6 +9,7 @@
 // #glossario[glossario]
 // #glossario[arco]
 // #glossario[agente]
+// // #glossario[requisiti]
 
 #show: documento.with(
   title: "Manuale utente",
