@@ -4,7 +4,9 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
-    "0.22.0", "21/03/2025", "Aggiunta descrizione WorkflowAdapterImplementation", team.M, team.G,
+    "0.24.0", "21/03/2025", "Aggiunta descrizione WorkflowAdapterImplementation", team.M, team.G,
+    "0.23.0", "21/03/2025", "Aggiunta descrizione dashboard, suoi componenti e sue funzionalità", team.C, team.A,
+    "0.22.0", "21/03/2025", "Aggiunta descrizione funzionalità autenticazione frontend e relativi componenti", team.L, team.C,
     "0.21.0", "20/03/2025", "Aggiunta sezione Agente", team.M, team.G,
     "0.20.0", "19/03/2025", "Aggiunta sezione database", team.S, team.M,
     "0.19.0", "18/03/2025", "Aggiunta descrizione dati backend", team.S, team.M,

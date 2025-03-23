@@ -142,12 +142,12 @@
 #let metriche_ottime = ()
 
 //Indice di Gulpease
-#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,68),(7,68))
-#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85),(7,80))
-#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58),(7,58))
-#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68),(7,68))
-#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58),(7,58))
-#let g_st = ((7,53),)
+#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,68),(7,68),(8,68))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85),(7,80),(8,82))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58),(7,58),(8,60))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68),(7,68),(8,69))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58),(7,58),(8,57))
+#let g_st = ((7,53),(8,61))
 
 #for i in range(1, sprint_number+1) {
     if(i<=5){
@@ -172,7 +172,11 @@
     spi.push((i, ev.at(i - 1).at(1) / pv.at(i - 1).at(1)))
 
     caption_figure.push((i, 100))
-    rischi.push((i, 0))
+    if i == 8 {
+        rischi.push((i, 1))
+    } else {
+        rischi.push((i, 0))
+    }
 
     metriche_accettabili.push((i,
         calcoloMetricheAccettabili(
@@ -303,7 +307,6 @@ La SPI inizialmente supera 1, indicando che abbiamo ottenuto i risultati aspetta
 Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto ad aspettative troppo ambiziose e poco tempo disponibile con l'avvicinarsi della sessione di esami.
 
 #pagebreak()
-
 == MPROC11 (Indice di Gulpease)
 #linebreak()
 
