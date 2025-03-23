@@ -2,7 +2,7 @@
 
 ==== ExecuteWorkflow
 #figure(
-    image("../../assets/backend_register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
     caption: [Diagramma delle classi riguardante la funzionalità ExecuteWorkflow del backend.],
 )
 
@@ -13,14 +13,14 @@
     - Proprietà:
         - #declaration("- executeWorkflowUseCase: ExecuteWorkflowUseCase") #arrow porta di input per il servizio di business dedicato all'esecuzione di un workflow;
         - #declaration("- httpService: HttpService") #arrow oggetto per la gestione delle chiamate http;
-        - #declaration("- workflowDTOValidator: WorkflowDTOValidator") #arrow oggetto per la validazione di un _WorkflowDTO_. 
+        - #declaration("- workflowDTOValidator: WorkflowDTOValidator") #arrow oggetto per la validazione di un _WorkflowDTO_;
+        - #declaration("- workflowAdapterImplementation: WorkflowAdapterImplementation") #arrow oggetto che si occupa della conversione tra _WorkflowDTO_ e _Workflow_.
     - Operazioni:
-        - #declaration("+ executeWorkflow(executeReq: ExecuteWorkflowDTO): string") #arrow esegue tre tipi diversi di validazione prima di inoltrare la richiesta di esecuzione al service: verifica il JWT, la struttura del _workflowDTO_ tramite l'oggetto _workflowDTOValidator_ e infine la validità del _token_ di Google tramite l'oggetto _httpService_ che permette la chiamata http ai servizi Google. Il _workflowDTO_ e il _token_ Google sono contenuti all'interno dell'oggetto di richiesta _executeReq_. Se qualche controllo fallisce viene lanciata un'eccezione esplicativa dell'errore. Se tutti i controlli vanno a buon fine, crea un _ExecuteWorkflowCommand_ necessario per chiamare il metodo _executeWorkflow_ definito in _executeWorkFlowUseCase_ e, se non vengono lanciate eccezioni, ritorna la stringa con il risultato dell'esecuzione del _workflow_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ executeWorkflow(executeReq: ExecuteWorkflowDTO): string") #arrow esegue tre tipi diversi di validazione prima di inoltrare la richiesta di esecuzione al service: verifica il JWT, la struttura del _workflowDTO_ tramite l'oggetto _workflowDTOValidator_ e infine la validità del _token_ di Google tramite l'oggetto _httpService_ che permette la chiamata http ai servizi Google. Il _workflowDTO_ e il _token_ Google sono contenuti all'interno dell'oggetto di richiesta _executeReq_. Se qualche controllo fallisce viene lanciata un'eccezione esplicativa dell'errore. Se tutti i controlli vanno a buon fine, converte il _WorkflowDTO_ in _Workflow_ attraverso l'oggetto _workflowAdapterImplementation_ e crea un _ExecuteWorkflowCommand_ necessario per chiamare il metodo _executeWorkflow_ definito in _executeWorkFlowUseCase_. Se non vengono lanciate eccezioni, ritorna la stringa con il risultato dell'esecuzione del _workflow_, altrimenti gestisce le eccezioni sollevate.
     - Note:
         - in caso di invalidità del _token_ di Google ritorna status http 401;
         - in caso di eccezione che occorre durante la validazione del _WorkflowDTO_ ritorna status http 412;
-        - in caso di altre eccezioni ritorna status http 500;
-        - è utile avere dei metodi helper privati per convertire da _WorkflowDTO_ a _Workflow_.
+        - in caso di altre eccezioni ritorna status http 500.
 
 - *ExecuteWorkflowUseCase* (interfaccia)
     - Operazioni:

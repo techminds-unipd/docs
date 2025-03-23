@@ -2,7 +2,7 @@
 
 ==== CreateWorkflow
 #figure(
-    image("../../assets/backend_register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
     caption: [Diagramma delle classi riguardante la funzionalità CreateWorkflow del backend.],
 )
 
@@ -21,8 +21,7 @@
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e per creare il _CreateWorkflowCommand_.
 
 - *CreateWorkflowUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ createWorkflow(cmd: CreateWorkflowCommand): Workflow").
+    - #declaration("+ createWorkflow(cmd: CreateWorkflowCommand): Workflow").
 
 - *CreateWorkflowService*
     - Proprietà:

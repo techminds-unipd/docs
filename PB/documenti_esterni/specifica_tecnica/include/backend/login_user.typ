@@ -1,8 +1,8 @@
 #import "funzioni_ausiliarie.typ": *
 
-==== LoginUser
+==== LoginUser <login-user>
 #figure(
-    image("../../assets/backend_login_user_diagramma_classi.svg", width: 70%),
+    image("../../assets/backend/login_user_diagramma_classi.svg", width: 70%),
     caption: [Diagramma delle classi riguardante la funzionalità LoginUser del backend.],
 )
 
@@ -19,8 +19,7 @@
         - per le altre eccezioni ritorna status http 500;
 
 - *LoginUserUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ login(user: User): User").
+    - #declaration("+ login(user: User): User").
 
 - *LoginUserService*
     - Proprietà:

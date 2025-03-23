@@ -2,7 +2,7 @@
 
 ==== WorkflowNameList
 #figure(
-    image("../../assets/backend_register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
     caption: [Diagramma delle classi riguardante la funzionalità WorkflowNameList del backend.],
 )
 
@@ -19,8 +19,7 @@
         - in caso di altre eccezioni ritorna status http 500.
 
 - *WorkflowNameListUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ getWorkflowNameList(username: string): string*").
+    - #declaration("+ getWorkflowNameList(username: string): string*").
 
 - *WorkflowNameListService*
     - Proprietà:

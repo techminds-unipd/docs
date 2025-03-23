@@ -2,7 +2,7 @@
 
 ==== RegisterUser
 #figure(
-    image("../../assets/backend_register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
     caption: [Diagramma delle classi riguardante la funzionalità RegisterUser del backend.],
 )
 
@@ -21,8 +21,7 @@
         - è utile avere dei metodi helper privati per convertire da _UserDTO_ ad _User_ e viceversa.
 
 - *RegisterUserUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ registerUser(user: User): User").
+    - #declaration("+ registerUser(user: User): User").
 
 - *RegisterUserService*
     - Proprietà:

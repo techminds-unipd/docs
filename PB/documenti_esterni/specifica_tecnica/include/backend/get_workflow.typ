@@ -2,7 +2,7 @@
 
 ==== GetWorkflow
 #figure(
-    image("../../assets/backend_get_workflow_diagramma_classi.svg", width: 100%),
+    image("../../assets/backend/get_workflow_diagramma_classi.svg", width: 100%),
     caption: [Diagramma delle classi riguardante la funzionalità GetWorkflow del backend.],
 )
 
@@ -11,18 +11,17 @@
 
 - *GetWorkflowController*
     - Proprietà:
-        - #declaration("- getWorkflowUseCase: GetWorkflowUseCase") #arrow porta di input per il servizio di business dedicato al recupero di un workflow.
+        - #declaration("- getWorkflowUseCase: GetWorkflowUseCase") #arrow porta di input per il servizio di business dedicato al recupero di un workflow;
+        - #declaration("- workflowAdapterImplementation: WorkflowAdapterImplementation") #arrow oggetto che si occupa della conversione tra _Workflow_ e _WorkflowDTO_.
     - Operazioni:
-        - #declaration("+ getWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _GetWorkflowCommand_ necessario per chiamare il metodo _getWorkflow_ definito in _getWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow ottenuto per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
+        - #declaration("+ getWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _GetWorkflowCommand_ necessario per chiamare il metodo _getWorkflow_ definito in _getWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow ottenuto attraverso l'oggetto _workflowAdapterImplementation_ per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
         - la richiesta viene controllata dalla _AuthGuard_ offerta da NestJS che controlla la validità del JWT. Successivamente crea l'argomento _request_ che contiene lo _username_ per il metodo _getWorkflow_ del _GetWorkflowController_;
         - in caso di eccezione _WorkflowNotFoundError_ ritorna status http 404;
-        - per le altre eccezioni ritorna status http 500;
-        - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e viceversa.
+        - per le altre eccezioni ritorna status http 500.
 
 - *GetWorkflowUseCase* (interfaccia)
-    - Operazioni:
-        - #declaration("+ getWorkflow(cmd: GetWorkflowCommand): Workflow").
+    - #declaration("+ getWorkflow(cmd: GetWorkflowCommand): Workflow").
 
 - *GetWorkflowService*
     - Proprietà:
