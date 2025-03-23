@@ -92,7 +92,7 @@ Il componente CustomNode è un componente React personalizzato che rappresenta u
 Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
 
 I CustomNode vengono utilizzati nelle seguenti pagine:
-- Workflow, dove i custumNode verranno visualizzati e usati per creare un workflow;
+- Workflow, dove i CustumNode vengono visualizzati e usati per creare un workflow;
 - Services, dove i CustomNode verranno solo visualizzati.
 
 Ogni nodo può essere:
