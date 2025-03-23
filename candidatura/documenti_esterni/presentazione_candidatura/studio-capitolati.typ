@@ -6,9 +6,9 @@
   title: "Documento di studio dei capitolati",
   sommario: "Studio dei 9 capitolati proposti per il corso di Ingegneria del Software - Anno 2024/2025.",
   changelog: (
-    "1.2", "05/11/2024", "Correzione degli errori tipografici, revisione stilistica di tutto il documento", team.L + linebreak() + team.C, team.G + linebreak() + team.M,
-    "1.1", "05/11/2024", "Modifica posizione e struttura changelog", team.S, team.G + linebreak() + team.C,
-    "1.0", "25/10/2024", "Prima versione", "Il gruppo Tech Minds", team.G + linebreak() + team.C
+    "1.0.0", "05/11/2024", "Correzione degli errori tipografici, revisione stilistica di tutto il documento", team.L + linebreak() + team.C, team.G + linebreak() + team.M,
+    "0.2.0", "05/11/2024", "Modifica posizione e struttura changelog", team.S, team.G + linebreak() + team.C,
+    "0.1.0", "25/10/2024", "Prima versione", "Il gruppo Tech Minds", team.G + linebreak() + team.C
   )
 )
 #set list(indent: 1em)
