@@ -12,9 +12,9 @@
 
 #show: documento.with(
   title: "Manuale utente",
-  sommario: "Istruzioni per l'uso del MVP.",
+  sommario: "Il documento riporta le istruzioni per utilizzare l'MVP.",
   changelog: (
-    "0.1.0", "23/03/2024", "Definizione struttura", team.C, ""
+    "0.1.0", "23/03/2024", "Definizione struttura", team.T, team.C
   )
 )
 
