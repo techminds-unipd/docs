@@ -70,10 +70,11 @@ Le voci della Navbar cambiano in base allo stato di autenticazione:
 // INSERIRE LA LOGICA DI NAVBAR LOGIN E NAVBAR LOGOUT
 
 ===== PersonCard
-#figure(
+/*#figure(
     image("../../assets/frontend/PersonCard.svg", width: 65%),
   caption: [Componente PersonCard.],
-)
+)*/
+// TODO inserire immagine
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 
 Il componente accetta due props:
@@ -87,14 +88,14 @@ Il componente PersonCard è composto da:
 - Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
 
 ===== CustomNode
-/*#figure(
+#figure(
     image("../../assets/frontend/CustomNode.svg", width: 65%),
   caption: [Componente PersonCard.],
-)*/
+)
 // TODO inserire immagine
 
-Il componente CustomNode è un componente React personalizzato che rappresenta un servizio. 
-Ogni nodo, a seguito di un click su di esso, mostra sullo schermo una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
+Il componente CustomNode è un componente React personalizzato che rappresenta un servizio tra Pastebin, Calendar e Gmail. 
+Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
 
 I CustomNode verranno utilizzati in queste pagine:
 - Workflow, dove i custumNode verranno visualizzati e usati per creare un workflow;
@@ -109,16 +110,16 @@ Il componente accetta le seguenti props:
 - nodeTitle: il nome del servizio;
 - dialogTitle: il titolo della Dialog;
 - dialogContent: le informazioni del servizio mostrate dalla Dialog;
-- type: il tipo di blocco, che può essere \"in\", \"out\" o \"in-out\";
-- disabled: un booleano che indica se il servizio è disabilitato;
-- draggable: un booleano che indica se il blocco è trascinabile.
+- type: il tipo di nodo, che può essere \"in\", \"out\" o \"in-out\";
+- disabled: un booleano che indica se il nodo è disabilitato;
+- draggable: un booleano che indica se il nodo è trascinabile.
 
 Il componente CustomNode è composto da:
 - Un Button decorato dall'icona InfoOutlinedIcon;
 - Una Dialog con titolo (DialogTitle), contenuto (DialogContent) e un bottone all'interno delle DialogActions utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
 - Il contenuto della Dialog è composto da un Typography e un Divider.
 
-I servizi che vengono visualizzati attraverso CustomNode sono Pastebin, Calendar e Gmail attraverso i seguenti nodi ad-hoc:
+I componenti che utilizzano CustomNode sono:
 - PastebinNode;
 - CalendarNode;
 - GmailNode.
