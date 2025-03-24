@@ -85,7 +85,7 @@ Dichiarazione dell'impegno orario di ogni membro del gruppo e conseguente suddiv
 
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/studio-capitolati.pdf")[dichiarazione degli impegni] #footnote(link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/studio-capitolati.pdf")) [versione 1.0.0].
 
-==== Lettera di presentazione
+==== Lettere di presentazione
 Documento formale di presentazione per ogni revisione di progetto:
 - Lettera di presentazione RTB;
 - Lettera di presentazione PB.
