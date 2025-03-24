@@ -1,6 +1,87 @@
 #import "/template/template.typ": glossario
 #import "../../analisi_requisiti/include/definizione_requisiti.typ": getFRByNumber
 
+#let getIntegrazione() = {
+    let backend = ()
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *user/register*. Verificare che il backend possa ricevere i dati di un utente, registrarlo all'interno del database e ritornare i suoi dati.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *user/register*. Verificare che il backend lanci un'eccezione con http status 400 poiché lo _username_ dell'utente è già salvato nel database.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *user/login*. Verificare che il backend possa ricevere i dati di un utente, autenticarlo e ritornare la stringa contenente il token JWT.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *user/login*. Verificare che il backend lanci un'eccezione con http status 401 poiché la _password_ o lo _username _dell'utente non sono corretti.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_, lo crei e salvi all'interno del database e ritorni il _workflow_ creato.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 400 poiché il _workflow_ avente quel nome è già presente nel database.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/save*. Verificare che il backend autorizzi la richiesta, riceva il _workflow_ da salvare, controlli che sia valido, lo salvi all'interno del database e ritorni il _workflow_ salvato.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/save*. Verificare che il backend lanci un'eccezione con http status 412 poiché il _workflow_ da salvare non è valido.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_ da ottenere, lo recuperi dal database e lo ritorni.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/all*. Verificare che il backend autorizzi la richiesta, recuperi tutti i _workflow_ dell'utente dal database e ritorni una lista con i loro nomi.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/execute*. Verificare che il backend autorizzi la richiesta, riceva il _workflow_ da eseguire, controlli che sia valido, invii la richiesta all'agente e ritorni il risultato.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/execute*. Verificare che il backend lanci un'eccezione con http status 412 poiché il _workflow_ da eseguire non è valido.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il backend autorizzi la richiesta, riceva il nome del _workflow_ da eliminare, lo elimini dal database e ritorni il _workflow_ eliminato.],
+        [S],
+    ))
+
+    backend.push(("TIB" + str(backend.len()+1),
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
+        [S],
+    ))
+
+    return backend
+}
+
 // test di unità
 #let getUnità() = {
     let unitàBackend = ()

@@ -8,15 +8,13 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ===== CustomLink
-#figure(
-    image("../../assets/frontend/CustomLink.svg", width: 55%),
-  caption: [Componente CustomLink.],
-)
+// TODO da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
 Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
-- link: l'URL di destinazione.
+- link: l'URL di destinazione;
+- color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color".
 Grazie all'hook #declaration("useLocation()") di React Router, il componente può ottenere il percorso corrente dell'utente. Se il valore del link corrisponde al percorso attuale, CustomLink ritorna un componente Typography, evitando di generare un link cliccabile.
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 
@@ -66,10 +64,11 @@ Le voci della Navbar cambiano in base allo stato di autenticazione fornito dal c
 - Utente autenticato: viene mostrato il link \"Dashboard\" e un'icona utente con menu a tendina. Quest'ultimo contiene un'opzione per accedere alla pagina \"Services\" e un'opzione di logout, gestita dal componente LogoutMenuItem.
 
 ===== PersonCard
-#figure(
+/*#figure(
     image("../../assets/frontend/PersonCard.svg", width: 65%),
   caption: [Componente PersonCard.],
-)
+)*/
+// TODO inserire immagine
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 
 Il componente accetta due props:
@@ -80,7 +79,44 @@ Il componente PersonCard è composto da:
 - Un Box che racchiude tutti gli altri componenti;
 - Un Avatar che applica una maschera a cerchio sull'immagine del profilo GitHub;
 - Un Typography che contiene il nome della persona;
-- Un Link che contiene la foto profilo e il nome dell'utente e ha come attributo #declaration[href] il profilo GitHub.
+- Un Link che contiene l'Avatar e il Typography e ha come attributo #declaration[href] il profilo GitHub.
+
+===== CustomNode
+/*#figure(
+    image("../../assets/frontend/CustomNode.svg", width: 65%),
+  caption: [Componente PersonCard.],
+)*/
+// TODO inserire immagine
+
+Il componente CustomNode è un componente React personalizzato che rappresenta un servizio tra Pastebin, Calendar e Gmail. 
+Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
+
+I CustomNode vengono utilizzati nelle seguenti pagine:
+- Workflow, dove i CustumNode vengono visualizzati e usati per creare un workflow;
+- Services, dove i CustomNode vengono solo visualizzati.
+
+Ogni nodo può essere:
+- Di input (in), output (out) o entrambi (in-out);
+- Trascinabile;
+- Disabilitato (modifica solamente l'estetica del nodo).
+
+Il componente accetta le seguenti props:
+- nodeTitle: il nome del servizio;
+- dialogTitle: il titolo della Dialog;
+- dialogContent: le informazioni del servizio mostrate dalla Dialog;
+- type: il tipo di nodo, che può essere \"in\", \"out\" o \"in-out\";
+- disabled: un booleano che indica se il nodo è disabilitato;
+- draggable: un booleano che indica se il nodo è trascinabile.
+
+Il componente CustomNode è composto da:
+- Un Button decorato dall'icona InfoOutlinedIcon;
+- Una Dialog con titolo (DialogTitle), contenuto (DialogContent) e un bottone all'interno delle DialogActions utile per chiudere la Dialog stessa attraverso la funzione #declaration[handleClose];;
+- Il contenuto della Dialog è composto da un Typography e un Divider.
+
+I componenti che utilizzano CustomNode sono:
+- PastebinNode;
+- CalendarNode;
+- GmailNode.
 
 ===== SignInForm
 SignInForm è un componente React che mostra il form per il login.
@@ -97,3 +133,74 @@ Il componente usa i componenti di MUI:
 I componenti personalizzati usati sono invece:
 - CustomLink, per il link alla registrazione;
 - SignInContainer, per la grafica del container del form.
+
+===== AddWorkflow
+// TODO inserire immagine
+
+Il componente AddWorkflow è un componente React personalizzato che permette agli utenti di creare un nuovo workflow. Viene utilizzato all’interno della pagina Dashboard.
+
+Il componente accetta una prop:
+- setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo la creazione di un nuovo elemento.
+Grazie all’hook personalizzato #declaration("useCreateWorkflow()"), il componente può accedere al servizio per creare un nuovo workflow. L'input dell'utente viene gestito attraverso un campo di testo (TextField di MUI), e la creazione avviene al click dell'IconButton, che utilizza l'icona di aggiunta fornita da MUI.
+
+Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow()"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
+Quest'ultimo ha quindi due varianti:
+- success: se la creazione è andata a buon fine;
+- error: se si è verificato un problema (ad esempio nome duplicato o errore generico).
+
+
+===== WorkflowItem 
+// TODO inserire immagine
+
+Il componente WorkflowItem è un componente React personalizzato che rappresenta un singolo workflow all’interno della lista dei workflow. Viene utilizzato all’interno della pagina Dashboard.
+
+Il componente accetta due prop:
+- name: il nome del workflow da visualizzare;
+- setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo l'eliminazione di un elemento.
+
+Grazie all’hook personalizzato #declaration("useDeleteWorkflow()"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un CustomLink, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
+
+Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow()"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
+
+===== WorkflowList
+// TODO inserire immagine
+
+Il componente WorkflowList è un componente React personalizzato che visualizza la lista dei workflow dell'utente. Viene utilizzato all’interno della pagina Dashboard.
+
+Il componente accetta due prop:
+- shouldReload: valore booleano che indica se la lista dei workflow deve essere ricaricata;
+- setShouldReload: funzione per aggiornare lo stato e ricaricare la lista dei workflow dopo modifiche come l'aggiunta o l'eliminazione di un workflow.
+Grazie all’hook personalizzato #declaration("useAllWorkflow()"), il componente può recuperare l'elenco dei workflow dell'utente. Quando shouldReload è attivo, la funzione #declaration("refetch()") viene chiamata per aggiornare i dati e  setShouldReload viene impostato su false per evitare richiami ripetuti.
+
+L’interfaccia mostra:
+- Un titolo che introduce la sezione;
+- Un Box di MUI contenente la lista dei workflow;
+- Un messaggio informativo se l'utente non ha workflow disponibili;
+- Un CircularProgress durante il caricamento;
+- Un messaggio di errore se si verifica un problema nel recupero dei dati;
+- L'elenco dei workflow, ciascuno rappresentato da un componente WorkflowItem.
+
+
+===== PrivateRoute
+// non credo serva l'immagine
+
+Il componente PrivateRoute è un componente React personalizzato che viene utilizzato all'interno della configurazione di React Router per gestire l'area dedicata all'utente autenticato.
+
+Il componente si basa sull'hook personalizzato #declaration("useAuth()") per verificare se l'utente ha effettuato il login. In tal caso, viene renderizzato il componente figlio attraverso Outlet.
+Se l'utente non è autenticato, viene eseguito un reindirizzamento automatico alla pagina di SignIn tramite il componente Navigate di React Router. \
+Viene utilizzato per proteggere le seguenti pagine:
+- Dashboard;
+- Workflow;
+- Services.
+
+===== AnonymousRoute
+// non credo serva l'immagine
+
+Il componente AnonymousRoute è un componente React personalizzato che impedisce agli utenti autenticati di accedere a determinate pagine pubbliche.
+
+Il componente tilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
+Se l'utente non è autenticato, viene renderizzato il componente figlio attraverso Outlet.
+Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dashboard tramite Navigate di React Router. \
+AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:
+- SignIn;
+- SignUp.
