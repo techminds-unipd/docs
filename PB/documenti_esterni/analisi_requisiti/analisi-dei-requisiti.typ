@@ -14,6 +14,7 @@
   title: "Analisi dei requisiti",
   sommario: "Documento di Analisi dei requisiti.",
   changelog: (
+    "2.0.0", "24/03/2025", "Aggiunto controllo validità workflow UC26", team.S, "",
     "1.4.0", "27/02/2025", "Aggiunto requisito di vincolo workflow", team.C, team.A,
     "1.3.0", "27/02/2025", "Aggiunti nuovi requisiti funzionali e UC avviso nome non accettabile", team.C, team.A,
     "1.2.0", "20/02/2025", "Aggiunte tabelle tracciamento", team.M, team.S,
