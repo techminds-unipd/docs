@@ -182,11 +182,10 @@ Elenca le tecnologie utilizzate per lo sviluppo del prodotto e documenta le scel
 - Introduzione: scopo del documento;
 - Tecnologie: linguaggi, librerie, framework e altri strumenti utilizzati per lo sviluppo del prodotto; 
 - Architettura di sistema: architettura adottata per frontend, backend, agente e database;
-- Architettura di deployment;
+- Limiti e criticità della soluzione individuata: analisi delle critictà e dei limiti riscontrati durante lo sviluppo del prodotto;
 - Stato requisiti funzionali: stato di ogni requisito funzionale individuato durante l'attività di analisi dei requisiti, tracciato con una tra le seguenti indicazioni:
     - Soddisfatto;
     - Non soddisfatto.
-- Criticità e limiti del prodotto: analisi delle critictà e dei limiti riscontrati durante lo sviluppo del prodotto.
 
 *Uso*: esterno.
 

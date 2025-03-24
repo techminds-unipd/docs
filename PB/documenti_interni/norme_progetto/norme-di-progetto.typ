@@ -18,7 +18,7 @@
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
-    "1.6.0", "23/03/2025", "Documentata struttura documenti", team.C, "",
+    "1.6.0", "24/03/2025", "Documentata struttura documenti", team.C, "",
     "1.5.0", "10/03/2025", "Completata sezione codifica", team.S, team.L,
     "1.4.0", "10/03/2025", "Completata sezione progettazione", team.S, team.G,
     "1.3.0", "06/03/2025", "Documentata struttura e gestione repo", team.L, team.C,
