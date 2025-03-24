@@ -112,7 +112,7 @@ Documento utile per definire termini rilevanti nell'ambito del progetto, al fine
 
 *Uso*: interno.
 
-*Redattore*: amministratore.
+*Redattore*: chiunque individui un termine che potrebbe risultare ambiguo o sconosciuto al gruppo, indipendentemente dal ruolo.
 
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_interni/glossario/glossario.pdf")[glossario] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_interni/glossario/glossario.pdf")) [versione 2.0.0].
 
@@ -203,7 +203,7 @@ Documento che funge da guida all'utilizzo del prodotto per tutte le tipologie di
 
 *Uso*: esterno.
 
-*Redattore*: programmatore. // programmatore ???
+*Redattore*: programmatore.
 
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")[manuale utente] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")) [versione 1.0.0]. // da controllare il link quando ci sarà il documento
 
@@ -226,7 +226,7 @@ Verbale delle riunioni svolte con il proponente.
 - Contenuto della riunione (ordine del giorno, riassunto e decisione prese);
 - Firma del proponente.
 
-*Uso*: interno.
+*Uso*: esterno.
 
 *Redattore*: responsabile.
 
