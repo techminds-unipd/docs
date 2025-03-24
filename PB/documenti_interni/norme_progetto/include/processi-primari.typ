@@ -157,7 +157,7 @@ Documento che ha lo scopo di raccogliere la pianificazione delle attività proge
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf")[piano di progetto] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf")) [versione 2.0.0].
 
 ==== Piano di qualifica
-Il #glossario[piano di qualifica] ha lo scopo di fissare gli obiettivi per le metriche individuate nel presente documento, individuando un valore acettabile e un valore ottimale. Presenta inoltre i test effettuati sul prodotto e gli esiti di tale test, indicando:
+Il #glossario[piano di qualifica] ha lo scopo di fissare gli obiettivi per le metriche individuate nel presente documento, individuando un valore accettabile e un valore ottimale. Presenta inoltre i test effettuati sul prodotto e gli esiti di tale test, indicando:
 - NI: Non Implementato;
 - S: Superato;
 - NS: Non Superato.
