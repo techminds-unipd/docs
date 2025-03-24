@@ -60,7 +60,7 @@ Documento ufficiale di presentazione per la candidatura al capitolato C3, propos
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/lettera-di-presentazione.pdf")[lettera di candidatura] #footnote(link("https://techminds-unipd.github.io/docs/candidatura/documenti_esterni/presentazione_candidatura/lettera-di-presentazione.pdf")).
 
 ==== Studio dei capitolati
-Studio e analisi di ogni capitolato proposto, evidenziando le tecnologie da utilizzare, le funzionalità richieste, gli aspetti positivi, gli aspetti negativi e l'aiuto che l'azienda offre. 
+Studio e analisi di ogni capitolato proposto, evidenziando le tecnologie da utilizzare, le funzionalità richieste, gli aspetti positivi, gli aspetti negativi e le modalità di supporto offerte da ogni azienda.
 
 *Struttura*:
 - Introduzione: scopo del documento e scelta del capitolato;
