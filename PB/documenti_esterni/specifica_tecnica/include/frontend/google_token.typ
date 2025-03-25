@@ -4,7 +4,7 @@
 ===== ConnectionGoogleRequest e ConnectionGoogleResponse
 *GoogleTokenContext e GoogleTokenProvider*
 
-GoogleTokenContext fornisce, tramite l'hook di React createContext, un contesto per memorizzare e gestire le informazioni relative al token Google dell'utente.
+GoogleTokenContext fornisce, tramite l'hook di React #declaration[createContext], un contesto per memorizzare e gestire le informazioni relative al token Google dell'utente.
 Queste informazioni sono descritte dall'interfaccia GoogleAccountTokenType e sono:
 - googleToken: un oggetto Typescript GoogleAccountToken che contiene la stringa token e l'expireDate in formato ISO 8601;
 - #declaration[addGoogleToken(GoogleAccountToken)]: memorizza un GoogleAccountToken nel contesto e nel #glossario[local storage] del browser;

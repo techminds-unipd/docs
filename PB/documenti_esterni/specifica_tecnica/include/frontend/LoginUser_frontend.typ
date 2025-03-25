@@ -16,7 +16,7 @@ L'esecuzione prosegue in base al codice di risposta ricevuto:
 
 *AuthContext e AuthProvider*
 
-AuthContext fornisce un contesto che, tramite l'uso dell'hook createContext di React, memorizza e rende disponibili le informazioni descritte dall'interfaccia AuthContextType, che contiene i dati:
+AuthContext fornisce un contesto che, tramite l'uso dell'hook #declaration[createContext] di React, memorizza e rende disponibili le informazioni descritte dall'interfaccia AuthContextType, che contiene i dati:
 - user, che può essere:
   - null se l'utente non è autenticato;
   - di tipo User se l'utente è autenticato. User è un'interfaccia che memorizza due stringhe: lo username e l'access token;

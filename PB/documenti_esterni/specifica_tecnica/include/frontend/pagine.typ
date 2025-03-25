@@ -50,7 +50,7 @@ L'interfaccia della Dashboard è strutturata in due sezioni principali, entrambe
 
 ===== Services
 // TODO inserire immagine
-Il componente Services rappresenta la pagina che permette all'utente autenticato di gestire il collegamento col proprio account Google e vedere quali servizi che potrà utilizzare nel workflow.
+Il componente Services rappresenta la pagina che permette all'utente autenticato di gestire il collegamento col proprio account Google e vedere quali servizi potrà utilizzare nel workflow.
 
 Il componente usa #declaration[useGoogleToken()] per gestire il collegamento dell'account Google, in particolare:
 - googleToken: variabile che permette di controllare se il collegamento a Google è stato effettuato;
@@ -60,9 +60,12 @@ Il componente usa #declaration[useGoogleToken()] per gestire il collegamento del
 Il componente è composto da:
 - Varie Grid per impaginare il contenuto;
 - Un Button per collegare e scollegare l'account, il cui testo e il comportamento cambiano in base allo stato del GoogleToken;
+- Un Typography che viene mostrato quando il token è scaduto;
 - Un GmailNode;
 - Un CalendarNode;
 - Un PastebinNode.
+
+Se il token non è presente o è scaduto il Button ha come destinazione il percorso del backend che si occupa di effettuare il redirect verso Google (nel nostro caso \http:\/\/localhost:3000/google/auth).
 
 ===== AddAccount
 // TODO inserire immagine anche se non so se sia necessaria in questo caso.
@@ -72,4 +75,4 @@ Nella query string sono presenti i seguenti parametri:
 - token: il contenuto del token generato da Google durante la connessione dell'account;
 - expireDate: la data e l'ora di scadenza del token in formato ISO 8601.
 
-È infine presente un singolo Button da premere nel caso in cui il redirect non sia avvenuto automaticamente.
+È infine presente un singolo Button da premere nel caso in cui il redirect verso Services non sia avvenuto automaticamente.
