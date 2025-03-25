@@ -1511,15 +1511,15 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. ha avviato l'esecuzione o il salvataggio di un workflow.
+    1. ha avviato un'operazione su un workflow.
   - Sistema:
     1. rileva che almeno un requisito nella struttura del workflow non è stato soddisfatto;
     2. mostra un messaggio d'errore all'utente;
-    3. termina l'esecuzione o il salvataggio.
+    3. termina l'operazione.
 - *Pre-condizioni*:
   - L'utente ha creato un workflow senza rispettare i vincoli.
 - *Post-condizioni*:
-  - L'esecuzione o il salvataggio termina e viene mostrato un messaggio d'errore all'utente.
+  - L'operazione termina e viene mostrato un messaggio d'errore all'utente.
 
 === Visualizzazione errore runtime <vis-errore-runtime>
 - *Descrizione*:
