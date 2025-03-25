@@ -23,7 +23,7 @@ AuthContext fornisce un contesto che, tramite l'uso dell'hook #declaration[creat
 - #declaration("loginUser()"), una funzione per effettuare il login;
 - #declaration("logoutUser()"), una funzione per effettuare il logout;
 - error, che contiene i messaggi di errore relativi all'autenticazione.
-Per poter accedere a tale contesto, un componente deve essere figlio di AuthProvider e utilizzare l'hook personalizzato #declaration("useAuth()"). Data la necessità di inviare l'access token per l'utilizzo di molte funzionalità offerte dal backend, è stato deciso di rendere AuthProvider genitore del componente App, che a sua volta contiene tutti i componenti della web app.
+Per poter accedere a tale contesto, un componente deve essere figlio di AuthProvider e utilizzare l'hook personalizzato #declaration("useAuth()"). Data la necessità di inviare l'access token per l'utilizzo di molte funzionalità offerte dal backend, è stato deciso di rendere AuthProvider genitore di tutti i componenti presenti in App.
 
 *useAuth*
 

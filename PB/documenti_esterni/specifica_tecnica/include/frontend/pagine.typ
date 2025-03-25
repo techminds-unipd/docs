@@ -59,7 +59,7 @@ Il componente usa #declaration[useGoogleToken()] per gestire il collegamento del
 
 Il componente è composto da:
 - Varie Grid per impaginare il contenuto;
-- Un Button per collegare e scollegare l'account, il cui testo e il comportamento cambiano in base allo stato del GoogleToken;
+- Un Button per collegare e scollegare l'account, il cui testo e il cui comportamento cambiano in base allo stato del GoogleToken;
 - Un Typography che viene mostrato quando il token è scaduto;
 - Un GmailNode;
 - Un CalendarNode;

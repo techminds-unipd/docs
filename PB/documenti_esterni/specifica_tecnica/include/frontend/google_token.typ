@@ -12,7 +12,7 @@ Queste informazioni sono descritte dall'interfaccia GoogleAccountTokenType e son
 - #declaration[isTokenExpired()]: ritorna true se il token non esiste oppure è scaduto;
 - error: stringa che contiene eventuali errori accaduti durante l'aggiunta o la rimozione del token. Se non sono presenti errori è null.
 
-Se un componente vuole accedere a questo context deve essere figlio di GoogleTokenProvider e utilizzare l'hook #declaration[useGoogleToken()]. Per questo motivo, nel componente App, GoogleTokenProvider è figlio di AuthProvider e contiene il tutti gli altri componenti.
+Se un componente vuole accedere a questo context deve essere figlio di GoogleTokenProvider e utilizzare l'hook #declaration[useGoogleToken()]. Per questo motivo, nel componente App, GoogleTokenProvider è genitore di tutti gli altri componenti (ad eccezione di AuthProvider).
 
 *useGoogleToken*
 
