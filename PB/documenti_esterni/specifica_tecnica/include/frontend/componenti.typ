@@ -9,7 +9,7 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 
 ===== CustomLink
 // TODO da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
-Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
+Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi ), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
@@ -125,6 +125,7 @@ Il componente usa i componenti di MUI:
 - Card, per racchiudere tutto in una card grafica;
 - Typography, per mostrare il titolo e il testo \"Don't have an account?\";
 - Alert, per mostrare gli eventuali messaggi d'errore;
+- Snackbar e MuiAlert per mostrare il messaggio di successo, dopo il reindirizzamento a seguito di una registrazione avvenuta correttamente;
 - Box, per contenere gli input del form;
 - FormControl, FormLabel e TextField, per le label e gli input dello username e della password;
 - Button, per il bottone di submit;
@@ -204,3 +205,21 @@ Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dash
 AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:
 - SignIn;
 - SignUp.
+
+===== SignUpForm
+// TODO inserire immagine
+
+SignUpForm è un componente React che mostra il form per la registrazione.
+
+Il componente usa i componenti di MUI:
+- Card, per racchiudere tutto in una card grafica;
+- Typography, per mostrare il titolo e il testo \"Don't have an account?\";
+- Alert, per mostrare gli eventuali messaggi d'errore;
+- Box, per contenere gli input del form;
+- FormControl, FormLabel e TextField, per le label e gli input dello username, della password e della password di conferma;
+- Button, per il bottone di submit;
+- Divider, per visualizzare una linea orizzontale tra il form e il link al login.
+
+I componenti personalizzati usati sono invece:
+- CustomLink, per il link alla login;
+- SignUpContainer, per la grafica del container del form.
