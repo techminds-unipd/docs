@@ -48,7 +48,8 @@ Anche per PB abbiamo definito una milestone per ogni documento:
 - PB: Piano di progetto;
 - PB: Piano di qualifica;
 - PB: Norme di progetto;
-- PB: Specifica tecnica.
+- PB: Specifica tecnica;
+- PB: Manuale utente.
 Inoltre è presente anche la milestone #glossario[MVP] per rappresentare il progresso del prodotto software finale.
 
 === Issue
