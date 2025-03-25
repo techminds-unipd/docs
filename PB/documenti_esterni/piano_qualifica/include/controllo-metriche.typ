@@ -185,7 +185,7 @@
 #let rischi = ()
 #let costo_totale_stimato = ()
 
-#let rsi = ((6, 55), (7, 78), (8, 100), (9, 97))
+#let rsi = ((5, 100), (6, 68), (7, 29), (8, 100), (9, 97))
 #let code_coverage_backend = ((7, 0), (8, 96), (9, 96))
 #let code_coverage_frontend = ((7, 0), (8, 61)) //da inserire valore sprint 9
 #let code_coverage_agente = ((7, 0), (8, 76), (9, 76))
@@ -241,8 +241,8 @@
     }
 
     let req_stab_index = 0
-    if i >= 6 {
-        req_stab_index = rsi.at(i - 6).at(1)
+    if i >= 5 {
+        req_stab_index = rsi.at(i - 5).at(1)
     }
     let cod_cov_backend = 0
     let cod_cov_frontend = 0

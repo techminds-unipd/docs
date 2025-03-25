@@ -88,8 +88,8 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Requirements Stability Index (RSI)],
             [#glossario[Requirements Stability Index] (RSI)],
-            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino a 0, più i requisiti sono stabili; più è vicino a 1, più i requisiti sono cambiati.],
-            [$"Requirements Stability Index" &= ("NRA"+"NRM"+"NRC")/"NRI"$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali."))],
+            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino al 100%, più i requisiti sono stabili; più è vicino a 0, più i requisiti sono cambiati.],
+            [$"Requirements Stability Index" &= 1-(("NRA"+"NRM"+"NRC")/"NRI")*100$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali."))],
             [\u{2A7E}80%],
             [100%],
             "sviluppo"))
