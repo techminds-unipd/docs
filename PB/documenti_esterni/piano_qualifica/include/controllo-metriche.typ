@@ -646,9 +646,14 @@ Il grafico illustra:
 *PB*
 #linebreak()
 //TODO: aggiungere commento
+#linebreak()
+
+== MPROD4, MPROD5, MPROD6, MPROD7, MPROD8, MPROD9
+
+Le seguenti metriche di prodotto riguardanti la manutenibilità vengono applicate e verificate da strumenti di analisi statica del codice, come ad esempio #glossario[EsLint].
 
 #pagebreak()
-== MPROD11 (Tempo medio esecuzione di un workflow)
+== MPROD10 (Tempo medio esecuzione di un workflow)
 #linebreak()
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
@@ -667,7 +672,7 @@ Il grafico illustra:
 //TODO: aggiungere commento
 
 #pagebreak()
-== MPROD12 (Click per utilizzare una funzionalità)
+== MPROD11 (Click per utilizzare una funzionalità)
 #linebreak()
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
@@ -687,7 +692,7 @@ Il grafico illustra:
 
 #pagebreak()
 
-== MPROD13 (Versioni browser supportate)
+== MPROD12 (Versioni browser supportate)
 #linebreak()
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point

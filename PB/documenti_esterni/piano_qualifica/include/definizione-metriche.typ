@@ -224,14 +224,7 @@
             [\u{2A7E}0%],
             [100%],
             "funzionalità"))
-
-#MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Accoppiamento tra classi],
-            [Misura della dipendenza e dell’interconnessione tra le classi all’interno di un sistema software.],
-            [$"Accoppiamento tra classi" &= "Numero di dipendenze"/"Numero di componenti"$;],
-            [\u{2A7D}9],
-            [\u{2A7D}6],
-            "manutenibilità"))
+            
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Complessità ciclomatica per metodo],
