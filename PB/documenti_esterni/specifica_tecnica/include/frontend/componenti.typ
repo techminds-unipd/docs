@@ -9,7 +9,7 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 
 ===== CustomLink
 // TODO da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
-Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi ), per gestire i collegamenti del menu di navigazione.
+Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
