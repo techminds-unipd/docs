@@ -1,7 +1,7 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 #import "../../../../../template/template.typ": glossario
 
-===== GoogleToken
+===== ConnectionGoogleRequest e ConnectionGoogleResponse
 *GoogleTokenContext e GoogleTokenProvider*
 
 GoogleTokenContext fornisce, tramite l'hook di React createContext, un contesto per memorizzare e gestire le informazioni relative al token Google dell'utente.

@@ -64,7 +64,7 @@ Il componente è composto da:
 - Un CalendarNode;
 - Un PastebinNode.
 
-===== Add account
+===== AddAccount
 // TODO inserire immagine anche se non so se sia necessaria in questo caso.
 Questo componente rappresenta una pagina di servizio, necessaria per salvare il token dell'account Google e la data della sua scadenza. Questa pagina è la destinazione del redirect da parte del backend. Per accedere ai dati del token, contenuto nella query string, si fa uso dell'hook #declaration[useSearchParams()].
 
