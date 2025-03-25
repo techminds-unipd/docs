@@ -7,7 +7,7 @@ L'autenticazione è realizzata da tre unità:
 
 *LoginService*
 
-LoginService è una classe dotata di un unico metodo asincrono #declaration("login(username: string, password: string): Promise<LoginResponse>"). Tale metodo prende come parametri due stringhe, una per lo username e una per la password, e ritorna una Promise di tipo LoginReponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede di effetturare il login all'endpoint API offerto dalla funzionalità LoginUser del backend (vedi @login-user).
+LoginService è una classe dotata di un unico metodo asincrono #declaration("login(username: string, password: string): Promise<LoginResponse>"). Tale metodo prende come parametri due stringhe, una per lo username e una per la password, e ritorna una Promise di tipo LoginResponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede di effetturare il login all'endpoint API offerto dalla funzionalità LoginUser del backend (vedi @login-user).
 L'esecuzione prosegue in base al codice di risposta ricevuto:
 - Se le credenziali sono corrette (codice HTTP 201) la Promise viene risolta e il token ricevuto dal backend viene ritornato tramite LoginResponse; 
 - Se le credenziali sono errate (codice HTTP 401), viene lanciato un Error con il messaggio "wrong username or password";

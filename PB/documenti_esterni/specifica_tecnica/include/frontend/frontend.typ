@@ -17,5 +17,6 @@
 #include("delete_workflow_frontend.typ")
 #include("workflow_name_list_frontend.typ")
 #include("google_token.typ")
+#include("registerService.typ")
 
 // ==== Design Pattern
