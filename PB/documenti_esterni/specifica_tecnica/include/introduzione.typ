@@ -15,7 +15,8 @@ Il documento che descrive la specifica tecnica nasce con l'intenzione di documen
 == Riferimenti
 === Riferimenti normativi
 - #glossario[Capitolato] C3, Automatizzare le routine digitali tramite l’intelligenza generativa: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf [visitato il: 24/02/2025];
-- Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf [visitato il: 24/02/2025].
+- Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf [visitato il: 24/02/2025];
+- ISO 8601: https://it.wikipedia.org/wiki/ISO_8601 [visitato il: 25/03/2025].
 
 
 #set par(justify: false)
