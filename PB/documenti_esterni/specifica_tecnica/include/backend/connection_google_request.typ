@@ -12,7 +12,7 @@
     - Proprietà:
         - #declaration("- connectionGoogleRequestUseCase: ConnectionGoogleRequestUseCase") #arrow porta di input per il servizio di business dedicato alla creazione della richiesta per il collegamento dell'account Google.
     - Operazioni:
-        - #declaration("+ googleAuth(): string") #arrow valida la richiesta verificando il _JWT_. Successivamente chiama il metodo _googleAuth_ di _connectionGoogleRequestUseCase_ e fa il redirect verso l'oggetto _RedirectUrlDTO_ che ritorna.
+        - #declaration("+ googleAuth(): RedirectUrlDTO") #arrow valida la richiesta verificando il _JWT_. Successivamente chiama il metodo _googleAuth_ di _connectionGoogleRequestUseCase_ e fa il redirect verso l'oggetto _RedirectUrlDTO_ che ritorna.
 
 - *ConnectionGoogleRequestUseCase* (interfaccia)
     - #declaration("+ googleAuth(): string").
