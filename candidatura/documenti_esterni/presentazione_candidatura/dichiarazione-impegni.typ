@@ -5,9 +5,9 @@
   title: "Dichiarazione degli impegni",
   sommario: "Dichiarazione degli impegni per il capitolato 3.",
   changelog: (
-    "2.0", "05/11/2024", "Aggiornamento dei contenuti in seguito alla modifica del preventivo", team.C + linebreak() + team.M + linebreak() + team.L, team.A + linebreak() + team.G + linebreak() + team.T,
-    "1.1", "05/11/2024", "Modifica posizione e struttura changelog", team.S, team.G + linebreak() + team.C,
-    "1.0", "29/10/2024", "Prima versione", "Il gruppo Tech Minds", team.G + linebreak() + team.C
+    "1.0.0", "05/11/2024", "Aggiornamento dei contenuti in seguito alla modifica del preventivo", team.C + linebreak() + team.M + linebreak() + team.L, team.A + linebreak() + team.G + linebreak() + team.T,
+    "0.1.1", "05/11/2024", "Modifica posizione e struttura changelog", team.S, team.G + linebreak() + team.C,
+    "0.1.0", "29/10/2024", "Prima versione", "Il gruppo Tech Minds", team.G + linebreak() + team.C
   )
 )
 

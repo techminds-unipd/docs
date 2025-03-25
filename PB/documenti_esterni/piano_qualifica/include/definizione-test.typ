@@ -82,6 +82,559 @@
     return backend
 }
 
+// test di unità
+#let getUnità() = {
+    let unitàBackend = ()
+    let unitàAgente = ()
+    // RegisterUserController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ ritorni un DTO con l'utente registrato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _UserAlreadyExistsError_.],
+        [S],
+    ))
+
+    // RegisterUserService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserService_ ritorni l'utente registrato con la password sotto forma di hash.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserService_ lanci un'eccezione di tipo _UserAlreadyExistsError_ poiché lo _username_ è già utilizzato.],
+        [S],
+    ))
+
+    // LoginUserController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ ritorni un token jwt.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 401 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 401 poiché il service lancia un'eccezione di tipo _WrongPasswordError_.],
+        [S],
+    ))
+
+    // LoginUserService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserService_ ritorni l'utente che ha eseguito l'accesso con credenziali corrette.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserService_ lanci un'eccezione di tipo _UserNotFoundError_ poiché la porta di output ritorna null.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _login_ della classe _LoginUserService_ lanci un'eccezione di tipo _WrongPasswordError_ poiché la password non combacia.],
+        [S],
+    ))
+
+    // UserPortAdapter
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserPortAdapter_ ritorni un oggetto di business con l'utente avente lo _username_ specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserPortAdapter_ ritorni null poiché il repository ritorna null.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _UserPortAdapter_ ritorni un oggetto di business con l'utente registrato.],
+        [S],
+    ))
+
+    // UserRepository
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserRepository_ ritorni una entity del database con l'utente avente lo _username_ specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getUserByUsername_ della classe _UserRepository_ ritorni null poiché l'utente con quel _username_ non è stato trovato all'interno del database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _registerUser_ della classe _UserRepository_ ritorni una entity del database con l'utente registrato.],
+        [S],
+    ))
+
+    // User
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _hashPassword_ della classe _User_ ritorni la password sotto forma di hash.],
+        [S],
+    ))
+
+    // ConnectionGoogleRequestController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuth_ della classe _ConnectionGoogleRequestController_ ritorni un _RedirectUrlDTO_ con la risposta del service.],
+        [S],
+    ))
+
+    // ConnectionGoogleRequestService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuth_ della classe _ConnectionGoogleRequestService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    // ConnectionGoogleResponseController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ ritorni un _RedirectUrlDTO_ con la risposta del service.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ lanci un'eccezione con http status 500 poiché è stato lanciato un errore.],
+        [S],
+    ))
+
+    // ConnectionGoogleResponseService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getToken_ della classe _ConnectionGoogleResponseService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    // GoogleTokenPortAdapter
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getOauth2ClientUrl_ della classe _GoogleTokenPortAdapter_ ritorni il risultato del repository.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getAuthClientData_ della classe _GoogleTokenPortAdapter_ ritorni un oggetto di business contenente il risultato del repository.],
+        [S],
+    ))
+
+    // GoogleAuthRepository
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getOauth2ClientUrl_ della classe _GoogleAuthRepository_ ritorni l'url per il reindirizzamento.],
+        [S],
+    ))
+
+    // CreateWorkflowController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ ritorni un DTO con il workflow creato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _WorkflowAlreadyExistsError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con http status 500 poiché il service lancia un'eccezione di tipo _WorkflowNotAddedError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    // CreateWorkflowService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowService_ lanci un'eccezione di tipo _WorkflowAlreadyExistsError_ poiché esiste già un workflow con quel nome.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowService_ lanci un'eccezione di tipo _WorkflowNotAddedError_ poiché il workflow non è stato creato correttamente.],
+        [S],
+    ))
+
+    // DeleteWorkflowController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ ritorni un DTO con il workflow eliminato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ lanci un'eccezione con http status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
+        [S],
+    ))
+
+    // DeleteWorkflowService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowService_ lanci un'eccezione di tipo _WorkflowNotFoundError_ poiché il workflow non è stato trovato.],
+        [S],
+    ))
+
+    // GetWorkflowController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ ritorni un DTO con il workflow avente il nome specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ lanci un'eccezione con http status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
+        [S],
+    ))
+
+    // GetWorkflowService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowService_ lanci un'eccezione di tipo _WorkflowNotFoundError_ poiché il workflow non è stato trovato.],
+        [S],
+    ))
+
+    // SaveWorkflowController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ ritorni un DTO con il workflow salvato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con http status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con http status 412 poiché il workflow non è valido.],
+        [S],
+    ))
+
+    // SaveWorkflowService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowService_ lanci un'eccezione di tipo _WorkflowNotFoundError_ poiché il workflow non è stato trovato.],
+        [S],
+    ))
+    
+    // WorkflowNameListController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ ritorni il risultato del service.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
+        [S],
+    ))
+
+    // WorkflowNameListService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListService_ ritorni una lista vuota nel caso in cui non ci siano workflow.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListService_ lanci un'eccezione di tipo _UserNotFoundError_ poiché l'utente non è stato trovato.],
+        [S],
+    ))
+
+    // WorkflowPortAdapter
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowByName_ della classe _WorkflowPortAdapter_ ritorni un oggetto di business con il workflow avente il nome specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowByName_ della classe _WorkflowPortAdapter_ ritorni null poiché il workflow avente il nome specificato non esiste.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _addWorkflow_ della classe _WorkflowPortAdapter_ ritorni un oggetto di business con il workflow aggiunto.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _addWorkflow_ della classe _WorkflowPortAdapter_ ritorni null poiché il workflow non è stato aggiunto correttamente.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _WorkflowPortAdapter_ ritorni un oggetto di business con il workflow eliminato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _WorkflowPortAdapter_ ritorni null poiché il workflow non esiste.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getAllWorkflowByUsername_ della classe _WorkflowPortAdapter_ ritorni un oggetto di business con i workflow dell'utente specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getAllWorkflowByUsername_ della classe _WorkflowPortAdapter_ ritorni null poiché l'utente non esiste.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _WorkflowPortAdapter_ ritorni un oggetto di business con il workflow salvato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _WorkflowPortAdapter_ ritorni null poiché il workflow non è stato trovato.],
+        [S],
+    ))
+
+    // WorkflowRepository
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowByName_ della classe _WorkflowRepository_ ritorni un'entity del database con il workflow avente il nome specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getWorkflowByName_ della classe _WorkflowRepository_ ritorni null poiché il workflow avente il nome specificato non è stato trovato nel database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _addWorkflow_ della classe _WorkflowRepository_ ritorni un'entity del database con il workflow aggiunto.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _addWorkflow_ della classe _WorkflowRepository_ ritorni null poiché l'utente avente il nome specificato non è stato trovato nel database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _addWorkflow_ della classe _WorkflowRepository_ ritorni null poiché il workflow non è stato aggiunto correttamente al database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getAllWorkflowByUsername_ della classe _WorkflowRepository_ ritorni un'entity del database con i workflow dell'utente specificato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _getAllWorkflowByUsername_ della classe _WorkflowRepository_ ritorni null poiché l'utente specificato non è stato trovato nel database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _WorkflowRepository_ ritorni un'entity del database con il workflow eliminato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _WorkflowRepository_ ritorni null poiché il workflow avente il nome specificato non è stato trovato nel database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _deleteWorkflow_ della classe _WorkflowRepository_ ritorni null poiché il workflow non è stato eliminato correttamente dal database.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _WorkflowRepository_ ritorni un'entity del database con il workflow salvato.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _saveWorkflow_ della classe _WorkflowRepository_ ritorni null poiché il workflow avente il nome specificato non è stato trovato nel database.],
+        [S],
+    ))
+
+    // ExecuteWorkflowController
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ ritorni il risultato del service.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ lanci un'eccezione con http status 412 poiché il workflow non è valido.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ lanci un'eccezione con http status 500 poiché è stato lanciato un errore.],
+        [S],
+    ))
+
+    // ExecuteWorkflowService
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowService_ ritorni il risultato della porta di output.],
+        [S],
+    ))
+
+    // WorkflowAgentAdapter
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeRequest_ della classe _WorkflowAgentAdapter_ ritorni il risultato del repository.],
+        [S],
+    ))
+
+    // AgentRepository
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeRequest_ della classe _AgentRepository_ ritorni il risultato della richiesta fatta all'agente.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _executeRequest_ della classe _AgentRepository_ lanci un'errore poiché non è riuscito a connettersi all'agente.],
+        [S],
+    ))
+
+    // WorkflowDTOValidator
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ non lanci un'eccezione poiché il workflow è valido.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow non ha almeno due nodi.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow non ha _n_-1 archi, dove _n_ è il numero di nodi.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno due nodi con gli stessi _id_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno due archi con gli stessi _source id_.],
+        [S],
+    ))
+    
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno due archi con gli stessi _target id_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco senza descrizione.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco con _id source_ e _id target_ uguali.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco in cui il _source id_ non corrisponde ad un _id_ di un nodo.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco in cui il _target id_ non corrisponde ad un _id_ di un nodo.],
+        [S],
+    ))
+
+    // WorkflowAdapterImplementation
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _toDTO_ della classe _WorkflowAdapterImplementation_ adatti un oggetto di tipo _Workflow_ in un oggetto di tipo _WorkflowDTO_.],
+        [S],
+    ))
+
+    unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
+        [Verificare che il metodo _toDomain_ della classe _WorkflowAdapterImplementation_ adatti un oggetto di tipo _WorkflowDTO_ in un oggetto di tipo _Workflow_.],
+        [S],
+    ))
+
+    // WorkflowController (AGENTE)
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ ritorni una stringa che contiene il risultato dell'esecuzione dell'agente.],
+        [S],
+    ))
+
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione con http status 400 se la richiesta è invalida a causa dell'errato schema JSON.],
+        [S],
+    ))
+
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione http status 400 se la richiesta è invalida a causa di un campo action vuoto in uno dei nodi del workflow che non sia l'ultimo.],
+        [S],
+    ))
+
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione http status 400 se la richiesta è invalida a causa del campo action non vuoto nell'ultimo nodo del workflow.],
+        [S],
+    ))
+
+    // WorkflowService (AGENTE)
+    unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
+        [Verificare che il metodo _run_ della classe _WorkflowService_ ritorni un oggetto di tipo _AgentResponse_ che contiene la risposta generata da un agente AI che utilizza un LLM.],
+        [S],
+    ))
+
+
+    return unitàBackend + unitàAgente
+}
+
+
+// test di sistema
 #let getSistema() = {
     let sistema = ()
 
@@ -490,7 +1043,7 @@
 }
 
 
-// test accettazione
+// test di accettazione
 #let getAccettazione() = {
     let accettazione = ()
 
