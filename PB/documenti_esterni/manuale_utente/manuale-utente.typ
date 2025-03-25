@@ -15,6 +15,7 @@
   title: "Manuale utente",
   sommario: "Il documento riporta le istruzioni per utilizzare l'MVP.",
   changelog: (
+    "0.5.0", "25/03/2024", "Documentata pagina AboutUs", team.C, "",
     "0.4.0", "25/03/2024", "Documentata pagina SignUp", team.C, "",
     "0.3.0", "25/03/2024", "Documentata pagina Dashboard", team.C, "",
     "0.2.0", "25/03/2024", "Documentata pagina SignIn", team.S, team.A,
