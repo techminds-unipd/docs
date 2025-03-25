@@ -12,11 +12,15 @@
 //#glossario[ev]
 //#glossario[pv]
 //#glossario[rtb]
+//#glossario[pb]
 //#glossario[cv]
 //#glossario[sv]
 //#glossario[cpi]
 //#glossario[spi]
 //#glossario[rsi]
+//#glossario[code coverage]
+//#glossario[workflow]
+//#glossario[agente]
 
 // lines   :: [[number], [number]]
 // legends :: [content, content]
@@ -517,7 +521,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
     y-tick-step: -1,
     caption: [Code coverage.])
 Il grafico illustra:
-- #glossario[Code coverage]: indica la percentuale di righe codice coperta dai test.
+- #glossario[Code coverage]: indica la percentuale di righe codice coperta dai test, per ognuno dei componenti del prodotto (frontend, backend e agente).
 #linebreak()
 *PB*
 #linebreak()
@@ -665,7 +669,7 @@ Le seguenti metriche di prodotto riguardanti la manutenibilità vengono applicat
     y-tick-step: 2,
     caption: [Tempo medio di esecuzione di un workflow.])
 Il grafico illustra:
-- Tempo medio di esecuzione di un workflow: indica il tempo medio impiegato per eseguire un workflow che contiene due nodi e un arco con relativa descrizione.
+- Tempo medio di esecuzione di un #glossario[workflow]: indica il tempo medio impiegato per eseguire un workflow che contiene due #glossario[blocchi] e un #glossario[arco] con relativa descrizione.
 #linebreak()
 *PB*
 #linebreak()
