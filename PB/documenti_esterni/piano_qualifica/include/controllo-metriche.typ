@@ -688,7 +688,7 @@ Il grafico illustra:
     y-tick-step: 2,
     caption: [Click per utilizzare una funzionalità.])
 Il grafico illustra:
-- Click per utilizzare una funzionalità: indica il numero di click utilizzati per eseguire la funzionalità che ne richiede di più, analizzando cosi il caso peggiore.
+- Click per utilizzare una funzionalità: indica il numero di click utilizzati per eseguire la funzionalità che ne richiede di più, analizzando così il caso peggiore.
 #linebreak()
 *PB*
 #linebreak()
