@@ -104,7 +104,7 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 //#glossario[mvp]
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
 - #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
-- #link("https://github.com/techminds-unipd/mvp")[#glossario[mvp]] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
+- #link("https://github.com/techminds-unipd/mvp")[mvp] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei file*
@@ -125,7 +125,7 @@ Le cartelle sono organizzate come segue:
     - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB.
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
     - *glossario* contiene i sorgenti del glossario;
-    - *norme_progetto* contiene i sorgenti delle norme di progetto;
+    - *norme_progetto* contiene i sorgenti delle #glossario[norme di progetto];
     - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
 - *PB* organizza i sorgenti dei documenti redatti per la #glossario[Product Baseline] in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:

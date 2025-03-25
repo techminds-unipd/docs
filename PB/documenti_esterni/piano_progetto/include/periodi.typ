@@ -32,7 +32,7 @@ Tali suddivisioni orarie sono state scelte in base alle seguenti motivazioni:
 
 Il costo totale di completamento previsto risulta quindi essere *12.975 #sym.euro*.
 
-== Struttura degli Sprint
+== Struttura degli sprint
 
 Ogni sprint nel documento è descritto seguendo una struttura chiara e ripetuta. In particolare ogni sprint contiene le seguenti sezioni:
 
