@@ -6,3 +6,4 @@ offerti da _Groq_ che permette di selezionare i tool da utilizzare in base ai pr
 Un'altra limitazione è che il modello comprende meglio le richieste quando sono scritte in inglese. Di conseguenza, se il testo è in altre lingue, come l'italiano, c'è una maggiore probabilità che il modello non interpreti correttamente le istruzioni fornite dall'utente. \
 Spesso il modello ha alcune allucinazioni, anche cambiando quache piccolo dettaglio del prompt, pertanto potrebbe dare risposte non pertinenti. \
 Proprio a causa della complessità trovata nel gestire i comportamenti dell'agente, di comune accordo con il proponente, è stato deciso di implementare solamente la possibilità di creare dei workflow che non prevedano strutture ad albero. \
+Infine, il Docker Compose non tiene conto di eventuali aspetti di sicurezza, in quanto espone tutti i servizi nell'host che lo esegue. \  
