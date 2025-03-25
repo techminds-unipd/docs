@@ -2,7 +2,6 @@
 ===== RegisterUser
 La registrazione è realizzata da 2 unità:
 - RegisterService, che interagisce con il backend per richiedere la registrazione;
-
 - #declaration("useRegister"), che consente di accedere al contesto fornito da AuthProvider nei componenti della web app in cui lo si vuole utilizzare.
 
 *RegisterService*
