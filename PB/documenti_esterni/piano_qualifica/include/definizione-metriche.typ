@@ -283,7 +283,7 @@
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Tempo medio di esecuzione di un workflow],
-            [Misura il tempo medio di esecuzione di un workflow.],
+            [Misura il tempo medio di esecuzione di un workflow, ai fini del test è preso in considerazione un workflow con due nodi e un arco con relativa descrizione dell'automazione.],
             [$"Tempo medio di esecuzione" &= 1/"N" sum_(i = 1)^N T_i$, dove: #list("N: numero di esecuzioni;", spacing: 12pt)#box(list($T_i$ + ": tempo dell'esecuzione i-esima."))],
             [\u{2A7D}20 secondi (tempo timeout)],
             [\u{2A7D}10 secondi],

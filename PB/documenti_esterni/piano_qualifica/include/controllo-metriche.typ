@@ -16,6 +16,7 @@
 //#glossario[sv]
 //#glossario[cpi]
 //#glossario[spi]
+//#glossario[rsi]
 
 // lines   :: [[number], [number]]
 // legends :: [content, content]
@@ -56,7 +57,15 @@
     cv, sv, cpi,
     eac, etc, spi,
     caption_figure, rischi,
-    g_adr, g_pdp, g_pdq, g_ndp, g_gloss) = {
+    g_adr, g_pdp, g_pdq, g_ndp, g_gloss,
+    cod_cov_backend, cod_cov_frontend, cod_cov_agente,
+    test_sup,
+    req_obb_sodd,
+    req_des_sodd,
+    req_opz_sodd,
+    tem_med_workflow,
+    click_funz,
+    browser_supp) = {
 
         let metriche_accettabili = 0
 
@@ -66,12 +75,20 @@
         metriche_accettabili += int(cv >= 0)
         metriche_accettabili += int(sv >= 0)
         metriche_accettabili += int(cpi >= 1)
-        metriche_accettabili += int(eac >= 12625 +0.5*12625 or eac >= 12625 -0.5*12625)
+        metriche_accettabili += int(eac >= 12800 +0.5*12800 or eac >= 12800 -0.5*12800)
         metriche_accettabili += int(etc >= 0)
         metriche_accettabili += int(spi >= 1)
         metriche_accettabili += int(caption_figure == 100)
         metriche_accettabili += int(rischi <= 4)
         metriche_accettabili += int((g_adr, g_pdp, g_pdq, g_ndp, g_gloss).sorted().first() >= 40)
+        metriche_accettabili += int((cod_cov_backend, cod_cov_frontend, cod_cov_agente).sorted().first() >= 75)
+        metriche_accettabili += int(test_sup >= 90)
+        metriche_accettabili += int(req_obb_sodd == 100)
+        metriche_accettabili += int(req_des_sodd >= 0)
+        metriche_accettabili += int(req_opz_sodd >= 0)
+        metriche_accettabili += int(tem_med_workflow <= 20)
+        metriche_accettabili += int(click_funz <= 7)
+        metriche_accettabili += int(browser_supp >= 75)
 
         return metriche_accettabili
 }
@@ -81,22 +98,38 @@
     cv, sv, cpi,
     eac, etc, spi,
     caption_figure, rischi,
-    g_adr, g_pdp, g_pdq, g_ndp, g_gloss) = {
+    g_adr, g_pdp, g_pdq, g_ndp, g_gloss,
+    cod_cov_backend, cod_cov_frontend, cod_cov_agente,
+    test_sup,
+    req_obb_sodd,
+    req_des_sodd,
+    req_opz_sodd,
+    tem_med_workflow,
+    click_funz,
+    browser_supp) = {
 
         let metriche_ottime = 0
 
         metriche_ottime += int(ev <= eac)
         metriche_ottime += int(ac <= eac)
-        metriche_ottime += int(pv <= 12625)
+        metriche_ottime += int(pv <= 12800)
         metriche_ottime += int(cv >= 0)
         metriche_ottime += int(sv >= 0)
         metriche_ottime += int(cpi >= 1)
-        metriche_ottime += int(eac == 12625)
+        metriche_ottime += int(eac == 12800)
         metriche_ottime += int(etc >= eac)
         metriche_ottime += int(spi >= 1)
         metriche_ottime += int(caption_figure == 100)
         metriche_ottime += int(rischi == 0)
         metriche_ottime += int((g_adr, g_pdp, g_pdq, g_ndp, g_gloss).sorted().first() >= 70)
+        metriche_ottime += int((cod_cov_backend, cod_cov_frontend, cod_cov_agente).sorted().first() == 100)
+        metriche_ottime += int(test_sup == 100)
+        metriche_ottime += int(req_obb_sodd == 100)
+        metriche_ottime += int(req_des_sodd == 100)
+        metriche_ottime += int(req_opz_sodd == 100)
+        metriche_ottime += int(tem_med_workflow <= 10)
+        metriche_ottime += int(click_funz <= 5)
+        metriche_ottime += int(browser_supp == 100)
 
         return metriche_ottime
 }
@@ -117,12 +150,18 @@
     let bilancio  = preventivo.bilancioPreventivo
     if(i<=5){
     tot_spesa_preventivata.push(12975 - tot_spesa_preventivata.sum(default: 0) - bilancio)
-    }else{
+    }else if(i <= 7){
     tot_spesa_preventivata.push(12625 - tot_spesa_preventivata.sum(default: 0) - bilancio)
+    }
+    else if(i <= 8){
+    tot_spesa_preventivata.push(12750 - tot_spesa_preventivata.sum(default: 0) - bilancio)
+    }
+    else if(i <= 9){
+    tot_spesa_preventivata.push(12800 - tot_spesa_preventivata.sum(default: 0) - bilancio)
     }
 }
 
-#let num_metriche = 12
+#let num_metriche = 20
 
 // Valori metriche
 #let ac = ()
@@ -138,6 +177,20 @@
 #let caption_figure = ()
 #let rischi = ()
 #let costo_totale_stimato = ()
+
+#let rsi = ((6, 0), (7, 0), (8, 0), (9, 0))
+
+#let code_coverage_backend = ((7, 0), (8, 96), (9, 96))
+#let code_coverage_frontend = ((7, 0), (8, 61)) //da inserire valore sprint 9
+#let code_coverage_agente = ((7, 0), (8, 76), (9, 76))
+#let test_superati = ((7, 100), (8, 100), (9, 100))
+#let requisiti_obbligatori_soddisfatti = ((7, 10), (8, 71), (9, 100))
+#let requisiti_desiderabili_soddisfatti = ((7, 0), (8, 67), (9, 100))
+#let requisiti_opzionali_soddisfatti = ((7, 0), (8, 0), (9, 0))
+#let tempo_medio_workflow = ((8, 15), (9, 14))
+#let click_funzionalita = ((8, 4), (9, 6))
+#let browser_supportati = ((8, 100), (9, 100))
+
 #let metriche_accettabili = ()
 #let metriche_ottime = ()
 
@@ -154,8 +207,10 @@
     costo_totale_stimato.push(12975)
     } else if(i<=7){
     costo_totale_stimato.push(12625)
-    } else {
+    } else if(i<=8) {
     costo_totale_stimato.push(12750)    
+    } else if(i<=9) {
+    costo_totale_stimato.push(12800)    
     }
 
     ac.push((i, tot_spesa.slice(0,i).sum()))
@@ -178,19 +233,46 @@
         rischi.push((i, 0))
     }
 
+    let cod_cov_backend = 0
+    let cod_cov_frontend = 0
+    let cod_cov_agente = 0
+    let test_sup = 0
+    let req_obb_sodd = 0
+    let req_des_sodd = 0
+    let req_opz_sodd = 0
+    if i >= 7 {
+        cod_cov_backend = code_coverage_backend.at(i - 7).at(1)
+        cod_cov_frontend = code_coverage_frontend.at(i - 7).at(1)
+        cod_cov_agente = code_coverage_agente.at(i - 7).at(1)
+        test_sup = test_superati.at(i - 7).at(1)
+        req_obb_sodd = requisiti_obbligatori_soddisfatti.at(i - 7).at(1)
+        req_des_sodd = requisiti_desiderabili_soddisfatti.at(i - 7).at(1)
+        req_opz_sodd = requisiti_opzionali_soddisfatti.at(i - 7).at(1)
+    }
+
+    let tem_med_workflow = 0
+    let click_funz = 0
+    let browser_supp = 0
+    if i >= 8 {
+        tem_med_workflow = tempo_medio_workflow.at(i - 8).at(1)
+        click_funz = click_funzionalita.at(i - 8).at(1)
+        browser_supp = browser_supportati.at(i - 8).at(1)
+    }
+
+    
     metriche_accettabili.push((i,
         calcoloMetricheAccettabili(
             ev.at(i - 1).at(1), ac.at(i - 1).at(1), pv.at(i - 1).at(1), cv.at(i - 1).at(1),
             sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
             spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
-            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1))))
+            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1), cod_cov_backend, cod_cov_frontend, cod_cov_agente, test_sup, req_obb_sodd, req_des_sodd, req_opz_sodd, tem_med_workflow, click_funz, browser_supp)))
 
     metriche_ottime.push((i,
         calcoloMetricheOttime(
             ev.at(i - 1).at(1), ac.at(i - 1).at(1), pv.at(i - 1).at(1), cv.at(i - 1).at(1),
             sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
             spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
-            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1))))
+            g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1), cod_cov_backend, cod_cov_frontend, cod_cov_agente, test_sup, req_obb_sodd, req_des_sodd, req_opz_sodd, tem_med_workflow, click_funz, browser_supp)))
 }
 
 #let ac_fun(offset: 0) = ac
@@ -210,6 +292,20 @@
 #let g_gloss_fun(offset: 0) = g_gloss
 #let g_st_fun(offset: 0) = g_st
 #let rischi_fun(offset: 0) = rischi
+
+#let rsi_fun(offset: 0) = rsi
+
+#let code_coverage_backend_fun(offset: 0) = code_coverage_backend
+#let code_coverage_frontend_fun(offset: 0) = code_coverage_frontend
+#let code_coverage_agente_fun(offset: 0) = code_coverage_agente
+#let test_superati_fun(offset: 0) = test_superati
+#let requisiti_obbligatori_soddisfatti_fun(offset: 0) = requisiti_obbligatori_soddisfatti
+#let requisiti_desiderabili_soddisfatti_fun(offset: 0) = requisiti_desiderabili_soddisfatti
+#let requisiti_opzionali_soddisfatti_fun(offset: 0) = requisiti_opzionali_soddisfatti
+#let tempo_medio_workflow_fun(offset: 0) = tempo_medio_workflow
+#let click_funzionalita_fun(offset: 0) = click_funzionalita
+#let browser_supportati_fun(offset: 0) = browser_supportati
+
 #let metriche_accettabili_fun(offset:0) = metriche_accettabili
 #let metriche_ottime_fun(offset:0) = metriche_ottime
 
@@ -307,6 +403,12 @@ La SPI inizialmente supera 1, indicando che abbiamo ottenuto i risultati aspetta
 Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto ad aspettative troppo ambiziose e poco tempo disponibile con l'avvicinarsi della sessione di esami.
 
 #pagebreak()
+
+== MPROC10 (RSI)
+#linebreak()
+//da capire come fare il grafico e poi metterlo in metriche accettabili e ottimali
+
+#pagebreak()
 == MPROC11 (Indice di Gulpease)
 #linebreak()
 
@@ -357,7 +459,43 @@ Il grafico illustra:
 Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di tutti i documenti presentano una caption. Tale caption risulta utile per apprendere in modo istantaneo cosa rappresenta la tabella o la figura corrispondente. Inoltre permette di creare la lista delle figure, ovvero l'indice a loro dedicato. 
 
 #pagebreak()
+== MPROC13 (Code coverage)
+#linebreak()
 
+#lineChart(lines: (code_coverage_backend_fun, code_coverage_frontend_fun, code_coverage_agente_fun),
+    legends: ([Backend], [Frontend], [Agente]),
+    hlines: ((75, 75)),
+    x-label: "sprint",
+    y-label: [code #linebreak() coverage],
+    y-tick-step: -1,
+    caption: [Code coverage.])
+
+#linebreak()
+*PB*
+#linebreak()
+//TODO: aggiungere commento
+
+#pagebreak()
+
+== MPROC14 (Test superati)
+#linebreak()
+#let x_axis = ((7,0),)
+#let x_axis_fun(offset: 0) = x_axis
+#lineChart(lines: (test_superati_fun, x_axis_fun),
+    legends: ([Test superati],[]),
+    hlines: ((90, 90)),
+    x-label: "sprint",
+    y-label: [%],
+    y-tick-step: -1,
+    caption: [Test superati.])
+
+#linebreak()
+*PB*
+#linebreak()
+//TODO: aggiungere commento
+
+
+#pagebreak()
 == MPROC15 (Rischi non previsti)
 #linebreak()
 
@@ -393,7 +531,7 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
     hlines: (num_metriche*0.9, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
-    y-tick-step: 1,
+    y-tick-step: 2,
     caption: [Metriche accettabili.])
 
 Il grafico illustra:
@@ -418,7 +556,7 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
     hlines: (num_metriche*0.3, num_metriche),
     x-label: "sprint",
     y-label: "n. metriche",
-    y-tick-step: 1,
+    y-tick-step: 2,
     caption: [Metriche ottimali.])
 
 Il grafico illustra:
@@ -428,3 +566,80 @@ Il grafico illustra:
 *RTB*
 #linebreak()
 In questo periodo abbiamo  superato la soglia accettabile per la maggior parte degli sprint, quasi arrivando a toccare il valore ottimo (ovvero soddisfare tutte le metriche all'ottimo).
+
+
+#pagebreak()
+== MPROD1, MPROD2, MPROD3 (Requisiti soddisfatti)
+#linebreak()
+
+#lineChart(lines: (requisiti_obbligatori_soddisfatti_fun, requisiti_desiderabili_soddisfatti_fun, requisiti_opzionali_soddisfatti_fun),
+    legends: ([Obbligatori], [Desiderabili], [Opzionali]),
+    hlines: (),
+    x-label: "sprint",
+    y-label: [%],
+    y-tick-step: -1,
+    caption: [Percentuali requisiti soddisfatti.])
+
+#linebreak()
+*PB*
+#linebreak()
+//TODO: aggiungere commento
+
+#pagebreak()
+== MPROD11 (Tempo medio esecuzione di un workflow)
+#linebreak()
+#let point = ((8,0),)
+#let point_fun(offset: 0) = point
+#lineChart(lines: (tempo_medio_workflow_fun, point_fun),
+    legends: ([Tempo medio #linebreak() workflow],[]),
+    hlines: ((10,20)),
+    x-label: "sprint",
+    y-label: "secondi",
+    y-tick-step: 2,
+    caption: [Tempo medio di esecuzione di un workflow.])
+
+#linebreak()
+*PB*
+#linebreak()
+//TODO: aggiungere commento
+
+#pagebreak()
+== MPROD12 (Click per utilizzare una funzionalità)
+#linebreak()
+#let point = ((8,0),)
+#let point_fun(offset: 0) = point
+#lineChart(lines: (click_funzionalita_fun, point_fun),
+    legends: ([Numero click],[]),
+    hlines: ((5,7)),
+    x-label: "sprint",
+    y-label: "n. click",
+    y-tick-step: 2,
+    caption: [Click per utilizzare una funzionalità.])
+
+#linebreak()
+*PB*
+#linebreak()
+//TODO: aggiungere commento
+
+#pagebreak()
+
+== MPROD13 (Versioni browser supportate)
+#linebreak()
+#let point = ((8,0),)
+#let point_fun(offset: 0) = point
+#lineChart(lines: (browser_supportati_fun, point_fun),
+    legends: ([Numero click],[]),
+    hlines: ((75,75)),
+    x-label: "sprint",
+    y-label: "%",
+    y-tick-step: -1,
+    caption: [Percentuale di browser supportati.])
+
+#linebreak()
+*PB*
+#linebreak()
+//TODO: aggiungere commento
+
+
+
+
