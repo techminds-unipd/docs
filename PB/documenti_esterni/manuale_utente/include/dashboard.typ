@@ -7,7 +7,7 @@ La @dashboard mostra la pagina dashboard non appena un utente senza workflow acc
   image("../assets/dashboard.png"), caption: "Pagina dashboard."
 ) <dashboard>
 
-La dashboard offre 3 funzionalità all'utente: creazione di un workflow, visualizzazione della lista dei workflow ed eliminazione di un workflow.
+La dashboard offre tre funzionalità all'utente: creazione di un workflow, visualizzazione della lista dei workflow ed eliminazione di un workflow.
 
 *Creazione di un workflow*
 \ Per creare un workflow è sufficiente inserire il nome desiderato nel campo di input e premere il pulsante \"+\", come indicato in @add-workflow.
