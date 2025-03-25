@@ -6,7 +6,7 @@
 - Durata: 24/03/2025 - 04/04/2025
 
 ==== Pianificazione
-Durante questo sprint il gruppo ha lo scopo di terminare la codifica, i test di unità e i test di integrazione per il frontend e di implementare i test di sistema. Contemporanemente saranno aggiornati e revisionati tutti i documenti in preprarazione dell'incontro finale con l'azienda e della revisione PB.
+Durante questo sprint il gruppo ha l'obiettivo di terminare la codifica, i test di unità e i test di integrazione per il frontend e di implementare i test di sistema. Contemporaneamente saranno aggiornati e revisionati tutti i documenti in preparazione all'incontro finale con l'azienda e alla revisione PB.
 
 - Ruoli:
   - responsabile: #team.C\;
@@ -18,7 +18,7 @@ Durante questo sprint il gruppo ha lo scopo di terminare la codifica, i test di 
   - Lettera di presentazione
     - #link("https://github.com/techminds-unipd/docs/issues/523")[Issue \#523]#footnote(link("https://github.com/techminds-unipd/docs/issues/523")): Lettera di presentazione PB.
   - Piano di progetto
-    - #link("https://github.com/techminds-unipd/docs/issues/507")[Issue \#507]#footnote(link("https://github.com/techminds-unipd/docs/issues/507")): Preventivo sprint 9;
+    - #link("https://github.com/techminds-unipd/docs/issues/507")[Issue \#507]#footnote(link("https://github.com/techminds-unipd/docs/issues/507")): Preventivo sprint 9.
   - Analisi dei requisiti
     - #link("https://github.com/techminds-unipd/docs/issues/511")[Issue \#511]#footnote(link("https://github.com/techminds-unipd/docs/issues/511")): Aggiornare UC26.
   - Piano di qualifica
@@ -44,8 +44,8 @@ Durante questo sprint il gruppo ha lo scopo di terminare la codifica, i test di 
     - #link("https://github.com/techminds-unipd/docs/issues/503")[Issue \#503]#footnote(link("https://github.com/techminds-unipd/docs/issues/503")): Fix specifica;
     - #link("https://github.com/techminds-unipd/docs/issues/506")[Issue \#506]#footnote(link("https://github.com/techminds-unipd/docs/issues/506")): Inserire immagini frontend;
     - #link("https://github.com/techminds-unipd/docs/issues/508")[Issue \#508]#footnote(link("https://github.com/techminds-unipd/docs/issues/508")): Documentare architettura di deploy;
-    #link("https://github.com/techminds-unipd/docs/issues/509")[Issue \#509]#footnote(link("https://github.com/techminds-unipd/docs/issues/509")): Documentare limiti e criticità;
-    #link("https://github.com/techminds-unipd/docs/issues/510")[Issue \#510]#footnote(link("https://github.com/techminds-unipd/docs/issues/510")): Documentare design pattern e diagramma delle classi;
+    - #link("https://github.com/techminds-unipd/docs/issues/509")[Issue \#509]#footnote(link("https://github.com/techminds-unipd/docs/issues/509")): Documentare limiti e criticità;
+    - #link("https://github.com/techminds-unipd/docs/issues/510")[Issue \#510]#footnote(link("https://github.com/techminds-unipd/docs/issues/510")): Documentare design pattern e diagramma delle classi;
     - #link("https://github.com/techminds-unipd/docs/issues/454")[Issue \#454]#footnote(link("https://github.com/techminds-unipd/docs/issues/454")): Descrizione frontend Workflow;
     - #link("https://github.com/techminds-unipd/docs/issues/455")[Issue \#455]#footnote(link("https://github.com/techminds-unipd/docs/issues/455")): Descrizione frontend Services.
   - MVP
