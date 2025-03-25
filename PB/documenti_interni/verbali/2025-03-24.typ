@@ -4,14 +4,14 @@
   title: "Verbale interno del 24/03/2025",
   sommario: "Verbale che riassume la riunione del 24/03/2025.",
   autore: team.C,
-  verificatore: "",
+  verificatore: team.S,
   durata_luogo: ("9:15", "11:15", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.T, team.M, team.G, team.C, team.L),
   ordine_giorno: ("Sprint planning",),
-  riassunto: [Il gruppo si è riunito per pianificare lo sprint 9. Durante la riunione il gruppo ha individuato le attività da svolgere al fine di completare l'MVP e terminare la redazione della documentazione con lo scopo di candidarsi per la revisione PB entro i termini previsti. Inoltre il gruppo portrerà a termine le issue che non sono state completate nello scorso sprint, ovvero:
+  riassunto: [Il gruppo si è riunito per pianificare lo sprint 9. Durante la riunione il gruppo ha individuato le attività da svolgere al fine di completare l'MVP e terminare la redazione della documentazione con lo scopo di candidarsi per la revisione PB entro i termini previsti. Inoltre il gruppo porterà a termine le issue che non sono state completate nello scorso sprint, ovvero:
   - #link("https://github.com/techminds-unipd/docs/issues/454")[Issue \#454]#footnote(link("https://github.com/techminds-unipd/docs/issues/454")): Descrizione frontend Workflow;
   - #link("https://github.com/techminds-unipd/docs/issues/455")[Issue \#455]#footnote(link("https://github.com/techminds-unipd/docs/issues/455")): Descrizione frontend Services.
-  Le issue che sono state pianificate nello sprint 8, ma che sono state inserite nello sprint backlog dello sprint 9 sono invece:
+  Le issue che non rientravano nello sprint backlog dello sprint 8, sono invece state inserite nello sprint backlog dello sprint 9:
   - #link("https://github.com/techminds-unipd/mvp/issues/21")[Issue \#21]#footnote(link("https://github.com/techminds-unipd/mvp/issues/21")): Codifica frontend Workflow;
   - #link("https://github.com/techminds-unipd/mvp/issues/22")[Issue \#22]#footnote(link("https://github.com/techminds-unipd/mvp/issues/22")): Codifica frontend Services.
   Sono state infine stimate le ore che ciascun membro del gruppo prevede di svolgere.],
@@ -34,7 +34,7 @@
       [#link("https://github.com/techminds-unipd/docs/issues/522")[Issue \#522]#footnote(link("https://github.com/techminds-unipd/docs/issues/522")): Definire standard ISO/IEC 9126 in norme di progetto],
     ),
     ([Manuale utente],
-      [#link("https://github.com/techminds-unipd/docs/issues/428")[Issue \#428]#footnote(link("https://github.com/techminds-unipd/docs/issues/428")): Strttura manuale utente],
+      [#link("https://github.com/techminds-unipd/docs/issues/428")[Issue \#428]#footnote(link("https://github.com/techminds-unipd/docs/issues/428")): Struttura manuale utente],
       [#link("https://github.com/techminds-unipd/docs/issues/513")[Issue \#513]#footnote(link("https://github.com/techminds-unipd/docs/issues/513")): Documentare Home in manuale utente],
       [#link("https://github.com/techminds-unipd/docs/issues/514")[Issue \#514]#footnote(link("https://github.com/techminds-unipd/docs/issues/514")): Documentare About Us in manuale utente],
       [#link("https://github.com/techminds-unipd/docs/issues/515")[Issue \#515]#footnote(link("https://github.com/techminds-unipd/docs/issues/515")): Documentare SignIn in manuale utente],
