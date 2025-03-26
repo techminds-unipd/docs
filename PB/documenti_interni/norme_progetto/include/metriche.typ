@@ -54,7 +54,7 @@ Capacità del software di essere modificato, includendo correzioni, migliorament
 - Aderenza alla manutenibilità: verifica in che misura il software rispetta le best practice per la manutenzione e l'evoluzione nel tempo.
 
 === Portabilità
-Capacità del software di essere trasportato da un ambiente di lavoro ad un altro (ambiente che può variare dall'hardware al sistema operativo). Anche questa è considerata un "requisito non funzionale" o "requisito di qualità". I principali sottoattributi sono:
+Capacità del software di essere trasportato da un ambiente di lavoro ad un altro (ambiente che può variare dall'hardware al sistema operativo). Anche questa è considerata un "requisito non funzionale" o "requisito di qualità". I principali sotto-attributi sono:
 - Adattabilità: misura la facilità con cui il software può operare su piattaforme diverse senza richiedere interventi significativi;
 - Installabilità: riguarda la semplicità del processo di installazione in un nuovo ambiente;
 - Sostituibilità: valuta la facilità con cui il software può essere rimpiazzato o sostituito da altre soluzioni equivalenti;
