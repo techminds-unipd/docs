@@ -32,7 +32,7 @@ I suoi aspetti chiave includono:
 
 
 === Efficienza 
-Capacità di fornire appropriate prestazioni relativamente alla quantità di risorse usate dal sistema. Anch'essa è un "requisito non funzionale" o "requisito di qualità". I principali sottoattributi sono:
+Capacità di fornire appropriate prestazioni relativamente alla quantità di risorse usate dal sistema. Anch'essa è un "requisito non funzionale" o "requisito di qualità". I principali sotto-attributi sono:
 - Utilizzo delle risorse: analizza il modo in cui il software sfrutta CPU, memoria e altre risorse durante l'esecuzione;
 - Aderenza all’efficienza: verifica se il software segue le best practice per ottimizzare il codice e le risorse disponibili;
 - Comportamento rispetto al tempo: misura la rapidità di risposta del software e la sua capacità di adattarsi a variazioni di carico.
