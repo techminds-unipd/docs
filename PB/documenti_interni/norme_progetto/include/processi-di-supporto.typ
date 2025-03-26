@@ -289,7 +289,14 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 + #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono gli ultimi test eseguiti prima del possibile rilascio del prodotto.
 
 Ogni test è composto da:
-- *Codice test*, identificativo univoco del test nel formato *T[tipologia test][numero progressivo]*, dove tipologia test indica il tipo di test (_U_ per test di unità, _I_ per test di integrazione, _S_ per test di sistema, _A_ per test di accettazione). Nei test di unità e integrazione è presente un ulteriore campo [componente] che indica la componente testata (_B_ per backend, _F_ per frontend, _A_ per agente), quindi in questi casi il codice test sarà nel formato *T[tipologia test][componente][numero progressivo]*;
+- *Codice test*, identificativo univoco del test nel formato
+#align(center)[*T[tipologia test][numero progressivo]*]
+#h(3%)dove tipologia test corrisponde a:
+#list([_U_, test di unità;],[_I_, test di integrazione;],[_S_, test di sistema;],[_A_, test di accettazione.],indent: 2.5em)
+#h(3%)Nei test di unità e integrazione è presente un ulteriore campo [componente] che indica \ #h(3%)la componente testata, quindi in questi casi il codice test sarà nel formato 
+#align(center)[*T[tipologia test][componente][numero progressivo]*]
+#h(3%)dove componente corrisponde a:
+#list([_B_ per backend;],[_F_ per frontend;],[_A_ per agente.],indent: 2.5em)
 - *Descrizione*, breve descrizione del test, specifica o generale a seconda della tipologia di test descritto;
 - *Stato test*, indica lo stato attuale del test, che può essere _S_ (superato), _F_ (fallito) o _NI_ (non implementato).
 
