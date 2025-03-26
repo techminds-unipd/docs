@@ -6,11 +6,15 @@ L’architettura di Agent Flow non segue un pattern architetturale unico e prede
 
 Per ogni funzionalità offerta è stata creata una classe che ha lo scopo di comunicare con le API per recuperare i dati necessari. Le pagine contengono dei componenti personalizzati che utilizzano degli hooks custom e gli hooks di React, come  #declaration[useState] e #declaration[useEffect], per gestire lo stato in modo efficiente e aggiornare dinamicamente l’interfaccia utente. Questo approccio garantisce un’esperienza fluida e reattiva, capace di adattarsi in tempo reale alle esigenze dell’utente. Le chiamate API permettono di ottenere i dati in modo sicuro, scalabile ed efficace, mantenendo ben distinta la logica di business dall’interfaccia grafica. Inoltre, grazie agli hooks, la gestione dello stato avviene in modo dichiarativo e modulare, migliorando la leggibilità e la manutenzione del codice.
 
+Per evitare ripetizioni e verbosità elevata nei diagrammi delle classi abbiamo deciso di omettere le props grafiche passate ai componenti React e ai componenti personalizzati. 
+
 Le sezioni successive saranno quindi organizzate nel seguente modo:
+- Tipi: descrizione dei tipi specifici creati per modellare i workflow e gli utenti;
 - Componenti personalizzati: elenco dei componenti personalizzati creati per adattarsi alle scelte grafiche che il team ha individuato in fase di progettazione del mockup. All'interno di alcuni di questi componenti viene utilizzato un hook custom specifico per ognuna delle funzionalità offerte dall'applicazione;
 - Pagine: questa sezione contiene le pagine fornite dalla web app, create grazie all'utilizzo di più componenti, sia quelli personalizzati, che quelli offerti dalla libreria MUI;
 - Funzionalità: descrizione di ogni funzionalità, con relativa classe, hook ed eventualmente contesto. 
 
+=== Tipi
 A livello logico, oltre alle classi sopra citate e meglio descritte nella specifica sezione, sono stati introdotti dei tipi specifici:
 - *UserDTO*, rappresenta un utente:
   - username: string;
