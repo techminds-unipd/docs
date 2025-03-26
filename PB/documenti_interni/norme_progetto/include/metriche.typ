@@ -46,7 +46,7 @@ Capacità del prodotto software di essere capito, appreso e utilizzato dall'uten
 - Aderenza all’usabilità: valuta in che misura il software segue le migliori pratiche e linee guida in termini di esperienza utente.
 
 === Manutenibilità
-Capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti. Anche questa è un "requisito non funzionale" o "requisito di qualità". I suoi sottoattributi sono:
+Capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti. Anche questa è un "requisito non funzionale" o "requisito di qualità". I suoi sotto-attributi sono:
 - Analizzabilità: misura la facilità con cui è possibile esaminare il codice per individuare errori o miglioramenti;
 - Modificabilità: valuta quanto il software può essere aggiornato o modificato senza introdurre nuovi problemi;
 - Stabilità: assicura che le modifiche apportate non causino effetti collaterali negativi;
