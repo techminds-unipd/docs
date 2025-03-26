@@ -475,7 +475,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 *Diagrammi UML*
 
 UML definisce vari elementi grafici per rappresentare le classi e le relazioni tra di esse. I principali elementi utilizzati nei diagrammi delle classi sono:
-- Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). I metodi sono definiti con la seguente sintassi: \ nomeMetodo(parametri: tipoParametri): tipoRitorno;
+- Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). Nel caso in cui un attributo non sia sempre definito, e quindi il suo valore può essere anche _null_, la sintassi utilizzata è "attributo[0..1]". \ I metodi sono definiti con la seguente sintassi: nomeMetodo(parametri: tipoParametri): tipoRitorno;
 #figure(
     image("../assets/classe.svg", width: 32%), caption: "Esempio classe UML.",
 )
