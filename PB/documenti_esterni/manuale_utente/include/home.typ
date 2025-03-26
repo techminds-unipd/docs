@@ -19,7 +19,7 @@ Se è stato effettuato l'accesso, la Navbar mostrerà i link per la sezione \"Ab
   image("../assets/logged-navbar.png"), caption: "Navbar di un utente non loggato."
 )
 
-Facendo clic sull'icona del profilo, verrà visualizzato un menu a tendina con le opzioni per il logout e un link alla sezione \"Services\" (vedi @services).
+Facendo clic sull'icona del profilo, verrà visualizzato un menu a tendina con l'opzione per il logout e un link alla sezione \"Services\" (vedi @services).
 
 #figure(
   image("../assets/dropdown-menu-navbar.png"), caption: "Navbar con il menù a tendina."
