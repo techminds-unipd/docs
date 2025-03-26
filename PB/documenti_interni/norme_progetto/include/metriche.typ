@@ -12,7 +12,7 @@
 = Metriche di qualità <metriche>
 
 == Standard ISO/IEC 9126
-Per definire le metriche e i criteri che determinano la qualità di quanto realizzato dal gruppo durante l'implementazione dei vari processi, è stato deciso seguire lo standard ISO/IEC 9126. Questo standard definisce un modello di qualità del software in sei caratteristiche generali.
+Per definire le metriche e i criteri che determinano la qualità di quanto realizzato dal gruppo durante l'implementazione dei vari processi, è stato deciso di seguire lo standard ISO/IEC 9126. Questo standard definisce un modello di qualità del software in sei caratteristiche generali:
 
 === Funzionalità
 La funzionalità riguarda la capacità del software di offrire strumenti e servizi che rispondano ai requisiti espliciti e impliciti richiesti dagli utenti. Questa è considerata un "requisito funzionale". I suoi principali aspetti includono:
