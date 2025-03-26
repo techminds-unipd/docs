@@ -12,7 +12,7 @@ I layer che compongono l'architettura sono:
 
 === Diagramma delle classi
 #figure(
-    image("../assets/diagramma-agente.svg", width: 130%),
+    image("../assets/diagramma-agente.svg", width: 120%),
   caption: [Diagramma delle classi della componente agente.],
 )
 Le classi in azzurro rappresentano classi fornite dalla libreria LangChain.
