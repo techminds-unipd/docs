@@ -78,6 +78,4 @@ Nella query string sono presenti i seguenti parametri:
 È infine presente un singolo Button da premere nel caso in cui il redirect verso Services non sia avvenuto automaticamente.
 
 ===== Sign up
-Questa pagina si trova nel percorso \"/signup\" e contiene il form per la registrazione.
-
-La pagina contiene un unico componente personalizzato SignUpForm, che contiene il form per effettuare la registrazione.
+Questa pagina si trova nel percorso \"/signup\" e contiene un unico componente personalizzato, SignUpForm, che contiene il form per effettuare la registrazione.
