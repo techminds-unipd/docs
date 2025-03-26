@@ -88,8 +88,8 @@
 #MPROC.push(  ("MPROC" + str(MPROC.len()+1),
             [Requirements Stability Index (RSI)],
             [#glossario[Requirements Stability Index] (RSI)],
-            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino a 0, più i requisiti sono stabili; più è vicino a 1, più i requisiti sono cambiati.],
-            [$"Requirements Stability Index" &= ("NRA"+"NRM"+"NRC")/"NRI"$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali."))],
+            [Misura la stabilità dei requisiti durante il ciclo di vita. Indica quanto frequentemente cambiano i requisiti. Più RSI è vicino al 100%, più i requisiti sono stabili; più è vicino a 0, più i requisiti sono cambiati.],
+            [$"Requirements Stability Index" &= 1-(("NRA"+"NRM"+"NRC")/"NRI")*100$, dove: #list(..("NRA: numero di requisiti aggiunti;", "NRM: numero di requisiti modificati;", "NRC: numero di requisiti cancellati;"), spacing: 12pt)#box(list("NRI: numero di requisiti iniziali."))],
             [\u{2A7E}80%],
             [100%],
             "sviluppo"))
@@ -224,14 +224,7 @@
             [\u{2A7E}0%],
             [100%],
             "funzionalità"))
-
-#MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Accoppiamento tra classi],
-            [Misura della dipendenza e dell’interconnessione tra le classi all’interno di un sistema software.],
-            [$"Accoppiamento tra classi" &= "Numero di dipendenze"/"Numero di componenti"$;],
-            [\u{2A7D}9],
-            [\u{2A7D}6],
-            "manutenibilità"))
+            
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Complessità ciclomatica per metodo],
@@ -283,7 +276,7 @@
 
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Tempo medio di esecuzione di un workflow],
-            [Misura il tempo medio di esecuzione di un workflow.],
+            [Misura il tempo medio di esecuzione di un workflow, ai fini del test è preso in considerazione un workflow con due nodi e un arco con relativa descrizione dell'automazione.],
             [$"Tempo medio di esecuzione" &= 1/"N" sum_(i = 1)^N T_i$, dove: #list("N: numero di esecuzioni;", spacing: 12pt)#box(list($T_i$ + ": tempo dell'esecuzione i-esima."))],
             [\u{2A7D}20 secondi (tempo timeout)],
             [\u{2A7D}10 secondi],
