@@ -333,8 +333,8 @@ Riguardo la verifica del codice, gli strumenti utilizzati sono:
 - Vitest, per la scrittura e l'esecuzione dei test di unità e integrazione del frontend;
 - Pytest, per la scrittura e l'esecuzione dei test di unità dell'agente;
 - Cypress, per la scrittura e l'esecuzione dei test di sistema;
-- ESLint, per il controllo della correttezza sintattica del codice TypeScript;
-- Pylint, per il controllo della correttezza sintattica del codice Python;
+- ESLint, per il controllo della correttezza sintattica del codice #glossario[TypeScript]\;
+- Pylint, per il controllo della correttezza sintattica del codice #glossario[Python]\;
 - Prettier, per la formattazione automatica del codice secondo uno stile predefinito.
 
 === Validazione
