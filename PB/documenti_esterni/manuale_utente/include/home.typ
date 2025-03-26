@@ -6,7 +6,7 @@ La pagina Home ha lo scopo di dare una visione d'insieme dell'applicativo. In pa
 
 * Navbar *
 
-In tale pagina, le uniche interazioni possibili sono dettate della barra di navigazione (Navbar) presente in alto.
+In tale pagina, le uniche interazioni possibili sono dettate della barra superiore di navigazione (Navbar).
 Se si naviga il sito web senza aver effettuato l'accesso, nella Navbar saranno presenti i link per la sezione \"About Us\" (vedi @about-us), la registrazione (vedi @signup) e l'accesso (vedi @signin).
 
 #figure(
