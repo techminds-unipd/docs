@@ -1,5 +1,5 @@
 == Home
-La pagina Home ha lo scopo di dare una visione d'insieme dell'applicativo. In particolare, viene descritto cosa Agent Flow faccia, come funzioni e viene mostrato un esempio di un workflow.
+La pagina Home ha lo scopo di dare una visione d'insieme dell'applicativo. In particolare, viene descritto lo scopo di Agent Flow, come funziona e viene mostrato un esempio di un workflow.
 #figure(
   image("../assets/Home.png"), caption: "Pagina Home."
 )
