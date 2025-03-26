@@ -221,5 +221,5 @@ Il componente usa i componenti di MUI:
 - Divider, per visualizzare una linea orizzontale tra il form e il link al login.
 
 I componenti personalizzati usati sono invece:
-- CustomLink, per il link alla login;
+- CustomLink, per il link alla pagina di login;
 - SignUpContainer, per la grafica del container del form.
