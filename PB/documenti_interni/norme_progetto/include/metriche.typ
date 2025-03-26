@@ -38,7 +38,7 @@ Capacità di fornire appropriate prestazioni relativamente alla quantità di ris
 - Comportamento rispetto al tempo: misura la rapidità di risposta del software e la sua capacità di adattarsi a variazioni di carico.
 
 === Usabilità 
-- *Usabilità*: è la capacità del prodotto software di essere capito, appreso, usato e benaccetto dall'utente, quando usato sotto condizioni specificate. Rientra tra i "requisiti non funzionali" o "requisiti di qualità". I principali aspetti da considerare sono:
+Capacità del prodotto software di essere capito, appreso e utilizzato dall'utente, quando usato sotto condizioni specificate. Rientra tra i "requisiti non funzionali" o "requisiti di qualità". I principali aspetti da considerare sono:
 - Comprensibilità: indica quanto sia intuitivo per l'utente comprendere l'interfaccia e le funzionalità del software;
 - Apprendibilità: misura la facilità con cui un nuovo utente può imparare a usare il software rapidamente;
 - Operabilità: riguarda la semplicità con cui gli utenti possono eseguire operazioni in modo efficace e senza errori;
