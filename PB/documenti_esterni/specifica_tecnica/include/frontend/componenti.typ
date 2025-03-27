@@ -136,24 +136,6 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla pagina di login;
 - Un SignUpContainer, per la grafica del container del form.
 
-==== SignUpForm
-// TODO inserire immagine
-
-SignUpForm è un componente React che mostra il form per la registrazione.
-
-Il componente usa i componenti di MUI:
-- Un Card, per racchiudere tutto in una card grafica;
-- Un Typography, per mostrare il titolo e il testo \"Don't have an account?\";
-- Un Alert, per mostrare gli eventuali messaggi d'errore;
-- Un Box, per contenere gli input del form;
-- Un FormControl, un FormLabel e un TextField, per le label e gli input dello username, della password e della password di conferma;
-- Un Button, per il bottone di submit;
-- Un Divider, per visualizzare una linea orizzontale tra il form e il link al login.
-
-I componenti personalizzati usati sono invece:
-- Un CustomLink, per il link alla pagina di login;
-- Un SignUpContainer, per la grafica del container del form.
-
 ==== SignInForm
 SignInForm è un componente React che mostra il form per il login.
 
