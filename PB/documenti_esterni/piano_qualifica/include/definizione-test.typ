@@ -735,7 +735,87 @@
         [S]
     ))
 
+    // AuthContext (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti _user.username_ quando il login ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti _user.accessToken_ quando il login ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ scriva nel local storage del browser _user_ quando il login ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _AuthContext_ imposti automaticamente _user_ nel contesto se è salvato nel local storage.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti il campo _error_ di _AuthContext_ un messaggio di errore \"wrong username or password\" se il login fallisce per via delle credenziali di accesso errate.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti _user.username_ e _user.accessToken_ a stringhe vuote se il login fallisce per via delle credenziali di accesso errate.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _logoutUser(...)_ di _AuthContext_ imposti _user.username_ a null.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _logoutUser(...)_ di _AuthContext_ imposti _user.accessToken_ a null.],
+        [S]
+    ))
     
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _logoutUser(...)_ di _AuthContext_ cancelli l'elemento con chiave _user_ nel local storage del browser.],
+        [S]
+    ))
+
+    // GoogleTokenContext (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.token_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.expireDate_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ salvi _googleToken_ nel local storage.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _removeGoogleToken(...)_ di _GoogleTokenContext_ rimuova _googleToken.token_ e _googleToken.expireDate_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _removeGoogleToken(...)_ di _GoogleTokenContext_ rimuova _googleToken_ dal local storage.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _isTokenExpired(...)_ di _GoogleTokenContext_ ritorni true se il token è scaduto o non presente.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _isTokenExpired(...)_ di _GoogleTokenContext_ ritorni false se il token non è scaduto.],
+        [S]
+    ))
 
     return unitàBackend + unitàAgente + unitàFrontend
 }
