@@ -883,7 +883,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che un componente non avvolto in un _GoogleTokenProvider_ e invoca _useGoogleToken_ lanci Error.],
+        [Verificare che un componente non avvolto in un _GoogleTokenProvider_ che invoca _useGoogleToken_ lanci un Error.],
         [S]
     ))
 
