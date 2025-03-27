@@ -46,12 +46,18 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
 //INSERIRE DIAGRAMMA DELLE CLASSI PER I TIPI
 
 === Componenti personalizzati
+Sono stati definiti dei componenti React custom per le seguenti ragioni:
+- Riutilizzarli in più parti dell'applicazione;
+- Maggiore leggibilità e organizzazione del codice;
+- Astrazione della logica di business e UI, incapsulando funzionalità complesse in componenti riutilizzabili.
+In alcuni componenti sono citati degli hook personalizzati che si occupano di fornire una certa funzionalità, meglio approfonditi nella @hook.
+
 #include("componenti.typ")
 
 === Pagine
 #include("pagine.typ")
 
-=== Funzionalità
+=== Funzionalità <hook>
 #include ("registerUser.typ")
 #include("LoginUser_frontend.typ")
 #include("create_workflow_frontend.typ")
