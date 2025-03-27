@@ -954,7 +954,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ lancia un Error se la chiamata API ritorna un codice HTTP diverso da 200.],
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ lanci un Error se la chiamata API ritorna un codice HTTP diverso da 200.],
         [S]
     ))
 
