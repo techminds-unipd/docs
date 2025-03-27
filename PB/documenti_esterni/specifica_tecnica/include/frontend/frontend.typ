@@ -58,7 +58,6 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
 #include("delete_workflow_frontend.typ")
 #include("workflow_name_list_frontend.typ")
 #include("google_token.typ")
-#include("registerUser.typ")
 
 === Design pattern utilizzati
 Questa sezione illustra i design pattern adottati nell’applicazione basata su React, con l’obiettivo di modularizzare le componenti e adattarle alle specifiche esigenze di sviluppo e integrazione. In particolare, sono stati implementati:
