@@ -1,5 +1,5 @@
 #import "funzioni_ausiliarie.typ": declaration
-===== LoginUser
+==== LoginUser
 L'autenticazione è realizzata da tre unità:
 - LoginService, che interagisce con il backend per richiedere il login;
 - AuthContext e AuthProvider, che rendono disponibili le informazioni e le funzioni per l'autenticazione all'interno della web app;
