@@ -943,7 +943,7 @@
 
     // useSaveWorkflow (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che l'hook _useSaveWorkflow_ riesce a salvare un workflow.],
+        [Verificare che l'hook _useSaveWorkflow_ riesca a salvare un workflow.],
         [S]
     ))
 
