@@ -21,6 +21,6 @@ Lo scopo di questo documento è fornire all'utente finale delle istruzioni chiar
 - Regolamento #glossario[progetto] didattico, in particolare la slide intitolata "Obblighi documentali": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 17/03/2025\]. 
 
 === Riferimenti informativi 
-- #glossario[Specifica tecnica]: https://techminds-unipd.github.io/docs/PB/documenti_esterni/specifica_tecnica/specifica-tecnica.pdf \[Versione 0.17.0\]. 
+- #glossario[Specifica tecnica]: https://techminds-unipd.github.io/docs/PB/documenti_esterni/specifica_tecnica/specifica-tecnica.pdf \[versione 0.17.0\]. 
 
 #set par(justify: true)

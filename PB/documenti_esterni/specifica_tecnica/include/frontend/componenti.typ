@@ -118,21 +118,58 @@ I componenti che utilizzano CustomNode sono:
 - CalendarNode;
 - GmailNode.
 
+==== SignUpForm
+// TODO inserire immagine
+
+SignUpForm è un componente React che mostra il form per la registrazione.
+
+Il componente usa i componenti di MUI:
+- Un Card, per racchiudere tutto in una card grafica;
+- Un Typography, per mostrare il titolo e il testo \"Don't have an account?\";
+- Un Alert, per mostrare gli eventuali messaggi d'errore;
+- Un Box, per contenere gli input del form;
+- Un FormControl, un FormLabel e un TextField, per le label e gli input dello username, della password e della password di conferma;
+- Un Button, per il bottone di submit;
+- Un Divider, per visualizzare una linea orizzontale tra il form e il link al login.
+
+I componenti personalizzati usati sono invece:
+- Un CustomLink, per il link alla pagina di login;
+- Un SignUpContainer, per la grafica del container del form.
+
+==== SignUpForm
+// TODO inserire immagine
+
+SignUpForm è un componente React che mostra il form per la registrazione.
+
+Il componente usa i componenti di MUI:
+- Un Card, per racchiudere tutto in una card grafica;
+- Un Typography, per mostrare il titolo e il testo \"Don't have an account?\";
+- Un Alert, per mostrare gli eventuali messaggi d'errore;
+- Un Box, per contenere gli input del form;
+- Un FormControl, un FormLabel e un TextField, per le label e gli input dello username, della password e della password di conferma;
+- Un Button, per il bottone di submit;
+- Un Divider, per visualizzare una linea orizzontale tra il form e il link al login.
+
+I componenti personalizzati usati sono invece:
+- Un CustomLink, per il link alla pagina di login;
+- Un SignUpContainer, per la grafica del container del form.
+
 ==== SignInForm
 SignInForm è un componente React che mostra il form per il login.
 
 Il componente usa i componenti di MUI:
-- Card, per racchiudere tutto in una card grafica;
-- Typography, per mostrare il titolo e il testo \"Don't have an account?\";
-- Alert, per mostrare gli eventuali messaggi d'errore;
-- Box, per contenere gli input del form;
-- FormControl, FormLabel e TextField, per le label e gli input dello username e della password;
-- Button, per il bottone di submit;
-- Divider, per visualizzare una linea orizzontale tra il form e il link alla registrazione.
+- Un Card, per racchiudere tutto in una card grafica;
+- Un Typography, per mostrare il titolo e il testo \"Don't have an account?\";
+- Un Alert, per mostrare gli eventuali messaggi d'errore;
+- Un Snackbar e MuiAlert per mostrare il messaggio di successo, dopo il reindirizzamento a seguito di una registrazione avvenuta correttamente;
+- Un Box, per contenere gli input del form;
+- Un FormControl, FormLabel e TextField, per le label e gli input dello username e della password;
+- Un Button, per il bottone di submit;
+- Un Divider, per visualizzare una linea orizzontale tra il form e il link alla registrazione.
 
 I componenti personalizzati usati sono invece:
-- CustomLink, per il link alla registrazione;
-- SignInContainer, per la grafica del container del form.
+- Un CustomLink, per il link alla registrazione;
+- Un SignInContainer, per la grafica del container del form.
 
 ==== AddWorkflow
 // TODO inserire immagine
@@ -204,3 +241,4 @@ Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dash
 AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:
 - SignIn;
 - SignUp.
+

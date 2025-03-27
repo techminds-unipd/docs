@@ -1284,27 +1284,41 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
     label-size: 8pt,
     node-inset: 12pt,
     node-shape: ellipse,
-    node((0,0.25), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
+    node((0,0.5), [#image("../assets/actor.jpg") Utente autenticato], stroke: 0pt, name: <user>),
     edge(<user>, <a>),
 
-    node((2,0), align(center)[
+    node((1.7,0), align(center)[
             @salvataggio-workflow Salvataggio workflow
     ], name: <a>),
 
-    node((1.999,1), align(center)[
+    node((1.25,1.2), align(center)[
+            @vis-errore-struttura-workflow Vis. errore \ struttura workflow
+    ],  name: <vis-errore-struttura-workflow>),
+
+    edge(<vis-errore-struttura-workflow>, <a>, "--straight", [\<\<extend\>\>]),
+
+    node((0.9,0.75), align(center)[
+            Il workflow non è valido
+    ], shape: uc_comment, name: <post-it>),
+
+    node((2.2,1.2), align(center)[
             @vis-errore-operazione-workflow Visualizzazione errore \ operazione workflow
     ], name: <b>),
     edge(<b>, <a>, "--straight", [\<\<extend\>\>]),
 
-    node((2.7,0.6), align(center)[
+    node((1.389,0.75), align(center)[
+    ], name: <f>, width: 1pt, height: 1pt),
+    edge(<post-it>, <f>, "--"),
+
+    node((2.7,0.75), align(center)[
             Errore operazione workflow
     ], shape: uc_comment, name: <c>),
 
-    node((2,0.6), align(center)[
+    node((2.01,0.75), align(center)[
     ], name: <d>, width: 1pt, height: 1pt),
     edge(<c>, <d>, "--"),
 
-    node(enclose: (<a>,<b>, <c>, <d>),
+    node(enclose: (<a>,<b>, <c>, <d>, <vis-errore-struttura-workflow>, <post-it>),
         align(top + right)[Sistema],
         width: 150pt,
         height: 150pt,
@@ -1321,13 +1335,15 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
  - Utente autenticato:
    1. seleziona l'opzione per salvare il workflow che ha creato.
  - Sistema:
-   1. interagisce con il database per salvare il workflow dell'utente.
+   1. controlla che il workflow sia valido;
+   2. interagisce con il database per salvare il workflow dell'utente.
 - *Pre-condizioni*:
     - L'utente ha disegnato un workflow.
 - *Post-condizioni*:
    - Il workflow dell'utente viene salvato.
 - *Estensioni*:
-   - Visualizzazione errore operazione workflow (@vis-errore-operazione-workflow).
+   - Visualizzazione errore operazione workflow (@vis-errore-operazione-workflow);
+   - Visualizzazione errore struttura workflow (@vis-errore-struttura-workflow).
 
 === Visualizzazione errore operazione workflow <vis-errore-operazione-workflow>
 - *Descrizione*:
@@ -1490,20 +1506,20 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
 
 === Visualizzazione errore struttura workflow <vis-errore-struttura-workflow>
 - *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione dell'errore causato dall'avvio dell'esecuzione di un workflow non valido.
+  - Questo caso d'uso descrive la visualizzazione dell'errore causato da un workflow non valido.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
   - Utente autenticato:
-    1. ha avviato l'esecuzione del workflow.
+    1. ha avviato un'operazione su un workflow.
   - Sistema:
     1. rileva che almeno un requisito nella struttura del workflow non è stato soddisfatto;
     2. mostra un messaggio d'errore all'utente;
-    3. termina l'esecuzione.
+    3. termina l'operazione.
 - *Pre-condizioni*:
   - L'utente ha creato un workflow senza rispettare i vincoli.
 - *Post-condizioni*:
-  - L'esecuzione termina e viene mostrato un messaggio d'errore all'utente.
+  - L'operazione termina e viene mostrato un messaggio d'errore all'utente.
 
 === Visualizzazione errore runtime <vis-errore-runtime>
 - *Descrizione*:

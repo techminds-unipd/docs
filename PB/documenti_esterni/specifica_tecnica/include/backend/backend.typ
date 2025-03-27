@@ -59,6 +59,10 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - regreshToken: string;
   - expireDate: Date.
 
+- *ExecuteWorkflowDTO*, rappresenta l'oggetto contenente il _TokenDTO_ e il _WorkflowDTO_ da eseguire:
+  - googleToken: TokenDTO;
+  - workflow: WorkflowDTO.
+
 - *WorkflowDTOValidator*, rappresenta la classe che si occupa della validazione della struttura di un _WorkflowDTO_:
   - #declaration("+ validate(workflow: WorkflowDTO)"), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con http status 412 nel caso in cui il workflow sia invalido.
 
@@ -72,12 +76,15 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
 - *JWT*, alias di tipo per il token JWT:
   - accessToken: string.
 
+- *RedirectUrlDTO*, alias di tipo per l'url di reindirizzamento:
+  - url: string.
+
 ==== Business logic
 
 - *User*, rappresenta un utente:
   - username: string;
   - password: string;
-  - hashPassword(): User, metodo che ritorna l'utente con la password sotto forma di hash.
+  - #declaration("+ hashPassword(): User"), metodo che ritorna l'utente con la password sotto forma di hash.
 
 - *Workflow*, rappresenta un workflow con i nodi ordinati per ordine di esecuzione:
   - name: string;
@@ -101,6 +108,26 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - token: string;
   - refreshToken: string;
   - expireDate: Date.
+
+- *ExecuteWorkflowCommand*, rappresenta la richiesta di esecuzione di un workflow:
+  - googleToken: Token;
+  - workflow: Workflow.
+
+- *DeleteWorkflowCommand*, rappresenta la richiesta di eliminazione di un workflow:
+  - workflowName: string;
+  - username: string.
+
+- *SaveWorkflowCommand*, rappresenta la richiesta di salvataggio di un workflow:
+  - workflow: Workflow;
+  - username: string.
+
+- *GetWorkflowCommand*, rappresenta la richiesta di recupero di un workflow:
+  - workflowName: string;
+  - username: string.
+
+- *CreateWorkflowCommand*, rappresenta la richiesta di creazione di un workflow:
+  - workflowName: string;
+  - username: string.
 
 - *BusinessError*, classe astratta da cui derivano tutti gli errori di business:
   - name: string;
@@ -136,11 +163,28 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - accesstoken: string;
   - expireDate: Date.
 
+- *ExecuteNode*, rappresenta un nodo da eseguire:
+  - action: string;
+  - type: string.
+
+- *TokenFile*, rappresenta l'oggetto contenente il token di autenticazione di Google e altri dati dei servizi Google utilizzati:
+  - token: string;
+  - refreshToken: string;
+  - tokenUri: string;
+  - clientId: string;
+  - clientSecret: string;
+  - scopes: string[];
+  - universeDomain: string;
+  - account: string.
+
+- *ExecuteData*, rappresenta l'oggetto contenente i dati necessari all'agente per eseguire un workflow:
+  - workflowNodes: ExecuteNode[];
+  - googleTokenFile: TokenFile.
+
 === Funzionalità
 #include("register_user.typ")
 #include("login_user.typ")
 #include("create_workflow.typ")
-#include("workflow_name_list.typ")
 #include("delete_workflow.typ")
 #include("workflow_name_list.typ")
 #include("get_workflow.typ")
