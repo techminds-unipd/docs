@@ -647,7 +647,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio \"Generic error\" quando la richiesta HTTP fallisce.],
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un Error con il messaggio \"Generic error\" quando la richiesta HTTP fallisce.],
         [S]
     ))
 
