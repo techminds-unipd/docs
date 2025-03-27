@@ -1,6 +1,6 @@
 #import "funzioni_ausiliarie.typ": *
 
-==== RegisterUser
+==== RegisterUser <register-user>
 #figure(
     image("../../assets/backend/register_user.svg"),
     caption: [Diagramma delle classi riguardante la funzionalità RegisterUser del backend.],

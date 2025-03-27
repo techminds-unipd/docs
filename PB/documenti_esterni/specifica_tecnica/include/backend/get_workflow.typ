@@ -31,7 +31,7 @@
     - Note:
         - GetWorkflowCommand è un oggetto che contiene lo _username_ e il _workflowName_.
 
-#get_user_port_interfaccia
+#get_workflow_port_interfaccia
 
 - *WorkflowPortAdapter*
     - Proprietà:
