@@ -658,7 +658,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Workflow with the same name already exists\" creato quando la chiamata HTTP ritorna un codice 400.],
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Workflow with the same name already exists\" quando la chiamata HTTP ritorna un codice 400.],
         [S]
     ))
 
