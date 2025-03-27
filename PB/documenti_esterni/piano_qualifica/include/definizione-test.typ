@@ -663,7 +663,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Server error\" creato quando la chiamata HTTP ritorna un codice 500.],
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Server error\" quando la chiamata HTTP ritorna un codice 500.],
         [S]
     ))
 
