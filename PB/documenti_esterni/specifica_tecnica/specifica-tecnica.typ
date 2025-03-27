@@ -4,7 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
-    "0.30.0", "27/03/2025", "Documentati introduzione e designa pattern frontend", team.C, "",
+    "0.30.0", "27/03/2025", "Documentati introduzione e designa pattern frontend", team.C, team.T,
     "0.29.0", "27/03/2025", "Aggiunte classi dati e fix errori backend", team.S, team.G,
     "0.28.0", "26/03/2025", "Aggiunta descrizione componente SignUpForm, pagina SignUp e funzionalità RegisterUser", team.A, team.C,
     "0.27.0", "25/03/2025", "Aggiunta sezione Limiti e criticità della soluzione individuata", team.M, team.S,
