@@ -721,7 +721,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni uno Error con messaggio "Username already exists" se la chiamata HTTP ritorna un codice 400.],
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni un Error con messaggio "Username already exists" se la chiamata HTTP ritorna un codice 400.],
         [S]
     ))
 
