@@ -798,7 +798,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che _removeGoogleToken(...)_ di _GoogleTokenContext_ rimuova _googleToken.token_ e _googleToken.expireDate_.],
+        [Verificare che _removeGoogleToken(...)_ di _GoogleTokenContext_ rimuova _googleToken.token_, _googleToken.expireDate_ e _.googleToken.refreshToken_],
         [S]
     ))
 
