@@ -18,7 +18,7 @@ Durante l'elaborazione, il servizio gestisce vari scenari di risposta:
 
 *useDeleteWorkflow*
 
-#declaration("useDeleteWorkflow(deleteWorkflowService: DeleteWorkflowService): IUseDeleteWorkflow") è un hook React personalizzato che permette di eliminare un workflow utilizzando la classe DeleteWorkflowService, gestendo automaticamente lo stato del caricamento e gli eventuali errori. L'hook restituisce una IUseDeleteWorkflow, ovvero un'itnerfaccia che contiene la funzione #declaration("deleteWorkflow(name:string): Promise<DeleteWorkflowResponse | undefined>") per invocare l'eliminazione di un workflow e i parametri isLoading e error per la gestione della UI.
+#declaration("useDeleteWorkflow(deleteWorkflowService: DeleteWorkflowService): IUseDeleteWorkflow") è un hook React personalizzato che permette di eliminare un workflow utilizzando la classe DeleteWorkflowService, gestendo automaticamente lo stato del caricamento e gli eventuali errori. L'hook restituisce una IUseDeleteWorkflow, ovvero un'interfaccia che contiene la funzione #declaration("deleteWorkflow(name:string): Promise<DeleteWorkflowResponse | undefined>") per invocare l'eliminazione di un workflow e i parametri isLoading e error per la gestione della UI.
 
 L'hook utilizza due variabili di stato:
 - isLoading, che indica se l'operazione è in corso;

@@ -22,4 +22,4 @@ Durante l'elaborazione, il servizio gestisce diversi scenari:
 All’interno dell’hook vengono utilizzate due variabili di stato:
 - isLoading, che indica se l’operazione è in corso;
 - error, che memorizza eventuali messaggi di errore.
-L'hook recupera anche le informazioni dell’utente tramite #declaration("useAuth()"), assicurandosi che la richiesta venga inviata solo se l’utente è autenticato. In questo caso invoca poi il metodo #declaration("newWorkflow(name, accessToken)") che, in caso di successo, restituisce i dati al chiamante; altrimenti aggiorna lo stato d'errore con il messaggio di errore corrispondente.
+L'hook recupera anche le informazioni dell’utente tramite #declaration("useAuth()"), assicurandosi che la richiesta venga inviata solo se l’utente è autenticato. In questo caso invoca il metodo #declaration("newWorkflow(name, accessToken)") che, in caso di successo, restituisce i dati al chiamante; altrimenti aggiorna lo stato d'errore con il messaggio di errore corrispondente.

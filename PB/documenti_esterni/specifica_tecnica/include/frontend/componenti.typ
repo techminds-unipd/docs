@@ -156,7 +156,7 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla registrazione;
 - Un SignInContainer, per la grafica del container del form.
 
-SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): Promise<void>") fornita dal custom hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la passoword, il componente SignInForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login").
+SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): Promise<void>") fornita dal custom hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la password, il componente SignInForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login").
 
 ==== AddWorkflow
 // TODO inserire immagine
@@ -181,8 +181,8 @@ Il componente WorkflowItem è un componente React personalizzato che rappresenta
 Il componente accetta varie prop:
 - name: il nome del workflow da visualizzare;
 - setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo l'eliminazione di un elemento;
-- setSnackBarSetMessage: funzione per settare il messaggio per il componente Snackbar;
-- setAlertColor: funzione per settare il colore del componente Snackbar;
+- setSnackBarSetMessage: funzione per impostare il messaggio per il componente Snackbar;
+- setAlertColor: funzione per impostare il colore del componente Snackbar;
 - setOpenSnackBar: funzione per rendere visibile il componente Snackbar.
 
 Grazie all’hook personalizzato #declaration("useDeleteWorkflow(deleteWorkflowService: DeleteWorkflowService): IUseDeleteWorkflow"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un CustomLink, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.

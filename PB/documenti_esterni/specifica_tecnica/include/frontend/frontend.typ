@@ -47,9 +47,9 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
 
 === Componenti personalizzati
 Sono stati definiti dei componenti React custom per le seguenti ragioni:
-- Riutilizzarli in più parti dell'applicazione;
-- Maggiore leggibilità e organizzazione del codice;
-- Astrazione della logica di business e UI, incapsulando funzionalità complesse in componenti riutilizzabili.
+- Possibilità di riutilizzarli in più parti dell'applicazione;
+- Migliore leggibilità e organizzazione del codice;
+- Separazione delle responsabilità: i componenti React si occupano della UI, mentre la logica di business e le chiamate API sono delegate a hook personalizzati e classi dedicate.
 In alcuni componenti sono citati degli hook personalizzati che si occupano di fornire una certa funzionalità, meglio approfonditi nella @hook.
 
 #include("componenti.typ")
