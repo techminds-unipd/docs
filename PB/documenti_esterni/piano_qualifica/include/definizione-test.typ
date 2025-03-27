@@ -907,6 +907,24 @@
         [Verificare che l'hook _useRegisterTest_ gestisca un errore generico.],
         [S]
     ))
+
+    //ExecuteWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _executeWorkflow(...)_ della classe _ExecuteWorkflowService_ ritorni il risultato dell'esecuzione del workflow da parte dell'agente.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _executeWorkflow(...)_ della classe _ExecuteWorkflowService_ lanci un Error con messaggio "Generic error" se la richiesta HTTP riceve un codice diverso da 200.],
+        [S]
+    ))
+
+    // useExecuteWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useExecuteWorkflow_ sia in grado di eseguire un workflow e comunicare la risposta.],
+        [S]
+    ))
+
     return unitàBackend + unitàAgente + unitàFrontend
 }
 
