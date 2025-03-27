@@ -1,6 +1,6 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
-===== WorkflowNameList
+==== WorkflowNameList
 // TODO inserire immagine
 
 *AllWorkflowsService*

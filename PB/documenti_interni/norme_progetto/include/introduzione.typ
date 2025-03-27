@@ -21,10 +21,11 @@ Il documento è organizzato secondo tali processi, ognuno dei quali presenta del
 
 === Riferimenti normativi
 - #glossario[Capitolato] C3, tutte le slides: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf \[visitato il: 10/02/2025\];
-- ISO/IEC 12207:1995: https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf \[visitato il: 10/02/2025\];
-- Regolamento progetto didattico, in particolare le slide "Avvio delle attività", "Revisioni di avanzamento" e "Obblighi documentali" : https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 10/02/2025\];
+- ISO/IEC 12207:1995: https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf \[visitato il: 23/03/2025\];
+- Regolamento progetto didattico, in particolare le slide "Avvio delle attività", "Revisioni di avanzamento" e "Obblighi documentali" : https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 20/03/2025\];
 - #glossario[Casi d'uso], in particolare le sezioni "Specifica Use Case" e "Diagrammi dei Casi d'Uso": https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf \[visitato il: 10/02/2025\];
-- Diagrammi delle classi: https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf \[visitato il: 10/03/2025\].
+- Diagrammi delle classi: https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf \[visitato il: 10/03/2025\];
+- ISO/IEC 9126: https://it.wikipedia.org/wiki/ISO/IEC_9126 \[visitato il: 25/03/2025\].
 
 
 === Riferimenti informativi

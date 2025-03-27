@@ -1,7 +1,7 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 
-===== DeleteWorkflow
+==== DeleteWorkflow
 // TODO inserire le immagini
 
 *DeleteWorkflowService*
