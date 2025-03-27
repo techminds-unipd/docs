@@ -817,6 +817,96 @@
         [S]
     ))
 
+    // useAllWorkflows (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useAllWorkflows_ sia in grado di ottenere tutti i workflow se l'utente è autenticato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useAllWorkflows_ sia in grado gestire gli errori in caso di fallimento della chiamata API.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useAllWorkflows_ lanci un Error se viene utilizzato fuori da un _AuthProvider_.],
+        [S]
+    ))
+
+    // useAuth (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente avvolto in un _AuthProvider_ che invoca _useAuth_ riesca ad accedere al contesto.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente che invoca _useAuth_ non avvolto in un _AuthProvider_ lanci un Error.],
+        [S]
+    ))
+
+    // useCreateWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useCreateWorkflow_ riesca a creare un workflow quando l'utente è autenticato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useCreateWorkflow_ riesca a gestire gli errori in caso di fallimento della chiamata API.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useCreateWorkflow_ lanci un errore quando il componente che lo invoca non è avvolto in un _AuthProvider_.],
+        [S]
+    ))
+
+    // useDeleteWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useDeleteWorkflow_ riesca a cancellare un workflow quando l'utente è autenticato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useDeleteWorkflow_ riesca a gestire gli errori in caso di fallimento della chiamata API.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useDeleteWorkflow_ lanci un errore quando il componente che lo invoca non è avvolto in un _AuthProvider_.],
+        [S]
+    ))
+
+    // useGoogleToken
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente avvolto in un _GoogleTokenProvider_ e invoca _useGoogleToken_ riesca ad accedere al contesto.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente non avvolto in un _GoogleTokenProvider_ e invoca _useGoogleToken_ lanci Error.],
+        [S]
+    ))
+
+    // useRegisterTest
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ riesca a registrare un utente con successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ gestisca l'errore di username già esistente.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ gestisca un errore del server.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ gestisca un errore generico.],
+        [S]
+    ))
     return unitàBackend + unitàAgente + unitàFrontend
 }
 
