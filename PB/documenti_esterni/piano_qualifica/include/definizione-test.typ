@@ -637,7 +637,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio "Something wrong" quando la richiesta HTTP ritorna un codice 400.],
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio \"User not found\" quando la richiesta HTTP ritorna un codice 400.],
         [S]
     ))
 
@@ -668,7 +668,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Generic error\" creato quando la chiamata HTTP fallisce.],
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Generic error\" quando la chiamata HTTP fallisce.],
         [S]
     ))
 
@@ -789,6 +789,11 @@
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
         [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.expireDate_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.refreshToken_.],
         [S]
     ))
 
