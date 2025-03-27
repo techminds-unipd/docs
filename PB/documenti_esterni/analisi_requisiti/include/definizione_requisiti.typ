@@ -267,7 +267,7 @@
 
     FR.push(("FMR" + str(FMR),
         [L'utente autenticato visualizza un messaggio di avviso che informa del fallimento nel salvataggio del workflow.],
-        [@salvataggio-workflow, @vis-errore-operazione-workflow],
+        [@salvataggio-workflow, @vis-errore-operazione-workflow, @vis-errore-struttura-workflow],
     ))
     FMR+=1
 
