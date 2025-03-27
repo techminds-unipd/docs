@@ -10,7 +10,6 @@ Sulla sinistra è presente la lista dei blocchi disponibili e, se presenti, i bl
 Per avere più informazioni su un blocco, basterà cliccarci sopra e verrà visualizzata una descrizione dettagliata.
 
 
-
 Per aggiungere un blocco al workflow basterà cliccarci sopra e trascinarlo nella sezione centrale (Canvas).
 
 Esistono due tipologie di blocchi:
@@ -40,8 +39,11 @@ Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul puls
 Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visualizzato un messaggio di errore.
 I possibili messaggi d'errore sono: -----TODO-----
 #figure(
-  image("../assets/insufficient-nodes.png"), caption: "Errore nodi insufficienti Workflow."
+  image("../assets/insufficient-nodes.png"), caption: "Errore nodi insufficienti."
 )
 #figure(
-  image("../assets/insufficient-edges.png"), caption: "Pagina Workflow."
+  image("../assets/insufficient-edges.png"), caption: "Errore archi insufficienti."
+)
+#figure(
+  image("../assets/not-connected-account.png"), caption: "Errore account Google non collegato." 
 )
