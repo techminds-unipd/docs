@@ -86,6 +86,7 @@
 #let getUnità() = {
     let unitàBackend = ()
     let unitàAgente = ()
+    let unitàFrontend = ()
     // RegisterUserController
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
         [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ ritorni un DTO con l'utente registrato.],
@@ -629,8 +630,114 @@
         [S],
     ))
 
+    // AllWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ effettui la corretta chiamata HTTP e ritorni la lista dei workflow.],
+        [S]
+    ))
 
-    return unitàBackend + unitàAgente
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio "Something wrong" quando la richiesta HTTP ritorna un codice 400.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio \"Server error\" quando la richiesta HTTP ritorna un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio \"Generic error\" quando la richiesta HTTP fallisce.],
+        [S]
+    ))
+
+    // CreateWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni il workflow creato quando la chiamata HTTP ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Workflow with the same name already exists\" creato quando la chiamata HTTP ritorna un codice 400.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Server error\" creato quando la chiamata HTTP ritorna un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Generic error\" creato quando la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // DeleteWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni il workflow cancellato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP riceve un codice 404.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni un Error con messaggio \"Server error\" se la chiamata HTTP riceve un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // LoginService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un access token se la chiamata HTTP riceve un codice 201.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un Error con messaggio \"wrong username or password\" se la chiamata HTTP riceve un codice 401.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un Error con messaggio \"Server error\" se la chiamata HTTP riceve un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // RegisterService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni uno UserDTO se la chiamata HTTP ritorna un codice 201.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni uno Error con messaggio "Username already exists" se la chiamata HTTP ritorna un codice 400.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni un Error con messaggio \"Server error\" se la chiamata HTTP riceve un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    
+
+    return unitàBackend + unitàAgente + unitàFrontend
 }
 
 
