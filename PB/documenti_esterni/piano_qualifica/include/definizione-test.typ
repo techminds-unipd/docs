@@ -949,7 +949,7 @@
 
     // GetWorkflowService (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ ritorna il workflow richiesto dopo una chiamata API al backend.],
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ ritorni il workflow richiesto dopo una chiamata API al backend.],
         [S]
     ))
 
