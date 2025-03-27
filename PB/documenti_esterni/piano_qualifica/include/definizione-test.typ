@@ -932,7 +932,7 @@
 
     // SaveWorkflowService (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorna il workflow salvato se la richiesta ritorna un codice HTTP 200.],
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorni il workflow salvato se la richiesta ritorna un codice HTTP 200.],
         [S]
     ))
 
