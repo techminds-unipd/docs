@@ -136,23 +136,7 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla pagina di login;
 - Un SignUpContainer, per la grafica del container del form.
 
-==== SignUpForm
-// TODO inserire immagine
-
-SignUpForm è un componente React che mostra il form per la registrazione.
-
-Il componente usa i componenti di MUI:
-- Un Card, per racchiudere tutto in una card grafica;
-- Un Typography, per mostrare il titolo e il testo \"Don't have an account?\";
-- Un Alert, per mostrare gli eventuali messaggi d'errore;
-- Un Box, per contenere gli input del form;
-- Un FormControl, un FormLabel e un TextField, per le label e gli input dello username, della password e della password di conferma;
-- Un Button, per il bottone di submit;
-- Un Divider, per visualizzare una linea orizzontale tra il form e il link al login.
-
-I componenti personalizzati usati sono invece:
-- Un CustomLink, per il link alla pagina di login;
-- Un SignUpContainer, per la grafica del container del form.
+SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): Promise<{ user: UserDTO } | null>") fornita dall'hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la passoword e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser");
 
 ==== SignInForm
 SignInForm è un componente React che mostra il form per il login.
@@ -170,6 +154,8 @@ Il componente usa i componenti di MUI:
 I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla registrazione;
 - Un SignInContainer, per la grafica del container del form.
+
+SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): Promise<void>") fornita dall'hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la passoword, il componente SignUpForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login");
 
 ==== AddWorkflow
 // TODO inserire immagine
