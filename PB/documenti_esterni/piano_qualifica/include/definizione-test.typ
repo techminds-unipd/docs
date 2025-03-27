@@ -674,7 +674,7 @@
 
     // DeleteWorkflowService (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni il workflow cancellato.],
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni il nome del workflow cancellato.],
         [S]
     ))
 
