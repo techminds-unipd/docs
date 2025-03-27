@@ -17,7 +17,7 @@ Durante l'elaborazione, il servizio gestisce diversi scenari:
 
 *useCreateWorkflow*
 
-#declaration[useCreateWorkflow(createWorkflowsService: CreateWorkflowService): IUseCreateWorkflow] è un hook React personalizzato che permette di creare un workflow utilizzando CreateWorkflowService, gestendo automaticamente lo stato del caricamento e gli eventuali errori. Tale hook restituisce una IUseCreateWorkflow, ovvero un'itnerfaccia che contiene la funzione #declaration("createWorkflow(name:string): Promise<CreateWorkflowResponse | undefined>") per invocare la creazione di un nuovo workflow e i parametri isLoading e error per la gestione della UI.
+#declaration[useCreateWorkflow(createWorkflowsService: CreateWorkflowService): IUseCreateWorkflow] è un hook React personalizzato che permette di creare un workflow utilizzando CreateWorkflowService, gestendo automaticamente lo stato del caricamento e gli eventuali errori. L'hook restituisce una IUseCreateWorkflow, ovvero un'itnerfaccia che contiene la funzione #declaration("createWorkflow(name:string): Promise<CreateWorkflowResponse | undefined>") per invocare la creazione di un nuovo workflow e i parametri isLoading e error per la gestione della UI.
 
 All’interno dell’hook vengono utilizzate due variabili di stato:
 - isLoading, che indica se l’operazione è in corso;
