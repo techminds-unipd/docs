@@ -757,7 +757,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che _loginUser(...)_ di _AuthContext_ imposti il campo _error_ di _AuthContext_ un messaggio di errore \"wrong username or password\" se il login fallisce per via delle credenziali di accesso errate.],
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti il campo _error_ di _AuthContext_ con il messaggio di errore \"wrong username or password\" se il login fallisce per via delle credenziali di accesso errate.],
         [S]
     ))
 
