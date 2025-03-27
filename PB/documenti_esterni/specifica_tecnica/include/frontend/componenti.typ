@@ -14,7 +14,8 @@ Il componente CustomLink è un componente React personalizzato che gestisce la n
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
 - link: l'URL di destinazione;
-- color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color".
+- color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color";
+- fontSize: indica la dimensione del testo del link.
 Grazie all'hook #declaration("useLocation()") di React Router, il componente può ottenere il percorso corrente dell'utente. Se il valore del link corrisponde al percorso attuale, CustomLink ritorna un componente Typography, evitando di generare un link cliccabile.
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 
