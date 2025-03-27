@@ -642,7 +642,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio \"Server error\" quando la richiesta HTTP ritorna un codice 500.],
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un Error con il messaggio \"Server error\" quando la richiesta HTTP ritorna un codice 500.],
         [S]
     ))
 
