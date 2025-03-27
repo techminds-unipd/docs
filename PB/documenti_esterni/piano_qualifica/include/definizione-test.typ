@@ -930,6 +930,39 @@
         [S]
     ))
 
+    // SaveWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorna il workflow salvato se la richiesta ritorna un codice HTTP 200.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorna il workflow salvato se la richiesta ritorna un codice HTTP 200.],
+        [S]
+    ))
+
+    // useSaveWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useSaveWorkflow_ riesce a salvare un workflow.],
+        [S]
+    ))
+
+    // GetWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ ritorna il workflow richiesto dopo una chiamata API al backend.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ lancia un Error se la chiamata API ritorna un codice HTTP diverso da 200.],
+        [S]
+    ))
+
+    // useGetWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useGetWorkflow_ ritorni un workflow quando l'utente è autenticato.],
+        [S]
+    ))
     return unitàBackend + unitàAgente + unitàFrontend
 }
 
