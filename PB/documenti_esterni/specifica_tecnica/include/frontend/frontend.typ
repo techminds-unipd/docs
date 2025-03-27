@@ -7,7 +7,7 @@ L’architettura di Agent Flow non segue un pattern architetturale unico e prede
 
 Per ogni funzionalità offerta è stata creata una classe che ha lo scopo di comunicare con le API per recuperare i dati necessari. Le pagine contengono dei componenti personalizzati che utilizzano degli hooks custom e gli hooks di React, come #declaration[useState] e #declaration[useEffect], per gestire lo stato in modo efficiente e aggiornare dinamicamente l’interfaccia utente. Questo approccio garantisce un’esperienza fluida e reattiva, capace di adattarsi in tempo reale alle esigenze dell’utente. Le chiamate API permettono di ottenere i dati in modo sicuro, scalabile ed efficace, mantenendo ben distinta la logica di business dall’interfaccia grafica. Inoltre, grazie agli hooks, la gestione dello stato avviene in modo dichiarativo e modulare, migliorando la leggibilità e la manutenibilità del codice.
 
-Per evitare ripetizioni e un'elevata verbosità, nei diagrammi delle classi abbiamo deciso di omettere le props grafiche passate ai componenti React e ai componenti personalizzati.
+Per evitare ripetizioni e un'elevata verbosità, nei diagrammi delle classi abbiamo deciso di omettere le props grafiche passate ai componenti della libreria MUI e ai componenti personalizzati.
 
 Le sezioni successive sono organizzate nel seguente modo:
 - Tipi: descrizione dei tipi specifici creati per modellare i workflow e gli utenti;
