@@ -52,6 +52,7 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
 #include("pagine.typ")
 
 === Funzionalità
+#include ("registerUser.typ")
 #include("LoginUser_frontend.typ")
 #include("create_workflow_frontend.typ")
 #include("delete_workflow_frontend.typ")
