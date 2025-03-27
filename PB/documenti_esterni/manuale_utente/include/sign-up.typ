@@ -1,4 +1,4 @@
-== Sign Up
+== Sign Up <signup>
 La pagina di sign up permette all'utente di registrarsi. Per poter creare un account è necessario inserire uno username, una password e la conferma della password. Successivamente basta cliccare sul pulsante _Sign Up_ e l'utente viene automaticamente reindirizzato alla pagina di login. All'interno di quest'ultima è poi necessario seguire quanto indicato in @signin. Se l'utente possiede già un account può cliccare sul link _Sign In_ e verrà reindirizzato alla pagina di login.
 
 #figure(
