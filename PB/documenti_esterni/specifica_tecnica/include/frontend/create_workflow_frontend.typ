@@ -1,6 +1,6 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
-===== CreateWorkflow
+==== CreateWorkflow
 
 *NewWorkflowService*
 // TODO inserire immagine
