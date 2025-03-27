@@ -6,3 +6,4 @@ Di seguito viene fornita una guida suddivisa per pagine, all'interno delle quali
 #include "sign-in.typ"
 #include "dashboard.typ"
 #include "services.typ"
+#include "workflow.typ"
