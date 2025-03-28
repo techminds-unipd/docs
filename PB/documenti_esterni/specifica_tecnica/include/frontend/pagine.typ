@@ -13,10 +13,10 @@ In particolare contiene:
 Questi componenti sono stati disposti nella schermata utilizzando più componenti Grid2 di MUI annidati.
 
 ==== About us
-#figure(
+/*#figure(
     image("../../assets/frontend/AboutUs.svg", width: 65%),
   caption: [Pagina About us.],
-)
+)*/
 Questa pagina si trova nel percorso \"/aboutus\" e mostra le persone che hanno partecipato alla costruzione del sito, nonché un link alla pagina GitHub del gruppo.
 
 La pagina è composta dai seguenti componenti React:

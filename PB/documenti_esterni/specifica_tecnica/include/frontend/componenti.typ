@@ -1,6 +1,10 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 ==== Footer
+/*#figure(
+    image("../../assets/frontend/Footer.svg", width: 55%),
+  caption: [Componente Footer.],
+)*/
 In ogni pagina è presente un componente Footer che utilizza i seguenti componenti di MUI:
 - Grid2 per il layout;
 - GitHubIcon per l'icona di GitHub;
@@ -8,7 +12,10 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ==== CustomLink
-// TODO da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
+/*#figure(
+    image("../../assets/frontend/CustomLink.svg", width: 50%),
+  caption: [Componente CustomLink.],
+)*/
 Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
@@ -20,10 +27,10 @@ Grazie all'hook #declaration("useLocation()") di React Router, il componente pu�
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 
 ==== CustomButton
-#figure(
+/*#figure(
     image("../../assets/frontend/CustomButton.svg", width: 55%),
   caption: [Componente CustomButton.],
-)
+)*/
 Il componente CustomButton è un componente React personalizzato che gestisce i pulsanti di navigazione all'interno della web app. Il suo scopo è fornire un pulsante che consenta la navigazione tra le pagine.
 
 Il componente accetta tre props:
@@ -36,10 +43,10 @@ In base alla prop \"variant\", la funzione #declaration("getButtonStyles(variant
 Infine, come per CustomLink, utilizza il componente Link (rinominato RouterButton) di React Router per gestire correttamente la navigazione senza ricaricare la pagina.
 
 ==== LogoutMenuItem
-#figure(
+/*#figure(
     image("../../assets/frontend/LogoutMenuItem.svg", width: 65%),
   caption: [Componente LogoutMenuItem.],
-)
+)*/
 Il componente LogoutMenuItem è un componente React personalizzato che gestisce la procedura di logout. Utilizza MUI per l'interfaccia utente e React Router per la navigazione. Il suo scopo è mostrare un'opzione di logout in un menu, aprire un dialogo di conferma e, se confermato, eseguire la procedura di logout e reindirizzare l'utente alla homepage.
 
 Il componente accetta una prop:
@@ -50,7 +57,10 @@ Il componente utilizza l'hook #declaration("useState()") per gestire l'apertura 
 - \"Yes\", che quando cliccato esegue il logout chiamando la funzione #declaration("handleLogout()"). Quest'ultima invoca le funzioni #declaration("logoutUser()") e #declaration("removeGoogleToken()") fornite dai custom hook #declaration("useAuth()") e #declaration("useGoogleToken()") e reindirizza l'utente alla pagina principale utilizzando l'hook #declaration("useNavigate()") di React Router.
 
 ==== Navbar <navbar>
-// SECONDO ME L'IMMAGINE DEL DIAGRAMMA VA INSERITO PIù AVANTI PER CAPIRE MEGLIO COSA METTERE PER LA GESTIONE DELL'AUTENTICAZIONE
+/*#figure(
+    image("../../assets/frontend/Navbar.svg", width: 65%),
+  caption: [Componente Navbar.],
+)*/
 
 Il componente Navbar è una barra di navigazione personalizzata, realizzata con MUI e React Router. Fornisce un'interfaccia intuitiva per la navigazione tra le diverse pagine dell'applicazione, distinguendo tra utenti autenticati e non autenticati.
 
@@ -66,10 +76,9 @@ Le voci della Navbar cambiano in base allo stato di autenticazione fornito dal c
 
 ==== PersonCard
 /*#figure(
-    image("../../assets/frontend/PersonCard.svg", width: 65%),
+    image("../../assets/frontend/PersonCard.svg", width: 50%),
   caption: [Componente PersonCard.],
 )*/
-// TODO inserire immagine
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 
 Il componente accetta due props:
@@ -85,9 +94,8 @@ Il componente PersonCard è composto da:
 ==== CustomNode
 /*#figure(
     image("../../assets/frontend/CustomNode.svg", width: 65%),
-  caption: [Componente PersonCard.],
+  caption: [Componente CustomNode.],
 )*/
-// TODO inserire immagine
 
 Il componente CustomNode è un componente React personalizzato che rappresenta un servizio tra Pastebin, Calendar e Gmail. 
 Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
@@ -120,7 +128,10 @@ I componenti che utilizzano CustomNode sono:
 - GmailNode.
 
 ==== SignUpForm
-// TODO inserire immagine
+/*#figure(
+    image("../../assets/frontend/SignUpForm.svg", width: 65%),
+  caption: [Componente SignUpForm.],
+)*/
 
 SignUpForm è un componente React che mostra il form per la registrazione.
 
@@ -140,6 +151,11 @@ I componenti personalizzati usati sono invece:
 SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): Promise<{ user: UserDTO } | null>") fornita dal custom hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la passoword e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser").
 
 ==== SignInForm
+/*#figure(
+    image("../../assets/frontend/SignInForm.svg", width: 65%),
+  caption: [Componente SignInForm.],
+)*/
+\
 SignInForm è un componente React che mostra il form per il login.
 
 Il componente usa i componenti di MUI:

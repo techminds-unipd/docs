@@ -6,7 +6,10 @@ L'autenticazione è realizzata da tre unità:
 - #declaration("useAuth"), che consente di accedere al contesto fornito da AuthProvider nei componenti della web app in cui lo si vuole utilizzare.
 
 *LoginService*
-
+#figure(
+  image("../../assets/frontend/LoginService.svg", width: 40%),
+  caption: [Classe LoginService]
+)
 LoginService è una classe dotata di un unico metodo asincrono #declaration("login(user: UserDTO): Promise<LoginResponse>"). Tale metodo prende come parametro uno UserDTO, e ritorna una Promise di tipo LoginResponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede di effetturare il login all'endpoint API offerto dalla funzionalità LoginUser del backend (vedi @login-user).
 L'esecuzione prosegue in base al codice di risposta ricevuto:
 - Se le credenziali sono corrette (codice HTTP 201) la Promise viene risolta e il token ricevuto dal backend viene ritornato tramite LoginResponse; 

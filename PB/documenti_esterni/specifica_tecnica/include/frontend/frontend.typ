@@ -5,9 +5,9 @@
 === Introduzione
 L’architettura di Agent Flow non segue un pattern architetturale unico e predefinito. Invece, è stata adottata una combinazione di design pattern propri della libreria React, scelti e adattati in base alle specifiche esigenze del progetto. Questa strategia consente di mantenere separata la logica di business dalle diverse componenti, rendendo più semplice la gestione dello stato dell’applicazione.
 
-Per ogni funzionalità offerta è stata creata una classe che ha lo scopo di comunicare con le API per recuperare i dati necessari. Le pagine contengono dei componenti personalizzati che utilizzano degli hooks custom e gli hooks di React, come #declaration[useState] e #declaration[useEffect], per gestire lo stato in modo efficiente e aggiornare dinamicamente l’interfaccia utente. Questo approccio garantisce un’esperienza fluida e reattiva, capace di adattarsi in tempo reale alle esigenze dell’utente. Le chiamate API permettono di ottenere i dati in modo sicuro, scalabile ed efficace, mantenendo ben distinta la logica di business dall’interfaccia grafica. Inoltre, grazie agli hooks, la gestione dello stato avviene in modo dichiarativo e modulare, migliorando la leggibilità e la manutenibilità del codice.
+Per ogni funzionalità offerta è stata creata una classe che ha lo scopo di comunicare con le API per recuperare i dati necessari. Le pagine contengono dei componenti personalizzati che utilizzano degli hook personalizzati e gli hook di React, come #declaration[useState] e #declaration[useEffect], per gestire lo stato in modo efficiente e aggiornare dinamicamente l’interfaccia utente. Questo approccio garantisce un’esperienza fluida e reattiva, capace di adattarsi in tempo reale alle esigenze dell’utente. Le chiamate API permettono di ottenere i dati in modo sicuro, scalabile ed efficace, mantenendo ben distinta la logica di business dall’interfaccia grafica. Inoltre, grazie agli hooks, la gestione dello stato avviene in modo dichiarativo e modulare, migliorando la leggibilità e la manutenibilità del codice.
 
-Per evitare ripetizioni e un'elevata verbosità, nei diagrammi delle classi abbiamo deciso di omettere le props grafiche passate ai componenti della libreria MUI e ai componenti personalizzati.
+Sono stati fatti i diagrammi UML delle classi Typescript e dei DTO, mentre per i componenti React viene fornita la descrizione testuale.
 
 Le sezioni successive sono organizzate nel seguente modo:
 - Tipi: descrizione dei tipi specifici creati per modellare i workflow e gli utenti;
@@ -17,6 +17,7 @@ Le sezioni successive sono organizzate nel seguente modo:
 
 === Tipi
 A livello logico, oltre alle classi sopra citate e meglio descritte nella specifica sezione, sono stati introdotti dei tipi specifici:
+
 - *UserDTO*, rappresenta un utente:
   - username: string;
   - password: string.
@@ -42,6 +43,10 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
   - label: string;
   - source: number;
   - target: number.
+#figure(
+  image("../../assets/frontend/WorkflowDTO.svg"),
+  caption: [WorkflowDTO e dipendenze.]
+)
 
 //INSERIRE DIAGRAMMA DELLE CLASSI PER I TIPI
 
