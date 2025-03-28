@@ -14,11 +14,11 @@ Per aggiungere un blocco al workflow basterà cliccare il tasto sinistro del mou
 
 Esistono due tipologie di blocchi:
 - Input
-    - Tale tipologia di blocco può ricevere dati in input da un altro blocco;
-    - Si riconosce per il pallino a sinistra.
+    - tale tipologia di blocco può ricevere dati in input da un altro blocco;
+    - si riconosce per il pallino a sinistra.
 - Output
-    - Tale tipologia di blocco può inviare dati in output ad un altro blocco;
-    - Si riconosce per il pallino a destra.
+    - tale tipologia di blocco può inviare dati in output ad un altro blocco;
+    - si riconosce per il pallino a destra.
 Un blocco può essere sia di input che di output.
 
 #figure(
