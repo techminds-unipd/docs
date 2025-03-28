@@ -235,7 +235,7 @@ AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agl
 ==== DeleatableNode e DeletableOutputNode
 // inserire immagine?
 
-Il componente DeletableNode è un componente React personalizzato che rappresenta un nodo all'interno di un workflow che può essere eliminato.
+Il componente DeletableNode è un componente React personalizzato che rappresenta un nodo all'interno di un workflow che possiede un bottone per essere eliminato.
 
 Il componente DeletableNode accetta le seguenti prop:
 - id: rappresenta l’identificativo univoco del nodo da visualizzare.
