@@ -2,7 +2,7 @@
 
 ==== WorkflowNameList
 #figure(
-    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/workflow_name_list.svg", width: 110%),
     caption: [Diagramma delle classi riguardante la funzionalità WorkflowNameList del backend.],
 )
 

@@ -2,7 +2,7 @@
 
 ==== DeleteWorkflow
 #figure(
-    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/delete_workflow.svg", width: 110%),
     caption: [Diagramma delle classi riguardante la funzionalità DeleteWorkflow del backend.],
 )
 

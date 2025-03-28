@@ -2,7 +2,7 @@
 
 ==== ConnectionGoogleResponse
 #figure(
-    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/connection_google_response.svg"),
     caption: [Diagramma delle classi riguardante la funzionalità ConnectionGoogleResponse del backend.],
 )
 

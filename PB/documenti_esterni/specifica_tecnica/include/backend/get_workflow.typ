@@ -2,7 +2,7 @@
 
 ==== GetWorkflow
 #figure(
-    image("../../assets/backend/get_workflow_diagramma_classi.svg", width: 100%),
+    image("../../assets/backend/get_workflow.svg", width: 110%),
     caption: [Diagramma delle classi riguardante la funzionalità GetWorkflow del backend.],
 )
 

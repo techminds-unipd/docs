@@ -2,7 +2,7 @@
 
 ==== ConnectionGoogleRequest
 #figure(
-    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/connection_google_request.svg", width: 40%),
     caption: [Diagramma delle classi riguardante la funzionalità ConnectionGoogleRequest del backend.],
 )
 

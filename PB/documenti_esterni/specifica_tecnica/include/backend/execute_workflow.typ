@@ -2,7 +2,7 @@
 
 ==== ExecuteWorkflow
 #figure(
-    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/execute_workflow.svg", width: 110%),
     caption: [Diagramma delle classi riguardante la funzionalità ExecuteWorkflow del backend.],
 )
 
