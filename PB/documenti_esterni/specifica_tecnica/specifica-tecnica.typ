@@ -4,6 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "0.32.0", "28/03/2025", "Aggiornati services frontend", team.C, team.L,
     "0.31.0", "28/03/2025", "Aggiunta sezione architettura di deploy", team.M, team.S,
     "0.30.0", "27/03/2025", "Documentati introduzione e designa pattern frontend", team.C, team.T,
     "0.29.0", "27/03/2025", "Aggiunte classi dati e fix errori backend", team.S, team.G,
