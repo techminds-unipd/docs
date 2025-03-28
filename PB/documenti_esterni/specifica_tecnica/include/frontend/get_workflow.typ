@@ -1,0 +1,22 @@
+#import "../backend/funzioni_ausiliarie.typ": declaration
+
+==== GetWorkflow
+// TODO inserire immagine
+
+*GetWorkflowService *
+
+GetWorkflowService è una classe TypeScript che si occupa di recuperare un singolo workflow inviando una richiesta GET a un'API REST.
+
+La classe contiene un unico metodo, #declaration("getWorkflow(name: string, accessToken: string): Promise<WorkflowDTO>"), che effettua una chiamata all'endpoint API corrispondente per ottenere i dettagli di un workflow specificato dal parametro name e gestisce i diversi casi di risposta:
+- Se la richiesta ha successo (200), istanzia e restituisce un oggetto WorkflowDTO con il nome, i nodi e gli archi del workflow;
+- In caso di errore restituisce un Error con il messaggio di errore fornito dalla risposta.
+
+*useGetWorkflow*
+
+#declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): Promise<WorkflowDTO | undefined>") è un hook React personalizzato che permette di recuperare un workflow specifico utilizzando il servizio GetWorkflowService, gestendo automaticamente il processo di recupero e la gestione degli errori. L'hook restituisce una funzione #declaration("getWorkflow(name: string): Promise<WorkflowDTO | undefined>") che accetta il nome del workflow come parametro e restituisce un oggetto WorkflowDTO o undefined in caso di errore.
+
+Grazie alla variabile user, recuperata tramite l'hook #declaration[useAuth()], l'hook si assicura che la richiesta venga eseguita solo se l'utente è autenticato.
+In questo caso invoca il metodo #declaration("getWorkflow(name: string, accessToken: string): Promise<WorkflowDTO>") di GetWorkflowService, passando il nome del workflow e il token di accesso dell'utente.
+
+Se la richiesta va a buon fine, la funzione restituisce l'oggetto WorkflowDTO contenente i dati del workflow. Altrimenti, la funzione non restituisce nulla (undefined), senza mostrare errori all'utente, poiché la gestione degli errori avviene direttamente durante la chiamata al servizio.
+

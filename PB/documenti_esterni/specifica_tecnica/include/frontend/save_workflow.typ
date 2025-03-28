@@ -10,8 +10,7 @@ SaveWorkflowService è una classe che si occupa di salvare un workflow inviando 
 La classe contiene un unico metodo, #declaration("saveWorkflow(workflow: WorkflowDTO, accessToken: string): Promise<WorkflowDTO>"), che invia una richiesta al server con i dati del workflow da salvare, ovvero nome, nodi e archi.
 Gestisce le risposte del server nel seguente modo:
 - Se la richiesta ha successo (200), restituisce un oggetto WorkflowDTO con i dati aggiornati del workflow, inclusi il nome, i nodi e gli archi;
-- Se si verifica un errore (ad esempio, il server restituisce un errore di validazione o autorizzazione), genera un errore specifico utilizzando il messaggio fornito dalla risposta;
-- In qualsiasi altro caso, restituisce un errore generico con il messaggio di errore del server.
+- Se si verifica un errore, genera un Error specifico utilizzando il messaggio fornito dalla risposta.
 
 *useSaveWorkflow*
 
