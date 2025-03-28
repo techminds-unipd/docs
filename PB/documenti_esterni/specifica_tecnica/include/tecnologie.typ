@@ -89,7 +89,7 @@ Framework per la creazione di applicazioni server-side in TypeScript.
   - utilizza i decorators per definire i controller, i moduli e i provider. I decorators sono funzioni speciali che possono essere applicate a classi o metodi per modificare il loro comportamento. \ \
 - *Utilizzo*: codifica in TypeScript del backend e delle #glossario[API]\;
 - *Versione*: 11.0.0;
-- *Documentazione*: https://docs.nestjs.com [visitato il: 25/02/2025].
+- *Documentazione*: https://docs.nestjs.com [visitato il: 15/03/2025].
 
 === Flask
 Framework per la creazione di applicazioni web in #glossario[Python].
@@ -125,6 +125,11 @@ Framework per la creazione di agenti AI in Python.
 - *Utilizzo*: analisi dinamica del codice Python;
 - *Versione*: 8.3.4;
 - *Documentazione*: https://docs.pytest.org/en/stable/#documentation [visitato il: 25/02/2025].
+
+=== Cypress
+- *Utilizzo*: test di sistema;
+- *Versione*: 14.2.0;
+- *Documentazione*: https://docs.cypress.io/app/get-started/why-cypress [visitato il: 28/03/2025].
 
 == Persistenza dati
 === MongoDB
