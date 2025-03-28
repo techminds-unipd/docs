@@ -5,7 +5,7 @@
 Viene riportata la tabella definita nell'#link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")[analisi dei requisiti]#footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")) che descrive i requisiti funzionali del sistema. In aggiunta viene riportata una colonna che definisce lo stato di avanzamento di ciascun requisito.
 
 #let requisiti = getFR(getLen: false)
-#let codice_requisiti_da_soddisfare = ("FOR1", "FMR31", "FMR32", "FMR33", "FMR34", "FMR35", "FMR36", "FMR37", "FMR38", "FMR39", "FMR40", "FMR41", "FMR42", "FMR43", "FMR46", "FMR47", "FMR48", "FMR49", "FMR50", "FMR51", "FMR52", "FMR53", "FMR54")
+#let codice_requisiti_da_soddisfare = ("FOR1")
 #set par(justify: false)
 #figure(
   table(

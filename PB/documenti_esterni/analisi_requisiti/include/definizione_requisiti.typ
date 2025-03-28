@@ -151,7 +151,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve ricevere un avviso in caso non abbia collegato nessun servizio associato ai blocchi.],
+        [L'utente autenticato deve ricevere un avviso in caso non abbia collegato i servizi Google associati ai blocchi.],
         [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
     ))
     FMR+=1
