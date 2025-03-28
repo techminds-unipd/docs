@@ -4,6 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "0.34.0", "28/03/2025", "Aggiunta descrizione Workflow, funzionalità Save, Execute e Get", team.C, team.G,
     "0.33.0", "28/03/2025", "Aggiornato stato requisiti funzionali", team.M, team.C,
     "0.32.0", "28/03/2025", "Aggiornati services frontend", team.C, team.L,
     "0.31.0", "28/03/2025", "Aggiunta sezione architettura di deploy", team.M, team.S,
@@ -52,4 +53,3 @@
 #include "include/architettura_sistema.typ"
 #include "include/limiti_soluzione.typ"
 #include "include/stato_requisiti_funzionali.typ"
-
