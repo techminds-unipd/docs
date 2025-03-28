@@ -65,6 +65,7 @@ In alcuni componenti sono citati degli hook personalizzati che si occupano di fo
 #include("workflow_name_list_frontend.typ")
 #include("get_workflow.typ")
 #include("save_workflow.typ")
+#include("execute_workflow.typ")
 #include("google_token.typ")
 
 === Design pattern utilizzati
