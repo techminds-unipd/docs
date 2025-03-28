@@ -10,7 +10,7 @@ Sulla sinistra è presente la lista dei blocchi disponibili e, se presenti, i bl
 Per avere più informazioni su un blocco, basterà cliccarci sopra e verrà visualizzata una descrizione dettagliata.
 
 *Aggiunta di un blocco al workflow* \
-Per aggiungere un blocco al workflow basterà cliccare il tasto sinistro del mouse e trascinarlo nella sezione centrale (Canvas).
+Per aggiungere un blocco al workflow si deve cliccare e tenere premuto il tasto sinistro del mouse, trascinando il blocco nella sezione centrale (Canvas). Quando si raggiunge la posizione desiderata, rilasciare il tasto sinistro.
 
 Esistono due tipologie di blocchi:
 - Input
