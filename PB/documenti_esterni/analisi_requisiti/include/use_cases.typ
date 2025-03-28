@@ -729,12 +729,12 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
     ], name: <b>),
 
     node((1.7,1.3), align(center)[
-            @avviso-servizi-non-collegati Visualizzazione avviso \ servizi non collegati
+            @avviso-servizi-non-collegati Visualizzazione avviso \ servizi Google non collegati
     ], name: <c>),
     edge(<c>, <b>, "--straight", [\<\<extend\>\>]),
 
     node((0.9,0.7), align(center)[
-            Nessun servizio #linebreak() collegato
+            Nessun servizio #linebreak() di Google collegato
     ], shape: uc_comment, name: <le>),
     node((1.518,0.7), align(center)[
     ], name: <nf>, width: 1pt, height: 1pt),
@@ -784,23 +784,22 @@ dialogo tra questi due. Infine, si occupano anche di delineare le modalità di i
 - *Post-condizioni*:
   - L'utente visualizza il blocco configurato.
 
-=== Visualizzazione avviso servizi non collegati 
+=== Visualizzazione avviso servizi Google non collegati 
 <avviso-servizi-non-collegati>
 - *Descrizione*:
-  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account collegato ai servizi offerti dai blocchi.
+  - Questo caso d'uso descrive la visualizzazione di un avviso per notificare all'utente che non ha nessun account Google collegato ai servizi offerti dai blocchi.
 - *Attori principali*:
   - Utente autenticato.
 - *Scenario principale*:
  - Utente autenticato:
-    1. visualizza un avviso che segnala l'assenza di servizi collegati.
+    1. visualizza un avviso che segnala l'assenza del collegamento con i servizi di Google.
  - Sistema:
-   1. non trova nessun servizio collegato; 
-   2. mostra un avviso.
+   1. non trova nessun servizio Google collegato; 
+   2. mostra un avviso che lo informa della mancanza del collegamento.
 - *Pre-condizioni*:
-  - L'utente non ha collegato alcun servizio esterno per l'uso dei blocchi.
+  - L'utente non ha collegato alcun servizio Google per l'uso dei blocchi.
 - *Post-condizioni*:
-   - Viene segnalato all'utente che non ha nessun servizio collegato;
-   - L'utente viene rediretto alla pagina per collegare i servizi.
+   - Viene segnalato all'utente che non ha nessun servizio collegato.
 
 === Visualizzazione informazioni blocco <funzionalità-blocco>
 #figure(
