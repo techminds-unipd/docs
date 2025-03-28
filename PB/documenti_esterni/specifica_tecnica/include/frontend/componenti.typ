@@ -232,3 +232,19 @@ AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agl
 - SignIn;
 - SignUp.
 
+==== DeleatableNode
+// inserire immagine?
+
+Il componente DeletableNode è un componente React personalizzato che rappresenta un nodo all'interno di un workflow che può essere eliminato.
+
+Il componente DeletableNode accetta le seguenti prop:
+- id: rappresenta l’identificativo univoco del nodo da visualizzare.
+- data: un oggetto che contiene un'etichetta (label), che viene visualizzata come testo all'interno del nodo.
+
+Quando l'utente clicca sull'icona di cancellazione (IconButton con l'icona ClearIcon di MUI), viene invocata la funzione #declaration[handleDelete]. Questa consente di eliminare il nodo dal workflow:
+- Viene rimosso il nodo con l'id specificato tramite #declaration[setNodes];
+- Vengono rimossi tutti gli archi che coinvolgono il nodo, sia come nodo di origine che come nodo di destinazione.
+
+Il componente include anche due Handle, forniti dalla libreria ReactFlow, per connettere il nodo ad altri nodi nel workflow:
+- Un Handle di tipo source per connessioni in uscita;
+- Un Handle di tipo target per connessioni in ingresso.
