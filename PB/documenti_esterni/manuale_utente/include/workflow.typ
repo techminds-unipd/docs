@@ -54,4 +54,4 @@ I possibili messaggi d'errore sono:
   image("../assets/not-connected-account.png"), caption: "Errore account Google non collegato." 
 )
 
-Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul pulsante _SAVE_ e eseguirlo cliccando sul pulsante _EXECUTE_.
+Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul pulsante _SAVE_ ed eseguirlo cliccando sul pulsante _EXECUTE_.
