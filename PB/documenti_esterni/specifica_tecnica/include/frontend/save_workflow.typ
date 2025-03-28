@@ -14,7 +14,7 @@ Gestisce le risposte del server nel seguente modo:
 
 *useSaveWorkflow*
 
-#declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO | undefined>") è un hook React personalizzato che permette di salvare un workflow utilizzando il servizio SaveWorkflowService, gestendo automaticamente il processo di salvataggio e la gestione degli errori. L'hook restituisce una funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO | undefined>") che accetta un oggetto WorkflowDTO come parametro e restituisce un oggetto WorkflowDTO o undefined in caso di errore.
+#declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO | undefined>") è un hook React personalizzato che permette di salvare un workflow utilizzando il servizio SaveWorkflowService, gestendo automaticamente il processo di salvataggio. L'hook restituisce una funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO | undefined>") che accetta un oggetto WorkflowDTO come parametro e restituisce un oggetto WorkflowDTO o undefined in caso di errore.
 
 L'hook utilizza la variabile user recuperata tramite l'hook #declaration[useAuth()] per verificare che l'utente sia autenticato prima di eseguire il salvataggio del workflow. Se l'utente è autenticato, invoca il metodo #declaration("saveWorkflow(workflow: WorkflowDTO, accessToken: string): Promise<WorkflowDTO>") di SaveWorkflowService passando il workflow e il token di accesso dell'utente.
 
