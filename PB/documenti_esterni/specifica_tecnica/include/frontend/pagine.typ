@@ -79,3 +79,22 @@ Nella query string sono presenti i seguenti parametri:
 - expireDate: la data e l'ora di scadenza del token in formato ISO 8601.
 
 È infine presente un singolo Button da premere nel caso in cui il redirect verso Services non sia avvenuto automaticamente.
+
+==== Workflow
+La pagina Workflow rappresenta un'interfaccia interattiva dove l'utente può visualizzare e modificare un workflow attraverso un'area Canvas dinamica. In questa pagina, vengono visualizzati i nodi, gli archi e la descrizione dell'automazione di un workflow, permettendo di modificarlo grazie alla libreria ReactFlow. La pagina si costruisce attorno a un layout ben definito che utilizza Grid fornito da MUI, che include un'area principale per l'interazione e una barra laterale che offre funzionalità aggiuntive.
+
+L'intera pagina, oltre ad essere avvolta da ReactFlowProvider, fornito dalla libreria ReactFlow, utilizza anche un context personalizzato chiamato *DnDProvider*. Questo contesto è utilizzato per definire lo stato e le operazioni relative al drag-and-drop, permettendo ai componenti figli di leggere e aggiornare lo stato DnD grazie all'hook personalizzato #declaration[useDnD()]. 
+
+Il cuore dell'interazione con il flusso di lavoro è rappresentato dal componente *WorkflowCanvas*. Qui, l'utente può vedere il workflow come una serie di nodi collegati tra loro da un arco. Grazie a ReactFlow, i nodi sono interattivi: l'utente può spostarli, aggiungere nuove connessioni o rimuovere quelle esistenti. Le modifiche ai nodi e alle connessioni vengono immediatamente riflessi nel modello di dati sottostante, mantenendo la pagina aggiornata in tempo reale.
+
+Accanto al canvas, si trova la *WorkflowSidebar*, una barra laterale che fornisce i nodi da trascinare nella Canvas.
+
+Infine nella parte superiore della pagina si trova il componente *WorkflowHeader*, che visualizza il nome del workflow e due Button forniti da MUI, uno per l'esecuzione del workflow e uno per il salvataggio.
+
+Quando un utente accede alla pagina, il workflow viene caricato dinamicamente grazie all'hook personalizzato #declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): Promise<WorkflowDTO | undefined>") che si occupa di recuperare il workflow tramite la funzione #declaration("getWorkflow(name: string): Promise<WorkflowDTO | undefined>"). La funzione restituisce un oggetto di tipo WorkflowDTO, che viene poi convertito in un formato utilizzabile da ReactFlow.
+
+Una volta che i dati sono stati recuperati e mappati, vengono salvati nello stato del componente tramite i metodi #declaration[setNodes] e #declaration[setEdges]. Questi stati contengono rispettivamente i nodi e gli archi del workflow, che vengono visualizzati nella Canvas. Ogni nodo ha una posizione specifica, un'etichetta e un tipo.
+
+
+
+
