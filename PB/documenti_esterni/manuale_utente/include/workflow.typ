@@ -38,7 +38,7 @@ Per eliminare un blocco dal canvas si può cliccare la \"x\" in alto a destra de
 Per eliminare un arco basterà cliccare sull'arco e premere il tasto "backspace".
 
 Requisiti per un workflow valido:
-- Il workflow deve avere almeno due blocchi collegati da un arco.
+- Il workflow deve avere almeno due blocchi collegati da un arco;
 - Non possono essere presenti blocchi non collegati
 - Se si desidera utilizzare un blocco non disponibile, sarà necessario collegare un account Google nella pagina services (vedi @services).
 
