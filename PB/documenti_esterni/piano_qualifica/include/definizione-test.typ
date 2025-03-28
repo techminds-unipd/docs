@@ -637,7 +637,7 @@
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un errori con il messaggio \"User not found\" quando la richiesta HTTP ritorna un codice 400.],
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un Error con il messaggio \"User not found\" quando la richiesta HTTP ritorna un codice 400.],
         [S]
     ))
 
@@ -932,29 +932,29 @@
 
     // SaveWorkflowService (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorna il workflow salvato se la richiesta ritorna un codice HTTP 200.],
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorni il workflow salvato se la richiesta ritorna un codice HTTP 200.],
         [S]
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorna il workflow salvato se la richiesta ritorna un codice HTTP 200.],
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorni il workflow salvato se la richiesta ritorna un codice HTTP 200.],
         [S]
     ))
 
     // useSaveWorkflow (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che l'hook _useSaveWorkflow_ riesce a salvare un workflow.],
+        [Verificare che l'hook _useSaveWorkflow_ riesca a salvare un workflow.],
         [S]
     ))
 
     // GetWorkflowService (FRONTEND)
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ ritorna il workflow richiesto dopo una chiamata API al backend.],
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ ritorni il workflow richiesto dopo una chiamata API al backend.],
         [S]
     ))
 
     unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
-        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ lancia un Error se la chiamata API ritorna un codice HTTP diverso da 200.],
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ lanci un Error se la chiamata API ritorna un codice HTTP diverso da 200.],
         [S]
     ))
 
