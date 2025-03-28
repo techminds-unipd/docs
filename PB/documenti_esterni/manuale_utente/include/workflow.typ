@@ -30,7 +30,10 @@ Un blocco può essere sia di input che di output.
 - Per creare un arco è necessario collegare un pallino destro ad un pallino sinistro, o viceversa, non è quindi possibile collegare due pallini destri o due pallini sinistri;
 - Per collegare due pallini basterà mantenere premuto il tasto sinistro del mouse e trascinarlo da un pallino all'altro;
 - Una volta collegati i due blocchi comparirà un'area in cui è possibile inserire del testo, sovrapposta all'arco. Qui si deve scrivere la descrizione dell'automazione desiderata.\
-Tips: Quando si scrive la descrizione dell'automazione è preferibile scrivere frasi corte e in inglese.
+
+*Come scrivere un'automazione*\
+Quando si scrive la descrizione dell'automazione è preferibile scrivere frasi corte, semplici e in inglese.
+Il mancato rispetto di tale suggerimento potrebbe portare a risultati non desiderati, in quanto il sistema è ancora molto limitato.
 
 #figure(
   image("../assets/blocchi-con-istruzione.png"), caption: "Esempio collegamento tra due blocchi."
@@ -43,6 +46,7 @@ Per eliminare un arco basterà cliccare sull'arco e premere il tasto "backspace"
 *Requisiti per un workflow valido* \
 Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visualizzato un messaggio di errore, di seguito sono riportati alcuni esempi di workflow non validi:
 - La descrizione dell'automazione non deve essere vuota;
+
 #figure(
   image("../assets/empty-description.png", width: 70%), caption: "Esempio descrizione automazione vuota."
 )
@@ -51,6 +55,7 @@ Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visuali
   image("../assets/empty-description-error.png", width: 70%), caption: "Errore descrizione automazione vuota."
 )
 - Ogni blocco può avere al massimo un arco in uscita e un arco in entrata, non è quindi possibile creare un albero di automazioni;
+
 #figure(
   image("../assets/double-edge.png", width: 70%), caption: "Esempio più di un arco in entrata o in uscita."
 )
@@ -73,6 +78,8 @@ Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visuali
   image("../assets/insufficient-edges-error.png", width: 70%), caption: "Errore archi insufficienti."
 )
 - Se si desidera utilizzare un blocco non disponibile, sarà necessario collegare un account Google nella pagina services (vedi @services).
+
+
 #figure(
   image("../assets/not-connected-account.png", width: 70%), caption: "Esempio account Google non collegato." 
 )
@@ -81,4 +88,18 @@ Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visuali
 )
 Tale situazione si può verificare se si è salvato un workflow e successivamente si è scollegato l'account Google.
 
-Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul pulsante _SAVE_ o eseguirlo cliccando sul pulsante _EXECUTE_.
+Una volta creato il workflow valido, sarà possibile:
+- Salvarlo cliccando sul pulsante _SAVE_
+  - se il salvataggio è andato a buon fine, verrà visualizzato un messaggio di successo;
+#figure(
+  image("../assets/successfully-save.png", width: 50%), caption: "Salvataggio avvenuto con successo." 
+)
+- Eseguirlo cliccando sul pulsante _EXECUTE_
+  - se l'esecuzione è andata a buon fine, verrà visualizzato un messaggio di successo come nell'esempio a seguire;
+
+  #figure(
+  image("../assets/esempio-workflow.png")
+)
+#figure(
+  image("../assets/successfully-execute.png", width: 70%), caption: "Esecuzione avvenuta con successo." 
+)
