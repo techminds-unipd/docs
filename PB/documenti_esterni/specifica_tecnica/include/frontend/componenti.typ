@@ -14,7 +14,8 @@ Il componente CustomLink è un componente React personalizzato che gestisce la n
 Il componente accetta due props:
 - name: il testo da visualizzare nel link;
 - link: l'URL di destinazione;
-- color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color".
+- color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color";
+- fontSize: indica la dimensione del testo del link.
 Grazie all'hook #declaration("useLocation()") di React Router, il componente può ottenere il percorso corrente dell'utente. Se il valore del link corrisponde al percorso attuale, CustomLink ritorna un componente Typography, evitando di generare un link cliccabile.
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 
@@ -46,7 +47,7 @@ Il componente accetta una prop:
 
 Il componente utilizza l'hook #declaration("useState()") per gestire l'apertura e la chiusura della finestra di dialogo. Quando l'utente clicca su \"Logout\", viene aperto un dialogo di conferma con due pulsanti:
 - \"No\", che chiude il dialogo senza effettuare il logout quando cliccato;
-- \"Yes\", che quando cliccato esegue il logout chiamando la funzione #declaration("handleLogout()"). Quest'ultima invoca le funzioni #declaration("logoutUser()") e #declaration("removeGoogleToken()") fornite dai rispettivi context e reindirizza l'utente alla pagina principale utilizzando l'hook #declaration("useNavigate()") di React Router.
+- \"Yes\", che quando cliccato esegue il logout chiamando la funzione #declaration("handleLogout()"). Quest'ultima invoca le funzioni #declaration("logoutUser()") e #declaration("removeGoogleToken()") fornite dai custom hook #declaration("useAuth()") e #declaration("useGoogleToken()") e reindirizza l'utente alla pagina principale utilizzando l'hook #declaration("useNavigate()") di React Router.
 
 ==== Navbar <navbar>
 // SECONDO ME L'IMMAGINE DEL DIAGRAMMA VA INSERITO PIù AVANTI PER CAPIRE MEGLIO COSA METTERE PER LA GESTIONE DELL'AUTENTICAZIONE
@@ -136,6 +137,8 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla pagina di login;
 - Un SignUpContainer, per la grafica del container del form.
 
+SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): Promise<{ user: UserDTO } | null>") fornita dal custom hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la passoword e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser").
+
 ==== SignInForm
 SignInForm è un componente React che mostra il form per il login.
 
@@ -153,6 +156,8 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla registrazione;
 - Un SignInContainer, per la grafica del container del form.
 
+SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): Promise<void>") fornita dal custom hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la password, il componente SignInForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login").
+
 ==== AddWorkflow
 // TODO inserire immagine
 
@@ -160,9 +165,9 @@ Il componente AddWorkflow è un componente React personalizzato che permette agl
 
 Il componente accetta una prop:
 - setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo la creazione di un nuovo elemento.
-Grazie all’hook personalizzato #declaration("useCreateWorkflow()"), il componente può accedere al servizio per creare un nuovo workflow. L'input dell'utente viene gestito attraverso un campo di testo (TextField di MUI), e la creazione avviene al click dell'IconButton, che utilizza l'icona di aggiunta fornita da MUI.
+Grazie all’hook personalizzato #declaration("useCreateWorkflow(createWorkflowsService: CreateWorkflowService): IUseCreateWorkflow"), il componente può accedere al servizio per creare un nuovo workflow. L'input dell'utente viene gestito attraverso un campo di testo (TextField di MUI), e la creazione avviene al click dell'IconButton, che utilizza l'icona di aggiunta fornita da MUI.
 
-Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow()"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
+Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow(name: string): Promise<CreateWorkflowResponse | undefined>"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
 Quest'ultimo ha quindi due varianti:
 - success: se la creazione è andata a buon fine;
 - error: se si è verificato un problema (ad esempio nome duplicato o errore generico).
@@ -173,13 +178,16 @@ Quest'ultimo ha quindi due varianti:
 
 Il componente WorkflowItem è un componente React personalizzato che rappresenta un singolo workflow all’interno della lista dei workflow. Viene utilizzato all’interno della pagina Dashboard.
 
-Il componente accetta due prop:
+Il componente accetta varie prop:
 - name: il nome del workflow da visualizzare;
-- setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo l'eliminazione di un elemento.
+- setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo l'eliminazione di un elemento;
+- setSnackBarSetMessage: funzione per impostare il messaggio per il componente Snackbar;
+- setAlertColor: funzione per impostare il colore del componente Snackbar;
+- setOpenSnackBar: funzione per rendere visibile il componente Snackbar.
 
-Grazie all’hook personalizzato #declaration("useDeleteWorkflow()"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un CustomLink, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
+Grazie all’hook personalizzato #declaration("useDeleteWorkflow(deleteWorkflowService: DeleteWorkflowService): IUseDeleteWorkflow"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un CustomLink, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
 
-Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow()"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
+Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow(name: string): Promise<DeleteWorkflowResponse | undefined>"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
 
 ==== WorkflowList
 // TODO inserire immagine
@@ -189,7 +197,7 @@ Il componente WorkflowList è un componente React personalizzato che visualizza 
 Il componente accetta due prop:
 - shouldReload: valore booleano che indica se la lista dei workflow deve essere ricaricata;
 - setShouldReload: funzione per aggiornare lo stato e ricaricare la lista dei workflow dopo modifiche come l'aggiunta o l'eliminazione di un workflow.
-Grazie all’hook personalizzato #declaration("useAllWorkflow()"), il componente può recuperare l'elenco dei workflow dell'utente. Quando shouldReload è attivo, la funzione #declaration("refetch()") viene chiamata per aggiornare i dati e  setShouldReload viene impostato su false per evitare richiami ripetuti.
+Grazie all’hook personalizzato #declaration("useAllWorkflow(allWorkflowsService: AllWorkflowsService): IUseAllWorkflow"), il componente può recuperare l'elenco dei workflow dell'utente. Quando shouldReload è attivo, la funzione #declaration("refetch()") viene chiamata per aggiornare i dati e  setShouldReload viene impostato su false per evitare richiami ripetuti.
 
 L’interfaccia mostra:
 - Un titolo che introduce la sezione;
