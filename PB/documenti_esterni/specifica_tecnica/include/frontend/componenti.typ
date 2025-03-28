@@ -302,3 +302,14 @@ WorkflowHeader accetta una sola prop:
 Questo componente offre due funzionalità:
 - Salvataggio: cliccando sul Button di MUI con etichetta "Save", viene invocato il metodo #declaration[handleSave]. Questo metodo recupera i dati relativi ai nodi e agli archi dal workflow, mappandoli in oggetti di tipo NodeDTO e EdgeDTO. Successivamente viene chiamata la funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO | undefined>") offerta dall'hook custom #declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO | undefined>"). Attraverso una Snackbar offerta da MUI si notifica l'utente del successo o del fallimento del salvataggio.
 - Esecuzione: cliccando sul Button di MUI con etichetta "Execute", viene invocato il metodo #declaration[handleExecute]. Similmente a quanto avviene per il salvataggio vengono recuperati i dati del workflow e viene chiamata la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") offerta dall'hook personalizzato #declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface"). Se l'esecuzione ha successo viene visualizzata la risposta in una finestra di dialogo (utilizzando Dialog, DialogContent, DialogTitle e DialogActions di MUI). Se invece l'esecuzione fallisce viene visualizzato un messaggio di errore nella Snackbar.
+
+==== WorkflowSidebar
+//immagine?
+
+Il componente WorkflowSidebar fornisce una barra laterale che mostra i servizi disponibili e non disponibili per l'utente e consente di trascinare e rilasciare i nodi dei servizi nel workflow.
+
+Per verificare se un servizio è disponibile si avvale dell'hook #declaration[useGoogleToken()]. Se il token Google è presente i servizi GCalendar e Gmail saranno disponibili per essere aggiunti al workflow, altrimenti i nodi verranno mostrati come disabilitati, indicando che quei servizi non sono disponibili.
+
+Il componente usa il sistema di drag-and-drop per permettere all'utente di aggiungere i nodi di servizio al workflow. La funzione onDragStart prende l'evento di trascinamento e il tipo di nodo (ad esempio "GCalendar", "Gmail", o "Pastebin") e imposta il tipo di nodo da usare nel workflow tramite l'hook #declaration[useDnD()].
+
+I nodi presenti nel componente Sidebar sono a loro volta dei componenti, CalendarNode, GmailNode o PastebinNode. Sono poi utilizzati i componenti Box e Typography offerti da MUI.

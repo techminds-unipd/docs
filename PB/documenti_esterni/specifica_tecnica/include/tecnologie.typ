@@ -51,7 +51,7 @@ Libreria JavaScript per la creazione di interfacce utente.
   - i React Hooks sono funzioni che permettono di gestire lo stato e il ciclo di vita dei componenti. Hooks base come useState, useEffect e useContext facilitano la gestione dello stato, degli effetti collaterali e del contesto in modo più semplice e conciso. \ \
 - *Utilizzo*: creazione dell'interfaccia utente;
 - *Versione*: 19.0.0;
-- *Documentazione*: https://react.dev/learn [visitato il: 25/02/2025].
+- *Documentazione*: https://react.dev/learn [visitato il: 15/03/2025].
 
 === ReactFlow
 Libreria React per la creazione di diagrammi interattivi.
@@ -62,21 +62,21 @@ Libreria React per la creazione di diagrammi interattivi.
   - supporta l'interattività, consentendo agli utenti di spostare, collegare e modificare i nodi e i collegamenti del diagramma. \ \
 - *Utilizzo*: creazione dei workflow tramite nodi e archi;
 - *Versione*: 12.4.3;
-- *Documentazione*: https://reactflow.dev/learn [visitato il: 25/02/2025].
+- *Documentazione*: https://reactflow.dev/learn [visitato il: 24/03/2025].
 
 === React Router
 Libreria React utilizzata per la gestione della navigazione.
 
 - *Utilizzo*: gestione delle route all'interno dell'applicazione React;
 - *Versione*: 7.2.0;
-- *Documentazione*: https://reactrouter.com/7.2.0/home [visitato il: 25/02/2025].
+- *Documentazione*: https://reactrouter.com/7.2.0/home [visitato il: 10/03/2025].
 
 === Material-UI
 Libreria React che fornisce componenti React pronti all'utilizzo.
 
 - *Utilizzo*: uso di componenti React con un design responsivo e coeso;
 - *Versione*: 6.4.5;
-- *Documentazione*: https://mui.com/material-ui/getting-started/ [visitato il: 25/02/2025].
+- *Documentazione*: https://mui.com/material-ui/getting-started/ [visitato il: 20/03/2025].
 
 === NestJS
 Framework per la creazione di applicazioni server-side in TypeScript.
