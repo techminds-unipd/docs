@@ -2,9 +2,12 @@
 
 
 ==== DeleteWorkflow
-// TODO inserire le immagini
 
 *DeleteWorkflowService*
+#figure(
+  image("../../assets/frontend/DeleteWorkflowService.svg", width: 70%),
+  caption: [Classe DeleteWorkflowService.]
+)
 
 DeleteWorkflowService è una classe TypeScript che gestisce l'eliminazione di un workflow inviando una richiesta DELETE a un'API REST.
 
