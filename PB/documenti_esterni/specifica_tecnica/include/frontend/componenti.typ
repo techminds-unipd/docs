@@ -273,7 +273,7 @@ Infine grazie a EdgeLabelRenderer, fornito sempre da ReactFlow, è possibile vis
 ==== WorkflowCanvas
 // immagine???
 
-Il componente WorkflowCanvas è un componente React personalizzato che rappresenta la superficie principale di lavoro per la gestione dei workflow. Utilizza la libreria ReactFlow per gestire la visualizzazione e l'interazione con nodi e archi. Questo componente permette agli utenti di aggiungere nodi, connettere nodi tramite archi, e modificare la descrizione dell'automazione. Viene inoltre utilizzato un sistema di drag-and-drop per aggiungere nuovi nodi al flusso di lavoro.
+Il componente WorkflowCanvas è un componente React personalizzato che rappresenta la superficie principale di lavoro per la gestione dei workflow. Utilizza la libreria ReactFlow per gestire la visualizzazione e l'interazione con nodi e archi. Questo componente permette agli utenti di aggiungere nodi, connettere nodi tramite archi, e modificare la descrizione dell'automazione. Viene inoltre utilizzato un sistema di drag-and-drop per aggiungere nuovi nodi al workflow.
 
 Il componente WorkflowCanvas accetta le seguenti proprietà:
 - nodes: un array di nodi che rappresentano i nodi attuali del workflow;
@@ -291,3 +291,14 @@ All'interno del componente sono definite le seguenti funzioni:
 - #declaration[onDragOver]: gestisce l'evento di dragover;
 - #declaration[onDrop]: gestisce l'evento di drop, dove un nodo viene posizionato nella superficie di lavoro quando viene rilasciato.
 
+==== WorkflowHeader
+// immagine?
+
+Il componente WorkflowHeader fornisce la barra di intestazione per la pagina Workflow, con funzionalità per salvare e eseguire il workflow.
+
+WorkflowHeader accetta una sola prop:
+- name: il nome del workflow che verrà visualizzato nell'intestazione.
+
+Questo componente offre due funzionalità:
+- Salvataggio: cliccando sul Button di MUI con etichetta "Save", viene invocato il metodo #declaration[handleSave]. Questo metodo recupera i dati relativi ai nodi e agli archi dal workflow, mappandoli in oggetti di tipo NodeDTO e EdgeDTO. Successivamente viene chiamata la funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO | undefined>") offerta dall'hook custom #declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO | undefined>"). Attraverso una Snackbar offerta da MUI si notifica l'utente del successo o del fallimento del salvataggio.
+- Esecuzione: cliccando sul Button di MUI con etichetta "Execute", viene invocato il metodo #declaration[handleExecute]. Similmente a quanto avviene per il salvataggio vengono recuperati i dati del workflow e viene chiamata la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") offerta dall'hook personalizzato #declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface"). Se l'esecuzione ha successo viene visualizzata la risposta in una finestra di dialogo (utilizzando Dialog, DialogContent, DialogTitle e DialogActions di MUI). Se invece l'esecuzione fallisce viene visualizzato un messaggio di errore nella Snackbar.
