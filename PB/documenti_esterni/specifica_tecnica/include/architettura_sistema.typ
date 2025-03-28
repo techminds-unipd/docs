@@ -14,7 +14,7 @@ Il frontend è l'interfaccia grafica sviluppata in React che permette all'utente
 L'agente è sviluppato in LangChain e comunica con il backend tramite un server #glossario[Flask]. Esso si occupa di eseguire i workflow mediante un #glossario[LLM] che interagisce con dei tool che si interfacciano con il mondo esterno. Infine, il database #glossario[MongoDB] è utilizzato per memorizzare i dati relativi ai workflow e agli utenti. Tutta l'infrastuttura è organizzata a container tramite Docker.
 
 === Architettura di deploy
-L'architettura di deploy è composta da quattro container principali: frontend, backend, agente e database. Per ogni container è stato definito un _Dockerfile_ che quando viene costruito installa le dipendenze necessarie e si copia il codice sorgente al suo interno. Ogni servizio è in ascolto su una porta, in particolare:
+L'architettura di deploy è composta da quattro container principali: frontend, backend, agente e database. Per ogni container è stato definito un _Dockerfile_ che quando viene costruito installa le dipendenze necessarie e copia il codice sorgente al suo interno. Ogni servizio è in ascolto su una porta, in particolare:
   - frontend - porta 5173;
   - backend - porta 3000;
   - agente - porta 5000;
