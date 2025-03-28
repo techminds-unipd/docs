@@ -41,17 +41,28 @@ Requisiti per un workflow valido:
 - Il workflow deve avere almeno due blocchi collegati da un arco.
 - Non possono essere presenti blocchi non collegati
 - Se si desidera utilizzare un blocco non disponibile, sarà necessario collegare un account Google nella pagina services (vedi @services).
+- Ogni blocco può avere al massimo un arco in uscita e un arco in entrata;
+- La descrizione dell'automazione non deve essere vuota.
 
 Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visualizzato un messaggio di errore.
 I possibili messaggi d'errore sono:
+
 #figure(
-  image("../assets/insufficient-nodes.png"), caption: "Errore nodi insufficienti."
+  image("../assets/empty-description.png", width: 70%), caption: "Errore descrizione automazione vuota."
+)
+
+#figure(
+  image("../assets/double-edge.png", width: 70%), caption: "Errore più di un arco in entrata o in uscita."
+)
+
+#figure(
+  image("../assets/insufficient-nodes.png", width: 70%), caption: "Errore nodi insufficienti."
 )
 #figure(
-  image("../assets/insufficient-edges.png"), caption: "Errore archi insufficienti."
+  image("../assets/insufficient-edges.png", width: 70%), caption: "Errore archi insufficienti."
 )
 #figure(
-  image("../assets/not-connected-account.png"), caption: "Errore account Google non collegato." 
+  image("../assets/not-connected-account.png", width: 70%), caption: "Errore account Google non collegato." 
 )
 
 Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul pulsante _SAVE_ e eseguirlo cliccando sul pulsante _EXECUTE_.
