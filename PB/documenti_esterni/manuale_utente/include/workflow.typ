@@ -38,8 +38,8 @@ Per eliminare un blocco dal canvas si può cliccare la \"x\" in alto a destra de
 Per eliminare un arco basterà cliccare sull'arco e premere il tasto "backspace".
 
 Requisiti per un workflow valido:
-- Il workflow deve avere almeno due blocchi collegati da un arco.
-- Non possono essere presenti blocchi non collegati
+- Il workflow deve avere almeno due blocchi collegati da un arco;
+- Non possono essere presenti blocchi non collegati;
 - Se si desidera utilizzare un blocco non disponibile, sarà necessario collegare un account Google nella pagina services (vedi @services).
 - Ogni blocco può avere al massimo un arco in uscita e un arco in entrata;
 - La descrizione dell'automazione non deve essere vuota.
@@ -65,4 +65,4 @@ I possibili messaggi d'errore sono:
   image("../assets/not-connected-account.png", width: 70%), caption: "Errore account Google non collegato." 
 )
 
-Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul pulsante _SAVE_ e eseguirlo cliccando sul pulsante _EXECUTE_.
+Una volta creato il workflow valido, sarà possibile salvarlo cliccando sul pulsante _SAVE_ ed eseguirlo cliccando sul pulsante _EXECUTE_.
