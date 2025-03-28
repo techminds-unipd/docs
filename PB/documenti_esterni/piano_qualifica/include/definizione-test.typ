@@ -1138,7 +1138,7 @@
 
     sistema.push(("TS" + str(sistema.len()+1),
         [Verificare che l'utente autenticato riceva un avviso in caso non
-        abbia collegato nessun servizio associato ai blocchi.],
+        abbia collegato i servizi Google associati ai blocchi.],
         [#getFRByNumber(sistema.len()+1).at(0)],
         [NI],
     ))
