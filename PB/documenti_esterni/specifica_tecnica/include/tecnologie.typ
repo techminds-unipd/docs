@@ -127,7 +127,7 @@ Framework per la creazione di agenti AI in Python.
 - *Documentazione*: https://docs.pytest.org/en/stable/#documentation [visitato il: 25/02/2025].
 
 === Cypress
-- *Utilizzo*: test di sistema;
+- *Utilizzo*: #glossario[test di sistema]\;
 - *Versione*: 14.2.0;
 - *Documentazione*: https://docs.cypress.io/app/get-started/why-cypress [visitato il: 28/03/2025].
 
