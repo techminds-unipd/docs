@@ -7,20 +7,7 @@ L’architettura di Agent Flow non segue un pattern architetturale unico e prede
 
 Per ogni funzionalità offerta è stata creata una classe che ha lo scopo di comunicare con le API per recuperare i dati necessari. Le pagine contengono dei componenti personalizzati che utilizzano degli hook personalizzati e gli hook di React, come #declaration[useState] e #declaration[useEffect], per gestire lo stato in modo efficiente e aggiornare dinamicamente l’interfaccia utente. Questo approccio garantisce un’esperienza fluida e reattiva, capace di adattarsi in tempo reale alle esigenze dell’utente. Le chiamate API permettono di ottenere i dati in modo sicuro, scalabile ed efficace, mantenendo ben distinta la logica di business dall’interfaccia grafica. Inoltre, grazie agli hooks, la gestione dello stato avviene in modo dichiarativo e modulare, migliorando la leggibilità e la manutenibilità del codice.
 
-/*Sono stati creati i diagrami UML dei componenti React e delle classi di servizio. \ Data la difficoltà di adattare i componenti React a funzioni ai diagrammi delle classi abbiamo deciso di usare le seguenti convenzioni:
-- Ogni componente viene dichiarato come classe;
-- Vengono omessi i costruttori;
-- Le props sono riportate come attributi pubblici:
-  - se possiede un valore di default viene scritto = _VAL_ ;
-  - se opzionale viene scritto [0..1];
-- Gli hooks utilizzati dal componente sono dichiarati come attributi privati;
-- Le funzioni che si occupano di gestire gli input o usare i metodi delle classi di servizio vengono dichiarate come metodi privati;
-- I componenti non creati da noi hanno lo sfondo #highlight(fill: rgb(163, 224, 255))[di questo colore]\;
-- I componenti dichiarati all'interno di altri componenti hanno una relazione di composizione, poiché quello principale controlla l'intero ciclo di vita di quello al suo interno. Inoltre non viene dichiarata la molteplicità.
-
-Per evitare ripetizioni e un'eccessiva verbosità, infine, abbiamo deciso di omettere le props grafiche passate ai componenti della libreria MUI e ai componenti personalizzati se non sono il componente che si sta analizzando in quel capitolo.*/
-
-Sono stati fatti i diagrammi UML dei service che sono delle effettive classi Typescript, mentre per i componenti React viene fornita la descrizione testuale.
+Sono stati fatti i diagrammi UML delle classi Typescript e dei DTO, mentre per i componenti React viene fornita la descrizione testuale.
 
 Le sezioni successive sono organizzate nel seguente modo:
 - Tipi: descrizione dei tipi specifici creati per modellare i workflow e gli utenti;
@@ -56,6 +43,10 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
   - label: string;
   - source: number;
   - target: number.
+#figure(
+  image("../../assets/frontend/WorkflowDTO.svg"),
+  caption: [WorkflowDTO e dipendenze.]
+)
 
 //INSERIRE DIAGRAMMA DELLE CLASSI PER I TIPI
 
