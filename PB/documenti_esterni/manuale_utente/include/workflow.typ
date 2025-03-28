@@ -28,7 +28,7 @@ Un blocco può essere sia di input che di output.
 *Aggiunta di un'automazione tra blocchi* \
 - Per descrivere un'automazione tra due blocchi aggiunti nella Canvas è necessario collegarli con un arco;
 - Per creare un arco è necessario collegare un pallino destro ad un pallino sinistro, o viceversa, non è quindi possibile collegare due pallini destri o due pallini sinistri;
-- Per collegare due pallini basterà mantenere premuto il tasto sinistro del mouse e trascinarlo da un pallino all'altro.
+- Per collegare due pallini basterà mantenere premuto il tasto sinistro del mouse e trascinarlo da un pallino all'altro;
 - Una volta collegati i due blocchi comparirà un'area in cui è possibile inserire del testo, sovrapposta all'arco. Qui si deve scrivere la descrizione dell'automazione desiderata.\
 Tips: Quando si scrive la descrizione dell'automazione è preferibile scrivere frasi corte e in inglese.
 
