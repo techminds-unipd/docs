@@ -1288,13 +1288,13 @@
 
     sistema.push(("TS" + str(sistema.len()+1),
         [Verificare che l'utente autenticato visualizzi un messaggio di avviso che
-        informa del fallimento nell'eliminazione del workflow],
+        informa del fallimento nell'eliminazione del workflow.],
         [#getFRByNumber(sistema.len()+1).at(0)],
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che l'utente autenticato possa mandare in esecuzione un workflow],
+        [Verificare che l'utente autenticato possa mandare in esecuzione un workflow.],
         [#getFRByNumber(sistema.len()+1).at(0)],
         [NI],
     ))
