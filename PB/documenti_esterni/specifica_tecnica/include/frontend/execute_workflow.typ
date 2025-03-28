@@ -21,7 +21,7 @@ Gestione della risposta:
 
 *useExecuteWorkflow*
 
-#declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface") è un hook React personalizzato che permette di eseguire un workflow utilizzando la classe ExecuteWorkflowService, gestendo automaticamente lo stato del caricamento e gli eventuali errori. L'hook restituisce una UseExecuteWorkflowInterface, ovvero un'interfaccia che contiene la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") per invocare l'esecuzione di un workflow e il parametro isLoading per la gestione dello stato di caricamento.
+#declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface") è un hook React personalizzato che permette di eseguire un workflow utilizzando la classe ExecuteWorkflowService, gestendo automaticamente lo stato del caricamento. L'hook restituisce una UseExecuteWorkflowInterface, ovvero un'interfaccia che contiene la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") per invocare l'esecuzione di un workflow e il parametro isLoading per la gestione dello stato di caricamento.
 
 L'hook utilizza la seguen variabile di stato:
 - isLoading, che indica se l'operazione è in corso.
