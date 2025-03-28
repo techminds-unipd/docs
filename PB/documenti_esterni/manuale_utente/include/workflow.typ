@@ -40,8 +40,8 @@ Il mancato rispetto di tale suggerimento potrebbe portare a risultati non deside
 ) 
 
 *Eliminazione componenti del workflow* \
-Per eliminare un blocco dal canvas si può cliccare la \"x\" in alto a destra del blocco oppure, dopo aver selezionato un blocco, si può premere il tasto "backspace".
-Per eliminare un arco basterà cliccare sull'arco e premere il tasto "backspace".
+Per eliminare un blocco o un arco dal canvas si può cliccare la \"x\" in alto a sinistra dell'elemento oppure, dopo aver selezionato una componente, si può premere il tasto "backspace".
+
 
 *Requisiti per un workflow valido* \
 Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visualizzato un messaggio di errore, di seguito sono riportati alcuni esempi di workflow non validi:
