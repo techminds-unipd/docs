@@ -251,4 +251,19 @@ Il componente include anche due Handle, forniti dalla libreria ReactFlow, per co
 
 Similmente viene definito il componente DeletableOutputNode, con l'unica differenza che presenta un unico Handle per le connessioni in ingresso.
 
-==== 
+==== EditableEdge
+Il componente EditableEdge è un componente React personalizzato che rappresenta un arco all'interno di un workflow. Questo componente consente di visualizzare e modificare l'automazione scritta in linguaggio naturale.
+
+Il componente EditableEdge accetta diverse proprietà per configurare l’aspetto e il comportamento dell’arco:
+- id: l’identificativo univoco dell'arco;
+- sourceX e sourceY: le coordinate di partenza dell'arco;
+- targetX e targetY: le coordinate di arrivo dell'arco.
+- markerEnd: il tipo di marker di fine per l'arco (di default è MarkerType.ArrowClosed);
+- style: uno stile personalizzato per l'arco:
+- label: il testo che rappresenta la descrizione dell'automazione inserita dall'utente.
+
+Il componente permette di modificare la descrizione dell'automazione tramite un campo di input di tipo textarea. Quando l'utente cambia il testo, il valore dell'etichetta viene aggiornato sia nel componente che nello stato del workflow grazie alla funzione #declaration[handleTextChange]. 
+
+L'arco viene visualizzato tramite il componente BaseEdge di ReactFlow, che riceve il percorso calcolato tramite la funzione getBezierPath (per disegnare un arco curvo tra il nodo di origine e il nodo di destinazione).
+
+Infine grazie a EdgeLabelRenderer, fornito sempre da ReactFlow, è possibile visualizzare il textarea sopra il percorso dell'arco. La posizione del textarea è regolata tramite la trasformazione CSS per centrare il testo nella posizione calcolata (labelX, labelY) rispetto al percorso dell'arco.
