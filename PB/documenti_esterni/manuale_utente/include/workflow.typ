@@ -25,7 +25,7 @@ Un blocco può essere sia di input che di output.
   image("../assets/blocco-gmail.png"), caption: "Esempio blocco sia di input sia di output."
 )
 
-*Aggiunta di un automazione tra blocchi* \
+*Aggiunta di un'automazione tra blocchi* \
 - Per descrivere un automazione tra due blocchi aggiunti nella Canvas è necessario collegarli con un arco. 
 - Per creare un arco è necessario collegare un pallino destro ad un pallino sinistro, o viceversa, non è quindi possibile collegare due pallini destri o due pallini sinistri.
 - Per collegare due pallini basterà mantenere premuto il tasto sinistro del mouse e trascinarlo da un pallino all'altro.
