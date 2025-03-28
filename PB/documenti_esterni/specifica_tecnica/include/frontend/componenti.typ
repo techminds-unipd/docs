@@ -252,6 +252,8 @@ Il componente include anche due Handle, forniti dalla libreria ReactFlow, per co
 Similmente viene definito il componente DeletableOutputNode, con l'unica differenza che presenta un unico Handle per le connessioni in ingresso.
 
 ==== EditableEdge
+// immagine ?
+
 Il componente EditableEdge è un componente React personalizzato che rappresenta un arco all'interno di un workflow. Questo componente consente di visualizzare e modificare l'automazione scritta in linguaggio naturale.
 
 Il componente EditableEdge accetta diverse proprietà per configurare l’aspetto e il comportamento dell’arco:
@@ -267,3 +269,25 @@ Il componente permette di modificare la descrizione dell'automazione tramite un 
 L'arco viene visualizzato tramite il componente BaseEdge di ReactFlow, che riceve il percorso calcolato tramite la funzione getBezierPath (per disegnare un arco curvo tra il nodo di origine e il nodo di destinazione).
 
 Infine grazie a EdgeLabelRenderer, fornito sempre da ReactFlow, è possibile visualizzare il textarea sopra il percorso dell'arco. La posizione del textarea è regolata tramite la trasformazione CSS per centrare il testo nella posizione calcolata (labelX, labelY) rispetto al percorso dell'arco.
+
+==== WorkflowCanvas
+// immagine???
+
+Il componente WorkflowCanvas è un componente React personalizzato che rappresenta la superficie principale di lavoro per la gestione dei workflow. Utilizza la libreria ReactFlow per gestire la visualizzazione e l'interazione con nodi e archi. Questo componente permette agli utenti di aggiungere nodi, connettere nodi tramite archi, e modificare la descrizione dell'automazione. Viene inoltre utilizzato un sistema di drag-and-drop per aggiungere nuovi nodi al flusso di lavoro.
+
+Il componente WorkflowCanvas accetta le seguenti proprietà:
+- nodes: un array di nodi che rappresentano i nodi attuali del workflow;
+- edges: un array di archi che rappresentano le connessioni tra i nodi;
+- onNodesChange: una funzione per gestire i cambiamenti sui nodi;
+- onEdgesChange: una funzione per gestire i cambiamenti sugli archi;
+- setNodes: una funzione per aggiornare lo stato dei nodi del workflow;
+- setEdges: una funzione per aggiornare lo stato degli archi del workflow;
+
+Gli utenti possono trascinare nodi nella superficie di lavoro. La posizione del nodo viene determinata in base alla posizione del mouse quando il nodo viene rilasciato. Se il nodo è un "Pastebin", verrà creato come un nodo di tipo "DeletableOutputNode", altrimenti come un nodo "DeleatableNode".
+
+All'interno del componente sono definite le seguenti funzioni:
+- #declaration[onConnect]: crea un arco tra i nodi sorgente e destinazione. Il tipo di arco è "EditableEdge", permettendo agli utenti di modificare la descrizione dell'automazione. La connessione viene poi aggiunta alla lista degli archi tramite #declaration[setEdges];
+- #declaration[isValidConnection]: impedisce la creazione di cicli nei flussi di lavoro, garantendo che non possa esserci una connessione che ritorni su un nodo di partenza (per evitare loop infiniti);
+- #declaration[onDragOver]: gestisce l'evento di dragover;
+- #declaration[onDrop]: gestisce l'evento di drop, dove un nodo viene posizionato nella superficie di lavoro quando viene rilasciato.
+
