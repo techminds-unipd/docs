@@ -7,7 +7,7 @@
 
 GetWorkflowService è una classe TypeScript che si occupa di recuperare un singolo workflow inviando una richiesta GET a un'API REST.
 
-La classe contiene un unico metodo, #declaration("getWorkflow(name: string, accessToken: string): Promise<WorkflowDTO>"), che effettua una chiamata all'endpoint API corrispondente per ottenere i dettagli di un workflow specificato dal parametro name e gestisce i diversi casi di risposta:
+La classe contiene un unico metodo, #declaration("getWorkflow(name: string, accessToken: string): Promise<WorkflowDTO>"), che effettua una chiamata all'endpoint API corrispondente per ottenere i dettagli del workflow specificato dal parametro name e gestisce i diversi casi di risposta:
 - Se la richiesta ha successo (200), istanzia e restituisce un oggetto WorkflowDTO con il nome, i nodi e gli archi del workflow;
 - In caso di errore restituisce un Error con il messaggio di errore fornito dalla risposta.
 
