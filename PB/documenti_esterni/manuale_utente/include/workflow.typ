@@ -42,7 +42,7 @@ Per eliminare un arco basterà cliccare sull'arco e premere il tasto "backspace"
 
 *Requisiti per un workflow valido* \
 Se un workflow non è valido e si prova a eseguirlo o a salvarlo, verrà visualizzato un messaggio di errore, di seguito sono riportati alcuni esempi di workflow non validi:
-- La descrizione dell'automazione non deve essere vuota.
+- La descrizione dell'automazione non deve essere vuota;
 #figure(
   image("../assets/empty-description.png", width: 70%), caption: "Esempio descrizione automazione vuota."
 )
