@@ -121,11 +121,6 @@ Framework per la creazione di agenti AI in Python.
 - *Versione*: 29.7.0;
 - *Documentazione*: https://jestjs.io/docs/getting-started [visitato il: 25/02/2025]. 
 
-=== Pylint
-- *Utilizzo*: analisi statica del codice Python;
-- *Versione*: 4.0.0;
-- *Documentazione*: https://pylint.pycqa.org/en/latest/ [visitato il: 25/02/2025].
-
 === Pytest
 - *Utilizzo*: analisi dinamica del codice Python;
 - *Versione*: 8.3.4;
