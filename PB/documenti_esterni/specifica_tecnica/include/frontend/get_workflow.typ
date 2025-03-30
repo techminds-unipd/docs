@@ -13,10 +13,10 @@ La classe contiene un unico metodo, #declaration("getWorkflow(name: string, acce
 
 *useGetWorkflow*
 
-#declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): Promise<WorkflowDTO | undefined>") è un hook React personalizzato che permette di recuperare un workflow specifico utilizzando il servizio GetWorkflowService, gestendo automaticamente il processo di recupero. L'hook restituisce una funzione #declaration("getWorkflow(name: string): Promise<WorkflowDTO | undefined>") che accetta il nome del workflow come parametro e restituisce un oggetto WorkflowDTO o undefined in caso l'utente non sia autenticato.
+#declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): Promise<WorkflowDTO>") è un hook React personalizzato che permette di recuperare un workflow specifico utilizzando il servizio GetWorkflowService, gestendo automaticamente il processo di recupero. L'hook restituisce una funzione #declaration("getWorkflow(name: string): Promise<WorkflowDTO>") che accetta il nome del workflow come parametro e restituisce un oggetto WorkflowDTO.
 
 Grazie alla variabile user, recuperata tramite l'hook #declaration[useAuth()], l'hook si assicura che la richiesta venga eseguita solo se l'utente è autenticato.
 In questo caso invoca il metodo #declaration("getWorkflow(name: string, accessToken: string): Promise<WorkflowDTO>") di GetWorkflowService, passando il nome del workflow e il token di accesso dell'utente.
 
-Se la richiesta va a buon fine, la funzione restituisce l'oggetto WorkflowDTO contenente i dati del workflow. Altrimenti, la funzione non restituisce nulla (undefined), senza mostrare errori all'utente, poiché la gestione degli errori avviene direttamente durante la chiamata al servizio.
+Se la richiesta va a buon fine, la funzione restituisce l'oggetto WorkflowDTO contenente i dati del workflow. In caso contrario, la funzione rilancia gli errori lanciati da GetWorkflowService delegando il controllo al chiamante.
 

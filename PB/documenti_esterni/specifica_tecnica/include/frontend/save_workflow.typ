@@ -14,10 +14,10 @@ Gestisce le risposte del server nel seguente modo:
 
 *useSaveWorkflow*
 
-#declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO | undefined>") è un hook React personalizzato che permette di salvare un workflow utilizzando il servizio SaveWorkflowService, gestendo automaticamente il processo di salvataggio. L'hook restituisce una funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO | undefined>") che accetta un oggetto WorkflowDTO come parametro e restituisce un oggetto WorkflowDTO o undefined in caso di errore.
+#declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO>") è un hook React personalizzato che permette di salvare un workflow utilizzando il servizio SaveWorkflowService, gestendo automaticamente il processo di salvataggio. L'hook restituisce una funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO>") che accetta un oggetto WorkflowDTO come parametro e restituisce un oggetto WorkflowDTO.
 
 L'hook utilizza la variabile user recuperata tramite l'hook #declaration[useAuth()] per verificare che l'utente sia autenticato prima di eseguire il salvataggio del workflow. Se l'utente è autenticato, invoca il metodo #declaration("saveWorkflow(workflow: WorkflowDTO, accessToken: string): Promise<WorkflowDTO>") di SaveWorkflowService passando il workflow e il token di accesso dell'utente.
 
-Se la richiesta ha successo, la funzione restituisce l'oggetto WorkflowDTO aggiornato con i dati del workflow. In caso contrario, la funzione non restituisce nulla (undefined), senza generare errori visibili all'utente in quanto il controllo avviene a livello di chiamata al servizio.
+Se la richiesta ha successo, la funzione restituisce l'oggetto WorkflowDTO aggiornato con i dati del workflow. In caso contrario, la funzione rilancia gli errori lanciati da SaveWorkflowService delegando il controllo al chiamante.
 
 Il funzionamento del salvataggio è quindi gestito all'interno della funzione #declaration[saveWorkflow], che può essere invocata da qualsiasi componente React che utilizza questo hook.
