@@ -3,6 +3,7 @@
 
 #let getIntegrazione() = {
     let backend = ()
+    let frontend = ()
 
     backend.push(("TIB" + str(backend.len()+1),
         [Endpoint: *user/register*. Verificare che il backend possa ricevere i dati di un utente, registrarlo all'interno del database e ritornare i suoi dati.],
@@ -79,7 +80,78 @@
         [S],
     ))
 
-    return backend
+    // test frontend
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/all*. Verificare che il frontend riceva la lista con i nomi dei workflow in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/all*. Verificare che il frontend lanci un errore se lo stato della richiesta è diverso da 200.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il frontend riceva il nuovo workflow creato in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il frontend lanci un errore con il messaggio 'Workflow with the same name already exists' se lo stato della richiesta è 400.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il frontend riceva il workflow eliminato in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il frontend lanci un errore se lo stato della richiesta è 404.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il frontend riceva il workflow selezionato in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il frontend lanci un errore se lo stato della richiesta è diverso da 200.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *user/login*. Verificare che il frontend riceva l'access token in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *user/login*. Verificare che il frontend lanci un errore con il messaggio 'wrong username or password' se lo stato della richiesta è 401.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *user/register*. Verificare che il frontend riceva l'utente creato in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *user/register*. Verificare che il frontend lanci un errore con il messaggio 'Username already exists' se lo stato della richiesta è 400.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/save*. Verificare che il frontend riceva il workflow salvato in caso di successo.],
+        [S],
+    ))
+
+    frontend.push(("TIF" + str(frontend.len()+1),
+        [Endpoint: *workflow/save*. Verificare che il frontend lanci un errore se lo stato della richiesta è diverso da 200.],
+        [S],
+    ))
+
+    return backend + frontend
 }
 
 // test di unità
