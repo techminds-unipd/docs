@@ -44,26 +44,15 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
   - source: number;
   - target: number.
 #figure(
-  image("../../assets/frontend/WorkflowDTO.svg"),
+  image("../../assets/frontend/WorkflowDTO.svg", width: 50%),
   caption: [WorkflowDTO e dipendenze.]
 )
 
-//INSERIRE DIAGRAMMA DELLE CLASSI PER I TIPI
-
-=== Componenti personalizzati
-Sono stati definiti dei componenti React custom per le seguenti ragioni:
-- Possibilità di riutilizzarli in più parti dell'applicazione;
-- Migliore leggibilità e organizzazione del codice;
-- Separazione delle responsabilità: i componenti React si occupano della UI, mentre la logica di business e le chiamate API sono delegate a hook personalizzati e classi dedicate.
-In alcuni componenti sono citati degli hook personalizzati che si occupano di fornire una certa funzionalità, meglio approfonditi nella @hook.
-
 #include("componenti.typ")
-
-=== Pagine
 #include("pagine.typ")
 
 === Funzionalità <hook>
-#include ("registerUser.typ")
+#include("registerUser.typ")
 #include("LoginUser_frontend.typ")
 #include("create_workflow_frontend.typ")
 #include("delete_workflow_frontend.typ")

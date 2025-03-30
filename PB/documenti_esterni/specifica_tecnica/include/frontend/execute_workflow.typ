@@ -1,9 +1,11 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 ==== ExecuteWorkflow
-// TODO inserire le immagini
-
 *ExecuteWorkflowService*
+#figure(
+  image("../../assets/frontend/ExecuteWorkflowService.svg"),
+  caption: [Classe ExecuteWorkflowService.]
+)
 
 La classe ExecuteWorkflowService è una classe dotata di un unico metodo: #declaration("executeWorkflow(workflow: WorkflowDTO, accessToken: string, googleToken: GoogleAccountToken): Promise<string>") che si occupa di eseguire un workflow inviando una richiesta POST a un'API REST.
 

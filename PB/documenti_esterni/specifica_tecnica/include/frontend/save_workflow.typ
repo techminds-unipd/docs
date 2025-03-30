@@ -1,9 +1,11 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 ==== SaveWorkflow
-// TODO inserire immagine
-
 *SaveWorkflowService*
+#figure(
+  image("../../assets/frontend/SaveWorkflowService.svg", width: 70%),
+  caption: [Classe SaveWorkflowService.]
+)
 
 SaveWorkflowService è una classe che si occupa di salvare un workflow inviando una richiesta PUT a un'API REST.
 
