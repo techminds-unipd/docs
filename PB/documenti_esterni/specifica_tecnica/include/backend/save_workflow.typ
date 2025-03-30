@@ -2,7 +2,7 @@
 
 ==== SaveWorkflow
 #figure(
-    image("../../assets/backend/register_user_diagramma_classi.svg", width: 90%),
+    image("../../assets/backend/save_workflow.svg", width: 110%),
     caption: [Diagramma delle classi riguardante la funzionalità SaveWorkflow del backend.],
 )
 
