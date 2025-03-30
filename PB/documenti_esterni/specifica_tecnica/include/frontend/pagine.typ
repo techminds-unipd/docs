@@ -91,7 +91,7 @@ Accanto a WorkflowCanvas, si trova la *WorkflowSidebar*, una barra laterale che 
 
 Infine nella parte superiore della pagina si trova il componente *WorkflowHeader*, che visualizza il nome del workflow e due Button forniti da MUI, uno per l'esecuzione del workflow e uno per il salvataggio.
 
-Quando un utente accede alla pagina, il workflow viene caricato dinamicamente grazie all'hook personalizzato #declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): Promise<WorkflowDTO | undefined>") che si occupa di recuperare il workflow tramite la funzione #declaration("getWorkflow(name: string): Promise<WorkflowDTO | undefined>"). La funzione restituisce un oggetto di tipo WorkflowDTO, che viene poi convertito in un formato utilizzabile da ReactFlow.
+Quando un utente accede alla pagina, il workflow viene caricato dinamicamente grazie all'hook personalizzato #declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): Promise<WorkflowDTO>") che si occupa di recuperare il workflow tramite la funzione #declaration("getWorkflow(name: string): Promise<WorkflowDTO>"). La funzione restituisce un oggetto di tipo WorkflowDTO, che viene poi convertito in un formato utilizzabile da ReactFlow.
 
 Una volta che i dati sono stati recuperati e mappati, vengono salvati nello stato del componente tramite i metodi #declaration[setNodes] e #declaration[setEdges]. Questi stati contengono rispettivamente i nodi e gli archi del workflow, che vengono visualizzati nella canvas. Ogni nodo ha una posizione specifica, un'etichetta e un tipo.
 
