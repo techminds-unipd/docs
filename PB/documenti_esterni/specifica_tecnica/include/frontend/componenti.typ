@@ -248,3 +248,84 @@ AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agl
 - SignIn;
 - SignUp.
 
+==== DeleatableNode e DeletableOutputNode
+// inserire immagine?
+
+Il componente DeletableNode è un componente React personalizzato che rappresenta un nodo eliminabile all'interno di un workflow.
+
+Il componente DeletableNode accetta le seguenti prop:
+- id: rappresenta l’identificativo univoco del nodo da visualizzare.
+- data: un oggetto che contiene un'etichetta (label), che viene visualizzata come testo all'interno del nodo.
+
+Quando l'utente clicca sull'icona di cancellazione (IconButton con l'icona ClearIcon di MUI), viene invocata la funzione #declaration[handleDelete]. Questa consente di eliminare il nodo dal workflow:
+- Viene rimosso il nodo con l'id specificato tramite #declaration[setNodes];
+- Vengono rimossi tutti gli archi che coinvolgono il nodo, sia come nodo di origine che come nodo di destinazione.
+
+Il componente include anche due Handle, forniti dalla libreria ReactFlow, per connettere il nodo ad altri nodi nel workflow:
+- Un Handle di tipo source per connessioni in uscita;
+- Un Handle di tipo target per connessioni in ingresso.
+
+Similmente viene definito il componente DeletableOutputNode, con l'unica differenza che presenta un unico Handle per le connessioni in ingresso.
+
+==== EditableEdge
+// immagine ?
+
+Il componente EditableEdge è un componente React personalizzato che rappresenta un arco all'interno di un workflow. Questo componente consente di visualizzare e modificare l'automazione scritta in linguaggio naturale.
+
+Il componente EditableEdge accetta diverse proprietà per configurare l’aspetto e il comportamento dell’arco:
+- id: l’identificativo univoco dell'arco;
+- sourceX e sourceY: le coordinate di partenza dell'arco;
+- targetX e targetY: le coordinate di arrivo dell'arco.
+- markerEnd: il tipo di marker di fine per l'arco (di default è MarkerType.ArrowClosed);
+- style: uno stile personalizzato per l'arco:
+- label: il testo che rappresenta la descrizione dell'automazione inserita dall'utente.
+
+Il componente permette di modificare la descrizione dell'automazione tramite un campo di input di tipo textarea. Quando l'utente cambia il testo, il valore dell'etichetta viene aggiornato sia nel componente che nello stato del workflow grazie alla funzione #declaration[handleTextChange]. 
+
+L'arco viene visualizzato tramite il componente BaseEdge di ReactFlow, che riceve il percorso calcolato tramite la funzione getBezierPath (per disegnare un arco curvo tra il nodo di origine e il nodo di destinazione).
+
+Infine grazie a EdgeLabelRenderer, fornito sempre da ReactFlow, è possibile visualizzare il textarea sopra il percorso dell'arco. La posizione del textarea è regolata tramite la trasformazione CSS per centrare il testo nella posizione calcolata (labelX, labelY) rispetto al percorso dell'arco.
+
+==== WorkflowCanvas
+// immagine???
+
+Il componente WorkflowCanvas è un componente React personalizzato che rappresenta la superficie principale di lavoro per la gestione dei workflow. Utilizza la libreria ReactFlow per gestire la visualizzazione e l'interazione con nodi e archi. Questo componente permette agli utenti di aggiungere nodi, connettere nodi tramite archi, e modificare la descrizione dell'automazione. Viene inoltre utilizzato un sistema di drag-and-drop per aggiungere nuovi nodi al workflow.
+
+Il componente WorkflowCanvas accetta le seguenti proprietà:
+- nodes: un array di nodi che rappresentano i nodi attuali del workflow;
+- edges: un array di archi che rappresentano le connessioni tra i nodi;
+- onNodesChange: una funzione per gestire i cambiamenti sui nodi;
+- onEdgesChange: una funzione per gestire i cambiamenti sugli archi;
+- setNodes: una funzione per aggiornare lo stato dei nodi del workflow;
+- setEdges: una funzione per aggiornare lo stato degli archi del workflow;
+
+Gli utenti possono trascinare nodi nella superficie di lavoro. La posizione del nodo viene determinata in base alla posizione del mouse quando il nodo viene rilasciato. Se il nodo è un "Pastebin", verrà creato come un nodo di tipo "DeletableOutputNode", altrimenti come un nodo "DeleatableNode".
+
+All'interno del componente sono definite le seguenti funzioni:
+- #declaration[onConnect]: crea un arco tra i nodi sorgente e destinazione. Il tipo di arco è "EditableEdge", permettendo agli utenti di modificare la descrizione dell'automazione. La connessione viene poi aggiunta alla lista degli archi tramite #declaration[setEdges];
+- #declaration[isValidConnection]: impedisce la creazione di cicli nei flussi di lavoro, garantendo che non possa esserci una connessione che ritorni su un nodo di partenza (per evitare loop infiniti);
+- #declaration[onDragOver]: gestisce l'evento di dragover;
+- #declaration[onDrop]: gestisce l'evento di drop, che si ha quando un nodo viene posizionato nella superficie di lavoro quando viene rilasciato.
+
+==== WorkflowHeader
+// immagine?
+
+Il componente WorkflowHeader fornisce la barra di intestazione per la pagina Workflow, con funzionalità per salvare e eseguire il workflow.
+
+WorkflowHeader accetta una sola prop:
+- name: il nome del workflow che verrà visualizzato nell'intestazione.
+
+Questo componente offre due funzionalità:
+- Salvataggio: cliccando sul Button di MUI con etichetta "Save", viene invocato il metodo #declaration[handleSave]. Questo metodo recupera i dati relativi ai nodi e agli archi dal workflow, mappandoli in oggetti di tipo NodeDTO ed EdgeDTO. Successivamente viene chiamata la funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO>") offerta dall'hook custom #declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO>"). Attraverso una Snackbar offerta da MUI si notifica l'utente del successo o del fallimento del salvataggio.
+- Esecuzione: cliccando sul Button di MUI con etichetta "Execute", viene invocato il metodo #declaration[handleExecute]. Similmente a quanto avviene per il salvataggio vengono recuperati i dati del workflow e viene chiamata la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") offerta dall'hook personalizzato #declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface"). Se l'esecuzione ha successo viene visualizzata la risposta in una finestra di dialogo (utilizzando Dialog, DialogContent, DialogTitle e DialogActions di MUI). Se invece l'esecuzione fallisce viene visualizzato un messaggio di errore nella Snackbar.
+
+==== WorkflowSidebar
+//immagine?
+
+Il componente WorkflowSidebar fornisce una barra laterale che mostra i servizi disponibili e non disponibili per l'utente e consente di trascinare e rilasciare i nodi dei servizi nel workflow.
+
+Per verificare se un servizio è disponibile si avvale dell'hook #declaration[useGoogleToken()]. Se il token Google è presente i servizi GCalendar e Gmail sono disponibili per essere aggiunti al workflow, altrimenti i nodi vengono mostrati come disabilitati, indicando che quei servizi non sono disponibili.
+
+Il componente usa il sistema di drag-and-drop per permettere all'utente di aggiungere i nodi di servizio al workflow. La funzione onDragStart prende l'evento di trascinamento e il tipo di nodo (ad esempio "GCalendar", "Gmail", o "Pastebin") e imposta il tipo di nodo da usare nel workflow tramite l'hook #declaration[useDnD()].
+
+I nodi presenti nel componente Sidebar sono a loro volta dei componenti, CalendarNode, GmailNode o PastebinNode. Sono poi utilizzati i componenti Box e Typography offerti da MUI.
