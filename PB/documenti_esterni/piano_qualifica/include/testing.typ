@@ -68,7 +68,7 @@ Codici:
 
 == Test di sistema
 In questa sezione esponiamo i test di sistema che hanno lo scopo di verificare come l'esecuzione del sistema soddisfi i requisiti funzionali individuati durante l'#glossario[analisi dei requisiti] (vedi 
-#link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")[Analisi dei requisiti] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")) [versione 1.3.0]).
+#link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")[Analisi dei requisiti] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf")) [versione 2.0.0]).
 
 #set par(justify: false)
 #figure(

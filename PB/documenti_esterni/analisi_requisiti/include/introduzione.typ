@@ -29,12 +29,12 @@ I casi d'uso seguono la seguente struttura:
 
 === Riferimenti normativi
 #set par(justify: false)
-- #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf [versione 1.0.0];
+- #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf [versione 2.0.0];
 - #glossario[Capitolato] C3, Automatizzare le routine digitali tramite l’intelligenza generativa: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf [visitato il: 17/02/2025];
 - Regolamento progetto didattico: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf [visitato il: 17/02/2025].
 
 === Riferimenti informativi
 - Slide argomento T5 (corso di Ingegneria del Software): https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf [visitato il: 17/02/2025];
 - Slide lezione sui diagrammi dei casi d'uso (corso di Ingegneria del Software): https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf [visitato il: 17/02/2025];
-- Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf [versione 1.0.0].
+- Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf [versione 2.0.0].
 #set par(justify: true)

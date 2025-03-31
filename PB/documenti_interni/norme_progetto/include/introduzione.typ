@@ -33,5 +33,5 @@ Il documento è organizzato secondo tali processi, ognuno dei quali presenta del
 - Docs as Code: https://www.writethedocs.org/guide/docs-as-code/ \[visitato il: 10/02/2025\];
 - T5 -  #glossario[Analisi dei requisiti], in particolare le slide "Documentazione dell'analisi": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T05.pdf \[visitato il: 10/02/2025\];
 - T9 - #glossario[Verifica] e #glossario[validazione], tutte le slide: https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T09.pdf \[visitato il: 10/02/2025\];
-- Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 1.0.0\].
+- Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 2.0.0\].
 #set par(justify: true)

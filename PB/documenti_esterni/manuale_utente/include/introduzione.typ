@@ -16,11 +16,10 @@ Lo scopo di questo documento è fornire all'utente finale delle istruzioni chiar
 == Riferimenti 
 #set par(justify: false) 
 === Riferimenti normativi 
-- #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf \[versione 1.0.0\]; 
 - #glossario[Capitolato] C3, Automatizzare le routine digitali tramite l’intelligenza generativa: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf \[visitato il: 17/03/2025\]; 
 - Regolamento #glossario[progetto] didattico, in particolare la slide intitolata "Obblighi documentali": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 17/03/2025\]. 
 
 === Riferimenti informativi 
-- #glossario[Specifica tecnica]: https://techminds-unipd.github.io/docs/PB/documenti_esterni/specifica_tecnica/specifica-tecnica.pdf \[versione 0.17.0\]. 
+- #glossario[Specifica tecnica]: https://techminds-unipd.github.io/docs/PB/documenti_esterni/specifica_tecnica/specifica-tecnica.pdf \[versione 1.0.0\]. 
 
 #set par(justify: true)
