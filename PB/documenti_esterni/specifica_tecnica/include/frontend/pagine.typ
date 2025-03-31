@@ -37,7 +37,7 @@ Il componente Dashboard rappresenta la pagina principale per gli utenti autentic
 Il componente utilizza #declaration("useState()") per gestire il ricaricamento della lista dei workflow:
 - shouldReload: stato booleano che determina se la lista dei workflow deve essere aggiornata;
 - setShouldReload: funzione per modificare lo stato, permettendo il refresh della lista dopo la creazione o eliminazione di un workflow.
-\
+
 L'interfaccia della Dashboard è strutturata in due sezioni principali, entrambe centrate grazie al sistema Grid di MUI:
 - Sezione di benvenuto e creazione workflow:
   - mostra un messaggio di benvenuto personalizzato; 
