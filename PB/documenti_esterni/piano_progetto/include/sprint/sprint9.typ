@@ -147,12 +147,20 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - RP2 - Malattia di un membro del team (descritto in @tabella-RP2);
 - RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3).
 
-//==== Rischi occorsi
+==== Rischi occorsi
+Nessuno dei rischi previsti si è concretizzato.
 
+==== Conclusioni
+Durante il nono e ultimo sprint sono state terminate tutte le attività previste, consentendo al team di candidarsi per la revisione PB entro i termini previsti. È stata terminata la codifica dei componenti mancanti del frontend e sono stati implementati i test di sistema e i test di integrazione per la componente frontend. Infine sono stati aggiornati e completati tutti i documenti, in particolare il manuale utente e la specifica tecnica.
+// TODO citare incontro con l'azienda
 
-//==== Conclusioni
+==== Retrospettiva
+L'andamento dello sprint è stato molto positivo, infatti il gruppo ha terminato tutte le attività pianificate in anticipo. Questo risultato è indice di una crescente efficienza operativa e di un miglioramento dell'organizzazione interna del gruppo.
 
-//==== Retrospettiva
+Uno degli aspetti più rilevanti di questo sprint è stata la riduzione del rapporto tra ore produttive e ore di orologio rispetto alle fasi iniziali del progetto. Se nei primi sprint il prime time era notevolemnte inferiore rispetto alle ore di orologio a causa di rallentamenti, incertezze e necessità di coordinamento, in questo sprint il team è riuscito ad diminuire di molto questo rapporto.
+Questo è stato possibile grazie ad una maggiore familiarità con il progetto, e soprattutto con le tecnologie impiegate.
+
+Si è incontrata qualche difficoltà nell'implementazione dei test di sistema, subito superata grazie alla collaborazione tra i membri del gruppo, altro punto di forza che ha permesso di terminare tutte le attività in anticipo. 
 
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 9)
