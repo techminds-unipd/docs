@@ -13,7 +13,8 @@ Egregio prof. Cardin,
 con la presente lettera il gruppo Tech Minds è lieto di comunicarVi la propria candidatura alla
 revisione di avanzamento Product Baseline, per il capitolato denominato:
 
-#align(center, link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf")[C3 - _Automatizzare le routine digitali tramite l’intelligenza generativa_])
+#align(center, link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf")[C3 - _Automatizzare le routine digitali tramite l’intelligenza generativa_ #footnote(link("https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf"))])
+
 
 proposto dall'azienda VarGroup.
 
