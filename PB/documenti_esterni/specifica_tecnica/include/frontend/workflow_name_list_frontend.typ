@@ -1,9 +1,12 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 ==== WorkflowNameList
-// TODO inserire immagine
 
 *AllWorkflowsService*
+#figure(
+  image("../../assets/frontend/AllWorkflowsService.svg", width: 50%),
+  caption: [Classe AllWorkflowsService.]
+)
 
 AllWorkflowsService è una classe TypeScript che si occupa di recuperare la lista di tutti i workflow disponibili inviando una richiesta GET a un'API REST.
 

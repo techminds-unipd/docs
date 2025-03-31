@@ -1,9 +1,11 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
 ==== GetWorkflow
-// TODO inserire immagine
-
 *GetWorkflowService *
+#figure(
+  image("../../assets/frontend/GetWorkflowService.svg", width: 70%),
+  caption: [Classe GetWorkflowService.]
+)
 
 GetWorkflowService è una classe TypeScript che si occupa di recuperare un singolo workflow inviando una richiesta GET a un'API REST.
 

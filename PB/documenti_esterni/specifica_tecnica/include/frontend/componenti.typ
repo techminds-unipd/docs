@@ -1,5 +1,11 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
+=== Componenti personalizzati
+Sono stati definiti dei componenti React custom per le seguenti ragioni:
+- Possibilità di riutilizzarli in più parti dell'applicazione;
+- Migliore leggibilità e organizzazione del codice;
+- Separazione delle responsabilità: i componenti React si occupano della UI, mentre la logica di business e le chiamate API sono delegate a hook personalizzati e classi dedicate.
+In alcuni componenti sono citati degli hook personalizzati che si occupano di fornire una certa funzionalità, meglio approfonditi nella @hook.
 ==== Footer
 In ogni pagina è presente un componente Footer che utilizza i seguenti componenti di MUI:
 - Grid2 per il layout;
@@ -8,7 +14,6 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ==== CustomLink
-// TODO da inserire immagine modificata (facciamo quando siamo sicuri non cambierà più nulla)
 Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
 
 Il componente accetta due props:
@@ -20,10 +25,6 @@ Grazie all'hook #declaration("useLocation()") di React Router, il componente pu�
 Se invece il percorso è diverso, viene restituito un componente Link di MUI, che utilizza la logica del componente Link di React Router. Questo permette di integrare correttamente la navigazione con l'estitica di MUI e le funzionalità offerte da React Router.
 
 ==== CustomButton
-#figure(
-    image("../../assets/frontend/CustomButton.svg", width: 55%),
-  caption: [Componente CustomButton.],
-)
 Il componente CustomButton è un componente React personalizzato che gestisce i pulsanti di navigazione all'interno della web app. Il suo scopo è fornire un pulsante che consenta la navigazione tra le pagine.
 
 Il componente accetta tre props:
@@ -36,10 +37,6 @@ In base alla prop \"variant\", la funzione #declaration("getButtonStyles(variant
 Infine, come per CustomLink, utilizza il componente Link (rinominato RouterButton) di React Router per gestire correttamente la navigazione senza ricaricare la pagina.
 
 ==== LogoutMenuItem
-#figure(
-    image("../../assets/frontend/LogoutMenuItem.svg", width: 65%),
-  caption: [Componente LogoutMenuItem.],
-)
 Il componente LogoutMenuItem è un componente React personalizzato che gestisce la procedura di logout. Utilizza MUI per l'interfaccia utente e React Router per la navigazione. Il suo scopo è mostrare un'opzione di logout in un menu, aprire un dialogo di conferma e, se confermato, eseguire la procedura di logout e reindirizzare l'utente alla homepage.
 
 Il componente accetta una prop:
@@ -50,8 +47,6 @@ Il componente utilizza l'hook #declaration("useState()") per gestire l'apertura 
 - \"Yes\", che quando cliccato esegue il logout chiamando la funzione #declaration("handleLogout()"). Quest'ultima invoca le funzioni #declaration("logoutUser()") e #declaration("removeGoogleToken()") fornite dai custom hook #declaration("useAuth()") e #declaration("useGoogleToken()") e reindirizza l'utente alla pagina principale utilizzando l'hook #declaration("useNavigate()") di React Router.
 
 ==== Navbar <navbar>
-// SECONDO ME L'IMMAGINE DEL DIAGRAMMA VA INSERITO PIù AVANTI PER CAPIRE MEGLIO COSA METTERE PER LA GESTIONE DELL'AUTENTICAZIONE
-
 Il componente Navbar è una barra di navigazione personalizzata, realizzata con MUI e React Router. Fornisce un'interfaccia intuitiva per la navigazione tra le diverse pagine dell'applicazione, distinguendo tra utenti autenticati e non autenticati.
 
 Il componente Navbar include:
@@ -65,11 +60,6 @@ Le voci della Navbar cambiano in base allo stato di autenticazione fornito dal c
 - Utente autenticato: viene mostrato il link \"Dashboard\" e un'icona utente con menu a tendina. Quest'ultimo contiene un'opzione per accedere alla pagina \"Services\" e un'opzione di logout, gestita dal componente LogoutMenuItem.
 
 ==== PersonCard
-/*#figure(
-    image("../../assets/frontend/PersonCard.svg", width: 65%),
-  caption: [Componente PersonCard.],
-)*/
-// TODO inserire immagine
 La PersonCard è un componente React il cui scopo è mostrare il nome di una persona e fornire un link al suo profilo GitHub.
 
 Il componente accetta due props:
@@ -83,12 +73,6 @@ Il componente PersonCard è composto da:
 - Un Link che contiene l'Avatar e il Typography e ha come attributo #declaration[href] il profilo GitHub.
 
 ==== CustomNode
-/*#figure(
-    image("../../assets/frontend/CustomNode.svg", width: 65%),
-  caption: [Componente PersonCard.],
-)*/
-// TODO inserire immagine
-
 Il componente CustomNode è un componente React personalizzato che rappresenta un servizio tra Pastebin, Calendar e Gmail. 
 Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
 
@@ -120,8 +104,6 @@ I componenti che utilizzano CustomNode sono:
 - GmailNode.
 
 ==== SignUpForm
-// TODO inserire immagine
-
 SignUpForm è un componente React che mostra il form per la registrazione.
 
 Il componente usa i componenti di MUI:
@@ -159,8 +141,6 @@ I componenti personalizzati usati sono invece:
 SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): Promise<void>") fornita dal custom hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la password, il componente SignInForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login").
 
 ==== AddWorkflow
-// TODO inserire immagine
-
 Il componente AddWorkflow è un componente React personalizzato che permette agli utenti di creare un nuovo workflow. Viene utilizzato all’interno della pagina Dashboard.
 
 Il componente accetta una prop:
@@ -174,8 +154,6 @@ Quest'ultimo ha quindi due varianti:
 
 
 ==== WorkflowItem 
-// TODO inserire immagine
-
 Il componente WorkflowItem è un componente React personalizzato che rappresenta un singolo workflow all’interno della lista dei workflow. Viene utilizzato all’interno della pagina Dashboard.
 
 Il componente accetta varie prop:
@@ -190,8 +168,6 @@ Grazie all’hook personalizzato #declaration("useDeleteWorkflow(deleteWorkflowS
 Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow(name: string): Promise<DeleteWorkflowResponse | undefined>"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
 
 ==== WorkflowList
-// TODO inserire immagine
-
 Il componente WorkflowList è un componente React personalizzato che visualizza la lista dei workflow dell'utente. Viene utilizzato all’interno della pagina Dashboard.
 
 Il componente accetta due prop:
@@ -209,8 +185,6 @@ L’interfaccia mostra:
 
 
 ==== PrivateRoute
-// non credo serva l'immagine
-
 Il componente PrivateRoute è un componente React personalizzato che viene utilizzato all'interno della configurazione di React Router per gestire l'area dedicata all'utente autenticato.
 
 Il componente si basa sull'hook personalizzato #declaration("useAuth()") per verificare se l'utente ha effettuato il login. In tal caso, viene renderizzato il componente figlio attraverso Outlet.
@@ -221,8 +195,6 @@ Viene utilizzato per proteggere le seguenti pagine:
 - Services.
 
 ==== AnonymousRoute
-// non credo serva l'immagine
-
 Il componente AnonymousRoute è un componente React personalizzato che impedisce agli utenti autenticati di accedere a determinate pagine pubbliche.
 
 Il componente tilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
@@ -233,8 +205,6 @@ AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agl
 - SignUp.
 
 ==== DeleatableNode e DeletableOutputNode
-// inserire immagine?
-
 Il componente DeletableNode è un componente React personalizzato che rappresenta un nodo eliminabile all'interno di un workflow.
 
 Il componente DeletableNode accetta le seguenti prop:
@@ -252,8 +222,6 @@ Il componente include anche due Handle, forniti dalla libreria ReactFlow, per co
 Similmente viene definito il componente DeletableOutputNode, con l'unica differenza che presenta un unico Handle per le connessioni in ingresso.
 
 ==== EditableEdge
-// immagine ?
-
 Il componente EditableEdge è un componente React personalizzato che rappresenta un arco all'interno di un workflow. Questo componente consente di visualizzare e modificare l'automazione scritta in linguaggio naturale.
 
 Il componente EditableEdge accetta diverse proprietà per configurare l’aspetto e il comportamento dell’arco:
@@ -271,8 +239,6 @@ L'arco viene visualizzato tramite il componente BaseEdge di ReactFlow, che ricev
 Infine grazie a EdgeLabelRenderer, fornito sempre da ReactFlow, è possibile visualizzare il textarea sopra il percorso dell'arco. La posizione del textarea è regolata tramite la trasformazione CSS per centrare il testo nella posizione calcolata (labelX, labelY) rispetto al percorso dell'arco.
 
 ==== WorkflowCanvas
-// immagine???
-
 Il componente WorkflowCanvas è un componente React personalizzato che rappresenta la superficie principale di lavoro per la gestione dei workflow. Utilizza la libreria ReactFlow per gestire la visualizzazione e l'interazione con nodi e archi. Questo componente permette agli utenti di aggiungere nodi, connettere nodi tramite archi, e modificare la descrizione dell'automazione. Viene inoltre utilizzato un sistema di drag-and-drop per aggiungere nuovi nodi al workflow.
 
 Il componente WorkflowCanvas accetta le seguenti proprietà:
@@ -292,8 +258,6 @@ All'interno del componente sono definite le seguenti funzioni:
 - #declaration[onDrop]: gestisce l'evento di drop, che si ha quando un nodo viene posizionato nella superficie di lavoro quando viene rilasciato.
 
 ==== WorkflowHeader
-// immagine?
-
 Il componente WorkflowHeader fornisce la barra di intestazione per la pagina Workflow, con funzionalità per salvare e eseguire il workflow.
 
 WorkflowHeader accetta una sola prop:
@@ -304,8 +268,6 @@ Questo componente offre due funzionalità:
 - Esecuzione: cliccando sul Button di MUI con etichetta "Execute", viene invocato il metodo #declaration[handleExecute]. Similmente a quanto avviene per il salvataggio vengono recuperati i dati del workflow e viene chiamata la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") offerta dall'hook personalizzato #declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface"). Se l'esecuzione ha successo viene visualizzata la risposta in una finestra di dialogo (utilizzando Dialog, DialogContent, DialogTitle e DialogActions di MUI). Se invece l'esecuzione fallisce viene visualizzato un messaggio di errore nella Snackbar.
 
 ==== WorkflowSidebar
-//immagine?
-
 Il componente WorkflowSidebar fornisce una barra laterale che mostra i servizi disponibili e non disponibili per l'utente e consente di trascinare e rilasciare i nodi dei servizi nel workflow.
 
 Per verificare se un servizio è disponibile si avvale dell'hook #declaration[useGoogleToken()]. Se il token Google è presente i servizi GCalendar e Gmail sono disponibili per essere aggiunti al workflow, altrimenti i nodi vengono mostrati come disabilitati, indicando che quei servizi non sono disponibili.

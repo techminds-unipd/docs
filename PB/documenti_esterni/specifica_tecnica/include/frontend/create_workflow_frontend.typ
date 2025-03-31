@@ -3,7 +3,10 @@
 ==== CreateWorkflow
 
 *CreateWorkflowService*
-// TODO inserire immagine
+#figure(
+  image("../../assets/frontend/CreateWorkflowService.svg", width: 70%),
+  caption: [Classe CreateWorkflowService.]
+)
 
 CreateWorkflowService è una classe TypeScript che si occupa di creare un nuovo workflow inviando una richiesta a un'API REST.
 
