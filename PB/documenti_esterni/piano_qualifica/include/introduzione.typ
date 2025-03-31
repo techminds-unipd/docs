@@ -25,9 +25,9 @@ L'approccio che abbiamo deciso di adottare per questo documento è di tipo incre
 #set par(justify: false)
 === Riferimenti normativi
   - Spunti per lezione rovesciata #1, in particolare le slide intitolate "Cosa documentare": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/FC1.pdf \[visitato il: 10/02/2025\];
-  - #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf \[versione 1.0.0\];
+  - #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf \[versione 2.0.0\];
   - Regolamento progetto didattico, in particolare le slide "Controllo di avanzamento", "Piano di Qualifica" e "Obblighi documentali": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 10/02/2025\].
 === Riferimenti informativi
-  - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 1.0.0\];
-  - #glossario[Piano di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf \[versione 1.0.0\].
+  - Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 2.0.0\];
+  - #glossario[Piano di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf \[versione 2.0.0\].
   #set par(justify: true)
