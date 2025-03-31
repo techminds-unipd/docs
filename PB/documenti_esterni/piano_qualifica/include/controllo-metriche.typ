@@ -361,7 +361,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Dal grafico si può notare che l'AC è in linea con l'EAC, questo è dovuto al fatto che i costi del progetto sono stati in linea con quelli dell'ultimo preventivo a finire. Inoltre l'ETC è arrivato a quota 0, segno che tutte le attività del progetto sono state completate. L'EAC durante il periodo PB ha subito alcune oscillazioni, ma è rimasto sempre sotto il budget iniziale, ciò è dovuto alla nuova pianificazione dei vari preventivi a finire redatti alla fine di ogni sprint. 
+Dal grafico si può notare che l'AC è in linea con l'EAC, questo è dovuto al fatto che i costi del progetto sono stati in linea con quelli dell'ultimo #glossario[preventivo a finire]. Inoltre l'ETC è arrivato a quota 0, segno che tutte le attività del progetto sono state completate. L'EAC durante il periodo PB ha subito alcune oscillazioni, ma è rimasto sempre sotto il budget iniziale, ciò è dovuto alla nuova pianificazione dei vari preventivi a finire redatti alla fine di ogni sprint. 
 
 == MPROC3 (PV), MPROC1 (EV)
 #linebreak()
