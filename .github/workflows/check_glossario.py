@@ -156,7 +156,7 @@ if __name__ == "__main__":
         sources = glob.glob("{}/**/*.typ".format(REPO_DIR), recursive=True)
 
         # Blacklist
-        blacklist = ["template/", "glossario", "candidatura/", "/include/", "/verbali/", "lettera-di-presentazione-RTB.typ"]
+        blacklist = ["template/", "glossario", "candidatura/", "/include/", "/verbali/", "lettera-di-presentazione-RTB.typ", "lettera-di-presentazione-PB.typ"]
         for source in sources:
             if not any([string in source for string in blacklist]):
                 sources_to_check.append(source)
