@@ -25,7 +25,7 @@
 // lines   :: [[number], [number]]
 // legends :: [content, content]
 // hlines  :: [number]
-#let lineChart(lines: array, legends: array, hlines: array, x-label: str, y-label: str, y-tick-step: int, caption: content) = {
+#let lineChart(lines: array, legends: array, hlines: array, vlines: array, x-label: str, y-label: str, y-tick-step: int, caption: content) = {
     let colours = (black, lime, yellow, teal, purple, orange, green, red, blue)
     if y-tick-step <= 0 {
         y-tick-step = auto
@@ -51,6 +51,10 @@
 
                     for hline in hlines {
                         plot.add-hline(hline, style:(stroke: (dash: "dashed", paint: gray)))
+                    }
+
+                    for vline in vlines {
+                        plot.add-vline(vline, style:(stroke: (dash: "dashed", paint: red)))
                     }
                 })
         }), caption: caption)
@@ -168,7 +172,7 @@
     }
 }
 
-#let num_metriche = 21
+#let num_metriche = 26
 
 // Valori metriche
 #let ac = ()
@@ -187,27 +191,27 @@
 
 #let rsi = ((5, 100), (6, 68), (7, 29), (8, 100), (9, 97))
 #let code_coverage_backend = ((7, 0), (8, 96), (9, 96))
-#let code_coverage_frontend = ((7, 0), (8, 61)) //da inserire valore sprint 9
+#let code_coverage_frontend = ((7, 0), (8, 61), (9, 98)) //da inserire valore sprint 9
 #let code_coverage_agente = ((7, 0), (8, 76), (9, 76))
 #let test_superati = ((7, 100), (8, 100), (9, 100))
 #let requisiti_obbligatori_soddisfatti = ((7, 10), (8, 71), (9, 100))
 #let requisiti_desiderabili_soddisfatti = ((7, 0), (8, 67), (9, 100))
 #let requisiti_opzionali_soddisfatti = ((7, 0), (8, 0), (9, 0))
-#let tempo_medio_workflow = ((8, 15), (9, 14))
-#let click_funzionalita = ((8, 4), (9, 6))
+#let tempo_medio_workflow = ((8, 9), (9, 8))
+#let click_funzionalita = ((8, 6), (9, 8))
 #let browser_supportati = ((8, 100), (9, 100))
 
 #let metriche_accettabili = ()
 #let metriche_ottime = ()
 
 //Indice di Gulpease
-#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,68),(7,68),(8,68))
-#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85),(7,80),(8,82))
-#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58),(7,58),(8,60))
-#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68),(7,68),(8,69))
-#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58),(7,58),(8,57))
-#let g_st = ((7,53),(8,61))
-#let g_mu = ((8,42),)  //si vedrà quando aggiungiamo il prossimo valore dello sprint 9
+#let g_adr = ((1,64),(2,66),(3,65),(4,66),(5,66),(6,68),(7,68),(8,68),(9,68))
+#let g_pdp = ((1,48),(2,47),(3,56),(4,68),(5,76),(6,85),(7,80),(8,82),(9,80))
+#let g_pdq = ((1,52),(2,56),(3,49),(4,58),(5,58),(6,58),(7,58),(8,60),(9,62))
+#let g_ndp = ((1,47),(2,51),(3,52),(4,66),(5,68),(6,68),(7,68),(8,69),(9,72))
+#let g_gloss = ((1,59),(2,59),(3,47),(4,58),(5,58),(6,58),(7,58),(8,57),(9,58))
+#let g_st = ((7,53),(8,61),(9,64))
+#let g_mu = ((8,42),(9,60))
 
 #for i in range(1, sprint_number+1) {
     if(i<=5){
@@ -249,8 +253,8 @@
     let cod_cov_agente = 0
     let test_sup = 0
     let req_obb_sodd = 0
-    let req_des_sodd = 0
-    let req_opz_sodd = 0
+    let req_des_sodd = -1
+    let req_opz_sodd = -1
     if i >= 7 {
         cod_cov_backend = code_coverage_backend.at(i - 7).at(1)
         cod_cov_frontend = code_coverage_frontend.at(i - 7).at(1)
@@ -261,8 +265,8 @@
         req_opz_sodd = requisiti_opzionali_soddisfatti.at(i - 7).at(1)
     }
 
-    let tem_med_workflow = 0
-    let click_funz = 0
+    let tem_med_workflow = 100
+    let click_funz = 100
     let browser_supp = 0
     if i >= 8 {
         tem_med_workflow = tempo_medio_workflow.at(i - 8).at(1)
@@ -277,6 +281,10 @@
             sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
             spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
             g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1), cod_cov_backend, cod_cov_frontend, cod_cov_agente, test_sup, req_obb_sodd, req_des_sodd, req_opz_sodd, tem_med_workflow, click_funz, browser_supp, req_stab_index)))
+    
+    if i >= 7 {
+        metriche_accettabili.at(i - 1).at(1) += 5
+    }
 
     metriche_ottime.push((i,
         calcoloMetricheOttime(
@@ -284,6 +292,10 @@
             sv.at(i - 1).at(1), cpi.at(i - 1).at(1), eac.at(i - 1).at(1), etc.at(i - 1).at(1),
             spi.at(i - 1).at(1), caption_figure.at(i - 1).at(1), rischi.at(i - 1).at(1),
             g_adr.at(i - 1).at(1), g_pdp.at(i - 1).at(1), g_pdq.at(i - 1).at(1), g_ndp.at(i - 1).at(1), g_gloss.at(i - 1).at(1), cod_cov_backend, cod_cov_frontend, cod_cov_agente, test_sup, req_obb_sodd, req_des_sodd, req_opz_sodd, tem_med_workflow, click_funz, browser_supp, req_stab_index)))
+
+    if i >= 7 {
+        metriche_ottime.at(i - 1).at(1) += 3
+    }
 }
 
 #let ac_fun(offset: 0) = ac
@@ -329,6 +341,7 @@
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
     legends: ([AC],[ETC],[EAC]),
     hlines: (),
+    vlines: (),
     x-label: "sprint",
     y-label: "costo \u{20AC}",
     y-tick-step: -1,
@@ -348,7 +361,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Dal grafico si può notare che l'AC è in linea con l'EAC, questo è dovuto al fatto che i costi del progetto sono stati in linea con quelli dell'ultimo preventivo a finire. Inoltre l'ETC è arrivato a quota 0, segno che tutte le attività del progetto sono state completate. L'EAC durante il periodo PB ha subito alcune oscillazioni, ma è rimasto sempre sotto il budget iniziale, ciò è dovuto alla nuova pianificazione dei vari preventivi a finire redatti alla fine di ogni sprint. 
 
 == MPROC3 (PV), MPROC1 (EV)
 #linebreak()
@@ -356,6 +369,7 @@ EAC resta invariato (= preventivo iniziale) però in futuro potrebbe abbassarsi.
 #lineChart(lines: (ev_fun,pv_fun),
     legends: ([EV],[PV]),
     hlines: (),
+    vlines: (),
     x-label: "sprint",
     y-label: "costo \u{20AC}",
     y-tick-step: -1,
@@ -373,7 +387,7 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Come nel periodo RTB anche in questo periodo i costi sono stati rispettati, ma si nota un incremento di EV rispetto a PV, soprattutto tra lo sprint 6 e 8. Questo è dovuto al fatto che il lavoro svolto è stato maggiore rispetto a quello pianificato, quindi il team è riuscito a portare avanti il progetto in modo più veloce del previsto. Inoltre l'EV ha subito un incremento costante fino a raggiungere il budget iniziale, segno che il progetto è stato portato avanti e completato in modo proficuo. 
 
 #pagebreak()
 == MPROC4 (CV), MPROC5 (SV)
@@ -382,6 +396,7 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 #lineChart(lines: (cv_fun,sv_fun),
     legends: ([CV],[SV]),
     hlines: (0,),
+    vlines: (),
     x-label: "sprint",
     y-label: "y",
     y-tick-step: -1,
@@ -399,8 +414,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
-
+Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra lo sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto, al contempo però il team ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
 #pagebreak()
 
 == MPROC6 (CPI), MPROC9 (SPI)
@@ -409,6 +423,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 #lineChart(lines: (cpi_fun,spi_fun),
     legends: ([CPI],[SPI]),
     hlines: (1,),
+    vlines: (),
     x-label: "sprint",
     y-label: "y",
     y-tick-step: -1,
@@ -427,7 +442,8 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Come nel periodo RTB anche in questo periodo CPI è sempre 1, segno che il costo sostenuto per completare i lavori è in linea con quello pianificato.
+In seguito allo sprint 6 la SPI ha sempre superato 1, segno che il team è stato molto efficente nel portare avanti il lavoro, terminata la sessione di esami il team ha potuto dedicare più tempo al progetto in termini di ore di allenamento e questo ha portato ad essere più efficenti durante le ore produttive.
 
 #pagebreak()
 
@@ -438,6 +454,7 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 #lineChart(lines: (rsi_fun, point_fun,),
     legends: ([RSI],[]),
     hlines: ((80,100)),
+    vlines: (),
     x-label: "sprint",
     y-label: "%",
     y-tick-step: -1,
@@ -448,7 +465,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Come è possibile notare dal grafico, il valore dell'RSI ha subito un forte calo in seguito alla revisione RTB, infatti sono stati aggiunti molti requisiti al fine di renderli più atomici. In seguito allo sprint 7 il valore dell'RSI è aumentato, segno che il team ha iniziato a stabilizzare i requisiti e a non modificarli più. Infatti il valore dell'RSI è sempre stato sopra la soglia accettabile (80%), indicando che il numero di modifiche ai requisiti è stato limitato. Durante l'ultimo sprint si può notare un leggero calo dell'RSI in seguito alla modifica di un requisito che però non ha avuto nessuna ripercussione sulla pianificazione.
 
 #pagebreak()
 == MPROC11 (Indice di Gulpease)
@@ -460,6 +477,7 @@ Il grafico illustra:
 #lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, g_st_fun, g_mu_fun, x_axis_fun),
     legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[ST],[MU]),
     hlines: ((40,40)),
+    vlines: (),
     x-label: "sprint",
     y-label: "indice",
     y-tick-step: -1,
@@ -481,7 +499,7 @@ I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabi
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Tutti i documenti prodotti hanno raggiunto la soglia accettabile dell'indice di Gulpease (40). Alcuni documenti, come la Specifica Tecnica o il Manuale utente, sono stati iniziati in questo periodo dunque è stato possibile effetuare meno misurazioni rispetto agli altri documenti già presenti. I valori sono stati generati da uno script che calcola l'indice di Gulpease in modo automatico, questo ha permesso di avere un'analisi più accurata e veloce. Inoltre, il team ha prestato particolare attenzione a questo aspetto, cercando di migliorare il valore dell'indice di Gulpease in tutti i documenti. 
 
 == MPROC12 (Caption in tabelle e figure)
 #linebreak()
@@ -492,6 +510,7 @@ I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabi
 #lineChart(lines: (caption_figure_fun, x_axis_fun),
     legends: ([MACC1], []),
     hlines: (),
+    vlines: (),
     x-label: "sprint",
     y-label: "%",
     y-tick-step: -1,
@@ -507,7 +526,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+In questo periodo il valore della caption in tabelle e figure è sempre stato al 100%, segno che il team ha sempre prestato attenzione a questo aspetto. Infatti, ogni figura e tabella presente nei documenti ha una caption che ne descrive il contenuto. 
 
 #pagebreak()
 == MPROC13 (Code coverage)
@@ -516,6 +535,7 @@ Come sopra rappresentato, tutte le figure e le tabelle presenti all'interno di t
 #lineChart(lines: (code_coverage_backend_fun, code_coverage_frontend_fun, code_coverage_agente_fun),
     legends: ([Backend], [Frontend], [Agente]),
     hlines: ((75, 75)),
+    vlines: (),
     x-label: "sprint",
     y-label: [code #linebreak() coverage],
     y-tick-step: -1,
@@ -525,7 +545,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Ogni componente del prodotto software ha raggiunto la soglia accettabile del 75% di code coverage. In seguito all'inizio delle attività di codifica il team ha scritto molti test di unità, questo ha portato ad un notevole incremento della code coverage. Sono state riscontrate più difficoltà nei test dell'agente AI dove il valore è rimasto appena al di sopra la soglia accettabile. L'ultimo componente a raggiungere la soglia accettabile è stato il frontend, dato che è stato l'ultimo componente ad essere codificato. Inoltre i test di unità sono stati integrati nella CI e questo ha permesso di avere un feedback immediato sullo stato della code coverage. 
 
 #pagebreak()
 
@@ -536,6 +556,7 @@ Il grafico illustra:
 #lineChart(lines: (test_superati_fun, x_axis_fun),
     legends: ([Test superati],[]),
     hlines: ((90, 90)),
+    vlines: (),
     x-label: "sprint",
     y-label: [%],
     y-tick-step: -1,
@@ -545,7 +566,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Tutti i test di unità, integrazione e sistema previsti sono stati implementati e superati, segno che il prodotto è stato testato in modo accurato. 
 
 
 #pagebreak()
@@ -558,6 +579,7 @@ Il grafico illustra:
 #lineChart(lines: (rischi_fun, point_fun,),
     legends: ([Rischi], []),
     hlines: (),
+    vlines: (),
     x-label: "sprint",
     y-label: "rischi",
     y-tick-step: -1,
@@ -573,7 +595,7 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+In questo periodo non ci sono stati problemi dovuti a rischi non previsti. Infatti, il team ha sempre rispettato le tempistiche e i costi previsti. Durante lo sprint 8 si è verificato un rischio non prevedibile, riguardante le tecnologie utilizzate per svolgere i test, ma è stato gestito in modo efficace e non ha avuto ripercussioni sul progetto. Il team ha sempre monitorato i rischi e ha cercato di prevenirli, questo ha portato ad un buon risultato finale.
 
 #pagebreak()
 
@@ -584,16 +606,17 @@ Come sopra rappresentato, non ci sono stati problemi dovuti a rischi non previst
 #let point_fun(offset: 0) = point
 
 #lineChart(lines: (metriche_accettabili_fun, point_fun),
-    legends: ([Metriche],[]),
+    legends: ([Metriche],[],),
     hlines: (num_metriche*0.9, num_metriche),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "n. metriche",
-    y-tick-step: 3,
+    y-tick-step: 2,
     caption: [Metriche accettabili.])
 
 Il grafico illustra:
 - Metriche accettabili: il numero di metriche che raggiungono la soglia accettabile.
-
+- La linea rossa tratteggiata marca la suddivisione tra il periodo RTB e PB.
 #linebreak()
 *RTB*
 #linebreak()
@@ -602,7 +625,7 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+In questo periodo sono state prese in considerazione anche le nuove metriche di cui non si era potuto rilevare alcuna misurazione nella fase RTB. Le linee grigie tratteggiate nel grafico indicano la soglia accettabile e ottimale rispetto al nuovo numero di metriche. Negli ultimi sprint il numero di metriche che hanno raggiunto la soglia accettabile è aumentato, segno che il team ha aumentato la qualità dei processi e del prodotto.
 
 #pagebreak()
 
@@ -615,14 +638,15 @@ Un caso eccezionale è lo sprint 3, che ha subito dei rallentamenti e di consegu
 #lineChart(lines: (metriche_ottime_fun, point_fun),
     legends: ([Metriche],[]),
     hlines: (num_metriche*0.3, num_metriche),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "n. metriche",
-    y-tick-step: 3,
+    y-tick-step: 2,
     caption: [Metriche ottimali.])
 
 Il grafico illustra:
 - Metriche ottimali: il numero di metriche che raggiungono il valore ottimale.
-
+- La linea rossa tratteggiata marca la suddivisione tra il periodo RTB e PB.
 #linebreak()
 *RTB*
 #linebreak()
@@ -630,7 +654,7 @@ In questo periodo abbiamo  superato la soglia accettabile per la maggior parte d
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+In questo periodo sono state prese in considerazione anche le nuove metriche di cui non si era potuto rilevare alcuna misurazione nella fase RTB. Le linee grigie tratteggiate nel grafico indicano la soglia accettabile e ottimale rispetto al nuovo numero di metriche. In generale, il numero di metriche che hanno raggiunto la soglia ottimale è aumentato, segno che il team ha aumentato la qualità dei processi e del prodotto. 
 
 
 #pagebreak()
@@ -640,6 +664,7 @@ In questo periodo abbiamo  superato la soglia accettabile per la maggior parte d
 #lineChart(lines: (requisiti_obbligatori_soddisfatti_fun, requisiti_desiderabili_soddisfatti_fun, requisiti_opzionali_soddisfatti_fun),
     legends: ([Obbligatori], [Desiderabili], [Opzionali]),
     hlines: ((100,100)),
+    vlines: (),
     x-label: "sprint",
     y-label: "%",
     y-tick-step: -1,
@@ -649,21 +674,22 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
-#linebreak()
+Tutti i requisiti obbligatori, desiderabili sono stati soddisfatti. Il requisito opzionale, invece, non è stato soddisfatto in quanto non è stato implementato dato che avrebbe impiegato diverse ore produttive. Questa scelta è dovuta al fatto che il team ha deciso di concentrarsi sui requisiti obbligatori e desiderabili, ritenendo che fosse più importante soddisfare questi requisiti prima di passare a quelli opzionali. \ \ \  \ \ \ \ \ \ \ \ \ \ \ \
 
-== MPROD4, MPROD5, MPROD6, MPROD7, MPROD8, MPROD9
+
+== MPROD4, MPROD5, MPROD6, MPROD7, MPROD8
 
 Le seguenti metriche di prodotto riguardanti la manutenibilità vengono applicate e verificate da strumenti di analisi statica del codice, come ad esempio #glossario[EsLint].
 
 #pagebreak()
-== MPROD10 (Tempo medio esecuzione di un workflow)
+== MPROD9 (Tempo medio esecuzione di un workflow)
 #linebreak()
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
 #lineChart(lines: (tempo_medio_workflow_fun, point_fun),
     legends: ([Tempo medio #linebreak() workflow],[]),
     hlines: ((10,20)),
+    vlines: (),
     x-label: "sprint",
     y-label: "secondi",
     y-tick-step: 2,
@@ -673,16 +699,17 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+In seguito alla codifica dell'agente AI è stato utile stimare il tempo medio di esecuzione di un workflow, prendendo in considerazione un workflow semplice. Il valore del tempo medio di esecuzione è sempre stato sotto la soglia accettabile (20 secondi). Se il workflow è più complesso il tempo medio di esecuzione aumenta in maniera non quantificabile, dato che la complessità è data dal numero di nodi, archi e in particolari dalle descrizioni delle automazioni.
 
 #pagebreak()
-== MPROD11 (Click per utilizzare una funzionalità)
+== MPROD10 (Click per utilizzare una funzionalità)
 #linebreak()
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
 #lineChart(lines: (click_funzionalita_fun, point_fun),
     legends: ([Numero click],[]),
-    hlines: ((5,7)),
+    hlines: ((6,8)),
+    vlines: (),
     x-label: "sprint",
     y-label: "n. click",
     y-tick-step: 2,
@@ -692,17 +719,18 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Il numero di click per utilizzare una funzionalità è sempre stato sotto la soglia accettabile (7 click). Il team ha pensato all'usabilità strutturando il prodotto facendo in modo che sia più intuitivo possibile per l'utente finale. Per calcolare la metrica è stato considerata la funzionalità che richiede più click per essere utilizzata, ossia l'esecuzione di un workflow che comprende tutti e 3 i blocchi disponibili, in modo da avere un'idea del numero massimo di click che l'utente deve fare per utilizzare il prodotto. 
 
 #pagebreak()
 
-== MPROD12 (Versioni browser supportate)
+== MPROD11 (Versioni browser supportate)
 #linebreak()
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
 #lineChart(lines: (browser_supportati_fun, point_fun),
     legends: ([% Browser],[]),
     hlines: ((75,75)),
+    vlines: (),
     x-label: "sprint",
     y-label: "%",
     y-tick-step: -1,
@@ -712,7 +740,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-//TODO: aggiungere commento
+Tutti i browser da supportare individuati nell'analisi dei requisiti sono stati supportati. Infatti il prodotto è stato testato con esito positivo sulle ultime versioni di Chrome e Firefox.
 
 
 

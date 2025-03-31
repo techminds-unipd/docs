@@ -4,6 +4,7 @@
   title: "Piano di qualifica",
   sommario: "Il documento riporta le attività di verifica e validazione, affidandosi a delle metriche per garantire la qualità del prodotto.",
   changelog: (
+    "1.12.0", "31/03/2025", "Commenti finali PB nel cruscotto", team.M, "",
     "1.11.0", "30/03/2025", "Descritti test di integrazione frontend", team.C, team.G,
     "1.10.0", "27/03/2025", "Aggiunti test di unità frontend", team.T, team.L,
     "1.9.0", "25/03/2025", "Aggiunti grafici mancanti nel cruscotto", team.M, team.C,

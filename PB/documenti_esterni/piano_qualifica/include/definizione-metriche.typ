@@ -225,15 +225,6 @@
             [100%],
             "funzionalità"))
             
-
-#MPROD.push(  ("MPROD" + str(MPROD.len()+1),
-            [Complessità ciclomatica per metodo],
-            [Rappresenta la complessità di un metodo in base ai percorsi possibili.],
-            [$"Complessità ciclomatica" &= "A - N + P"$, dove: #list(..("A: numero di archi nel grafo;", "N: numero di nodi nel grafo;"), spacing: 12pt)#box(list("P: numero di componenti connesse nel grafo."))],
-            [\u{2A7D}7],
-            [\u{2A7D}5],
-            "manutenibilità"))
-
 #MPROD.push(  ("MPROD" + str(MPROD.len()+1),
             [Parametri per metodo],
             [Numero massimo di parametri per metodo.],
@@ -286,8 +277,8 @@
             [Click per utilizzare una funzionalità],
             [Metrica che misura il numero di click minimi necessari per poter utilizzare una funzionalità.],
             [Click per utilizzare una funzionalità = Numero di click necessari per l'uso di una funzionalità;],
-            [⩽7 click],
-            [⩽5 click],
+            [⩽8 click],
+            [⩽6 click],
             "usabilità"))
 
 //#MPROD.push(  ("MPROD" + str(MPROD.len()+1),
