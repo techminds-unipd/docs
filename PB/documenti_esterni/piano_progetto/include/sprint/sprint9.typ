@@ -158,22 +158,25 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 9)
 
 #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo) = preventivo
-#tabellaSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
-<tabella-PreventivoSprint8> \
+#tabellaSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
+<tabella-PreventivoSprint9> \
 
-#pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
-<grafico-PreventivoSprint8> \
-/*
+#pieChartSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
+<grafico-PreventivoSprint9> \
+
 #if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
   ==== Consuntivo
   I numeri tra parentesi indicano le variazioni rispetto al preventivo.
-  #tabellaSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
-  <tabella-ConsuntivoSprint8> \
-  #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
-  <grafico-ConsuntivoSprint8> \
+  #tabellaSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
+  <tabella-ConsuntivoSprint9> \
+  #pieChartSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
+  <grafico-ConsuntivoSprint9> \
 ]
 
-==== Aggiornamento preventivo a finire
-*/
+#getOreConsumatePersona(sprintNumber: 9)
+
+#getOreConsumateRuoli(sprintNumber: 9)
+
+// ==== Aggiornamento preventivo a finire
