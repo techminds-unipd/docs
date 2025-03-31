@@ -38,7 +38,7 @@ All'interno della sezione "Product Baseline", oltre alla presente lettera, sono 
 Viene inoltre reso disponibile il codice sorgente del Minimum Viable Product:
 #align(center, link("https://github.com/techminds-unipd/AgentFlow"))
 
-Riportiamo qui sotto un prospetto riassuntivo che contiene i costi totali sostenuti:
+Riportiamo qui sotto un prospetto che contiene i costi totali sostenuti:
 #figure(
     table(
         columns: (1fr,)*5,
