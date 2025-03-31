@@ -244,7 +244,7 @@ Questa sezione stabilisce le linee guida e le regole che dobbiamo seguire per il
 Come descrive lo standard ISO/IEC 12207:1995, il processo primario di sviluppo include le seguenti attività:
 1. Analisi dei requisiti;
 2. Progettazione;
-3. Codifica e testing;
+3. Codifica;
 4. Integrazione;
 5. Installazione.
 
@@ -475,7 +475,7 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 *Diagrammi UML*
 
 UML definisce vari elementi grafici per rappresentare le classi e le relazioni tra di esse. I principali elementi utilizzati nei diagrammi delle classi sono:
-- Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). I metodi sono definiti con la seguente sintassi: \ nomeMetodo(parametri: tipoParametri): tipoRitorno;
+- Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). Nel caso in cui un attributo non sia sempre definito, e quindi il suo valore può essere anche _null_, la sintassi utilizzata è "attributo[0..1]". \ I metodi sono definiti con la seguente sintassi: nomeMetodo(parametri: tipoParametri): tipoRitorno;
 #figure(
     image("../assets/classe.svg", width: 32%), caption: "Esempio classe UML.",
 )
@@ -519,14 +519,13 @@ Per una maggiore chiarezza e comprensione, alcune classi possono essere colorate
 ==== Strumenti e tecnologie
 Per la progettazione del software tramite diagrammi delle classi è stato utilizzato StarUML, mentre per la progettazione dell'interfaccia grafica è stato utilizzato Figma.
 
-=== Codifica e testing
-L'attività di codifica e testing consiste nella realizzazione effettiva del prodotto software. La codifica prevede che il codice sia scritto e testato per garantire che il prodotto soddisfi i requisiti individuati durante l'analisi e rispetti la progettazione definita al precedentemente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati con il proponente.
+=== Codifica
+L'attività di codifica consiste nella realizzazione effettiva del prodotto software. La codifica prevede che il codice sia scritto e testato per garantire che il prodotto soddisfi i requisiti individuati durante l'analisi e rispetti la progettazione definita al precedentemente. L'obiettivo è quello di creare il prodotto software richiesto dal committente, rispettando gli accordi stipulati con il proponente.
 
-Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codifica/testing sono: 
+Secondo lo standard ISO/IEC 12207:1995, i criteri per riconoscere una buona codifica sono: 
 - Tracciabilità rispetto ai requisiti e alla progettazione dell'elemento software;
 - Coerenza esterna con i requisiti e la progettazione dell'elemento software;
 - Coerenza interna tra i requisiti delle unità;
-- Copertura dei test delle unità;
 - Adeguatezza dei metodi e degli standard di codifica utilizzati;
 - Fattibilità dell'integrazione e del testing del software;
 - Fattibilità delle operazioni e della manutenzione.

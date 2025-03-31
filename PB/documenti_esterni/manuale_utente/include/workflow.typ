@@ -90,12 +90,12 @@ Tale situazione si può verificare se si è salvato un workflow e successivament
 
 Una volta creato il workflow valido, sarà possibile:
 - Salvarlo cliccando sul pulsante _SAVE_
-  - se il salvataggio è andato a buon fine, verrà visualizzato un messaggio di successo;
+  - se il salvataggio è andato a buon fine, verrà visualizzato un messaggio di successo.
 #figure(
   image("../assets/successfully-save.png", width: 50%), caption: "Salvataggio avvenuto con successo." 
 )
 - Eseguirlo cliccando sul pulsante _EXECUTE_
-  - se l'esecuzione è andata a buon fine, verrà visualizzato un messaggio di successo come nell'esempio a seguire;
+  - se l'esecuzione è andata a buon fine, verrà visualizzato un messaggio di successo come nell'esempio a seguire.
 
   #figure(
   image("../assets/esempio-workflow.png")

@@ -215,7 +215,7 @@ Il ciclo #glossario[PDCA], noto anche come ciclo di Deming, è stato scelto come
 Ogni ciclo PDCA rappresenta un’opportunità per raggiungere gli obiettivi di qualità fissati, creando un processo di miglioramento costante e progressivo.
 
 === Piano di qualifica
-Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare e le metriche da utilizzare per misurare la qualità del prodotto. All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni migliorative basate sui dati a disposizione.
+Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono descritti i processi di verifica e validazione con i relativi obiettivi di qualità. Inoltre, vengono fissati gli standard di qualità da rispettare, ovvero i valori accettabili e ottimali delle metriche individuate in norme di progetto (vedi @metriche). All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni migliorative basate sui dati a disposizione.
 
 === Struttura metriche di qualità
 - *Codice:* identificativo univoco della metrica;
@@ -288,10 +288,21 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 + #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto difetti in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
 + #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono gli ultimi test eseguiti prima del possibile rilascio del prodotto.
 
-//Ogni test è costituito da:
-// TODO: completare con l'identificazione dei test
+Ogni test è composto da:
+- *Codice test*, identificativo univoco del test nel formato
+#align(center)[*T[tipologia test][numero progressivo]*]
+#h(3%)dove tipologia test corrisponde a:
+#list([_U_, test di unità;],[_I_, test di integrazione;],[_S_, test di sistema;],[_A_, test di accettazione.],indent: 2.5em)
+#h(3%)Nei test di unità e integrazione è presente un ulteriore campo [componente] che indica \ #h(3%)la componente testata, quindi in questi casi il codice test sarà nel formato 
+#align(center)[*T[tipologia test][componente][numero progressivo]*]
+#h(3%)dove componente corrisponde a:
+#list([_B_ per backend;],[_F_ per frontend;],[_A_ per agente.],indent: 2.5em)
+- *Descrizione*, breve descrizione del test, specifica o generale a seconda della tipologia di test descritto;
+- *Stato test*, indica lo stato attuale del test, che può essere _S_ (superato), _F_ (fallito) o _NI_ (non implementato).
 
-==== Processo di verifica
+Nei test di sistema è presente un ulteriore campo *Requisito* che indica il requisito funzionale collegato a quello specifico caso di test.
+
+==== Processo di verifica <verifica>
 In generale, il processo di verifica include le seguenti fasi:
 + *Apertura della pull request e assegnazione dei verificatori*: il redattore o sviluppatore apre una pull request per sottoporre il proprio lavoro a revisione, aggiungendo un titolo e una breve descrizione del lavoro svolto. Successivamente, assegna i due verificatori scelti durante la pianificazione dello sprint in corso. Se necessario, è possibile aggiungere un terzo verificatore o sostituire uno dei verificatori già assegnati;
 + *Conflitti*: se sono presenti conflitti con il ramo di destinazione, è compito del redattore risolverli prima di procedere con la verifica;
@@ -313,19 +324,25 @@ In generale, la verifica dovrà controllare i seguenti aspetti:
 
 La verifica si conclude quando almeno due verificatori hanno approvato il documento, che può quindi essere esposto pubblicamente all'interno della repository.
 
+==== Verifica del codice
+Il codice sorgente deve essere sottoposto a verifica per garantire che sia corretto e rispetti gli standard di codifica definiti. Questo compito è affidato al verificatore, il quale viene supportato da strumenti di analisi statica e dinamica: all'apertura di una pull request, vengono eseguite delle GitHub Actions che controllano la correttezza strutturale e sintattica del codice, tramite analisi statica, e successivamente la sua correttezza funzionale tramite suite di test automatizzati. \ 
+Se i controlli vanno a buon fine il verificatore procede con l'analisi del codice, tramite Walkthrough o Inspection a seconda della complessità del codice. In caso di errori o dubbi, la verifica del codice segue le stesse fasi descritte in @verifica.
+
 ===== Strumenti e tecnologie
-A supporto del verificatore, per il controllo di alcune norme strutturali, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la verifica il più efficace ed efficiente possibile.
+A supporto del verificatore, per il controllo di alcune norme strutturali nella documentazione, sono stati sviluppati degli script che effettuano un'analisi statica del documento mediante il metodo Inspection. Questi script vengono eseguiti automaticamente attraverso GitHub Actions, contribuendo a rendere la verifica il più efficace ed efficiente possibile.
 Gli script in questione si occupano di controllare:
 - che le parole da glossario siano ben indicate nei documenti;
 - che tutti i documenti ottengano il punteggio accettabile per l'indice di Gulpease;
 - che le parole presenti nel glossario siano in ordine alfabetico.
 
-//=== Verifica del design // TODO: non so se ci sia un modo, se lo facciamo lo mettiamo altrimenti si toglie
-// ==== Strumenti e tecnologie
-
-//=== Verifica del codice // TODO
-
-//==== Strumenti e tecnologie
+Riguardo la verifica del codice, gli strumenti utilizzati sono:
+- Jest, per la scrittura e l'esecuzione dei test di unità e integrazione del backend;
+- Vitest, per la scrittura e l'esecuzione dei test di unità e integrazione del frontend;
+- Pytest, per la scrittura e l'esecuzione dei test di unità dell'agente;
+- Cypress, per la scrittura e l'esecuzione dei test di sistema;
+- ESLint, per il controllo della correttezza sintattica del codice #glossario[TypeScript]\;
+- Pylint, per il controllo della correttezza sintattica del codice #glossario[Python]\;
+- Prettier, per la formattazione automatica del codice secondo uno stile predefinito.
 
 === Validazione
 Secondo lo standard ISO/IEC 12207:1995, la validazione è il processo che serve a determinare se i requisiti e il sistema/prodotto software finale, per come è stato costruito, soddisfano l'uso specifico previsto. Il prodotto finale deve quindi soddisfare tutti i requisiti concordati con il proponente e funzionare correttamente nel suo ambiente finale.
@@ -339,10 +356,8 @@ Lo standard definisce le seguenti attività per il processo di validazione:
   - la pianificazione temporale;
   - le procedure per la condivisione dei risultati con gli stakeholder.
 + *Validazione*, che include le seguenti task:
-  - preparazione dei test di sistema, che devono essere coerenti con i requisiti individuati;
-  - esecuzione dei test di sistema;
-  - analisi dei risultati dei test e valutazione della copertura dei requisiti software.
-// TODO: da completare con quello che faremo per validare
+  - preparazione dei test di accettazione, che devono essere coerenti con le richieste del capitolato;
+  - esecuzione dei test di accettazione, che devono essere presentati al proponente per la validazione.
 
 == Revisioni congiunte
 Secondo lo standard ISO/IEC 12207:1995, il processo di revisione congiunta ha l'obiettivo di valutare lo stato e i prodotti di un'attività di un progetto.

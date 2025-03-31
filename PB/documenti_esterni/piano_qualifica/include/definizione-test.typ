@@ -86,6 +86,7 @@
 #let getUnità() = {
     let unitàBackend = ()
     let unitàAgente = ()
+    let unitàFrontend = ()
     // RegisterUserController
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
         [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ ritorni un DTO con l'utente registrato.],
@@ -629,8 +630,340 @@
         [S],
     ))
 
+    // AllWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ effettui la corretta chiamata HTTP e ritorni la lista dei workflow.],
+        [S]
+    ))
 
-    return unitàBackend + unitàAgente
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un Error con il messaggio \"User not found\" quando la richiesta HTTP ritorna un codice 400.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un Error con il messaggio \"Server error\" quando la richiesta HTTP ritorna un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _allWorkflows(...)_ della classe _AllWorkflowsService_ lanci un Error con il messaggio \"Generic error\" quando la richiesta HTTP fallisce.],
+        [S]
+    ))
+
+    // CreateWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni il workflow creato quando la chiamata HTTP ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Workflow with the same name already exists\" quando la chiamata HTTP ritorna un codice 400.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Server error\" quando la chiamata HTTP ritorna un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _newWorkflow(...)_ della classe _CreateWorkflowService_ ritorni un Error con messaggio \"Generic error\" quando la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // DeleteWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni il nome del workflow cancellato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP riceve un codice 404.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni un Error con messaggio \"Server error\" se la chiamata HTTP riceve un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _deleteWorkflowByName(...)_ della classe _DeleteWorkflowService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // LoginService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un access token se la chiamata HTTP riceve un codice 201.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un Error con messaggio \"wrong username or password\" se la chiamata HTTP riceve un codice 401.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un Error con messaggio \"Server error\" se la chiamata HTTP riceve un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _login(...)_ della classe _LoginService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // RegisterService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni uno UserDTO se la chiamata HTTP ritorna un codice 201.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni un Error con messaggio "Username already exists" se la chiamata HTTP ritorna un codice 400.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni un Error con messaggio \"Server error\" se la chiamata HTTP riceve un codice 500.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _register(...)_ della classe _RegisterService_ ritorni un Error con messaggio \"Generic error\" se la chiamata HTTP fallisce.],
+        [S]
+    ))
+
+    // AuthContext (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti _user.username_ quando il login ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti _user.accessToken_ quando il login ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ scriva nel local storage del browser _user_ quando il login ha successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _AuthContext_ imposti automaticamente _user_ nel contesto se è salvato nel local storage.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti il campo _error_ di _AuthContext_ con il messaggio di errore \"wrong username or password\" se il login fallisce per via delle credenziali di accesso errate.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _loginUser(...)_ di _AuthContext_ imposti _user.username_ e _user.accessToken_ a stringhe vuote se il login fallisce per via delle credenziali di accesso errate.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _logoutUser(...)_ di _AuthContext_ imposti _user.username_ a null.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _logoutUser(...)_ di _AuthContext_ imposti _user.accessToken_ a null.],
+        [S]
+    ))
+    
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _logoutUser(...)_ di _AuthContext_ cancelli l'elemento con chiave _user_ nel local storage del browser.],
+        [S]
+    ))
+
+    // GoogleTokenContext (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.token_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.expireDate_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ imposti _googleToken.refreshToken_.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _addGoogleToken(...)_ di _GoogleTokenContext_ salvi _googleToken_ nel local storage.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _removeGoogleToken(...)_ di _GoogleTokenContext_ rimuova _googleToken.token_, _googleToken.expireDate_ e _.googleToken.refreshToken_],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _removeGoogleToken(...)_ di _GoogleTokenContext_ rimuova _googleToken_ dal local storage.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _isTokenExpired(...)_ di _GoogleTokenContext_ ritorni true se il token è scaduto o non presente.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _isTokenExpired(...)_ di _GoogleTokenContext_ ritorni false se il token non è scaduto.],
+        [S]
+    ))
+
+    // useAllWorkflows (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useAllWorkflows_ sia in grado di ottenere tutti i workflow se l'utente è autenticato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useAllWorkflows_ sia in grado gestire gli errori in caso di fallimento della chiamata API.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useAllWorkflows_ lanci un Error se viene utilizzato fuori da un _AuthProvider_.],
+        [S]
+    ))
+
+    // useAuth (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente avvolto in un _AuthProvider_ che invoca _useAuth_ riesca ad accedere al contesto.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente che invoca _useAuth_ non avvolto in un _AuthProvider_ lanci un Error.],
+        [S]
+    ))
+
+    // useCreateWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useCreateWorkflow_ riesca a creare un workflow quando l'utente è autenticato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useCreateWorkflow_ riesca a gestire gli errori in caso di fallimento della chiamata API.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useCreateWorkflow_ lanci un errore quando il componente che lo invoca non è avvolto in un _AuthProvider_.],
+        [S]
+    ))
+
+    // useDeleteWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useDeleteWorkflow_ riesca a cancellare un workflow quando l'utente è autenticato.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useDeleteWorkflow_ riesca a gestire gli errori in caso di fallimento della chiamata API.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che _useDeleteWorkflow_ lanci un errore quando il componente che lo invoca non è avvolto in un _AuthProvider_.],
+        [S]
+    ))
+
+    // useGoogleToken
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente avvolto in un _GoogleTokenProvider_ e invoca _useGoogleToken_ riesca ad accedere al contesto.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che un componente non avvolto in un _GoogleTokenProvider_ che invoca _useGoogleToken_ lanci un Error.],
+        [S]
+    ))
+
+    // useRegisterTest
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ riesca a registrare un utente con successo.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ gestisca l'errore di username già esistente.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ gestisca un errore del server.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useRegisterTest_ gestisca un errore generico.],
+        [S]
+    ))
+
+    //ExecuteWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _executeWorkflow(...)_ della classe _ExecuteWorkflowService_ ritorni il risultato dell'esecuzione del workflow da parte dell'agente.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _executeWorkflow(...)_ della classe _ExecuteWorkflowService_ lanci un Error con messaggio "Generic error" se la richiesta HTTP riceve un codice diverso da 200.],
+        [S]
+    ))
+
+    // useExecuteWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useExecuteWorkflow_ sia in grado di eseguire un workflow e comunicare la risposta.],
+        [S]
+    ))
+
+    // SaveWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorni il workflow salvato se la richiesta ritorna un codice HTTP 200.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _saveWorkflow(...)_ della classe _SaveWorkflowService_ ritorni un Error se la richiesta ritorna un codice HTTP diverso da 200.],
+        [S]
+    ))
+    
+    // useSaveWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useSaveWorkflow_ riesca a salvare un workflow.],
+        [S]
+    ))
+
+    // GetWorkflowService (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ ritorni il workflow richiesto dopo una chiamata API al backend.],
+        [S]
+    ))
+
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che il metodo _getWorkflow(...)_ della classe _GetWorkflowService_ lanci un Error se la chiamata API ritorna un codice HTTP diverso da 200.],
+        [S]
+    ))
+
+    // useGetWorkflow (FRONTEND)
+    unitàFrontend.push(("TUF" + str(unitàFrontend.len()+1),
+        [Verificare che l'hook _useGetWorkflow_ ritorni un workflow quando l'utente è autenticato.],
+        [S]
+    ))
+    return unitàBackend + unitàAgente + unitàFrontend
 }
 
 
@@ -805,7 +1138,7 @@
 
     sistema.push(("TS" + str(sistema.len()+1),
         [Verificare che l'utente autenticato riceva un avviso in caso non
-        abbia collegato nessun servizio associato ai blocchi.],
+        abbia collegato i servizi Google associati ai blocchi.],
         [#getFRByNumber(sistema.len()+1).at(0)],
         [NI],
     ))
@@ -955,13 +1288,13 @@
 
     sistema.push(("TS" + str(sistema.len()+1),
         [Verificare che l'utente autenticato visualizzi un messaggio di avviso che
-        informa del fallimento nell'eliminazione del workflow],
+        informa del fallimento nell'eliminazione del workflow.],
         [#getFRByNumber(sistema.len()+1).at(0)],
         [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
-        [Verificare che l'utente autenticato possa mandare in esecuzione un workflow],
+        [Verificare che l'utente autenticato possa mandare in esecuzione un workflow.],
         [#getFRByNumber(sistema.len()+1).at(0)],
         [NI],
     ))

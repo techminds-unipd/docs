@@ -1,6 +1,6 @@
 #import "../backend/funzioni_ausiliarie.typ": declaration
 
-===== Home
+==== Home
 La pagina Home ha il compito di presentare le funzionalità dell'applicazione all'utente.
 
 In particolare contiene:
@@ -12,7 +12,7 @@ In particolare contiene:
 
 Questi componenti sono stati disposti nella schermata utilizzando più componenti Grid2 di MUI annidati.
 
-===== About us
+==== About us
 #figure(
     image("../../assets/frontend/AboutUs.svg", width: 65%),
   caption: [Pagina About us.],
@@ -26,12 +26,15 @@ La pagina è composta dai seguenti componenti React:
 - Un Link che punta al profilo GitHub del gruppo Tech Minds;
 - Grid per impaginare.
 
-===== Sign in
+==== Sign up
+Questa pagina si trova nel percorso \"/signup\" e contiene un unico componente personalizzato, SignUpForm, che contiene il form per effettuare la registrazione.
+
+==== Sign in
 Questa pagina si trova nel percorso \"/signin\" e contiene il form per l'autenticazione.
 
 La pagina contiene un unico componente personalizzato SignInForm, che contiene il form per effettuare il login.
 
-===== Dashboard
+==== Dashboard
 // TODO inserire immagine
 
 Il componente Dashboard rappresenta la pagina principale per gli utenti autenticati. Qui, gli utenti possono aggiungere o eliminare un workflow, viualizzare quelli esistenti e selezionare un singolo workflow da poter modificare o eseguire.
@@ -48,7 +51,7 @@ L'interfaccia della Dashboard è strutturata in due sezioni principali, entrambe
   - contiene il componente WorkflowList, che visualizza tutti i workflow dell'utente;
   - si aggiorna in base al valore di shouldReload.
 
-===== Services
+==== Services
 // TODO inserire immagine
 Il componente Services rappresenta la pagina che permette all'utente autenticato di gestire il collegamento col proprio account Google e vedere quali servizi potrà utilizzare nel workflow.
 
@@ -67,7 +70,7 @@ Il componente è composto da:
 
 Se il token non è presente o è scaduto il Button ha come destinazione il percorso del backend che si occupa di effettuare il redirect verso Google (nel nostro caso \http:\/\/localhost:3000/google/auth).
 
-===== AddAccount
+==== AddAccount
 // TODO inserire immagine anche se non so se sia necessaria in questo caso.
 Questo componente rappresenta una pagina di servizio, necessaria per salvare il token dell'account Google e la data della sua scadenza. Questa pagina è la destinazione del redirect da parte del backend. Per accedere ai dati del token, contenuto nella query string, si fa uso dell'hook #declaration[useSearchParams()].
 
