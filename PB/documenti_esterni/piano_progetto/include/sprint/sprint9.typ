@@ -3,7 +3,7 @@
 #import "../costi.typ": getSprintCostsSection, getOreConsumatePersona, getOreConsumateRuoli
 
 === Sprint 9
-- Durata: 24/03/2025 - 04/04/2025
+- Durata: 24/03/2025 - 04/04/2025 (data di fine effettiva: 01/04/2025)
 
 ==== Pianificazione
 Durante questo sprint il gruppo ha l'obiettivo di terminare la codifica, i test di unità e i test di integrazione per il frontend e di implementare i test di sistema. Contemporaneamente saranno aggiornati e revisionati tutti i documenti in preparazione all'incontro finale con l'azienda e alla revisione PB.
@@ -72,24 +72,24 @@ timeliney.timeline(
       group(..range(4).map(n=>strong(str(n+1))))
     )
     taskgroup(title:[*Lettera di presentazione*],{
-      task("Lettera di presentazione PB",(from: 8, to: 9, style: (stroke: 8pt + gray)), (from: 8, to: 8, style: (stroke: 2pt + red)))
+      task("Lettera di presentazione PB",(from: 8, to: 9, style: (stroke: 8pt + gray)), (from: 6, to: 7, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Piano di progetto*],{
-      task("Preventivo sprint 9",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
+      task("Preventivo sprint 9",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Analisi dei requisiti*],{
-      task("Aggiornare UC26",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
+      task("Aggiornare UC26",(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Piano di qualifica*],{
-      task(align(center, [Aggiornare cruscotto #linebreak() piano di qualifica]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare test di integrazione #linebreak() frontend sul piano di qualifica]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 6, to: 6, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare test di unità #linebreak() frontend sul piano di qualifica]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Aggiornare cruscotto #linebreak() piano di qualifica]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare test di integrazione #linebreak() frontend sul piano di qualifica]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare test di unità #linebreak() frontend sul piano di qualifica]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Norme di progetto*],{
-      task(align(center, [Documentare struttura documenti]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
-      task(align(center, [Testing in norme di progetto]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 6, to: 6, style: (stroke: 2pt + red)))
-      task(align(center, [Aggiornare progettazione #linebreak() in norme di progetto]),(from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 3, to: 3, style: (stroke: 2pt + red)))
-      task(align(center, [Definire standard ISO/IEC 9126 #linebreak()  in norme di progetto]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 3, to: 3, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare struttura documenti]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Testing in norme di progetto]),(from: 2, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Aggiornare progettazione #linebreak() in norme di progetto]),(from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Definire standard ISO/IEC 9126 #linebreak()  in norme di progetto]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 3, style: (stroke: 2pt + red)))
     })
   }
 ),
@@ -108,33 +108,33 @@ timeliney.timeline(
       group(..range(4).map(n=>strong(str(n+1))))
     )
     taskgroup(title:[*Manuale utente*],{
-      task(align(center, [Struttura manuale utente]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare Home in manuale utente]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare About Us in manuale utente]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare SignIn in manuale utente]),(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 2, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare SignUp in manuale utente]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare Dashboard #linebreak() in manuale utente]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 3, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare Services in manuale utente]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare Workflow in manuale utente]),(from: 5, to: 7, style: (stroke: 8pt + gray)), (from: 5, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Struttura manuale utente]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare Home in manuale utente]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare About Us in manuale utente]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare SignIn in manuale utente]),(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare SignUp in manuale utente]),(from: 2, to: 4, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare Dashboard #linebreak() in manuale utente]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare Services in manuale utente]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 0, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare Workflow in manuale utente]),(from: 5, to: 7, style: (stroke: 8pt + gray)), (from: 3, to: 6, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*Specifica tecnica*],{
-      task(align(center, [Inserire immagini backend, agente e database]),(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
-      task(align(center, [Fix specifica]),(from: 1, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))  
-      task(align(center, [Inserire immagini frontend]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 6, to: 6, style: (stroke: 2pt + red)))   
-      task(align(center, [Documentare architettura di deploy]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 4, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare limiti e criticità]),(from: 6, to: 7, style: (stroke: 8pt + gray)), (from: 6, to: 6, style: (stroke: 2pt + red)))
-      task(align(center, [Documentare design pattern #linebreak() e diagramma delle classi]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 3, style: (stroke: 2pt + red)))
-      task(align(center, [Descrizione frontend Workflow]),(from: 2, to: 3, style: (stroke: 8pt + gray)), (from: 2, to: 2, style: (stroke: 2pt + red)))
-      task(align(center, [Descrizione frontend Services]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 1, style: (stroke: 2pt + red)))
+      task(align(center, [Inserire immagini backend, agente e database]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 3, to: 6, style: (stroke: 2pt + red)))
+      task(align(center, [Fix specifica]),(from: 1, to: 2, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))  
+      task(align(center, [Inserire immagini frontend]),(from: 6, to: 8, style: (stroke: 8pt + gray)), (from: 5, to: 6, style: (stroke: 2pt + red)))   
+      task(align(center, [Documentare architettura di deploy]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare limiti e criticità]),(from: 3, to: 4, style: (stroke: 8pt + gray)), (from: 2, to: 3, style: (stroke: 2pt + red)))
+      task(align(center, [Documentare design pattern #linebreak() e diagramma delle classi]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 2, to: 4, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione frontend Workflow]),(from: 2, to: 3, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Descrizione frontend Services]),(from: 1, to: 3, style: (stroke: 8pt + gray)), (from: 1, to: 2, style: (stroke: 2pt + red)))
     })
     taskgroup(title:[*MVP*],{
-      task(align(center, [Rendere esplicite le dipendenze #linebreak() e cambiare nome file]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 4, style: (stroke: 2pt + red)))
-      task(align(center, [Test di integrazione frontend]),(from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 2, to: 2, style: (stroke: 2pt + red)))
-      task(align(center, [Sistemare docker per release]),(from: 8, to: 9, style: (stroke: 8pt + gray)), (from: 8, to: 8, style: (stroke: 2pt + red)))
-      task(align(center, [Implementare test di sistema]),(from: 6, to: 9, style: (stroke: 8pt + gray)), (from: 6, to: 6, style: (stroke: 2pt + red)))
-      task(align(center, [Tracciamento test]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 3, style: (stroke: 2pt + red)))
-      task(align(center, [Codifica frontend Workflow]),(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
-      task(align(center, [Codifica frontend Services]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 0, style: (stroke: 2pt + red)))
+      task(align(center, [Rendere esplicite le dipendenze #linebreak() e cambiare nome file]),(from: 4, to: 6, style: (stroke: 8pt + gray)), (from: 4, to: 6, style: (stroke: 2pt + red)))
+      task(align(center, [Test di integrazione frontend]),(from: 2, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Sistemare docker per release]),(from: 8, to: 9, style: (stroke: 8pt + gray)), (from: 5, to: 6, style: (stroke: 2pt + red)))
+      task(align(center, [Implementare test di sistema]),(from: 3, to: 9, style: (stroke: 8pt + gray)), (from: 1, to: 6, style: (stroke: 2pt + red)))
+      task(align(center, [Tracciamento test]),(from: 3, to: 5, style: (stroke: 8pt + gray)), (from: 3, to: 5, style: (stroke: 2pt + red)))
+      task(align(center, [Codifica frontend Workflow]),(from: 0, to: 2, style: (stroke: 8pt + gray)), (from: 0, to: 3, style: (stroke: 2pt + red)))
+      task(align(center, [Codifica frontend Services]),(from: 0, to: 1, style: (stroke: 8pt + gray)), (from: 0, to: 2, style: (stroke: 2pt + red)))
     })
   }
 ),
@@ -147,33 +147,38 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 - RP2 - Malattia di un membro del team (descritto in @tabella-RP2);
 - RP3 - Problemi interpersonali tra membri del team (descritto in @tabella-RP3).
 
-//==== Rischi occorsi
+==== Rischi occorsi
+Nessuno dei rischi previsti si è concretizzato.
 
+==== Conclusioni
+Durante il nono e ultimo sprint sono state terminate tutte le attività previste, consentendo al team di candidarsi per la revisione PB in anticipo rispetto ai termini previsti. È stata terminata la codifica dei componenti mancanti del frontend e sono stati implementati i test di sistema e i test di integrazione per la componente frontend. Sono stati aggiornati e completati tutti i documenti, in particolare il manuale utente e la specifica tecnica. Infine in data 01/04/2025 è stata svolta la riunione finale con l'azienda proponente, in cui sono stati superati tutti i test di accettazione e il prodotto finale è stato ritenuto consono. Sempre in data 01/04/2025 il gruppo ha celebrato la retrospettiva di fine sprint, anticipando così la data di termine pianificata.
 
-//==== Conclusioni
+==== Retrospettiva
+L'andamento dello sprint è stato molto positivo, infatti il gruppo ha terminato tutte le attività pianificate in anticipo. Questo risultato è indice di una crescente efficienza operativa e di un miglioramento dell'organizzazione interna del gruppo.
 
-//==== Retrospettiva
+Uno degli aspetti più rilevanti di questo sprint è stata la riduzione del rapporto tra ore produttive e ore di orologio rispetto alle fasi iniziali del progetto. Se nei primi sprint le ore produttive erano notevolmente inferiori rispetto alle ore di orologio a causa di rallentamenti, incertezze, necessità di coordinamento e l'impegno delle lezioni, in questo sprint il team è riuscito a diminuire di molto questo rapporto.
+Questo è stato possibile grazie ad una maggiore familiarità con il progetto, e soprattutto con le tecnologie impiegate.
+
+Si è incontrata qualche difficoltà nell'implementazione dei test di sistema, subito superata grazie alla collaborazione tra i membri del gruppo, altro punto di forza che ha permesso di terminare tutte le attività in anticipo. 
 
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 9)
 
 #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo) = preventivo
-#tabellaSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
-<tabella-PreventivoSprint8> \
+#tabellaSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioPreventivo, false)
+<tabella-PreventivoSprint9> \
 
-#pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
-<grafico-PreventivoSprint8> \
-/*
+#pieChartSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, false)
+<grafico-PreventivoSprint9> \
+
 #if consuntivo != none [
 
   #let (bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo) = consuntivo
   ==== Consuntivo
   I numeri tra parentesi indicano le variazioni rispetto al preventivo.
-  #tabellaSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
-  <tabella-ConsuntivoSprint8> \
-  #pieChartSprint(8, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
-  <grafico-ConsuntivoSprint8> \
+  #tabellaSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, bilancioConsuntivo, true)
+  <tabella-ConsuntivoSprint9> \
+  #pieChartSprint(9, bressan, corradin, lazzarin, salviato, squarzoni, tutino, vallotto, true)
+  <grafico-ConsuntivoSprint9> \
 ]
 
-==== Aggiornamento preventivo a finire
-*/
