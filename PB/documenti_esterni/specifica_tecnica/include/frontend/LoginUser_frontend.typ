@@ -10,7 +10,7 @@ L'autenticazione è realizzata da tre unità:
   image("../../assets/frontend/LoginService.svg", width: 40%),
   caption: [Classe LoginService]
 )
-LoginService è una classe dotata di un unico metodo asincrono #declaration("login(user: UserDTO): Promise<LoginResponse>"). Tale metodo prende come parametro uno UserDTO, e ritorna una Promise di tipo LoginResponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede di effetturare il login all'endpoint API offerto dalla funzionalità LoginUser del backend (vedi @login-user).
+LoginService è una classe dotata di un unico metodo asincrono #declaration("login(user: UserDTO): LoginResponse"). Tale metodo prende come parametro uno UserDTO, e ritorna una Promise di tipo LoginResponse. Quest'ultima è un'interfaccia che contiene come unico dato l'access token. Il metodo richiede di effetturare il login all'endpoint API offerto dalla funzionalità LoginUser del backend (vedi @login-user).
 L'esecuzione prosegue in base al codice di risposta ricevuto:
 - Se le credenziali sono corrette (codice HTTP 201) la Promise viene risolta e il token ricevuto dal backend viene ritornato tramite LoginResponse; 
 - Se le credenziali sono errate (codice HTTP 401), viene lanciato un Error con il messaggio "wrong username or password";
@@ -23,7 +23,7 @@ AuthContext fornisce un contesto che, tramite l'uso dell'hook #declaration[creat
 - user, che può essere:
   - null se l'utente non è autenticato;
   - di tipo User se l'utente è autenticato. User è un'interfaccia che memorizza due stringhe: lo username e l'access token;
-- #declaration("loginUser(userDTO: UserDTO): Promise<void>"), una funzione per effettuare il login;
+- #declaration("loginUser(userDTO: UserDTO): void"), una funzione per effettuare il login;
 - #declaration("logoutUser(): void"), una funzione per effettuare il logout;
 - error, che contiene i messaggi di errore relativi all'autenticazione.
 Per poter accedere a tale contesto, un componente deve essere figlio di AuthProvider e utilizzare l'hook personalizzato #declaration("useAuth()"). Data la necessità di inviare l'access token per l'utilizzo di molte funzionalità offerte dal backend, è stato deciso di rendere AuthProvider genitore di tutti i componenti presenti in App.
