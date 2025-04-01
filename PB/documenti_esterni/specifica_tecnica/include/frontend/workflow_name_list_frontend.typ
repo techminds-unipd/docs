@@ -4,7 +4,7 @@
 
 *AllWorkflowsService*
 #figure(
-  image("../../assets/frontend/AllWorkflowsService.svg", width: 50%),
+  image("../../assets/frontend/AllWorkflowsService.svg", width: 40%),
   caption: [Classe AllWorkflowsService.]
 )
 

@@ -3,7 +3,7 @@
 ==== ExecuteWorkflow
 *ExecuteWorkflowService*
 #figure(
-  image("../../assets/frontend/ExecuteWorkflowService.svg"),
+  image("../../assets/frontend/ExecuteWorkflowService.svg", width: 70%),
   caption: [Classe ExecuteWorkflowService.]
 )
 

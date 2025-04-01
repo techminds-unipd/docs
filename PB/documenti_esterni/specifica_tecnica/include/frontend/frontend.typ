@@ -44,7 +44,7 @@ A livello logico, oltre alle classi sopra citate e meglio descritte nella specif
   - source: number;
   - target: number.
 #figure(
-  image("../../assets/frontend/WorkflowDTO.svg", width: 50%),
+  image("../../assets/frontend/WorkflowDTO.svg", width: 70%),
   caption: [WorkflowDTO e dipendenze.]
 )
 

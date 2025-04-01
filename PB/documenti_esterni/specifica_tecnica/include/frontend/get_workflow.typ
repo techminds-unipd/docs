@@ -3,7 +3,7 @@
 ==== GetWorkflow
 *GetWorkflowService *
 #figure(
-  image("../../assets/frontend/GetWorkflowService.svg", width: 70%),
+  image("../../assets/frontend/GetWorkflowService.svg", width: 50%),
   caption: [Classe GetWorkflowService.]
 )
 
