@@ -182,4 +182,3 @@ Si è incontrata qualche difficoltà nell'implementazione dei test di sistema, s
   <grafico-ConsuntivoSprint9> \
 ]
 
-// ==== Aggiornamento preventivo a finire
