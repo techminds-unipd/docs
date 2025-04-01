@@ -19,7 +19,7 @@ I layer che compongono l'architettura sono:
 === Application logic
 - *WorkflowDTO*, rappresenta i dati della richiesta ricevuta dall'agente:
     - workflowNodes: ExecuteNode[];
-    - googleTokenFIle: GoogleTokenFile.
+    - googleTokenFile: GoogleTokenFile.
 
 - *ExecuteNode*, rappresenta un nodo del workflow:
     - type: string;
@@ -76,7 +76,7 @@ I layer che compongono l'architettura sono:
 
 - *GCalendarCreateEventSchema*
     - Proprietà:
-        - #declaration("- summary: string") #arrow descrizione dell'evento;
+        - #declaration("- summary: string") #arrow titolo dell'evento;
         - #declaration("- location: string") #arrow luogo dell'evento;
         - #declaration("- description: string") #arrow descrizione dell'evento;
         - #declaration("- startDateTime: string") #arrow data di inizio dell'evento;

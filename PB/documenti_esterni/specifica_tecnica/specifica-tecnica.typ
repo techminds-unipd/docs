@@ -10,7 +10,7 @@
     "0.33.0", "28/03/2025", "Aggiornato stato requisiti funzionali", team.M, team.C,
     "0.32.0", "28/03/2025", "Aggiornati services frontend", team.C, team.L,
     "0.31.0", "28/03/2025", "Aggiunta sezione architettura di deploy", team.M, team.S,
-    "0.30.0", "27/03/2025", "Documentati introduzione e designa pattern frontend", team.C, team.T,
+    "0.30.0", "27/03/2025", "Documentati introduzione e design pattern frontend", team.C, team.T,
     "0.29.0", "27/03/2025", "Aggiunte classi dati e fix errori backend", team.S, team.G,
     "0.28.0", "26/03/2025", "Aggiunta descrizione componente SignUpForm, pagina SignUp e funzionalità RegisterUser", team.A, team.C,
     "0.27.0", "25/03/2025", "Aggiunta sezione Limiti e criticità della soluzione individuata", team.M, team.S,

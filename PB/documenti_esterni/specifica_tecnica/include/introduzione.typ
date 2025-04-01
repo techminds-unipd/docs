@@ -25,6 +25,6 @@ Il documento che descrive la specifica tecnica nasce con l'intenzione di documen
 - Slide lezione sui diagrammi delle classi (corso di Ingegneria del Software): https://www.math.unipd.it/~rcardin/swea/2023/Diagrammi%20delle%20Classi.pdf \[visitato il: 24/02/2025\];
 - Slide lezione sui pattern architetturali (corso di Ingegneria del Software): https://www.math.unipd.it/~rcardin/swea/2022/Software%20Architecture%20Patterns.pdf \[visitato il: 24/02/2025\];
 - Slide lezione sulla dependency injection (corso di Ingegneria del Software): https://www.math.unipd.it/~rcardin/swea/2022/Design%20Pattern%20Architetturali%20-%20Dependency%20Injection.pdf \[visitato il: 24/02/2025\];
-- Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 2.0.0\];
-- #glossario[Analisi dei Requisiti]: https://techminds-unipd.github.io/docs/RTB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf \[versione 2.0.0\].
+- Glossario: https://techminds-unipd.github.io/docs/PB/documenti_interni/glossario/glossario.pdf \[versione 2.0.0\];
+- #glossario[Analisi dei Requisiti]: https://techminds-unipd.github.io/docs/PB/documenti_esterni/analisi_requisiti/analisi-dei-requisiti.pdf \[versione 2.0.0\].
 #set par(justify: true)
