@@ -1070,7 +1070,7 @@
     sistema.push(("TS" + str(sistema.len()+1),
         [Verificare che l'utente non autenticato possa effettuare il login con Google.],
         [#getFRByNumber(sistema.len()+1).at(0)],
-        [S],
+        [NI],
     ))
 
     sistema.push(("TS" + str(sistema.len()+1),
