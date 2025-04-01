@@ -146,7 +146,7 @@ Documento che ha lo scopo di raccogliere la pianificazione delle attività proge
     - rischi previsti;
     - rischi occorsi;
     - conclusioni;
-    - retrospettiva;
+    - #glossario[retrospettiva];
     - preventivo;
     - consuntivo.
 

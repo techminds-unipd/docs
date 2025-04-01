@@ -127,7 +127,7 @@ Le cartelle sono organizzate come segue:
     - *verbali* contiene i verbali esterni redatti dalla RTB alla PB;
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
     - *glossario* contiene i sorgenti del glossario;
-    - *norme_progetto* contiene i sorgenti delle norme di progetto;
+    - *norme_progetto* contiene i sorgenti delle #glossario[norme di progetto];
     - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB;
 - *RTB* organizza i sorgenti dei documenti redatti per la #glossario[Requirements and Technology Baseline] in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
@@ -166,11 +166,11 @@ Le cartelle sono organizzate come segue:
 - *agente* contiene il file requirements.txt per la gestione delle dipendenze con #glossario[PIP], il file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test;
-- *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend, per Nest e TypeScript e le sottocartelle:
+- *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend, per Nest e #glossario[TypeScript] e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test;
 - *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript  e le sottocartelle:
-  - *cypress* per i test di sistema;
+  - *cypress* per i #glossario[test di sistema];
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
@@ -341,7 +341,7 @@ Riguardo la verifica del codice, gli strumenti utilizzati sono:
 - Vitest, per la scrittura e l'esecuzione dei test di unità e integrazione del frontend;
 - Pytest, per la scrittura e l'esecuzione dei test di unità dell'agente;
 - Cypress, per la scrittura e l'esecuzione dei test di sistema;
-- ESLint, per il controllo della correttezza sintattica del codice #glossario[TypeScript]\;
+- ESLint, per il controllo della correttezza sintattica del codice TypeScript\;
 - Pylint, per il controllo della correttezza sintattica del codice #glossario[Python]\;
 - Prettier, per la formattazione automatica del codice secondo uno stile predefinito.
 
