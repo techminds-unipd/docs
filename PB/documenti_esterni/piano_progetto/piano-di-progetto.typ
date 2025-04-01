@@ -53,3 +53,4 @@
 #include "include/pianificazione.typ"
 #include "include/periodi.typ"
 #include "include/costi.typ"
+#include "include/considerazioni-finali.typ"
