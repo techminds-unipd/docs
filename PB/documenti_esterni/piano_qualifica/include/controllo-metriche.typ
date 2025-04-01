@@ -674,14 +674,16 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-Tutti i requisiti obbligatori e desiderabili sono stati soddisfatti. Il requisito opzionale, invece, non è stato soddisfatto in quanto non è stato implementato dato che avrebbe impiegato diverse ore produttive. Questa scelta è dovuta al fatto che il team ha deciso di concentrarsi sui requisiti obbligatori e desiderabili, ritenendo che fosse più importante soddisfare questi requisiti prima di passare a quelli opzionali. \ \ \  \ \ \ \ \ \ \ \ \ \ \ \
+Tutti i requisiti obbligatori e desiderabili sono stati soddisfatti. Il requisito opzionale, invece, non è stato soddisfatto in quanto non è stato implementato dato che avrebbe impiegato diverse ore produttive. Questa scelta è dovuta al fatto che il team ha deciso di concentrarsi sui requisiti obbligatori e desiderabili, ritenendo che fosse più importante soddisfare questi requisiti prima di passare a quelli opzionali. 
 
-
+#pagebreak()
 == MPROD4, MPROD5, MPROD6, MPROD7, MPROD8
 
 Le seguenti metriche di prodotto riguardanti la manutenibilità vengono applicate e verificate da strumenti di analisi statica del codice, come ad esempio #glossario[EsLint].
+#linebreak()
+#linebreak()
+#linebreak()
 
-#pagebreak()
 == MPROD9 (Tempo medio esecuzione di un workflow)
 #linebreak()
 #let point = ((8,0),)
