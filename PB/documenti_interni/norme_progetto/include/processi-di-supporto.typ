@@ -104,7 +104,7 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 //#glossario[mvp]
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
 - #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
-- #link("https://github.com/techminds-unipd/mvp")[mvp] #footnote(link("https://github.com/techminds-unipd/mvp")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
+- #link("https://github.com/techminds-unipd/AgentFlow")[AgentFlow] #footnote(link("https://github.com/techminds-unipd/AgentFlow")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei file*
@@ -117,16 +117,6 @@ Le cartelle sono organizzate come segue:
     - *presentazione_candidatura*, con all'interno la dichiarazione degli impegni, la lettera di presentazione e lo studio dei capitolati;
     - *verbali*, con all'interno i sorgenti dei verbali esterni e, nella sottocartella firmati, la loro versione firmata.
   - *documenti_interni*, che contiene i verbali interni nell'unica sottocartella verbali.
-- *RTB* organizza i sorgenti dei documenti redatti per la #glossario[Requirements and Technology Baseline] in:
-  - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
-    - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
-    - *piano_progetto* contiene i sorgenti del piano di progetto;
-    - *piano_qualifica* contiene i sorgenti del piano di qualifica;
-    - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB.
-  - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
-    - *glossario* contiene i sorgenti del glossario;
-    - *norme_progetto* contiene i sorgenti delle #glossario[norme di progetto];
-    - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
 - *PB* organizza i sorgenti dei documenti redatti per la #glossario[Product Baseline] in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la PB e una cartella per ogni documento che sarà fornito al proponente:
     - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
@@ -134,11 +124,21 @@ Le cartelle sono organizzate come segue:
     - *piano_progetto* contiene i sorgenti del piano di progetto;
     - *piano_qualifica* contiene i sorgenti del piano di qualifica;
     - *specifica_tecnica* contiene i sorgenti del documento di specifica tecnica;
-    - *verbali* contiene i verbali esterni redatti dalla RTB alla PB.
+    - *verbali* contiene i verbali esterni redatti dalla RTB alla PB;
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
     - *glossario* contiene i sorgenti del glossario;
     - *norme_progetto* contiene i sorgenti delle norme di progetto;
-    - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB.
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB;
+- *RTB* organizza i sorgenti dei documenti redatti per la #glossario[Requirements and Technology Baseline] in:
+  - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
+    - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
+    - *piano_progetto* contiene i sorgenti del piano di progetto;
+    - *piano_qualifica* contiene i sorgenti del piano di qualifica;
+    - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB;
+  - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
+    - *glossario* contiene i sorgenti del glossario;
+    - *norme_progetto* contiene i sorgenti delle #glossario[norme di progetto];
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB;
 - *template* contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
 Inoltre, all'interno della repository si trova un file README.md in cui è descritta la struttura delle cartelle. 
 
@@ -157,19 +157,20 @@ Il gruppo ha deciso di utilizzare il flusso di lavoro GitHub Flow; un flusso sem
 
 Inoltre, per la repository della documentazione è disponibile una pagina web statica ospitata da #glossario[GitHub Pages], che permette di visionare tutti i documenti appartenenti alla documentazione generati attraverso delle GitHub Actions (vedi @sito-web per maggiori informazioni).
 
-==== Repository mvp
+==== Repository AgentFlow
 *Organizzazione dei file*
 
-La repository mvp contiene solamente il codice eseguibile del MVP.#linebreak()
+La repository AgentFlow contiene solamente il codice eseguibile del MVP.#linebreak()
 Le cartelle sono organizzate come segue:
 - *.github* contiene gli script per la Continuos Integration;
 - *agente* contiene il file requirements.txt per la gestione delle dipendenze con #glossario[PIP], il file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test.
-- *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend e le sottocartelle:
+  - *test* per il codice dei test;
+- *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend, per Nest e TypeScript e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test.
-- *frontend* contiene i file per #glossario[ESLint], per Node.js, per #glossario[Vite], per il container Docker del frontend e le sottocartelle:
+  - *test* per il codice dei test;
+- *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript  e le sottocartelle:
+  - *cypress* per i test di sistema;
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
@@ -190,7 +191,7 @@ Il gruppo ha deciso di utilizzare un flusso di lavoro articolato come segue:
 	5.	*Eliminazione il branch*: eliminare il branch di feature per mantenere la repository pulita.
 - *Deploy dell'applicazione e release*:
 	+	*Creazione di una Pull Request*: aprire una pull request per richiedere una revisione finalizzata al merge di dev in main;
-	+	*Merge della Pull Request*: dopo la revisione, fare il merge;
+	+	*Merge della Pull Request*: dopo la revisione, fare il merge.
 
 === Strumenti e tecnologie
 Il team ha deciso di utilizzare il sistema di versionamento Git e la piattaforma #glossario[GitHub] per la gestione della configurazione.

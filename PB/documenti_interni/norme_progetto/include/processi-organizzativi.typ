@@ -114,7 +114,7 @@ Ha quindi il compito di:
 
 ==== Strumenti e tecnologie
 Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e le seguenti tecnologie:
-- #link("https://github.com/orgs/techminds-unipd/projects/1", "GitHub Board") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1")) \[visitato il: 10/02/2025\] per le attività di pianificazione;
+- #link("https://github.com/orgs/techminds-unipd/projects/1", "GitHub Board") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1")) \[visitato il: 01/04/2025\] per le attività di pianificazione;
 - Typst: per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
@@ -231,7 +231,7 @@ Di seguito descriviamo il ciclo di vita di una issue:
 Board è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate e intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo.
 
 Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub Projects, in particolare:
-- GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1
+- GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1 \[visitato il: 01/04/2025\]
   
   Dashboard suddivisa in 5 colonne che corrispondono alle fasi del ciclo di vita delle issue:
   - No Status: vengono inserite le issue che non hanno una particolare urgenza; solo una volta terminate le issue relative allo sprint verranno completate anche quelle presenti in questa colonna;
