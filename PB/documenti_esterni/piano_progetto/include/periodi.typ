@@ -106,3 +106,25 @@ La seconda milestone del progetto, chiamata Product Baseline, si concentra sulla
 #include "sprint/sprint7.typ"
 #include "sprint/sprint8.typ"
 #include "sprint/sprint9.typ"
+
+=== Consuntivo di periodo PB
+I costi effettivamente sostenuti durante il periodo PB sono esposti nella @tabella-totalePB.
+
+#figure(
+    table(
+        columns: (1fr,)*4,
+        align: center+horizon,
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*], [*Ore*], [*Costo orario*], [*Costo totale*]),
+        [Responsabile], [37], [30 #sym.euro],  [1.110 #sym.euro],
+        [Amministratore], [124], [20 #sym.euro],  [2.480 #sym.euro],
+        [Analista], [59], [25 #sym.euro],  [1.475 #sym.euro],
+        [Progettista], [99], [25 #sym.euro], [2.475 #sym.euro],
+        [Programmatore], [150], [15 #sym.euro], [2.250 #sym.euro],
+        [Verificatore], [190], [15 #sym.euro], [2.850 #sym.euro],
+        table.cell([*Costo Totale*], colspan: 3, fill: white), table.cell([*12.640 #sym.euro*], fill: white)
+    ),
+    caption: "Consuntivo di periodo PB."
+) <tabella-totalePB>
+
+Il costo effettivo di completamento del progetto è diminuito dai *12.975 #sym.euro* inizialmente preventivati a *12.640 #sym.euro*. I tempi previsti di consegna sono stati rispettati, concludendo il progetto entro il *4 aprile 2025*.
