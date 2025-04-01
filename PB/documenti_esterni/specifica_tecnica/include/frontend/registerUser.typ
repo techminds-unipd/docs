@@ -1,6 +1,6 @@
 #import "funzioni_ausiliarie.typ": declaration
 ==== RegisterUser
-La registrazione è realizzata da 2 unità:
+La registrazione è realizzata da due unità:
 - RegisterService, che interagisce con il backend per richiedere la registrazione;
 - #declaration("useRegister"), che consente di accedere al metodo #declaration("register") contenuto in RegisterService.
 

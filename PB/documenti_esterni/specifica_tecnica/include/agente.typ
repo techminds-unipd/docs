@@ -41,8 +41,8 @@ I layer che compongono l'architettura sono:
     - Operazioni:
         - #declaration("+ executeWorkflow(req: Request): string") #arrow crea un oggetto di tipo _WorkflowDTO_ a partire dalla richiesta ricevuta, se la richiesta non è valida ritorna un errore, altrimenti chiama il metodo _run_ definito in _workflowService_ e ritorna il risultato ottenuto.
     - Note:
-        - nel caso la richiesta sia invalida oppure il workflow contenuto nella richiesta non sia valido ritorna status http 400;
-        - in caso di altre eccezioni ritorna status http 500;
+        - nel caso la richiesta sia invalida oppure il workflow contenuto nella richiesta non sia valido ritorna status HTTP 400;
+        - in caso di altre eccezioni ritorna status HTTP 500;
         - è utile avere dei metodi privati per la validazione della richiesta e del workflow.
 
 === Business logic
@@ -110,4 +110,6 @@ I layer che compongono l'architettura sono:
     - Note:
         - la classe deriva da _BaseTool_, tipo offerto dalla libreria LangChain.
 
-
+#set list(marker: ([-], [•], [‣]))
+=== Design pattern utilizzati
+- *Strategy*: la classe _WorkflowService_ utilizza un _llm_ di tipo _BaseModel_ che funge da interfaccia per tutti i tipi di modelli LLM di _LangChain_, permettendo di scegliere il modello più adatto.

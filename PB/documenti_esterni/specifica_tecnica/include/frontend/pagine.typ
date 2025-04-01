@@ -21,7 +21,7 @@ La pagina è composta dai seguenti componenti React:
 - Sette PersonCard con i nostri nomi e i link ai nostri profili GitHub;
 - Un Typography con del testo che parla del gruppo;
 - Un Link che punta al profilo GitHub del gruppo Tech Minds;
-- Grid per impaginare.
+- Grid2 per impaginare.
 
 ==== Sign up
 Questa pagina si trova nel percorso \"/signup\" e contiene un unico componente personalizzato, SignUpForm, che contiene il form per effettuare la registrazione.
@@ -32,7 +32,7 @@ Questa pagina si trova nel percorso \"/signin\" e contiene il form per l'autenti
 La pagina contiene un unico componente personalizzato SignInForm, che contiene il form per effettuare il login.
 
 ==== Dashboard
-Il componente Dashboard rappresenta la pagina principale per gli utenti autenticati. Qui, gli utenti possono aggiungere o eliminare un workflow, viualizzare quelli esistenti e selezionare un singolo workflow da poter modificare o eseguire.
+La pagina Dashboard rappresenta la pagina principale per gli utenti autenticati. Qui, gli utenti possono aggiungere o eliminare un workflow, visualizzare quelli esistenti e selezionare un singolo workflow da poter modificare o eseguire.
 
 Il componente utilizza #declaration("useState()") per gestire il ricaricamento della lista dei workflow:
 - shouldReload: stato booleano che determina se la lista dei workflow deve essere aggiornata;
@@ -47,7 +47,7 @@ L'interfaccia della Dashboard è strutturata in due sezioni principali, entrambe
   - si aggiorna in base al valore di shouldReload.
 
 ==== Services
-Il componente Services rappresenta la pagina che permette all'utente autenticato di gestire il collegamento col proprio account Google e vedere quali servizi potrà utilizzare nel workflow.
+La pagina Services rappresenta la pagina che permette all'utente autenticato di gestire il collegamento col proprio account Google e vedere quali servizi potrà utilizzare nel workflow.
 
 Il componente usa #declaration[useGoogleToken()] per gestire il collegamento dell'account Google, in particolare:
 - googleToken: variabile che permette di controllare se il collegamento a Google è stato effettuato;
@@ -65,7 +65,7 @@ Il componente è composto da:
 Se il token non è presente o è scaduto il Button ha come destinazione il percorso del backend che si occupa di effettuare il redirect verso Google (nel nostro caso \http:\/\/localhost:3000/google/auth).
 
 ==== AddAccount
-Questo componente rappresenta una pagina di servizio, necessaria per salvare il token dell'account Google e la data della sua scadenza. Questa pagina è la destinazione del redirect da parte del backend. Per accedere ai dati del token, contenuto nella query string, si fa uso dell'hook #declaration[useSearchParams()].
+La pagina AddAccount è necessaria per salvare il token dell'account Google e la data della sua scadenza. Questa pagina è la destinazione del redirect da parte del backend. Per accedere ai dati del token, contenuto nella query string, si fa uso dell'hook #declaration[useSearchParams()].
 
 Nella query string sono presenti i seguenti parametri:
 - token: il contenuto del token generato da Google durante la connessione dell'account;
@@ -77,18 +77,15 @@ Nella query string sono presenti i seguenti parametri:
 La pagina Workflow rappresenta un'interfaccia interattiva dove l'utente può visualizzare e modificare un workflow attraverso un'area canvas dinamica. In questa pagina, vengono visualizzati i nodi, gli archi e la descrizione dell'automazione di un workflow, permettendo di modificarlo grazie alla libreria ReactFlow. La pagina si costruisce attorno a un layout ben definito che utilizza un componente Grid fornito da MUI, che include un'area principale per l'interazione e una barra laterale per offrire funzionalità aggiuntive.
 
 L'intera pagina è contenuta in un ReactFlowProvider, fornito dalla libreria ReactFlow.
-Inoltre utilizza anche un context personalizzato chiamato *DnDProvider*. Questo contesto è utilizzato per definire lo stato e le operazioni relative al drag-and-drop, permettendo ai componenti figli di leggere e aggiornare lo stato DnD grazie all'hook personalizzato #declaration[useDnD()]. 
+Inoltre utilizza anche un context personalizzato chiamato DnDProvider. Questo contesto è utilizzato per definire lo stato e le operazioni relative al drag-and-drop, permettendo ai componenti figli di leggere e aggiornare lo stato DnD grazie all'hook personalizzato #declaration[useDnD()]. 
 
-L'interazione principale avviene all'interno del componente *WorkflowCanvas*. Qui, l'utente può visualizzare e modificare il workflow. I nodi sono interattivi: l'utente può spostarli, aggiungere nuove connessioni o rimuovere quelle esistenti. Le modifiche ai nodi e alle connessioni vengono immediatamente riflesse nel modello di dati sottostante, mantenendo la pagina aggiornata in tempo reale.
+L'interazione principale avviene all'interno del componente WorkflowCanvas. Qui, l'utente può visualizzare e modificare il workflow. I nodi sono interattivi: l'utente può spostarli, aggiungere nuove connessioni o rimuovere quelle esistenti. Le modifiche ai nodi e alle connessioni vengono immediatamente riflesse nel modello di dati sottostante, mantenendo la pagina aggiornata in tempo reale.
 
-Accanto a WorkflowCanvas, si trova la *WorkflowSidebar*, una barra laterale che fornisce i nodi da trascinare nella canvas.
+Accanto a WorkflowCanvas, si trova la WorkflowSidebar, una barra laterale che fornisce i nodi da trascinare nella canvas.
 
-Infine nella parte superiore della pagina si trova il componente *WorkflowHeader*, che visualizza il nome del workflow e due Button forniti da MUI, uno per l'esecuzione del workflow e uno per il salvataggio.
+Infine nella parte superiore della pagina si trova il componente WorkflowHeader, che visualizza il nome del workflow e due Button forniti da MUI, uno per l'esecuzione del workflow e uno per il salvataggio.
 
 Quando un utente accede alla pagina, il workflow viene caricato dinamicamente grazie all'hook personalizzato #declaration("useGetWorkflow(getWorkflowService: GetWorkflowService): WorkflowDTO") che si occupa di recuperare il workflow tramite la funzione #declaration("getWorkflow(name: string): WorkflowDTO"). La funzione restituisce un oggetto di tipo WorkflowDTO, che viene poi convertito in un formato utilizzabile da ReactFlow.
 
 Una volta che i dati sono stati recuperati e mappati, vengono salvati nello stato del componente tramite i metodi #declaration[setNodes] e #declaration[setEdges]. Questi stati contengono rispettivamente i nodi e gli archi del workflow, che vengono visualizzati nella canvas. Ogni nodo ha una posizione specifica, un'etichetta e un tipo.
-
-
-
 

@@ -15,8 +15,8 @@
     - Operazioni:
         - #declaration("+ login(req: UserDTO): JWT") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo _login_ definito in _LoginUserUseCase_ e, se non vengono lanciate eccezioni, crea e ritorna il token di autenticazione attraverso un _JWT_, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - in caso di eccezione _UserNotFoundError_ o _WrongPasswordError_ ritorna status http 400;
-        - per le altre eccezioni ritorna status http 500;
+        - in caso di eccezione _UserNotFoundError_ o _WrongPasswordError_ ritorna status HTTP 401;
+        - per le altre eccezioni ritorna status HTTP 500;
 
 - *LoginUserUseCase* (interfaccia)
     - #declaration("+ login(user: User): User").

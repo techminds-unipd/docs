@@ -14,7 +14,7 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ==== CustomLink
-Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
+Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menù di navigazione.
 
 Il componente accetta quattro props:
 - name: il testo da visualizzare nel link;
@@ -37,7 +37,7 @@ In base alla prop \"variant\", la funzione #declaration("getButtonStyles(variant
 Infine, come per CustomLink, utilizza il componente Link (rinominato RouterButton) di React Router per gestire correttamente la navigazione senza ricaricare la pagina.
 
 ==== LogoutMenuItem
-Il componente LogoutMenuItem è un componente React personalizzato che gestisce la procedura di logout. Utilizza MUI per l'interfaccia utente e React Router per la navigazione. Il suo scopo è mostrare un'opzione di logout in un menu, aprire un dialogo di conferma e, se confermato, eseguire la procedura di logout e reindirizzare l'utente alla homepage.
+Il componente LogoutMenuItem è un componente React personalizzato che gestisce la procedura di logout. Utilizza MUI per l'interfaccia utente e React Router per la navigazione. Il suo scopo è mostrare un'opzione di logout in un menù, aprire un dialogo di conferma e, se confermato, eseguire la procedura di logout e reindirizzare l'utente alla homepage.
 
 Il componente accetta una prop:
 - #declaration("handleCloseMenu()"): funzione che chiude il menu in cui è contenuto il pulsante di logout.
@@ -64,7 +64,7 @@ La PersonCard è un componente React il cui scopo è mostrare il nome di una per
 
 Il componente accetta due props:
 - name: il nome della persona;
-- GitHubUsername: uno username esistente di GitHub.
+- gitHubUsername: uno username esistente di GitHub.
 
 Il componente PersonCard è composto da:
 - Un Box che racchiude tutti gli altri componenti;
@@ -77,7 +77,7 @@ Il componente CustomNode è un componente React personalizzato che rappresenta u
 Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
 
 I CustomNode vengono utilizzati nelle seguenti pagine:
-- Workflow, dove i CustumNode vengono visualizzati e usati per creare un workflow;
+- Workflow, dove i CustomNode vengono visualizzati e usati per creare un workflow;
 - Services, dove i CustomNode vengono solo visualizzati.
 
 Ogni nodo può essere:
@@ -119,7 +119,7 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla pagina di login;
 - Un SignUpContainer, per la grafica del container del form.
 
-SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): { user: UserDTO }[0..1]") fornita dal custom hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la passoword e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser").
+SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): { user: UserDTO }[0..1]") fornita dal custom hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la password e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser").
 
 ==== SignInForm
 SignInForm è un componente React che mostra il form per il login.
@@ -197,7 +197,7 @@ Viene utilizzato per proteggere le seguenti pagine:
 ==== AnonymousRoute
 Il componente AnonymousRoute è un componente React personalizzato che impedisce agli utenti autenticati di accedere a determinate pagine pubbliche.
 
-Il componente tilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
+Il componente utilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
 Se l'utente non è autenticato, viene renderizzato il componente figlio attraverso Outlet.
 Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dashboard tramite Navigate di React Router. \
 AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:

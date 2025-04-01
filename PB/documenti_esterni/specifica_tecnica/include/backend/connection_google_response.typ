@@ -12,7 +12,7 @@
     - Proprietà:
         - #declaration("- connectionGoogleResponseUseCase: ConnectionGoogleResponseUseCase") #arrow porta di input per il servizio di business dedicato alla gestione della richiesta callback per il collegamento dell'account Google.
     - Operazioni:
-        - #declaration("+ googleAuthCallback(code: string): RedirectUrlDTO") #arrow Chiama il metodo _getToken_ di _connectionGoogleResponseUseCase_ e utilizza il _Token_ ricevuto per creare un _RedirectUrlDTO_ che successivamente ritorna. Nel caso in cui la richiesta _getToken_ non andasse a buon fine ritorna status http 500.
+        - #declaration("+ googleAuthCallback(code: string): RedirectUrlDTO") #arrow Chiama il metodo _getToken_ di _connectionGoogleResponseUseCase_ e utilizza il _Token_ ricevuto per creare un _RedirectUrlDTO_ che successivamente ritorna. Nel caso in cui la richiesta _getToken_ non andasse a buon fine ritorna status HTTP 500.
 
 - *ConnectionGoogleResponseUseCase* (interfaccia)
     - #declaration("+ getToken(code: string): Token").

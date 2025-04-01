@@ -15,8 +15,8 @@
     - Operazioni:
         - #declaration("+ registerUser(req: UserDTO): UserDTO") #arrow valida i dati nella richiesta e la converte in _User_. Successivamente chiama il metodo registerUser definito in _RegisterUserUseCase_ e, se non vengono lanciate eccezioni, ritorna lo user registrato come _UserDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - in caso di eccezione di tipo _UserAlreadyExistsError_ ritorna status http 400;
-        - per le altre eccezioni ritorna status http 500;
+        - in caso di eccezione di tipo _UserAlreadyExistsError_ ritorna status HTTP 400;
+        - per le altre eccezioni ritorna status HTTP 500;
         - la richiesta per registerUser viene validata attraverso le validation pipe di NestJS.
         - è utile avere dei metodi helper privati per convertire da _UserDTO_ ad _User_ e viceversa.
 

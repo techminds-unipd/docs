@@ -16,8 +16,8 @@
     - Operazioni:
         - #declaration("+ deleteWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _DeleteWorkflowCommand_ necessario per chiamare il metodo _deleteWorkflow_ definito in _deleteWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow creato attraverso l'oggetto _workflowAdapterImplementation_ per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status http 400;
-        - in caso di altre eccezioni ritorna status http 500.
+        - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status HTTP 400;
+        - in caso di altre eccezioni ritorna status HTTP 500.
 
 - *DeleteWorkflowUseCase* (interfaccia)
     - #declaration("+ deleteWorkflow(cmd: DeleteWorkflowCommand): Workflow").
@@ -44,7 +44,7 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ deleteWorkflow(username: string, workflowName: string): WorkflowEntity[0..1]") #arrow attraverso il metodo _getWorkflowByName_ di _WorkflowRepository_ cerca una _WorkflowEntity_ con quel _workflowName_ e, se non la trova, ritorna _null_ perché il _workflow_ non esiste. Successivamente, chiama il metodo _findOneAndUpdate_ di _userEntityModel_ con lo _username_, esegue una query sul database che cerca una _UserEntity_ con quel _username_, rimuove il _workflow_ dalla lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se l'eliminazione del _workflow_ non va a buon fine ritorna null;
+        - #declaration("+ deleteWorkflow(username: string, workflowName: string): WorkflowEntity[0..1]") #arrow attraverso il metodo _getWorkflowByName_ di _WorkflowRepository_ cerca una _WorkflowEntity_ con quel _workflowName_ e, se non la trova, ritorna _null_ perché il _workflow_ non esiste. Successivamente, chiama il metodo _findOneAndUpdate_ di _userEntityModel_ con lo _username_, esegue una query sul database che cerca una _UserEntity_ con quello _username_, rimuove il _workflow_ dalla lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se l'eliminazione del _workflow_ non va a buon fine ritorna null;
         #repository_operazioni_get_workflow
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.

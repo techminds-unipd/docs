@@ -15,8 +15,8 @@
     - Operazioni:
         - #declaration("+ getWorkflowNameList(request: RequestHeader): string*") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente chiama il metodo _getWorkflowNameList_ definito in _WorkflowNameListUseCase_ e, se non vengono lanciate eccezioni, ottiene una lista di _string_ e la ritorna, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - in caso di eccezione di tipo _UserNotFoundError_ ritorna status http 400;
-        - in caso di altre eccezioni ritorna status http 500.
+        - in caso di eccezione di tipo _UserNotFoundError_ ritorna status HTTP 400;
+        - in caso di altre eccezioni ritorna status HTTP 500.
 
 - *WorkflowNameListUseCase* (interfaccia)
     - #declaration("+ getWorkflowNameList(username: string): string*").
@@ -43,6 +43,6 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ getAllWorkflowByUsername(username: string): WorkflowEntity*") #arrow attraverso il metodo _findOne_ di _userEntityModel_ e lo _username_, esegue una query sul database che cerca una _UserEntity_ con quel _username_, se la trova viene recuperata la lista di _WorkflowEntity_ associata all'_UserEntity_ e ritornata. Se non trova l'_UserEntity_ ritorna null.
+        - #declaration("+ getAllWorkflowByUsername(username: string): WorkflowEntity*") #arrow attraverso il metodo _findOne_ di _userEntityModel_ e lo _username_, esegue una query sul database che cerca una _UserEntity_ con quello _username_, se la trova viene recuperata la lista di _WorkflowEntity_ associata alla _UserEntity_ e ritornata. Se non trova la _UserEntity_ ritorna null.
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.
