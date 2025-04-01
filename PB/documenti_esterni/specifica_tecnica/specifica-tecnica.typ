@@ -4,6 +4,7 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "1.0.0", "01/04/2025", "Sistemata struttura documento e fix vari", team.G, team.S,
     "0.36.0", "30/03/2025", "Aggiunta diagrammi UML frontend", team.T, team.L,
     "0.35.0", "29/03/2025", "Aggiunta descrizione Workflow, funzionalità Save, Execute e Get", team.C, team.G,
     "0.34.0", "29/03/2025", "Aggiunti diagrammi classi backend", team.S, team.M,
