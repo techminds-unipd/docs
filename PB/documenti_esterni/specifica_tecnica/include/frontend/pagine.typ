@@ -74,12 +74,12 @@ Nella query string sono presenti i seguenti parametri:
 È infine presente un singolo Button da premere nel caso in cui il redirect verso Services non sia avvenuto automaticamente.
 
 ==== Workflow
-La pagina Workflow rappresenta un'interfaccia interattiva dove l'utente può visualizzare e modificare un workflow attraverso un'area canvas dinamica. In questa pagina, vengono visualizzati i nodi, gli archi e la descrizione dell'automazione di un workflow, permettendo di modificarlo grazie alla libreria ReactFlow. La pagina si costruisce attorno a un layout ben definito che utilizza un componente Grid fornito da MUI, che include un'area principale per l'interazione e una barra laterale per offrire funzionalità aggiuntive.
+La pagina Workflow rappresenta un'interfaccia interattiva dove l'utente può visualizzare e modificare un workflow attraverso un'area canvas dinamica. In questa pagina, vengono visualizzati i nodi, gli archi e la descrizione dell'automazione di un workflow, permettendo di modificarlo grazie alla libreria ReactFlow. La pagina utilizza un componente Grid fornito da MUI, che include un'area principale per l'interazione e una barra laterale per offrire funzionalità aggiuntive.
 
 L'intera pagina è contenuta in un ReactFlowProvider, fornito dalla libreria ReactFlow.
 Inoltre utilizza anche un context personalizzato chiamato DnDProvider. Questo contesto è utilizzato per definire lo stato e le operazioni relative al drag-and-drop, permettendo ai componenti figli di leggere e aggiornare lo stato DnD grazie all'hook personalizzato #declaration[useDnD()]. 
 
-L'interazione principale avviene all'interno del componente WorkflowCanvas. Qui, l'utente può visualizzare e modificare il workflow. I nodi sono interattivi: l'utente può spostarli, aggiungere nuove connessioni o rimuovere quelle esistenti. Le modifiche ai nodi e alle connessioni vengono immediatamente riflesse nel modello di dati sottostante, mantenendo la pagina aggiornata in tempo reale.
+L'interazione principale avviene all'interno del componente WorkflowCanvas. Qui, l'utente può visualizzare e modificare il workflow: l'utente può spostarli, aggiungere nuove connessioni o rimuovere quelle esistenti. Le modifiche ai nodi e alle connessioni vengono salvate nel modello di dati sottostante, mantenendo la pagina sempre aggiornata.
 
 Accanto a WorkflowCanvas, si trova la WorkflowSidebar, una barra laterale che fornisce i nodi da trascinare nella canvas.
 

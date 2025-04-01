@@ -6,7 +6,7 @@ La registrazione è realizzata da due unità:
 
 *RegisterService*
 #figure(
-  image("../../assets/frontend/RegisterService.svg", width: 40%),
+  image("../../assets/frontend/RegisterService.svg", width: 35%),
   caption: [Classe RegisterService.]
 )
 RegisterService è una classe dotata di un unico metodo asincrono #declaration("register(user: UserDTO): UserDTO"). Tale metodo prende come parametro uno UserDTO, e ritorna una Promise di tipo UserDTO. Il metodo richiede di effettuare la registrazione all'endpoint API offerto dalla funzionalità RegisterUser del backend (vedi @register-user).
