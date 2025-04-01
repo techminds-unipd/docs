@@ -5,7 +5,7 @@
 
 *DeleteWorkflowService*
 #figure(
-  image("../../assets/frontend/DeleteWorkflowService.svg", width: 70%),
+  image("../../assets/frontend/DeleteWorkflowService.svg", width: 60%),
   caption: [Classe DeleteWorkflowService.]
 )
 
