@@ -21,16 +21,15 @@ Questa repo contiene la documentazione del gruppo Tech Minds del progetto di SWE
 ## Struttura repo
 ```
 .
-├── .github/workflows
 ├── PB/
 │   ├── documenti_esterni/
 │   │   ├── analisi_requisiti/
 │   │   ├── piano_progetto/
 │   │   ├── piano_qualifica/
 │   │   ├── specifica_tecnica/
+│   │   ├── manuale_utente/
+│   │   ├── lettera-di-presentazione-PB.typ
 │   │   └── verbali/
-│   │       ├── firmati/
-│   │       └── yyyy-mm-dd[-info].typ
 │   └── documenti_interni/
 │       ├── glossario/
 │       ├── norme_progetto/
@@ -41,8 +40,6 @@ Questa repo contiene la documentazione del gruppo Tech Minds del progetto di SWE
 │   │   ├── piano_progetto/
 │   │   ├── piano_qualifica/
 │   │   ├── verbali/
-│   │   │   ├── firmati/
-│   │   │   └── yyyy-mm-dd[-info].typ
 │   │   └── lettera-di-presentazione-RTB.typ
 │   └── documenti_interni/
 │       ├── glossario/
@@ -50,10 +47,11 @@ Questa repo contiene la documentazione del gruppo Tech Minds del progetto di SWE
 │       └── verbali/
 ├── candidatura/
 │   ├── documenti_esterni/
-│   │   ├── presentazione_candidatura/
-│   │   └── verbali/
+│   ├── presentazione_candidatura/
+│   ├── verbali/
 │   └── documenti_interni/verbali
 ├── template/
+├── .github/workflows
 ├── .gitignore
 └── README.md
 ```
