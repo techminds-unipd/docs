@@ -742,7 +742,4 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-Tutti i browser da supportare individuati nell'analisi dei requisiti sono stati supportati. Infatti il prodotto è stato testato con esito positivo sulle ultime versioni di Chrome e Firefox.
-
-
-
+Tutti i browser da supportare individuati nell'analisi dei requisiti sono stati supportati. In particolare il prodotto è stato testato con esito positivo sulle versioni specificate di Chrome e Firefox.
