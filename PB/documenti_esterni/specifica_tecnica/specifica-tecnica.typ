@@ -4,13 +4,14 @@
   title: "Specifica tecnica",
   sommario: "Il documento riporta le scelte progettuali e tecnologiche adottate per lo sviluppo del prodotto.",
     changelog: (
+    "1.0.0", "01/04/2025", "Sistemata struttura documento e fix vari", team.G, team.S,
     "0.36.0", "30/03/2025", "Aggiunta diagrammi UML frontend", team.T, team.L,
     "0.35.0", "29/03/2025", "Aggiunta descrizione Workflow, funzionalità Save, Execute e Get", team.C, team.G,
     "0.34.0", "29/03/2025", "Aggiunti diagrammi classi backend", team.S, team.M,
     "0.33.0", "28/03/2025", "Aggiornato stato requisiti funzionali", team.M, team.C,
     "0.32.0", "28/03/2025", "Aggiornati services frontend", team.C, team.L,
     "0.31.0", "28/03/2025", "Aggiunta sezione architettura di deploy", team.M, team.S,
-    "0.30.0", "27/03/2025", "Documentati introduzione e designa pattern frontend", team.C, team.T,
+    "0.30.0", "27/03/2025", "Documentati introduzione e design pattern frontend", team.C, team.T,
     "0.29.0", "27/03/2025", "Aggiunte classi dati e fix errori backend", team.S, team.G,
     "0.28.0", "26/03/2025", "Aggiunta descrizione componente SignUpForm, pagina SignUp e funzionalità RegisterUser", team.A, team.C,
     "0.27.0", "25/03/2025", "Aggiunta sezione Limiti e criticità della soluzione individuata", team.M, team.S,
@@ -52,6 +53,7 @@
 
 #include "include/introduzione.typ"
 #include "include/tecnologie.typ"
-#include "include/architettura_sistema.typ"
+#include "include/architettura_deployment.typ"
+#include "include/architettura_logica.typ"
 #include "include/limiti_soluzione.typ"
 #include "include/stato_requisiti_funzionali.typ"

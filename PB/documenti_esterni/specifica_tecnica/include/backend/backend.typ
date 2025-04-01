@@ -10,7 +10,7 @@ L'architettura esagonale è un pattern architetturale che ha come obiettivo prin
 
 L'architettura esagonale ci permette di avere i seguenti vantaggi:
 - La business logic non dipende da altri layer ed è isolata;
-- La struttura rigida ben definita permette di ottenere codice ben strutturato, evitando di cascare facilmente in alcuni errori tipici della programmazione ad oggetti;
+- La struttura rigida ben definita permette di ottenere codice ben strutturato, vincolando maggiormente il programmatore nella codifica rispetto alla layered;
 - Facile da testare, visto che ogni layer è isolato (vale anche per la layered in questo caso).
 
 Questa scelta ha anche dei lati negativi, ad esempio:
@@ -64,13 +64,13 @@ Le classi dati sono le classi che rappresentano i dati che vengono scambiati tra
   - workflow: WorkflowDTO.
 
 - *WorkflowDTOValidator*, rappresenta la classe che si occupa della validazione della struttura di un _WorkflowDTO_:
-  - #declaration("+ validate(workflow: WorkflowDTO)"), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con http status 412 nel caso in cui il workflow sia invalido.
+  - #declaration("+ validate(workflow: WorkflowDTO)"), metodo che controlla i vari elementi di un workflow e lancia un'eccezione con HTTP status 412 nel caso in cui il workflow sia invalido.
 
 - *WorkflowAdapterImplementation*, rappresenta la classe che si occupa della logica di adattamento tra _WorkflowDTO_ e _Workflow_, utilizzata poi dai vari controller:
   - #declaration("+ toDomain(workflow: WorkflowDTO): Workflow"), metodo che converte un _WorkflowDTO_ in un _Workflow_;
   - #declaration("+ toDTO(workflow: Workflow): WorkflowDTO"), metodo che converte un _Workflow_ in un _WorkflowDTO_.
 
-- *RequestHeader*, rappresenta l'header di una richiesta http, da cui si estrae lo _username_ dell'utente:
+- *RequestHeader*, rappresenta l'header di una richiesta HTTP, da cui si estrae lo _username_ dell'utente:
   - username: string.
 
 - *JWT*, alias di tipo per il token JWT:

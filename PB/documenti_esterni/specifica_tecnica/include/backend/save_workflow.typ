@@ -17,9 +17,9 @@
     - Operazioni:
         - #declaration("+ saveWorkflow(workflow: WorkflowDTO, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Prosegue con la validazione del _WorkflowDTO_ passato nel corpo della richiesta tramite l'oggetto _workflowDTOValidator_, se non ha successo solleva un'eccezione. Successivamente crea un _SaveWorkflowCommand_ necessario per chiamare il metodo _saveWorkflow_ definito in _saveWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow salvato attraverso l'oggetto _workflowAdapterImplementation_ per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status http 404;
-        - in caso di eccezione che occorre durante la validazione del _WorkflowDTO_ ritorna status http 412;
-        - in caso di altre eccezioni ritorna status http 500.
+        - in caso di eccezione di tipo _WorkflowNotFoundError_ ritorna status HTTP 404;
+        - in caso di eccezione che occorre durante la validazione del _WorkflowDTO_ ritorna status HTTP 412;
+        - in caso di altre eccezioni ritorna status HTTP 500.
 
 - *SaveWorkflowUseCase* (interfaccia)
     - #declaration("+ saveWorkflow(cmd: SaveWorkflowCommand): Workflow").
@@ -46,6 +46,6 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ saveWorkflow(username: string, workflow: WorkflowEntity): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOneAndUpdate_ di _userEntityModel_, lo _username_ e il nome del workflow da salvare, esegue una query sul database che cerca una _UserEntity_ con quel _username_ e il nome del workflow, se la trova, aggiorna il _workflow_ nella lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se non trova la _UserEntity_ o non riesce ad aggiornare il _workflow_ ritorna null.
+        - #declaration("+ saveWorkflow(username: string, workflow: WorkflowEntity): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOneAndUpdate_ di _userEntityModel_, lo _username_ e il nome del workflow da salvare, esegue una query sul database che cerca una _UserEntity_ con quello _username_ e il nome del workflow, se la trova, aggiorna il _workflow_ nella lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se non trova la _UserEntity_ o non riesce ad aggiornare il _workflow_ ritorna null.
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.

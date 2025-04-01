@@ -15,9 +15,9 @@
     - Operazioni:
         - #declaration("+ createWorkflow(workflowName: string, request: RequestHeader): WorkflowDTO") #arrow valida la richiesta verificando il JWT contenuto in _request_, da cui eventualmente recupera lo username. Successivamente crea un _CreateWorkflowCommand_ necessario per chiamare il metodo _createWorkflow_ definito in _createWorkFlowUseCase_ e, se non vengono lanciate eccezioni, converte il workflow creato per poi ritornare un _WorkflowDTO_, altrimenti gestisce le eccezioni sollevate.
     - Note:
-        - in caso di eccezione di tipo _WorkflowAlreadyExistsError_ ritorna status http 400;
-        - in caso di eccezione di tipo _WorkflowNotAddedError_ ritorna status http 500;
-        - in caso di altre eccezioni ritorna status http 500;
+        - in caso di eccezione di tipo _WorkflowAlreadyExistsError_ ritorna status HTTP 400;
+        - in caso di eccezione di tipo _WorkflowNotAddedError_ ritorna status HTTP 500;
+        - in caso di altre eccezioni ritorna status HTTP 500;
         - è utile avere dei metodi helper privati per convertire da _Workflow_ a _WorkflowDTO_ e per creare il _CreateWorkflowCommand_.
 
 - *CreateWorkflowUseCase* (interfaccia)
@@ -49,7 +49,7 @@
     - Proprietà:
         -  #declaration("- userEntityModel: Model<UserEntity>") #arrow oggetto fornito dalla libreria _mongoose_ che si interfaccia con il database.
     - Operazioni:
-        - #declaration("+ addWorkflow(username: string, workflow: WorkflowEntity): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOneAndUpdate_ di _userEntityModel_ e lo _username_, esegue una query sul database che cerca una _UserEntity_ con quel _username_ e, se la trova, aggiunge il _workflow_ alla lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se non trova la _UserEntity_ o non riesce ad aggiungere il _workflow_ ritorna null;
+        - #declaration("+ addWorkflow(username: string, workflow: WorkflowEntity): WorkflowEntity[0..1]") #arrow attraverso il metodo _findOneAndUpdate_ di _userEntityModel_ e lo _username_, esegue una query sul database che cerca una _UserEntity_ con quello _username_ e, se la trova, aggiunge il _workflow_ alla lista dei _workflows_ della _UserEntity_ e lo ritorna come _WorkflowEntity_. Se non trova la _UserEntity_ o non riesce ad aggiungere il _workflow_ ritorna null;
         #repository_operazioni_get_workflow
     - Note:
         - sono state descritte solamente le operazioni utilizzate in questa funzionalità.

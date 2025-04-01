@@ -14,9 +14,9 @@ In ogni pagina è presente un componente Footer che utilizza i seguenti componen
 - Typography per il testo.
 
 ==== CustomLink
-Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menu di navigazione.
+Il componente CustomLink è un componente React personalizzato che gestisce la navigazione all'interno della web app utilizzando React Router. Il suo scopo principale è evitare la creazione di link circolari, ossia link che puntano alla pagina in cui ci si trova attualmente. Per questo motivo, CustomLink viene utilizzato, ad esempio, all'interno del componente Navbar (vedi @navbar), per gestire i collegamenti del menù di navigazione.
 
-Il componente accetta due props:
+Il componente accetta quattro props:
 - name: il testo da visualizzare nel link;
 - link: l'URL di destinazione;
 - color: il colore da applicare al link. Questo può avere tre valori: "black" (di default), "white" o "main-color";
@@ -37,7 +37,7 @@ In base alla prop \"variant\", la funzione #declaration("getButtonStyles(variant
 Infine, come per CustomLink, utilizza il componente Link (rinominato RouterButton) di React Router per gestire correttamente la navigazione senza ricaricare la pagina.
 
 ==== LogoutMenuItem
-Il componente LogoutMenuItem è un componente React personalizzato che gestisce la procedura di logout. Utilizza MUI per l'interfaccia utente e React Router per la navigazione. Il suo scopo è mostrare un'opzione di logout in un menu, aprire un dialogo di conferma e, se confermato, eseguire la procedura di logout e reindirizzare l'utente alla homepage.
+Il componente LogoutMenuItem è un componente React personalizzato che gestisce la procedura di logout. Utilizza MUI per l'interfaccia utente e React Router per la navigazione. Il suo scopo è mostrare un'opzione di logout in un menù, aprire un dialogo di conferma e, se confermato, eseguire la procedura di logout e reindirizzare l'utente alla homepage.
 
 Il componente accetta una prop:
 - #declaration("handleCloseMenu()"): funzione che chiude il menu in cui è contenuto il pulsante di logout.
@@ -64,7 +64,7 @@ La PersonCard è un componente React il cui scopo è mostrare il nome di una per
 
 Il componente accetta due props:
 - name: il nome della persona;
-- GitHubUsername: uno username esistente di GitHub.
+- gitHubUsername: uno username esistente di GitHub.
 
 Il componente PersonCard è composto da:
 - Un Box che racchiude tutti gli altri componenti;
@@ -77,7 +77,7 @@ Il componente CustomNode è un componente React personalizzato che rappresenta u
 Ogni nodo, a seguito di un click su di esso, apre una Dialog che contiene le informazioni del servizio (viene chiamata la funzione #declaration[handleOpen]).
 
 I CustomNode vengono utilizzati nelle seguenti pagine:
-- Workflow, dove i CustumNode vengono visualizzati e usati per creare un workflow;
+- Workflow, dove i CustomNode vengono visualizzati e usati per creare un workflow;
 - Services, dove i CustomNode vengono solo visualizzati.
 
 Ogni nodo può essere:
@@ -119,7 +119,7 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla pagina di login;
 - Un SignUpContainer, per la grafica del container del form.
 
-SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): Promise<{ user: UserDTO } | null>") fornita dal custom hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la passoword e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser").
+SignUpForm si occupa di invocare la funzione #declaration("registerUser(user: UserDTO): { user: UserDTO }[0..1]") fornita dal custom hook #declaration("useRegister(registerService: RegisterService): UseRegister"). Quando l'utente inserisce lo username, la password e la conferma della password, il componente SignUpForm verifica se i campi inseriti sono validi e rispettino i criteri di accettazione. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("registerUser").
 
 ==== SignInForm
 SignInForm è un componente React che mostra il form per il login.
@@ -138,7 +138,7 @@ I componenti personalizzati usati sono invece:
 - Un CustomLink, per il link alla registrazione;
 - Un SignInContainer, per la grafica del container del form.
 
-SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): Promise<void>") fornita dal custom hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la password, il componente SignInForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login").
+SignInForm si occupa di invocare la funzione #declaration("loginUser(user: UserDTO): void") fornita dal custom hook #declaration("useAuth()"). Quando l'utente inserisce lo username e la password, il componente SignInForm verifica se i campi inseriti sono validi. Se il controllo va a buon fine viene istanziato uno UserDTO che viene poi passato come parametro alla funzione #declaration("login").
 
 ==== AddWorkflow
 Il componente AddWorkflow è un componente React personalizzato che permette agli utenti di creare un nuovo workflow. Viene utilizzato all’interno della pagina Dashboard.
@@ -147,7 +147,7 @@ Il componente accetta una prop:
 - setShouldReload: funzione per aggiornare lo stato della lista dei workflow dopo la creazione di un nuovo elemento.
 Grazie all’hook personalizzato #declaration("useCreateWorkflow(createWorkflowsService: CreateWorkflowService): IUseCreateWorkflow"), il componente può accedere al servizio per creare un nuovo workflow. L'input dell'utente viene gestito attraverso un campo di testo (TextField di MUI), e la creazione avviene al click dell'IconButton, che utilizza l'icona di aggiunta fornita da MUI.
 
-Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow(name: string): Promise<CreateWorkflowResponse | undefined>"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
+Se il nome del workflow è valido, viene inviato al servizio dedicato tramite la funzione #declaration("createWorkflow(name: string): CreateWorkflowResponse[0..1]"), definita all'interno dell'hook prima citato. Se la creazione ha successo, viene mostrato un messaggio di conferma e la lista dei workflow viene aggiornata. In caso di errore, viene visualizzato un messaggio di avviso tramite il componente Snackbar di MUI.
 Quest'ultimo ha quindi due varianti:
 - success: se la creazione è andata a buon fine;
 - error: se si è verificato un problema (ad esempio nome duplicato o errore generico).
@@ -165,7 +165,7 @@ Il componente accetta varie prop:
 
 Grazie all’hook personalizzato #declaration("useDeleteWorkflow(deleteWorkflowService: DeleteWorkflowService): IUseDeleteWorkflow"), il componente può accedere al servizio per eliminare un workflow. Il nome del workflow viene visualizzato come un CustomLink, mentre l'utente può avviare la procedura di eliminazione tramite un’IconButton contenente l'icona di cancellazione fornita da MUI.
 
-Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow(name: string): Promise<DeleteWorkflowResponse | undefined>"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
+Quando l’utente clicca sul pulsante di eliminazione, viene aperto un Dialog di MUI, che richiede una conferma prima di procedere con l'eliminazione. Se l'utente conferma, viene chiamata la funzione #declaration("deleteWorkflow(name: string): DeleteWorkflowResponse[0..1]"), definita all'interno dell'hook personalizzato. Se la cancellazione ha successo, la lista dei workflow viene aggiornata tramite setShouldReload.
 
 ==== WorkflowList
 Il componente WorkflowList è un componente React personalizzato che visualizza la lista dei workflow dell'utente. Viene utilizzato all’interno della pagina Dashboard.
@@ -197,7 +197,7 @@ Viene utilizzato per proteggere le seguenti pagine:
 ==== AnonymousRoute
 Il componente AnonymousRoute è un componente React personalizzato che impedisce agli utenti autenticati di accedere a determinate pagine pubbliche.
 
-Il componente tilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
+Il componente utilizza l'hook personalizzato #declaration("useAuth()") per verificare lo stato dell'autenticazione.
 Se l'utente non è autenticato, viene renderizzato il componente figlio attraverso Outlet.
 Se l'utente è autenticato, viene reindirizzato automaticamente alla pagina Dashboard tramite Navigate di React Router. \
 AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agli utenti autenticati di accedervi:
@@ -208,11 +208,11 @@ AnonymousRoute viene utilizzato per proteggere le seguenti pagine, impedendo agl
 Il componente DeletableNode è un componente React personalizzato che rappresenta un nodo eliminabile all'interno di un workflow.
 
 Il componente DeletableNode accetta le seguenti prop:
-- id: rappresenta l’identificativo univoco del nodo da visualizzare.
+- id: rappresenta l’identificativo univoco del nodo da visualizzare;
 - data: un oggetto che contiene un'etichetta (label), che viene visualizzata come testo all'interno del nodo.
 
 Quando l'utente clicca sull'icona di cancellazione (IconButton con l'icona ClearIcon di MUI), viene invocata la funzione #declaration[handleDelete]. Questa consente di eliminare il nodo dal workflow:
-- Viene rimosso il nodo con l'id specificato tramite #declaration[setNodes];
+- Viene rimosso il nodo con l'id specificato tramite #declaration[setNodes]\;
 - Vengono rimossi tutti gli archi che coinvolgono il nodo, sia come nodo di origine che come nodo di destinazione.
 
 Il componente include anche due Handle, forniti dalla libreria ReactFlow, per connettere il nodo ad altri nodi nel workflow:
@@ -227,9 +227,9 @@ Il componente EditableEdge è un componente React personalizzato che rappresenta
 Il componente EditableEdge accetta diverse proprietà per configurare l’aspetto e il comportamento dell’arco:
 - id: l’identificativo univoco dell'arco;
 - sourceX e sourceY: le coordinate di partenza dell'arco;
-- targetX e targetY: le coordinate di arrivo dell'arco.
+- targetX e targetY: le coordinate di arrivo dell'arco;
 - markerEnd: il tipo di marker di fine per l'arco (di default è MarkerType.ArrowClosed);
-- style: uno stile personalizzato per l'arco:
+- style: uno stile personalizzato per l'arco;
 - label: il testo che rappresenta la descrizione dell'automazione inserita dall'utente.
 
 Il componente permette di modificare la descrizione dell'automazione tramite un campo di input di tipo textarea. Quando l'utente cambia il testo, il valore dell'etichetta viene aggiornato sia nel componente che nello stato del workflow grazie alla funzione #declaration[handleTextChange]. 
@@ -247,12 +247,12 @@ Il componente WorkflowCanvas accetta le seguenti proprietà:
 - onNodesChange: una funzione per gestire i cambiamenti sui nodi;
 - onEdgesChange: una funzione per gestire i cambiamenti sugli archi;
 - setNodes: una funzione per aggiornare lo stato dei nodi del workflow;
-- setEdges: una funzione per aggiornare lo stato degli archi del workflow;
+- setEdges: una funzione per aggiornare lo stato degli archi del workflow.
 
-Gli utenti possono trascinare nodi nella superficie di lavoro. La posizione del nodo viene determinata in base alla posizione del mouse quando il nodo viene rilasciato. Se il nodo è un "Pastebin", verrà creato come un nodo di tipo "DeletableOutputNode", altrimenti come un nodo "DeleatableNode".
+Gli utenti possono trascinare nodi nella superficie di lavoro. La posizione del nodo viene determinata in base alla posizione del mouse quando il nodo viene rilasciato. Se il nodo è un "Pastebin", verrà creato come un nodo di tipo "DeletableOutputNode", altrimenti come un nodo "DeletableNode".
 
 All'interno del componente sono definite le seguenti funzioni:
-- #declaration[onConnect]: crea un arco tra i nodi sorgente e destinazione. Il tipo di arco è "EditableEdge", permettendo agli utenti di modificare la descrizione dell'automazione. La connessione viene poi aggiunta alla lista degli archi tramite #declaration[setEdges];
+- #declaration[onConnect]: crea un arco tra i nodi sorgente e destinazione. Il tipo di arco è "EditableEdge", permettendo agli utenti di modificare la descrizione dell'automazione. La connessione viene poi aggiunta alla lista degli archi tramite #declaration[setEdges]\;
 - #declaration[isValidConnection]: impedisce la creazione di cicli nei flussi di lavoro, garantendo che non possa esserci una connessione che ritorni su un nodo di partenza (per evitare loop infiniti);
 - #declaration[onDragOver]: gestisce l'evento di dragover;
 - #declaration[onDrop]: gestisce l'evento di drop, che si ha quando un nodo viene posizionato nella superficie di lavoro quando viene rilasciato.
@@ -264,8 +264,8 @@ WorkflowHeader accetta una sola prop:
 - name: il nome del workflow che verrà visualizzato nell'intestazione.
 
 Questo componente offre due funzionalità:
-- Salvataggio: cliccando sul Button di MUI con etichetta "Save", viene invocato il metodo #declaration[handleSave]. Questo metodo recupera i dati relativi ai nodi e agli archi dal workflow, mappandoli in oggetti di tipo NodeDTO ed EdgeDTO. Successivamente viene chiamata la funzione #declaration("saveWorkflow(workflow: WorkflowDTO): Promise<WorkflowDTO>") offerta dall'hook custom #declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): Promise<WorkflowDTO>"). Attraverso una Snackbar offerta da MUI si notifica l'utente del successo o del fallimento del salvataggio.
-- Esecuzione: cliccando sul Button di MUI con etichetta "Execute", viene invocato il metodo #declaration[handleExecute]. Similmente a quanto avviene per il salvataggio vengono recuperati i dati del workflow e viene chiamata la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): Promise<string>") offerta dall'hook personalizzato #declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface"). Se l'esecuzione ha successo viene visualizzata la risposta in una finestra di dialogo (utilizzando Dialog, DialogContent, DialogTitle e DialogActions di MUI). Se invece l'esecuzione fallisce viene visualizzato un messaggio di errore nella Snackbar.
+- Salvataggio: cliccando sul Button di MUI con etichetta "Save", viene invocato il metodo #declaration[handleSave]. Questo metodo recupera i dati relativi ai nodi e agli archi dal workflow, mappandoli in oggetti di tipo NodeDTO ed EdgeDTO. Successivamente viene chiamata la funzione #declaration("saveWorkflow(workflow: WorkflowDTO): WorkflowDTO") offerta dall'hook custom #declaration("useSaveWorkflow(saveWorkflowService: SaveWorkflowService): WorkflowDTO"). Attraverso una Snackbar offerta da MUI si notifica l'utente del successo o del fallimento del salvataggio.
+- Esecuzione: cliccando sul Button di MUI con etichetta "Execute", viene invocato il metodo #declaration[handleExecute]. Similmente a quanto avviene per il salvataggio vengono recuperati i dati del workflow e viene chiamata la funzione #declaration("executeWorkflow(workflow: WorkflowDTO): string") offerta dall'hook personalizzato #declaration("useExecuteWorkflow(executeWorkflowService: ExecuteWorkflowService): UseExecuteWorkflowInterface"). Se l'esecuzione ha successo viene visualizzata la risposta in una finestra di dialogo (utilizzando Dialog, DialogContent, DialogTitle e DialogActions di MUI). Se invece l'esecuzione fallisce viene visualizzato un messaggio di errore nella Snackbar.
 
 ==== WorkflowSidebar
 Il componente WorkflowSidebar fornisce una barra laterale che mostra i servizi disponibili e non disponibili per l'utente e consente di trascinare e rilasciare i nodi dei servizi nel workflow.
