@@ -52,6 +52,7 @@
 
 #include "include/introduzione.typ"
 #include "include/tecnologie.typ"
-#include "include/architettura_sistema.typ"
+#include "include/architettura_deployment.typ"
+#include "include/architettura_logica.typ"
 #include "include/limiti_soluzione.typ"
 #include "include/stato_requisiti_funzionali.typ"
