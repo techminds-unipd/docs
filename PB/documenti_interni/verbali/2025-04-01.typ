@@ -4,7 +4,7 @@
   title: "Verbale interno del 01/04/2025",
   sommario: "Verbale che riassume la riunione del 01/04/2025.",
   autore: team.C,
-  verificatore: "",
+  verificatore: team.M,
   durata_luogo: ("10:15", "11:30", "chiamata Discord"),
   partecipanti: (team.A, team.S, team.L, team.T, team.M, team.G, team.C),
   ordine_giorno: ("Sprint retrospective",
