@@ -414,7 +414,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra lo sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto, al contempo però il team ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
+Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra lo sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto. Al contempo però il gruppo ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
 #pagebreak()
 
 == MPROC6 (CPI), MPROC9 (SPI)
@@ -443,7 +443,7 @@ Con l'avanzamento del progetto la SPI è iniziata a scendere, questo è dovuto a
 *PB*
 #linebreak()
 Come nel periodo RTB anche in questo periodo CPI è sempre 1, segno che il costo sostenuto per completare i lavori è in linea con quello pianificato.
-In seguito allo sprint 6 la SPI ha sempre superato 1, segno che il team è stato molto efficente nel portare avanti il lavoro, terminata la sessione di esami il team ha potuto dedicare più tempo al progetto in termini di ore di allenamento e questo ha portato ad essere più efficenti durante le ore produttive.
+In seguito allo sprint 6 la SPI ha sempre superato 1, segno che il team è stato molto efficente nel portare avanti il lavoro. Infatti terminata la sessione di esami il tempo da dedicare al progetto è stato maggiore in termini di ore di allenamento e questo ha portato ad essere più efficenti durante le ore produttive.
 
 #pagebreak()
 
@@ -499,7 +499,7 @@ I valori dell'indice di Gulpease calcolati sono sempre sopra la soglia accettabi
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Tutti i documenti prodotti hanno raggiunto la soglia accettabile dell'indice di Gulpease (40). Alcuni documenti, come la Specifica Tecnica o il Manuale utente, sono stati iniziati in questo periodo dunque è stato possibile effetuare meno misurazioni rispetto agli altri documenti già presenti. I valori sono stati generati da uno script che calcola l'indice di Gulpease in modo automatico, questo ha permesso di avere un'analisi più accurata e veloce. Inoltre, il team ha prestato particolare attenzione a questo aspetto, cercando di migliorare il valore dell'indice di Gulpease in tutti i documenti. 
+Tutti i documenti prodotti hanno raggiunto la soglia accettabile dell'indice di Gulpease (40). Alcuni documenti, come la Specifica Tecnica o il Manuale utente, sono stati iniziati in questo periodo dunque è stato possibile effettuare meno misurazioni rispetto agli altri documenti già presenti. I valori sono stati generati da uno script che calcola l'indice di Gulpease in modo automatico, questo ha permesso di avere un'analisi più accurata e veloce. Inoltre, il team ha prestato particolare attenzione a questo aspetto, cercando di migliorare il valore dell'indice di Gulpease in tutti i documenti. 
 
 == MPROC12 (Caption in tabelle e figure)
 #linebreak()
@@ -545,7 +545,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-Ogni componente del prodotto software ha raggiunto la soglia accettabile del 75% di code coverage. In seguito all'inizio delle attività di codifica il team ha scritto molti test di unità, questo ha portato ad un notevole incremento della code coverage. Sono state riscontrate più difficoltà nei test dell'agente AI dove il valore è rimasto appena al di sopra la soglia accettabile. L'ultimo componente a raggiungere la soglia accettabile è stato il frontend, dato che è stato l'ultimo componente ad essere codificato. Inoltre i test di unità sono stati integrati nella CI e questo ha permesso di avere un feedback immediato sullo stato della code coverage. 
+Ogni componente del prodotto software ha raggiunto la soglia accettabile del 75% di code coverage. In seguito all'inizio delle attività di codifica il team ha implementato molti test di unità, questo ha portato ad un notevole incremento della code coverage. Sono state riscontrate più difficoltà nei test dell'agente AI dove il valore è rimasto appena al di sopra la soglia accettabile. Il frontend ha raggiunto la soglia accettabile solo tra lo sprint 8 e lo sprint 9, dato che è stato l'ultimo componente ad essere codificato. Inoltre i test di unità sono stati integrati nella CI e questo ha permesso di avere un feedback immediato sullo stato della code coverage. 
 
 #pagebreak()
 
@@ -674,7 +674,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-Tutti i requisiti obbligatori, desiderabili sono stati soddisfatti. Il requisito opzionale, invece, non è stato soddisfatto in quanto non è stato implementato dato che avrebbe impiegato diverse ore produttive. Questa scelta è dovuta al fatto che il team ha deciso di concentrarsi sui requisiti obbligatori e desiderabili, ritenendo che fosse più importante soddisfare questi requisiti prima di passare a quelli opzionali. \ \ \  \ \ \ \ \ \ \ \ \ \ \ \
+Tutti i requisiti obbligatori e desiderabili sono stati soddisfatti. Il requisito opzionale, invece, non è stato soddisfatto in quanto non è stato implementato dato che avrebbe impiegato diverse ore produttive. Questa scelta è dovuta al fatto che il team ha deciso di concentrarsi sui requisiti obbligatori e desiderabili, ritenendo che fosse più importante soddisfare questi requisiti prima di passare a quelli opzionali. \ \ \  \ \ \ \ \ \ \ \ \ \ \ \
 
 
 == MPROD4, MPROD5, MPROD6, MPROD7, MPROD8
@@ -699,7 +699,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-In seguito alla codifica dell'agente AI è stato utile stimare il tempo medio di esecuzione di un workflow, prendendo in considerazione un workflow semplice. Il valore del tempo medio di esecuzione è sempre stato sotto la soglia accettabile (20 secondi). Se il workflow è più complesso il tempo medio di esecuzione aumenta in maniera non quantificabile, dato che la complessità è data dal numero di nodi, archi e in particolari dalle descrizioni delle automazioni.
+In seguito alla codifica dell'agente AI è stato utile stimare il tempo medio di esecuzione di un workflow, prendendo in considerazione un workflow semplice. Il valore del tempo medio di esecuzione è sempre stato sotto la soglia accettabile (20 secondi). Se il workflow è più complesso il tempo medio di esecuzione aumenta in maniera non quantificabile, dato che la complessità è data dal numero di nodi, archi e in particolare dalle descrizioni delle automazioni.
 
 #pagebreak()
 == MPROD10 (Click per utilizzare una funzionalità)
@@ -719,7 +719,7 @@ Il grafico illustra:
 #linebreak()
 *PB*
 #linebreak()
-Il numero di click per utilizzare una funzionalità è sempre stato sotto la soglia accettabile (7 click). Il team ha pensato all'usabilità strutturando il prodotto facendo in modo che sia più intuitivo possibile per l'utente finale. Per calcolare la metrica è stato considerata la funzionalità che richiede più click per essere utilizzata, ossia l'esecuzione di un workflow che comprende tutti e 3 i blocchi disponibili, in modo da avere un'idea del numero massimo di click che l'utente deve fare per utilizzare il prodotto. 
+Il numero di click per utilizzare una funzionalità è sempre stato sotto la soglia accettabile (7 click). Il team ha pensato all'usabilità strutturando il prodotto nel modo più intuitivo possibile per l'utente finale. Per calcolare la metrica è stata considerata la funzionalità che richiede più click per essere utilizzata, ossia l'esecuzione di un workflow che comprende tutti e 3 i blocchi disponibili, in modo da avere un'idea del numero massimo di click che l'utente deve fare per utilizzare il prodotto. 
 
 #pagebreak()
 
