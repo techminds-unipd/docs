@@ -3,7 +3,7 @@
 #import "../costi.typ": getSprintCostsSection, getOreConsumatePersona, getOreConsumateRuoli
 
 === Sprint 9
-- Durata: 24/03/2025 - 04/04/2025
+- Durata: 24/03/2025 - 04/04/2025 (data di fine effettiva: 01/04/2025)
 
 ==== Pianificazione
 Durante questo sprint il gruppo ha l'obiettivo di terminare la codifica, i test di unità e i test di integrazione per il frontend e di implementare i test di sistema. Contemporaneamente saranno aggiornati e revisionati tutti i documenti in preparazione all'incontro finale con l'azienda e alla revisione PB.
@@ -151,7 +151,7 @@ Di seguito verranno elencati i rischi che potrebbero concretizzarsi in questo sp
 Nessuno dei rischi previsti si è concretizzato.
 
 ==== Conclusioni
-Durante il nono e ultimo sprint sono state terminate tutte le attività previste, consentendo al team di candidarsi per la revisione PB in anticipo rispetto ai termini previsti. È stata terminata la codifica dei componenti mancanti del frontend e sono stati implementati i test di sistema e i test di integrazione per la componente frontend. Sono stati aggiornati e completati tutti i documenti, in particolare il manuale utente e la specifica tecnica. Infine in data 01/04/2025 è stata svolta la riunione finale con l'azienda proponente, in cui sono stati superati tutti i test di accettazione e il prodotto finale è stato ritenuto consono.
+Durante il nono e ultimo sprint sono state terminate tutte le attività previste, consentendo al team di candidarsi per la revisione PB in anticipo rispetto ai termini previsti. È stata terminata la codifica dei componenti mancanti del frontend e sono stati implementati i test di sistema e i test di integrazione per la componente frontend. Sono stati aggiornati e completati tutti i documenti, in particolare il manuale utente e la specifica tecnica. Infine in data 01/04/2025 è stata svolta la riunione finale con l'azienda proponente, in cui sono stati superati tutti i test di accettazione e il prodotto finale è stato ritenuto consono. Sempre in data 01/04/2025 il gruppo ha celebrato la retrospettiva di fine sprint, anticipando così la data di termine pianificata.
 
 ==== Retrospettiva
 L'andamento dello sprint è stato molto positivo, infatti il gruppo ha terminato tutte le attività pianificate in anticipo. Questo risultato è indice di una crescente efficienza operativa e di un miglioramento dell'organizzazione interna del gruppo.
