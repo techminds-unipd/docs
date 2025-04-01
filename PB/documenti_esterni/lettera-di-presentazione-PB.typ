@@ -44,7 +44,7 @@ Riportiamo qui sotto un prospetto che contiene i costi totali sostenuti:
         columns: (1fr,)*5,
         align: center+horizon,
             fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
-        table.header([*Ruolo*],[*Costo orario*],[*Stima oraria*],[*Percentuale*],[*Stima costo*]),
+        table.header([*Ruolo*],[*Costo orario*],[*Ore effettive*],[*Percentuale*],[*Costo effettivo*]),
         [Responsabile], [30 #sym.euro], [37], [5%], [1.110 #sym.euro],
         [Amministratore], [20 #sym.euro], [124], [19%], [2.480 #sym.euro],
         [Analista], [25 #sym.euro], [59], [9%], [1.475 #sym.euro],
