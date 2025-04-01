@@ -173,7 +173,7 @@ Il team ha lavorato in modo collaborativo e ha risolto i problemi che sono sorti
 Tuttavia, analizzando il rapporto tra ore produttive e ore di orologio, emerge che il team non è ancora riuscito a raggiungere un livello di efficienza ottimale. 
 Questo soprattutto a causa delle difficoltà incontrate nella stesura degli unit test, che inevitabilmente ha poi inciso sul rendimento complessivo.
 
-Per il prossimo sprint, il gruppo si impegnerà quindi ad aumentare la produttività, attraverso una migliore suddivisione dei compiti e una pianificazione mirata che possa ottimizzare il tempo necessario per svolegere le attivtà previste.
+Per il prossimo sprint, il gruppo si impegnerà quindi ad aumentare la produttività, attraverso una migliore suddivisione dei compiti e una pianificazione mirata che possa ottimizzare il tempo necessario per svolgere le attività previste.
 
 Considerando i progressi significativi fatti, si prevede di poter rispettare le scadenze e i costi attesi.
 
