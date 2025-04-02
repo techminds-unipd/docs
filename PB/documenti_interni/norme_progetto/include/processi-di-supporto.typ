@@ -291,17 +291,23 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 
 Ogni test è composto da:
 - *Codice test*, identificativo univoco del test nel formato
-#align(center)[*T[tipologia test][numero progressivo]*]
+#align(center)[T[tipologia test][numero progressivo]]
 #h(3%)dove tipologia test corrisponde a:
 #list([_U_, test di unità;],[_I_, test di integrazione;],[_S_, test di sistema;],[_A_, test di accettazione.],indent: 2.5em)
 #h(3%)Nei test di unità e integrazione è presente un ulteriore campo [componente] che indica \ #h(3%)la componente testata, quindi in questi casi il codice test sarà nel formato 
-#align(center)[*T[tipologia test][componente][numero progressivo]*]
+#align(center)[T[tipologia test][componente][numero progressivo]]
 #h(3%)dove componente corrisponde a:
 #list([_B_ per backend;],[_F_ per frontend;],[_A_ per agente.],indent: 2.5em)
 - *Descrizione*, breve descrizione del test, specifica o generale a seconda della tipologia di test descritto;
 - *Stato test*, indica lo stato attuale del test, che può essere _S_ (superato), _F_ (fallito) o _NI_ (non implementato).
 
 Nei test di sistema è presente un ulteriore campo *Requisito* che indica il requisito funzionale collegato a quello specifico caso di test.
+
+*Implementazione dei test*
+
+Il compito di implementare i test è assegnato al programmatore, che deve:
+- Inserire il codice di riferimento del test presente nel piano di qualifica e una breve descrizione, in questo formato \"codice test - descrizione test\";
+- Assicurarsi che il test raggiunga lo scopo desiderato verificando che passi o fallisca nei casi corrispondenti.
 
 ==== Processo di verifica <verifica>
 In generale, il processo di verifica include le seguenti fasi:
