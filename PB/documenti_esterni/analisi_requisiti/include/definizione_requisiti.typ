@@ -25,7 +25,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente non autenticato deve ricevere un messaggio di errore in caso abbia inserito credenziali errate per il login interno.],
+        [L'utente non autenticato deve poter ricevere un messaggio di errore in caso abbia inserito credenziali errate per il login interno.],
         [@login, @login-interno, @credenziali-errate],
     ))
     FMR+=1
@@ -67,7 +67,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente non autenticato deve ricevere un messaggio di errore in caso abbia inserito credenziali non valide per la registrazione.],
+        [L'utente non autenticato deve poter ricevere un messaggio di errore in caso abbia inserito credenziali non valide per la registrazione.],
         [@registrazione, @errore-registrazione],
     ))
     FMR+=1
@@ -79,7 +79,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve ricevere un messaggio in caso di errore nell'associazione dell'account Google per i servizi offerti dai blocchi del workflow.],
+        [L'utente autenticato deve poter ricevere un messaggio in caso di errore nell'associazione dell'account Google per i servizi offerti dai blocchi del workflow.],
         [@errore-comunicazione-google],
     ))
     FMR+=1
@@ -121,13 +121,13 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve visualizzare un avviso che indica la non univocità del nome del workflow inserito durante la sua creazione.],
+        [L'utente autenticato deve poter visualizzare un avviso che indica la non univocità del nome del workflow inserito durante la sua creazione.],
         [@creazione-nuovo-workflow, @avviso-nome-uguale],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve visualizzare un avviso che indica la non validità del nome del workflow inserito durante la sua creazione.],
+        [L'utente autenticato deve poter visualizzare un avviso che indica la non validità del nome del workflow inserito durante la sua creazione.],
         [@creazione-nuovo-workflow, @avviso-nome-uguale],
     ))
     FMR+=1
@@ -151,7 +151,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato deve ricevere un avviso in caso non abbia collegato i servizi Google associati ai blocchi.],
+        [L'utente autenticato deve poter ricevere un avviso in caso non abbia collegato i servizi Google associati ai blocchi.],
         [@visualizzazione-lista-blocchi-configurati, @avviso-servizi-non-collegati],
     ))
     FMR+=1
@@ -266,7 +266,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato visualizza un messaggio di avviso che informa del fallimento nel salvataggio del workflow.],
+        [L'utente autenticato deve poter visualizzare un messaggio di avviso che informa del fallimento nel salvataggio del workflow.],
         [@salvataggio-workflow, @vis-errore-operazione-workflow, @vis-errore-struttura-workflow],
     ))
     FMR+=1
@@ -278,7 +278,7 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato visualizza un messaggio che informa del fallimento nell'eliminazione del workflow.],
+        [L'utente autenticato deve poter visualizzare un messaggio che informa del fallimento nell'eliminazione del workflow.],
         [@eliminazione-workflow,
             @vis-errore-operazione-workflow],
     ))
@@ -291,13 +291,13 @@
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato, dopo aver mandato in esecuzione un workflow con una struttura non valida, visualizza un messaggio d'errore.],
+        [L'utente autenticato, dopo aver mandato in esecuzione un workflow con una struttura non valida, deve poter visualizzare un messaggio d'errore.],
         [@esecuzione-workflow, @vis-errore-struttura-workflow],
     ))
     FMR+=1
 
     FR.push(("FMR" + str(FMR),
-        [L'utente autenticato visualizza un messaggio che lo informa di un errore runtime nell'esecuzione del workflow.],
+        [L'utente autenticato deve poter visualizzare un messaggio che lo informa di un errore runtime nell'esecuzione del workflow.],
         [@esecuzione-workflow, @vis-errore-runtime],
     ))
     FMR+=1
