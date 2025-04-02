@@ -135,7 +135,7 @@ Riunione giornaliera in cui i membri del team si tengono aggiornati riguardo il 
 La continua comunicazione tra i membri del team permette di mantenere alta la produttività e di risolvere velocemente eventuali problemi.
 
 == Diagramma di Gantt // {Diagrammi di Gantt}
-Strumento a supporto della gestione dei progetti, costituito da barre orizzontali di lunghezza variabile che rappresentano le sequenze, la durata e l'arco temporale di ogni singola attività del progetto previsti ed effettivi.
+Strumento a supporto della gestione dei progetti, costituito da barre orizzontali di lunghezza variabile che rappresentano le sequenze, la durata e l'arco temporale previsto ed effettivo di ogni singola attività del progetto.
 
 == Diagramma UML // {Diagrammi UML}
 Metodo per visualizzare sistemi e software utilizzando il linguaggio di modellazione unificato (UML).
