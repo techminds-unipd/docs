@@ -289,7 +289,7 @@ Con lo scopo di adattarci alle esigenze dei vari processi, il gruppo si impegna 
 - Seguire costantemente il principio di miglioramento continuo durante ogni fase del progetto;
 - Individuare in modo proattivo le attività, i ruoli e altre opportunità di miglioramento, cercando in caso nuove alternative;
 - Condurre una retrospettiva alla fine di ogni sprint, andando quindi ad approfondire ogni aspetto che non ha funzionato e individuando le possibili aree di miglioramento;
-- Attuare azioni correttive da implementare in modo immediato.
+- Attuare azioni correttive da implementare in modo immediato, aggiornando le norme di progetto.
 
 == Formazione del personale
 L'acquisizione, la fornitura, lo sviluppo, il funzionamento o la manutenzione dei prodotti software dipendono in gran parte da personale esperto e qualificato. È importante che ognuno acquisisca una competenza adeguata per utilizzare le tecnologie scelte.
