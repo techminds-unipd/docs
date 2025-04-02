@@ -9,7 +9,7 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
-    "2.0.0", "02/04/2025", "Validazione documento", team.T, "",
+    "2.0.0", "01/04/2025", "Revisione documento", team.T, team.L,
     "1.4.0", "25/03/2025", "Aggiunta definizione local storage", team.T, team.L,
     "1.3.0", "06/03/2025", "Aggiunta definizione Vite", team.L, team.C,
     "1.2.1", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.A,
