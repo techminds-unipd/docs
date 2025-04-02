@@ -94,7 +94,7 @@ Documento formale di presentazione per ogni revisione di progetto:
 
 *Redattore*: responsabile.
 
-*Puntatore*: #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[lettera di presentazione RTB] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")), #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")[lettera di presentazione PB] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")). //TODO da controllare questo link quando creeremo la lettera di presentazione
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[lettera di presentazione RTB] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")), #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")[lettera di presentazione PB] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")).
 
 ==== Norme di progetto
 Il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.

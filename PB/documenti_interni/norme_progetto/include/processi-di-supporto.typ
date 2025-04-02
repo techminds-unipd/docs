@@ -399,7 +399,7 @@ Il processo di risoluzione dei problemi prevede le seguenti attività:
 + *Risoluzione del problema*, che inizia con la stesura di un report per descrivere il problema riscontrato. Ogni problema deve essere poi analizzato e risolto secondo le procedure e con le accortezze identificate durante l'implementazione del processo.
 
 === Gestione dei rischi
-All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")) \[versione 2.0.0\]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
+All'interno del Piano di Progetto è presente una sezione dedicata all'individuazione dei rischi (sezione #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")[#glossario[Analisi dei rischi]] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf#analisi-dei-rischi")) \[versione 2.0.0\]). Tale compito è assegnato al responsabile, che andrà quindi a scovare possibili cause di problemi, indicando inoltre la loro probabilità di occorrenza e le tecniche di mitigazione. 
 
 ==== Codifica dei rischi
 Per identificare i rischi adottiamo la seguente struttura:
