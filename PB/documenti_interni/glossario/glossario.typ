@@ -9,7 +9,8 @@
   title: "Glossario",
   sommario: "Documento dei termini tecnici relativi al progetto.",
   changelog: (
-    "2.0.0", "25/03/2025", "Aggiunta definizione local storage", team.T, team.L,
+    "2.0.0", "01/04/2025", "Revisione documento", team.T, team.L,
+    "1.4.0", "25/03/2025", "Aggiunta definizione local storage", team.T, team.L,
     "1.3.0", "06/03/2025", "Aggiunta definizione Vite", team.L, team.C,
     "1.2.1", "04/03/2025", "Correzione uso del termine \"fase\"", team.L, team.A,
     "1.2.0", "25/02/2025", "Aggiunta definizione alcune tecnologie", team.S, team.C,
@@ -45,7 +46,7 @@ Acronimo di _Actual Cost_. É una metrica che misura i costi effettivamente sost
 Nell'ambito della programmazione ad oggetti, è una misura del grado di dipendenza fra due classi. Più le classi sono accoppiate più è probabile che la modifica di una implica la modifica delle classi che ne dipendono.
 
 == Agente // {Agenti}
-Nel campo dell'intelligenza artificiale, l'agente (detto anche Agente Intelligente) è un'entità in grado di percepire l'ambiente esterno ed effettuare delle azioni in modo autonomo, migliorando le performance nel tempo attraverso la conoscenza passata.
+Nel campo dell'intelligenza artificiale, l'agente (detto anche Agente Intelligente) è un'entità in grado di percepire l'ambiente esterno ed effettuare delle azioni in modo autonomo.
 
 == Analisi dei requisiti // {AdR}
 Attività preliminare allo sviluppo (o alla modifica) di un sistema software, il cui scopo è quello di definire le funzionalità che il nuovo prodotto (o il prodotto modificato) deve offrire. Tali funzionalità sono rappresentate dai requisiti che devono essere soddisfatti dal software sviluppato.
@@ -134,7 +135,7 @@ Riunione giornaliera in cui i membri del team si tengono aggiornati riguardo il 
 La continua comunicazione tra i membri del team permette di mantenere alta la produttività e di risolvere velocemente eventuali problemi.
 
 == Diagramma di Gantt // {Diagrammi di Gantt}
-Strumento a supporto della gestione dei progetti, costituito da barre orizzontali di lunghezza variabile che rappresentano le sequenze, la durata e l'arco temporale di ogni singola attività del progetto.
+Strumento a supporto della gestione dei progetti, costituito da barre orizzontali di lunghezza variabile che rappresentano le sequenze, la durata e l'arco temporale previsto ed effettivo di ogni singola attività del progetto.
 
 == Diagramma UML // {Diagrammi UML}
 Metodo per visualizzare sistemi e software utilizzando il linguaggio di modellazione unificato (UML).
@@ -201,7 +202,7 @@ Pratica usata nella gestione dei branch in un repository, il GitHub Flow utilizz
 Servizio di GitHub che fornisce hosting per siti web statici.
 
 == Glossario // {Glossari}
-Elenco organizzato di termini tecnici, acronimi e definizioni utilizzati nel contesto del progetto.
+Elenco ordinato di termini tecnici, acronimi e definizioni utilizzati nel contesto del progetto.
 
 = H
 = I
@@ -265,7 +266,7 @@ Acronimo di _Minimum Viable Product_. Prodotto software ridotto nelle funzionali
 NestJS è un framework per la creazione di applicazioni server-side in TypeScript. Offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili.
 
 == Node.js
-Node.js è un ambiente di esecuzione JavaScript lato server. Permette di eseguire codice JavaScript al di fuori di un browser, ed è utilizzato per costruire applicazioni server-side come API, servizi web e applicazioni real-time.
+Node.js è un ambiente di esecuzione che permette di eseguire codice JavaScript al di fuori di un browser. È utilizzato per costruire applicazioni server-side come API, servizi web e applicazioni real-time.
 
 == Norme di progetto // {NdP}
 Documento gestionale interno redatto in forma esecutiva, ossia composto da regole e procedure, che descrive il way of working. É volto a standardizzare i processi in modo da assicurare la coerenza del lavoro svolto dai diversi membri e la qualità dei prodotti.
@@ -314,7 +315,7 @@ Processi che definiscono quali attività svolgere per attuare, in modo efficient
 Insieme di attività che devono raggiungere determinati obiettivi a partire da determinate specifiche, con una data di inizio e una data di fine fissate, con risorse limitate che si consumano nello svolgersi.
 
 == Pull request // {PR}
-Nel contesto di un repository di versionamento distribuito, è un modo per notificare ai membri del team che è stata completata una funzionalità in un branch di feature e che si può effettuare il merge nel branch main, con previa verifica.
+Nel contesto di un repository distribuito esprime una richiesta di unione di un branch di feature a un altro, solitamente quello principale. È possibile aggiungere delle regole, come l'approvazione dei verificatori e il passaggio di specifici test automatici.
 
 == Push
 Push è l'operazione che consente di inviare le modifiche locali (commit) a un repository remoto su GitHub o un altro server Git. Permette di aggiornare il codice condiviso con gli altri membri del team.
@@ -380,7 +381,7 @@ Si ha che:
 - Se SPI < 1 il progetto sta avanzando più lentamente rispetto a quanto pianificato.
 
 == Sprint
-Periodo di tempo prefissato, di durata massima di un mese, in cui il team sviluppa un piccolo incremento di prodotto finale.
+Periodo di tempo prefissato, di durata massima di un mese, in cui il team sviluppa un incremento del prodotto finale.
 
 == Sprint planning
 È una pratica agile in cui pianifichiamo le attività da completare durante uno sprint. Durante questa cerimonia vengono scelti i task da affrontare in base alla priorità e alla disponibilità di ogni membro del team.
