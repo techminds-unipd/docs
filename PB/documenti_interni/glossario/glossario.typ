@@ -266,7 +266,7 @@ Acronimo di _Minimum Viable Product_. Prodotto software ridotto nelle funzionali
 NestJS è un framework per la creazione di applicazioni server-side in TypeScript. Offre un'architettura basata su moduli, controller e provider, facilitando la creazione di applicazioni scalabili e manutenibili.
 
 == Node.js
-Node.js è un ambiente di esecuzione che ermette di eseguire codice JavaScript al di fuori di un browser. È utilizzato per costruire applicazioni server-side come API, servizi web e applicazioni real-time.
+Node.js è un ambiente di esecuzione che permette di eseguire codice JavaScript al di fuori di un browser. È utilizzato per costruire applicazioni server-side come API, servizi web e applicazioni real-time.
 
 == Norme di progetto // {NdP}
 Documento gestionale interno redatto in forma esecutiva, ossia composto da regole e procedure, che descrive il way of working. É volto a standardizzare i processi in modo da assicurare la coerenza del lavoro svolto dai diversi membri e la qualità dei prodotti.
