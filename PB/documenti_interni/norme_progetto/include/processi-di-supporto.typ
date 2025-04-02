@@ -363,7 +363,7 @@ Lo standard definisce le seguenti attività per il processo di validazione:
   - la pianificazione temporale;
   - le procedure per la condivisione dei risultati con gli stakeholder.
 + *Validazione*, che include le seguenti task:
-  - preparazione dei test di accettazione, che devono essere coerenti con le richieste del capitolato;
+  - preparazione dei #glossario[test di accettazione], che devono essere coerenti con le richieste del capitolato;
   - esecuzione dei test di accettazione, che devono essere presentati al proponente per la validazione.
 
 ==== Test di accettazione e collaudo

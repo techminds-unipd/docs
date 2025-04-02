@@ -11,13 +11,12 @@ I miglioramenti rappresentano una componente fondamentale per la raggiunta degli
     table.header(
       [*Problema*], [*Codice rischio*], [*Soluzione*],
     ),
-    [#glossario[LaTeX] ha una sintassi a volte troppo complessa e non permette di fare scripting per i template.],
-    [RT1],
-    [Passaggio a #glossario[Typst] per la scrittura, modifica e verifica della
-    documentazione.]
+    [Mancanza di conoscenza delle tecnologie da utilizzare nel progetto.],
+    [RP4],
+    [Il primo #glossario[sprint] è stato dedicato all'auto-formazione sulle tecnologie da utilizzare nel progetto, promuovendo auto-formazione e collaborazione tra i membri. Inoltre il proponente ha offerto tre corsi di formazione per dare una base solida per l'utilizzo delle tecnologie.]
   ), 
-  caption: [Miglioramento per il rischio RT1 nello sprint 1.]
-) <tabella-MT>
+  caption: [Miglioramento per il rischio RP4 nello sprint 1.]
+)
 
 #figure(
   table(
@@ -28,12 +27,13 @@ I miglioramenti rappresentano una componente fondamentale per la raggiunta degli
     table.header(
       [*Problema*], [*Codice rischio*], [*Soluzione*],
     ),
-    [Mancanza di conoscenza delle tecnologie da utilizzare nel progetto.],
-    [RP4],
-    [Il primo #glossario[sprint] è stato dedicato all'auto-formazione sulle tecnologie da utilizzare nel progetto, promuovendo auto-formazione e collaborazione tra i membri. Inoltre il proponente ha offerto tre corsi di formazione per dare una base solida per l'utilizzo delle tecnologie.]
+    [#glossario[LaTeX] ha una sintassi a volte troppo complessa e non permette di fare scripting per i template.],
+    [RT1],
+    [Passaggio a #glossario[Typst] per la scrittura, modifica e verifica della
+    documentazione.]
   ), 
-  caption: [Miglioramento per il rischio RP4 nello sprint 1.]
-)
+  caption: [Miglioramento per il rischio RT1 nello sprint 1.]
+) <tabella-MT>
 
 #figure(
   table(
