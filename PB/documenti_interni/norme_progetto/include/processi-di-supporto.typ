@@ -288,13 +288,12 @@ Le tipologie di test principali sono, in ordine di esecuzione:
 + #glossario[Test di integrazione]: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
 + #glossario[Test di sistema]: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
 + #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto difetti in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
-+ #glossario[Test di accettazione]: verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono gli ultimi test eseguiti prima del possibile rilascio del prodotto.
 
 Ogni test è composto da:
 - *Codice test*, identificativo univoco del test nel formato
 #align(center)[T[tipologia test][numero progressivo]]
 #h(3%)dove tipologia test corrisponde a:
-#list([_U_, test di unità;],[_I_, test di integrazione;],[_S_, test di sistema;],[_A_, test di accettazione.],indent: 2.5em)
+#list([_U_, test di unità;],[_I_, test di integrazione;],[_S_, test di sistema.],indent: 2.5em)
 #h(3%)Nei test di unità e integrazione è presente un ulteriore campo [componente] che indica \ #h(3%)la componente testata, quindi in questi casi il codice test sarà nel formato 
 #align(center)[T[tipologia test][componente][numero progressivo]]
 #h(3%)dove componente corrisponde a:
@@ -367,6 +366,16 @@ Lo standard definisce le seguenti attività per il processo di validazione:
   - preparazione dei test di accettazione, che devono essere coerenti con le richieste del capitolato;
   - esecuzione dei test di accettazione, che devono essere presentati al proponente per la validazione.
 
+==== Test di accettazione e collaudo
+I test di accettazione verificano che il prodotto finale soddisfi i requisiti utente concordati con il proponente. Sono gli ultimi test eseguiti prima del possibile rilascio del prodotto.
+
+Sono identificati con:
+- *Codice test*, identificativo univoco del test nel formato
+#align(center)[TA[numero progressivo]]
+dove "A" corrisponde ad "accettazione".
+
+Tali test sono eseguiti durante il collaudo con la supervisione del proponente. 
+
 == Revisioni congiunte
 Secondo lo standard ISO/IEC 12207:1995, il processo di revisione congiunta ha l'obiettivo di valutare lo stato e i prodotti di un'attività di un progetto.
 Tali revisioni congiunte si svolgono per tutta la durata del rapporto con il proponente. Questo processo può essere impiegato da tutte le parti coinvolte, dove una "parte revisionante" esamina una "parte revisionata".
@@ -383,7 +392,6 @@ I risultati di tali revisioni sono poi documentati tramite i verbali esterni, i 
 
 Nella fase iniziale del progetto non sono stati svolti degli incontri di revisione in quanto il primo periodo è stato dedicato allo studio delle tecnologie e del capitolato. Sono però stati svolti degli incontri di formazione in presenza, offerti dal proponente. Dal periodo natalizio in poi invece vengono svolti degli incontri quando una delle due parti (noi in quanto gruppo o il proponente) lo ritengono necessario, ovvero quando sono stati raggiunti degli obiettivi di avanzamento considerevoli.\
 All'inizio della #glossario[PB] è stato concordato con il proponente di effettuare delle riunioni periodiche l'ultimo giorno di ogni sprint fino alla fine del progetto. In queste riunioni viene mostrato ciò che è stato prodotto fino a quel momento e vengono chiariti gli eventuali dubbi che entrambe le parti potrebbero avere. Questo permette di mantenere un allineamento maggiore con il proponente e allo stesso tempo di ricevere dei feedback sul lavoro svolto.
-//TODO Audit process da aggiungere dopo perchè da come ho capito parla di test
 
 == Risoluzione dei problemi <risoluzioneproblemi>
 Il processo "Risoluzione dei problemi" mira ad analizzare e risolvere i problemi (incluse le non conformità), qualunque sia la loro natura o origine. Tali problemi possono essere scoperti durante l'esecuzione dello sviluppo, dell'operatività, della manutenzione o di altri processi. L'obiettivo è fornire un mezzo tempestivo, responsabile e documentato per garantire che tutti i problemi scoperti siano analizzati e risolti, riconoscendo le cause scatenanti.
