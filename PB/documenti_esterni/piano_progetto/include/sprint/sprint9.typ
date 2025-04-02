@@ -156,10 +156,10 @@ Durante il nono e ultimo sprint sono state terminate tutte le attività previste
 ==== Retrospettiva
 L'andamento dello sprint è stato molto positivo, infatti il gruppo ha terminato tutte le attività pianificate in anticipo. Questo risultato è indice di una crescente efficienza operativa e di un miglioramento dell'organizzazione interna del gruppo.
 
-Uno degli aspetti più rilevanti di questo sprint è stata la riduzione del rapporto tra ore produttive e ore di orologio rispetto alle fasi iniziali del progetto. Se nei primi sprint le ore produttive erano notevolmente inferiori rispetto alle ore di orologio a causa di rallentamenti, incertezze, necessità di coordinamento e l'impegno delle lezioni, in questo sprint il team è riuscito a diminuire di molto questo rapporto.
+Uno degli aspetti più rilevanti di questo sprint è stata la riduzione del rapporto tra ore di orologio e ore produttive rispetto alle fasi iniziali del progetto. Se nei primi sprint le ore produttive erano notevolmente inferiori rispetto alle ore di orologio a causa di rallentamenti, incertezze e necessità di coordinamento in questo sprint il team è riuscito a diminuire di molto questo rapporto.
 Questo è stato possibile grazie ad una maggiore familiarità con il progetto, e soprattutto con le tecnologie impiegate.
 
-Si è incontrata qualche difficoltà nell'implementazione dei test di sistema, subito superata grazie alla collaborazione tra i membri del gruppo, altro punto di forza che ha permesso di terminare tutte le attività in anticipo. 
+Abbiamo incontrato qualche difficoltà nell'implementazione dei test di sistema, subito superata grazie alla collaborazione tra i membri del gruppo, altro punto di forza che ha permesso di terminare tutte le attività in anticipo. 
 
 ==== Preventivo
 #let (preventivo, consuntivo) = getSprintCostsSection(sprint_number: 9)

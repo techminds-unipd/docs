@@ -15,12 +15,12 @@ Il documento che descrive il #glossario[piano di progetto] nasce con l'intenzion
 #set par(justify: false)
 
 === Riferimenti normativi
-- #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/RTB/documenti_interni/norme_progetto/norme-di-progetto.pdf \[versione 2.0.0\];
+- #glossario[Norme di progetto]: https://techminds-unipd.github.io/docs/PB/documenti_interni/norme_progetto/norme-di-progetto.pdf \[versione 2.0.0\];
 - #glossario[Capitolato] C3, Automatizzare le routine digitali tramite l’intelligenza generativa: https://www.math.unipd.it/~tullio/IS-1/2024/Progetto/C3.pdf \[visitato il: 10/02/2025\];
 - Regolamento progetto didattico, in particolare le slide intitolate "Costi riconosciuti", "Piano di Progetto" e "Revisioni di avanzamento": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/PD1.pdf \[visitato il: 10/02/2025\].
 
 === Riferimenti informativi
 - Slide argomento T3 - Il ciclo di vita del SW (corso di Ingegneria del Software), in particolare le slide intitolate "Metodi agili" e "#glossario[Scrum]": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T03.pdf \[visitato il: 10/02/2025\];
 - Slide argomento T4 - Gestione di progetto (corso di Ingegneria del Software), in particolare le slide "Milestone e #glossario[baseline]", "Ruoli", "Pianificazione di progetto" e "#glossario[Diagramma di Gantt]": https://www.math.unipd.it/~tullio/IS-1/2024/Dispense/T04.pdf \[visitato il: 10/02/2025\];
-- Glossario: https://techminds-unipd.github.io/docs/RTB/documenti_interni/glossario/glossario.pdf \[versione 2.0.0\].
+- Glossario: https://techminds-unipd.github.io/docs/PB/documenti_interni/glossario/glossario.pdf \[versione 2.0.0\].
 #set par(justify: true)

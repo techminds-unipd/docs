@@ -11,6 +11,7 @@
   title: "Piano di progetto",
   sommario: "Documento che descrive il piano di progetto del gruppo Tech Minds.",
   changelog: (
+    "2.0.0", "01/04/2025", "Aggiunta considerazioni finali", team.M, team.T,
     "1.9.0", "01/04/2025", "Aggiunta consuntivo e retrospettiva sprint 9", team.C, team.G,
     "1.8.0", "25/03/2025", "Aggiunta preventivo sprint 9", team.C, team.S,
     "1.7.0", "18/03/2025", "Aggiunta consuntivo e retrospettiva sprint 8", team.M, team.C,
@@ -53,3 +54,4 @@
 #include "include/pianificazione.typ"
 #include "include/periodi.typ"
 #include "include/costi.typ"
+#include "include/considerazioni-finali.typ"
