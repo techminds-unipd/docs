@@ -286,7 +286,7 @@ I diagrammi corrispondono a dei grafi orientati, dove i nodi rappresentano gli a
 I componenti principali di un diagramma dei casi d'uso sono:
 - *Attori*: entità esterne che interagiscono con il sistema;
 #figure(
-   image("../../../documenti_esterni/analisi_requisiti/assets/actor.jpg", width: 5%), caption: "Attore", numbering: none
+   image("../../../documenti_esterni/analisi_requisiti/assets/actor.jpg", width: 5%), caption: "Attore UC."
 ) <actor>
 
 - *Casi d'uso*: rappresentano le funzionalità offerte dal sistema, con cui l'attore può interagire;
@@ -297,7 +297,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
     node-inset: 10pt,
     node-shape: ellipse,
     node("UC.a.b Nome")
-    ), caption: "Caso d'uso", numbering: none
+    ), caption: "Caso d'uso."
 ) <use-case>
 
 - *Sistema*: rappresenta il "dominio" di un particolare caso d'uso, serve a stabilire il confine tra ciò che è esterno e quindi non gestito dal sistema e ciò che invece è interno e quindi gestito dal sistema. Gli attori per definizione saranno rappresentati esternamente al sistema, mentre i casi d'uso al suo interno;
@@ -320,7 +320,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
         height: 100pt,
         snap: -1,
     )
-    )
+    ), caption: "Sistema UC."
 ) <system>
 
 - *Relazioni*: rappresentano le interazioni tra attori e casi d'uso, e tra casi d'uso stessi. Sono di quattro tipi:
@@ -345,7 +345,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
             height: 100pt,
             snap: -1,
         )
-        )
+        ), caption: "Associazione UC."
     ) <association>
 
     - *inclusione*: relazione tra due casi d'uso, indica che un caso d'uso ne include un altro, può essere una funzionalità comune a più casi d'uso. Ogni istanza del caso d'uso "che include" esegue sempre il caso d'uso "incluso", con lo stesso attore principale. Nel sotto caso d'uso si utilizza l'identificativo del caso d'uso "che include" seguito da un punto e un numero progressivo;
@@ -372,7 +372,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
             height: 100pt,
             snap: -1,
         )
-        )
+        ), caption: "Inclusione UC."
     ) <inclusion>
 
     - *estensione*: relazione tra due casi d'uso, indica che un caso d'uso può estendere uno o più casi d'uso, aumentandone le funzionalità. Ogni istanza del caso d'uso "base" esegue il caso d'uso che estende in modo condizionato (a differenza dell'inclusione), e questo dipende dalla condizione di estensione, la quale determina quando l'estensione deve essere utilizzata. Con le estensioni si vogliono descrivere variazioni dalla funzionalità del caso d'uso "base", ad esempio in caso di errore/eccezione;
@@ -404,7 +404,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
             height: 130pt,
             snap: -1,
         )
-        )
+        ), caption: "Estensione UC."
     ) <extension>
 
     - *generalizzazione*: relazione tra due attori o due casi d'uso, indica che un attore o un caso d'uso è una generalizzazione di un altro attore o caso d'uso, quindi condivide le funzionalità del primo e ne può aggiungere di nuove o modificare quelle già esistenti (Y generalizza X);
@@ -425,7 +425,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
         edge(<ucB>, <ucA>, marks: (none, empty-dash)),
 
         node((5,0.5), align(center)[UC Y], name: <ucB>),
-        )
+        ), caption: "Generalizzazione UC."
     ) <generalization>
 
 ==== Requisiti
