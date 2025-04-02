@@ -1,9 +1,9 @@
-#import "/template/template.typ": glossario,team
-#import "costi.typ": getOreConsumatePersona
+#import "/template/template.typ": glossario,team,pieChartSprint
+#import "costi.typ": getOreConsumatePersona, getOreConsumateRuoli
 #pagebreak()
 = Considerazioni finali
 
-== Ore totali persona
+== Ore totali per persona
 Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento del progetto didattico. Di seguito il prospetto del numero di ore totali per persona:
 #figure(
     table(
@@ -21,6 +21,26 @@ Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento 
     ),
     caption: "Totale ore-persona."
 ) <tabella-totale-ore-persona>
+
+== Ore totali per ruolo
+Nella seguente tabella viene riportato il numero di ore totali inizialmente previste per ogni ruolo in candidatura e il numero di ore totali effettivamente consumate:
+#figure(
+    table(
+        columns: (5cm, 4cm, 4cm),
+        align: center+horizon,
+        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        table.header([*Ruolo*], [*Ore preventivate*], [*Ore effettive*]),
+        [Responsabile], [55], [#getOreConsumateRuoli().at(0)],
+        [Amministratore], [45], [#getOreConsumateRuoli().at(1)],
+        [Analista], [95], [#getOreConsumateRuoli().at(2)],
+        [Progettista], [100], [#getOreConsumateRuoli().at(3)],
+        [Programmatore], [190], [#getOreConsumateRuoli().at(4)],
+        [Verificatore], [180], [#getOreConsumateRuoli().at(5)],
+    ),
+    caption: "Totale ore-ruolo."
+) <tabella-totale-ore-ruolo>
+
+Come si può notare, abbiamo utilizzato meno ore di responsabile rispetto a quante preventivate, dato che grafici e tabelle del piano di progetto sono state in parte automatizzate. Per quanto riguarda le ore di amministratore è stato registrato un notevole incremento di ore effettive rispetto alle preventivate, ciò è dovuto alle automazioni implementate per i documenti redatti in typst e quelle relative agli script presenti nella CI; oltre a ciò spesso forse il gruppo ha assegnato al ruolo di amministratore task che non rientrano nel suo ambito di competenza. Inoltre le ore del ruolo di analista sono state sovrastimate, a causa delle molte ore di allenamento che poi hanno portato ad essere più efficenti nelle ore produttive. Infine per i ruoli rimanenti le previsioni si sono verificate essere corrette, ad eccezione del ruolo di programmatore che ha consumato meno ore rispetto a quelle preventivate. 
 
 == Aspetti positivi
 Il gruppo durante lo svolgimento del progetto ha rilevato i seguenti aspetti positivi:
