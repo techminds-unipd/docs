@@ -100,11 +100,11 @@ spiegazione:
 \
 All'interno del codice non è presente un vero e proprio changelog, in questo caso l'intero versionamento del codice viene gestito dal software git sulla piattaforma #glossario[GitHub].
 
-=== Gestione repository (Controllo della configurazione e registrazione dello stato)
+=== Gestione repository (Controllo della configurazione e registrazione dello stato) <gestione-AgentFlow>
 //#glossario[mvp]
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
 - #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
-- #link("https://github.com/techminds-unipd/AgentFlow")[AgentFlow] #footnote(link("https://github.com/techminds-unipd/AgentFlow")), che contiene il codice eseguibile del MVP realizzato durante il progetto.
+- #link("https://github.com/techminds-unipd/AgentFlow")[AgentFlow] #footnote(link("https://github.com/techminds-unipd/AgentFlow")), che contiene il codice eseguibile del #glossario[MVP] realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei file*
@@ -124,21 +124,21 @@ Le cartelle sono organizzate come segue:
     - *piano_progetto* contiene i sorgenti del piano di progetto;
     - *piano_qualifica* contiene i sorgenti del piano di qualifica;
     - *specifica_tecnica* contiene i sorgenti del documento di specifica tecnica;
-    - *verbali* contiene i verbali esterni redatti dalla RTB alla PB;
+    - *verbali* contiene i verbali esterni redatti dalla RTB alla PB.
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
     - *glossario* contiene i sorgenti del glossario;
     - *norme_progetto* contiene i sorgenti delle #glossario[norme di progetto];
-    - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB;
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla RTB alla PB.
 - *RTB* organizza i sorgenti dei documenti redatti per la #glossario[Requirements and Technology Baseline] in:
   - *documenti_esterni*, al cui interno si trova il sorgente della lettera di presentazione per la RTB e una cartella per ogni documento che sarà fornito al proponente:
     - *analisi_requisiti* contiene i sorgenti del documento di analisi dei requisiti;
     - *piano_progetto* contiene i sorgenti del piano di progetto;
     - *piano_qualifica* contiene i sorgenti del piano di qualifica;
-    - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB;
+    - *verbali* contiene i verbali esterni redatti dalla candidatura alla RTB.
   - *documenti_interni*, al cui interno si trovano, raggruppati in sottocartelle, i sorgenti dei documenti rivolti ai membri del team:
     - *glossario* contiene i sorgenti del glossario;
     - *norme_progetto* contiene i sorgenti delle #glossario[norme di progetto];
-    - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB;
+    - *verbali* contiene i sorgenti dei verbali interni redatti dalla candidatura alla RTB.
 - *template* contiene il template per i documenti, i file necessari alla generazione del sito e i loghi usati nel sito e nei documenti.
 Inoltre, all'interno della repository si trova un file README.md in cui è descritta la struttura delle cartelle. 
 
@@ -165,10 +165,10 @@ Le cartelle sono organizzate come segue:
 - *.github* contiene gli script per la Continuos Integration;
 - *agente* contiene il file requirements.txt per la gestione delle dipendenze con #glossario[PIP], il file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test;
+  - *test* per il codice dei test.
 - *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend, per Nest e #glossario[TypeScript] e le sottocartelle:
   - *src* per il codice sorgente;
-  - *test* per il codice dei test;
+  - *test* per il codice dei test.
 - *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript  e le sottocartelle:
   - *cypress* per i #glossario[test di sistema];
   - *src* per il codice sorgente;
@@ -283,7 +283,7 @@ I test possono essere di vario tipo e per questo è necessario classificarli a s
 *Classificazione dei test*
 
 Le tipologie di test principali sono, in ordine di esecuzione:
-+ #glossario[Test di unità]: verificano il corretto funzionamento di singole unità di codice, come funzioni, metodi o classi. Poiché verificano piccole porzioni di codice, questi test devono essere eseguiti per primi, in modo tale da evitare l'introduzione di errori una volta che queste unità vengono integrate tra loro;
++ Test di unità: verificano il corretto funzionamento di singole unità di codice, come funzioni, metodi o classi. Poiché verificano piccole porzioni di codice, questi test devono essere eseguiti per primi, in modo tale da evitare l'introduzione di errori una volta che queste unità vengono integrate tra loro;
 + #glossario[Test di integrazione]: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
 + #glossario[Test di sistema]: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
 + #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto difetti in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;

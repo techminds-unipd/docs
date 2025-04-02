@@ -149,6 +149,7 @@ Documento che ha lo scopo di raccogliere la pianificazione delle attività proge
     - #glossario[retrospettiva];
     - preventivo;
     - consuntivo.
+- Considerazioni finali: espone le considerazioni del gruppo sull'andamento dell'intero progetto.
 
 *Uso*: esterno.
 
@@ -489,7 +490,7 @@ UML definisce vari elementi grafici per rappresentare le classi e le relazioni t
 )
 
 Le relazioni tra questi elementi possono essere di vario tipo:
-- *Associazione*: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe (spesso interscambiabile con un attributo). È rappresentata da una linea continua direzionata tra le classi coinvolte;
+- *Associazione*: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe. Tipicamente è implementata con un attributo. È rappresentata da una linea continua direzionata tra le classi coinvolte;
 #figure(
     image("../assets/associazione.svg", width: 35%), caption: "Esempio associazione UML.",
 )
@@ -551,30 +552,18 @@ Riguardo la struttura dei metodi le regole da seguire per mantenere il codice le
 
 Tutte queste regole verranno applicate durante l'attività di codifica e saranno verificate tramite l'utilizzo di strumenti di analisi statica del codice, inoltre verranno misurate alcune metriche definite in @manutenibilità-prodotto per valutare la manutenibilità del codice prodotto.  
 
-==== Strumenti
-- Emacs e Visual Studio Code per la codifica del software.
+==== Strumenti e tecnologie
+Il gruppo ha scelto Emacs e Visual Studio Code per la codifica del software.
 
 === Integrazione
 L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
 
-// se decideremo delle regole per l'integrazione si dovranno mettere qui
+==== Pratiche di integrazione
+Per sviluppare una nuova parte del software, ciascun membro del gruppo deve creare un branch dedicato (come descritto dettagliatamente in @gestione-AgentFlow). Il programmatore procede quindi allo sviluppo della feature e dei relativi #glossario[test di unità]. Fatto ciò, procede con il completamento dell'integrazione, che corrisponde al merge tra il branch di feature e il branch di sviluppo. Le regole create per il merge impongono che siano superati tutti i test di unità e che il codice sia formattato secondo le norme di codifica adottate, assicurando la qualità del codice presente nel branch di sviluppo. 
 
 === Installazione
 L'attività consiste nello sviluppo di un piano per installare il prodotto software nell'ambiente di destinazione. In questo piano devono essere fornite le risorse e le informazioni necessarie per l'installazione e la configurazione del software. L'obiettivo è quello di fornire istruzioni chiare e dettagliate all'utente finale, in modo tale da consentirgli di utilizzare il prodotto software.
 
-/*
-== Gestione operativa
-=== Caratteristiche e finalità
-Il processo di gestione operativa  nello standard ISO/IEC 12207:1995 include le attività e i compiti necessari per la gestione del prodotto software e fornire supporto operativo agli utenti. Questo processo si riferisce principalmente alla fase in cui il software viene utilizzato nel suo ambiente operativo e interagisce con il sistema. #linebreak() #linebreak() 
-Lo standard definisce queste attività principali:
-1. Implementazione del processo: definisce un piano operativo e uno standard per gestire le attività, inoltre stabilisce procedure per il monitoraggio e la risoluzione dei problemi;
-2. Test operativi: definisce l'esecuzione di test per ogni rilascio del software nell'ambiente operativo, con particolare attenzione al funzionamento corretto del software rispetto al funzionamento atteso;
-3. Operazione del sistema: definisce che il sistema dovrebbe operare all'interno dell'ambiente previsto in accordo alla sua documentazione;
-4. Supporto agli utenti: definisce modalità di assistenza e consulenza agli utenti in base alle richieste, quest'ultime dovrebbero essere tracciate e monitorate.
-Queste attività assicurano che il software venga gestito efficacemente durante la sua fase operativa e che eventuali problemi o richieste degli utenti siano affrontati in modo tempestivo.
+L'installazione del prodotto avviene tramite container #glossario[Docker]. Prima del loro avvio è necessario inserire nei file .env i dati necessari indicati dai file .env.sample. È possibile avviare tutta l'infrastruttura col comando _docker compose up [\-\-build] [-d]_, dove _\-\-build_ serve per costruire le immagini e _-d_ per avviare l'infrastruttura in background.
 
-=== Strumenti
-Al fine di rendere accessibile il prodotto è fondamentale esporre dettagli sull'installazione del software e sulle procedure necessarie per eseguire correttamente il prodotto, oltre ad eventuali requisiti di sistema necessari. Inoltre, è importante illustrare una guida all'utilizzo, esponendo le principali funzionalità utilizzabili ed il come interagire con il sistema. #linebreak()
-Viene di seguito fornito un puntatore al #glossario[repository] del #glossario[PoC] dove è possibile trovare le istruzioni per l'installazione e l'utilizzo del software: https://github.com/techminds-unipd/PoC/blob/main/README.md.
-//todo per parte di minimun viable product
-*/
+Le istruzioni per l'uso del prodotto sono raccolte nel #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")[manuale utente] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")).
