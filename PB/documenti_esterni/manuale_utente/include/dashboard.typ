@@ -1,7 +1,7 @@
 == Dashboard
 La pagina dashboard rappresenta il punto di partenza per l'utilizzo di Agent Flow. Per accedervi è sufficiente effettuare il login, dopo il quale si verrà immediatamente reindirizzati, oppure è presente il link all'interno della navbar. 
 
-La @dashboard mostra la pagina dashboard non appena un utente senza workflow accede.
+La @dashboard mostra la pagina dashboard quando vi accede un utente che non ha creato o salvato alcun workflow.
 
 #figure(
   image("../assets/dashboard.png"), caption: "Pagina dashboard."
