@@ -13,7 +13,7 @@ I miglioramenti rappresentano una componente fondamentale per la raggiunta degli
     ),
     [Mancanza di conoscenza delle tecnologie da utilizzare nel progetto.],
     [RP4],
-    [Il primo #glossario[sprint] è stato dedicato all'auto-formazione sulle tecnologie da utilizzare nel progetto, promuovendo auto-formazione e collaborazione tra i membri. Inoltre il proponente ha offerto tre corsi di formazione per dare una base solida per l'utilizzo delle tecnologie.]
+    [Il primo #glossario[sprint] è stato dedicato all'auto-formazione sulle tecnologie da utilizzare nel progetto, promuovendo la collaborazione tra i membri. Inoltre il proponente ha offerto tre corsi di formazione per fornirci una base solida per l'utilizzo delle tecnologie.]
   ), 
   caption: [Miglioramento per il rischio RP4 nello sprint 1.]
 )
@@ -62,7 +62,7 @@ I miglioramenti rappresentano una componente fondamentale per la raggiunta degli
     ),
     [Mancanza di conoscenza delle tecnologie da utilizzare per l'implementazione dei test durante lo sprint 8.],
     [RP4],
-    [Collaborazione tra i membri del team che si sono documentati tempestivamente sulla tecnologia utilizzata. Implementazione dei primi test in gruppo.]
+    [Collaborazione tra i membri del team che si sono documentati tempestivamente sulle tecnologie utilizzate. Implementazione dei primi test in gruppo.]
   ), 
   caption: [Miglioramento per il rischio RP4 nello sprint 8.]
 )
