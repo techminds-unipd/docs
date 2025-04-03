@@ -44,7 +44,7 @@ Se invece l'utente non ha creato nessun workflow verrà mostrato un messaggio.
 
 \
 *Eliminazione di un workflow*
-\ Per eliminare un workflow è necessario schiacciare sul pulsante di eliminazione del workflow scelto. 
+\ Per eliminare un workflow è necessario cliccare sul pulsante di eliminazione del workflow scelto. 
 
 #figure(
   image("../assets/eliminazione-workflow.png", width: 90%), caption: "Eliminazione di un workflow."
