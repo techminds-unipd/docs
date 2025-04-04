@@ -1,7 +1,7 @@
 == Dashboard
-La pagina dashboard rappresenta il punto di partenza per l'utilizzo di Agent Flow. Per accedervi è sufficiente effettuare il login e si viene immediatamente reindirizzati, oppure è presente il link all'interno della navbar. 
+La pagina dashboard rappresenta il punto di partenza per l'utilizzo di Agent Flow. Per accedervi è necessario aver effettuato il login. La si visualizza automaticamente dopo aver effettuato l'accesso oppure cliccando sul link all'interno della navbar. 
 
-La @dashboard mostra la pagina dashboard non appena un utente senza workflow accede.
+La @dashboard mostra la pagina dashboard quando vi accede un utente che non ha creato o salvato alcun workflow.
 
 #figure(
   image("../assets/dashboard.png"), caption: "Pagina dashboard."
@@ -44,7 +44,7 @@ Se invece l'utente non ha creato nessun workflow verrà mostrato un messaggio.
 
 \
 *Eliminazione di un workflow*
-\ Per eliminare un workflow è necessario schiacciare sul pulsante di eliminazione del workflow scelto. 
+\ Per eliminare un workflow è necessario cliccare sul pulsante di eliminazione del workflow scelto. 
 
 #figure(
   image("../assets/eliminazione-workflow.png", width: 90%), caption: "Eliminazione di un workflow."

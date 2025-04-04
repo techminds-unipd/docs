@@ -15,6 +15,7 @@
   title: "Manuale utente",
   sommario: "Il documento riporta le istruzioni per utilizzare l'MVP.",
   changelog: (
+    "1.0.0", "01/04/2024", "Miglioramenti grafici", team.M, team.G,
     "0.8.0", "29/03/2024", "Documentata pagina Worfklow", team.A, team.G,
     "0.7.0", "26/03/2024", "Documentata pagina Home e componente Navbar", team.A, team.T,
     "0.6.0", "25/03/2024", "Documentata pagina AboutUs", team.C, team.A,
