@@ -170,7 +170,7 @@ Le cartelle sono organizzate come segue:
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
 - *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript e le sotto-cartelle:
-  - *cypress* per i #glossario[test di sistema];
+  - *cypress* per i #glossario[test di sistema]\;
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
