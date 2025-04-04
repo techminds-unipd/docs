@@ -216,7 +216,7 @@ Il ciclo #glossario[PDCA], noto anche come ciclo di Deming, è stato scelto come
 Ogni ciclo PDCA rappresenta un’opportunità per raggiungere gli obiettivi di qualità fissati, creando un processo di miglioramento costante e progressivo.
 
 === Piano di qualifica
-Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. All'interno del piano di qualifica vengono fissati gli standard di qualità da rispettare, ovvero i valori accettabili e ottimali delle metriche individuate in norme di progetto (vedi @metriche).
+Il piano di qualifica è un documento che definisce le strategie e le metodologie che il team intende adottare per garantire la qualità del prodotto software. Al suo interno vengono fissati gli standard di qualità da rispettare, ovvero i valori accettabili e ottimali delle metriche individuate in norme di progetto (vedi @metriche). \
 All'interno del piano di qualifica viene definito il cruscotto di controllo, che raccoglie un insieme di misurazioni per ogni metrica adottata, i dati rilevati da queste misurazioni poi vengono sottoposti a criteri di accettazione. Il cruscotto di controllo dunque consente di monitorare lo stato del progetto, rilevare problemi critici e prendere decisioni migliorative basate sui dati a disposizione. Relativamente alla qualità del software, il piano di qualifica raccoglie la specifica di tutti i test da effettuare con il relativo stato.
 
 === Struttura metriche di qualità
