@@ -169,7 +169,7 @@ Le cartelle sono organizzate come segue:
 - *backend* contiene i file per #glossario[ESLint], per #glossario[Node.js], per il container Docker del backend, per Nest e #glossario[TypeScript] e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
-- *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript  e le sottocartelle:
+- *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript e le sotto-cartelle:
   - *cypress* per i #glossario[test di sistema];
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
