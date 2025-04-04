@@ -19,7 +19,7 @@ Se è stato effettuato l'accesso, la Navbar mostrerà i link per la sezione abou
   image("../assets/logged-navbar.png"), caption: "Navbar di un utente loggato."
 )
 
-Facendo clic sull'icona del profilo, verrà visualizzato un menu a tendina con l'opzione per il logout e un link alla sezione services (vedi @services).
+Facendo clic sull'icona del profilo, verrà visualizzato un menù a tendina con l'opzione per il logout e un link alla sezione services (vedi @services).
 
 #figure(
   image("../assets/dropdown-menu-navbar.png"), caption: "Navbar con il menù a tendina."
