@@ -77,9 +77,7 @@ Valuta quanto è facile per gli utenti interagire con il prodotto software.
     inset: 10pt,
     align: horizon,
     table.header(
-      [*Codice*], [*Nome metrica*],  [*Valore accettabile*], [*Valore 
-      #linebreak()
-      ottimale*]
+      [*Codice*], [*Nome metrica*], [*Valore accettabile*], [*Valore ottimale*]
     ),
     ..getMPRODByCharcteristic("usabilità", false, false, true, true).flatten()
   ), 
@@ -92,7 +90,7 @@ Analizza la capacità del software di funzionare su diverse piattaforme e ambien
 #set par(justify: false)
 #figure(
   table(
-    columns: (auto, auto, auto, auto),
+    columns: (auto, 181pt, auto, auto),
     fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
     inset: 10pt,
     align: horizon,
