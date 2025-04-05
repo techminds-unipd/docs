@@ -195,8 +195,8 @@ Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano
 
 ==== Milestone e sprint
 Il progetto è suddiviso in periodi chiamati #glossario[milestone] e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
-- Milestone: rappresentano le revisioni di progetto. Ogni milestone, per essere raggiunta, richiede il completamento di periodi di tempo chiamati sprint. Per monitorare l'avanzamento del progetto e dei prodotti sull'ITS sono create, per ogni revisione, una milestone generale e una specifica per ogni prodotto. Le milestone sono documentate nel piano di progetto a cura del responsabile;
-- Sprint: periodi di lavoro con durata fissa in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo ed è generalmente di due settimane; variazioni sono consentite solo in alcuni casi e di comune accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile e associati alle corrispondenti task sull'ITS.
+- Milestone: rappresentano le revisioni di progetto. Ogni milestone, per essere raggiunta, richiede il completamento di periodi di tempo chiamati sprint. Per monitorare l'avanzamento del progetto e dei prodotti sull'issue tracking system sono create, per ogni revisione, una milestone generale e una specifica per ogni prodotto. Le milestone sono documentate nel piano di progetto a cura del responsabile;
+- Sprint: periodi di lavoro con durata fissa in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo ed è generalmente di due settimane; variazioni sono consentite solo in alcuni casi e di comune accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile e ad essi vengono associate le relative issue.
 
 ==== Issue
 Utilizziamo le issue di GitHub per tracciare le attività da svolgere all'interno di ogni sprint.

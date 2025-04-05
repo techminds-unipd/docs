@@ -104,7 +104,7 @@ All'interno del codice non è presente un vero e proprio changelog, in questo ca
 //#glossario[mvp]
 Il team ha creato due #glossario[repository] all'interno dell'organizzazione GitHub:
 - #link("https://github.com/techminds-unipd/docs")[docs] #footnote(link("https://github.com/techminds-unipd/docs")), che contiene tutta la documentazione del progetto;
-- #link("https://github.com/techminds-unipd/AgentFlow")[AgentFlow] #footnote(link("https://github.com/techminds-unipd/AgentFlow")), che contiene il codice eseguibile del #glossario[MVP] realizzato durante il progetto.
+- #link("https://github.com/techminds-unipd/AgentFlow")[AgentFlow] #footnote(link("https://github.com/techminds-unipd/AgentFlow")), che contiene il codice sorgente del #glossario[MVP] realizzato durante il progetto.
 
 ==== Repository docs
 *Organizzazione dei file*
@@ -160,9 +160,9 @@ Inoltre, per la repository della documentazione è disponibile una pagina web st
 ==== Repository AgentFlow
 *Organizzazione dei file*
 
-La repository AgentFlow contiene solamente il codice eseguibile del MVP.#linebreak()
+La repository AgentFlow contiene solamente il codice sorgente del MVP.#linebreak()
 Le cartelle sono organizzate come segue:
-- *.github* contiene gli script per la Continuos Integration;
+- *.github* contiene gli script per la Build Automation;
 - *agente* contiene il file requirements.txt per la gestione delle dipendenze con #glossario[PIP], il file per il container #glossario[Docker] dell'agente e le sottocartelle:
   - *src* per il codice sorgente;
   - *test* per il codice dei test.
@@ -171,8 +171,7 @@ Le cartelle sono organizzate come segue:
   - *test* per il codice dei test.
 - *frontend* contiene i file per #glossario[ESLint], per Node.js, per il container Docker del frontend, per #glossario[Vite], Cypress, TypeScript e le sotto-cartelle:
   - *cypress* per i #glossario[test di sistema]\;
-  - *src* per il codice sorgente;
-  - *test* per il codice dei test.
+  - *src* per il codice sorgente, i test di unità e i test di integrazione.
 Inoltre, all'interno della repository si trova un file README.md in cui sono descritti i comandi per il setup del progetto e il deploy dell'applicazione.
 
 *Struttura dei branch e flusso di lavoro*
@@ -285,7 +284,7 @@ I test possono essere di vario tipo e per questo è necessario classificarli a s
 
 Le tipologie di test principali sono, in ordine di esecuzione:
 + Test di unità: verificano il corretto funzionamento di singole unità di codice, come funzioni, metodi o classi. Poiché verificano piccole porzioni di codice, questi test devono essere eseguiti per primi, in modo tale da evitare l'introduzione di errori una volta che queste unità vengono integrate tra loro;
-+ #glossario[Test di integrazione]: verificano il corretto funzionamento delle unità di codice integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
++ #glossario[Test di integrazione]: verificano il corretto funzionamento delle componenti integrate tra loro, con l'obiettivo di verificare che le unità funzionino correttamente anche una volta integrate;
 + #glossario[Test di sistema]: verificano il corretto funzionamento del sistema nel suo complesso, con l'obiettivo di verificare che il sistema soddisfi i requisiti software concordati con il proponente e stabiliti nel documento di analisi dei requisiti;
 + #glossario[Test di regressione]: verificano che le modifiche apportate al codice non abbiano introdotto difetti in altre parti del sistema prima funzionanti. Questi test vengono eseguiti ogni volta che viene apportata una modifica al codice e non sono altro che la ripetizione selettiva di test già eseguiti in precedenza;
 
