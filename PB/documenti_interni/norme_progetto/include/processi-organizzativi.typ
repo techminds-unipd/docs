@@ -114,7 +114,7 @@ Ha quindi il compito di:
 
 ==== Strumenti e tecnologie
 Per la gestione dei ruoli e per le attività che ogni ruolo deve svolgere abbiamo deciso di utilizzare i seguenti strumenti e le seguenti tecnologie:
-- #link("https://github.com/orgs/techminds-unipd/projects/1", "GitHub Board") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1")) \[visitato il: 10/02/2025\] per le attività di pianificazione;
+- #link("https://github.com/orgs/techminds-unipd/projects/1", "GitHub Board") #footnote(link("https://github.com/orgs/techminds-unipd/projects/1")) \[visitato il: 01/04/2025\] per le attività di pianificazione;
 - Typst: per la documentazione e la creazione di diagrammi, tabelle e grafici;
 - Ambiente Google Drive: per scambiare file utili in modo veloce e condiviso;
 - Telegram e Discord: per scambiare consigli sui ruoli in modo immediato.
@@ -195,8 +195,8 @@ Dividiamo quindi le attività da svolgere in sprint, periodi di tempo che durano
 
 ==== Milestone e sprint
 Il progetto è suddiviso in periodi chiamati #glossario[milestone] e sprint. Tenendo conto della scelta di un modello agile, abbiamo definito questi due concetti:
-- Milestone: rappresentano le revisioni di progetto. Ogni milestone, per essere raggiunta, richiede il completamento di periodi di tempo chiamati sprint;
-- Sprint: periodi di lavoro con durata fissa, generalmente due settimane, in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo e aiuta a mantenere disciplina e produttività. Variazioni sono consentite solo in alcuni casi e di comune accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile.
+- Milestone: rappresentano le revisioni di progetto. Ogni milestone, per essere raggiunta, richiede il completamento di periodi di tempo chiamati sprint. Per monitorare l'avanzamento del progetto e dei prodotti sull'issue tracking system sono create, per ogni revisione, una milestone generale e una specifica per ogni prodotto. Le milestone sono documentate nel piano di progetto a cura del responsabile;
+- Sprint: periodi di lavoro con durata fissa in cui completiamo le attività pianificate rispettando le scadenze. La durata dello sprint è comune a tutto il gruppo ed è generalmente di due settimane; variazioni sono consentite solo in alcuni casi e di comune accordo. Gli sprint sono definiti nel piano di progetto a cura del responsabile e ad essi vengono associate le relative issue.
 
 ==== Issue
 Utilizziamo le issue di GitHub per tracciare le attività da svolgere all'interno di ogni sprint.
@@ -231,7 +231,7 @@ Di seguito descriviamo il ciclo di vita di una issue:
 Board è un sistema visivo che permette di organizzare e tracciare il progresso delle attività. La motivazione per cui abbiamo scelto questo sistema è che permette a tutti di avere una panoramica chiara ed immediata del lavoro, migliorando anche la comunicazione e la trasparenza. Possiamo facilmente individuare se ci sono delle attività bloccate e intervenire tempestivamente. Inoltre ci consente di visualizzare l'avanzamento delle issue in modo veloce ed intuitivo.
 
 Per le motivazioni sopra descritte abbimo deciso di utilizzare gli strumenti di GitHub Projects, in particolare:
-- GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1
+- GitHub Board: https://github.com/orgs/techminds-unipd/projects/1/views/1 \[visitato il: 01/04/2025\]
   
   Dashboard suddivisa in 5 colonne che corrispondono alle fasi del ciclo di vita delle issue:
   - No Status: vengono inserite le issue che non hanno una particolare urgenza; solo una volta terminate le issue relative allo sprint verranno completate anche quelle presenti in questa colonna;
@@ -289,7 +289,7 @@ Con lo scopo di adattarci alle esigenze dei vari processi, il gruppo si impegna 
 - Seguire costantemente il principio di miglioramento continuo durante ogni fase del progetto;
 - Individuare in modo proattivo le attività, i ruoli e altre opportunità di miglioramento, cercando in caso nuove alternative;
 - Condurre una retrospettiva alla fine di ogni sprint, andando quindi ad approfondire ogni aspetto che non ha funzionato e individuando le possibili aree di miglioramento;
-- Attuare azioni correttive da implementare in modo immediato.
+- Attuare azioni correttive da implementare in modo immediato, aggiornando le norme di progetto.
 
 == Formazione del personale
 L'acquisizione, la fornitura, lo sviluppo, il funzionamento o la manutenzione dei prodotti software dipendono in gran parte da personale esperto e qualificato. È importante che ognuno acquisisca una competenza adeguata per utilizzare le tecnologie scelte.

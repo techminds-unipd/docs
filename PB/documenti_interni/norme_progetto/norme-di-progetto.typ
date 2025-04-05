@@ -18,7 +18,8 @@
   title: "Norme di progetto",
   sommario: "Documento che descrive le norme di progetto del gruppo Tech Minds.",
   changelog: (
-    "2.0.0", "26/03/2025", "Modificata sezione analisi dinamica", team.S, team.A,
+    "2.0.0", "01/04/2025", "Aggiornamento integrazione, installazione e correzione errori", team.L, team.C,
+    "1.8.0", "26/03/2025", "Modificata sezione analisi dinamica", team.S, team.A,
     "1.7.0", "26/03/2025", "Documentato standard ISO/IEC 9126", team.C, team.S,
     "1.6.0", "24/03/2025", "Documentata struttura documenti", team.C, team.L,
     "1.5.0", "10/03/2025", "Completata sezione codifica", team.S, team.L,
