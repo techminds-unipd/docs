@@ -484,7 +484,7 @@ Come è possibile notare dal grafico, il valore dell'RSI ha subito un forte calo
     caption: [Indice di Gulpease in AdR, PdP, PdQ, ST, MU, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
-- #glossario[Analisi dei requisiti] ;
+- #glossario[Analisi dei requisiti]\;
 - Piano di progetto;
 - Piano di qualifica;
 - Glossario;
