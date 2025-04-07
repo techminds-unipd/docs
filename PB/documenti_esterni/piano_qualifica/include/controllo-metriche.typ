@@ -390,7 +390,7 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Come nel periodo RTB anche in questo periodo i costi sono stati rispettati, ma si nota un incremento di EV rispetto a PV, soprattutto tra lo sprint 6 e 8. Questo è dovuto al fatto che il lavoro svolto è stato maggiore rispetto a quello pianificato, quindi il team è riuscito a portare avanti il progetto in modo più veloce del previsto. Inoltre l'EV ha subito un incremento costante fino a raggiungere il budget iniziale, segno che il progetto è stato portato avanti e completato in modo proficuo. 
+Come nel periodo RTB anche in questo periodo i costi sono stati rispettati, ma si nota un incremento di EV rispetto a PV, soprattutto tra gli sprint 6 e 8. Questo è dovuto al fatto che il lavoro svolto è stato maggiore rispetto a quello pianificato, quindi il team è riuscito a portare avanti il progetto in modo più veloce del previsto. Inoltre l'EV ha subito un incremento costante fino a raggiungere il budget iniziale, segno che il progetto è stato portato avanti e completato in modo proficuo. 
 
 #pagebreak()
 == MPROC4 (CV), MPROC5 (SV)
@@ -417,7 +417,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra lo sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto. Al contempo però il gruppo ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
+Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra gli sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto. Al contempo però il gruppo ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
 #pagebreak()
 
 == MPROC6 (CPI), MPROC9 (SPI)
