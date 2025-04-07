@@ -474,16 +474,18 @@ Come è possibile notare dal grafico, il valore dell'RSI ha subito un forte calo
 == MPROC11 (Indice di Gulpease)
 #linebreak()
 
+#let point = ((1,0),)
+#let point_fun(offset: 0) = point
 #let x_axis = ((1,36),)
 #let x_axis_fun(offset: 0) = x_axis
 
-#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, g_st_fun, g_mu_fun, x_axis_fun),
-    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[ST],[MU]),
-    hlines: ((40,40)),
+#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, g_st_fun, g_mu_fun, x_axis_fun, point_fun),
+    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[ST],[MU],[]),
+    hlines: ((40,100)),
     vlines: (6,),
     x-label: "sprint",
     y-label: "indice",
-    y-tick-step: -1,
+    y-tick-step: 10,
     caption: [Indice di Gulpease in AdR, PdP, PdQ, ST, MU, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
