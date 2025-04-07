@@ -490,7 +490,7 @@ UML definisce vari elementi grafici per rappresentare le classi e le relazioni t
 )
 
 Le relazioni tra questi elementi possono essere di vario tipo:
-- *Associazione*: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe. Tipicamente è implementata con un attributo. È rappresentata da una linea continua direzionata tra le classi coinvolte;
+- *Associazione*: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe. È rappresentata da una linea continua direzionata tra le classi coinvolte o da un attributo;
 #figure(
     image("../assets/associazione.svg", width: 35%), caption: "Esempio associazione UML.",
 )
