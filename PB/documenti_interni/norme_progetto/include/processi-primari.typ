@@ -94,7 +94,7 @@ Documento formale di presentazione per ogni revisione di progetto:
 
 *Redattore*: responsabile.
 
-*Puntatore*: #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[lettera di presentazione RTB] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")), #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")[lettera di presentazione PB] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")). //TODO da controllare questo link quando creeremo la lettera di presentazione
+*Puntatore*: #link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")[lettera di presentazione RTB] #footnote(link("https://techminds-unipd.github.io/docs/RTB/documenti_esterni/lettera-di-presentazione-RTB.pdf")), #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")[lettera di presentazione PB] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/lettera-di-presentazione-PB.pdf")).
 
 ==== Norme di progetto
 Il presente documento, creato per determinare il way of working che ci guida nel corso del progetto.
@@ -146,9 +146,10 @@ Documento che ha lo scopo di raccogliere la pianificazione delle attività proge
     - rischi previsti;
     - rischi occorsi;
     - conclusioni;
-    - retropsettiva;
+    - #glossario[retrospettiva];
     - preventivo;
     - consuntivo.
+- Considerazioni finali: espone le considerazioni del gruppo sull'andamento dell'intero progetto.
 
 *Uso*: esterno.
 
@@ -157,7 +158,7 @@ Documento che ha lo scopo di raccogliere la pianificazione delle attività proge
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf")[piano di progetto] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/piano_progetto/piano-di-progetto.pdf")) [versione 2.0.0].
 
 ==== Piano di qualifica
-Il #glossario[piano di qualifica] ha lo scopo di fissare gli obiettivi per le metriche individuate nel presente documento, individuando un valore accettabile e un valore ottimale. Presenta inoltre i test effettuati sul prodotto e gli esiti di tale test, indicando:
+Il #glossario[piano di qualifica] ha lo scopo di fissare gli obiettivi per le metriche individuate nel presente documento, individuando un valore accettabile e un valore ottimale. Presenta inoltre i test effettuati sul prodotto e i loro esiti, tramite le sigle:
 - NI: Non Implementato;
 - S: Superato;
 - NS: Non Superato.
@@ -208,7 +209,7 @@ Documento che funge da guida all'utilizzo del prodotto per tutte le tipologie di
 *Puntatore*: #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")[manuale utente] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")) [versione 1.0.0]. // da controllare il link quando ci sarà il documento
 
 ==== Verbale interno
-#glossario[Verbale] delle riunioni svolte internamente al gruppo.
+#glossario[Verbali] delle riunioni svolte internamente al gruppo.
 
 *Struttura*:
 - Informazioni introduttive (durata, luogo e partecipanti);
@@ -219,7 +220,7 @@ Documento che funge da guida all'utilizzo del prodotto per tutte le tipologie di
 *Redattore*: responsabile.
 
 ==== Verbale esterno
-Verbale delle riunioni svolte con il proponente.
+Verbali delle riunioni svolte con il proponente.
 
 *Struttura*:
 - Informazioni introduttive (durata, luogo e partecipanti);
@@ -283,12 +284,12 @@ I diagrammi dei casi d'uso sono strumenti utili a visualizzare in modo immediato
 I diagrammi corrispondono a dei grafi orientati, dove i nodi rappresentano gli attori e i casi d'uso, mentre gli archi rappresentano le relazioni tra essi. Nel diagramma viene anche delineato il confine del sistema in quel determinato scenario, in modo tale da avere una visione chiara e precisa delle interazioni tra attori esterni e il sistema stesso. 
 
 I componenti principali di un diagramma dei casi d'uso sono:
-- Attori: entità esterne che interagiscono con il sistema;
+- *Attori*: entità esterne che interagiscono con il sistema;
 #figure(
-   image("../../../documenti_esterni/analisi_requisiti/assets/actor.jpg", width: 5%), caption: "Attore", numbering: none
+   image("../../../documenti_esterni/analisi_requisiti/assets/actor.jpg", width: 5%), caption: "Attore UC."
 ) <actor>
 
-- Casi d'uso: rappresentano le funzionalità offerte dal sistema, con cui l'attore può interagire;
+- *Casi d'uso*: rappresentano le funzionalità offerte dal sistema, con cui l'attore può interagire;
 #figure(
     diagram(
     debug: false,
@@ -296,10 +297,10 @@ I componenti principali di un diagramma dei casi d'uso sono:
     node-inset: 10pt,
     node-shape: ellipse,
     node("UC.a.b Nome")
-    ), caption: "Caso d'uso", numbering: none
+    ), caption: "Caso d'uso."
 ) <use-case>
 
-- Sistema: rappresenta il "dominio" di un particolare caso d'uso, serve a stabilire il confine tra ciò che è esterno e quindi non gestito dal sistema e ciò che invece è interno e quindi gestito dal sistema. Gli attori per definizione saranno rappresentati esternamente al sistema, mentre i casi d'uso al suo interno;
+- *Sistema*: rappresenta il "dominio" di un particolare caso d'uso, serve a stabilire il confine tra ciò che è esterno e quindi non gestito dal sistema e ciò che invece è interno e quindi gestito dal sistema. Gli attori per definizione saranno rappresentati esternamente al sistema, mentre i casi d'uso al suo interno;
 #figure(
     diagram(
     debug: false,
@@ -319,11 +320,11 @@ I componenti principali di un diagramma dei casi d'uso sono:
         height: 100pt,
         snap: -1,
     )
-    )
+    ), caption: "Sistema UC."
 ) <system>
 
-- Relazioni: rappresentano le interazioni tra attori e casi d'uso, e tra casi d'uso stessi. Sono di quattro tipi:
-    - associazione: collegamento tra attore e caso d'uso, indica che l'attore è coinvolto nel caso d'uso;
+- *Relazioni*: rappresentano le interazioni tra attori e casi d'uso, e tra casi d'uso stessi. Sono di quattro tipi:
+    - *associazione*: collegamento tra attore e caso d'uso, indica che l'attore è coinvolto nel caso d'uso;
     #figure(
         diagram(
         debug: false,
@@ -344,10 +345,10 @@ I componenti principali di un diagramma dei casi d'uso sono:
             height: 100pt,
             snap: -1,
         )
-        )
+        ), caption: "Associazione UC."
     ) <association>
 
-    - inclusione: relazione tra due casi d'uso, indica che un caso d'uso ne include un altro, può essere una funzionalità comune a più casi d'uso. Ogni istanza del caso d'uso "che include" esegue sempre il caso d'uso "incluso", con lo stesso attore principale. Nel sotto caso d'uso si utilizza l'identificativo del caso d'uso "che include" seguito da un punto e un numero progressivo;
+    - *inclusione*: relazione tra due casi d'uso, indica che un caso d'uso ne include un altro, può essere una funzionalità comune a più casi d'uso. Ogni istanza del caso d'uso "che include" esegue sempre il caso d'uso "incluso", con lo stesso attore principale. Nel sotto caso d'uso si utilizza l'identificativo del caso d'uso "che include" seguito da un punto e un numero progressivo;
     #figure(
         diagram(
         debug: false,
@@ -371,10 +372,10 @@ I componenti principali di un diagramma dei casi d'uso sono:
             height: 100pt,
             snap: -1,
         )
-        )
+        ), caption: "Inclusione UC."
     ) <inclusion>
 
-    - estensione: relazione tra due casi d'uso, indica che un caso d'uso può estendere uno o più casi d'uso, aumentandone le funzionalità. Ogni istanza del caso d'uso "base" esegue il caso d'uso che estende in modo condizionato (a differenza dell'inclusione), e questo dipende dalla condizione di estensione, la quale determina quando l'estensione deve essere utilizzata. Con le estensioni si vogliono descrivere variazioni dalla funzionalità del caso d'uso "base", ad esempio in caso di errore/eccezione;
+    - *estensione*: relazione tra due casi d'uso, indica che un caso d'uso può estendere uno o più casi d'uso, aumentandone le funzionalità. Ogni istanza del caso d'uso "base" esegue il caso d'uso che estende in modo condizionato (a differenza dell'inclusione), e questo dipende dalla condizione di estensione, la quale determina quando l'estensione deve essere utilizzata. Con le estensioni si vogliono descrivere variazioni dalla funzionalità del caso d'uso "base", ad esempio in caso di errore/eccezione;
     #figure(
         diagram(
         debug: false,
@@ -403,10 +404,10 @@ I componenti principali di un diagramma dei casi d'uso sono:
             height: 130pt,
             snap: -1,
         )
-        )
+        ), caption: "Estensione UC."
     ) <extension>
 
-    - generalizzazione: relazione tra due attori o due casi d'uso, indica che un attore o un caso d'uso è una generalizzazione di un altro attore o caso d'uso, quindi condivide le funzionalità del primo e ne può aggiungere di nuove o modificare quelle già esistenti (Y generalizza X);
+    - *generalizzazione*: relazione tra due attori o due casi d'uso, indica che un attore o un caso d'uso è una generalizzazione di un altro attore o caso d'uso, quindi condivide le funzionalità del primo e ne può aggiungere di nuove o modificare quelle già esistenti (Y generalizza X);
     #figure(
         diagram(
         debug: false,
@@ -424,7 +425,7 @@ I componenti principali di un diagramma dei casi d'uso sono:
         edge(<ucB>, <ucA>, marks: (none, empty-dash)),
 
         node((5,0.5), align(center)[UC Y], name: <ucB>),
-        )
+        ), caption: "Generalizzazione UC."
     ) <generalization>
 
 ==== Requisiti
@@ -475,46 +476,46 @@ I vantaggi di utilizzare i diagrammi delle classi sono molteplici:
 *Diagrammi UML*
 
 UML definisce vari elementi grafici per rappresentare le classi e le relazioni tra di esse. I principali elementi utilizzati nei diagrammi delle classi sono:
-- Classe: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). Nel caso in cui un attributo non sia sempre definito, e quindi il suo valore può essere anche _null_, la sintassi utilizzata è "attributo[0..1]". \ I metodi sono definiti con la seguente sintassi: nomeMetodo(parametri: tipoParametri): tipoRitorno;
+- *Classe*: rappresenta un tipo di oggetto/istanza, con attributi e metodi. \ È rappresentata da un rettangolo diviso in tre parti: la prima contiene il nome della classe, la seconda gli attributi e la terza i metodi. Gli attributi e i metodi possono avere vari tipi di visibilità: + (pubblica), - (privata), \# (protetta). Nel caso in cui un attributo non sia sempre definito, e quindi il suo valore possa essere anche _null_, la sintassi utilizzata è "attributo[0..1]". \ I metodi sono definiti con la seguente sintassi: nomeMetodo(parametri: tipoParametri): tipoRitorno;
 #figure(
     image("../assets/classe.svg", width: 32%), caption: "Esempio classe UML.",
 )
-- Classe astratta: rappresenta una classe che non può essere istanziata, ma che viene utilizzata come superclasse per la generalizzazione di altre classi. È rappresentata come una classe, ma con il nome in #text("corsivo" , style: "italic")\;
+- *Classe astratta*: rappresenta una classe che non può essere istanziata, ma che viene utilizzata come superclasse per la generalizzazione di altre classi. È rappresentata come una classe, ma con il nome in #text("corsivo" , style: "italic")\;
 #figure(
     image("../assets/classe_astratta.svg", width: 30%), caption: "Esempio classe astratta UML.",
 )
-- Interfaccia: rappresenta una classe priva di attributi e implementazione dei metodi, i quali devono essere implementati dalle classi che la realizzano. È rappresentata come un cerchio con il nome dell'interfaccia al di sotto.
+- *Interfaccia*: rappresenta una classe priva di attributi e implementazione dei metodi, i quali devono essere implementati dalle classi che la realizzano. È rappresentata come un cerchio con il nome dell'interfaccia al di sotto.
 #figure(
     image("../assets/interfaccia.svg", width: 30%), caption: "Esempio interfaccia UML.",
 )
 
 Le relazioni tra questi elementi possono essere di vario tipo:
-- Associazione: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe (spesso interscambiabile con un attributo). È rappresentata da una linea continua direzionata tra le classi coinvolte;
+- *Associazione*: rappresenta una relazione tra due classi, indicando che un oggetto di una classe è collegato a un oggetto di un'altra classe. È rappresentata da una linea continua direzionata tra le classi coinvolte o da un attributo;
 #figure(
     image("../assets/associazione.svg", width: 35%), caption: "Esempio associazione UML.",
 )
-- Aggregazione: rappresenta una relazione tra due classi in cui un oggetto di una classe è \"parte di\" un oggetto di un'altra classe e può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo vuoto sul lato della classe che contiene l'oggetto;
+- *Aggregazione*: rappresenta una relazione tra due classi in cui un oggetto di una classe è \"parte di\" un oggetto di un'altra classe e può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo vuoto sul lato della classe che contiene l'oggetto;
 #figure(
     image("../assets/aggregazione.svg", width: 35%), caption: "Esempio aggregazione UML.",
 )
-- Composizione: rappresenta una relazione tra due classi simile all'aggregazione, con l'unica differenza che l'oggetto contenuto appartiene solo all'oggetto contenitore, quindi non può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo pieno sul lato della classe che contiene l'oggetto;
+- *Composizione*: rappresenta una relazione tra due classi simile all'aggregazione, con l'unica differenza che l'oggetto contenuto appartiene solo all'oggetto contenitore, quindi non può essere condiviso tra più classi. È rappresentata da una linea continua con un rombo pieno sul lato della classe che contiene l'oggetto;
 #figure(
     image("../assets/composizione.svg", width: 35%), caption: "Esempio composizione UML.",
 )
-- Generalizzazione: rappresenta una relazione tra una superclasse e una sottoclasse, indicando che la sottoclasse generalizza la superclasse. L'oggetto della sottoclasse quindi è anche un oggetto della superclasse e ne eredita gli attributi/metodi. È rappresentata da una linea continua con una freccia vuota dalla sottoclasse alla superclasse;
+- *Generalizzazione*: rappresenta una relazione tra una superclasse e una sottoclasse, indicando che la sottoclasse generalizza la superclasse. L'oggetto della sottoclasse quindi è anche un oggetto della superclasse e ne eredita gli attributi/metodi. È rappresentata da una linea continua con una freccia vuota dalla sottoclasse alla superclasse;
 #figure(
     image("../assets/generalizzazione.svg", width: 40%), caption: "Esempio generalizzazione UML.",
 )
-- Realizzazione: rappresenta una relazione tra una classe e un'interfaccia, indicando che la classe implementa i metodi dell'interfaccia. È rappresentata da una linea continua tra la classe e l'interfaccia;
+- *Realizzazione*: rappresenta una relazione tra una classe e un'interfaccia, indicando che la classe implementa i metodi dell'interfaccia. È rappresentata da una linea continua tra la classe e l'interfaccia;
 #figure(
     image("../assets/realizzazione.svg", width: 35%), caption: "Esempio realizzazione UML.",
 )
-- Dipendenza: rappresenta una relazione tra due classi in cui un cambiamento in una classe può influenzare l'altra e quindi richiedere una modifica. È rappresentata da una linea tratteggiata direzionata dalla classe che dipende all'altra.
+- *Dipendenza*: rappresenta una relazione tra due classi in cui un cambiamento in una classe può influenzare l'altra e quindi richiedere una modifica. È rappresentata da una linea tratteggiata direzionata dalla classe che dipende all'altra.
 #figure(
     image("../assets/dipendenza.svg", width: 35%), caption: "Esempio dipendenza UML.",
 )
 \
-Per una maggiore chiarezza e comprensione, alcune classi possono essere colorate in modo diverso per evidenziare, ad esempio, la loro appartenza a una libreria esterna e quindi non modellata dal gruppo.
+Per una maggiore chiarezza e comprensione, alcune classi sono colorate in modo diverso per evidenziare la loro appartenza a una libreria esterna e quindi non modellata dal gruppo.
 
 ==== Strumenti e tecnologie
 Per la progettazione del software tramite diagrammi delle classi è stato utilizzato StarUML, mentre per la progettazione dell'interfaccia grafica è stato utilizzato Figma.
@@ -551,30 +552,18 @@ Riguardo la struttura dei metodi le regole da seguire per mantenere il codice le
 
 Tutte queste regole verranno applicate durante l'attività di codifica e saranno verificate tramite l'utilizzo di strumenti di analisi statica del codice, inoltre verranno misurate alcune metriche definite in @manutenibilità-prodotto per valutare la manutenibilità del codice prodotto.  
 
-==== Strumenti
-- Emacs e Visual Studio Code per la codifica del software.
+==== Strumenti e tecnologie
+Il gruppo ha scelto Emacs e Visual Studio Code per la codifica del software.
 
 === Integrazione
 L'attività di integrazione consiste nell'unione delle parti di software sviluppate in precedenza, per formare un'unica entità funzionante. A ogni nuovo sviluppo corrisponde una nuova integrazione in modo tale da verificare il prima possibile che l'elemento appena integrato sia conforme alle aspettative. L'obiettivo è quello di verificare che le singole parti del software funzionino correttamente nel loro insieme.
 
-// se decideremo delle regole per l'integrazione si dovranno mettere qui
+==== Pratiche di integrazione
+Per sviluppare una nuova parte del software, ciascun membro del gruppo deve creare un branch dedicato (come descritto dettagliatamente in @gestione-AgentFlow). Il programmatore procede quindi allo sviluppo della feature e dei relativi #glossario[test di unità]. Fatto ciò, procede con il completamento dell'integrazione, che corrisponde al merge tra il branch di feature e il branch di sviluppo. Le regole create per il merge impongono che siano superati tutti i test di unità e che il codice sia formattato secondo le norme di codifica adottate, assicurando la qualità del codice presente nel branch di sviluppo. 
 
 === Installazione
 L'attività consiste nello sviluppo di un piano per installare il prodotto software nell'ambiente di destinazione. In questo piano devono essere fornite le risorse e le informazioni necessarie per l'installazione e la configurazione del software. L'obiettivo è quello di fornire istruzioni chiare e dettagliate all'utente finale, in modo tale da consentirgli di utilizzare il prodotto software.
 
-/*
-== Gestione operativa
-=== Caratteristiche e finalità
-Il processo di gestione operativa  nello standard ISO/IEC 12207:1995 include le attività e i compiti necessari per la gestione del prodotto software e fornire supporto operativo agli utenti. Questo processo si riferisce principalmente alla fase in cui il software viene utilizzato nel suo ambiente operativo e interagisce con il sistema. #linebreak() #linebreak() 
-Lo standard definisce queste attività principali:
-1. Implementazione del processo: definisce un piano operativo e uno standard per gestire le attività, inoltre stabilisce procedure per il monitoraggio e la risoluzione dei problemi;
-2. Test operativi: definisce l'esecuzione di test per ogni rilascio del software nell'ambiente operativo, con particolare attenzione al funzionamento corretto del software rispetto al funzionamento atteso;
-3. Operazione del sistema: definisce che il sistema dovrebbe operare all'interno dell'ambiente previsto in accordo alla sua documentazione;
-4. Supporto agli utenti: definisce modalità di assistenza e consulenza agli utenti in base alle richieste, quest'ultime dovrebbero essere tracciate e monitorate.
-Queste attività assicurano che il software venga gestito efficacemente durante la sua fase operativa e che eventuali problemi o richieste degli utenti siano affrontati in modo tempestivo.
+L'installazione del prodotto avviene tramite container #glossario[Docker]. Prima del loro avvio è necessario inserire nei file .env i dati necessari indicati dai file .env.sample. È possibile avviare tutta l'infrastruttura col comando _docker compose up [\-\-build] [-d]_, dove _\-\-build_ serve per costruire le immagini e _-d_ per avviare l'infrastruttura in background.
 
-=== Strumenti
-Al fine di rendere accessibile il prodotto è fondamentale esporre dettagli sull'installazione del software e sulle procedure necessarie per eseguire correttamente il prodotto, oltre ad eventuali requisiti di sistema necessari. Inoltre, è importante illustrare una guida all'utilizzo, esponendo le principali funzionalità utilizzabili ed il come interagire con il sistema. #linebreak()
-Viene di seguito fornito un puntatore al #glossario[repository] del #glossario[PoC] dove è possibile trovare le istruzioni per l'installazione e l'utilizzo del software: https://github.com/techminds-unipd/PoC/blob/main/README.md.
-//todo per parte di minimun viable product
-*/
+Le istruzioni per l'uso del prodotto sono raccolte nel #link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")[manuale utente] #footnote(link("https://techminds-unipd.github.io/docs/PB/documenti_esterni/manuale_utente/manuale-utente.pdf")).
