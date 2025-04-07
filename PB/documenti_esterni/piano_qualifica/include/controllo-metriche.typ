@@ -54,7 +54,7 @@
                     }
 
                     for vline in vlines {
-                        plot.add-vline(vline, style:(stroke: (dash: "dashed", paint: black)))
+                        plot.add-vline(vline, style:(stroke: (dash: "dashed", paint: black)), label: "RTB\u{2192}PB")
                     }
                 })
         }), caption: caption)
@@ -694,7 +694,7 @@ Le seguenti metriche di prodotto riguardanti la manutenibilità vengono applicat
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
 #lineChart(lines: (tempo_medio_workflow_fun, point_fun),
-    legends: ([Tempo medio #linebreak() workflow],[]),
+    legends: ([Tempo medio],[]),
     hlines: ((10,20)),
     vlines: (),
     x-label: "sprint",
