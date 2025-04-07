@@ -335,7 +335,8 @@
 #pagebreak()
 
 = Cruscotto
-In alcuni grafici è presente una linea nera verticale tratteggiata per indicare il passaggio dal periodo RTB al periodo PB.\ \
+Tutte le misurazioni riguardanti le metriche avvengono alla fine di ogni sprint.
+In alcuni grafici è presente una linea nera verticale tratteggiata per indicare il passaggio dal periodo RTB al periodo PB. \ \
 
 == MPROC2 (AC), MPROC8 (ETC), MPRO7 (EAC)
 #linebreak()
