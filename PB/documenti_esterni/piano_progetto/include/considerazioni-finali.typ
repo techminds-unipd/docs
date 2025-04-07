@@ -51,4 +51,4 @@ Il gruppo durante lo svolgimento del progetto ha rilevato i seguenti aspetti pos
 
 == Aspetti negativi
 - *Cruscotto piano di qualifica*: il cruscotto è stato implementato tardivamente, impedendo la valutazione delle metriche di qualità durante i primi sprint. Questo ha portato a una mancanza di visibilità sui problemi e sui miglioramenti da apportare. Verso la fine del periodo RTB il cruscotto è stato implementato e il gruppo ha iniziato a monitorare le metriche di qualità; 
-- *Profondità analisi dei requisiti*: il gruppo non aveva inizialmente compreso quanto un requisito debba essere atomico. Ciò ha portato a dei rallentamenti nell'avanzamento del progetto dovuti alle correzioni da apportare al documento di analisi dei requisiti. 
+- *Profondità analisi dei requisiti*: il gruppo non aveva inizialmente compreso quanto un requisito dovesse essere atomico. Ciò ha portato a dei rallentamenti nell'avanzamento del progetto dovuti alle correzioni da apportare al documento di analisi dei requisiti. 
