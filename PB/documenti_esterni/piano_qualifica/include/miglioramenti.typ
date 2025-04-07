@@ -46,7 +46,7 @@ I miglioramenti rappresentano una componente fondamentale per la raggiunta degli
     ),
     [Comunicazioni con l'azienda poco frequenti.],
     [ROE1],
-    [Organizzazione di incontri regolari e programmati ad ogni fine sprint. Questo permette di chiarire eventuali dubbi o problemi e di allinearsi con il proponente sullo stato di avanzamento del progetto.]
+    [Organizzazione di incontri regolari e programmati a ogni fine sprint. Questo permette di chiarire eventuali dubbi o problemi e di allinearsi con il proponente sullo stato di avanzamento del progetto.]
   ), 
   caption: [Miglioramento per il rischio ROE1 nello sprint 6.]
 )

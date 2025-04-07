@@ -11,7 +11,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *user/register*. Verificare che il backend lanci un'eccezione con http status 400 poiché lo _username_ dell'utente è già salvato nel database.],
+        [Endpoint: *user/register*. Verificare che il backend lanci un'eccezione con HTTP status 400 poiché lo _username_ dell'utente è già salvato nel database.],
         [S],
     ))
 
@@ -21,7 +21,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *user/login*. Verificare che il backend lanci un'eccezione con http status 401 poiché la _password_ o lo _username _dell'utente non sono corretti.],
+        [Endpoint: *user/login*. Verificare che il backend lanci un'eccezione con HTTP status 401 poiché la _password_ o lo _username _dell'utente non sono corretti.],
         [S],
     ))
 
@@ -31,7 +31,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/create/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 400 poiché il _workflow_ avente quel nome è già presente nel database.],
+        [Endpoint: *workflow/create/{workflowName}*. Verificare che il backend lanci un'eccezione con HTTP status 400 poiché il _workflow_ avente quel nome è già presente nel database.],
         [S],
     ))
 
@@ -41,7 +41,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/save*. Verificare che il backend lanci un'eccezione con http status 412 poiché il _workflow_ da salvare non è valido.],
+        [Endpoint: *workflow/save*. Verificare che il backend lanci un'eccezione con HTTP status 412 poiché il _workflow_ da salvare non è valido.],
         [S],
     ))
 
@@ -51,7 +51,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/get/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
+        [Endpoint: *workflow/get/{workflowName}*. Verificare che il backend lanci un'eccezione con HTTP status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
         [S],
     ))
 
@@ -66,7 +66,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/execute*. Verificare che il backend lanci un'eccezione con http status 412 poiché il _workflow_ da eseguire non è valido.],
+        [Endpoint: *workflow/execute*. Verificare che il backend lanci un'eccezione con HTTP status 412 poiché il _workflow_ da eseguire non è valido.],
         [S],
     ))
 
@@ -76,7 +76,7 @@
     ))
 
     backend.push(("TIB" + str(backend.len()+1),
-        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il backend lanci un'eccezione con http status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
+        [Endpoint: *workflow/delete/{workflowName}*. Verificare che il backend lanci un'eccezione con HTTP status 404 poiché il _workflow_ avente quel nome non è presente nel database.],
         [S],
     ))
 
@@ -166,12 +166,12 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _UserAlreadyExistsError_.],
+        [Verificare che il metodo _registerUser_ della classe _RegisterUserController_ lanci un'eccezione con HTTP status 400 poiché il service lancia un'eccezione di tipo _UserAlreadyExistsError_.],
         [S],
     ))
 
@@ -188,22 +188,22 @@
 
     // LoginUserController
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _login_ della classe _LoginUserController_ ritorni un token jwt.],
+        [Verificare che il metodo _login_ della classe _LoginUserController_ ritorni un token JWT.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 401 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con HTTP status 401 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con http status 401 poiché il service lancia un'eccezione di tipo _WrongPasswordError_.],
+        [Verificare che il metodo _login_ della classe _LoginUserController_ lanci un'eccezione con HTTP status 401 poiché il service lancia un'eccezione di tipo _WrongPasswordError_.],
         [S],
     ))
 
@@ -280,7 +280,7 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ lanci un'eccezione con http status 500 poiché è stato lanciato un errore.],
+        [Verificare che il metodo _googleAuthCallback_ della classe _ConnectionGoogleResponseController_ lanci un'eccezione con HTTP status 500 poiché è stato lanciato un errore.],
         [S],
     ))
 
@@ -314,17 +314,17 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _WorkflowAlreadyExistsError_.],
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con HTTP status 400 poiché il service lancia un'eccezione di tipo _WorkflowAlreadyExistsError_.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con http status 500 poiché il service lancia un'eccezione di tipo _WorkflowNotAddedError_.],
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con HTTP status 500 poiché il service lancia un'eccezione di tipo _WorkflowNotAddedError_.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _createWorkflow_ della classe _CreateWorkflowController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
@@ -351,12 +351,12 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ lanci un'eccezione con http status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
+        [Verificare che il metodo _deleteWorkflow_ della classe _DeleteWorkflowController_ lanci un'eccezione con HTTP status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
         [S],
     ))
 
@@ -378,12 +378,12 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ lanci un'eccezione con http status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
+        [Verificare che il metodo _getWorkflow_ della classe _GetWorkflowController_ lanci un'eccezione con HTTP status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
         [S],
     ))
 
@@ -405,17 +405,17 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con http status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con HTTP status 404 poiché il service lancia un'eccezione di tipo _WorkflowNotFoundError_.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con http status 412 poiché il workflow non è valido.],
+        [Verificare che il metodo _saveWorkflow_ della classe _SaveWorkflowController_ lanci un'eccezione con HTTP status 412 poiché il workflow non è valido.],
         [S],
     ))
 
@@ -437,12 +437,12 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ lanci un'eccezione con http status 500 poiché il database lancia un'eccezione.],
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ lanci un'eccezione con HTTP status 500 poiché il database lancia un'eccezione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ lanci un'eccezione con http status 400 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
+        [Verificare che il metodo _getWorkflowNameList_ della classe _WorkflowNameListController_ lanci un'eccezione con HTTP status 400 poiché il service lancia un'eccezione di tipo _UserNotFoundError_.],
         [S],
     ))
 
@@ -581,12 +581,12 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ lanci un'eccezione con http status 412 poiché il workflow non è valido.],
+        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ lanci un'eccezione con HTTP status 412 poiché il workflow non è valido.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ lanci un'eccezione con http status 500 poiché è stato lanciato un errore.],
+        [Verificare che il metodo _executeWorkflow_ della classe _ExecuteWorkflowController_ lanci un'eccezione con HTTP status 500 poiché è stato lanciato un errore.],
         [S],
     ))
 
@@ -620,47 +620,47 @@
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow non ha almeno due nodi.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow non ha almeno due nodi.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow non ha _n_-1 archi, dove _n_ è il numero di nodi.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow non ha _n_-1 archi, dove _n_ è il numero di nodi.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno due nodi con gli stessi _id_.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno due nodi con gli stessi _id_.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno due archi con gli stessi _source id_.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno due archi con gli stessi _source id_.],
         [S],
     ))
     
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno due archi con gli stessi _target id_.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno due archi con gli stessi _target id_.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco senza descrizione.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno un arco senza descrizione.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco con _id source_ e _id target_ uguali.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno un arco con _id source_ e _id target_ uguali.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco in cui il _source id_ non corrisponde ad un _id_ di un nodo.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno un arco in cui il _source id_ non corrisponde ad un _id_ di un nodo.],
         [S],
     ))
 
     unitàBackend.push(("TUB" + str(unitàBackend.len()+1),
-        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con http status 412 poiché il workflow ha almeno un arco in cui il _target id_ non corrisponde ad un _id_ di un nodo.],
+        [Verificare che il metodo _validate_ della classe _WorkflowDTOValidator_ lanci un'eccezione con HTTP status 412 poiché il workflow ha almeno un arco in cui il _target id_ non corrisponde ad un _id_ di un nodo.],
         [S],
     ))
 
@@ -682,17 +682,17 @@
     ))
 
     unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
-        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione con http status 400 se la richiesta è invalida a causa dell'errato schema JSON.],
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione con HTTP status 400 se la richiesta è invalida a causa dell'errato schema JSON.],
         [S],
     ))
 
     unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
-        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione http status 400 se la richiesta è invalida a causa di un campo action vuoto in uno dei nodi del workflow che non sia l'ultimo.],
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione HTTP status 400 se la richiesta è invalida a causa di un campo action vuoto in uno dei nodi del workflow che non sia l'ultimo.],
         [S],
     ))
 
     unitàAgente.push(("TUA" + str(unitàAgente.len()+1),
-        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione http status 400 se la richiesta è invalida a causa del campo action non vuoto nell'ultimo nodo del workflow.],
+        [Verificare che il metodo _executeWorkflow_ della classe _WorkflowController_ lanci un'eccezione HTTP status 400 se la richiesta è invalida a causa del campo action non vuoto nell'ultimo nodo del workflow.],
         [S],
     ))
 

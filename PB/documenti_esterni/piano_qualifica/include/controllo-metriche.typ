@@ -54,7 +54,7 @@
                     }
 
                     for vline in vlines {
-                        plot.add-vline(vline, style:(stroke: (dash: "dashed", paint: red)))
+                        plot.add-vline(vline, style:(stroke: (dash: "dashed", paint: black)), label: "RTB\u{2192}PB")
                     }
                 })
         }), caption: caption)
@@ -335,13 +335,16 @@
 #pagebreak()
 
 = Cruscotto
+Tutte le misurazioni riguardanti le metriche avvengono alla fine di ogni sprint.
+In alcuni grafici è presente una linea nera verticale tratteggiata per indicare il passaggio dal periodo RTB al periodo PB. \ \
+
 == MPROC2 (AC), MPROC8 (ETC), MPRO7 (EAC)
 #linebreak()
 
 #lineChart(lines: (ac_fun,etc_fun,eac_fun),
     legends: ([AC],[ETC],[EAC]),
     hlines: (),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "costo \u{20AC}",
     y-tick-step: -1,
@@ -369,7 +372,7 @@ Dal grafico si può notare che l'AC è in linea con l'EAC, questo è dovuto al f
 #lineChart(lines: (ev_fun,pv_fun),
     legends: ([EV],[PV]),
     hlines: (),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "costo \u{20AC}",
     y-tick-step: -1,
@@ -387,7 +390,7 @@ In generale i costi sono bassi perchè in questo periodo erano presenti molti im
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Come nel periodo RTB anche in questo periodo i costi sono stati rispettati, ma si nota un incremento di EV rispetto a PV, soprattutto tra lo sprint 6 e 8. Questo è dovuto al fatto che il lavoro svolto è stato maggiore rispetto a quello pianificato, quindi il team è riuscito a portare avanti il progetto in modo più veloce del previsto. Inoltre l'EV ha subito un incremento costante fino a raggiungere il budget iniziale, segno che il progetto è stato portato avanti e completato in modo proficuo. 
+Come nel periodo RTB anche in questo periodo i costi sono stati rispettati, ma si nota un incremento di EV rispetto a PV, soprattutto tra gli sprint 6 e 8. Questo è dovuto al fatto che il lavoro svolto è stato maggiore rispetto a quello pianificato, quindi il team è riuscito a portare avanti il progetto in modo più veloce del previsto. Inoltre l'EV ha subito un incremento costante fino a raggiungere il budget iniziale, segno che il progetto è stato portato avanti e completato in modo proficuo. 
 
 #pagebreak()
 == MPROC4 (CV), MPROC5 (SV)
@@ -396,7 +399,7 @@ Come nel periodo RTB anche in questo periodo i costi sono stati rispettati, ma s
 #lineChart(lines: (cv_fun,sv_fun),
     legends: ([CV],[SV]),
     hlines: (0,),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "y",
     y-tick-step: -1,
@@ -414,7 +417,7 @@ SV ha un picco iniziale, indicando un anticipo rispetto allo schedule delle atti
 #linebreak() #linebreak()
 *PB*
 #linebreak()
-Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra lo sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto. Al contempo però il gruppo ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
+Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che il costo sostenuto è in linea con quello pianificato. SV ha un picco a cavallo tra gli sprint 6 e 8, indicando un anticipo rispetto alla schedulazione delle attività. In generale negli ultimi sprint il lavoro è sempre stato completato in maniera anticipata rispetto a quanto pianificato, segno che il team ha spesso sovrastimato alcune task che sono state portate a termine in meno tempo del previsto. Al contempo però il gruppo ha sfruttato questo anticipo per portare a termine più task di quante preventivate all'inizio di ogni sprint.
 #pagebreak()
 
 == MPROC6 (CPI), MPROC9 (SPI)
@@ -423,7 +426,7 @@ Come nel periodo precendente anche in questo periodo CV è sempre 0, segno che i
 #lineChart(lines: (cpi_fun,spi_fun),
     legends: ([CPI],[SPI]),
     hlines: (1,),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "y",
     y-tick-step: -1,
@@ -454,7 +457,7 @@ In seguito allo sprint 6 la SPI ha sempre superato 1, segno che il team è stato
 #lineChart(lines: (rsi_fun, point_fun,),
     legends: ([RSI],[]),
     hlines: ((80,100)),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "%",
     y-tick-step: -1,
@@ -471,20 +474,22 @@ Come è possibile notare dal grafico, il valore dell'RSI ha subito un forte calo
 == MPROC11 (Indice di Gulpease)
 #linebreak()
 
+#let point = ((1,0),)
+#let point_fun(offset: 0) = point
 #let x_axis = ((1,36),)
 #let x_axis_fun(offset: 0) = x_axis
 
-#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, g_st_fun, g_mu_fun, x_axis_fun),
-    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[ST],[MU]),
-    hlines: ((40,40)),
-    vlines: (),
+#lineChart(lines: (g_adr_fun, g_pdp_fun, g_pdq_fun, g_gloss_fun, g_ndp_fun, g_st_fun, g_mu_fun, x_axis_fun, point_fun),
+    legends: ([AdR],[PdP],[PdQ],[Glossario],[NdP],[ST],[MU],[]),
+    hlines: ((40,100)),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "indice",
-    y-tick-step: -1,
+    y-tick-step: 10,
     caption: [Indice di Gulpease in AdR, PdP, PdQ, ST, MU, Glossario e NdP.])
 
 Il grafico illustra il valore dell'indice di Gulpease calcolato per i seguenti documenti:
-- #glossario[Analisi dei requisiti] ;
+- #glossario[Analisi dei requisiti]\;
 - Piano di progetto;
 - Piano di qualifica;
 - Glossario;
@@ -510,7 +515,7 @@ Tutti i documenti prodotti hanno raggiunto la soglia accettabile dell'indice di 
 #lineChart(lines: (caption_figure_fun, x_axis_fun),
     legends: ([MACC1], []),
     hlines: (),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "%",
     y-tick-step: -1,
@@ -579,7 +584,7 @@ Tutti i test di unità, integrazione e sistema previsti sono stati implementati 
 #lineChart(lines: (rischi_fun, point_fun,),
     legends: ([Rischi], []),
     hlines: (),
-    vlines: (),
+    vlines: (6,),
     x-label: "sprint",
     y-label: "rischi",
     y-tick-step: -1,
@@ -616,7 +621,7 @@ In questo periodo non ci sono stati problemi dovuti a rischi non previsti. Infat
 
 Il grafico illustra:
 - Metriche accettabili: il numero di metriche che raggiungono la soglia accettabile.
-- La linea rossa tratteggiata marca la suddivisione tra il periodo RTB e PB.
+
 #linebreak()
 *RTB*
 #linebreak()
@@ -646,7 +651,7 @@ In questo periodo sono state prese in considerazione anche le nuove metriche di 
 
 Il grafico illustra:
 - Metriche ottimali: il numero di metriche che raggiungono il valore ottimale.
-- La linea rossa tratteggiata marca la suddivisione tra il periodo RTB e PB.
+
 #linebreak()
 *RTB*
 #linebreak()
@@ -689,7 +694,7 @@ Le seguenti metriche di prodotto riguardanti la manutenibilità vengono applicat
 #let point = ((8,0),)
 #let point_fun(offset: 0) = point
 #lineChart(lines: (tempo_medio_workflow_fun, point_fun),
-    legends: ([Tempo medio #linebreak() workflow],[]),
+    legends: ([Tempo medio],[]),
     hlines: ((10,20)),
     vlines: (),
     x-label: "sprint",
