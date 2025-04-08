@@ -3,14 +3,14 @@
 #pagebreak()
 = Considerazioni finali
 
-== Ore totali per persona
+== Ore totali per persona suddivise per ruolo
 Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento del progetto didattico. Di seguito il prospetto del numero di ore totali effettivamente consumate per persona, suddivise per ogni ruolo:
 #set par(justify: false)
 #figure(
     table(
         columns: (auto, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm),
         align: center+horizon,
-        fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
+        fill: (x, y) => if (y==0 or y==8) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
         table.header([*Persona*], [*Resp*], [*Amm*], [*An*], [*Proget*], [*Program*], [*Ver*], [*Totale*]),
         [#team.A], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).bressan.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).bressan.at(8)*],
         [#team.S], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).corradin.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).corradin.at(8)*],
@@ -19,6 +19,7 @@ Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento 
         [#team.M], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).squarzoni.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).squarzoni.at(8)*],
         [#team.G], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).tutino.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).tutino.at(8)*],
         [#team.C], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).vallotto.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).vallotto.at(8)*],
+        [*Totale*], ..getOreConsumateRuoli(sprintNumber: 9).map(x => [*#x*]), [*659*],
     ),
     caption: "Totale ore-persona."
 ) <tabella-totale-ore-persona>
