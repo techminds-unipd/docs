@@ -5,6 +5,7 @@
 
 == Ore totali per persona
 Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento del progetto didattico. Di seguito il prospetto del numero di ore totali effettivamente consumate per persona, suddivise per ogni ruolo:
+#set par(justify: false)
 #figure(
     table(
         columns: (auto, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm),
@@ -21,7 +22,7 @@ Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento 
     ),
     caption: "Totale ore-persona."
 ) <tabella-totale-ore-persona>
-
+#set par(justify: true)
 == Ore totali per ruolo
 Nella seguente tabella viene riportato il numero di ore totali inizialmente previste per ogni ruolo in candidatura e il numero di ore totali effettivamente consumate:
 #figure(

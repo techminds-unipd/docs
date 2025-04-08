@@ -349,18 +349,6 @@
     let (_, consuntivo) = getSprintData()
     let roleNumber = 6
 
-    
-//Ore totali per persona
-    let oreTotaliBressan = 0
-    let oreTotaliCorradin = 0
-    let oreTotaliLazzarin = 0
-    let oreTotaliSalviato = 0
-    let oreTotaliSquarzoni = 0
-    let oreTotaliTutino = 0
-    let oreTotaliVallotto = 0
-
-    // Array del numero di ore totali consumate all'aumentare degli sprint.
-    //L'ultimo elemento dell'array è quindi il totale delle ore consumate fino all'ULTIMO sprint del quale si ha il consuntivo (o al numero dello sprint passato alla funzione pe esempio così: getOreConsumatePersona(sprintNumber:5) restituisce le ore totali fino allo sprint 5)
     let oreTotaliPersonaRuolo = (
         bressan:(0,0,0,0,0,0), 
         corradin:(0,0,0,0,0,0), 
@@ -383,12 +371,6 @@
             oreTotaliPersonaRuolo.vallotto.at(j) += getNumber(consuntivo.vallotto.at(i).at(j))
         }
     }
-    // oreTotaliPersonaRuolo.bressan.push(oreBressan)
-    // oreTotaliPersonaRuolo.corradin.push(oreCorradin)
-    // oreTotaliPersonaRuolo.lazzarin.push(oreLazzarin)
-    // oreTotaliPersonaRuolo.salviato.push(oreSalviato)
-    // oreTotaliPersonaRuolo.squarzoni.push(oreSquarzoni)
-    // oreTotaliPersonaRuolo.tutino.push(oreTutino)
-    // oreTotaliPersonaRuolo.vallotto.push(oreVallotto) 
+
     return oreTotaliPersonaRuolo
 }
