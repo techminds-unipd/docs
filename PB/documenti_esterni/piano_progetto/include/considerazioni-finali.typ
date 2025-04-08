@@ -1,23 +1,23 @@
 #import "/template/template.typ": glossario,team,pieChartSprint
-#import "costi.typ": getOreConsumatePersona, getOreConsumateRuoli
+#import "costi.typ": getOreConsumatePersona, getOreConsumateRuoli, getOreConsumatePersonaPerRuolo
 #pagebreak()
 = Considerazioni finali
 
 == Ore totali per persona
-Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento del progetto didattico. Di seguito il prospetto del numero di ore totali per persona:
+Il numero di ore limite per persona è di 95 ore, come previsto dal regolamento del progetto didattico. Di seguito il prospetto del numero di ore totali effettivamente consumate per persona, suddivise per ogni ruolo:
 #figure(
     table(
-        columns: (5cm, 2cm),
+        columns: (auto, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm, 1.7cm),
         align: center+horizon,
         fill: (x, y) => if (y==0) { rgb("#f16610") } else { if calc.even(y) { gray.lighten(50%)} else { white }},
-        table.header([*Persona*], [*Ore*]),
-        [#team.A], [#getOreConsumatePersona(sprintNumber: 9).bressan.at(8)],
-        [#team.S], [#getOreConsumatePersona(sprintNumber: 9).corradin.at(8)],
-        [#team.T], [#getOreConsumatePersona(sprintNumber: 9).lazzarin.at(8)],
-        [#team.L], [#getOreConsumatePersona(sprintNumber: 9).salviato.at(8)],
-        [#team.M], [#getOreConsumatePersona(sprintNumber: 9).squarzoni.at(8)],
-        [#team.G], [#getOreConsumatePersona(sprintNumber: 9).tutino.at(8)],
-        [#team.C], [#getOreConsumatePersona(sprintNumber: 9).vallotto.at(8)],
+        table.header([*Persona*], [*Resp*], [*Amm*], [*An*], [*Proget*], [*Program*], [*Ver*], [*Totale*]),
+        [#team.A], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).bressan.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).bressan.at(8)*],
+        [#team.S], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).corradin.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).corradin.at(8)*],
+        [#team.T], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).lazzarin.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).lazzarin.at(8)*],
+        [#team.L], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).salviato.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).salviato.at(8)*],
+        [#team.M], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).squarzoni.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).squarzoni.at(8)*],
+        [#team.G], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).tutino.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).tutino.at(8)*],
+        [#team.C], ..getOreConsumatePersonaPerRuolo(sprintNumber: 9).vallotto.map(x => str(x)), [*#getOreConsumatePersona(sprintNumber: 9).vallotto.at(8)*],
     ),
     caption: "Totale ore-persona."
 ) <tabella-totale-ore-persona>
